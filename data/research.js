@@ -3037,6 +3037,16 @@ window.NF_DATA = {
       detail: "21 people with PTSD, ten 20-minute Z-score neurofeedback sessions, uncontrolled pre-post design. PTSD and insomnia symptoms fell, most for intrusions, cognition and mood, and arousal; executive attention improved. Beta at T3 decreased after training. The abstract does not state the training target band or electrode, so the T3 beta change is recorded as the observed effect. Taken from the abstract; not checked in the full text. No control group.",
       design: "Uncontrolled pilot",
       cite: { authors: "Im S", year: 2026, title: "Exploring the Effects of Z-Score Neurofeedback Training in PTSD: A Preliminary Investigation", journal: "Clin EEG Neurosci" }
+    },
+    {
+      id: "pm-34706446", condition: "ptsd", type: "protocol",
+      metrics: { design: 3, control: null, blinded: null, n: 29, k: null },
+      sites: ["Pz"], bands: ["alpha"], direction: "up", evidence: "preliminary",
+      changes: { alpha: "up" }, symptoms: ["intrusions","hyperarousal"],
+      claim: "Low-cost wearable neurofeedback in Rwandan PTSD: resting alpha rose and PCL-5 scores fell",
+      detail: "29 participants: 10 neurofeedback, 10 motor-imagery brain-computer interface, and 9 controls, in a game-based protocol outside clinic conditions. Neurofeedback sessions raised resting alpha power (8-12 Hz) at Pz, and three of seven clinical measures improved in the neurofeedback group only; the motor-imagery group showed no such rise. The abstract does not state whether groups were randomised or blinded, and the control arm is not described. Taken from the abstract; not checked in the full text. Small study in a non-clinical setting.",
+      design: "Controlled pilot",
+      cite: { authors: "du Bois N, et al.", year: 2021, title: "Neurofeedback with low-cost, wearable electroencephalography (EEG) reduces symptoms in chronic Post-Traumatic Stress Disorder", journal: "J Affect Disord" }
     }
   ],
 
