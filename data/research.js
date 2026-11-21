@@ -2067,6 +2067,36 @@ window.NF_DATA = {
       detail: "90 un-medicated patients vs 90 normal controls, resting eyes-closed EEG across five bands. Increases in delta and theta and a decrease in alpha2 were most marked frontocentral (frontal and central sites together). Alpha1 and beta showed no difference. The reported classifier accuracy (62.2%) is not used. Taken from the abstract; not checked in the full text. Case-control study.",
       design: "Case-control",
       cite: { authors: "Kim JW, et al.", year: 2015, title: "Diagnostic utility of quantitative EEG in un-medicated schizophrenia", journal: "Neurosci Lett" }
+    },
+    {
+      id: "pm-26159669", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 36, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia: less eyes-closed alpha power over frontal and occipital areas than controls",
+      detail: "13 people with schizophrenia, 13 healthy controls and 10 non-schizophrenia patients on antipsychotics, 256-channel resting EEG. Alpha power was lower over frontal and occipital sites in schizophrenia, and the frontal deficit persisted under visual stimulation. Small case-control study. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Goldstein MR, et al.", year: 2015, title: "Topographic deficits in alpha-range resting EEG activity and steady state visual evoked responses in schizophrenia", journal: "Schizophr Res" }
+    },
+    {
+      id: "pm-26952695", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
+      sites: ["Fp2","F4","F8","C4","T4","P4","T6","O2"], bands: ["gamma"], direction: "up", evidence: "preliminary",
+      changes: { gamma: "up" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia with first-rank symptoms: more right-sided resting gamma power than controls",
+      detail: "20 patients with first-rank symptoms, 20 without, and 20 healthy controls, 256-electrode resting EEG. Gamma power was higher over right hemispheric regions, especially the right inferior parietal lobule, in patients with first-rank symptoms. Sites are all right-side electrodes because the abstract names right hemisphere only. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Tikka SK, et al.", year: 2016, title: "Schneiderian first rank symptoms in schizophrenia: A developmental neuroscience evaluation", journal: "Int J Dev Neurosci" }
+    },
+    {
+      id: "pm-27001559", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
+      sites: ["T4","T6","P4","Fz","Cz","Pz"], bands: ["gamma"], direction: "down", evidence: "preliminary",
+      changes: { gamma: "down" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia and unaffected siblings: less high gamma (above 70 Hz) over right temporo-parietal and midline sites",
+      detail: "20 remitted schizophrenia patients, 20 unaffected siblings and 20 healthy controls, awake resting 192-channel EEG. High-gamma power was lower over right temporo-parietal and midline regions in patients and siblings than controls. Sibling group included, but the sample is not only relatives. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Umesh S, et al.", year: 2018, title: "Social anhedonia and gamma band abnormalities as a composite/multivariate endophenotype for schizophrenia: a dense array EEG study", journal: "Early Interv Psychiatry" }
     }
   ],
 
