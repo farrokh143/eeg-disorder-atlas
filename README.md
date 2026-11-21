@@ -48,6 +48,12 @@ All content lives in [`data/research.js`](data/research.js). Add an entry to `fi
 | Preliminary | Small, open-label, case-control or single-session studies |
 | Contested | Blinded, sham-controlled or pooled data that fail to support the effect |
 
+## Using with a Claude Project
+
+Create a project on claude.ai, paste [`CLAUDE.md`](CLAUDE.md) into its
+instructions, and add this repository (or upload `index.html`,
+`data/research.js` and `README.md`) as project files.
+
 ## Disclaimer
 
 The seed dataset was compiled from the published literature with AI assistance.
