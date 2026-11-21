@@ -2597,6 +2597,16 @@ window.NF_DATA = {
       detail: "64 autistic and 64 age-matched neurotypical children aged 2 to 6, with eyes-open resting 128-channel EEG referenced to Cz. Alpha peak amplitude did not differ between autistic and neurotypical children overall. Autistic children with language impairment had lower alpha peak amplitude than both autistic children without impairment and neurotypical peers. The regional analysis was not verified in the text checked, so the entry is whole-head. The higher aperiodic offset in autistic children is not a band result and is not recorded. Cross-sectional case-control design.",
       design: "Case-control",
       cite: { authors: "Chen Y, et al.", year: 2026, title: "Resting state aperiodic and periodic EEG activity in preschool-aged autistic children: differences from neurotypical peers and links to language skills", journal: "Mol Autism" }
+    },
+    {
+      id: "pm-42185252", condition: "autism", type: "biomarker",
+      metrics: { design: 3, control: null, blinded: null, n: 188, k: null },
+      sites: [], bands: ["delta","theta","beta","gamma"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", beta: "up", gamma: "up" }, symptoms: ["social"],
+      claim: "Autistic young children: higher resting delta, theta, beta and gamma power than peers; no alpha difference",
+      detail: "Longitudinal cohort of 122 autistic and 66 typically developing children aged 1.6 to 6 years, 358 recordings, with mixed-model analysis of whole-brain power. Autistic children had higher power in delta, theta, beta and gamma and no alpha difference. Recordings were made while children watched a cartoon with sound, not a silent resting protocol, so the result is a deviation from standard resting-state. Results are whole-brain (all electrodes), so the entry is whole-head. The language-profile and word-combination gamma results are not recorded here.",
+      design: "Controlled cohort",
+      cite: { authors: "Latrèche K, et al.", year: 2026, title: "Early Trajectories of Resting-State EEG power in autistic children: a longitudinal study across language profiles", journal: "Transl Psychiatry" }
     }
   ],
 
