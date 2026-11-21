@@ -93,6 +93,11 @@ Result: 122 `full-text` (including OCD resting-EEG studies, a condition not yet 
 Rules applied: resting awake scalp EEG only; connectivity, network or microstate-only papers were excluded as "outside atlas schema" (the atlas records band power direction and site) and can be reconsidered if the schema grows; drug, stimulation, surgery and psychotherapy effect studies were excluded unless neurofeedback; MEG, imaging and intracranial recordings were excluded.
 Epilepsy gave the fewest survivors (most hits were intracranial, imaging, connectivity or drug studies). Decisions were made from titles and abstracts by one reviewer (Claude); a second human check of the exclusions is still to do.
 
+
+### Screening round 2 (21 Nov 2026): depression and ADHD
+
+545 papers screened on title and abstract (depression 317, ADHD 229; some overlap). Same rules as round 1, plus: studies whose only question is whether baseline EEG predicts response to a drug or stimulation treatment were excluded as treatment-response prediction (not a disorder marker). Duplicates of hand-picked or included studies (found by title) were excluded as "Duplicate of <id>" and the hand-picked row moved on. Reviews and commentaries are kept at `full-text` for citation chasing. Decided from titles and abstracts by one reviewer (Claude); human second check still to do.
+
 ## Bulk pull (PubMed)
 
 The searches below use the core query (EEG terms AND resting-state terms AND spectral terms AND humans)
