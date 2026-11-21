@@ -7,12 +7,12 @@ evidence behind each finding.
 - Tap **electrodes** (or a region: frontal, central, ...) on the 10-20 map to pick an area.
 - Narrow with dropdowns: **disorder**, **band**, **direction** (elevated / reduced / asymmetry)
   and **symptom**, or free-text search.
-- Electrodes with research light up; ring colours show the EEG bands studied there.
+- Electrodes with research are shaded (darker = more studies).
 - **Neighbouring electrodes** (dashed) are included by default, because scalp electrodes pick up
   activity from adjacent cortex (volume conduction). Each card says whether the finding is at a
   selected site, a neighbouring site, or whole-head.
-- **Direction profile**: for the selected area, chips summarise what the marker studies report
-  (e.g. Theta ↑ 10, Delta ↓ 1). Tap one to look it up.
+- Results show one row per disorder with its EEG marker (e.g. Theta ↑ Beta ↓) and a confidence
+  rating; tap a row to see the studies behind it.
 - **Confidence ratings**: each group of studies gets High / Moderate / Low / Very low, using a
   simplified GRADE approach (best supporting design, rated down for conflicting results or a single
   primary study; treatments with no supportive blinded/sham-controlled study are capped at Low).
