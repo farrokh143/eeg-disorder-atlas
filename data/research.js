@@ -2987,6 +2987,56 @@ window.NF_DATA = {
       detail: "12 alcohol-dependent and 21 cocaine-dependent patients, and 14 non-drug-dependent controls, with 36 dual-dependent and 19 heroin-dependent patients in the same study. Beta power (high and low) was higher in the alcohol and cocaine groups than in controls, and beta did not correlate with use measures. Only the alcohol and cocaine groups are used here. The abstract names no electrodes, so sites are whole-head. Taken from the abstract; not checked in the full text.",
       design: "Case-control",
       cite: { authors: "Costa L, et al.", year: 1997, title: "Quantitative electroencephalographic differences associated with alcohol, cocaine, heroin and dual-substance dependence", journal: "Drug Alcohol Depend" }
+    },
+    {
+      id: "pm-14522608", condition: "ptsd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 116, k: null },
+      sites: [], bands: ["alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { alpha: "down", beta: "up" }, symptoms: ["intrusions","hyperarousal"],
+      claim: "Combat veterans with PTSD: lower resting alpha and higher beta than veterans without PTSD",
+      detail: "79 combat veterans with PTSD and 37 without, resting eyes-closed EEG. Alpha power was decreased and beta power increased in the PTSD group. The abstract names no electrodes, so sites are whole-head. The authors suggest beta may help separate PTSD subtypes. Taken from the abstract; not checked in the full text. Cross-sectional comparison; symptoms are the core PTSD clusters and were not separately analysed.",
+      design: "Case-control",
+      cite: { authors: "Jokić-Begić N, et al.", year: 2003, title: "Quantitative electroencephalogram (qEEG) in combat veterans with post-traumatic stress disorder (PTSD)", journal: "Nord J Psychiatry" }
+    },
+    {
+      id: "pm-25046862", condition: "ptsd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 34, k: null },
+      sites: ["P3","Pz","P4","Fz"], bands: ["theta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up" }, symptoms: ["intrusions","hyperarousal"],
+      claim: "PTSD: higher theta power in parietal and frontal sources than healthy controls (sLORETA)",
+      detail: "17 PTSD patients and 17 matched healthy controls, 5-minute resting EEG. Theta (4.5-7.5 Hz) was increased in parietal areas and in frontal area BA6. Source-localised (sLORETA); mapped to the overlying scalp region, so P3, Pz, P4 and Fz are an approximate mapping. The alpha connectivity result is not used here. Taken from the abstract; not checked in the full text. Very small case-control study.",
+      design: "Case-control",
+      cite: { authors: "Imperatori C, et al.", year: 2014, title: "Aberrant EEG functional connectivity and EEG power spectra in resting state post-traumatic stress disorder: a sLORETA study", journal: "Biol Psychol" }
+    },
+    {
+      id: "pm-27238074", condition: "ptsd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: ["T4","T6","P4"], bands: ["delta","theta"], direction: "down", evidence: "preliminary",
+      changes: { delta: "down", theta: "down" }, symptoms: ["intrusions","hyperarousal"],
+      claim: "PTSD in combat veterans: lower low-frequency power, mainly right temporoparietal",
+      detail: "Service members and veterans with combat blast exposure, varying in PTSD and blast-related mTBI, resting EEG. PTSD was linked to lower low-frequency power, mainly in the right temporoparietal region; the mTBI effect (higher prefrontal and right temporal low-frequency power) is separate and not used here. The abstract gives no electrodes; T4, T6 and P4 are an assumed right temporoparietal mapping, and delta and theta are assumed from low-frequency. Taken from the abstract; not checked in the full text. Group sizes are not given in the abstract.",
+      design: "Case-control",
+      cite: { authors: "Franke LM, et al.", year: 2016, title: "Distinction in EEG slow oscillations between chronic mild traumatic brain injury and PTSD", journal: "Int J Psychophysiol" }
+    },
+    {
+      id: "cand-ptsd-eneuro-2020", condition: "ptsd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 69, k: null },
+      sites: ["O1","O2","Pz","Fz"], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["hyperarousal"],
+      claim: "PTSD: lower alpha power in visual cortex and default-mode hubs (eyes-open rest)",
+      detail: "25 PTSD, 24 generalised anxiety disorder and 20 healthy controls, high-density EEG. Only the standard eyes-open resting state is used; the modified state with passive image viewing is excluded as not resting. Alpha power was lower in PTSD in visual cortex and in posterior cingulate and medial prefrontal cortex. Source-localised (eLORETA); mapped to the overlying scalp region, so O1, O2, Pz and Fz are approximate. The lower alpha tracked hypervigilance. Cross-sectional study.",
+      design: "Case-control",
+      cite: { authors: "Clancy KJ, et al.", year: 2020, title: "Posttraumatic Stress Disorder Is Associated with α Dysrhythmia across the Visual Cortex and the Default Mode Network", journal: "eNeuro" }
+    },
+    {
+      id: "pm-41066303", condition: "ptsd", type: "protocol",
+      metrics: { design: 1, control: "none", blinded: null, n: 21, k: null },
+      sites: ["T3"], bands: ["beta"], direction: "down", evidence: "preliminary",
+      changes: { beta: "down" }, symptoms: ["intrusions","hyperarousal","sleep","executive"],
+      claim: "Z-score neurofeedback in PTSD: fewer PTSD and insomnia symptoms; T3 beta fell after training",
+      detail: "21 people with PTSD, ten 20-minute Z-score neurofeedback sessions, uncontrolled pre-post design. PTSD and insomnia symptoms fell, most for intrusions, cognition and mood, and arousal; executive attention improved. Beta at T3 decreased after training. The abstract does not state the training target band or electrode, so the T3 beta change is recorded as the observed effect. Taken from the abstract; not checked in the full text. No control group.",
+      design: "Uncontrolled pilot",
+      cite: { authors: "Im S", year: 2026, title: "Exploring the Effects of Z-Score Neurofeedback Training in PTSD: A Preliminary Investigation", journal: "Clin EEG Neurosci" }
     }
   ],
 
