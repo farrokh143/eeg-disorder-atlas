@@ -1877,6 +1877,26 @@ window.NF_DATA = {
       detail: "34 children each with ADHD combined type, ADHD inattentive type and typically developing children, frontal single-channel dry-sensor EEG at eyes-closed rest, eyes-open rest and focus tasks. Frontal delta and theta power were higher in the combined subtype in all conditions; alpha and beta effects were moderated by daytime sleepiness and are not used here. Taken from the abstract; not checked in the full text. Cross-sectional comparison of three groups.",
       design: "Case-control",
       cite: { authors: "McCabe LE, et al.", year: 2023, title: "Links between excessive daytime sleepiness and EEG power and activation in two subtypes of ADHD", journal: "Biol Psychol" }
+    },
+    {
+      id: "pm-38858839", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 66, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","C3","Cz","C4"], bands: ["theta","beta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up", beta: "up" }, symptoms: ["inattention","hyperactivity","impulsivity"],
+      claim: "Children with ADHD vs controls: more resting fronto-central theta and beta power",
+      detail: "33 children aged 6-12 with ADHD and 33 without, resting-state EEG. Increased fronto-central theta and beta power were found in the ADHD group, with no difference in the theta/beta ratio; the theta power correlated with clinical symptoms in the ADHD group. Taken from the abstract; not checked in the full text. Case-control design; the aperiodic exponent is not used here.",
+      design: "Case-control",
+      cite: { authors: "Dakwar-Kawar O, et al.", year: 2024, title: "Aperiodic and periodic components of oscillatory brain activity in relation to cognition and symptoms in pediatric ADHD", journal: "Cereb Cortex" }
+    },
+    {
+      id: "pm-39674997", condition: "adhd", type: "protocol",
+      metrics: { design: 4, control: "sham", blinded: true, n: 142, k: null },
+      sites: ["Fz","Cz"], bands: ["theta"], direction: "ratio", evidence: "contested",
+      changes: { theta: "mixed" }, symptoms: ["inattention","hyperactivity","impulsivity"],
+      claim: "Theta/beta ratio neurofeedback in children with ADHD: no change in resting theta vs sham",
+      detail: "ICAN multi-centre double-blind RCT, 142 children with ADHD and high theta/beta ratio randomised to real or sham neurofeedback; training at Cz or Fz. Resting theta and frontal-midline theta during an oddball task showed no significant effect after training. Analysis was on fewer children (68) with complete resting data.",
+      design: "RCT (sham-controlled)",
+      cite: { authors: "Enriquez-Geppert S, et al.", year: 2025, title: "Theta/Beta Ratio Neurofeedback Effects on Resting and Task-Related Theta Activity in Children with ADHD", journal: "Appl Psychophysiol Biofeedback" }
     }
   ],
 
