@@ -237,6 +237,10 @@ details.more[open] summary { margin-bottom: 10px; }
 .study[open] .sy::after { content: "  ⌄"; }
 .study .sbody { display: grid; gap: 8px; padding: 2px 14px 14px; border-top: 1px dashed var(--line); padding-top: 10px; }
 .dbody { gap: 8px; }
+
+.byseg { max-width: 320px; margin-bottom: 4px; }
+.dv { grid-column: 1 / -1; font-size: 0.8rem; color: var(--muted); margin-top: -2px; }
+.link { margin: 0; font-size: 0.84rem; color: var(--ink); background: var(--accent-soft); border-radius: 8px; padding: 8px 10px; }
 .el .hit { fill: transparent; }
 .panel { grid-template-columns: minmax(0, 1fr); min-width: 0; }
 .mapbox, #regionBtns, .profile, .profile .row, .filterbar > * { min-width: 0; }
@@ -295,7 +299,7 @@ html, body { overflow-x: clip; }
   <header class="top">
     <div>
       <h1>EEG Disorder Atlas</h1>
-      <p>Resting-state EEG differences across disorders. Tap electrodes to pick an area, then narrow by disorder, band and direction.</p>
+      <p>Resting-state EEG patterns linked to symptoms and disorders. Tap electrodes to pick an area, then narrow by band, direction or symptom.</p>
     </div>
     <label class="search"><span class="eyebrow">Search research</span>
       <input id="q" type="search" placeholder="e.g. gamma, slowing, Alzheimer" autocomplete="off">
@@ -303,10 +307,10 @@ html, body { overflow-x: clip; }
   </header>
 
   <div class="filterbar" id="filterbar">
-    <label class="dd"><span>Disorder</span><select id="fCond"></select></label>
+    <label class="dd"><span>Symptom</span><select id="fSym"></select></label>
     <label class="dd"><span>Band</span><select id="fBand"></select></label>
     <div class="dd"><span id="dirLbl">Direction</span><div class="seg" id="fDir" role="group" aria-labelledby="dirLbl"></div></div>
-    <label class="dd"><span>Symptom</span><select id="fSym"></select></label>
+    <label class="dd"><span>Disorder</span><select id="fCond"></select></label>
     <button class="clear" id="resetAll">Reset all</button>
   </div>
 
@@ -351,6 +355,7 @@ html, body { overflow-x: clip; }
         <li>Start from the strongest supporting design: meta-analysis or randomised trial = High, controlled study or cohort = Moderate, case-control or review = Low, uncontrolled = Very low.</li>
         <li>Rate down one level if any study points the other way or fails to replicate, and one level if the support is a single primary study (reviews and meta-analyses already pool several).</li>
         <li>For treatments, if no blinded or sham-controlled study supports the effect, the rating is capped at Low.</li>
+        <li>In the symptom view, EEG-marker links are rated down one level for indirectness: the studies compared diagnosed groups and did not measure the symptom itself.</li>
         <li>Each card shows design (1–5 bars), type of control, and sample size where it has been recorded.</li>
       </ul>
     </div>
@@ -397,7 +402,7 @@ html, body { overflow-x: clip; }
   const LEVEL = ["No supporting evidence", "Very low", "Low", "Moderate", "High"];
   // Simplified GRADE-style rating for a set of studies on one question.
   // Start from the best design among supporting studies, then rate down for conflict and thin evidence.
-  function confidence(list, against) {
+  function confidence(list, against, indirect) {
     const support = list.filter(f => f.evidence !== "contested");
     const con = list.filter(f => f.evidence === "contested").concat(against.filter(f => !list.includes(f)));
     const why = [];
@@ -408,6 +413,7 @@ html, body { overflow-x: clip; }
     if (con.length) { level--; why.push(`${plural(con.length, "study", "studies")} against or null`); }
     const synth = f => /review|meta-analysis/i.test(f.design);
     if (support.length === 1 && !synth(support[0])) { level--; why.push("single study"); }
+    if (indirect) { level--; why.push("indirect: diagnosis-level studies, symptom not measured"); }
     const blind = [...new Set(list.concat(con))].filter(f => f.metrics.blinded || f.metrics.control === "sham");
     if (blind.length) {
       const ok = blind.filter(f => f.evidence !== "contested").length;
@@ -416,8 +422,8 @@ html, body { overflow-x: clip; }
     }
     return { level: Math.max(1, level), support, con, why };
   }
-  function confHtml(list, against) {
-    const c = confidence(list, against);
+  function confHtml(list, against, indirect) {
+    const c = confidence(list, against, indirect);
     const known = list.filter(f => f.metrics.n), N = known.reduce((a, f) => a + f.metrics.n, 0);
     const segs = [1, 2, 3, 4].map(i => `<i class="${i <= c.level ? "on" : ""}"></i>`).join("");
     return `<div class="conf l${c.level}"><span class="cm">${segs}</span><span class="cl">Confidence: ${LEVEL[c.level]}</span>
@@ -442,7 +448,7 @@ html, body { overflow-x: clip; }
   const $ = id => document.getElementById(id);
   const svgNS = "http://www.w3.org/2000/svg";
 
-  const state = { sites: new Set(), near: true, cond: "all", band: "", dir: "", sym: "", ev: "", q: "" };
+  const state = { sites: new Set(), near: true, cond: "all", band: "", dir: "", sym: "", ev: "", q: "", by: "symptom" };
   const fromHash = () => { const h = location.hash.slice(1); state.cond = condById[h] ? h : "all"; };
   fromHash();
 
@@ -627,7 +633,7 @@ html, body { overflow-x: clip; }
       <summary>
         <span class="ev ${f.evidence}" title="${f.evidence}"><span class="dots">${dots}</span></span>
         <span class="st">${esc(f.claim)}</span>
-        <span class="sy">${esc(lead)} ${c.year} · ${esc(DESIGN[f.metrics.design])}</span>
+        <span class="sy">${state.by === "symptom" ? esc(condById[f.condition].name) + " · " : ""}${esc(lead)} ${c.year} · ${esc(DESIGN[f.metrics.design])}</span>
       </summary>
       <div class="sbody">
         <div class="meta">${tierTxt}<span class="ev ${f.evidence}">${f.evidence}</span><span>${esc(f.design)}</span></div>
@@ -701,35 +707,53 @@ html, body { overflow-x: clip; }
       }).slice(0, 4).join("");
       return (type === "protocol" ? `<span class="mkv">Trains</span>` : "") + out;
     };
+    // Rows are symptoms (default) or disorders. A study appears under every symptom it is tagged with.
     const grouped = (items, type) => {
       if (!items.length) return "";
+      const bySym = state.by === "symptom";
       const groups = {};
-      items.forEach(f => (groups[f.condition] = groups[f.condition] || []).push(f));
-      const conf = {}; Object.keys(groups).forEach(cid => conf[cid] = confidence(groups[cid], opposing(cid, type)));
-      const ids = Object.keys(groups).sort((x, y) => conf[y].level - conf[x].level || rank(groups[x][0], groups[y][0]) || groups[y].length - groups[x].length);
+      items.forEach(f => (bySym ? f.symptoms.filter(x => !state.sym || x === state.sym) : [f.condition])
+        .forEach(k => (groups[k] = groups[k] || []).push(f)));
+      const against = k => bySym
+        ? [...new Set(groups[k].map(f => f.condition))].flatMap(cid => opposing(cid, type).filter(f => f.symptoms.includes(k)))
+        : opposing(k, type);
+      const indirect = bySym && type === "biomarker";
+      const conf = {}; Object.keys(groups).forEach(k => conf[k] = confidence(groups[k], against(k), indirect));
+      const ids = Object.keys(groups).sort((x, y) => conf[y].level - conf[x].level || groups[y].length - groups[x].length || rank(groups[x][0], groups[y][0]));
       const one = ids.length === 1;
-      return ids.map(cid => {
-        const c = conf[cid], segs = [1, 2, 3, 4].map(i => `<i class="${i <= c.level ? "on" : ""}"></i>`).join("");
+      return ids.map(k => {
+        const g = groups[k], c = conf[k], segs = [1, 2, 3, 4].map(i => `<i class="${i <= c.level ? "on" : ""}"></i>`).join("");
+        const conds = [...new Set(g.map(f => f.condition))].map(cid => condById[cid].name);
+        const name = bySym ? symById[k].name : condById[k].name;
+        const via = bySym ? `<span class="dv">${type === "protocol" ? "Trials in" : "Seen in"} ${esc(conds.join(", "))}</span>` : "";
+        const link = !bySym ? "" : type === "protocol"
+          ? `<p class="link">How this is linked: ${esc(name.toLowerCase())} was measured as an outcome in these trials.</p>`
+          : `<p class="link">How this is linked: these studies compared people diagnosed with ${esc(conds.join(" / "))} against controls. None measured ${esc(name.toLowerCase())} directly, so the link to the symptom is indirect.</p>`;
         return `<details class="drow"${one ? " open" : ""}><summary>
-          <span class="dn">${esc(condById[cid].name)}</span>
+          <span class="dn">${esc(name)}</span>
           <span class="dc l${c.level}" title="Confidence"><span class="cm">${segs}</span>${LEVEL[c.level].replace("No supporting evidence", "None")}</span>
-          <span class="dm">${markerChips(groups[cid], type)}</span>
-          <span class="dk">${plural(groups[cid].length, "study", "studies")}</span>
-        </summary><div class="dbody">${confHtml(groups[cid], opposing(cid, type))}${groups[cid].map(card).join("")}</div></details>`;
+          <span class="dm">${markerChips(g, type)}</span>
+          <span class="dk">${plural(g.length, "study", "studies")}</span>${via}
+        </summary><div class="dbody">${link}${confHtml(g, against(k), indirect)}${g.map(card).join("")}</div></details>`;
       }).join("");
     };
     const mHtml = markers.length ? grouped(markers, "biomarker") : empty("No EEG marker studies match. Try a wider area, another band, or clear a filter.");
     const tHtml = treats.length ? grouped(treats, "protocol") : empty("No treatment studies match. Try a wider area or clear a filter.");
-    const mHint = "Resting-state EEG (eyes open or closed). Group-level findings, not a diagnostic test. Tap a row for the studies.";
+    const mHint = state.by === "symptom"
+      ? "Resting-state EEG patterns linked to each symptom, through the disorders where it occurs. Group-level findings, not a diagnostic test."
+      : "Resting-state EEG (eyes open or closed). Group-level findings, not a diagnostic test. Tap a row for the studies.";
     const tHint = state.dir ? "Neurofeedback that trains this band the other way." : "Neurofeedback tested as treatment.";
     requestAnimationFrame(() => syncJump && syncJump());
     $("jump").innerHTML = `See results ↓`;
+    const unit = state.by === "symptom" ? ["symptom", "symptoms"] : ["disorder", "disorders"];
+    const nKeys = list => state.by === "symptom" ? new Set(list.flatMap(f => f.symptoms.filter(x => !state.sym || x === state.sym))).size : new Set(list.map(f => f.condition)).size;
     $("list").innerHTML =
-      section("EEG markers", plural(new Set(markers.map(f => f.condition)).size, "disorder", "disorders"), mHint, mHtml) +
-      section("Treatment evidence", plural(new Set(treats.map(f => f.condition)).size, "disorder", "disorders"), tHint,
-        tHtml);
+      `<div class="seg byseg" role="group" aria-label="Group results by">${[["symptom", "By symptom"], ["disorder", "By disorder"]].map(([v, l]) => `<button data-by="${v}" aria-pressed="${state.by === v}">${l}</button>`).join("")}</div>` +
+      section("EEG markers", plural(nKeys(markers), ...unit), mHint, mHtml) +
+      section("Treatment evidence", plural(nKeys(treats), ...unit), tHint, tHtml);
   }
 
+  $("list").addEventListener("click", e => { const b = e.target.closest("[data-by]"); if (!b) return; state.by = b.dataset.by; render(); });
   $("active").addEventListener("click", e => {
     const b = e.target.closest("[data-pb]"); if (!b) return;
     const same = state.band === b.dataset.pb && state.dir === b.dataset.pd;
