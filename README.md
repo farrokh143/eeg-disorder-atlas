@@ -1,15 +1,41 @@
 # EEG Disorder Atlas
 
-A clickable International 10-20 electrode map showing how EEG rhythms differ across
-disorders (EEG markers), plus neurofeedback treatment studies, with the
-evidence behind each finding.
+A clickable International 10-20 electrode map showing how **resting-state** EEG rhythms
+differ across disorders (EEG markers), plus neurofeedback treatment studies, with the
+evidence behind each finding. Task-based, evoked-response and sleep EEG studies are out of
+scope; excluded papers are logged in `excluded` in `data/research.js` with the reason.
 
-- Pick a **condition** (Alzheimer's, schizophrenia, ADHD, depression, TBI, ...).
-- Electrodes with research light up; ring colours show the **EEG bands** studied there.
-- Click an **electrode** to list only the studies at that site; filter by band,
-  evidence grade, or free-text search.
-- Each finding shows evidence grade, study design, direction (↑ ↓ ratio, asymmetry),
-  full citation and a PubMed search link.
+- Tap **electrodes** (or a region: frontal, central, ...) on the 10-20 map to pick an area.
+- Narrow with dropdowns: **disorder**, **band**, **direction** (elevated / reduced / asymmetry)
+  and **symptom**, or free-text search.
+- Electrodes with research are shaded (darker = more studies).
+- **Neighbouring electrodes** (dashed) are included by default, because scalp electrodes pick up
+  activity from adjacent cortex (volume conduction). Each card says whether the finding is at a
+  selected site, a neighbouring site, or whole-head.
+- Results are grouped **by disorder** (default, with each disorder's symptoms listed under it) or **by symptom**. Symptom rows say which disorders
+  the link comes through and are rated down for indirectness when no study measured the symptom.
+- Results show one row per disorder with its EEG marker (e.g. Theta ↑ Beta ↓) and a confidence
+  rating; tap a row to see the studies behind it.
+- **Confidence ratings**: each group of studies gets High / Moderate / Low / Very low, using a
+  simplified GRADE approach (best supporting design, rated down for conflicting results or a single
+  primary study; treatments with no supportive blinded/sham-controlled study are capped at Low).
+  Each card shows design strength (1–5), type of control and sample size where recorded.
+- Built phone-first: large tap targets, swipeable chip rows, and a floating results button.
+- Each finding shows evidence grade, study design, per-band direction (e.g. theta ↑, beta ↓),
+  the symptoms studied or measured, full citation and a PubMed search link.
+- Findings are split into **EEG markers** (how the EEG differs in a condition) and
+  **treatment evidence** (neurofeedback studies and how they held up).
+- With a direction chosen (e.g. elevated theta), markers show disorders where that change was
+  reported, and treatment evidence shows studies that train the band the other way.
+
+## Preview password
+
+The page opens with a password screen while it is in development and shared with a small
+feedback group. The test password is `atlas-preview`. After one correct entry the browser
+remembers it (localStorage key `eegAtlasAccess`). To change the password, replace `HASH` in
+`index.html` with the SHA-256 of the new one, e.g. `printf %s 'new-password' | sha256sum`.
+
+This is a soft gate, not security: the repository and `data/research.js` are public.
 
 ## Run
 
@@ -30,7 +56,13 @@ All content lives in [`data/research.js`](data/research.js). Add an entry to `fi
   type: "protocol",             // "protocol" (NF training) | "biomarker" (EEG difference)
   sites: ["Cz"],                // 10-20 labels (T3/T4/T5/T6 naming); [] = individualised
   bands: ["theta", "beta"],     // ids from `bands`
-  direction: "ratio",           // "up" | "down" | "ratio" | "asymmetry"
+  direction: "ratio",           // "up" | "down" | "ratio" | "asymmetry" (summary only)
+  changes: { theta: "down", beta: "up" }, // per band: "up" | "down" | "asymmetry" | "regulate" | "mixed"
+                                // marker = how it differs in the condition; protocol = which way training pushes it
+  symptoms: ["inattention"],    // ids from `symptoms`: marker = core symptoms of the group; protocol = outcomes measured
+  metrics: { design: 5, control: null, blinded: null, n: 977, k: 24 },
+                                // design 1-5: 5 meta-analysis, 4 RCT, 3 controlled study/cohort, 2 case-control/narrative review, 1 uncontrolled/pilot
+                                // control: "sham" | "active" | "usual" (waitlist/usual care) | "none" | null; n/k: only if verified, else null
   evidence: "moderate",         // "strong" | "moderate" | "preliminary" | "contested"
   claim: "One-line finding",
   detail: "Two or three sentences on what the study found.",

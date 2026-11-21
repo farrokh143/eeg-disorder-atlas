@@ -120,53 +120,254 @@ svg.head { width: 100%; max-width: 100%; height: auto; display: block; }
 .cite a { color: var(--accent); white-space: nowrap; }
 .empty { padding: 28px; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: 10px; }
 
-.notes { margin-top: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; font-size: 0.86rem; color: var(--muted); }
+.notes { margin-top: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 20px; font-size: 0.86rem; color: var(--muted); }
 .notes h2 { font-size: 1rem; color: var(--ink); margin-bottom: 6px; }
 .notes ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
 .notes dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px; }
 .notes dt { font-weight: 600; }
 .notes dd { margin: 0; }
 .warn { border-left: 3px solid var(--ev-prelim); padding: 8px 12px; background: var(--surface); color: var(--ink); border-radius: 0 6px 6px 0; }
+/* Filter bar: dropdowns */
+.filterbar { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1.6fr) minmax(0,1fr) auto; gap: 10px; align-items: end; margin-bottom: 22px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+.dd { display: grid; gap: 4px; font-size: 0.78rem; color: var(--muted); font-weight: 500; }
+.dd select { font: inherit; font-size: 16px; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; min-height: 42px; width: 100%; }
+.dd select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+@media (max-width: 860px) { .filterbar { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+#regionBtns { margin-top: 8px; }
+.seg { display: flex; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); padding: 2px; gap: 2px; min-height: 42px; }
+.seg button { flex: 1 1 0; border: none; background: none; border-radius: 6px; font-size: 0.86rem; font-weight: 600; color: var(--muted); padding: 6px 4px; white-space: nowrap; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.near { display: grid; grid-template-columns: auto 1fr; gap: 2px 8px; align-items: center; margin-top: 12px; font-size: 0.86rem; font-weight: 500; cursor: pointer; }
+.near input { width: 18px; height: 18px; accent-color: var(--accent); margin: 0; }
+.nearhint { grid-column: 2; font-weight: 400; color: var(--muted); font-size: 0.78rem; }
+.el.nb .disc { stroke: var(--accent); stroke-width: 2; stroke-dasharray: 3 3; }
+.chip.site.nbs { border-style: dashed; border-color: var(--accent); }
+.tier { font-size: 0.72rem; font-weight: 600; border-radius: 4px; padding: 1px 6px; }
+.tier.t0 { background: var(--accent-soft); color: var(--ink); border: 1px solid var(--accent); }
+.tier.t1 { border: 1px dashed var(--accent); color: var(--accent); }
+.tier.t2 { border: 1px solid var(--line); }
+.profile { display: grid; gap: 8px; }
+.profile .row button { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 4px 11px; font-size: 0.84rem; display: inline-flex; gap: 6px; align-items: center; }
+.profile .row button .sw { width: 9px; height: 9px; border-radius: 2px; }
+.profile .row button b { font-family: var(--f-mono); font-weight: 600; }
+.profile .row button[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); }
+.dirpill { font-weight: 600; font-size: 0.88rem; }
+.key { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 0.8rem; color: var(--muted); padding: 0 4px; }
+.key .k { display: inline-flex; align-items: center; gap: 5px; }
+.key .k.dim { opacity: 0.4; }
+.key .sw { width: 10px; height: 10px; border-radius: 3px; }
+.row { display: flex; flex-wrap: wrap; gap: 6px; }
+.syms { display: flex; flex-wrap: wrap; gap: 6px; }
+.sym { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 4px 11px; font-size: 0.82rem; }
+.sym[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); font-weight: 600; }
+.sec { display: grid; gap: 10px; margin-top: 8px; }
+.sec > h2 { font-size: 1.15rem; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.sec > h2 .n { font-family: var(--f-mono); font-size: 0.78rem; color: var(--muted); font-weight: 500; }
+.sec > p.hint { margin: -4px 0 0; color: var(--muted); font-size: 0.86rem; max-width: 70ch; }
+.cgroup { display: grid; gap: 8px; }
+.cgroup > h3 { font-size: 0.95rem; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.cgroup > h3 .n { font-family: var(--f-mono); font-size: 0.74rem; color: var(--muted); font-weight: 500; }
+.chip.chg { font-weight: 600; }
+.chip.symc { color: var(--muted); }
+.chip.symc.hit { color: var(--ink); border-color: var(--accent); background: var(--accent-soft); }
+.why { font-size: 0.8rem; color: var(--accent); font-weight: 500; }
+details.more { border: 1px dashed var(--line); border-radius: 10px; padding: 10px 14px; }
+details.more summary { cursor: pointer; font-weight: 600; font-size: 0.9rem; }
+details.more[open] summary { margin-bottom: 10px; }
+.prompt { padding: 22px; border: 1px dashed var(--line); border-radius: 10px; color: var(--muted); }
+.prompt strong { color: var(--ink); }
+[hidden] { display: none !important; }
+
+.conf { display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; align-items: center; padding: 10px 12px; border-radius: 10px; background: var(--surface); border: 1px solid var(--line); }
+.conf .cm { display: inline-flex; gap: 3px; grid-row: span 2; }
+.conf .cm i { width: 10px; height: 22px; border-radius: 3px; background: var(--line); }
+.conf.l4 .cm i.on { background: var(--ev-strong); } .conf.l3 .cm i.on { background: var(--ev-moderate); }
+.conf.l2 .cm i.on { background: var(--ev-prelim); } .conf.l1 .cm i.on, .conf.l0 .cm i.on { background: var(--ev-contested); }
+.conf .cl { font-weight: 600; font-size: 0.9rem; }
+.conf .cn { font-size: 0.8rem; color: var(--muted); font-family: var(--f-mono); }
+.conf .cw { grid-column: 1 / -1; font-size: 0.8rem; color: var(--muted); }
+.prof { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.78rem; color: var(--ink); }
+.prof > span { display: inline-flex; align-items: center; gap: 6px; }
+.prof .na { color: var(--muted); font-style: italic; }
+.prof .db { display: inline-flex; gap: 2px; }
+.prof .db i { width: 5px; height: 11px; border-radius: 1.5px; background: var(--line); }
+.prof .db i.on { background: var(--accent); }
+
+/* clean map: shaded electrodes, no rings or counts */
+.el .disc { fill: var(--electrode); stroke: var(--line); }
+.el.lv1 .disc { fill: color-mix(in srgb, var(--accent) 16%, var(--electrode)); stroke: color-mix(in srgb, var(--accent) 35%, var(--line)); }
+.el.lv2 .disc { fill: color-mix(in srgb, var(--accent) 32%, var(--electrode)); stroke: color-mix(in srgb, var(--accent) 50%, var(--line)); }
+.el.lv3 .disc { fill: color-mix(in srgb, var(--accent) 52%, var(--electrode)); stroke: var(--accent); }
+.el.on .disc { stroke-width: 1.2; }
+.el.lv3 text { fill: var(--ink); }
+.el.sel .disc { fill: var(--accent); stroke: var(--accent); stroke-width: 2; }
+.el.sel text { fill: #fff; }
+.el.nb .disc { stroke: var(--accent); stroke-width: 1.6; stroke-dasharray: 3 2.5; }
+/* disorder rows */
+.drow { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+.drow + .drow { margin-top: 8px; }
+.drow > summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 12px; padding: 13px 16px; align-items: center; }
+.drow > summary::-webkit-details-marker { display: none; }
+.drow[open] > summary { border-bottom: 1px solid var(--line); }
+.dn { font-family: var(--f-display); font-weight: 600; font-size: 1.02rem; }
+.dc { display: inline-flex; align-items: center; gap: 7px; font-size: 0.82rem; font-weight: 600; justify-self: end; white-space: nowrap; }
+.dc .cm { display: inline-flex; gap: 2px; }
+.dc .cm i { width: 6px; height: 14px; border-radius: 2px; background: var(--line); }
+.dc.l4 .cm i.on { background: var(--ev-strong); } .dc.l3 .cm i.on { background: var(--ev-moderate); }
+.dc.l2 .cm i.on { background: var(--ev-prelim); } .dc.l1 .cm i.on { background: var(--ev-contested); }
+.dm { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.mk { display: inline-flex; align-items: center; gap: 5px; font-weight: 600; font-size: 0.86rem; padding: 3px 9px; border-radius: 999px; background: var(--bg); border: 1px solid var(--line); }
+.mk .sw { width: 9px; height: 9px; border-radius: 2px; }
+.mkv { font-size: 0.8rem; color: var(--muted); }
+.dk { font-size: 0.8rem; color: var(--muted); justify-self: end; white-space: nowrap; }
+.dk::after { content: " ›"; font-size: 1rem; }
+.drow[open] .dk::after { content: " ⌄"; }
+.dbody { display: grid; gap: 10px; padding: 12px; }
+.dbody .card { border-radius: 10px; }
+
+.card.study { padding: 0; gap: 0; display: block; }
+.study > summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 2px 10px; padding: 11px 14px; align-items: baseline; }
+.study > summary::-webkit-details-marker { display: none; }
+.study > summary .ev { grid-row: span 2; align-self: center; }
+.study .st { font-weight: 600; font-size: 0.95rem; line-height: 1.35; }
+.study .sy { font-size: 0.78rem; color: var(--muted); }
+.study .sy::after { content: "  ›"; }
+.study[open] .sy::after { content: "  ⌄"; }
+.study .sbody { display: grid; gap: 8px; padding: 2px 14px 14px; border-top: 1px dashed var(--line); padding-top: 10px; }
+.dbody { gap: 8px; }
+
+.byseg { max-width: 320px; margin-bottom: 4px; }
+.dv { grid-column: 1 / -1; font-size: 0.8rem; color: var(--muted); margin-top: -2px; }
+.link { margin: 0; font-size: 0.84rem; color: var(--ink); background: var(--accent-soft); border-radius: 8px; padding: 8px 10px; }
+
+.dsy { color: var(--ink); font-size: 0.86rem; margin-top: -4px; }
+.dsy span.hit { font-weight: 600; text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+
+/* Preview gate */
+html.locked .wrap, html.locked .jump { display: none !important; }
+.gate { display: none; min-height: 100vh; min-height: 100dvh; place-items: center; padding: 24px max(20px, env(safe-area-inset-left, 0px)); }
+html.locked .gate { display: grid; }
+.gate form { width: min(100%, 380px); display: grid; gap: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 28px 24px; }
+.gate h1 { font-size: 1.6rem; }
+.gate .tag { justify-self: start; font-size: 0.78rem; font-weight: 600; color: var(--ev-prelim); border: 1px solid currentColor; border-radius: 999px; padding: 2px 10px; }
+.gate p { margin: 0; color: var(--muted); font-size: 0.94rem; }
+.gate input { font: inherit; font-size: 16px; min-height: 46px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); }
+.gate button { min-height: 46px; border: none; border-radius: 10px; background: var(--ink); color: var(--bg); font-weight: 600; font-size: 1rem; }
+.gate .err { color: var(--ev-contested); font-size: 0.88rem; min-height: 1.2em; }
+.devtag { display: inline-block; vertical-align: middle; margin-left: 8px; font-family: var(--f-body); font-size: 0.72rem; font-weight: 600; letter-spacing: 0; color: var(--ev-prelim); border: 1px solid currentColor; border-radius: 999px; padding: 1px 8px; }
+.el .hit { fill: transparent; }
+.panel { grid-template-columns: minmax(0, 1fr); min-width: 0; }
+.mapbox, #regionBtns, .profile, .profile .row, .filterbar > * { min-width: 0; }
+html, body { overflow-x: clip; }
+.el .badge { font-size: 10px; font-weight: 700; }
+.jump { display: none; }
+/* ---------- phone ---------- */
+@media (max-width: 700px) {
+  body { font-size: 15px; }
+  .wrap { padding-top: 16px; padding-bottom: 96px; }
+  header.top { gap: 10px; margin-bottom: 12px; }
+  header.top h1 { font-size: 1.55rem; }
+  header.top p { font-size: 0.9rem; }
+  .search { flex: 1 1 100%; }
+  .search .eyebrow { display: none; }
+  .search input { font-size: 16px; min-height: 44px; }
+  .filterbar { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 10px; gap: 8px; margin-bottom: 14px; }
+  .filterbar > .dd:nth-child(3) { grid-column: 1 / -1; order: 3; }
+  .filterbar > .dd:nth-child(4) { order: 4; }
+  #resetAll { grid-column: auto; justify-self: center; align-self: end; order: 5; min-height: 42px; }
+  .seg button { font-size: 0.9rem; min-height: 40px; }
+  .grid { gap: 16px; }
+  .mapbox { padding: 10px 8px; }
+  svg.head { max-width: 360px; margin: 0 auto; }
+  .el text { font-size: 12px; }
+  .maptip { min-height: 0; font-size: 0.8rem; }
+  #regionBtns { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }
+  #regionBtns::-webkit-scrollbar { display: none; }
+  #regionBtns .fbtn { flex: none; min-height: 40px; padding: 6px 14px; font-size: 0.88rem; }
+  .near { font-size: 0.84rem; }
+  .near input { width: 22px; height: 22px; }
+  .summary h2 { font-size: 1.2rem; }
+  .profile .row { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }
+  .profile .row::-webkit-scrollbar { display: none; }
+  .profile .row button { flex: none; min-height: 38px; }
+  .card { padding: 13px 14px; gap: 7px; border-radius: 12px; }
+  .card h3 { font-size: 1rem; }
+  .card p { font-size: 0.92rem; }
+  .chip { font-size: 0.74rem; padding: 2px 6px; }
+  .cite { font-size: 0.78rem; flex-direction: column; }
+  .cite a { padding: 6px 0 2px; }
+  .sec > h2 { font-size: 1.05rem; }
+  .jump { display: flex; position: fixed; left: 50%; transform: translateX(-50%);
+    bottom: max(14px, env(safe-area-inset-bottom, 0px)); z-index: 20; align-items: center; gap: 8px;
+    border: none; border-radius: 999px; padding: 12px 20px; min-height: 46px; background: var(--ink); color: var(--bg);
+    font-weight: 600; font-size: 0.92rem; box-shadow: 0 6px 20px rgba(0,0,0,.25); white-space: nowrap; }
+  .jump[hidden] { display: none; }
+  .notes { margin-top: 24px; }
+}
+
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
+<script>
+  // Preview gate: soft access check for a small feedback group. Not real security:
+  // the page and data are public on GitHub. Remembered per browser after one correct entry.
+  (function () { var ok = false; try { ok = localStorage.getItem("eegAtlasAccess") === "1"; } catch (_) {} if (!ok) document.documentElement.classList.add("locked"); })();
+</script>
 </head>
 <body>
+<div class="gate" role="dialog" aria-labelledby="gateTitle">
+  <form id="gateForm" autocomplete="off">
+    <span class="tag">Under development</span>
+    <h1 id="gateTitle">EEG Disorder Atlas</h1>
+    <p>This research atlas is still being built and is shared with a small group for feedback. Please enter the password you were given.</p>
+    <input id="gatePw" type="password" placeholder="Password" aria-label="Password" autocomplete="current-password" required>
+    <button type="submit">Enter</button>
+    <div class="err" id="gateErr" aria-live="polite"></div>
+  </form>
+</div>
 <div class="wrap">
   <header class="top">
     <div>
-      <h1>EEG Disorder Atlas</h1>
-      <p>How brain rhythms differ across disorders. Pick a condition, then tap an electrode on the 10-20 montage to see which EEG bands are linked to it there and how strong the evidence is.</p>
+      <h1>EEG Disorder Atlas <span class="devtag">Preview · in development</span></h1>
+      <p>Resting-state EEG patterns by disorder and symptom. Tap electrodes to pick an area, then narrow by band and direction.</p>
     </div>
     <label class="search"><span class="eyebrow">Search research</span>
       <input id="q" type="search" placeholder="e.g. gamma, slowing, Alzheimer" autocomplete="off">
     </label>
   </header>
 
-  <nav class="conds" id="conds" aria-label="Conditions"></nav>
+  <div class="filterbar" id="filterbar">
+    <label class="dd"><span>Disorder</span><select id="fCond"></select></label>
+    <label class="dd"><span>Band</span><select id="fBand"></select></label>
+    <div class="dd"><span id="dirLbl">Direction</span><div class="seg" id="fDir" role="group" aria-labelledby="dirLbl"></div></div>
+    <label class="dd"><span>Symptom</span><select id="fSym"></select></label>
+    <button class="clear" id="resetAll">Reset all</button>
+  </div>
 
   <div class="grid">
     <aside class="panel">
       <div class="mapbox">
         <div class="maphead">
-          <span class="eyebrow">10-20 system · nose up</span>
-          <button class="clear" id="clearSite" hidden>Clear site</button>
+          <span class="eyebrow">10-20 map</span>
+          <button class="clear" id="clearSite" hidden>Clear area</button>
         </div>
         <svg class="head" id="head" viewBox="0 0 400 410" role="group" aria-label="10-20 electrode map"></svg>
         <p class="maptip" id="tip"></p>
+        <div class="row" id="regionBtns" aria-label="Select a region"></div>
+        <label class="near" title="Electrodes also pick up activity from nearby cortex (volume conduction)"><input type="checkbox" id="fNear" checked> Include neighbouring electrodes</label>
       </div>
-      <div>
-        <div class="eyebrow" style="margin-bottom:6px">EEG bands · tap to filter</div>
-        <div class="bands" id="bands"></div>
-      </div>
+      <div id="bands" hidden></div>
     </aside>
 
-    <main class="ledger">
+    <main class="ledger" id="results">
       <section class="summary" id="summary"></section>
-      <div class="filters" id="evFilters"></div>
       <div class="active" id="active"></div>
       <div id="list" style="display:grid;gap:12px"></div>
     </main>
   </div>
+
+  <button class="jump" id="jump" type="button"></button>
 
   <section class="notes">
     <div>
@@ -179,16 +380,48 @@ svg.head { width: 100%; max-width: 100%; height: auto; display: block; }
       </dl>
     </div>
     <div>
+      <h2>Confidence rating</h2>
+      <p style="margin:0 0 6px">Each group of studies gets a rating from High to Very low, following a simplified GRADE approach:</p>
+      <ul>
+        <li>Start from the strongest supporting design: meta-analysis or randomised trial = High, controlled study or cohort = Moderate, case-control or review = Low, uncontrolled = Very low.</li>
+        <li>Rate down one level if any study points the other way or fails to replicate, and one level if the support is a single primary study (reviews and meta-analyses already pool several).</li>
+        <li>For treatments, if no blinded or sham-controlled study supports the effect, the rating is capped at Low.</li>
+        <li>In the symptom view, EEG-marker links are rated down one level for indirectness: the studies compared diagnosed groups and did not measure the symptom itself.</li>
+        <li>Each card shows design (1–5 bars), type of control, and sample size where it has been recorded.</li>
+      </ul>
+    </div>
+    <div>
       <h2>Reading the studies critically</h2>
       <ul id="method"></ul>
     </div>
     <div>
       <h2>About this map</h2>
-      <p class="warn">Group-level EEG differences are not diagnostic tests for individuals. Summaries were compiled from the published literature and are a starting point, not a clinical guide. Check every claim against the original paper before using it with clients. Old 10-20 names are used: T3/T4/T5/T6 are T7/T8/P7/P8 in the 10-10 system.</p>
+      <p class="warn">EEG markers are from resting-state recordings only (eyes open or closed); task, evoked-response and sleep studies are left out. Group-level EEG differences are not diagnostic tests for individuals, and the same pattern turns up in several conditions. Summaries were compiled from the published literature and are a starting point, not a clinical guide. Check every claim against the original paper before using it with clients. Scalp electrodes pick up activity spread from nearby cortex (volume conduction), and readings also depend on the reference and montage, so findings at neighbouring electrodes are shown too (dashed). Old 10-20 names are used: T3/T4/T5/T6 are T7/T8/P7/P8 in the 10-10 system.</p>
     </div>
   </section>
 </div>
 
+<script>
+  (function () {
+    const HASH = "76c9f3df7aa7c03bbfc9b1dcabfcd535d2cd2c46624151698fb12b957deca9cd"; // sha256 of the test password
+    const form = document.getElementById("gateForm"); if (!form) return;
+    async function sha(t) {
+      const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t));
+      return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, "0")).join("");
+    }
+    form.addEventListener("submit", async e => {
+      e.preventDefault();
+      const pw = document.getElementById("gatePw").value.trim(), err = document.getElementById("gateErr");
+      let ok = false;
+      try { ok = (await sha(pw)) === HASH; } catch (_) { err.textContent = "This browser can't check the password here."; return; }
+      if (!ok) { err.textContent = "That password isn't right. Check with the person who shared the link."; return; }
+      try { localStorage.setItem("eegAtlasAccess", "1"); } catch (_) {}
+      document.documentElement.classList.remove("locked");
+      window.scrollTo(0, 0);
+    });
+    if (document.documentElement.classList.contains("locked")) setTimeout(() => document.getElementById("gatePw").focus(), 50);
+  })();
+</script>
 <script src="data/research.js"></script>
 <script>
 (function () {
@@ -202,36 +435,127 @@ svg.head { width: 100%; max-width: 100%; height: auto; display: block; }
   };
   const REFS = { A1: [22, 205], A2: [378, 205] };
   const ALT = { T3: "T7", T4: "T8", T5: "P7", T6: "P8" };
+  const REGIONS = {
+    Frontal: ["Fp1", "Fp2", "F7", "F3", "Fz", "F4", "F8"], Central: ["C3", "Cz", "C4"],
+    Temporal: ["T3", "T4", "T5", "T6"], Parietal: ["P3", "Pz", "P4"], Occipital: ["O1", "O2"], Midline: ["Fz", "Cz", "Pz"]
+  };
+  // Adjacent electrodes on the 10-20 grid. Volume conduction spreads activity to neighbours.
+  const NB = (() => {
+    const raw = { Fp1: ["Fp2", "F7", "F3", "Fz"], Fp2: ["F8", "F4", "Fz"], F7: ["F3", "T3"], F8: ["F4", "T4"],
+      F3: ["Fz", "C3"], F4: ["Fz", "C4"], Fz: ["Cz"], T3: ["C3", "T5"], T4: ["C4", "T6"], C3: ["Cz", "P3"], C4: ["Cz", "P4"],
+      Cz: ["Pz"], T5: ["P3", "O1"], T6: ["P4", "O2"], P3: ["Pz", "O1"], P4: ["Pz", "O2"], Pz: ["O1", "O2"], O1: ["O2"] };
+    const m = {}; Object.keys(ELECTRODES).forEach(k => m[k] = new Set());
+    Object.entries(raw).forEach(([a, bs]) => bs.forEach(b => { m[a].add(b); m[b].add(a); }));
+    return m;
+  })();
   const EV_ORDER = ["strong", "moderate", "preliminary", "contested"];
+  const DESIGN = { 5: "Meta-analysis", 4: "Randomised trial", 3: "Controlled study / cohort", 2: "Case-control / review", 1: "Uncontrolled / pilot" };
+  const CONTROL = { sham: "Sham / placebo control", active: "Active control", usual: "Waitlist / usual care", none: "No control group" };
+  const LEVEL = ["No supporting evidence", "Very low", "Low", "Moderate", "High"];
+  // Simplified GRADE-style rating for a set of studies on one question.
+  // Start from the best design among supporting studies, then rate down for conflict and thin evidence.
+  function confidence(list, against, indirect) {
+    const support = list.filter(f => f.evidence !== "contested");
+    const con = list.filter(f => f.evidence === "contested").concat(against.filter(f => !list.includes(f)));
+    const why = [];
+    if (!support.length) return { level: 0, support, con, why: [con.length ? "Only conflicting or null results" : "No studies"] };
+    const best = Math.max(...support.map(f => f.metrics.design));
+    let level = { 5: 4, 4: 4, 3: 3, 2: 2, 1: 1 }[best];
+    why.push(`best supporting design: ${DESIGN[best].toLowerCase()}`);
+    if (con.length) { level--; why.push(`${plural(con.length, "study", "studies")} against or null`); }
+    const synth = f => /review|meta-analysis/i.test(f.design);
+    if (support.length === 1 && !synth(support[0])) { level--; why.push("single study"); }
+    if (indirect) { level--; why.push("indirect: diagnosis-level studies, symptom not measured"); }
+    const blind = [...new Set(list.concat(con))].filter(f => f.metrics.blinded || f.metrics.control === "sham");
+    if (blind.length) {
+      const ok = blind.filter(f => f.evidence !== "contested").length;
+      why.push(`${ok} of ${blind.length} blinded/sham-controlled ${blind.length === 1 ? "study" : "studies"} supportive`);
+      if (!ok) level = Math.min(level, 2);
+    }
+    return { level: Math.max(1, level), support, con, why };
+  }
+  function confHtml(list, against, indirect) {
+    const c = confidence(list, against, indirect);
+    const known = list.filter(f => f.metrics.n), N = known.reduce((a, f) => a + f.metrics.n, 0);
+    const segs = [1, 2, 3, 4].map(i => `<i class="${i <= c.level ? "on" : ""}"></i>`).join("");
+    return `<div class="conf l${c.level}"><span class="cm">${segs}</span><span class="cl">Confidence: ${LEVEL[c.level]}</span>
+      <span class="cn">${c.support.length} for · ${c.con.length} against${known.length ? ` · n≈${N.toLocaleString()} (${known.length} of ${list.length} report n)` : ""}</span>
+      <span class="cw">${esc(c.why.join(" · "))}</span></div>`;
+  }
+  // For markers: studies in the same disorder reporting the opposite direction for the chosen band (anywhere on the scalp).
+  function opposing(cid, type) {
+    if (!state.band || !(state.dir === "up" || state.dir === "down")) return [];
+    const want = type === "biomarker" ? OPP[state.dir] : state.dir;
+    return D.findings.filter(f => f.condition === cid && f.type === type && f.changes[state.band] === want);
+  }
   const EV_DOTS = { strong: 4, moderate: 3, preliminary: 2, contested: 1 };
-  const DIR = { up: "↑", down: "↓", ratio: "÷", asymmetry: "⇄" };
-  const DIR_TEXT = { up: "increase / uptrain", down: "decrease / downtrain", ratio: "ratio", asymmetry: "left–right asymmetry" };
+  const ARROW = { up: "↑", down: "↓", asymmetry: "⇄", regulate: "⇅", mixed: "~" };
+  const OPP = { up: "down", down: "up", asymmetry: "asymmetry" };
   const bandById = Object.fromEntries(D.bands.map(b => [b.id, b]));
   const condById = Object.fromEntries(D.conditions.map(c => [c.id, c]));
+  const symById = Object.fromEntries(D.symptoms.map(s => [s.id, s]));
   const bandColor = id => `var(--b-${id})`;
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-
-  const state = { cond: "alzheimers", site: null, band: null, ev: null, type: null, q: "" };
-  const fromHash = () => { const h = location.hash.slice(1); if (h === "all" || condById[h]) state.cond = h; };
-  fromHash();
-
+  const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
   const $ = id => document.getElementById(id);
   const svgNS = "http://www.w3.org/2000/svg";
 
+  const state = { sites: new Set(), near: true, cond: "all", band: "", dir: "", sym: "", ev: "", q: "", by: "disorder" };
+  const fromHash = () => { const h = location.hash.slice(1); state.cond = condById[h] ? h : "all"; };
+  fromHash();
+
+  /* ---------- dropdowns ---------- */
+  const opt = (v, l) => `<option value="${v}">${esc(l)}</option>`;
+  $("fCond").innerHTML = opt("all", "All disorders") + D.conditions.map(c => opt(c.id, c.name)).join("");
+  $("fBand").innerHTML = opt("", "All bands") + D.bands.map(b => opt(b.id, `${b.name} (${b.range})`)).join("");
+  const DIRS = [["", "Any"], ["up", "↑ Elevated"], ["down", "↓ Reduced"], ["asymmetry", "⇄ Asym."]];
+  $("fDir").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; state.dir = b.dataset.d; render(); });
+  $("fNear").addEventListener("change", e => { state.near = e.target.checked; render(); });
+  $("fSym").innerHTML = opt("", "Any symptom") + D.symptoms.map(s => opt(s.id, s.name)).join("");
+  const DD = { fCond: "cond", fBand: "band", fSym: "sym" };
+  Object.entries(DD).forEach(([id, key]) => $(id).addEventListener("change", e => { state[key] = e.target.value; render(); }));
+  $("resetAll").addEventListener("click", () => {
+    Object.assign(state, { cond: "all", band: "", dir: "", sym: "", ev: "", q: "", near: true }); state.sites.clear(); $("q").value = ""; render();
+  });
+  $("q").addEventListener("input", e => { state.q = e.target.value.trim(); render(); });
+  window.addEventListener("hashchange", () => { fromHash(); render(); });
+
+  /* ---------- matching ---------- */
   function matchesText(f) {
     if (!state.q) return true;
     const hay = [f.claim, f.detail, f.design, f.cite.authors, f.cite.title, f.cite.journal, f.cite.year,
-      f.sites.join(" "), f.bands.map(b => bandById[b].name).join(" "), condById[f.condition].name].join(" ").toLowerCase();
+      f.sites.join(" "), f.bands.map(b => bandById[b].name).join(" "), condById[f.condition].name,
+      f.symptoms.map(s => symById[s].name).join(" ")].join(" ").toLowerCase();
     return state.q.toLowerCase().split(/\s+/).every(t => hay.includes(t));
   }
-  // Findings filtered by everything except site (drives the map).
-  const baseSet = () => D.findings.filter(f =>
+  // Direction: a marker matches if the band changes that way in the condition.
+  // A treatment matches if it trains the band the opposite way (i.e. targets that pattern).
+  function dirOk(f) {
+    const want = f.type === "biomarker" ? state.dir : OPP[state.dir];
+    const bands = state.band ? [state.band] : Object.keys(f.changes);
+    return bands.some(b => f.changes[b] === want);
+  }
+  // Everything except the area: drives the map rings.
+  const filtered = (ignore = {}) => D.findings.filter(f =>
     (state.cond === "all" || f.condition === state.cond) &&
-    (!state.band || f.bands.includes(state.band)) &&
-    (!state.ev || f.evidence === state.ev) && (!state.type || f.type === state.type) && matchesText(f));
-  const listSet = base => base.filter(f => !state.site || f.sites.includes(state.site));
+    (ignore.band || !state.band || f.changes[state.band]) &&
+    (ignore.dir || !state.dir || dirOk(f)) &&
+    (!state.sym || f.symptoms.includes(state.sym)) &&
+    (!state.ev || f.evidence === state.ev) && matchesText(f));
+  const hits = f => f.sites.filter(s => state.sites.has(s));
+  const neighbours = () => { const n = new Set(); state.sites.forEach(s => NB[s].forEach(x => !state.sites.has(x) && n.add(x))); return n; };
+  const nbHits = f => { const n = neighbours(); return f.sites.filter(s => n.has(s)); };
+  // 0 = at a selected electrode, 1 = at a neighbouring electrode, 2 = whole-head / individualised, -1 = outside area
+  function tier(f) {
+    if (!state.sites.size) return f.sites.length ? 0 : 2;
+    if (!f.sites.length) return 2;
+    if (hits(f).length) return 0;
+    if (state.near && nbHits(f).length) return 1;
+    return -1;
+  }
+  const inArea = f => tier(f) >= 0;
 
-  /* ---------- static: head drawing ---------- */
+  /* ---------- map ---------- */
   function drawHead() {
     const s = $("head");
     s.innerHTML = `
@@ -246,7 +570,7 @@ svg.head { width: 100%; max-width: 100%; height: auto; display: block; }
       const g = document.createElementNS(svgNS, "g");
       g.setAttribute("class", "el" + (ref ? " ref" : ""));
       g.dataset.site = name;
-      g.innerHTML = `<g class="ring"></g><circle class="disc" cx="${x}" cy="${y}" r="16"/>
+      g.innerHTML = `<circle class="hit" cx="${x}" cy="${y}" r="25"/><g class="ring"></g><circle class="disc" cx="${x}" cy="${y}" r="16"/>
         <text x="${x}" y="${y}">${name}</text><text class="badge" x="${x}" y="${y + 27}"></text>`;
       if (!ref) {
         g.setAttribute("tabindex", "0");
@@ -262,149 +586,238 @@ svg.head { width: 100%; max-width: 100%; height: auto; display: block; }
     Object.entries(ELECTRODES).forEach(([n, p]) => make(n, p, false));
     Object.entries(REFS).forEach(([n, p]) => make(n, p, true));
   }
-
   function arc(cx, cy, r, a0, a1) {
     const p = a => [cx + r * Math.sin(a), cy - r * Math.cos(a)];
     const [x0, y0] = p(a0), [x1, y1] = p(a1);
     return `M${x0.toFixed(2)} ${y0.toFixed(2)} A${r} ${r} 0 ${a1 - a0 > Math.PI ? 1 : 0} 1 ${x1.toFixed(2)} ${y1.toFixed(2)}`;
   }
-
   let siteInfo = {};
   function renderMap(base) {
-    siteInfo = {};
+    siteInfo = {}; const nbSet = neighbours();
     base.forEach(f => f.sites.forEach(s => {
       const i = siteInfo[s] || (siteInfo[s] = { n: 0, bands: new Set() });
-      i.n++; f.bands.forEach(b => i.bands.add(b));
+      i.n++; Object.keys(f.changes).forEach(b => i.bands.add(b));
     }));
     document.querySelectorAll("#head .el:not(.ref)").forEach(g => {
       const name = g.dataset.site, info = siteInfo[name], [x, y] = ELECTRODES[name];
+      const sel = state.sites.has(name);
       g.classList.toggle("on", !!info);
-      g.classList.toggle("sel", state.site === name);
+      g.classList.toggle("sel", sel);
+      g.classList.toggle("nb", !sel && state.near && nbSet.has(name));
       const ring = g.querySelector(".ring");
       ring.innerHTML = "";
-      if (info) {
-        const bands = D.bands.map(b => b.id).filter(b => info.bands.has(b) && (!state.band || b === state.band));
-        const seg = (2 * Math.PI) / bands.length, gap = bands.length > 1 ? 0.18 : 0;
-        bands.forEach((b, i) => {
-          const el = document.createElementNS(svgNS, bands.length === 1 ? "circle" : "path");
-          if (bands.length === 1) { el.setAttribute("cx", x); el.setAttribute("cy", y); el.setAttribute("r", 20.5); }
-          else el.setAttribute("d", arc(x, y, 20.5, i * seg + gap / 2, (i + 1) * seg - gap / 2));
-          el.setAttribute("fill", "none"); el.setAttribute("stroke", bandColor(b));
-          el.setAttribute("stroke-width", "5"); el.setAttribute("stroke-linecap", "butt");
-          ring.appendChild(el);
-        });
-      }
-      g.querySelector(".badge").textContent = info ? `${info.n} stud${info.n === 1 ? "y" : "ies"}` : "";
+      ["lv1", "lv2", "lv3"].forEach(c => g.classList.remove(c));
+      if (info) g.classList.add(info.n >= 8 ? "lv3" : info.n >= 3 ? "lv2" : "lv1");
+      g.querySelector(".badge").textContent = "";
       const alt = ALT[name] ? ` (${ALT[name]})` : "";
       g.setAttribute("aria-label", `${name}${alt}: ${info ? info.n + " findings" : "no findings"}`);
-      g.setAttribute("aria-pressed", state.site === name ? "true" : "false");
+      g.setAttribute("aria-pressed", sel ? "true" : "false");
     });
     showTip(null);
   }
-
   function showTip(name) {
     const t = $("tip");
-    const n = name || state.site;
-    if (!n) { t.textContent = "Ringed electrodes have research for the current filters. Ring colours show the bands studied there."; return; }
-    const info = siteInfo[n], alt = ALT[n] ? ` (10-10: ${ALT[n]})` : "";
+    if (!name) {
+      t.textContent = state.sites.size
+        ? `Area: ${[...state.sites].join(", ")}${state.near && neighbours().size ? " + neighbours (dashed)" : ""}`
+        : "Shaded electrodes have research. Tap to pick an area.";
+      return;
+    }
+    const info = siteInfo[name], alt = ALT[name] ? ` (10-10: ${ALT[name]})` : "";
     t.innerHTML = info
-      ? `<strong>${n}</strong>${alt} · ${info.n} finding${info.n === 1 ? "" : "s"} · ${[...info.bands].map(b => bandById[b].name).join(", ")}`
-      : `<strong>${n}</strong>${alt} · no findings for the current filters`;
+      ? `<strong>${name}</strong>${alt} · ${plural(info.n, "study", "studies")}`
+      : `<strong>${name}</strong>${alt} · no findings for the current filters`;
   }
-
   function highlight(sites) {
     document.querySelectorAll("#head .el").forEach(g => g.classList.toggle("hl", !!sites && sites.includes(g.dataset.site)));
   }
-
-  /* ---------- controls ---------- */
-  function renderConds() {
-    const counts = {};
-    D.findings.forEach(f => counts[f.condition] = (counts[f.condition] || 0) + 1);
-    const items = [{ id: "all", name: "All conditions", n: D.findings.length }, ...D.conditions.map(c => ({ ...c, n: counts[c.id] || 0 }))];
-    $("conds").innerHTML = items.map(c =>
-      `<button class="cond" data-c="${c.id}" aria-pressed="${state.cond === c.id}">${esc(c.name)}<span class="n">${c.n}</span></button>`).join("");
-  }
-  $("conds").addEventListener("click", e => {
-    const b = e.target.closest(".cond"); if (!b) return;
-    state.cond = b.dataset.c; state.site = null;
-    try { history.replaceState(null, "", "#" + state.cond); } catch (_) { location.hash = state.cond; }
+  function toggleSite(name) { state.sites.has(name) ? state.sites.delete(name) : state.sites.add(name); render(); }
+  $("clearSite").addEventListener("click", () => { state.sites.clear(); render(); });
+  $("regionBtns").addEventListener("click", e => {
+    const b = e.target.closest("button"); if (!b) return;
+    const sites = REGIONS[b.dataset.r], all = sites.every(s => state.sites.has(s));
+    sites.forEach(s => all ? state.sites.delete(s) : state.sites.add(s));
     render();
   });
-  window.addEventListener("hashchange", () => { fromHash(); state.site = null; render(); });
-
+  function renderRegions() {
+    $("regionBtns").innerHTML = Object.entries(REGIONS).map(([name, sites]) =>
+      `<button class="fbtn" data-r="${name}" aria-pressed="${sites.every(s => state.sites.has(s))}">${name}</button>`).join("");
+  }
   function renderBands(base) {
-    const present = new Set(base.flatMap(f => f.bands));
+    const present = new Set(base.flatMap(f => Object.keys(f.changes)));
     $("bands").innerHTML = D.bands.map(b =>
-      `<button class="band${present.has(b.id) ? "" : " dim"}" data-b="${b.id}" aria-pressed="${state.band === b.id}" title="${esc(b.note)}">
-        <span class="sw" style="background:${bandColor(b.id)}"></span><span>${b.name}</span><span class="hz">${b.range}</span></button>`).join("");
+      `<span class="k${present.has(b.id) ? "" : " dim"}" title="${esc(b.range + ": " + b.note)}"><span class="sw" style="background:${bandColor(b.id)}"></span>${b.name}</span>`).join("");
   }
-  $("bands").addEventListener("click", e => {
-    const b = e.target.closest(".band"); if (!b) return;
-    state.band = state.band === b.dataset.b ? null : b.dataset.b; render();
-  });
 
-  function renderEv() {
-    $("evFilters").innerHTML = `<span class="lbl">Show</span>` +
-      [[null, "All research"], ["biomarker", "EEG markers"], ["protocol", "Treatment studies"]].map(([t, l]) =>
-        `<button class="fbtn" data-type="${t || ""}" aria-pressed="${state.type === t}">${l}</button>`).join("") +
-      `<span class="lbl" style="margin-left:10px">Evidence</span>` +
-      [null, ...EV_ORDER].map(ev => `<button class="fbtn" data-ev="${ev || ""}" aria-pressed="${state.ev === ev}">${ev ? ev[0].toUpperCase() + ev.slice(1) : "Any"}</button>`).join("");
+  /* ---------- cards ---------- */
+  function changeChips(f) {
+    return Object.entries(f.changes).map(([b, d]) => {
+      const verb = f.type === "protocol"
+        ? { up: "train up", down: "train down", asymmetry: "train asymmetry", regulate: "self-regulate", mixed: "mixed" }[d]
+        : { up: "higher", down: "lower", asymmetry: "asymmetry", regulate: "altered", mixed: "mixed" }[d];
+      const on = state.band === b ? ' style="border-color:var(--ink)"' : "";
+      return `<span class="chip chg"${on}><span class="sw" style="background:${bandColor(b)}"></span>${bandById[b].name} ${ARROW[d]} <span style="font-weight:400;color:var(--muted)">${verb}</span></span>`;
+    }).join("");
   }
-  $("evFilters").addEventListener("click", e => {
-    const b = e.target.closest(".fbtn"); if (!b) return;
-    if ("type" in b.dataset) state.type = b.dataset.type || null; else state.ev = b.dataset.ev || null;
-    render();
-  });
-
-  function toggleSite(name) { state.site = state.site === name ? null : name; render(); }
-  $("clearSite").addEventListener("click", () => { state.site = null; render(); });
-  $("q").addEventListener("input", e => { state.q = e.target.value.trim(); render(); });
-
-  /* ---------- ledger ---------- */
   function card(f) {
     const dots = Array.from({ length: 4 }, (_, i) => `<i class="${i < EV_DOTS[f.evidence] ? "f" : ""}"></i>`).join("");
-    const bands = f.bands.map(b => `<span class="chip"><span class="sw" style="background:${bandColor(b)}"></span>${bandById[b].name}</span>`).join("");
-    const sites = f.sites.length ? f.sites.map(s => `<span class="chip site">${s}</span>`).join("") : `<span class="chip">Individualised (QEEG-guided)</span>`;
+    const nbSet = state.near ? neighbours() : new Set();
+    const sites = f.sites.length
+      ? f.sites.map(s => `<span class="chip site${nbSet.has(s) ? " nbs" : ""}"${state.sites.has(s) ? ' style="border-color:var(--accent);background:var(--accent-soft)"' : ""}>${s}</span>`).join("")
+      : `<span class="chip">${f.type === "protocol" ? "Site chosen per client (QEEG-guided)" : "Whole-head / pooled sites"}</span>`;
+    const syms = f.symptoms.map(s => `<span class="chip symc${state.sym === s ? " hit" : ""}">${esc(symById[s].name)}</span>`).join("");
     const c = f.cite;
     const pub = "https://pubmed.ncbi.nlm.nih.gov/?term=" + encodeURIComponent(c.title);
-    return `<article class="card" data-sites="${f.sites.join(",")}" tabindex="-1">
-      <div class="meta">
-        <span class="ev ${f.evidence}"><span class="dots">${dots}</span>${f.evidence}</span>
-        <span class="type">${f.type === "biomarker" ? "EEG marker" : "Neurofeedback study"}</span>
-        <span>${esc(f.design)}</span>
-        ${state.cond === "all" ? `<span>· ${esc(condById[f.condition].name)}</span>` : ""}
+    const t = tier(f);
+    const tierTxt = !state.sites.size ? "" : t === 0 ? `<span class="tier t0">At ${hits(f).join(", ")}</span>`
+      : t === 1 ? `<span class="tier t1">Neighbouring: ${nbHits(f).join(", ")}</span>`
+      : "";
+    let pill = "";
+    const showB = state.band && f.changes[state.band] ? [state.band] : [];
+    if (showB.length) {
+      const d = f.changes[state.band], bn = bandById[state.band].name;
+      pill = f.type === "biomarker"
+        ? `<div class="dirpill" style="color:${bandColor(state.band)}">${bn} ${ARROW[d]} ${({ up: "elevated", down: "reduced", asymmetry: "asymmetric", mixed: "mixed results", regulate: "altered" })[d]} in ${esc(condById[f.condition].name)}</div>`
+        : `<div class="dirpill" style="color:${bandColor(state.band)}">Trains ${bn.toLowerCase()} ${ARROW[d]} ${({ up: "up", down: "down", asymmetry: "toward asymmetry", regulate: "(self-regulation)", mixed: "" })[d]}</div>`;
+    }
+    const lead = c.authors.split(",")[0].trim().replace(/ [A-Z]{1,3}$/, "") + (c.authors.includes(",") ? " et al." : "");
+    return `<details class="card study" data-sites="${f.sites.join(",")}">
+      <summary>
+        <span class="ev ${f.evidence}" title="${f.evidence}"><span class="dots">${dots}</span></span>
+        <span class="st">${esc(f.claim)}</span>
+        <span class="sy">${state.by === "symptom" ? esc(condById[f.condition].name) + " · " : ""}${esc(lead)} ${c.year} · ${esc(DESIGN[f.metrics.design])}</span>
+      </summary>
+      <div class="sbody">
+        <div class="meta">${tierTxt}<span class="ev ${f.evidence}">${f.evidence}</span><span>${esc(f.design)}</span></div>
+        ${pill}
+        <div class="tags">${sites}${changeChips(f)}</div>
+        <p>${esc(f.detail)}</p>
+        ${profileRow(f)}
+        <div class="cite"><span>${esc(c.authors)} (${c.year}). ${esc(c.title)}. <em>${esc(c.journal)}</em>.</span>
+          <a href="${pub}" target="_blank" rel="noopener">Find on PubMed ↗</a></div>
       </div>
-      <h3>${esc(f.claim)}</h3>
-      <div class="tags">${sites}<span class="chip" title="${DIR_TEXT[f.direction]}">${DIR[f.direction]} ${DIR_TEXT[f.direction]}</span>${bands}</div>
-      <p>${esc(f.detail)}</p>
-      <div class="cite"><span>${esc(c.authors)} (${c.year}). ${esc(c.title)}. <em>${esc(c.journal)}</em>.</span>
-        <a href="${pub}" target="_blank" rel="noopener">Find on PubMed ↗</a></div>
-    </article>`;
+    </details>`;
   }
+  function profileRow(f) {
+    const m = f.metrics;
+    const bars = [1, 2, 3, 4, 5].map(i => `<i class="${i <= m.design ? "on" : ""}"></i>`).join("");
+    const ctl = f.type === "protocol"
+      ? (m.control ? CONTROL[m.control] + (m.blinded ? " · blinded" : m.blinded === false ? " · unblinded" : "") : (m.blinded ? "Blinded ratings" : "Control: not recorded"))
+      : "Patients vs controls";
+    const size = [m.k ? `${m.k} studies` : "", m.n ? `n = ${m.n.toLocaleString()}` : ""].filter(Boolean).join(", ") || "Size: not recorded yet";
+    return `<div class="prof"><span title="Study design strength, 1–5"><span class="db">${bars}</span>${DESIGN[m.design]}</span><span>${ctl}</span><span${m.n || m.k ? "" : ' class="na"'}>${size}</span></div>`;
+  }
+  const empty = msg => `<div class="empty">${msg}</div>`;
+  const section = (title, n, hint, inner) =>
+    `<section class="sec"><h2>${title}<span class="n">${n}</span></h2>${hint ? `<p class="hint">${hint}</p>` : ""}${inner}</section>`;
+  function evSummary(list) {
+    if (!list.length) return "";
+    const best = EV_ORDER.find(e => list.some(f => f.evidence === e));
+    const nc = list.filter(f => f.evidence === "contested").length;
+    return ` · best evidence: ${best}${nc ? ` · ${nc} contested` : ""}`;
+  }
+  // Site-specific hits first, then whole-head findings; then evidence, then newest.
+  const rank = (a, b) => tier(a) - tier(b) || hits(b).length - hits(a).length
+    || EV_ORDER.indexOf(a.evidence) - EV_ORDER.indexOf(b.evidence) || b.cite.year - a.cite.year;
 
+  /* ---------- render ---------- */
   function render() {
-    renderConds(); renderEv();
-    const base = baseSet(), list = listSet(base)
-      .sort((a, b) => (a.type === "biomarker" ? 0 : 1) - (b.type === "biomarker" ? 0 : 1) || EV_ORDER.indexOf(a.evidence) - EV_ORDER.indexOf(b.evidence) || b.cite.year - a.cite.year);
-    renderMap(base); renderBands(base);
+    $("fCond").value = state.cond; $("fBand").value = state.band; $("fNear").checked = state.near;
+    $("fDir").innerHTML = DIRS.map(([d, l]) => `<button data-d="${d}" aria-pressed="${state.dir === d}">${l}</button>`).join("");
+    $("fSym").value = state.sym;
+    try { history.replaceState(null, "", state.cond === "all" ? location.pathname : "#" + state.cond); } catch (_) { /* sandboxed */ }
 
+    const base = filtered(), list = base.filter(inArea).sort(rank);
+    renderMap(base); renderRegions();
+    $("clearSite").hidden = !state.sites.size;
+
+    // Heading describes the current selection in plain words.
     const cond = condById[state.cond];
-    const nB = base.filter(f => f.type === "biomarker").length, nP = base.length - nB;
-    $("summary").innerHTML = `<span class="eyebrow">${nB} EEG marker${nB === 1 ? "" : "s"} · ${nP} treatment stud${nP === 1 ? "y" : "ies"}</span>
-      <h2>${cond ? esc(cond.name) : "All conditions"}</h2>
-      <p>${cond ? esc(cond.summary) : "Every condition in the dataset. Choose one above to focus the map."}</p>`;
+    const bandTxt = state.band ? bandById[state.band].name : "";
+    const dirTxt = { up: "Elevated", down: "Reduced", asymmetry: "Asymmetric" }[state.dir] || "";
+    const pattern = [dirTxt, dirTxt ? bandTxt.toLowerCase() : bandTxt].filter(Boolean).join(" ");
+    const area = state.sites.size ? [...state.sites].join(", ") : "";
+    const title = [cond ? cond.name : "", pattern, area ? `at ${area}` : ""].filter(Boolean).join(" · ") || "All research";
+    const markers = list.filter(f => f.type === "biomarker"), treats = list.filter(f => f.type === "protocol");
+    $("summary").innerHTML = `<h2>${esc(title)}</h2>
+      ${cond ? `<p>${esc(cond.summary)}</p>` : ""}`;
+    $("active").innerHTML = state.sym ? `Showing research involving <strong>${esc(symById[state.sym].name.toLowerCase())}</strong>` : "";
 
-    const parts = [];
-    if (state.site) parts.push(`site <strong>${state.site}</strong>`);
-    if (state.band) parts.push(`band <strong>${bandById[state.band].name}</strong>`);
-    if (state.q) parts.push(`search <strong>“${esc(state.q)}”</strong>`);
-    $("active").innerHTML = `Showing ${list.length} of ${base.length} finding${list.length === 1 ? "" : "s"}${parts.length ? " · " + parts.join(" · ") : ""}`;
-    $("clearSite").hidden = !state.site;
-
-    $("list").innerHTML = list.length ? list.map(card).join("")
-      : `<div class="empty">No research matches these filters. Clear the site, band or search to see more.</div>`;
+    // Each section is grouped by disorder, with a confidence rating per group.
+    // One row per disorder: the EEG marker (or trained bands) and a confidence rating. Studies open on tap.
+    const markerChips = (items, type) => {
+      const use = items.filter(f => f.evidence !== "contested").length ? items.filter(f => f.evidence !== "contested") : items;
+      const tally = {};
+      use.forEach(f => Object.entries(f.changes).forEach(([b, d]) => {
+        if (state.band && b !== state.band) return;
+        if (!ARROW[d] || d === "mixed") return;
+        (tally[b] = tally[b] || {})[d] = (tally[b][d] || 0) + 1;
+      }));
+      const out = D.bands.filter(b => tally[b.id]).map(b => {
+        const d = Object.entries(tally[b.id]).sort((x, y) => y[1] - x[1])[0][0];
+        return `<span class="mk"><span class="sw" style="background:${bandColor(b.id)}"></span>${b.name} ${ARROW[d]}</span>`;
+      }).slice(0, 4).join("");
+      return (type === "protocol" ? `<span class="mkv">Trains</span>` : "") + out;
+    };
+    // Rows are symptoms (default) or disorders. A study appears under every symptom it is tagged with.
+    const grouped = (items, type) => {
+      if (!items.length) return "";
+      const bySym = state.by === "symptom";
+      const groups = {};
+      items.forEach(f => (bySym ? f.symptoms.filter(x => !state.sym || x === state.sym) : [f.condition])
+        .forEach(k => (groups[k] = groups[k] || []).push(f)));
+      const against = k => bySym
+        ? [...new Set(groups[k].map(f => f.condition))].flatMap(cid => opposing(cid, type).filter(f => f.symptoms.includes(k)))
+        : opposing(k, type);
+      const indirect = bySym && type === "biomarker";
+      const conf = {}; Object.keys(groups).forEach(k => conf[k] = confidence(groups[k], against(k), indirect));
+      const ids = Object.keys(groups).sort((x, y) => conf[y].level - conf[x].level || groups[y].length - groups[x].length || rank(groups[x][0], groups[y][0]));
+      const one = ids.length === 1;
+      return ids.map(k => {
+        const g = groups[k], c = conf[k], segs = [1, 2, 3, 4].map(i => `<i class="${i <= c.level ? "on" : ""}"></i>`).join("");
+        const conds = [...new Set(g.map(f => f.condition))].map(cid => condById[cid].name);
+        const name = bySym ? symById[k].name : condById[k].name;
+        const symsOf = [...new Set(D.findings.filter(f => f.condition === k && f.type === type).flatMap(f => f.symptoms))];
+        const via = bySym ? `<span class="dv">${type === "protocol" ? "Trials in" : "Seen in"} ${esc(conds.join(", "))}</span>`
+          : symsOf.length ? `<span class="dv dsy">${type === "protocol" ? "Outcomes: " : ""}${symsOf.map(x => `<span${state.sym === x ? ' class="hit"' : ""}>${esc(symById[x].name)}</span>`).join(" · ")}</span>` : "";
+        const link = !bySym ? "" : type === "protocol"
+          ? `<p class="link">How this is linked: ${esc(name.toLowerCase())} was measured as an outcome in these trials.</p>`
+          : `<p class="link">How this is linked: these studies compared people diagnosed with ${esc(conds.join(" / "))} against controls. None measured ${esc(name.toLowerCase())} directly, so the link to the symptom is indirect.</p>`;
+        return `<details class="drow"${one ? " open" : ""}><summary>
+          <span class="dn">${esc(name)}</span>
+          <span class="dc l${c.level}" title="Confidence"><span class="cm">${segs}</span>${LEVEL[c.level].replace("No supporting evidence", "None")}</span>
+${via}
+          <span class="dm">${markerChips(g, type)}</span>
+          <span class="dk">${plural(g.length, "study", "studies")}</span>
+        </summary><div class="dbody">${link}${confHtml(g, against(k), indirect)}${g.map(card).join("")}</div></details>`;
+      }).join("");
+    };
+    const mHtml = markers.length ? grouped(markers, "biomarker") : empty("No EEG marker studies match. Try a wider area, another band, or clear a filter.");
+    const tHtml = treats.length ? grouped(treats, "protocol") : empty("No treatment studies match. Try a wider area or clear a filter.");
+    const mHint = state.by === "symptom"
+      ? "Resting-state EEG patterns linked to each symptom, through the disorders where it occurs. Group-level findings, not a diagnostic test."
+      : "Each disorder with its main symptoms and resting-state EEG marker. Group-level findings, not a diagnostic test. Tap a row for the studies.";
+    const tHint = state.dir ? "Neurofeedback that trains this band the other way." : "Neurofeedback tested as treatment.";
+    requestAnimationFrame(() => syncJump && syncJump());
+    $("jump").innerHTML = `See results ↓`;
+    const unit = state.by === "symptom" ? ["symptom", "symptoms"] : ["disorder", "disorders"];
+    const nKeys = list => state.by === "symptom" ? new Set(list.flatMap(f => f.symptoms.filter(x => !state.sym || x === state.sym))).size : new Set(list.map(f => f.condition)).size;
+    $("list").innerHTML =
+      `<div class="seg byseg" role="group" aria-label="Group results by">${[["disorder", "By disorder"], ["symptom", "By symptom"]].map(([v, l]) => `<button data-by="${v}" aria-pressed="${state.by === v}">${l}</button>`).join("")}</div>` +
+      section("EEG markers", plural(nKeys(markers), ...unit), mHint, mHtml) +
+      section("Treatment evidence", plural(nKeys(treats), ...unit), tHint, tHtml);
   }
 
+  $("list").addEventListener("click", e => { const b = e.target.closest("[data-by]"); if (!b) return; state.by = b.dataset.by; render(); });
+  $("active").addEventListener("click", e => {
+    const b = e.target.closest("[data-pb]"); if (!b) return;
+    const same = state.band === b.dataset.pb && state.dir === b.dataset.pd;
+    state.band = same ? "" : b.dataset.pb; state.dir = same ? "" : b.dataset.pd; render();
+  });
+  $("jump").addEventListener("click", () => $("results").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" }));
+  // Hide the jump bar once the results are on screen.
+  const syncJump = () => { $("jump").hidden = $("results").getBoundingClientRect().top < innerHeight * 0.55; };
+  addEventListener("scroll", syncJump, { passive: true }); addEventListener("resize", syncJump);
   $("list").addEventListener("mouseover", e => { const c = e.target.closest(".card"); highlight(c ? c.dataset.sites.split(",") : null); });
   $("list").addEventListener("mouseleave", () => highlight(null));
   $("list").addEventListener("focusin", e => { const c = e.target.closest(".card"); if (c) highlight(c.dataset.sites.split(",")); });

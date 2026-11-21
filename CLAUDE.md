@@ -11,7 +11,7 @@ research evidence for each finding. Neurofeedback treatment studies are
 included as a secondary filter; EEG markers are the main focus.
 
 - `index.html`: the entire app. One static page, vanilla JS, no build step, no backend.
-- `data/research.js`: all content, as `window.NF_DATA` (bands, conditions, findings, methodology).
+- `data/research.js`: all content, as `window.NF_DATA` (bands, conditions, symptoms, findings, methodology, excluded).
 - `README.md`: how to run it and the schema for findings.
 
 ## Adding or editing research
@@ -25,7 +25,14 @@ Add entries to `findings` in `data/research.js`:
   type: "biomarker",             // "biomarker" (EEG difference) | "protocol" (neurofeedback study)
   sites: ["Pz", "O1", "O2"],     // 10-20 labels, old naming T3/T4/T5/T6; [] = individualised / whole-head
   bands: ["alpha", "delta"],     // ids from `bands`
-  direction: "down",             // "up" | "down" | "ratio" | "asymmetry"
+  direction: "down",             // "up" | "down" | "ratio" | "asymmetry" (summary only)
+  changes: { alpha: "down", delta: "up" }, // REQUIRED, per band: "up" | "down" | "asymmetry" | "regulate" | "mixed"
+                                 // biomarker = how the band differs in the condition; protocol = which way training pushes it.
+                                 // The direction filter and map lookup match on this, so get each band's direction right.
+  symptoms: ["memory", "cogdecline"], // ids from `symptoms`: biomarker = core symptoms of the studied group; protocol = outcomes measured
+  metrics: { design: 5, control: null, blinded: null, n: 977, k: 24 },
+                                // design 1-5: 5 meta-analysis, 4 RCT, 3 controlled study/cohort, 2 case-control/narrative review, 1 uncontrolled/pilot
+                                // control: "sham" | "active" | "usual" (waitlist/usual care) | "none" | null; n/k: only if verified, else null
   evidence: "strong",            // "strong" | "moderate" | "preliminary" | "contested"
   claim: "One-line finding",
   detail: "Two or three plain sentences on what the study found and its limits.",
@@ -42,6 +49,11 @@ Evidence grades:
 
 ## Rules
 
+- **Resting-state only for EEG markers.** Biomarker entries must come from resting recordings
+  (eyes open or eyes closed, awake). Do not add task-based, event-related/evoked (e.g. ASSR, ERP)
+  or sleep EEG findings. If a paper mixes conditions, include only its resting results and say so
+  in `detail`. Log anything left out in `excluded` with the reason.
+
 - Only add studies that can be cited precisely (authors, year, exact title, journal).
   If unsure of a detail (e.g. exact electrode sites), say so to the user rather than guessing.
 - Include null and contradicting results (blinded, sham-controlled, meta-analytic),
@@ -49,5 +61,5 @@ Evidence grades:
 - Keep the framing that group-level EEG differences are not diagnostic tests for individuals.
   This is a research reference, not medical advice.
 - Keep the app a single static page: no frameworks, build tools or backend unless the owner asks.
-- After editing `data/research.js`, check every finding's `condition` and `bands`
-  match existing ids (open `index.html` and confirm there are no console errors).
+- After editing `data/research.js`, check every finding's `condition`, `bands`, `changes` keys
+  and `symptoms` match existing ids (open `index.html` and confirm there are no console errors).
