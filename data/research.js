@@ -2397,6 +2397,36 @@ window.NF_DATA = {
       detail: "Taken from the abstract; not checked in the full text. Mostly subclinical undergraduates selected by questionnaire, with a subset meeting GAD or OCD criteria (OCD results left out). Resting alpha asymmetry was more left frontal with high worry and GAD, and more right frontal and parietal with high trait anxiety, so the direction differs by group. Sample size is not stated in the abstract. Cross-sectional design.",
       design: "Cross-sectional",
       cite: { authors: "Smith EE, et al.", year: 2016, title: "Patterns of alpha asymmetry in those with elevated worry, trait anxiety, and obsessive-compulsive symptoms: A test of the worry and avoidance models of alpha asymmetry", journal: "Neuropsychologia" }
+    },
+    {
+      id: "pm-34224782", condition: "anxiety", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 97, k: null },
+      sites: ["F7","F3","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["anxiety"],
+      claim: "Panic disorder: more right than left fronto-lateral alpha power at rest, not seen in controls",
+      detail: "Taken from the abstract; not checked in the full text. 55 people with panic disorder vs 42 healthy controls, resting-state EEG. Right-greater-than-left alpha power was found at fronto-lateral sites in patients only; the abstract does not name electrodes, so the lateral frontal sites F7, F3, F4 and F8 were used. Cross-sectional case-control design.",
+      design: "Case-control",
+      cite: { authors: "Thoma L, et al.", year: 2021, title: "Fronto-lateral alpha power asymmetry in panic disorder", journal: "Int J Psychophysiol" }
+    },
+    {
+      id: "pm-35192865", condition: "anxiety", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 103, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha","delta"], direction: "ratio", evidence: "preliminary",
+      changes: { alpha: "down", delta: "up" }, symptoms: ["anxiety"],
+      claim: "Youths with stable high social anxiety: lower frontal alpha/delta ratio at rest",
+      detail: "Taken from the abstract; not checked in the full text. 103 typically developing 12- to 14-year-olds, 4 min resting EEG (2 min eyes open, 2 min eyes closed) at baseline; the stable-high social anxiety class was compared with the stable-low class. The abstract does not give the electrode set, so the frontal region was used; the alpha and delta changes are inferred from the ratio. Not a clinical sample.",
+      design: "Cross-sectional",
+      cite: { authors: "Schmidt LA, et al.", year: 2022, title: "Frontal EEG alpha-delta ratio and social anxiety across early adolescence", journal: "Int J Psychophysiol" }
+    },
+    {
+      id: "pm-35891100", condition: "anxiety", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 81, k: null },
+      sites: ["Fp1","Fp2","F7","F3","F4","F8","T3","T4","T5","T6","C3","C4"], bands: ["alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { alpha: "down", beta: "up" }, symptoms: ["anxiety"],
+      claim: "GAD: more relative beta and less alpha1 power than controls, eyes closed",
+      detail: "45 people with GAD vs 36 healthy controls, 10 min eyes-closed resting EEG on 16 channels. Relative alpha1 power was lower in frontal, temporal and central sites; relative beta was higher, mostly frontal and temporal. Fuzzy entropy and connectivity results, and the classifier accuracy, were not used for this entry. Case-control design with a small sample.",
+      design: "Case-control",
+      cite: { authors: "Shen Z, et al.", year: 2022, title: "Aberrated Multidimensional EEG Characteristics in Patients with Generalized Anxiety Disorder: A Machine-Learning Based Analysis Framework", journal: "Sensors (Basel)" }
     }
   ],
 
