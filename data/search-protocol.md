@@ -17,6 +17,7 @@ Every change is a commit, so the history of each decision is kept.
 ## Status values in `research-log.csv`
 
 - `to-review`: found by a search, not yet screened
+- `full-text`: passed title/abstract screening; waiting for full-text review (sites, directions, n, k)
 - `included`: meets the criteria and is in `research.js`
 - `excluded`: screened out; `reason` says why
 
@@ -83,6 +84,14 @@ Re-run the searches monthly. Record each run below.
 - **How v2 was run:** the PubMed connector allows at most 20 boolean operators and 200 results per call, so v2 was run as v1 plus two supplements: (a) papers matching band names / "oscillations" but none of power/spectral/spectrum/asymmetry, and (b) papers saying "electroencephalogram" but not "EEG", with spectral terms. PTSD was pulled with the full v2 query directly.
 - **Per disorder (records):** Alzheimer's/MCI 466, Depression 351, Schizophrenia 270, ADHD 237, Epilepsy 224, Autism 170, Parkinson's 161, Alcohol & substance use 129, Anxiety 120, PTSD 48, Brain injury 36, Insomnia 31, Migraine 28, unassigned catch-up 3.
 - **Next:** title/abstract screening in batches (fetch metadata for 25–50 PMIDs at a time), then full text.
+
+
+### Screening round 1 (21 Nov 2026): anxiety, PTSD, epilepsy
+
+384 unique papers screened on title and abstract (PubMed connector; titles, years and journals now filled in the log).
+Result: 122 `full-text` (including OCD resting-EEG studies, a condition not yet in the atlas, and systematic reviews kept for citation chasing), 262 `excluded` with a reason.
+Rules applied: resting awake scalp EEG only; connectivity, network or microstate-only papers were excluded as "outside atlas schema" (the atlas records band power direction and site) and can be reconsidered if the schema grows; drug, stimulation, surgery and psychotherapy effect studies were excluded unless neurofeedback; MEG, imaging and intracranial recordings were excluded.
+Epilepsy gave the fewest survivors (most hits were intracranial, imaging, connectivity or drug studies). Decisions were made from titles and abstracts by one reviewer (Claude); a second human check of the exclusions is still to do.
 
 ## Bulk pull (PubMed)
 
