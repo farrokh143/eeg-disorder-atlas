@@ -102,6 +102,10 @@ Epilepsy gave the fewest survivors (most hits were intracranial, imaging, connec
 
 690 papers screened on title and abstract (schizophrenia 248, Alzheimer's/dementia/MCI 449; some overlap): 305 passed to `full-text`, 385 excluded. Same rules as rounds 1 and 2. Of the exclusions, 194 were connectivity, network, microstate or ML-classifier studies outside the atlas schema, 78 were treatment or intervention studies, 39 were task or evoked EEG, and 28 were MEG. Papers that mix resting and task or photic conditions were kept with a note to use the resting results only. Survivors include studies of Lewy body dementia, Parkinson disease with cognitive impairment, Down syndrome and Creutzfeldt-Jakob disease, which are outside the 14 atlas conditions. Decided from titles and abstracts by one reviewer (Claude); human second check still to do.
 
+### Screening round 4 (21 Nov 2026): autism, Parkinson's, substance use, brain injury, insomnia, migraine
+
+487 papers screened on title and abstract: 155 passed to `full-text` and 332 were excluded (one as a duplicate). Same rules as earlier rounds. New exclusion reasons: "Sleep EEG, not resting wakefulness" (2) and "Retracted publication" (1). Parkinson's papers were mostly excluded because they were deep brain stimulation or local field potential recordings (intracranial, 26 papers across this round) or MEG. Substance-use survivors include acute and chronic drug, alcohol-family-history, nicotine and cannabis studies; acute drug-challenge and treatment-effect studies were excluded. Prodromal synucleinopathy (REM sleep behaviour disorder) and visual snow syndrome studies passed and are outside the 14 atlas conditions. Only 9 hand-picked rows without a PubMed ID remain at `to-review`. First-pass screening of all disorders is now complete. Decided from titles and abstracts by one reviewer (Claude); human second check still to do.
+
 ## Bulk pull (PubMed)
 
 The searches below use the core query (EEG terms AND resting-state terms AND spectral terms AND humans)
