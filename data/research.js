@@ -2367,6 +2367,36 @@ window.NF_DATA = {
       detail: "Taken from the abstract; not checked in the full text. Eyes-open resting EEG, 25 people with PTSD vs 24 with generalized anxiety disorder and 20 healthy controls. Posterior alpha power was suppressed and source-localised to the cuneus (occipital), mapped to O1 and O2 (method not stated in the abstract). The frontal gamma result was left out because the abstract does not say which state it was recorded in; the Granger connectivity results were not used (CN).",
       design: "Case-control",
       cite: { authors: "Clancy K, et al.", year: 2017, title: "Restless 'rest': intrinsic sensory hyperactivity and disinhibition in post-traumatic stress disorder", journal: "Brain" }
+    },
+    {
+      id: "cand-anx-yuan-2024", condition: "anxiety", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 112, k: null },
+      sites: ["T3","T4","T5","T6","Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["beta","theta"], direction: "ratio", evidence: "preliminary",
+      changes: { beta: "down", theta: "up" }, symptoms: ["anxiety","inattention"],
+      claim: "Anxiety: less temporal beta and higher frontal theta/beta ratio than controls",
+      detail: "67 people with anxiety disorders vs 45 healthy controls, 5 min eyes-closed resting EEG on 64 channels. Absolute beta power was lower over temporal sites (mainly on the right); the frontal theta/beta ratio was higher, as a group-by-region interaction rather than a main effect. Both measures correlated with self-reported attentional control. Cross-sectional study, so the ratio result is the weaker of the two.",
+      design: "Case-control",
+      cite: { authors: "Yuan D, Yang X, Wang P, Yang L, Yang T, He F, Xu Y, Li Z", year: 2024, title: "Quantitative EEG and its relationship with attentional control in patients with anxiety disorders", journal: "Frontiers in Psychiatry" }
+    },
+    {
+      id: "pm-20950657", condition: "anxiety", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 156, k: null },
+      sites: [], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["anxiety"],
+      claim: "Panic disorder: lower alpha-1 power across the head, mostly with eyes closed",
+      detail: "Taken from the abstract; not checked in the full text. 52 people with panic disorder vs 104 matched controls, eyes-open and eyes-closed resting EEG on 16 sites. Overall spectral power was reduced, most clearly in alpha-1 with eyes closed, so the entry is whole-head. A frontal alpha-1 asymmetry (right less than left, eyes closed) is not included in this entry. Case-control design.",
+      design: "Case-control",
+      cite: { authors: "Wise V, et al.", year: 2011, title: "An integrative assessment of brain and body function 'at rest' in panic disorder: a combined quantitative EEG/autonomic function study", journal: "Int J Psychophysiol" }
+    },
+    {
+      id: "pm-26970143", condition: "anxiety", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4"], bands: ["alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { alpha: "mixed" }, symptoms: ["anxiety"],
+      claim: "Worry and GAD: more left frontal alpha activity; high trait anxiety: more right frontal and parietal",
+      detail: "Taken from the abstract; not checked in the full text. Mostly subclinical undergraduates selected by questionnaire, with a subset meeting GAD or OCD criteria (OCD results left out). Resting alpha asymmetry was more left frontal with high worry and GAD, and more right frontal and parietal with high trait anxiety, so the direction differs by group. Sample size is not stated in the abstract. Cross-sectional design.",
+      design: "Cross-sectional",
+      cite: { authors: "Smith EE, et al.", year: 2016, title: "Patterns of alpha asymmetry in those with elevated worry, trait anxiety, and obsessive-compulsive symptoms: A test of the worry and avoidance models of alpha asymmetry", journal: "Neuropsychologia" }
     }
   ],
 
