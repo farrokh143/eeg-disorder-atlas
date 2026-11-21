@@ -76,6 +76,13 @@ one band with a direction (higher or lower in the patient group than in controls
 - **Mixed groups** (e.g. AD plus another dementia, or ADHD plus autism): include only a result reported separately for
   the atlas condition against controls. If there is none, exclude with `X` and `"reason":"No separate result for <condition>"`.
 - The region table under "Field rules" applies to abstracts as well as full texts.
+- A positive result whose regions are not named at all (e.g. "nine clusters", "bilateral" with no lobe): defer with
+  `[parked: no full text]` if there is no full text; never use `[]` for it (`[]` means whole-head).
+- **Case reports and single-case studies are out of scope**: exclude with `X` and `"reason":"Case report"`.
+- Task-minus-rest change scores, or results only for the change from rest to task: exclude with `T`.
+- Cognitive test scores count as symptoms: verbal or working memory → `memory`; attention tests → `inattention`;
+  executive tests → `executive`.
+- A source result spanning several lobes: use all their sites together in one finding.
 - **Comparisons inside a patient group** (e.g. patients with vs without a symptom, or resting EEG correlated with a
   symptom score) count, with no healthy control needed, when the symptom maps to one of the symptom ids below. Use that
   symptom id and say "within <condition>" in the claim. If the symptom has no matching id (e.g. suicidality), exclude
@@ -193,6 +200,7 @@ reply; the chat that started you does the sync.
 ## Things to never do
 
 - Never invent a number, electrode or citation detail. If it's not in the paper, use `null`, `[]` or `defer`.
-- Never edit `data/research.js` or `data/research-log.csv` by hand: always go through `tools/apply-review.js`.
+- Never edit `data/research.js` or `data/research-log.csv` by hand: always go through `tools/apply-review.js`
+  (or `tools/revert-finding.js` to take a wrong entry back out).
 - Never include task, evoked or sleep EEG results.
 - Never change `index.html` or `methods.html` during review.
