@@ -1477,6 +1477,26 @@ window.NF_DATA = {
       detail: "Eyes-closed resting EEG for 10 minutes in 40 first-episode, medication-naive MDD patients and 40 healthy controls. Relative low delta and theta were higher in the right occipital region, and alpha was lower across the posterior occipital region. Taken from the abstract; not checked in the full text. Machine-learning classification is also reported but was not used for the band result.",
       design: "Case-control",
       cite: { authors: "Huang Y, et al.", year: 2023, title: "Analysis of EEG features and study of automatic classification in first-episode and drug-naïve patients with major depressive disorder", journal: "BMC Psychiatry" }
+    },
+    {
+      id: "pm-40153921", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 140, k: null },
+      sites: [], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["lowmood","anxiety"],
+      claim: "MDD: lower relative alpha across channels with eyes open; lower alpha tracks severity",
+      detail: "Resting EEG (20 channels) with eyes open and eyes closed in 70 MDD patients and 70 matched healthy controls; only the eyes-open result held. Average relative alpha was lower in MDD and correlated with depression and anxiety scores. Supplementary trends for fronto-central theta and occipital beta were not reported as significant and are left out. Task EEG in the same study (faces and vigilance ERPs) was excluded.",
+      design: "Case-control",
+      cite: { authors: "Kovacevic N, et al.", year: 2025, title: "Differences in resting state and task-based EEG measures between patients with major depressive disorder and healthy controls", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-40561721", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 51, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["lowmood","anxiety"],
+      claim: "Young adults with MDD and anxiety: more relative left frontal alpha asymmetry than controls at rest",
+      detail: "Resting frontal EEG asymmetry in 25 young adults with lifetime MDD and anxiety and 26 healthy controls, with a five-year follow-up in a subsample. The comorbid group showed more relative left frontal alpha; asymmetry was stable over five years in that group. Taken from the abstract; not checked in the full text. Single small case-control study.",
+      design: "Case-control",
+      cite: { authors: "Zsigo C, et al.", year: 2025, title: "Frontal alpha asymmetry in major depression and comorbid anxiety disorder: a five-year follow-up study", journal: "Clin Neurophysiol" }
     }
   ],
 
