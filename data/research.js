@@ -3087,6 +3087,16 @@ window.NF_DATA = {
       detail: "26 people with subacute mTBI and 21 healthy controls, 60-second eyes-closed resting EEG. No EEG parameter differed between the groups. Within the mTBI group, anterior cingulate theta and memory-perception network activity correlated negatively with verbal memory. Source-localised (eLORETA); mapped to the overlying scalp region, so Fz approximates the anterior cingulate. Null group result, included as contested. Taken from the abstract; not checked in the full text.",
       design: "Case-control",
       cite: { authors: "Ueda M, et al.", year: 2025, title: "EEG Oscillatory Activity and Resting-State Networks Associated with Neurocognitive Function in Mild Traumatic Brain Injury", journal: "Clin EEG Neurosci" }
+    },
+    {
+      id: "pm-42642967", condition: "tbi", type: "biomarker",
+      metrics: { design: 5, control: null, blinded: null, n: 1236, k: 14 },
+      sites: [], bands: ["theta"], direction: "up", evidence: "moderate",
+      changes: { theta: "up" }, symptoms: ["postconcussion"],
+      claim: "TBI meta-analysis: resting theta power higher than controls (g = 0.50), with heterogeneity",
+      detail: "Systematic review and meta-analysis of 14 studies contributing 39 effect sizes (24 studies overall; 713 TBI, 523 controls). Pooled resting theta power was higher in TBI than controls (g = 0.50, p = 0.03), with substantial heterogeneity and publication bias. Etiology and sex moderated theta effects but neither survived FDR correction. The narrative fast-wave suppression is not per band and is not recorded. Whole-head; no electrodes. Taken from the abstract; not checked in the full text.",
+      design: "Meta-analysis",
+      cite: { authors: "Nwakamma MC, et al.", year: 2026, title: "Resting-state EEG spectral power alterations following traumatic brain injury: a comprehensive systematic review and meta-analysis of clinical and injury-related moderators", journal: "Brain Inj" }
     }
   ],
 
