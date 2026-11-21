@@ -607,6 +607,36 @@ window.NF_DATA = {
       detail: "Eyes-closed 1-minute resting EEG (256 channels) in 314 cognitively normal people aged 70-85 with subjective memory complaints, grouped by amyloid and FDG-PET neurodegeneration status. Neurodegeneration-positive people had higher beta and gamma and lower delta power, mainly at frontocentral sites; the amyloid-related pattern was non-linear. Taken from the abstract; not checked in the full text. Cross-sectional controlled cohort without blinding.",
       design: "Controlled cohort (biomarker groups)",
       cite: { authors: "Gaubert S, et al.", year: 2019, title: "EEG evidence of compensatory mechanisms in preclinical Alzheimer's disease", journal: "Brain" }
+    },
+    {
+      id: "pm-32641111", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "contested",
+      changes: { delta: "mixed", theta: "mixed", alpha: "mixed", beta: "mixed" }, symptoms: ["memory","cogdecline"],
+      claim: "MCI-AD: resting EEG band power and dominant frequency did not differ from controls",
+      detail: "Eyes-closed high-density resting EEG in 36 MCI-AD patients and 31 healthy controls. Band power (delta, theta, alpha including high alpha, beta) and occipital dominant frequency did not differ between MCI-AD and controls, while the main contrast (MCI with Lewy bodies vs MCI-AD, not an atlas condition) was reported separately. Null result in a single small study.",
+      design: "Case-control (null result)",
+      cite: { authors: "Schumacher J, et al.", year: 2020, title: "Quantitative EEG as a biomarker in mild cognitive impairment with Lewy bodies", journal: "Alzheimers Res Ther" }
+    },
+    {
+      id: "pm-33080295", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "down", beta: "down" }, symptoms: ["memory","cogdecline"],
+      claim: "Alzheimer's dementia: higher global delta and theta, lower alpha and beta than seniors",
+      detail: "Resting-state EEG from 100 patients with Alzheimer's dementia and 100 matched healthy seniors in an international archive. Global power was higher at delta-theta and lower at alpha-beta in the dementia group; the paper reads this as reduced cortical arousal. Taken from the abstract; not checked in the full text. Archive case-control design with no blinding.",
+      design: "Case-control",
+      cite: { authors: "Babiloni C, et al.", year: 2020, title: "Resting-state electroencephalographic delta rhythms may reflect global cortical arousal in healthy old seniors and patients with Alzheimer's disease dementia", journal: "Int J Psychophysiol" }
+    },
+    {
+      id: "pm-33185607", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 5, control: null, blinded: null, n: null, k: 6 },
+      sites: [], bands: ["alpha"], direction: "down", evidence: "moderate",
+      changes: { alpha: "down" }, symptoms: ["memory","cogdecline"],
+      claim: "AD vs MCI (meta-analysis): resting alpha power lower, small pooled effect",
+      detail: "Systematic review and random-effects meta-analysis of resting alpha power across cognitive decline stages. Global alpha power was lower in AD than in MCI (pooled effect -0.30, 6 studies), and lower in MCI than in older adults (effect -1.49, 5 studies, high heterogeneity, to be read with caution). Taken from the abstract; not checked in the full text. Studies differed in MCI diagnosis and EEG measures, so the grade is moderate.",
+      design: "Meta-analysis",
+      cite: { authors: "Lejko N, et al.", year: 2020, title: "Alpha Power and Functional Connectivity in Cognitive Decline: A Systematic Review and Meta-Analysis", journal: "J Alzheimers Dis" }
     }
   ],
 
