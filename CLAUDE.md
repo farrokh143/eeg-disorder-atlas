@@ -24,6 +24,7 @@ included as a secondary filter; EEG markers are the main focus.
 - `tools/findings-snapshot.js`: writes the readable findings table used in the Claude Project.
 - `tools/queries.js`: the PubMed searches for each disorder (single source for bulk pulls).
 - `tools/import-pubmed.js`: imports a PubMed CSV export into the research log as `to-review`, skipping duplicates.
+- `tools/pull-pubmed.js`: pulls every search in `queries.js` straight from the PubMed API and imports it (needs network access to eutils.ncbi.nlm.nih.gov).
 
 GitHub is the database: all research data and decisions live in these files and their commit history.
 

@@ -81,7 +81,7 @@ Re-run the searches monthly. Record each run below.
 The searches below use the core query (EEG terms AND resting-state terms AND spectral terms AND humans)
 plus each disorder's MeSH term. They are generated from `tools/queries.js`, so edit the query there.
 
-**Option A (automatic):** a Claude chat with PubMed access approved fetches every search and imports the results.
+**Option A (automatic):** use the PubMed connector in a Claude chat, or run `node tools/pull-pubmed.js "Run 2 (PubMed)"` where the network allows eutils.ncbi.nlm.nih.gov (`--counts` shows hit numbers only).
 
 **Option B (manual export):** open a link, tap **Save**, choose **Selection: All results** and **Format: CSV**,
 then give the file to Claude or run:
