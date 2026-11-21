@@ -2247,6 +2247,36 @@ window.NF_DATA = {
       detail: "152 healthy controls and 97 patients with schizophrenia spectrum disorders, resting EEG. Global scalp theta power was higher in patients, and higher frontoinsular theta was linked to worse cognition within patients. Deep frontoinsular sources are not mapped to scalp sites. Taken from the abstract; not checked in the full text.",
       design: "Case-control",
       cite: { authors: "Hasanaj G, et al.", year: 2025, title: "Periodic and Aperiodic Alterations of Resting-State EEG in Schizophrenia Spectrum Disorders: Cognitive and Clinical Insights", journal: "Eur J Neurosci" }
+    },
+    {
+      id: "pm-42759803", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 18, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","C3","Cz","C4","T3","T4","T5","T6"], bands: ["delta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up" }, symptoms: ["psychosis"],
+      claim: "Within schizophrenia: more frontal, central and temporal eyes-open delta tracks positive symptoms",
+      detail: "18 patients with recent-onset schizophrenia spectrum disorder, 19-channel eyes-open resting EEG, cross-sectional correlations with PANSS. Higher delta power over frontal, central and temporal regions correlated with greater positive symptom severity, mainly hallucinations and delusions. Very small preliminary study with no healthy control group. Taken from the abstract; not checked in the full text.",
+      design: "Cross-sectional correlation",
+      cite: { authors: "Vahid-Vahdat P, et al.", year: 2026, title: "Frequency-specific QEEG spectral power correlates of positive and negative symptom severity in recent-onset schizophrenia", journal: "Neuroscience" }
+    },
+    {
+      id: "pm-474178", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: ["P3","O1"], bands: ["alpha"], direction: "up", evidence: "preliminary",
+      changes: { alpha: "up" }, symptoms: ["psychosis"],
+      claim: "Hebephrenic schizophrenia: higher eyes-closed alpha over left parieto-occipital sites than controls",
+      detail: "Six hebephrenic patients and 12 controls contributed eyes-closed EEG recordings; the total participant count is not stated, so n is left blank. Alpha intensity was higher over the left parieto-occipital area in the hebephrenic group, with an amplitude hypovariability over central regions. The second schizophrenic group is not reported separately here. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Etevenon P, et al.", year: 1979, title: "Intra- and interhemispheric EEG differences quantified by spectral analysis. Comparative study of two groups of schizophrenics and a control group", journal: "Acta Psychiatr Scand" }
+    },
+    {
+      id: "pm-7388249", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: ["T3","T4","T5","T6"], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["psychosis"],
+      claim: "Acute schizophrenia: less alpha power than controls, largely over temporal sites",
+      detail: "Several groups of controls and schizophrenia patients were recorded on four channels (T4-T6, P4-O2, T3-T5, P3-O1) with eyes closed and eyes open; the total participant count is not stated, so n is left blank. The acute schizophrenic group had less alpha power, largely over temporal areas. The chronic outpatient and long-stay groups are not used here. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Fenton GW, et al.", year: 1980, title: "EEG spectral analysis in schizophrenia", journal: "Br J Psychiatry" }
     }
   ],
 
