@@ -22,6 +22,7 @@ included as a secondary filter; EEG markers are the main focus.
 - `data/research-log.csv`: master log of every paper considered (included / excluded / to-review, with reasons).
 - `data/search-protocol.md`: inclusion criteria, exact searches and the record of each search run.
 - `tools/findings-snapshot.js`: writes the readable findings table used in the Claude Project.
+- `tools/log-summary.js`: writes the research-log summary used in the Claude Project.
 - `tools/queries.js`: the PubMed searches for each disorder (single source for bulk pulls).
 - `tools/import-pubmed.js`: imports a PubMed CSV export into the research log as `to-review`, skipping duplicates.
 - `tools/import-pmids.js`: imports a list of PubMed IDs (e.g. from the PubMed connector) as `to-review`; titles are fetched at screening.
@@ -70,7 +71,8 @@ Evidence grades:
   2. Update the Claude Project "EEG Disorder Atlas" documents so they match `main`:
      - `project-overview.md`: "Last updated" date, Current status counts, Key decisions, Open tasks, and one new Changelog line
      - `atlas-findings.md`: regenerate with `node tools/findings-snapshot.js`
-     - `research-log.csv` and `search-protocol.md`: copy from `data/`
+     - `research-log-summary.md`: regenerate with `node tools/log-summary.js` (the full log is too large for the project; it stays on GitHub)
+     - `search-protocol.md`: copy from `data/`
      - `project-instructions.md`: copy of this file, if it changed
   3. Tell the user what changed. If GitHub or the project cannot be updated from that chat, say which
      part was not updated so it can be done next time.
