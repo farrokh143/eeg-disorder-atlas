@@ -2147,6 +2147,36 @@ window.NF_DATA = {
       detail: "33 healthy controls, 35 unaffected first-degree relatives and 35 patients with schizophrenia, resting eyes-open EEG. Patients showed increased delta, theta and alpha power over anterior and central regions. The relatives' gamma correlation with schizotypy is not used here. Taken from the abstract; not checked in the full text.",
       design: "Case-control",
       cite: { authors: "Chen C, et al.", year: 2019, title: "The relationship between resting electroencephalogram oscillatory abnormalities and schizotypal personality traits in the first-degree relatives of schizophrenia patients", journal: "Neuroreport" }
+    },
+    {
+      id: "pm-33434730", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 43, k: null },
+      sites: [], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["psychosis"],
+      claim: "First-episode psychosis: less low alpha over the whole head in the morning, eyes closed, than controls",
+      detail: "26 first-episode psychosis patients and 17 matched controls, resting EEG. Low alpha power was reduced widely in patients in the morning with eyes closed, and lower low alpha went with worse positive symptoms. Eyes-open and evening results are not used here. Small case-control study. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Zhang Y, et al.", year: 2021, title: "Distinct alterations in resting-state electroencephalogram during eyes closed and eyes open and between morning and evening are present in first-episode psychosis patients", journal: "Schizophr Res" }
+    },
+    {
+      id: "pm-33503585", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 59, k: null },
+      sites: [], bands: ["gamma"], direction: "up", evidence: "preliminary",
+      changes: { gamma: "up" }, symptoms: ["psychosis"],
+      claim: "First-episode psychosis: higher resting gamma (31-70 Hz) across most regions than controls",
+      detail: "29 neuroleptic-naive or neuroleptic-free patients with first-episode non-affective psychosis and 30 matched controls, 192-channel resting EEG. Gamma power at 31-50 Hz and 51-70 Hz was higher in patients in most regions, so sites are left as whole-head. Small observational study. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Yadav S, et al.", year: 2021, title: "Resting state quantitative electroencephalogram gamma power spectra in patients with first episode psychosis: An observational study", journal: "Asian J Psychiatr" }
+    },
+    {
+      id: "pm-33538105", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 28, k: null },
+      sites: ["C3","Cz","C4"], bands: ["delta"], direction: "down", evidence: "preliminary",
+      changes: { delta: "down" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia: lower central delta band power than controls, mostly from a scale-free shift",
+      detail: "14 patients with schizophrenia and 14 controls, resting EEG. Delta band-limited power was lower over central regions in mixed spectra, but the authors attribute this mainly to a shift in the scale-free (fractal) component rather than oscillations. Small study. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Racz FS, et al.", year: 2021, title: "Separating scale-free and oscillatory components of neural activity in schizophrenia", journal: "Brain Behav" }
     }
   ],
 
