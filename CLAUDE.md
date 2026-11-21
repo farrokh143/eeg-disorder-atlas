@@ -3,6 +3,12 @@
 Use this file as the instructions for a Claude Project (claude.ai → Projects →
 instructions) or for Claude Code working in this repository.
 
+## Goal
+
+Let people link a resting-state EEG pattern (band, direction, scalp site) to the disorders and
+symptoms it has been reported in, with a stated confidence for each link. Neurofeedback treatment
+studies are a secondary layer. The full method is published in `methods.html`.
+
 ## What this is
 
 A clickable International 10-20 electrode map that links disorders to the EEG

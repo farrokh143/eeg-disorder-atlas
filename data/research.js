@@ -40,12 +40,12 @@ window.NF_DATA = {
     { id: "parkinsons", name: "Parkinson's", summary: "Resting EEG slows in Parkinson's disease, and a lower dominant posterior frequency predicts later dementia." },
     { id: "tbi", name: "Brain injury (TBI)", summary: "Focal or diffuse slowing and reduced alpha after head injury. Group differences are real, but qEEG is not reliable for diagnosing mild TBI in an individual." },
     { id: "insomnia", name: "Insomnia", summary: "The hyperarousal model: in resting wakefulness, people with insomnia show more beta, theta and gamma power. SMR neurofeedback was not better than sham in a blinded trial." },
-    { id: "autism", name: "Autism", summary: "A U-shaped power profile: excess low (delta/theta) and high (beta/gamma) frequencies with reduced alpha. Results vary a lot by age and sample." },
+    { id: "autism", name: "Autism", summary: "Earlier reviews described a U-shaped profile (excess slow and fast power). A 2023 meta-analysis of 41 studies found something narrower: lower relative alpha and higher gamma at rest, with no overall change in delta, theta or beta." },
     { id: "sud", name: "Alcohol & substance use", summary: "Resting beta is elevated in people with alcohol dependence and their relatives, suggesting a trait of cortical hyperexcitability. Alpha-theta neurofeedback has a long clinical history." },
     { id: "epilepsy", name: "Epilepsy", summary: "Diagnosis rests on epileptiform discharges rather than band power. SMR and slow-cortical-potential training reduced seizures in drug-resistant patients." },
     { id: "ptsd", name: "PTSD", summary: "Altered alpha has been reported but findings are inconsistent. Treatment studies centre on alpha and alpha-theta neurofeedback." },
     { id: "anxiety", name: "Anxiety", summary: "Clinical reports favour posterior alpha and high-beta inhibit protocols; marker research is thin." },
-    { id: "migraine", name: "Migraine", summary: "Excess fast activity in some patients' QEEGs; evidence comes from uncontrolled case series." },
+    { id: "migraine", name: "Migraine", summary: "Between attacks, resting theta power is higher in people with migraine (2024 meta-analysis), but EEG features did not track severity. Neurofeedback evidence comes from uncontrolled case series." },
     { id: "cognition", name: "Healthy cognition", summary: "Upper-alpha and SMR activity relate to memory and mental rotation in healthy people, and training them can improve performance." }
   ],
 
@@ -455,6 +455,16 @@ window.NF_DATA = {
       design: "Controlled (non-randomised)",
       cite: { authors: "Coben R, Padolsky I", year: 2007, title: "Assessment-guided neurofeedback for autistic spectrum disorder", journal: "Journal of Neurotherapy" }
     },
+    {
+      id: "asd-neo-2023", condition: "autism", type: "biomarker",
+      sites: [], bands: ["alpha", "gamma"], direction: "down", evidence: "strong",
+      metrics: { design: 5, control: null, blinded: null, n: 2701, k: 41 },
+      changes: { alpha: "down", gamma: "up" }, symptoms: ["social"],
+      claim: "Meta-analysis: lower relative alpha and higher gamma at rest",
+      detail: "Pooled 41 resting-state studies (1,246 autistic and 1,455 neurotypical participants): relative alpha power was lower and gamma power higher in autism, while delta, theta and beta did not differ overall. This does not support the earlier U-shaped picture of excess slow power. Heterogeneity was high, and eyes-open versus eyes-closed recording changed some effects.",
+      design: "Meta-analysis",
+      cite: { authors: "Neo WS, Foti D, Keehn B, Kelleher B", year: 2023, title: "Resting-state EEG power differences in autism spectrum disorder: a systematic review and meta-analysis", journal: "Translational Psychiatry" }
+    },
     /* ---------------- Alcohol & substance use ---------------- */
     {
       id: "sud-peniston-1989", condition: "sud", type: "protocol",
@@ -486,6 +496,16 @@ window.NF_DATA = {
       detail: "Patients whose QEEG showed excess high-frequency activity received individualised down-training. Most reported large reductions in headache frequency compared with those who stayed on medication.",
       design: "Non-randomised comparison",
       cite: { authors: "Walker JE", year: 2011, title: "QEEG-guided neurofeedback for recurrent migraine headaches", journal: "Clinical EEG and Neuroscience" }
+    },
+    {
+      id: "mig-zebhauser-2024", condition: "migraine", type: "biomarker",
+      sites: [], bands: ["theta"], direction: "up", evidence: "moderate",
+      metrics: { design: 5, control: null, blinded: null, n: null, k: 27 },
+      changes: { theta: "up" }, symptoms: ["headache"],
+      claim: "Meta-analysis: more theta between attacks",
+      detail: "Systematic review of 27 resting-state EEG and MEG studies: between attacks (interictal), people with migraine showed higher theta power than healthy participants. No links between EEG features and migraine severity were found. Pools EEG with MEG studies, so treat site-level detail with care.",
+      design: "Meta-analysis (EEG and MEG)",
+      cite: { authors: "Zebhauser PT, Heitmann H, May ES, Ploner M", year: 2024, title: "Resting-state electroencephalography and magnetoencephalography in migraine–a systematic review and meta-analysis", journal: "The Journal of Headache and Pain" }
     },
     /* ---------------- Healthy cognition ---------------- */
     {

@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How the EEG Disorder Atlas works</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@600;700&display=swap">
+<style>
+/* Methods page: a calm, well-set research protocol. Same palette and type as the atlas. */
+:root {
+  --bg: #f3f6f8; --surface: #ffffff; --ink: #13202b; --muted: #5a6a77; --line: #d6dee4;
+  --accent: #1d5f8a; --accent-soft: #e3eef6;
+  --ev-strong: #2b7a3d; --ev-moderate: #1d6fa5; --ev-prelim: #a8650a; --ev-contested: #b3302f;
+  --f-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --f-body: "Inter", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0e1418; --surface: #151d23; --ink: #e2e9ee; --muted: #8d9eab; --line: #26323c; --accent: #6db2df; --accent-soft: #1b2c39;
+  --ev-strong: #6fcf86; --ev-moderate: #6db2df; --ev-prelim: #f0b35a; --ev-contested: #ff7b76; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #0e1418; --surface: #151d23; --ink: #e2e9ee; --muted: #8d9eab; --line: #26323c; --accent: #6db2df; --accent-soft: #1b2c39;
+  --ev-strong: #6fcf86; --ev-moderate: #6db2df; --ev-prelim: #f0b35a; --ev-contested: #ff7b76; color-scheme: dark }
+* { box-sizing: border-box; min-width: 0; }
+html { scroll-padding-top: 64px; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 var(--f-body); overflow-x: clip; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 28px max(18px, env(safe-area-inset-left, 0px)) 72px; }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; line-height: 1.15; margin: 0; }
+h1 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); }
+h2 { font-size: 1.35rem; margin: 40px 0 10px; padding-top: 18px; border-top: 1px solid var(--line); }
+h3 { font-size: 1.02rem; margin: 18px 0 6px; }
+p, li { max-width: 68ch; }
+a { color: var(--accent); }
+.back { font-size: 0.9rem; font-weight: 600; text-decoration: none; }
+.lede { font-size: 1.08rem; color: var(--muted); margin: 10px 0 0; }
+.tag { display: inline-block; font-size: 0.74rem; font-weight: 600; color: var(--ev-prelim); border: 1px solid currentColor; border-radius: 999px; padding: 1px 9px; margin-bottom: 10px; }
+.toc { display: flex; gap: 6px; overflow-x: auto; padding: 14px 0 6px; scrollbar-width: none; }
+.toc::-webkit-scrollbar { display: none; }
+.toc a { flex: none; font-size: 0.84rem; text-decoration: none; color: var(--ink); border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 6px 12px; }
+@media (min-width: 900px) { .toc { position: sticky; top: 0; background: var(--bg); z-index: 2; } }
+.flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 16px 0 6px; }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
+.stat b { display: block; font-family: var(--f-display); font-size: 1.9rem; line-height: 1; }
+.stat span { font-size: 0.84rem; color: var(--muted); }
+.stat.inc b { color: var(--ev-strong); } .stat.rev b { color: var(--ev-prelim); } .stat.exc b { color: var(--ev-contested); }
+.box { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin: 12px 0; }
+.box.key { border-left: 4px solid var(--accent); }
+.steps { counter-reset: s; list-style: none; padding: 0; display: grid; gap: 10px; }
+.steps > li { counter-increment: s; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px 12px 52px; position: relative; max-width: none; }
+.steps > li::before { content: counter(s); position: absolute; left: 14px; top: 12px; width: 26px; height: 26px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 600; font-size: 0.85rem; display: grid; place-items: center; }
+.steps b { display: block; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 0.78rem; color: var(--muted); font-weight: 600; }
+td.n { text-align: right; font-family: var(--f-mono); white-space: nowrap; }
+.scroll { overflow-x: auto; }
+pre { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px; font: 0.8rem/1.5 var(--f-mono); white-space: pre-wrap; }
+.lv { display: inline-flex; gap: 2px; vertical-align: middle; margin-right: 6px; }
+.lv i { width: 6px; height: 13px; border-radius: 2px; background: var(--line); }
+.l4 i { background: var(--ev-strong); } .l3 i:nth-child(-n+3) { background: var(--ev-moderate); } .l2 i:nth-child(-n+2) { background: var(--ev-prelim); } .l1 i:first-child { background: var(--ev-contested); }
+.refs li { font-size: 0.88rem; color: var(--muted); margin-bottom: 6px; }
+.note { font-size: 0.84rem; color: var(--muted); }
+/* Shared preview gate (same remembered password as the atlas) */
+html.locked .wrap { display: none !important; }
+.gate { display: none; min-height: 100vh; min-height: 100dvh; place-items: center; padding: 24px; }
+html.locked .gate { display: grid; }
+.gate form { width: min(100%, 380px); display: grid; gap: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 28px 24px; }
+.gate p { margin: 0; color: var(--muted); font-size: 0.94rem; }
+.gate input { font: inherit; font-size: 16px; min-height: 46px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); }
+.gate button { min-height: 46px; border: none; border-radius: 10px; background: var(--ink); color: var(--bg); font-weight: 600; font-size: 1rem; }
+.gate .err { color: var(--ev-contested); font-size: 0.88rem; min-height: 1.2em; }
+@media (max-width: 600px) { body { font-size: 15.5px; } h2 { margin-top: 32px; } }
+</style>
+<script>
+  (function () { var ok = false; try { ok = localStorage.getItem("eegAtlasAccess") === "1"; } catch (_) {} if (!ok) document.documentElement.classList.add("locked"); })();
+</script>
+</head>
+<body>
+<div class="gate" role="dialog" aria-labelledby="gateTitle">
+  <form id="gateForm" autocomplete="off">
+    <span class="tag">Under development</span>
+    <h1 id="gateTitle" style="font-size:1.6rem">EEG Disorder Atlas</h1>
+    <p>This research atlas is still being built and is shared with a small group for feedback. Please enter the password you were given.</p>
+    <input id="gatePw" type="password" placeholder="Password" aria-label="Password" required>
+    <button type="submit">Enter</button>
+    <div class="err" id="gateErr" aria-live="polite"></div>
+  </form>
+</div>
+
+<div class="wrap">
+  <a class="back" href="index.html">← Back to the atlas</a>
+  <header style="margin-top:18px">
+    <span class="tag">Research framework · in development</span>
+    <h1>How the atlas finds, judges and links the research</h1>
+    <p class="lede">The atlas is run as a living systematic review: fixed rules for what counts, repeatable searches, every decision logged in public, and an explicit confidence rating for each link.</p>
+  </header>
+  <div class="box key" style="margin-top:18px">
+    <b style="font-family:var(--f-display);font-size:1.1rem">The goal</b>
+    <p style="margin:6px 0 0">Let people link a <strong>resting-state EEG pattern</strong> (which band, higher or lower, where on the scalp) to the <strong>disorders and symptoms</strong> it has been reported in, and show how confident the research lets us be about each link.</p>
+    <p class="note" style="margin:8px 0 0">Every rule below serves that goal. Treatment (neurofeedback) studies are a secondary layer, shown for the same patterns.</p>
+  </div>
+
+  <nav class="toc" aria-label="Sections">
+    <a href="#status">Status</a><a href="#question">Question</a><a href="#eligibility">What counts</a><a href="#search">Finding studies</a>
+    <a href="#screening">Screening</a><a href="#extraction">Extraction</a><a href="#grading">Confidence</a><a href="#linking">Linking</a>
+    <a href="#updates">Updates</a><a href="#limits">Limits</a><a href="#contribute">Contribute</a>
+  </nav>
+
+  <h2 id="status">Where the review stands</h2>
+  <p>Counts are read live from the research log in the project's GitHub repository.</p>
+  <div class="flow" id="flow">
+    <div class="stat"><b id="nAll">–</b><span>papers recorded</span></div>
+    <div class="stat inc"><b id="nInc">–</b><span>included in the atlas</span></div>
+    <div class="stat rev"><b id="nRev">–</b><span>waiting for full-text review</span></div>
+    <div class="stat exc"><b id="nExc">–</b><span>excluded, with reasons</span></div>
+  </div>
+  <div class="scroll"><table id="coverage" aria-label="Coverage by disorder"><thead><tr><th>Disorder</th><th>Resting EEG markers</th><th>Treatment studies</th><th>To review</th></tr></thead><tbody><tr><td colspan="4" class="note">Loading…</td></tr></tbody></table></div>
+  <p class="note">Search run 1 (21 Nov 2026) used general web search to find candidates. Full searches of the bibliographic databases listed below have not been run yet; until they are, coverage is incomplete.</p>
+
+  <h2 id="question">The question</h2>
+  <p>For each disorder and each of its core symptoms: <strong>which resting-state EEG band-power differences have been reported, at which scalp sites, in which direction, and how confident can we be?</strong> As a second question: which EEG feedback (neurofeedback) treatments target those patterns, and how well did they hold up?</p>
+  <div class="box key">
+    <b>In structured form</b>
+    <ul style="margin:6px 0 0;padding-left:20px">
+      <li><b>Population:</b> people with a diagnosed disorder, or with a measured symptom (e.g. inattention, sleep difficulty)</li>
+      <li><b>Measure:</b> resting-state EEG band power (delta, theta, alpha, SMR, beta, high beta, gamma), ratios and asymmetry</li>
+      <li><b>Comparison:</b> healthy controls, or symptom severity within a group</li>
+      <li><b>Result recorded:</b> band, direction (higher / lower / asymmetric), scalp sites, size of the study and strength of the design</li>
+    </ul>
+  </div>
+
+  <h2 id="eligibility">What counts</h2>
+  <h3>EEG markers: included</h3>
+  <ul>
+    <li>Resting recordings only: awake, eyes open or eyes closed, no task</li>
+    <li>Full clinical qEEG and simple EEG (one or a few channels) both count</li>
+    <li>Reports the band and the direction of the difference, and the sites or that the result is whole-head</li>
+    <li>Meta-analyses, case-control studies, cohorts, and studies correlating EEG with symptom severity</li>
+  </ul>
+  <h3>EEG markers: excluded</h3>
+  <ul>
+    <li>Task-based EEG, event-related or evoked responses (ERP, steady-state responses) and sleep EEG</li>
+    <li>Case reports, animal studies, and papers without enough detail to record a band and direction</li>
+    <li>Papers that mix conditions are kept, but only their resting results are used</li>
+  </ul>
+  <h3>Treatment studies</h3>
+  <ul>
+    <li>Neurofeedback or other EEG feedback training in humans, with the protocol stated (band, training direction, sites)</li>
+    <li>Any design is accepted; design, control type and blinding are recorded so the confidence rating can account for them</li>
+  </ul>
+
+  <h2 id="search">Finding studies: how we try to catch everything</h2>
+  <p>No single database or search finds every relevant study. In a study of 58 published reviews, 16% of included references were found in only one database, and an estimated 60% of reviews did not reach 95% recall; Embase, MEDLINE, Web of Science and Google Scholar together performed best <a href="#r-bramer">[Bramer 2017]</a>. So the atlas layers several methods:</p>
+  <ol class="steps">
+    <li><b>Database searches</b>PubMed/MEDLINE, Embase, Web of Science, PsycINFO and Google Scholar, using the same structured query for every disorder (below). For treatment trials, also Cochrane CENTRAL and ClinicalTrials.gov, to find unpublished or negative trials.</li>
+    <li><b>Backward citation chasing</b>Every meta-analysis and review in the atlas is a seed: its reference list is screened for primary studies we do not yet have.</li>
+    <li><b>Forward citation chasing</b>For each key paper, newer papers that cite it are screened. This catches studies published after the seed reviews.</li>
+    <li><b>Benchmark check</b>A set of known, important papers (the meta-analyses already in the atlas) must be found by the database search. If the search misses any, the query is broadened and re-run. This is the main test of whether the search is catching everything.</li>
+    <li><b>Monthly alerts</b>Saved searches run again each month, and each run is recorded with its counts.</li>
+    <li><b>Suggestions</b>Anyone can propose a paper through the "Suggest a study" form; it goes through the same screening.</li>
+  </ol>
+  <h3>The core query</h3>
+  <p>Three blocks are combined: EEG terms, resting-state terms and spectral terms, plus the disorder. Exclusion words are applied at screening rather than in the query, so that relevant papers are not lost by accident.</p>
+  <pre>(electroencephalography[MeSH] OR EEG OR qEEG OR "quantitative EEG")
+AND ("resting state" OR resting OR "eyes closed" OR "eyes open")
+AND (power OR spectral OR spectrum OR "theta/beta" OR asymmetry OR delta OR theta OR alpha OR beta OR gamma)
+AND [disorder MeSH term OR symptom terms]</pre>
+  <p>A second query targets direct symptom links (EEG correlated with symptom ratings), and a third targets treatment trials. The exact strings are kept in <a href="https://github.com/farrokh143/eeg-disorder-atlas/blob/main/data/search-protocol.md">search-protocol.md</a>.</p>
+
+  <h2 id="screening">Screening</h2>
+  <ol class="steps">
+    <li><b>Log every hit</b>Each paper found is added to the research log as "to review", with its citation and where it was found.</li>
+    <li><b>Title and abstract</b>Clear misses are excluded with a short reason (e.g. "task-based", "sleep EEG", "MEG only").</li>
+    <li><b>Full text</b>The rest are read in full. A paper is included only if band, direction and sites can be checked in the paper itself.</li>
+    <li><b>Second check</b>AI assistance is used to find and pre-screen papers; a person confirms every inclusion and exclusion. Where possible, two people screen independently and resolve disagreements.</li>
+  </ol>
+  <p>Numbers at each stage are reported in the style of a PRISMA flow diagram, the standard for reporting systematic reviews <a href="#r-prisma">[Page 2021]</a>.</p>
+
+  <h2 id="extraction">What is recorded for each study</h2>
+  <div class="scroll"><table>
+    <thead><tr><th>Field</th><th>What it holds</th></tr></thead>
+    <tbody>
+      <tr><td>Disorder and symptoms</td><td>The diagnosis studied and its core symptoms; for treatments, the outcomes measured</td></tr>
+      <tr><td>Band changes</td><td>For each band: higher, lower, asymmetric, or mixed</td></tr>
+      <tr><td>Sites</td><td>10-20 electrodes, or "whole-head" when results are pooled</td></tr>
+      <tr><td>Design</td><td>1 to 5: uncontrolled or pilot · case-control or narrative review · controlled study or cohort · randomised trial · meta-analysis</td></tr>
+      <tr><td>Control and blinding</td><td>For treatments: sham, active, waitlist or usual care, or none; blinded or not</td></tr>
+      <tr><td>Size</td><td>Participants (n) and studies pooled (k), entered only when checked in the paper</td></tr>
+      <tr><td>Recording details</td><td>Eyes open or closed, absolute or relative power, reference: noted when they affect the result</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="grading">How confident are we?</h2>
+  <p>Each link (for example, "theta higher in ADHD") gets a rating from High to Very low. The steps follow the GRADE approach used in clinical guidelines, which separates quality of evidence into four levels <a href="#r-grade">[Guyatt 2008]</a>, simplified for this atlas:</p>
+  <ol class="steps">
+    <li><b>Start from the best supporting design</b><span class="lv l4"><i></i><i></i><i></i><i></i></span>High: meta-analysis or randomised trial · <span class="lv l3"><i></i><i></i><i></i><i></i></span>Moderate: controlled study or cohort · <span class="lv l2"><i></i><i></i><i></i><i></i></span>Low: case-control or narrative review · <span class="lv l1"><i></i><i></i><i></i><i></i></span>Very low: uncontrolled</li>
+    <li><b>Rate down for inconsistency</b>One level if any study finds the opposite direction or fails to replicate.</li>
+    <li><b>Rate down for thin evidence</b>One level if the support is a single primary study.</li>
+    <li><b>Rate down for indirectness</b>One level in the symptom view when studies compared diagnosed groups but did not measure the symptom itself.</li>
+    <li><b>Cap for treatments</b>If no blinded or sham-controlled trial supports a treatment, its rating cannot go above Low.</li>
+  </ol>
+
+  <h2 id="linking">How disorders, symptoms and EEG patterns are linked</h2>
+  <ul>
+    <li><b>Disorder → EEG pattern:</b> for each band, the direction reported by most supporting studies is shown; contested studies are listed but do not set the direction.</li>
+    <li><b>Disorder → symptoms:</b> each study is tagged with the core symptoms of the group studied (markers) or the outcomes it measured (treatments).</li>
+    <li><b>Symptom → EEG pattern:</b> either <em>direct</em> (the study correlated EEG with symptom severity) or <em>indirect</em> (through the diagnosis). Direct links are the priority for new searches, because they are what the atlas currently lacks.</li>
+    <li><b>Neighbouring electrodes:</b> scalp electrodes pick up activity from nearby cortex through volume conduction, so findings at adjacent sites are shown, and labelled, when an area is selected <a href="#r-srini">[Srinivasan 1998]</a>.</li>
+  </ul>
+
+  <h2 id="updates">Keeping it up to date</h2>
+  <p>The atlas is a living systematic review: it is updated continually as new evidence appears, rather than redone from scratch every few years <a href="#r-lsr">[Elliott 2017]</a>. All data live in the GitHub repository, so every change is dated and can be traced:</p>
+  <ul>
+    <li><a href="https://github.com/farrokh143/eeg-disorder-atlas/blob/main/data/research-log.csv">research-log.csv</a>: every paper considered, with its status and reason</li>
+    <li><a href="https://github.com/farrokh143/eeg-disorder-atlas/blob/main/data/research.js">research.js</a>: the included studies, with all extracted fields</li>
+    <li><a href="https://github.com/farrokh143/eeg-disorder-atlas/blob/main/data/search-protocol.md">search-protocol.md</a>: the exact searches and a dated record of each run</li>
+  </ul>
+
+  <h2 id="limits">Known limits</h2>
+  <ul>
+    <li><b>Methods differ between studies:</b> eyes open versus closed, reference choice, absolute versus relative power and band boundaries all change results.</li>
+    <li><b>Patterns overlap across disorders:</b> a review of 184 resting-state studies found that band changes are rarely unique to one disorder <a href="#r-newson">[Newson 2019]</a>. A pattern in one person never confirms a diagnosis.</li>
+    <li><b>Publication bias:</b> positive findings are more likely to be published; trial registries and forward citation chasing reduce but do not remove this.</li>
+    <li><b>Age, medication and comorbidity</b> affect the resting EEG and are not yet recorded systematically.</li>
+    <li><b>AI-assisted collection:</b> every included citation is checked, but summaries should still be verified against the original paper.</li>
+  </ul>
+
+  <h2 id="contribute">How to contribute</h2>
+  <p>Suggest a study or give feedback through the <a href="https://github.com/farrokh143/eeg-disorder-atlas/issues/new/choose">GitHub issue forms</a> (a free GitHub account is needed). Each suggestion is logged and screened against the rules above.</p>
+
+  <h2>References</h2>
+  <ol class="refs">
+    <li id="r-bramer">Bramer WM, Rethlefsen ML, Kleijnen J, Franco OH (2017). Optimal database combinations for literature searches in systematic reviews: a prospective exploratory study. <em>Systematic Reviews</em>.</li>
+    <li id="r-prisma">Page MJ, McKenzie JE, Bossuyt PM, et al. (2021). The PRISMA 2020 statement: an updated guideline for reporting systematic reviews. <em>BMJ</em>.</li>
+    <li id="r-grade">Guyatt GH, Oxman AD, Vist GE, et al. (2008). GRADE: an emerging consensus on rating quality of evidence and strength of recommendations. <em>BMJ</em>.</li>
+    <li id="r-lsr">Elliott JH, Synnot A, Turner T, et al. (2017). Living systematic review: 1. Introduction—the why, what, when, and how. <em>Journal of Clinical Epidemiology</em>.</li>
+    <li id="r-srini">Srinivasan R, Nunez PL, Silberstein RB (1998). Spatial filtering and neocortical dynamics: estimates of EEG coherence. <em>IEEE Transactions on Biomedical Engineering</em>.</li>
+    <li id="r-newson">Newson JJ, Thiagarajan TC (2019). EEG Frequency Bands in Psychiatric Disorders: A Review of Resting State Studies. <em>Frontiers in Human Neuroscience</em>.</li>
+  </ol>
+  <p class="note">A research reference, not medical advice. Group-level EEG differences are not diagnostic tests for individuals.</p>
+</div>
+
+<script>
+{
+  const HASH = "76c9f3df7aa7c03bbfc9b1dcabfcd535d2cd2c46624151698fb12b957deca9cd";
+  const form = document.getElementById("gateForm");
+  const sha = async t => [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t)))].map(b => b.toString(16).padStart(2, "0")).join("");
+  form.addEventListener("submit", async e => {
+    e.preventDefault();
+    const err = document.getElementById("gateErr");
+    let ok = false;
+    try { ok = (await sha(document.getElementById("gatePw").value.trim())) === HASH; } catch (_) { err.textContent = "This browser can't check the password here."; return; }
+    if (!ok) { err.textContent = "That password isn't right. Check with the person who shared the link."; return; }
+    try { localStorage.setItem("eegAtlasAccess", "1"); } catch (_) {}
+    document.documentElement.classList.remove("locked");
+  });
+
+  // Live counts from the research log (works when served over http; shows a note if not).
+  const parse = text => {
+    const rows = []; let row = [], cell = "", q = false;
+    for (let i = 0; i < text.length; i++) {
+      const c = text[i];
+      if (q) { if (c === '"' && text[i + 1] === '"') { cell += '"'; i++; } else if (c === '"') q = false; else cell += c; }
+      else if (c === '"') q = true; else if (c === ",") { row.push(cell); cell = ""; }
+      else if (c === "\n") { row.push(cell); rows.push(row); row = []; cell = ""; } else if (c !== "\r") cell += c;
+    }
+    if (cell || row.length) { row.push(cell); rows.push(row); }
+    const [h, ...rest] = rows; return rest.filter(r => r.length > 1).map(r => Object.fromEntries(h.map((k, i) => [k, r[i] || ""])));
+  };
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  fetch("data/research-log.csv").then(r => { if (!r.ok) throw 0; return r.text(); }).then(t => {
+    const L = parse(t), by = s => L.filter(x => x.status === s);
+    document.getElementById("nAll").textContent = L.length;
+    document.getElementById("nInc").textContent = by("included").length;
+    document.getElementById("nRev").textContent = by("to-review").length;
+    document.getElementById("nExc").textContent = by("excluded").length;
+    const ds = [...new Set(L.map(x => x.disorder).filter(Boolean))].sort();
+    const cnt = (d, f) => L.filter(x => x.disorder === d && f(x)).length;
+    document.querySelector("#coverage tbody").innerHTML = ds.map(d => {
+      const m = cnt(d, x => x.status === "included" && x.type === "eeg-marker"), tr = cnt(d, x => x.status === "included" && x.type === "treatment"), rv = cnt(d, x => x.status === "to-review");
+      return `<tr><td>${esc(d)}</td><td class="n"${m ? "" : ' style="color:var(--ev-contested)"'}>${m || "none yet"}</td><td class="n">${tr}</td><td class="n">${rv}</td></tr>`;
+    }).join("");
+  }).catch(() => { document.querySelector("#coverage tbody").innerHTML = `<tr><td colspan="4" class="note">Live counts appear when the page is opened from the website. See research-log.csv on GitHub.</td></tr>`; });
+}
+</script>
+</body>
+</html>
