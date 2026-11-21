@@ -1,0 +1,23 @@
+// Single source for the PubMed searches used in bulk pulls (see data/search-protocol.md).
+const CORE = '(electroencephalography[mh] OR EEG[tiab] OR qEEG[tiab]) AND (resting[tiab] OR "eyes closed"[tiab] OR "eyes open"[tiab]) AND (power[tiab] OR spectral[tiab] OR spectrum[tiab] OR "theta/beta"[tiab] OR asymmetry[tiab]) AND humans[mh]';
+const DISORDERS = {
+  "ADHD": '"Attention Deficit Disorder with Hyperactivity"[mh]',
+  "Alzheimer's": '("Alzheimer Disease"[mh] OR "Cognitive Dysfunction"[mh])',
+  "Schizophrenia": 'schizophrenia[mh]',
+  "Depression": '"Depressive Disorder"[mh]',
+  "Parkinson's": '"Parkinson Disease"[mh]',
+  "Brain injury (TBI)": '("Brain Injuries, Traumatic"[mh] OR "Post-Concussion Syndrome"[mh])',
+  "Insomnia": '"Sleep Initiation and Maintenance Disorders"[mh]',
+  "Autism": '"Autism Spectrum Disorder"[mh]',
+  "Alcohol & substance use": '"Substance-Related Disorders"[mh]',
+  "Epilepsy": 'epilepsy[mh]',
+  "PTSD": '"Stress Disorders, Post-Traumatic"[mh]',
+  "Anxiety": '"Anxiety Disorders"[mh]',
+  "Migraine": '"Migraine Disorders"[mh]'
+};
+const SYMPTOM_LINK = '(electroencephalography[mh] OR EEG[tiab]) AND resting[tiab] AND (power[tiab] OR spectral[tiab]) AND (correlat*[tiab] OR severity[tiab]) AND humans[mh]';
+const url = q => "https://pubmed.ncbi.nlm.nih.gov/?term=" + encodeURIComponent(q) + "&size=200";
+module.exports = { CORE, DISORDERS, SYMPTOM_LINK, url, query: d => `${CORE} AND ${DISORDERS[d]}` };
+if (require.main === module) {
+  for (const d of Object.keys(DISORDERS)) console.log(`| ${d} | [Open search](${url(module.exports.query(d))}) |`);
+}

@@ -75,3 +75,37 @@ Re-run the searches monthly. Record each run below.
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-21 | Seed set (manual, verified citations) | 47 | 44 | 3 | Claude, reviewed by owner |
 | 2026-11-21 | Run 1: web search for gap disorders (schizophrenia, PTSD, anxiety, depression, ADHD symptom links, autism, migraine, epilepsy, Parkinson's) | 15 | 2 | 0 | Claude; 13 left as to-review |
+
+## Bulk pull (PubMed)
+
+The searches below use the core query (EEG terms AND resting-state terms AND spectral terms AND humans)
+plus each disorder's MeSH term. They are generated from `tools/queries.js`, so edit the query there.
+
+**Option A (automatic):** a Claude chat with PubMed access approved fetches every search and imports the results.
+
+**Option B (manual export):** open a link, tap **Save**, choose **Selection: All results** and **Format: CSV**,
+then give the file to Claude or run:
+
+```
+node tools/import-pubmed.js export.csv "ADHD" "Run 2 (PubMed)"
+```
+
+The importer adds new papers to `research-log.csv` as `to-review`, skips anything already logged
+(by PubMed ID or title), and flags titles that look out of scope (sleep, task/evoked, MEG only,
+animal, case report, stimulation) for a person to confirm. Nothing is excluded automatically.
+
+| Disorder | PubMed search |
+| --- | --- |
+| ADHD | [Open search](https://pubmed.ncbi.nlm.nih.gov/?term=(electroencephalography%5Bmh%5D%20OR%20EEG%5Btiab%5D%20OR%20qEEG%5Btiab%5D)%20AND%20(resting%5Btiab%5D%20OR%20%22eyes%20closed%22%5Btiab%5D%20OR%20%22eyes%20open%22%5Btiab%5D)%20AND%20(power%5Btiab%5D%20OR%20spectral%5Btiab%5D%20OR%20spectrum%5Btiab%5D%20OR%20%22theta%2Fbeta%22%5Btiab%5D%20OR%20asymmetry%5Btiab%5D)%20AND%20humans%5Bmh%5D%20AND%20%22Attention%20Deficit%20Disorder%20with%20Hyperactivity%22%5Bmh%5D&size=200) |
+| Alzheimer's | [Open search](https://pubmed.ncbi.nlm.nih.gov/?term=(electroencephalography%5Bmh%5D%20OR%20EEG%5Btiab%5D%20OR%20qEEG%5Btiab%5D)%20AND%20(resting%5Btiab%5D%20OR%20%22eyes%20closed%22%5Btiab%5D%20OR%20%22eyes%20open%22%5Btiab%5D)%20AND%20(power%5Btiab%5D%20OR%20spectral%5Btiab%5D%20OR%20spectrum%5Btiab%5D%20OR%20%22theta%2Fbeta%22%5Btiab%5D%20OR%20asymmetry%5Btiab%5D)%20AND%20humans%5Bmh%5D%20AND%20(%22Alzheimer%20Disease%22%5Bmh%5D%20OR%20%22Cognitive%20Dysfunction%22%5Bmh%5D)&size=200) |
+| Schizophrenia | [Open search](https://pubmed.ncbi.nlm.nih.gov/?term=(electroencephalography%5Bmh%5D%20OR%20EEG%5Btiab%5D%20OR%20qEEG%5Btiab%5D)%20AND%20(resting%5Btiab%5D%20OR%20%22eyes%20closed%22%5Btiab%5D%20OR%20%22eyes%20open%22%5Btiab%5D)%20AND%20(power%5Btiab%5D%20OR%20spectral%5Btiab%5D%20OR%20spectrum%5Btiab%5D%20OR%20%22theta%2Fbeta%22%5Btiab%5D%20OR%20asymmetry%5Btiab%5D)%20AND%20humans%5Bmh%5D%20AND%20schizophrenia%5Bmh%5D&size=200) |
+| Depression | [Open search](https://pubmed.ncbi.nlm.nih.gov/?term=(electroencephalography%5Bmh%5D%20OR%20EEG%5Btiab%5D%20OR%20qEEG%5Btiab%5D)%20AND%20(resting%5Btiab%5D%20OR%20%22eyes%20closed%22%5Btiab%5D%20OR%20%22eyes%20open%22%5Btiab%5D)%20AND%20(power%5Btiab%5D%20OR%20spectral%5Btiab%5D%20OR%20spectrum%5Btiab%5D%20OR%20%22theta%2Fbeta%22%5Btiab%5D%20OR%20asymmetry%5Btiab%5D)%20AND%20humans%5Bmh%5D%20AND%20%22Depressive%20Disorder%22%5Bmh%5D&size=200) |
+| Parkinson's | [Open search](https://pubmed.ncbi.nlm.nih.gov/?term=(electroencephalography%5Bmh%5D%20OR%20EEG%5Btiab%5D%20OR%20qEEG%5Btiab%5D)%20AND%20(resting%5Btiab%5D%20OR%20%22eyes%20closed%22%5Btiab%5D%20OR%20%22eyes%20open%22%5Btiab%5D)%20AND%20(power%5Btiab%5D%20OR%20spectral%5Btiab%5D%20OR%20spectrum%5Btiab%5D%20OR%20%22theta%2Fbeta%22%5Btiab%5D%20OR%20asymmetry%5Btiab%5D)%20AND%20humans%5Bmh%5D%20AND%20%22Parkinson%20Disease%22%5Bmh%5D&size=200) |
+| Brain injury (TBI) | [Open search](https://pubmed.ncbi.nlm.nih.gov/?term=(electroencephalography%5Bmh%5D%20OR%20EEG%5Btiab%5D%20OR%20qEEG%5Btiab%5D)%20AND%20(resting%5Btiab%5D%20OR%20%22eyes%20closed%22%5Btiab%5D%20OR%20%22eyes%20open%22%5Btiab%5D)%20AND%20(power%5Btiab%5D%20OR%20spectral%5Btiab%5D%20OR%20spectrum%5Btiab%5D%20OR%20%22theta%2Fbeta%22%5Btiab%5D%20OR%20asymmetry%5Btiab%5D)%20AND%20humans%5Bmh%5D%20AND%20(%22Brain%20Injuries%2C%20Traumatic%22%5Bmh%5D%20OR%20%22Post-Concussion%20Syndrome%22%5Bmh%5D)&size=200) |
+| Insomnia | [Open search](https://pubmed.ncbi.nlm.nih.gov/?term=(electroencephalography%5Bmh%5D%20OR%20EEG%5Btiab%5D%20OR%20qEEG%5Btiab%5D)%20AND%20(resting%5Btiab%5D%20OR%20%22eyes%20closed%22%5Btiab%5D%20OR%20%22eyes%20open%22%5Btiab%5D)%20AND%20(power%5Btiab%5D%20OR%20spectral%5Btiab%5D%20OR%20spectrum%5Btiab%5D%20OR%20%22theta%2Fbeta%22%5Btiab%5D%20OR%20asymmetry%5Btiab%5D)%20AND%20humans%5Bmh%5D%20AND%20%22Sleep%20Initiation%20and%20Maintenance%20Disorders%22%5Bmh%5D&size=200) |
+| Autism | [Open search](https://pubmed.ncbi.nlm.nih.gov/?term=(electroencephalography%5Bmh%5D%20OR%20EEG%5Btiab%5D%20OR%20qEEG%5Btiab%5D)%20AND%20(resting%5Btiab%5D%20OR%20%22eyes%20closed%22%5Btiab%5D%20OR%20%22eyes%20open%22%5Btiab%5D)%20AND%20(power%5Btiab%5D%20OR%20spectral%5Btiab%5D%20OR%20spectrum%5Btiab%5D%20OR%20%22theta%2Fbeta%22%5Btiab%5D%20OR%20asymmetry%5Btiab%5D)%20AND%20humans%5Bmh%5D%20AND%20%22Autism%20Spectrum%20Disorder%22%5Bmh%5D&size=200) |
+| Alcohol & substance use | [Open search](https://pubmed.ncbi.nlm.nih.gov/?term=(electroencephalography%5Bmh%5D%20OR%20EEG%5Btiab%5D%20OR%20qEEG%5Btiab%5D)%20AND%20(resting%5Btiab%5D%20OR%20%22eyes%20closed%22%5Btiab%5D%20OR%20%22eyes%20open%22%5Btiab%5D)%20AND%20(power%5Btiab%5D%20OR%20spectral%5Btiab%5D%20OR%20spectrum%5Btiab%5D%20OR%20%22theta%2Fbeta%22%5Btiab%5D%20OR%20asymmetry%5Btiab%5D)%20AND%20humans%5Bmh%5D%20AND%20%22Substance-Related%20Disorders%22%5Bmh%5D&size=200) |
+| Epilepsy | [Open search](https://pubmed.ncbi.nlm.nih.gov/?term=(electroencephalography%5Bmh%5D%20OR%20EEG%5Btiab%5D%20OR%20qEEG%5Btiab%5D)%20AND%20(resting%5Btiab%5D%20OR%20%22eyes%20closed%22%5Btiab%5D%20OR%20%22eyes%20open%22%5Btiab%5D)%20AND%20(power%5Btiab%5D%20OR%20spectral%5Btiab%5D%20OR%20spectrum%5Btiab%5D%20OR%20%22theta%2Fbeta%22%5Btiab%5D%20OR%20asymmetry%5Btiab%5D)%20AND%20humans%5Bmh%5D%20AND%20epilepsy%5Bmh%5D&size=200) |
+| PTSD | [Open search](https://pubmed.ncbi.nlm.nih.gov/?term=(electroencephalography%5Bmh%5D%20OR%20EEG%5Btiab%5D%20OR%20qEEG%5Btiab%5D)%20AND%20(resting%5Btiab%5D%20OR%20%22eyes%20closed%22%5Btiab%5D%20OR%20%22eyes%20open%22%5Btiab%5D)%20AND%20(power%5Btiab%5D%20OR%20spectral%5Btiab%5D%20OR%20spectrum%5Btiab%5D%20OR%20%22theta%2Fbeta%22%5Btiab%5D%20OR%20asymmetry%5Btiab%5D)%20AND%20humans%5Bmh%5D%20AND%20%22Stress%20Disorders%2C%20Post-Traumatic%22%5Bmh%5D&size=200) |
+| Anxiety | [Open search](https://pubmed.ncbi.nlm.nih.gov/?term=(electroencephalography%5Bmh%5D%20OR%20EEG%5Btiab%5D%20OR%20qEEG%5Btiab%5D)%20AND%20(resting%5Btiab%5D%20OR%20%22eyes%20closed%22%5Btiab%5D%20OR%20%22eyes%20open%22%5Btiab%5D)%20AND%20(power%5Btiab%5D%20OR%20spectral%5Btiab%5D%20OR%20spectrum%5Btiab%5D%20OR%20%22theta%2Fbeta%22%5Btiab%5D%20OR%20asymmetry%5Btiab%5D)%20AND%20humans%5Bmh%5D%20AND%20%22Anxiety%20Disorders%22%5Bmh%5D&size=200) |
+| Migraine | [Open search](https://pubmed.ncbi.nlm.nih.gov/?term=(electroencephalography%5Bmh%5D%20OR%20EEG%5Btiab%5D%20OR%20qEEG%5Btiab%5D)%20AND%20(resting%5Btiab%5D%20OR%20%22eyes%20closed%22%5Btiab%5D%20OR%20%22eyes%20open%22%5Btiab%5D)%20AND%20(power%5Btiab%5D%20OR%20spectral%5Btiab%5D%20OR%20spectrum%5Btiab%5D%20OR%20%22theta%2Fbeta%22%5Btiab%5D%20OR%20asymmetry%5Btiab%5D)%20AND%20humans%5Bmh%5D%20AND%20%22Migraine%20Disorders%22%5Bmh%5D&size=200) |
