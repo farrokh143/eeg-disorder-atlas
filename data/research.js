@@ -1647,6 +1647,46 @@ window.NF_DATA = {
       detail: "Eyes-closed resting EEG from 21 electrodes in 30 girls with combined-type ADHD, 30 with inattentive-type ADHD and 30 controls. Across the scalp, both ADHD groups had higher absolute delta and theta, lower relative delta and beta, and higher relative theta, so delta is mixed. Taken from the abstract; not checked in the full text. Subtype differences are not included here.",
       design: "Case-control",
       cite: { authors: "Dupuy FE, et al.", year: 2011, title: "Girls with attention-deficit/hyperactivity disorder: EEG differences between DSM-IV types", journal: "Clin EEG Neurosci" }
+    },
+    {
+      id: "pm-23053601", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 105, k: null },
+      sites: [], bands: ["theta","beta"], direction: "ratio", evidence: "contested",
+      changes: { theta: "mixed", beta: "mixed" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "ADHD children and adults: no consistent resting theta or theta/beta increase vs matched controls",
+      detail: "Topographic 48-channel resting EEG in 32 children and 22 adults with ADHD vs matched controls (30 and 21). No consistent theta or theta/beta increase was found, and spectral markers classified ADHD poorly; age effects were not used. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Liechti MD, et al.", year: 2013, title: "Diagnostic value of resting electroencephalogram in attention-deficit/hyperactivity disorder across the lifespan", journal: "Brain Topogr" }
+    },
+    {
+      id: "pm-23249444", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 35, k: null },
+      sites: [], bands: ["theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", alpha: "down", beta: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "ADHD college students: lower alpha and beta and higher relative theta across the scalp than controls",
+      detail: "Pilot study: eyes-closed resting 66-channel EEG in 18 college students with ADHD vs 17 peers. Relative slow-band power was higher across the scalp and alpha and beta were lower, most clearly for alpha; theta/beta ratio was higher at anterior and lateral sites. Eyes-open effects were weaker, and 10 of the 18 students were on medication.",
+      design: "Case-control",
+      cite: { authors: "Woltering S, et al.", year: 2012, title: "Resting state EEG oscillatory power differences in ADHD college students and their peers", journal: "Behav Brain Funct" }
+    },
+    {
+      id: "pm-23355416", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 28, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "ADHD with dysfunctional anger, adults: frontal alpha asymmetry (relatively less left activity) vs controls",
+      detail: "Resting EEG in 14 unmedicated adults with ADHD and dysfunctional anger vs 14 controls. Frontal absolute alpha asymmetry showed relatively decreased left (or increased right) activity. A beta1 increase and a more diffuse theta/beta distribution were reported but have no named region here, so they are not included. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Jaworska N, et al.", year: 2013, title: "The resting electrophysiological profile in adults with ADHD and comorbid dysfunctional anger: a pilot study", journal: "Clin EEG Neurosci" }
+    },
+    {
+      id: "pm-23467799", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 76, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "up", evidence: "preliminary",
+      changes: { alpha: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "ADHD children: higher frontal alpha reactivity index (less alpha drop on eye opening) than controls",
+      detail: "Eyes-closed vs eyes-open absolute alpha in 38 children with ADHD and 38 sex- and age-matched controls. Alpha fell on opening the eyes in both groups, but the reactivity index was greater in frontal regions of the ADHD group. Taken from the abstract; not checked in the full text. Individual electrodes are not named, so frontal sites are used.",
+      design: "Case-control",
+      cite: { authors: "Fonseca LC, et al.", year: 2013, title: "Electroencephalographic alpha reactivity on opening the eyes in children with attention-deficit hyperactivity disorder", journal: "Clin EEG Neurosci" }
     }
   ],
 
