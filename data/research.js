@@ -1897,6 +1897,56 @@ window.NF_DATA = {
       detail: "ICAN multi-centre double-blind RCT, 142 children with ADHD and high theta/beta ratio randomised to real or sham neurofeedback; training at Cz or Fz. Resting theta and frontal-midline theta during an oddball task showed no significant effect after training. Analysis was on fewer children (68) with complete resting data.",
       design: "RCT (sham-controlled)",
       cite: { authors: "Enriquez-Geppert S, et al.", year: 2025, title: "Theta/Beta Ratio Neurofeedback Effects on Resting and Task-Related Theta Activity in Children with ADHD", journal: "Appl Psychophysiol Biofeedback" }
+    },
+    {
+      id: "pm-41569061", condition: "adhd", type: "biomarker",
+      metrics: { design: 1, control: null, blinded: null, n: 1, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","C3","Cz","C4"], bands: ["theta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "Single adult with suspected ADHD: resting relative theta in frontal and central regions was high",
+      detail: "One 31-year-old woman with suspected ADHD, eight-channel eyes-open and eyes-closed resting QEEG. Relative theta power was in excess over frontal and central regions and the theta/beta ratio was above 1.5 at frontal leads. Taken from the abstract; not checked in the full text. Single case report with no control group.",
+      design: "Case report",
+      cite: { authors: "Kopanska M, et al.", year: 2025, title: "Sensing brainwave dynamics in masked attention-deficit/hyper activity disorder: A quantitative electroencephalography-based approach to quantifying electrophysiological biomarkers in a high-functioning adult", journal: "J Physiol Pharmacol" }
+    },
+    {
+      id: "pm-42347931", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 2284, k: null },
+      sites: [], bands: ["delta","theta","beta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", beta: "up" }, symptoms: ["inattention","hyperactivity","impulsivity"],
+      claim: "Within ADHD symptoms: higher general-factor severity linked to widespread higher delta, theta and beta power",
+      detail: "2,284 children and adolescents from the Healthy Brain Network with valid resting EEG; the general ADHD symptom factor was linked to widespread increases in delta, theta and beta power. Connectivity results are not used here. Taken from the abstract; not checked in the full text. Cross-sectional correlation, not a diagnostic group comparison.",
+      design: "Cross-sectional correlation",
+      cite: { authors: "Wang Z, et al.", year: 2026, title: "Dissociable EEG connectivity patterns reflect the latent general and specific dimensions of ADHD in children and adolescents", journal: "Eur Child Adolesc Psychiatry" }
+    },
+    {
+      id: "pm-42350829", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 70, k: null },
+      sites: [], bands: ["delta","theta","alpha","beta"], direction: "down", evidence: "preliminary",
+      changes: { delta: "down", theta: "down", alpha: "down", beta: "down" }, symptoms: ["inattention","hyperactivity","impulsivity"],
+      claim: "ADHD vs healthy controls: lower resting power across EEG spectra, eyes open and closed",
+      detail: "54 ADHD patients and 16 healthy controls, eyes-open and eyes-closed resting EEG; the ADHD group had significantly reduced power across the spectra. The LORETA and MBCT treatment results are not used here (the MBCT treatment result is excluded). Taken from the abstract; not checked in the full text. Case-control comparison at baseline.",
+      design: "Case-control",
+      cite: { authors: "Schoenberg PLA, et al.", year: 2026, title: "Electrocortical Indices of Default Mode Network-Related Activity in ADHD and Modulation Through Mindfulness-Based Cognitive Therapy", journal: "Brain Topogr" }
+    },
+    {
+      id: "pm-9472424", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 52, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up" }, symptoms: ["inattention","hyperactivity","impulsivity"],
+      claim: "Adolescent ADHD vs controls: more anterior absolute theta at eyes-open rest",
+      detail: "26 unmedicated adolescent boys with ADHD and 26 matched controls, eyes-open resting EEG. Anterior absolute theta was higher in the ADHD group; anterior is mapped to the frontal region. The reduced posterior relative beta is not recorded here. Taken from the abstract; not checked in the full text. Case-control study from 1998.",
+      design: "Case-control",
+      cite: { authors: "Lazzaro I, et al.", year: 1998, title: "Quantified EEG activity in adolescent attention deficit hyperactivity disorder", journal: "Clin Electroencephalogr" }
+    },
+    {
+      id: "pm-31429702", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 31, k: null },
+      sites: ["F3","Fz","F4","C3","Cz","C4","P3","Pz","P4","O1","O2"], bands: ["delta","theta"], direction: "down", evidence: "preliminary",
+      changes: { delta: "down", theta: "down" }, symptoms: ["lowmood"],
+      claim: "Within adult ADHD: stable-arousal group (more depressive symptoms) has lower delta and theta power",
+      detail: "31 unmedicated adult ADHD outpatients, 15-minute eyes-closed resting EEG split by arousal stability. The stable group, which reported more depressive symptoms, had lower absolute delta and theta power at frontal, central, parietal and occipital sites; alpha and beta did not differ. No healthy control group; small sample.",
+      design: "Within-group comparison (cross-sectional)",
+      cite: { authors: "Huang J, et al.", year: 2019, title: "Brain arousal regulation and depressive symptomatology in adults with attention-deficit/hyperactivity disorder (ADHD)", journal: "BMC Neurosci" }
     }
   ],
 
