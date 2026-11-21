@@ -1,5 +1,7 @@
 // Single source for the PubMed searches used in bulk pulls (see data/search-protocol.md).
-const CORE = '(electroencephalography[mh] OR EEG[tiab] OR qEEG[tiab]) AND (resting[tiab] OR "eyes closed"[tiab] OR "eyes open"[tiab]) AND (power[tiab] OR spectral[tiab] OR spectrum[tiab] OR "theta/beta"[tiab] OR asymmetry[tiab]) AND humans[mh]';
+// v2 (2026-11-21): added "electroencephalogram", band names and "oscillations" after the benchmark check
+// showed v1 missed papers that say "theta activity" or "alpha oscillations" instead of "power".
+const CORE = '(electroencephalography[mh] OR EEG[tiab] OR qEEG[tiab] OR electroencephalogram[tiab]) AND (resting[tiab] OR "eyes closed"[tiab] OR "eyes open"[tiab]) AND (power[tiab] OR spectral[tiab] OR spectrum[tiab] OR asymmetry[tiab] OR theta[tiab] OR alpha[tiab] OR delta[tiab] OR beta[tiab] OR gamma[tiab] OR oscillations[tiab]) AND humans[mh]';
 const DISORDERS = {
   "ADHD": '"Attention Deficit Disorder with Hyperactivity"[mh]',
   "Alzheimer's": '("Alzheimer Disease"[mh] OR "Cognitive Dysfunction"[mh])',
