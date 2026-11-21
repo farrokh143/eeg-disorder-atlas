@@ -1,0 +1,10 @@
+{"id":"pm-24121958","decision":"defer","note":"No PMC full text; abstract gives delta/theta up (anterior areas) and widespread beta down in MCI/AD with DTI; sites differ by band, so one site list is unclear"}
+{"id":"pm-24598317","decision":"exclude","code":"CN","note":"Full text read: classifier and complexity study; band-level differences mostly non-significant or total-power features"}
+{"id":"pm-24933410","decision":"exclude","code":"NODATA","note":"Main result is task-based (face-name encoding); resting alpha-MMSE association has no stated direction or scalp site in the abstract"}
+{"id":"pm-25091343","decision":"exclude","code":"CN","note":"Main resting marker is auto-mutual information (complexity); the theta result is during face encoding (task)"}
+{"id":"pm-25442118","decision":"defer","note":"PMC full text exists but not read; LORETA occipital alpha1 sources vs grey matter density; source-level, mapping policy unclear"}
+{"id":"pm-25660305","decision":"exclude","code":"REVIEW","note":"Narrative review of resting EEG synchronization and connectivity in AD, not a meta-analysis"}
+{"id":"pm-26888613","decision":"exclude","code":"REVIEW","note":"Narrative review of DTI, fMRI and EEG connectivity in AD, not a meta-analysis"}
+{"id":"pm-27335037","decision":"exclude","code":"X","reason":"Comparison between two AD subgroups stratified by serum non-ceruloplasmin copper, not patients vs controls; eLORETA sources"}
+{"id":"pm-27613569","decision":"defer","note":"Full text read: resting eyes-closed EEG related to memory in older adults with subjective cognitive concerns, no diagnosis; condition assignment (alzheimers vs none) unclear"}
+{"id":"pm-27668356","decision":"defer","note":"No PMC full text; LORETA delta sources up and low-alpha sources down in AD vs controls; source-level, mapping policy unclear"}
