@@ -2337,6 +2337,36 @@ window.NF_DATA = {
       detail: "105 patients with schizophrenia, 145 psychotic bipolar probands and 56 healthy controls, 64-channel eyes-open resting EEG analysed with group ICA. Patients had higher loadings on an anterior delta component and a posterior theta component than controls, mapped to frontal and posterior sites. The bipolar group is reported separately and not used here; genetic gene-network results are not used. Case-control design with a genetic analysis.",
       design: "Case-control",
       cite: { authors: "Narayanan B, et al.", year: 2015, title: "Multivariate genetic determinants of EEG oscillations in schizophrenia and psychotic bipolar disorder from the BSNIP study", journal: "Transl Psychiatry" }
+    },
+    {
+      id: "cand-gad-wang-2025", condition: "anxiety", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 190, k: null },
+      sites: ["C3","Cz","C4","T3","T4","T5","T6"], bands: ["beta","alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { beta: "up", alpha: "asymmetry" }, symptoms: ["anxiety"],
+      claim: "GAD: more central beta power and rightward temporal alpha asymmetry than controls",
+      detail: "98 people with GAD vs 92 healthy controls, 10 min eyes-closed resting EEG on 16 channels. Beta power (13-27 Hz) was higher across the central axis and shifted posteriorly at higher frequencies; alpha asymmetry was more rightward in temporal sites. Connectivity results were not included (CN). Single case-control study with a small montage.",
+      design: "Case-control",
+      cite: { authors: "Wang H, Mou S, Pei X, Zhang X, Shen S, Zhang J, Shen X, Shen Z", year: 2025, title: "The power spectrum and functional connectivity characteristics of resting-state EEG in patients with generalized anxiety disorder", journal: "Scientific Reports" }
+    },
+    {
+      id: "pm-38280864", condition: "anxiety", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 93, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4"], bands: ["delta","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", beta: "down" }, symptoms: ["anxiety"],
+      claim: "PD with anxiety: more fronto-parietal delta and less frontal beta than controls",
+      detail: "68 people with Parkinson's (18 with clinically relevant anxiety) and 25 healthy controls, 12 min eyes-closed resting high-density EEG at baseline. Relative delta power was higher over frontal and parietal sites; relative beta was lower over frontal sites. Connectivity results and the 3- and 5-year follow-up were not used for this entry (CN and longitudinal). Case-control design, small anxious subgroup.",
+      design: "Case-control",
+      cite: { authors: "Yassine S, et al.", year: 2024, title: "Electrophysiological signatures of anxiety in Parkinson's disease", journal: "Transl Psychiatry" }
+    },
+    {
+      id: "pm-28582479", condition: "ptsd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 69, k: null },
+      sites: ["O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["hyperarousal","intrusions"],
+      claim: "PTSD: less occipital alpha at eyes-open rest than healthy controls",
+      detail: "Taken from the abstract; not checked in the full text. Eyes-open resting EEG, 25 people with PTSD vs 24 with generalized anxiety disorder and 20 healthy controls. Posterior alpha power was suppressed and source-localised to the cuneus (occipital), mapped to O1 and O2 (method not stated in the abstract). The frontal gamma result was left out because the abstract does not say which state it was recorded in; the Granger connectivity results were not used (CN).",
+      design: "Case-control",
+      cite: { authors: "Clancy K, et al.", year: 2017, title: "Restless 'rest': intrinsic sensory hyperactivity and disinhibition in post-traumatic stress disorder", journal: "Brain" }
     }
   ],
 
