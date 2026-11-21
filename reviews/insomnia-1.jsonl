@@ -1,0 +1,5 @@
+{"id":"pm-24127147","decision":"defer","note":"[parked: no full text] PMC id present but PMC returned no full text; abstract reports no waking EEG power difference in primary insomnia"}
+{"id":"pm-26951395","decision":"defer","note":"[parked: no full text] PMC id present but PMC returned no full text; abstract reports less upper alpha (eyes open) and more beta (eyes closed) in insomnia"}
+{"id":"pm-37531589","decision":"exclude","code":"SL","reason":"EEG beta is recorded during sleep; the resting fMRI connectivity is not EEG"}
+{"id":"pm-39983468","decision":"exclude","code":"NONBAND","reason":"Main findings are the aperiodic exponent and alpha centre frequency and bandwidth, not band power"}
+{"id":"pm-40615017","decision":"exclude","code":"CN","reason":"Main findings are functional connectivity and information processing, not band power; comorbid chronic pain is a confound"}
