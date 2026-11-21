@@ -4,18 +4,16 @@ A clickable International 10-20 electrode map showing how EEG rhythms differ acr
 disorders (EEG markers), plus neurofeedback treatment studies, with the
 evidence behind each finding.
 
-- Pick a **condition** (Alzheimer's, schizophrenia, ADHD, depression, TBI, ...).
-- Electrodes with research light up; ring colours show the **EEG bands** studied there.
-- Click an **electrode** to list only the studies at that site; filter by band,
-  evidence grade, or free-text search.
+- Tap **electrodes** (or a region: frontal, central, ...) on the 10-20 map to pick an area.
+- Narrow with dropdowns: **disorder**, **band**, **direction** (elevated / reduced / asymmetry)
+  and **symptom**, or free-text search.
+- Electrodes with research light up; ring colours show the EEG bands studied there.
 - Each finding shows evidence grade, study design, per-band direction (e.g. theta ↑, beta ↓),
   the symptoms studied or measured, full citation and a PubMed search link.
 - Findings are split into **EEG markers** (how the EEG differs in a condition) and
   **treatment evidence** (neurofeedback studies and how they held up).
-- **Start from a client's EEG**: pick sites (or a region), a band and elevated/reduced,
-  plus the client's symptoms. The atlas lists conditions where that pattern has been
-  reported (ranked by symptom overlap) and treatment studies that train against it.
-  The view is saved in the URL (e.g. `#p/theta/up/F3.Fz.F4/inattention`) so it can be shared.
+- With a direction chosen (e.g. elevated theta), markers show disorders where that change was
+  reported, and treatment evidence shows studies that train the band the other way.
 
 ## Run
 
