@@ -847,6 +847,36 @@ window.NF_DATA = {
       detail: "Resting awake qEEG from 60 people with probable AD and 129 controls, with a split-half replication. A discriminant function from one half classified 86% of the other half correctly. The evoked-potential part of the study is not used. Taken from the abstract; not checked in the full text.",
       design: "Case-control (split-half replication)",
       cite: { authors: "Duffy FH, et al.", year: 1995, title: "Temporoparietal electrophysiological differences characterize patients with Alzheimer's disease: a split-half replication study", journal: "Cereb Cortex" }
+    },
+    {
+      id: "pm-8676989", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 129, k: null },
+      sites: [], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["memory","cogdecline"],
+      claim: "AD vs non-demented controls: more delta and theta, less alpha at all 17 sites",
+      detail: "Eyes-closed resting EEG at 17 locations in 84 people with AD and 45 age-matched controls. Absolute delta and theta were higher and alpha lower in AD, and the power differences tracked cognitive scores. Taken from the abstract; not checked in the full text.",
+      design: "Case-control (cross-sectional)",
+      cite: { authors: "Förstl H, et al.", year: 1996, title: "[Volumetric brain changes and quantitative EEG in normal aging and Alzheimer's dementia]", journal: "Nervenarzt" }
+    },
+    {
+      id: "pm-8681465", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 30, k: null },
+      sites: ["O1","O2"], bands: ["theta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up" }, symptoms: ["memory","cogdecline"],
+      claim: "Mild AD vs controls: more relative theta power at occipital sites O1 and O2",
+      detail: "Resting EEG with eyes closed and open in 15 people with mild AD and 15 controls, recorded at O1 and O2. Relative theta power was the most sensitive single measure (46.7% at 100% specificity). Only the resting theta result is used; the nonlinear and reactivity measures are excluded. Taken from the abstract; not checked in the full text.",
+      design: "Case-control (small pilot)",
+      cite: { authors: "Stam CJ, et al.", year: 1996, title: "Diagnostic usefulness of linear and nonlinear quantitative EEG analysis in Alzheimer's disease", journal: "Clin Electroencephalogr" }
+    },
+    {
+      id: "pm-9086836", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 18, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["delta","theta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up", theta: "up" }, symptoms: ["memory","cogdecline"],
+      claim: "Presenile AD vs controls: more delta and theta at rest, mainly over frontal sites",
+      detail: "Resting EEG in 9 patients with presenile AD and 9 age- and sex-matched controls. Delta and theta were raised mainly over frontal regions. The abstract also reports lower alpha and beta, but not where, so they are not listed. Photic-driving results are excluded. Taken from the abstract; not checked in the full text.",
+      design: "Case-control (small pilot)",
+      cite: { authors: "Nanbu Y, et al.", year: 1997, title: "[Topographic analysis of resting EEG and photic driving responses in patients with presenile Alzheimer's disease]", journal: "Rinsho Byori" }
     }
   ],
 
