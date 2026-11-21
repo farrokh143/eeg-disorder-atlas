@@ -13,8 +13,7 @@ or to offer options. After each batch, start the next one straight away.
   5 excluded, 1 deferred"), then continue in the same turn.
 - Your progress is saved in the log after every batch, so nothing is lost if the conversation is
   compacted or restarted. To resume, just run `node tools/review-queue.js --counts` and carry on.
-- Stop only when (a) `review-queue.js --counts` shows nothing waiting that you have not already
-  deferred, or (b) the same tool fails 3 times in a row. In case (b), post the error on the chat board
+- Stop only when (a) `review-queue.js --counts` shows nothing waiting (parked papers are not listed), or (b) the same tool fails 3 times in a row. In case (b), post the error on the chat board
   and in your reply, then stop.
 
 ## Start of the session (once)
@@ -67,7 +66,16 @@ one band with a direction (higher or lower in the patient group than in controls
   the band, the direction and the scalp region. Then `detail` must include the sentence
   "Taken from the abstract; not checked in the full text."
 - If the paper mixes resting and task EEG, use the resting results only, and say so in `detail`.
-- **Never guess numbers.** `n` (total participants) and `k` (studies pooled, meta-analyses only) only if stated; otherwise `null`.
+- **Never guess numbers.** `n` = total participants stated in the paper or abstract (add the group sizes up, e.g.
+  117 AD + 117 MCI + 138 controls → 372). `k` = studies pooled (meta-analyses only). If not stated, `null`.
+- **Source-localised results** (LORETA, eLORETA, sLORETA, beamformer): include them when the result is given by lobe
+  or scalp region (frontal, central, temporal, parietal, occipital). Map the lobe with the region table under
+  "Field rules", and add to `detail`: "Source-localised (<method>); mapped to the overlying scalp region."
+  If the result is only for deep structures (cingulate, hippocampus, insula, precuneus, thalamus) with no lobe,
+  exclude with `SOURCE`.
+- **Mixed groups** (e.g. AD plus another dementia, or ADHD plus autism): include only a result reported separately for
+  the atlas condition against controls. If there is none, exclude with `X` and `"reason":"No separate result for <condition>"`.
+- The region table under "Field rules" applies to abstracts as well as full texts.
 - Null results count: if a well-designed study found **no** difference, still include it, with `evidence: "contested"`
   and the bands it tested marked `"mixed"`; say "no difference" in the claim.
 
@@ -97,14 +105,17 @@ If the log row has no title, authors, year or journal, add
 | REVIEW | a review or narrative paper, not a meta-analysis (meta-analyses with pooled results are included) |
 | X | anything else; add `"reason":"..."` |
 
-### defer: you cannot decide yet
+### defer: you cannot decide from what is available
 
-`{"id":"pm-12345","decision":"defer","note":"No open full text and abstract gives no sites"}`
+The note must start with one of these tags:
 
-Use it for: no PMC full text **and** an abstract that is not enough; a condition that is not one of the 14 atlas
-conditions (OCD, Lewy body dementia, Down syndrome, visual snow, REM sleep behaviour disorder, etc.: note
-"condition not in atlas: <name>"); anything you are unsure about. Deferred papers stay `full-text` and are listed
-last by the queue. Do not defer the same paper twice: on the second pass, exclude it with `X` and the reason.
+| note starts with | use when | what happens |
+|---|---|---|
+| `[parked: no full text]` | no PMC full text, and the abstract does not give band + direction + region | stays `full-text`, hidden from the queue until someone with library access reviews it |
+| `[parked: non-atlas condition <name>]` | the paper is about a condition that is not one of the 14 (OCD, bipolar, Lewy body dementia, Down syndrome, visual snow, REM sleep behaviour disorder, fragile X, etc.) | stays `full-text`, hidden until the owner decides about new conditions |
+| `[retry]` | anything else you are unsure about | stays in the queue, listed last; on the next pass you must include or exclude it (no second `[retry]`) |
+
+`{"id":"pm-12345","decision":"defer","note":"[parked: no full text] abstract gives no sites"}`
 
 ### pass: only for the 9 hand-picked `cand-*` rows that are still `to-review`
 
@@ -153,6 +164,9 @@ meta-analysis with mixed results; `preliminary` = case-control, small, pilot or 
 **design**: short text, e.g. "Case-control", "Meta-analysis", "RCT (sham-controlled)".
 
 ## Sync (every 4 batches, and at the very end)
+
+If you have no Projects tool (for example when you run as a sub-agent), skip this section and say so in your final
+reply; the chat that started you does the sync.
 
 1. `node tools/findings-snapshot.js > atlas-findings.md` and `node tools/log-summary.js > research-log-summary.md`
    (in the repo folder; don't commit these two files, delete them after uploading).
