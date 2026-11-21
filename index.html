@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Neurofeedback Evidence Map</title>
+<title>EEG Disorder Atlas</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -134,11 +134,11 @@ svg.head { width: 100%; max-width: 100%; height: auto; display: block; }
 <div class="wrap">
   <header class="top">
     <div>
-      <h1>Neurofeedback Evidence Map</h1>
-      <p>Pick a condition, then tap an electrode on the 10-20 montage to see which EEG bands were studied there and how strong the evidence is.</p>
+      <h1>EEG Disorder Atlas</h1>
+      <p>How brain rhythms differ across disorders. Pick a condition, then tap an electrode on the 10-20 montage to see which EEG bands are linked to it there and how strong the evidence is.</p>
     </div>
     <label class="search"><span class="eyebrow">Search research</span>
-      <input id="q" type="search" placeholder="e.g. alpha, Peniston, sham" autocomplete="off">
+      <input id="q" type="search" placeholder="e.g. gamma, slowing, Alzheimer" autocomplete="off">
     </label>
   </header>
 
@@ -175,7 +175,7 @@ svg.head { width: 100%; max-width: 100%; height: auto; display: block; }
         <dt style="color:var(--ev-strong)">Strong</dt><dd>Meta-analysis or several RCTs pointing the same way.</dd>
         <dt style="color:var(--ev-moderate)">Moderate</dt><dd>At least one randomised or controlled trial, or a meta-analysis of mixed-quality studies.</dd>
         <dt style="color:var(--ev-prelim)">Preliminary</dt><dd>Small, open-label, case-control or single-session studies.</dd>
-        <dt style="color:var(--ev-contested)">Contested</dt><dd>Blinded, sham-controlled or pooled data that fail to support the effect.</dd>
+        <dt style="color:var(--ev-contested)">Contested</dt><dd>Blinded, sham-controlled or pooled data that fail to support the effect, or a marker that does not hold up diagnostically.</dd>
       </dl>
     </div>
     <div>
@@ -184,7 +184,7 @@ svg.head { width: 100%; max-width: 100%; height: auto; display: block; }
     </div>
     <div>
       <h2>About this map</h2>
-      <p class="warn">Summaries were compiled from the published literature and are a starting point, not a clinical guide. Check every claim against the original paper before using it with clients. Old 10-20 names are used: T3/T4/T5/T6 are T7/T8/P7/P8 in the 10-10 system.</p>
+      <p class="warn">Group-level EEG differences are not diagnostic tests for individuals. Summaries were compiled from the published literature and are a starting point, not a clinical guide. Check every claim against the original paper before using it with clients. Old 10-20 names are used: T3/T4/T5/T6 are T7/T8/P7/P8 in the 10-10 system.</p>
     </div>
   </section>
 </div>
@@ -211,7 +211,7 @@ svg.head { width: 100%; max-width: 100%; height: auto; display: block; }
   const bandColor = id => `var(--b-${id})`;
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
-  const state = { cond: "adhd", site: null, band: null, ev: null, q: "" };
+  const state = { cond: "alzheimers", site: null, band: null, ev: null, type: null, q: "" };
   const fromHash = () => { const h = location.hash.slice(1); if (h === "all" || condById[h]) state.cond = h; };
   fromHash();
 
@@ -228,7 +228,7 @@ svg.head { width: 100%; max-width: 100%; height: auto; display: block; }
   const baseSet = () => D.findings.filter(f =>
     (state.cond === "all" || f.condition === state.cond) &&
     (!state.band || f.bands.includes(state.band)) &&
-    (!state.ev || f.evidence === state.ev) && matchesText(f));
+    (!state.ev || f.evidence === state.ev) && (!state.type || f.type === state.type) && matchesText(f));
   const listSet = base => base.filter(f => !state.site || f.sites.includes(state.site));
 
   /* ---------- static: head drawing ---------- */
@@ -344,12 +344,16 @@ svg.head { width: 100%; max-width: 100%; height: auto; display: block; }
   });
 
   function renderEv() {
-    $("evFilters").innerHTML = `<span class="lbl">Evidence</span>` +
+    $("evFilters").innerHTML = `<span class="lbl">Show</span>` +
+      [[null, "All research"], ["biomarker", "EEG markers"], ["protocol", "Treatment studies"]].map(([t, l]) =>
+        `<button class="fbtn" data-type="${t || ""}" aria-pressed="${state.type === t}">${l}</button>`).join("") +
+      `<span class="lbl" style="margin-left:10px">Evidence</span>` +
       [null, ...EV_ORDER].map(ev => `<button class="fbtn" data-ev="${ev || ""}" aria-pressed="${state.ev === ev}">${ev ? ev[0].toUpperCase() + ev.slice(1) : "Any"}</button>`).join("");
   }
   $("evFilters").addEventListener("click", e => {
     const b = e.target.closest(".fbtn"); if (!b) return;
-    state.ev = b.dataset.ev || null; render();
+    if ("type" in b.dataset) state.type = b.dataset.type || null; else state.ev = b.dataset.ev || null;
+    render();
   });
 
   function toggleSite(name) { state.site = state.site === name ? null : name; render(); }
@@ -366,7 +370,7 @@ svg.head { width: 100%; max-width: 100%; height: auto; display: block; }
     return `<article class="card" data-sites="${f.sites.join(",")}" tabindex="-1">
       <div class="meta">
         <span class="ev ${f.evidence}"><span class="dots">${dots}</span>${f.evidence}</span>
-        <span class="type">${f.type === "biomarker" ? "EEG marker" : "NF protocol"}</span>
+        <span class="type">${f.type === "biomarker" ? "EEG marker" : "Neurofeedback study"}</span>
         <span>${esc(f.design)}</span>
         ${state.cond === "all" ? `<span>· ${esc(condById[f.condition].name)}</span>` : ""}
       </div>
@@ -381,12 +385,12 @@ svg.head { width: 100%; max-width: 100%; height: auto; display: block; }
   function render() {
     renderConds(); renderEv();
     const base = baseSet(), list = listSet(base)
-      .sort((a, b) => EV_ORDER.indexOf(a.evidence) - EV_ORDER.indexOf(b.evidence) || b.cite.year - a.cite.year);
+      .sort((a, b) => (a.type === "biomarker" ? 0 : 1) - (b.type === "biomarker" ? 0 : 1) || EV_ORDER.indexOf(a.evidence) - EV_ORDER.indexOf(b.evidence) || b.cite.year - a.cite.year);
     renderMap(base); renderBands(base);
 
     const cond = condById[state.cond];
     const nB = base.filter(f => f.type === "biomarker").length, nP = base.length - nB;
-    $("summary").innerHTML = `<span class="eyebrow">${nP} protocol${nP === 1 ? "" : "s"} · ${nB} EEG marker${nB === 1 ? "" : "s"}</span>
+    $("summary").innerHTML = `<span class="eyebrow">${nB} EEG marker${nB === 1 ? "" : "s"} · ${nP} treatment stud${nP === 1 ? "y" : "ies"}</span>
       <h2>${cond ? esc(cond.name) : "All conditions"}</h2>
       <p>${cond ? esc(cond.summary) : "Every condition in the dataset. Choose one above to focus the map."}</p>`;
 

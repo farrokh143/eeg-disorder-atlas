@@ -1,5 +1,5 @@
 /*
- * Neurofeedback research map — dataset.
+ * EEG Disorder Atlas — dataset.
  *
  * Edit this file to add or correct research. Schema is documented in README.md.
  * Every entry was compiled from the published literature; verify each citation
@@ -24,19 +24,125 @@ window.NF_DATA = {
   ],
 
   conditions: [
-    { id: "adhd",       name: "ADHD",               summary: "The most studied neurofeedback application. Theta/beta and SMR protocols at the vertex show benefits on parent ratings, but blinded and sham-controlled trials are much less convincing." },
-    { id: "depression", name: "Depression",         summary: "Work centres on frontal alpha asymmetry (F3/F4). The asymmetry idea is influential, but meta-analysis does not support it as a diagnostic marker and training trials are small." },
-    { id: "anxiety",    name: "Anxiety",            summary: "Protocols usually reward posterior alpha or alpha-theta states and inhibit high beta. Mostly clinical reports and small studies." },
-    { id: "ptsd",       name: "PTSD",               summary: "Alpha-theta training has a long clinical history; a randomised trial of right temporal alpha down-training reported symptom reductions." },
-    { id: "insomnia",   name: "Insomnia",           summary: "SMR training aims to strengthen sleep-spindle generators. Early positive results were not confirmed in a double-blind, sham-controlled trial." },
-    { id: "epilepsy",   name: "Epilepsy",           summary: "One of the oldest applications (Sterman's SMR work). SMR and SCP training reduced seizure frequency in drug-resistant patients across controlled studies." },
-    { id: "autism",     name: "Autism",             summary: "Mu-rhythm and QEEG-guided connectivity protocols; small samples and few controlled trials." },
-    { id: "sud",        name: "Substance use",      summary: "Peniston alpha-theta protocol, later combined with beta/SMR training (Scott-Peniston). Promising retention outcomes, limited replication." },
-    { id: "migraine",   name: "Migraine",           summary: "Mostly QEEG-guided protocols that down-train excess fast activity; uncontrolled case series." },
-    { id: "cognition",  name: "Peak performance",   summary: "Upper-alpha and SMR training in healthy people to improve memory, mental rotation and performance." }
+    { id: "alzheimers", name: "Alzheimer's",        summary: "One of the most consistent EEG pictures in medicine: slowing. Delta and theta rise, posterior alpha and beta fall, and the alpha peak frequency drops as the disease progresses." },
+    { id: "adhd",       name: "ADHD",               summary: "An elevated theta/beta ratio at the vertex was long proposed as a marker, but it holds only for a subgroup. Neurofeedback on the same bands helps on unblinded ratings; blinded trials are much less convincing." },
+    { id: "schizophrenia", name: "Schizophrenia",   summary: "Reduced gamma synchrony, especially the 40 Hz auditory steady-state response over fronto-central sites, is one of the best-replicated findings. Resting slow-wave excess is also common." },
+    { id: "depression", name: "Depression",         summary: "Frontal alpha asymmetry (F3/F4) is the classic proposed marker, but pooled data do not support it diagnostically. Frontal-midline theta may predict who responds to treatment." },
+    { id: "parkinsons", name: "Parkinson's",        summary: "Resting EEG slows in Parkinson's disease, and a lower dominant posterior frequency predicts later dementia." },
+    { id: "tbi",        name: "Brain injury (TBI)", summary: "Focal or diffuse slowing and reduced alpha after head injury. Group differences are real, but qEEG is not reliable for diagnosing mild TBI in an individual." },
+    { id: "insomnia",   name: "Insomnia",           summary: "The hyperarousal model: more beta and gamma around sleep onset and during NREM sleep. SMR neurofeedback was not better than sham in a blinded trial." },
+    { id: "autism",     name: "Autism",             summary: "A U-shaped power profile: excess low (delta/theta) and high (beta/gamma) frequencies with reduced alpha. Results vary a lot by age and sample." },
+    { id: "sud",        name: "Alcohol & substance use", summary: "Resting beta is elevated in people with alcohol dependence and their relatives, suggesting a trait of cortical hyperexcitability. Alpha-theta neurofeedback has a long clinical history." },
+    { id: "epilepsy",   name: "Epilepsy",           summary: "Diagnosis rests on epileptiform discharges rather than band power. SMR and slow-cortical-potential training reduced seizures in drug-resistant patients." },
+    { id: "ptsd",       name: "PTSD",               summary: "Altered alpha has been reported but findings are inconsistent. Treatment studies centre on alpha and alpha-theta neurofeedback." },
+    { id: "anxiety",    name: "Anxiety",            summary: "Clinical reports favour posterior alpha and high-beta inhibit protocols; marker research is thin." },
+    { id: "migraine",   name: "Migraine",           summary: "Excess fast activity in some patients' QEEGs; evidence comes from uncontrolled case series." },
+    { id: "cognition",  name: "Healthy cognition",  summary: "Upper-alpha and SMR activity relate to memory and mental rotation in healthy people, and training them can improve performance." }
   ],
 
   findings: [
+    /* ---------------- Alzheimer's ---------------- */
+    {
+      id: "ad-jeong-2004", condition: "alzheimers", type: "biomarker",
+      sites: ["P3", "Pz", "P4", "O1", "O2", "T5", "T6"], bands: ["delta", "theta", "alpha", "beta"], direction: "up", evidence: "strong",
+      claim: "EEG slowing: more delta/theta, less posterior alpha and beta",
+      detail: "Review of decades of studies: Alzheimer's disease shifts the power spectrum toward slow frequencies and reduces coherence between regions. Slowing grows with disease severity.",
+      design: "Review",
+      cite: { authors: "Jeong J", year: 2004, title: "EEG dynamics in patients with Alzheimer's disease", journal: "Clinical Neurophysiology" }
+    },
+    {
+      id: "ad-babiloni-2020", condition: "alzheimers", type: "biomarker",
+      sites: ["P3", "Pz", "P4", "O1", "O2"], bands: ["alpha", "delta"], direction: "down", evidence: "strong",
+      claim: "Posterior resting alpha falls and delta rises from MCI to dementia",
+      detail: "Expert review: reduced posterior alpha sources and increased delta track progression from mild cognitive impairment to Alzheimer's dementia and relate to cognitive decline.",
+      design: "Expert review",
+      cite: { authors: "Babiloni C, Blinowska K, Bonanni L, et al.", year: 2020, title: "What electrophysiology tells us about Alzheimer's disease: a window into the synchronization and connectivity of brain neurons", journal: "Neurobiology of Aging" }
+    },
+
+    /* ---------------- Schizophrenia ---------------- */
+    {
+      id: "scz-kwon-1999", condition: "schizophrenia", type: "biomarker",
+      sites: ["Fz", "Cz"], bands: ["gamma"], direction: "down", evidence: "moderate",
+      claim: "Reduced 40 Hz gamma response to auditory clicks",
+      detail: "Patients showed less power and phase-locking in response to 40 Hz click trains, while responses at lower rates were relatively spared. This started a large literature on gamma deficits.",
+      design: "Case-control",
+      cite: { authors: "Kwon JS, O'Donnell BF, Wallenstein GV, et al.", year: 1999, title: "Gamma frequency-range abnormalities to auditory stimulation in schizophrenia", journal: "Archives of General Psychiatry" }
+    },
+    {
+      id: "scz-thune-2016", condition: "schizophrenia", type: "biomarker",
+      sites: ["Fz", "Cz"], bands: ["gamma"], direction: "down", evidence: "strong",
+      claim: "40 Hz auditory steady-state deficit confirmed across studies",
+      detail: "Pooled data showed reduced 40 Hz ASSR power and phase-locking in schizophrenia, with moderate effect sizes. Deficits appeared in chronic and first-episode patients.",
+      design: "Meta-analysis",
+      cite: { authors: "Thuné H, Recasens M, Uhlhaas PJ", year: 2016, title: "The 40-Hz auditory steady-state response in patients with schizophrenia: a meta-analysis", journal: "JAMA Psychiatry" }
+    },
+    {
+      id: "scz-boutros-2008", condition: "schizophrenia", type: "biomarker",
+      sites: ["Fz", "F3", "F4", "Cz"], bands: ["delta", "theta", "alpha"], direction: "up", evidence: "moderate",
+      claim: "Resting slow-wave excess, reduced alpha",
+      detail: "Review of resting spectral studies: increased delta and theta, and often reduced alpha, are common in schizophrenia, but they are not specific enough to work as a diagnostic test.",
+      design: "Review",
+      cite: { authors: "Boutros NN, Arfken C, Galderisi S, et al.", year: 2008, title: "The status of spectral EEG abnormality as a diagnostic test for schizophrenia", journal: "Schizophrenia Research" }
+    },
+
+    /* ---------------- Parkinson's ---------------- */
+    {
+      id: "pd-klassen-2011", condition: "parkinsons", type: "biomarker",
+      sites: ["O1", "O2", "P3", "P4"], bands: ["alpha", "theta"], direction: "down", evidence: "moderate",
+      claim: "Lower dominant posterior frequency predicts dementia",
+      detail: "In a prospective cohort of people with Parkinson's disease, slower background rhythm and more theta at baseline strongly predicted who later developed dementia.",
+      design: "Prospective cohort",
+      cite: { authors: "Klassen BT, Hentz JG, Shill HA, et al.", year: 2011, title: "Quantitative EEG as a predictive biomarker for Parkinson disease dementia", journal: "Neurology" }
+    },
+
+    /* ---------------- TBI ---------------- */
+    {
+      id: "tbi-thatcher-1989", condition: "tbi", type: "biomarker",
+      sites: ["F3", "F4", "Fz", "T3", "T4"], bands: ["theta", "alpha", "beta"], direction: "up", evidence: "preliminary",
+      claim: "Discriminant qEEG features separate mild TBI from controls",
+      detail: "Frontal and temporal coherence and power features, including increased theta and reduced alpha, classified mild head-injury patients versus controls in this sample.",
+      design: "Case-control",
+      cite: { authors: "Thatcher RW, Walker RA, Gerson I, Geisler FH", year: 1989, title: "EEG discriminant analyses of mild head trauma", journal: "Electroencephalography and Clinical Neurophysiology" }
+    },
+    {
+      id: "tbi-nuwer-2005", condition: "tbi", type: "biomarker",
+      sites: [], bands: ["delta", "theta", "alpha"], direction: "up", evidence: "contested",
+      claim: "Slowing after TBI is real but nonspecific",
+      detail: "Review: acute slowing and reduced alpha are common after head injury and usually resolve within months. qEEG findings are not specific enough to diagnose mild TBI in an individual.",
+      design: "Review",
+      cite: { authors: "Nuwer MR, Hovda DA, Schrader LM, Vespa PM", year: 2005, title: "Routine and quantitative EEG in mild traumatic brain injury", journal: "Clinical Neurophysiology" }
+    },
+
+    /* ---------------- Insomnia (markers) ---------------- */
+    {
+      id: "ins-perlis-2001", condition: "insomnia", type: "biomarker",
+      sites: ["C3", "C4"], bands: ["beta", "gamma"], direction: "up", evidence: "moderate",
+      claim: "More beta/gamma during NREM sleep (hyperarousal)",
+      detail: "People with primary insomnia showed more high-frequency activity around sleep onset and during NREM sleep than good sleepers, consistent with cortical hyperarousal.",
+      design: "Case-control (sleep EEG)",
+      cite: { authors: "Perlis ML, Smith MT, Andrews PJ, Orff H, Giles DE", year: 2001, title: "Beta/Gamma EEG activity in patients with primary and secondary insomnia and good sleeper controls", journal: "Sleep" }
+    },
+
+    /* ---------------- Autism (markers) ---------------- */
+    {
+      id: "asd-wang-2013", condition: "autism", type: "biomarker",
+      sites: ["F3", "F4", "C3", "C4", "P3", "P4", "O1", "O2"], bands: ["delta", "theta", "alpha", "beta", "gamma"], direction: "up", evidence: "preliminary",
+      claim: "U-shaped profile: excess slow and fast power, reduced alpha",
+      detail: "Review of resting-state studies: excess delta/theta and beta/gamma with reduced alpha, plus altered connectivity. Findings vary widely across ages and methods.",
+      design: "Review",
+      cite: { authors: "Wang J, Barstein J, Ethridge LE, Mosconi MW, Takarae Y, Sweeney JA", year: 2013, title: "Resting state EEG abnormalities in autism spectrum disorders", journal: "Journal of Neurodevelopmental Disorders" }
+    },
+
+    /* ---------------- Alcohol (markers) ---------------- */
+    {
+      id: "sud-rangaswamy-2002", condition: "sud", type: "biomarker",
+      sites: ["Cz", "C3", "C4", "Fz"], bands: ["beta", "hibeta"], direction: "up", evidence: "moderate",
+      claim: "Elevated resting beta in alcohol dependence",
+      detail: "Alcohol-dependent participants had increased resting beta power across the scalp, most marked centrally. Similar increases in their relatives suggest a heritable trait of hyperexcitability.",
+      design: "Case-control (COGA)",
+      cite: { authors: "Rangaswamy M, Porjesz B, Chorlian DB, et al.", year: 2002, title: "Beta power in the EEG of alcoholics", journal: "Biological Psychiatry" }
+    },
+
     /* ---------------- ADHD ---------------- */
     {
       id: "adhd-tbr-biomarker", condition: "adhd", type: "biomarker",

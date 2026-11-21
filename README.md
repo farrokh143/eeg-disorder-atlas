@@ -1,10 +1,10 @@
-# Neurofeedback Evidence Map
+# EEG Disorder Atlas
 
-A clickable International 10-20 electrode map linking clinical conditions to the
-EEG bands and training sites studied in the neurofeedback literature, with the
+A clickable International 10-20 electrode map showing how EEG rhythms differ across
+disorders (EEG markers), plus neurofeedback treatment studies, with the
 evidence behind each finding.
 
-- Pick a **condition** (ADHD, depression, PTSD, insomnia, epilepsy, ...).
+- Pick a **condition** (Alzheimer's, schizophrenia, ADHD, depression, TBI, ...).
 - Electrodes with research light up; ring colours show the **EEG bands** studied there.
 - Click an **electrode** to list only the studies at that site; filter by band,
   evidence grade, or free-text search.
