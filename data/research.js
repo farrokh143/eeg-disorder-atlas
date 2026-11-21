@@ -1037,6 +1037,46 @@ window.NF_DATA = {
       detail: "Resting 19-channel EEG in 240 inpatients with MDD, 250 with schizophrenia and 245 healthy controls (735 in total). Central alpha (8-11 Hz) power decrease was the most consistently predictive feature for MDD and schizophrenia. Classifier accuracy (67% for MDD vs controls) is not used as the finding. Taken from the abstract; not checked in the full text. Cross-sectional; not a diagnostic test.",
       design: "Case-control (machine learning, cross-sectional)",
       cite: { authors: "Sarisik E, et al.", year: 2025, title: "EEG-based Signatures of Schizophrenia, Depression, and Aberrant Aging: A Supervised Machine Learning Investigation", journal: "Schizophr Bull" }
+    },
+    {
+      id: "pm-11196007", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 35, k: null },
+      sites: ["P3","Pz","P4","T5","T6","O1","O2"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
+      claim: "Adolescent MDD without anxiety: less right than left posterior alpha (asymmetry) vs controls",
+      detail: "Resting EEG (eyes condition not stated in the abstract) in 19 adolescent outpatients with major depression (11 with comorbid anxiety, 8 without), 6 with anxiety only, and 10 non-ill controls. Depression without anxiety showed alpha asymmetry indicating less activation over the right than the left posterior sites; comorbid anxiety reduced this asymmetry. Taken from the abstract; not checked in the full text. Small preliminary study of female adolescents.",
+      design: "Case-control",
+      cite: { authors: "Kentgen LM, et al.", year: 2000, title: "Electroencephalographic asymmetries in adolescents with major depression: influence of comorbidity with anxiety disorders", journal: "J Abnorm Psychol" }
+    },
+    {
+      id: "pm-11306251", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 93, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["beta","alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { beta: "up", alpha: "asymmetry" }, symptoms: ["lowmood"],
+      claim: "Unmedicated male MDD vs controls: higher relative beta and frontal alpha asymmetry",
+      detail: "Eyes-closed resting EEG from 21 scalp sites in 70 unmedicated male outpatients with unipolar depression and 23 male controls. Overall relative beta was higher in patients, absolute beta was higher at bilateral anterior sites, and frontal alpha asymmetry differed. A discriminant analysis classified 91.3% correctly, which is not a diagnostic test. Taken from the abstract; not checked in the full text. Frontal region used for the entry; theta asymmetry and coherence results are not used here.",
+      design: "Case-control (cross-sectional)",
+      cite: { authors: "Knott V, et al.", year: 2001, title: "EEG power, frequency, asymmetry and coherence in male depression", journal: "Psychiatry Res" }
+    },
+    {
+      id: "pm-12204318", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 61, k: null },
+      sites: [], bands: ["delta","theta","alpha","beta"], direction: "asymmetry", evidence: "preliminary",
+      changes: { delta: "down", theta: "down", alpha: "down", beta: "asymmetry" }, symptoms: ["lowmood"],
+      claim: "Seasonal affective disorder: lower delta, theta and alpha across most regions; right-sided frontal beta",
+      detail: "Resting EEG in 31 depressed patients with seasonal affective disorder and 30 controls. Delta, theta and alpha power were lower across central, parietal, occipital, temporal and frontal areas, so a whole-head entry is used. Beta was higher over the right lateral frontal region. Taken from the abstract; not checked in the full text. The paper proposes discrimination between depressive states but reports no accuracy.",
+      design: "Case-control",
+      cite: { authors: "Volf NV, et al.", year: 2002, title: "EEG mapping in seasonal affective disorder", journal: "J Affect Disord" }
+    },
+    {
+      id: "pm-12436054", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 151, k: null },
+      sites: ["Fp2","F4","F8"], bands: ["alpha"], direction: "up", evidence: "preliminary",
+      changes: { alpha: "up" }, symptoms: ["lowmood"],
+      claim: "Adolescent females with lifetime major depression: higher right frontal alpha power at eyes-open rest",
+      detail: "Eyes-open resting EEG from 31 sites in 151 adolescent females, 58 with a lifetime major depressive episode. Current source density topography placed the depression effect in the right frontal brain, so the right frontal region is used. The family-history-of-alcoholism results (beta and theta) are not used here. Taken from the abstract; not checked in the full text.",
+      design: "Cross-sectional group comparison",
+      cite: { authors: "Bauer LO, et al.", year: 2002, title: "Lateral asymmetries in the frontal brain: effects of depression and a family history of alcoholism in female adolescents", journal: "Alcohol Clin Exp Res" }
     }
   ],
 
