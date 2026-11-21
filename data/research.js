@@ -2737,6 +2737,46 @@ window.NF_DATA = {
       detail: "Resting eyes-closed EEG in Parkinson's patients off medication vs age-matched controls (42 subjects in the analysis). Source-localised (LORETA); the temporal-lobe decreases in theta and alpha are mapped to the overlying temporal region. The anterior cingulate delta increase is a deep-structure result and is not mapped to a site. Coherence results and the classifier are not counted here.",
       design: "Case-control",
       cite: { authors: "Waninger S, et al.", year: 2020, title: "Neurophysiological Biomarkers of Parkinson's Disease", journal: "J Parkinsons Dis" }
+    },
+    {
+      id: "pm-35042630", condition: "parkinsons", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 108, k: null },
+      sites: ["Fp2","F4","F8"], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["anxiety"],
+      claim: "Parkinson's with anxiety: lower right prefrontal alpha1 power than Parkinson's without anxiety",
+      detail: "108 people with Parkinson's, split by clinically relevant anxiety (33 with, 75 without) on the Parkinson Anxiety Scale; resting high-density EEG. Relative alpha1 power in the right prefrontal cortex was lower in those with anxiety, and insula-prefrontal connectivity was higher (not counted here). Mapped to right frontal sites (Fp2, F4, F8). Taken from the abstract; not checked in the full text. Cross-sectional, single-centre.",
+      design: "Cross-sectional comparison",
+      cite: { authors: "Betrouni N, et al.", year: 2022, title: "Anxiety in Parkinson's disease: A resting-state high density EEG study", journal: "Neurophysiol Clin" }
+    },
+    {
+      id: "pm-37146531", condition: "parkinsons", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 169, k: null },
+      sites: [], bands: ["theta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up" }, symptoms: ["motor"],
+      claim: "Parkinson's: more generalised resting theta power than non-PD controls, replicated in four cohorts",
+      detail: "169 people (84 with Parkinson's, 85 non-PD) from four centres, resting EEG relative power. Theta relative power was higher in Parkinson's in all four datasets, with generalised (whole-head) distribution. A higher pre-alpha posterior result is not placed here because its band is not defined in the abstract. Taken from the abstract; not checked in the full text. Case-control across centres.",
+      design: "Case-control (multicentre)",
+      cite: { authors: "Jaramillo-Jimenez A, et al.", year: 2023, title: "Spectral features of resting-state EEG in Parkinson's Disease: A multicenter study using functional data analysis", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-37787445", condition: "parkinsons", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta","alpha"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up", alpha: "up" }, symptoms: ["executive"],
+      claim: "Parkinson's: more frontal theta and lower-alpha power, linked to executive dysfunction",
+      detail: "Mild Parkinson's patients vs healthy controls, resting EEG power; increased theta and lower-alpha power in frontal lobe areas, correlated with slower executive test times and with striatal dopamine uptake (within Parkinson's). Total sample size not stated in the abstract. Taken from the abstract; not checked in the full text. Single-centre case-control.",
+      design: "Case-control",
+      cite: { authors: "Lorek K, et al.", year: 2023, title: "Slowing of EEG waves correlates with striatal [^18^ F]fluorodopa PET/CT uptake and executive dysfunction in Parkinson's disease", journal: "Eur J Neurosci" }
+    },
+    {
+      id: "pm-37937898", condition: "parkinsons", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 52, k: null },
+      sites: [], bands: ["alpha","beta"], direction: "up", evidence: "preliminary",
+      changes: { alpha: "up", beta: "up" }, symptoms: ["motor"],
+      claim: "Parkinson's on and off medication: more total alpha and beta power than controls, widespread",
+      detail: "26 people with Parkinson's (on and off medication) and 26 age-matched controls, eyes-closed and eyes-open resting EEG. Total alpha and beta power were higher in Parkinson's in both states, widely distributed across the scalp. After removing the aperiodic component, the beta difference disappeared and the alpha difference remained only for eyes-open; the aperiodic exponent and offset were higher (not counted as band results). Single-centre case-control.",
+      design: "Case-control",
+      cite: { authors: "McKeown DJ, et al.", year: 2024, title: "Medication-invariant resting aperiodic and periodic neural activity in Parkinson's disease", journal: "Psychophysiology" }
     }
   ],
 
