@@ -1077,6 +1077,16 @@ window.NF_DATA = {
       detail: "Eyes-open resting EEG from 31 sites in 151 adolescent females, 58 with a lifetime major depressive episode. Current source density topography placed the depression effect in the right frontal brain, so the right frontal region is used. The family-history-of-alcoholism results (beta and theta) are not used here. Taken from the abstract; not checked in the full text.",
       design: "Cross-sectional group comparison",
       cite: { authors: "Bauer LO, et al.", year: 2002, title: "Lateral asymmetries in the frontal brain: effects of depression and a family history of alcoholism in female adolescents", journal: "Alcohol Clin Exp Res" }
+    },
+    {
+      id: "pm-15705347", condition: "depression", type: "biomarker",
+      metrics: { design: 3, control: null, blinded: null, n: 87, k: null },
+      sites: ["F7","F3"], bands: ["alpha"], direction: "asymmetry", evidence: "moderate",
+      changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
+      claim: "Offspring with lifetime MDD: less left lateral frontal activity (alpha asymmetry) at rest",
+      detail: "Resting EEG from 12 homologous site pairs in 87 offspring of depressed or non-depressed parents (18 with both parents depressed, 40 with one, 29 with none). Lifetime MDD in the offspring was linked to less left frontal activity at lateral sites, compared with offspring without MDD. The parental-risk alpha asymmetry at medial and parietal sites is not used for this entry. Taken from the abstract; not checked in the full text. The offspring are at risk; they are not all patients.",
+      design: "Cohort (high-risk, cross-sectional comparison)",
+      cite: { authors: "Bruder GE, et al.", year: 2005, title: "Electroencephalographic measures of regional hemispheric activity in offspring at risk for depressive disorders", journal: "Biol Psychiatry" }
     }
   ],
 
