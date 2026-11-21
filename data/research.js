@@ -1567,6 +1567,46 @@ window.NF_DATA = {
       detail: "Eyes-closed resting EEG in 20 boys with ADHD, 20 boys with ADHD plus ODD and 20 controls. Theta was higher in both ADHD groups, posterior alpha and frontal beta were lower, and posterior delta was higher. Taken from the abstract; not checked in the full text. Sites are the frontal and posterior regions named in the abstract, and the ODD comparison is not separated here.",
       design: "Case-control",
       cite: { authors: "Clarke AR, et al.", year: 2002, title: "Children with attention-deficit/hyperactivity disorder and comorbid oppositional defiant disorder: an EEG analysis", journal: "Psychiatry Res" }
+    },
+    {
+      id: "cand-adhd-wang-2024", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 100, k: null },
+      sites: ["F7","F3","Fz","F4","F8","Cz"], bands: ["theta","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", beta: "down" }, symptoms: ["inattention"],
+      claim: "ADHD with abnormal CPT-3 scores: higher theta/beta ratio at frontal and midline sites than controls",
+      detail: "Retrospective eyes-closed resting EEG (10 s) in 55 children and adolescents with ADHD vs 45 controls referred for headache, migraine or syncope. Only the ADHD subgroup with abnormal CPT-3 scores had a higher theta/beta ratio at Fz, Cz and frontal electrodes; the normal-CPT-3 subgroup matched controls. Correlations with CPT-3 and SNAP-IV were not significant and sensitivity was low.",
+      design: "Case-control (retrospective)",
+      cite: { authors: "Wang TS, Wang SS, Wang CL, Wong SB", year: 2024, title: "Theta/beta ratio in EEG correlated with attentional capacity assessed by Conners Continuous Performance Test in children with ADHD", journal: "Frontiers in Psychiatry" }
+    },
+    {
+      id: "cand-adhd-takacs-2023", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 132, k: null },
+      sites: ["Fz"], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["inattention"],
+      claim: "ADHD adolescents: lower resting frontal-midline alpha power than adolescents without ADHD",
+      detail: "Resting-state power in 132 age- and sex-matched adolescents with and without ADHD; frontal-midline alpha was lower in the ADHD group. Task-based event-related synchronisation and ERP results are not used here. Taken from the abstract; not checked in the full text. Frontal-midline is mapped to Fz; exact electrodes not checked.",
+      design: "Case-control",
+      cite: { authors: "Takács M, et al. (verify)", year: 2023, title: "Theta and alpha activity are differentially associated with physiological and rating scale measures of affective processing in adolescents with but not without ADHD", journal: "Development and Psychopathology" }
+    },
+    {
+      id: "pm-15978508", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: [], bands: ["theta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "ADHD adolescents: more resting theta, widespread in males and frontal in females",
+      detail: "Eyes-closed resting EEG with simultaneous skin conductance in 70 ADHD adolescents (48 males, 22 females) and age- and sex-matched controls. Males showed widespread theta increase; females showed a localised frontal theta enhancement, so the whole-head code is used. Taken from the abstract; not checked in the full text. Control group size is not stated, so n is null.",
+      design: "Case-control",
+      cite: { authors: "Hermens DF, et al.", year: 2005, title: "Sex differences in adolescent ADHD: findings from concurrent EEG and EDA", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-17166762", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 30, k: null },
+      sites: [], bands: ["theta","delta","alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", delta: "up", alpha: "mixed", beta: "mixed" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "ADHD adolescent males: more delta and theta across the scalp; higher theta/beta ratio than controls",
+      detail: "Eyes-closed resting EEG in 15 adolescent males with ADHD and 15 controls aged 14-17. Absolute delta and theta were higher across the scalp and the theta/beta ratio was higher. Alpha did not differ; relative beta was lower over posterior sites only. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Hobbs MJ, et al.", year: 2007, title: "EEG abnormalities in adolescent males with AD/HD", journal: "Clin Neurophysiol" }
     }
   ],
 
