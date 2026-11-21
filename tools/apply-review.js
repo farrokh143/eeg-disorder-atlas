@@ -21,6 +21,7 @@ const REASONS = {
   SL: "Sleep EEG, not resting wakefulness", RT: "Retracted publication",
   NODATA: "Full text checked: no resting band-power result with a direction that can be placed on the scalp",
   SOURCE: "Source-space only (e.g. LORETA regions) with no scalp-level result that maps to 10-20 sites",
+  NONBAND: "Measure is not band power (aperiodic exponent, burst or event statistics, synchronisation index, entropy); not placed in the atlas",
   REVIEW: "Review used for citation chasing only; not added as a finding"
 };
 const { header, rows } = readLog(); const byId = Object.fromEntries(rows.map(r => [r.id, r]));
