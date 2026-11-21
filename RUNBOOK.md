@@ -76,6 +76,12 @@ one band with a direction (higher or lower in the patient group than in controls
 - **Mixed groups** (e.g. AD plus another dementia, or ADHD plus autism): include only a result reported separately for
   the atlas condition against controls. If there is none, exclude with `X` and `"reason":"No separate result for <condition>"`.
 - The region table under "Field rules" applies to abstracts as well as full texts.
+- **Comparisons inside a patient group** (e.g. patients with vs without a symptom, or resting EEG correlated with a
+  symptom score) count, with no healthy control needed, when the symptom maps to one of the symptom ids below. Use that
+  symptom id and say "within <condition>" in the claim. If the symptom has no matching id (e.g. suicidality), exclude
+  with `X` and `"reason":"Within-group comparison on a symptom the atlas does not track"`.
+- **Sleep:** `SL` is only for results taken from sleep recordings. Waking resting EEG in people with sleep problems
+  (or recorded before or after sleep) qualifies like any other resting result.
 - Null results count: if a well-designed study found **no** difference, still include it, with `evidence: "contested"`
   and the bands it tested marked `"mixed"`; say "no difference" in the claim.
 
@@ -120,6 +126,9 @@ The note must start with one of these tags:
 ### pass: only for the 9 hand-picked `cand-*` rows that are still `to-review`
 
 `{"id":"cand-xyz","decision":"pass","note":"resting EEG, worth full-text review"}`, then review it in a later batch.
+These rows have no PMID. Find it with `lookup_article_by_citation` or `search_articles` using the title (and first
+author/year from the log), then fetch metadata and full text as usual. If you can't find the paper, defer with
+`[parked: no full text] PMID not found`.
 
 ## Field rules
 
@@ -152,7 +161,7 @@ anxiety `anxiety`; migraine `headache`; cognition `executive memory`.
 
 **design_level**: 5 meta-analysis; 4 randomised controlled trial; 3 controlled study or cohort/longitudinal;
 2 case-control (patients vs controls, one time point) or cross-sectional correlation; 1 uncontrolled, pilot, case series.
-**control** (treatment studies): `sham`, `active`, `usual` (waitlist/usual care), `none`; biomarker studies: `null`.
+**control** (treatment studies): `sham`, `active`, `usual` (waitlist/usual care), `none` (only when the paper says there was no control group); if the control arm isn't described, `null`. Biomarker studies: always `null`.
 **blinded**: `true`/`false` only if the paper says; else `null`.
 
 **evidence**: `strong` = meta-analysis with a consistent result; `moderate` = RCT, controlled or cohort study, or a
