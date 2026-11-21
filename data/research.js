@@ -1957,6 +1957,36 @@ window.NF_DATA = {
       detail: "39 unmedicated schizophrenic patients vs a normal control group (size not stated in the abstract), resting EEG. Frontally pronounced delta activity was increased in the patients. The 21 people with schizotypal personality did not show this increase. Taken from the abstract; not checked in the full text. Case-control design.",
       design: "Case-control",
       cite: { authors: "Wuebben Y, et al.", year: 2001, title: "Hypofrontality -- a risk-marker related to schizophrenia?", journal: "Schizophr Res" }
+    },
+    {
+      id: "pm-14595470", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 65, k: null },
+      sites: ["Fp2","F4","F8"], bands: ["delta","theta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up", theta: "up" }, symptoms: ["psychosis"],
+      claim: "Chronic medicated schizophrenia: more right frontal delta and theta source activity than controls",
+      detail: "25 chronic medicated patients vs 40 controls, resting 19-channel EEG. Source-localised (LORETA); mapped to the overlying scalp region. Excess delta plus theta over right middle and inferior frontal gyri; the anterior cingulate and insula findings are deep structures and are not mapped. Taken from the abstract; not checked in the full text. Small case-control study.",
+      design: "Case-control",
+      cite: { authors: "Veiga H, et al.", year: 2003, title: "Neurocortical electrical activity tomography in chronic schizophrenics", journal: "Arq Neuropsiquiatr" }
+    },
+    {
+      id: "pm-18381357", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["beta"], direction: "up", evidence: "preliminary",
+      changes: { beta: "up" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia: resting frontal beta higher than controls; delta and theta not mapped to regions",
+      detail: "Patients with schizophrenia compared with controls on resting EEG, with first-degree relatives also reported; only the patient beta result is used here. Excess high-frequency (beta) activity is reported over frontal regions; the delta and theta increases are not tied to named regions in the abstract, so they are not included. Taken from the abstract; not checked in the full text. Sample sizes are not stated in the abstract.",
+      design: "Case-control",
+      cite: { authors: "Venables NC, et al.", year: 2009, title: "Genetic and disorder-specific aspects of resting state EEG abnormalities in schizophrenia", journal: "Schizophr Bull" }
+    },
+    {
+      id: "pm-18636993", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 28, k: null },
+      sites: [], bands: ["alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { alpha: "mixed", beta: "down" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia: whole-head alpha and beta power lower; prefrontal alpha relatively higher than controls",
+      detail: "14 patients vs 14 matched controls, whole-head resting EEG. Absolute alpha and beta power were globally lower (mapped to whole-head); relative alpha was higher over prefrontal sites and lower over posterior sites, so alpha is marked mixed. Alpha effects were linked to PANSS symptoms and chronicity within patients. Taken from the abstract; not checked in the full text. Very small case-control study.",
+      design: "Case-control",
+      cite: { authors: "Knyazeva MG, et al.", year: 2008, title: "Alpha rhythm and hypofrontality in schizophrenia", journal: "Acta Psychiatr Scand" }
     }
   ],
 
