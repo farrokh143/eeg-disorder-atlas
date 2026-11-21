@@ -2647,6 +2647,36 @@ window.NF_DATA = {
       detail: "9 people with left temporal lobe epilepsy on anti-seizure medication and 15 healthy controls, eyes-closed and eyes-open resting EEG. Delta power was higher over the left temporal region and theta power higher in focal bilateral temporo-parietal regions. High-alpha (10 to 13 Hz) power was lower, mainly over parietal channels, in patients with eyes closed. Sites are the temporal and parietal regions named in the topography. Synchronisation and graph-theory results are not recorded here. Small single-centre case-control design.",
       design: "Case-control",
       cite: { authors: "Quraan MA, et al.", year: 2013, title: "Altered resting state brain dynamics in temporal lobe epilepsy can be observed in spectral power, functional connectivity and graph theory metrics", journal: "PLoS One" }
+    },
+    {
+      id: "pm-26509114", condition: "epilepsy", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 17, k: null },
+      sites: ["C4","T4"], bands: ["theta","alpha","beta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up", alpha: "up", beta: "up" }, symptoms: ["seizures"],
+      claim: "Benign epilepsy with centrotemporal spikes: higher right centrotemporal theta, alpha and beta power at rest",
+      detail: "Taken from the abstract; PMC full text exists but was not checked in this pass. 8 patients with benign epilepsy with centrotemporal spikes and 9 age-matched controls, eyes-closed resting high-density EEG with source analysis. Relative theta, alpha and beta power was higher over the right centrotemporal area. The same paper reports lower relative power in all bands over bilateral frontal and parieto-occipital areas; that decrease is not recorded here. The centrotemporal sites are given as C4 and T4 approximately; the exact electrodes were not verified. Cross-sectional case-control design.",
+      design: "Case-control",
+      cite: { authors: "Adebimpe A, et al.", year: 2015, title: "EEG resting state analysis of cortical sources in patients with benign epilepsy with centrotemporal spikes", journal: "Neuroimage Clin" }
+    },
+    {
+      id: "pm-30847365", condition: "epilepsy", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 102, k: null },
+      sites: ["Fz","O1","O2"], bands: ["alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { alpha: "mixed" }, symptoms: ["seizures"],
+      claim: "Epilepsy: alpha power shifted from high to low frequencies at rest, mainly in poorly controlled patients",
+      detail: "Taken from the abstract; PMC full text exists but was not checked in this pass. 63 patients with focal or idiopathic generalised epilepsy and 39 healthy controls, eyes-closed resting EEG free of interictal abnormality. Power shifted from high-alpha to low-alpha in patients (g = 0.78), most strongly in patients with poor seizure control, over midline frontal and bilateral occipital regions. Sites are the midline frontal and occipital regions as named in the abstract (Fz, O1, O2 approximately). Cross-sectional case-control design.",
+      design: "Case-control",
+      cite: { authors: "Abela E, et al.", year: 2019, title: "Slower alpha rhythm associates with poorer seizure control in epilepsy", journal: "Ann Clin Transl Neurol" }
+    },
+    {
+      id: "pm-31129368", condition: "epilepsy", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 16, k: null },
+      sites: ["C3","C4","T3","T4"], bands: ["theta","alpha"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up", alpha: "up" }, symptoms: ["seizures"],
+      claim: "Benign childhood epilepsy with centrotemporal spikes in remission: higher centrotemporal theta and alpha power",
+      detail: "Taken from the abstract; not checked in the full text. 16 patients in clinical seizure remission compared with non-epileptic age-matched controls (control count not stated). Absolute theta and alpha power were higher, mainly over centrotemporal electrodes; the authors read this as delayed cortical maturation. Eyes state is not stated in the abstract. Sites are the centrotemporal electrodes, given here as C3, C4, T3 and T4 approximately. Cross-sectional case-control design.",
+      design: "Case-control",
+      cite: { authors: "Siripornpanich V, et al.", year: 2019, title: "Delayed cortical maturation at the centrotemporal brain regions in patients with benign childhood epilepsy with centrotemporal spikes (BCECTS)", journal: "Epilepsy Res" }
     }
   ],
 
