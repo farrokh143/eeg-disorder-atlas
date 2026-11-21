@@ -3167,6 +3167,26 @@ window.NF_DATA = {
       detail: "Migraineurs (during the ictal phase) and healthy controls, resting qEEG. Relative theta rose and relative alpha fell in the patients; relative delta rose over frontocentral regions, more on the symptomatic side, and correlated with severity in 22 patients. The abstract names regions, not electrodes; the sites are an approximate regional mapping. Taken from the abstract; not checked in the full text. Small single-centre study.",
       design: "Case-control",
       cite: { authors: "Ojha P, et al.", year: 2024, title: "Resting-state Quantitative EEG Spectral Patterns in Migraine During Ictal Phase Reveal Deviant Brain Oscillations: Potential Role of Density Spectral Array", journal: "Clin EEG Neurosci" }
+    },
+    {
+      id: "pm-42166268", condition: "migraine", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 95, k: null },
+      sites: ["Fz","O1","O2"], bands: ["delta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "down", alpha: "up" }, symptoms: ["headache"],
+      claim: "Episodic migraine: frontal delta falls before an attack; occipital alpha rises during the attack",
+      detail: "95 episodic migraine patients without aura, paired interictal recordings with preictal (53 pairs) and ictal (17 pairs) recordings from a wireless three-electrode device, eyes-closed resting EEG. Frontal delta power was lower in the preictal phase than interictal; occipital alpha was higher in the ictal phase than interictal. The delta change is preictal and the alpha change ictal, so the two bands are recorded from different phases. Delta correlated with average headache intensity and alpha with current headache intensity. The abstract gives frontal and occipital regions, so Fz, O1 and O2 are approximate. Taken from the abstract; not checked in the full text. Within-patient longitudinal design; the controls are not used for the phase comparisons.",
+      design: "Within-patient paired EEG",
+      cite: { authors: "Ko LW, Diddi SVS, Wu WH, He C, Lai KL, Wang YF, Wang SJ", year: 2026, title: "Frontal Delta Decreasing and Occipital Ictal Alpha Increasing Associated With Migraine in Preictal and Ictal Phases", journal: "IEEE Trans Neural Syst Rehabil Eng" }
+    },
+    {
+      id: "pm-42349315", condition: "migraine", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 56, k: null },
+      sites: [], bands: ["delta","alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "down", alpha: "mixed", beta: "down" }, symptoms: ["headache"],
+      claim: "Chronic migraine: lower absolute delta, alpha and beta power than controls; relative alpha up, relative beta down",
+      detail: "28 chronic migraine patients and 28 controls, 64-electrode eyes-closed resting EEG. Absolute delta (low), high alpha and low beta power were lower across the scalp; relative low alpha was higher and relative high beta lower. Peak alpha frequency and infra-slow power did not differ. Alpha is recorded as mixed because absolute and relative power move in opposite directions. The headache-or-migraine factor did not change the power reductions. Taken from the abstract; not checked in the full text. Cross-sectional study.",
+      design: "Case-control",
+      cite: { authors: "Wong R, Robertson R, Meylakh N, et al.", year: 2026, title: "Reduced electroencephalogram power and no change in peak alpha frequency in individuals with chronic migraine: a cross-sectional investigation", journal: "Neurophysiol Clin" }
     }
   ],
 
