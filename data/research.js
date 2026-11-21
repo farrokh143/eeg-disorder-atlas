@@ -1247,6 +1247,46 @@ window.NF_DATA = {
       detail: "Resting EEG in 107 patients with major depressive disorder. Parietal-occipital alpha power (eyes open) was negatively associated with depression severity. The BDNF Val66Met genotype effect on global eyes-closed alpha is a genotype result and is not used here. Taken from the abstract; not checked in the full text. Cross-sectional association, not a diagnostic test.",
       design: "Cross-sectional correlation",
       cite: { authors: "Zoon HF, et al.", year: 2013, title: "EEG alpha power as an intermediate measure between brain-derived neurotrophic factor Val66Met and depression severity in patients with major depressive disorder", journal: "J Clin Neurophysiol" }
+    },
+    {
+      id: "pm-24467874", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 237, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
+      claim: "Non-melancholic MDD vs controls: relative left frontal activation (alpha asymmetry); melancholic MDD did not differ",
+      detail: "Eyes-closed resting EEG, 2 minutes, in 60 non-melancholic and 57 melancholic MDD patients and 120 healthy controls (237 in total). The non-melancholic group showed relative left frontal activation compared with controls and with the melancholic group; the melancholic group did not differ from controls. Effect size d = 0.30-0.34. Taken from the abstract; not checked in the full text. The melancholic null result is part of the same finding.",
+      design: "Case-control",
+      cite: { authors: "Quinn CR, et al.", year: 2014, title: "The impact of melancholia versus non-melancholia on resting-state, EEG alpha asymmetry: electrophysiological evidence for depression heterogeneity", journal: "Psychiatry Res" }
+    },
+    {
+      id: "pm-24630467", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 168, k: null },
+      sites: ["Fz"], bands: ["theta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up" }, symptoms: ["lowmood"],
+      claim: "Current MDD vs never-depressed: higher theta cordance at the most anterior midline site",
+      detail: "Resting awake qEEG in 121 people with a current major depressive episode and 47 never-depressed adults. Theta cordance (a power-derived measure) was higher at the most anterior midline electrode (Fpz), which is not a listed electrode, so the nearest listed site Fz is used. Other sites and power measures were not significant. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Cook IA, et al.", year: 2014, title: "Do prefrontal midline electrodes provide unique neurophysiologic information in Major Depressive Disorder?", journal: "J Psychiatr Res" }
+    },
+    {
+      id: "pm-25568149", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 40, k: null },
+      sites: ["C3","Cz","C4"], bands: ["theta","alpha","beta"], direction: "asymmetry", evidence: "preliminary",
+      changes: { theta: "asymmetry", alpha: "asymmetry", beta: "asymmetry" }, symptoms: ["lowmood"],
+      claim: "Depressed people with HIV: right-dominant central theta, alpha and beta asymmetry",
+      detail: "Resting EEG in 40 people living with HIV on antiretroviral treatment, compared with a normative healthy database. Depressed participants showed right-dominant asymmetries at central sites that remained significant after correction for theta, alpha and beta. The result is in HIV-positive people, so it is a mixed group; the rostral cingulate LORETA and frontal alpha results are not used. Taken from the abstract; not checked in the full text.",
+      design: "Cross-sectional comparison (normative database)",
+      cite: { authors: "Kremer H, et al.", year: 2016, title: "Interhemispheric Asymmetries and Theta Activity in the Rostral Anterior Cingulate Cortex as EEG Signature of HIV-Related Depression: Gender Matters", journal: "Clin EEG Neurosci" }
+    },
+    {
+      id: "pm-25600291", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 35, k: null },
+      sites: ["F3","F4"], bands: ["delta"], direction: "down", evidence: "preliminary",
+      changes: { delta: "down" }, symptoms: ["lowmood"],
+      claim: "History of depression: lower frontal delta at rest is linked to more psychological pain",
+      detail: "Eyes-closed resting frontal EEG (F3/F4) in 35 adults with a history of depression. Lower frontal delta power predicted more psychological pain while controlling for depressive symptoms. Frontal alpha asymmetry did not add to the models, and the fractal dimension asymmetry result is not used here. Taken from the abstract; not checked in the full text. Symptom correlation in a small sample.",
+      design: "Cross-sectional correlation",
+      cite: { authors: "Meerwijk EL, et al.", year: 2015, title: "Resting-state EEG delta power is associated with psychological pain in adults with a history of depression", journal: "Biol Psychol" }
     }
   ],
 
