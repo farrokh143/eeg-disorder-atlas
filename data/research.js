@@ -1947,6 +1947,26 @@ window.NF_DATA = {
       detail: "31 unmedicated adult ADHD outpatients, 15-minute eyes-closed resting EEG split by arousal stability. The stable group, which reported more depressive symptoms, had lower absolute delta and theta power at frontal, central, parietal and occipital sites; alpha and beta did not differ. No healthy control group; small sample.",
       design: "Within-group comparison (cross-sectional)",
       cite: { authors: "Huang J, et al.", year: 2019, title: "Brain arousal regulation and depressive symptomatology in adults with attention-deficit/hyperactivity disorder (ADHD)", journal: "BMC Neurosci" }
+    },
+    {
+      id: "pm-10466736", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 45, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P4","T6","O2"], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "down", alpha: "down", beta: "up" }, symptoms: ["psychosis"],
+      claim: "First-episode unmedicated schizophrenia: anterior delta up, frontal theta and alpha down, right posterior beta up",
+      detail: "9 acute, neuroleptic-naive first-episode patients vs 36 controls, 19-channel resting EEG. Source-localised (LORETA); mapped to the overlying scalp region. Anterior excess of delta; anterior-inferior deficit of theta and left-sided alpha; right posterior-superior excess of beta mapped to P4, T6 and O2. Taken from the abstract; not checked in the full text. Small case-control study.",
+      design: "Case-control",
+      cite: { authors: "Pascual-Marqui RD, et al.", year: 1999, title: "Low resolution brain electromagnetic tomography (LORETA) functional imaging in acute, neuroleptic-naive, first-episode, productive schizophrenia", journal: "Psychiatry Res" }
+    },
+    {
+      id: "pm-11295374", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["delta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up" }, symptoms: ["psychosis"],
+      claim: "Unmedicated schizophrenia vs controls: more frontally pronounced resting delta",
+      detail: "39 unmedicated schizophrenic patients vs a normal control group (size not stated in the abstract), resting EEG. Frontally pronounced delta activity was increased in the patients. The 21 people with schizotypal personality did not show this increase. Taken from the abstract; not checked in the full text. Case-control design.",
+      design: "Case-control",
+      cite: { authors: "Wuebben Y, et al.", year: 2001, title: "Hypofrontality -- a risk-marker related to schizophrenia?", journal: "Schizophr Res" }
     }
   ],
 
