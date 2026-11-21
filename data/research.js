@@ -1127,6 +1127,46 @@ window.NF_DATA = {
       detail: "Source-localised (LORETA); mapped to the overlying scalp region. Resting 36-channel EEG in 74 unmedicated MDD subjects and matched healthy controls (control number not stated in the abstract, so n is left blank). Current density was higher in delta, theta, alpha, beta1 and beta2 in prefrontal cortex; the anterior cingulate result is deep and is not used. Removing some prefrontal electrodes weakened the differences. Taken from the abstract; not checked in the full text.",
       design: "Case-control (source-level)",
       cite: { authors: "Korb AS, et al.", year: 2008, title: "Brain electrical source differences between depressed subjects and healthy controls", journal: "Brain Topogr" }
+    },
+    {
+      id: "pm-19952564", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: ["P3","Pz","P4","O1","O2"], bands: ["theta","alpha","beta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up", alpha: "up", beta: "up" }, symptoms: ["lowmood"],
+      claim: "Early-stage depression vs healthy: higher parietal-occipital theta, alpha and beta power at rest",
+      detail: "Resting EEG with eyes closed and eyes open in early-stage depressed patients and age-matched healthy controls. Theta, alpha and beta power were higher at parietal and occipital sites in both eye conditions. The authors read the slow-wave increase as reduced cortical activation. Control numbers are not stated in the abstract, so n is left blank. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Grin-Yatsenko VA, et al.", year: 2009, title: "EEG power spectra at early stages of depressive disorders", journal: "J Clin Neurophysiol" }
+    },
+    {
+      id: "pm-20006545", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 637, k: null },
+      sites: ["P3","Pz","P4","O1","O2"], bands: ["theta","alpha","beta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up", alpha: "up", beta: "up" }, symptoms: ["lowmood"],
+      claim: "Early-stage depression vs controls: higher theta and alpha at parietal-occipital sites; diffuse beta",
+      detail: "Source-localised (ICA with sLORETA); mapped to the overlying scalp region. Resting EEG in 111 adults in early depression and 526 non-depressed subjects, with eyes closed and open. Theta and alpha were higher at parietal and occipital sites, and beta was diffusely higher. Taken from the abstract; not checked in the full text. Large sample, but the contrast is with non-depressed subjects, not a clinical diagnosis.",
+      design: "Case-control (source-level, ICA)",
+      cite: { authors: "Grin-Yatsenko VA, et al.", year: 2010, title: "Independent component approach to the analysis of EEG recordings at early stages of depressive disorders", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-20525011", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 306, k: null },
+      sites: ["P3","Pz","P4"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
+      claim: "Past-MDD women: relatively less right parietal activity than current MDD and non-MDD women",
+      detail: "Resting parietal EEG asymmetry in 306 young adults (31% male), 143 with and 163 without lifetime MDD and no comorbid anxiety disorder. The asymmetry result is for women with past MDD against current MDD and non-MDD women; male results and the caffeine moderation are not used here. Taken from the abstract; not checked in the full text. Same sample as the frontal-asymmetry paper in this review.",
+      design: "Cross-sectional group comparison",
+      cite: { authors: "Stewart JL, et al.", year: 2011, title: "The oft-neglected role of parietal EEG asymmetry and risk for major depressive disorder", journal: "Psychophysiology" }
+    },
+    {
+      id: "pm-20677839", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 306, k: null },
+      sites: ["Fp1","F7","F3"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
+      claim: "Lifetime MDD (both sexes): relatively less left frontal activity at rest, with current source density reference",
+      detail: "Resting frontal EEG asymmetry at four sessions in 306 young adults, 143 with and 163 without lifetime MDD. With the current source density reference, lifetime MDD was linked to relatively less left frontal activity in both sexes, not explained by current status. Average and linked-mastoid references gave less consistent results, so only the CSD result is used. Taken from the abstract; not checked in the full text. Same sample as the parietal-asymmetry paper in this review.",
+      design: "Cross-sectional group comparison",
+      cite: { authors: "Stewart JL, et al.", year: 2010, title: "Resting frontal EEG asymmetry as an endophenotype for depression risk: sex-specific patterns of frontal brain asymmetry", journal: "J Abnorm Psychol" }
     }
   ],
 
