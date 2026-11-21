@@ -2427,6 +2427,16 @@ window.NF_DATA = {
       detail: "45 people with GAD vs 36 healthy controls, 10 min eyes-closed resting EEG on 16 channels. Relative alpha1 power was lower in frontal, temporal and central sites; relative beta was higher, mostly frontal and temporal. Fuzzy entropy and connectivity results, and the classifier accuracy, were not used for this entry. Case-control design with a small sample.",
       design: "Case-control",
       cite: { authors: "Shen Z, et al.", year: 2022, title: "Aberrated Multidimensional EEG Characteristics in Patients with Generalized Anxiety Disorder: A Machine-Learning Based Analysis Framework", journal: "Sensors (Basel)" }
+    },
+    {
+      id: "pm-40102367", condition: "anxiety", type: "protocol",
+      metrics: { design: 4, control: "sham", blinded: true, n: 60, k: null },
+      sites: [], bands: ["delta"], direction: "down", evidence: "contested",
+      changes: { delta: "down" }, symptoms: ["anxiety","lowmood"],
+      claim: "Infraslow neurofeedback in women with anxiety or depression: no benefit beyond sham",
+      detail: "60 adult women with internalising disorders in a double-blind, sham-controlled pilot RCT, 6 sessions of infraslow neurofeedback. Slow and delta source activity fell at the targeted posterior cingulate in one active arm relative to sham (source-localised, LORETA-KEY), but HADS scores improved similarly in all arms, so there was no specific effect. The target is a deep structure, so sites are []; the anterior cingulate and connectivity results were not used.",
+      design: "RCT (sham-controlled)",
+      cite: { authors: "Perez TM, et al.", year: 2025, title: "Infraslow Closed-Loop Brain Training for Anxiety and Depression (ISAD): A pilot randomised, sham-controlled trial in adult females with internalizing disorders", journal: "Cogn Affect Behav Neurosci" }
     }
   ],
 
