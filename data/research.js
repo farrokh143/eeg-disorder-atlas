@@ -1167,6 +1167,46 @@ window.NF_DATA = {
       detail: "Resting frontal EEG asymmetry at four sessions in 306 young adults, 143 with and 163 without lifetime MDD. With the current source density reference, lifetime MDD was linked to relatively less left frontal activity in both sexes, not explained by current status. Average and linked-mastoid references gave less consistent results, so only the CSD result is used. Taken from the abstract; not checked in the full text. Same sample as the parietal-asymmetry paper in this review.",
       design: "Cross-sectional group comparison",
       cite: { authors: "Stewart JL, et al.", year: 2010, title: "Resting frontal EEG asymmetry as an endophenotype for depression risk: sex-specific patterns of frontal brain asymmetry", journal: "J Abnorm Psychol" }
+    },
+    {
+      id: "pm-20708650", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 44, k: null },
+      sites: [], bands: ["alpha"], direction: "up", evidence: "preliminary",
+      changes: { alpha: "up" }, symptoms: ["lowmood"],
+      claim: "MDD vs controls at rest: globally higher alpha power, with less left-frontal activity",
+      detail: "Resting eyes-closed EEG in 15 MDD patients, 14 PTSD patients and 15 healthy controls. Alpha power was globally higher in MDD, so a whole-head entry is used; left-frontal activity was reduced in MDD, as the abstract reports. The PTSD comparison and the PTSD right-parietotemporal result are not used here. Taken from the abstract; not checked in the full text.",
+      design: "Case-control (three groups)",
+      cite: { authors: "Kemp AH, et al.", year: 2010, title: "Disorder specificity despite comorbidity: resting EEG alpha asymmetry in major depressive disorder and post-traumatic stress disorder", journal: "Biol Psychol" }
+    },
+    {
+      id: "pm-21309442", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 34, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "ratio", evidence: "contested",
+      changes: { alpha: "mixed" }, symptoms: ["lowmood"],
+      claim: "MDD vs controls: no difference in anterior alpha asymmetry, at individual or fixed alpha bands",
+      detail: "Resting EEG in 16 MDD and 18 healthy women, tested at broad individualised, sub-band and fixed 8-13 Hz alpha bands with two reference schemes. No significant difference in lateralised alpha was found in any band. Within the MDD group, antidepressant use was linked to right-greater lower-alpha1 power; that result is not used here. Taken from the abstract; not checked in the full text. Small sample.",
+      design: "Controlled study (null result)",
+      cite: { authors: "Segrave RA, et al.", year: 2011, title: "Individualized alpha activity and frontal asymmetry in major depression", journal: "Clin EEG Neurosci" }
+    },
+    {
+      id: "pm-21381804", condition: "depression", type: "biomarker",
+      metrics: { design: 3, control: null, blinded: null, n: null, k: null },
+      sites: ["Fp1","F7","F3"], bands: ["alpha"], direction: "asymmetry", evidence: "moderate",
+      changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
+      claim: "Non-depressed people: less left frontal activity at rest predicts a first depressive episode",
+      detail: "Baseline resting frontal EEG in people with no current or prior depression, followed prospectively for about 3 years with diagnostic interviews. Decreased relative left frontal activity at baseline, and cognitive vulnerability, each predicted a first depressive episode; they shared predictive variance. The abstract does not give the sample size, so n is left blank. Taken from the abstract; not checked in the full text. Prospective risk marker, not a diagnostic test.",
+      design: "Prospective cohort",
+      cite: { authors: "Nusslock R, et al.", year: 2011, title: "Cognitive vulnerability and frontal brain asymmetry: common predictors of first prospective depressive episode", journal: "J Abnorm Psychol" }
+    },
+    {
+      id: "pm-21500316", condition: "depression", type: "biomarker",
+      metrics: { design: 3, control: null, blinded: null, n: 75, k: null },
+      sites: ["P3","Pz","P4"], bands: ["alpha"], direction: "asymmetry", evidence: "moderate",
+      changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
+      claim: "High-risk for depression vs low-risk: greater parietal alpha asymmetry, less right parietal activity, eyes closed",
+      detail: "Eyes-closed resting EEG in 75 people from a multigenerational study: 37 high-risk (descendants of probands with major depression) and 38 low-risk; MRI about 5 years later. The high-risk group had greater alpha asymmetry with relatively less right parietal activity. The alpha-to-cortical-thickness correlation is not used here. Taken from the abstract; not checked in the full text. Risk groups, not patients.",
+      design: "Cohort (high-risk vs low-risk)",
+      cite: { authors: "Bruder GE, et al.", year: 2012, title: "Relationship of resting EEG with anatomical MRI measures in individuals at high and low risk for depression", journal: "Hum Brain Mapp" }
     }
   ],
 
