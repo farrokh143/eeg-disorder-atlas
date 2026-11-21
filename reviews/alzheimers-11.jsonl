@@ -1,0 +1,10 @@
+{"id":"pm-34233212","decision":"defer","note":"No PMC full text; main subject is Parkinson's disease (resting power, alpha reactivity); MCI result is a correlation with cholinergic volume; leave for the Parkinson's run"}
+{"id":"pm-34284236","decision":"defer","note":"No PMC full text; early-onset AD shows slow up and fast down vs controls, but the abstract gives no scalp sites for the band result (frontal alpha/theta is the classifier)"}
+{"id":"pm-34334389","decision":"defer","note":"PMC full text exists but not read; CSF neurogranin and global theta power predict progression in MCI; direction and sites not stated in the abstract"}
+{"id":"pm-34550020","decision":"exclude","code":"INV","note":"Intracranial recordings from implanted electrodes in children with focal epilepsy"}
+{"id":"pm-34613369","decision":"defer","note":"No PMC full text; eLORETA alpha sources by sex within ADMCI and Nold; sex effects rather than disease vs controls; source-level"}
+{"id":"pm-34649497","decision":"defer","note":"condition not in atlas: Down syndrome adults vs typically developing controls (no dementia); scalp frontal and occipital results"}
+{"id":"pm-34806601","decision":"exclude","code":"CN","note":"Main resting result is frontal-parietal theta functional connectivity (connectivity), with TMS-evoked potentials"}
+{"id":"pm-34919638","decision":"exclude","code":"MEG","note":"Resting magnetoencephalography source-space coherence, not EEG"}
+{"id":"pm-35213376","decision":"exclude","code":"CN","note":"Main resting result is gamma functional connectivity; P300 is an evoked response; population is age-related vestibular loss"}
+{"id":"pm-35342003","decision":"defer","note":"condition not in atlas: early protein energy malnutrition; eLORETA source developmental trajectories"}
