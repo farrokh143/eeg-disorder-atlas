@@ -1687,6 +1687,36 @@ window.NF_DATA = {
       detail: "Eyes-closed vs eyes-open absolute alpha in 38 children with ADHD and 38 sex- and age-matched controls. Alpha fell on opening the eyes in both groups, but the reactivity index was greater in frontal regions of the ADHD group. Taken from the abstract; not checked in the full text. Individual electrodes are not named, so frontal sites are used.",
       design: "Case-control",
       cite: { authors: "Fonseca LC, et al.", year: 2013, title: "Electroencephalographic alpha reactivity on opening the eyes in children with attention-deficit hyperactivity disorder", journal: "Clin EEG Neurosci" }
+    },
+    {
+      id: "pm-23619205", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 171, k: null },
+      sites: [], bands: ["theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", alpha: "down", beta: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "ADHD boys with excess theta: more frontal theta and theta/beta ratio, less alpha and beta across the scalp than controls",
+      detail: "Resting eyes-closed EEG in 104 boys with ADHD (combined or inattentive type) and 67 age-matched controls. The typical excess-theta subgroup had higher frontal theta and theta/beta ratio and lower alpha and beta across the scalp. The separate excess-beta subgroup (different pattern) is not included in this entry. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Clarke AR, et al.", year: 2013, title: "Excess beta activity in the EEG of children with attention-deficit/hyperactivity disorder: a disorder of arousal?", journal: "Int J Psychophysiol" }
+    },
+    {
+      id: "pm-24125854", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 80, k: null },
+      sites: [], bands: ["delta","beta","gamma"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", beta: "down", gamma: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "ADHD girls: globally higher relative delta and lower absolute beta and gamma than controls",
+      detail: "Eyes-closed resting EEG from 19 electrodes in 40 girls with ADHD and 40 girl controls. Relative delta was globally higher, and absolute beta and absolute and relative gamma were globally lower. Taken from the abstract; not checked in the full text. Symptom correlations within the groups are not used here.",
+      design: "Case-control",
+      cite: { authors: "Dupuy FE, et al.", year: 2014, title: "EEG and electrodermal activity in girls with Attention-Deficit/Hyperactivity Disorder", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-25097090", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 52, k: null },
+      sites: ["Fp2","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "Within adult ADHD: more ADHD symptoms linked to stronger right-frontal alpha (approach-related asymmetry)",
+      detail: "Two resting eyes-closed EEG sessions in 52 adults with ADHD; asymmetry was averaged across sessions. ADHD symptom scores were associated with stronger relative right-frontal alpha power, a within-group correlation with no healthy control needed. Taken from the abstract; not checked in the full text. The asymmetry was more pronounced in females, and its link with depression was mediated by ADHD symptoms.",
+      design: "Cross-sectional correlation",
+      cite: { authors: "Keune PM, et al.", year: 2015, title: "Frontal brain asymmetry in adult attention-deficit/hyperactivity disorder (ADHD): extending the motivational dysfunction hypothesis", journal: "Clin Neurophysiol" }
     }
   ],
 
