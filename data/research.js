@@ -707,6 +707,16 @@ window.NF_DATA = {
       detail: "30 people with amnestic MCI and 23 matched controls, resting-state qEEG. Global relative beta was lower, and global relative theta and delta higher, in the MCI group. The coherence result in a right centroparietal area is a connectivity finding and is not used here. Taken from the abstract; not checked in the full text. Small single-centre case-control study.",
       design: "Case-control",
       cite: { authors: "Zawiślak-Fornagiel K, et al.", year: 2024, title: "Quantitative EEG Spectral and Connectivity Analysis for Cognitive Decline in Amnestic Mild Cognitive Impairment", journal: "J Alzheimers Dis" }
+    },
+    {
+      id: "pm-38969018", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 68, k: null },
+      sites: ["P3","Pz","P4","T5","T6","O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["memory"],
+      claim: "Subjective memory complaints: alpha3 power lower than controls over posterior sites, mainly in women",
+      detail: "68 older people with and without subjective memory complaints, eyes-closed resting EEG. Alpha3 power was lower in the complaint group, and the reduction was significant in women only. Individual alpha peak and transition frequency did not differ. Taken from the abstract; not checked in the full text. Sites are the posterior electrodes the abstract describes, not individually named there.",
+      design: "Case-control (cross-sectional)",
+      cite: { authors: "Perez V, et al.", year: 2024, title: "Individual posterior alpha rhythms and cognitive reserve as possible early prognostic markers in people with subjective memory complaints", journal: "Behav Brain Res" }
     }
   ],
 
