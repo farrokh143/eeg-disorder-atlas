@@ -1547,6 +1547,26 @@ window.NF_DATA = {
       detail: "Eyes-closed resting EEG in 27 medicated patients with melancholic depression, 21 remitted patients on maintenance antidepressants, and 17 controls. Beta-2 (20-40 Hz) power was higher in both patient groups than in controls over the bilateral frontal sites. Taken from the abstract; not checked in the full text. Medication may affect the results; the paper is in Japanese with an English abstract.",
       design: "Case-control",
       cite: { authors: "Suzuki H, et al.", year: 1996, title: "[Quantitative EEG characteristics of the state of depressive phase and the state of remission in major depression]", journal: "Seishin Shinkeigaku Zasshi" }
+    },
+    {
+      id: "cand-adhd-theta-cog-2005", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: ["Fp1","F7","F3"], bands: ["theta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up" }, symptoms: ["inattention"],
+      claim: "ADHD: more resting theta over left frontal sites than controls, linked to attention test accuracy",
+      detail: "Resting theta in children and adolescents with ADHD vs sex- and age-matched controls; frontal (primarily left) theta was higher and related to oddball accuracy. Taken from the abstract; not checked in the full text. Total group sizes are not stated in the abstract, so n is null.",
+      design: "Case-control",
+      cite: { authors: "Hermens DF, et al.", year: 2005, title: "Resting EEG theta activity predicts cognitive performance in attention-deficit hyperactivity disorder", journal: "Pediatr Neurol" }
+    },
+    {
+      id: "pm-12374635", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4","T5","T6","O1","O2"], bands: ["theta","alpha","delta","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", alpha: "down", delta: "up", beta: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "ADHD combined type: more theta; less posterior alpha and frontal beta than controls",
+      detail: "Eyes-closed resting EEG in 20 boys with ADHD, 20 boys with ADHD plus ODD and 20 controls. Theta was higher in both ADHD groups, posterior alpha and frontal beta were lower, and posterior delta was higher. Taken from the abstract; not checked in the full text. Sites are the frontal and posterior regions named in the abstract, and the ODD comparison is not separated here.",
+      design: "Case-control",
+      cite: { authors: "Clarke AR, et al.", year: 2002, title: "Children with attention-deficit/hyperactivity disorder and comorbid oppositional defiant disorder: an EEG analysis", journal: "Psychiatry Res" }
     }
   ],
 
