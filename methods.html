@@ -112,11 +112,12 @@ html.locked .gate { display: grid; }
   <div class="flow" id="flow">
     <div class="stat"><b id="nAll">–</b><span>papers recorded</span></div>
     <div class="stat inc"><b id="nInc">–</b><span>included in the atlas</span></div>
-    <div class="stat rev"><b id="nRev">–</b><span>waiting for full-text review</span></div>
+    <div class="stat rev"><b id="nFull">–</b><span>passed screening, waiting for full text</span></div>
+    <div class="stat rev"><b id="nRev">–</b><span>waiting for title and abstract screening</span></div>
     <div class="stat exc"><b id="nExc">–</b><span>excluded, with reasons</span></div>
   </div>
-  <div class="scroll"><table id="coverage" aria-label="Coverage by disorder"><thead><tr><th>Disorder</th><th>Resting EEG markers</th><th>Treatment studies</th><th>To review</th></tr></thead><tbody><tr><td colspan="4" class="note">Loading…</td></tr></tbody></table></div>
-  <p class="note">Search run 2 (21 Nov 2026) searched PubMed for all 13 disorders: 2,110 unique papers, now waiting for title and abstract screening. Embase, Web of Science and PsycINFO have not been searched yet, so coverage is not complete.</p>
+  <div class="scroll"><table id="coverage" aria-label="Coverage by disorder"><thead><tr><th>Disorder</th><th>Resting EEG markers</th><th>Treatment studies</th><th>Full text</th><th>To screen</th></tr></thead><tbody><tr><td colspan="5" class="note">Loading…</td></tr></tbody></table></div>
+  <p class="note">Search run 2 (21 Nov 2026) searched PubMed for all 13 disorders: 2,110 unique papers, title and abstract screening started on 21 Nov 2026 (anxiety, PTSD and epilepsy done first). Embase, Web of Science and PsycINFO have not been searched yet, so coverage is not complete.</p>
 
   <h2 id="question">The question</h2>
   <p>For each disorder and each of its core symptoms: <strong>which resting-state EEG band-power differences have been reported, at which scalp sites, in which direction, and how confident can we be?</strong> As a second question: which EEG feedback (neurofeedback) treatments target those patterns, and how well did they hold up?</p>
@@ -275,14 +276,15 @@ AND humans[MeSH] AND [disorder MeSH term]</pre>
     document.getElementById("nAll").textContent = L.length;
     document.getElementById("nInc").textContent = by("included").length;
     document.getElementById("nRev").textContent = by("to-review").length;
+    document.getElementById("nFull").textContent = by("full-text").length;
     document.getElementById("nExc").textContent = by("excluded").length;
     const ds = [...new Set(L.map(x => x.disorder).filter(Boolean))].sort();
     const cnt = (d, f) => L.filter(x => x.disorder === d && f(x)).length;
     document.querySelector("#coverage tbody").innerHTML = ds.map(d => {
-      const m = cnt(d, x => x.status === "included" && x.type === "eeg-marker"), tr = cnt(d, x => x.status === "included" && x.type === "treatment"), rv = cnt(d, x => x.status === "to-review");
-      return `<tr><td>${esc(d)}</td><td class="n"${m ? "" : ' style="color:var(--ev-contested)"'}>${m || "none yet"}</td><td class="n">${tr}</td><td class="n">${rv}</td></tr>`;
+      const m = cnt(d, x => x.status === "included" && x.type === "eeg-marker"), tr = cnt(d, x => x.status === "included" && x.type === "treatment"), rv = cnt(d, x => x.status === "to-review"), ft = cnt(d, x => x.status === "full-text");
+      return `<tr><td>${esc(d)}</td><td class="n"${m ? "" : ' style="color:var(--ev-contested)"'}>${m || "none yet"}</td><td class="n">${tr}</td><td class="n">${ft}</td><td class="n">${rv}</td></tr>`;
     }).join("");
-  }).catch(() => { document.querySelector("#coverage tbody").innerHTML = `<tr><td colspan="4" class="note">Live counts appear when the page is opened from the website. See research-log.csv on GitHub.</td></tr>`; });
+  }).catch(() => { document.querySelector("#coverage tbody").innerHTML = `<tr><td colspan="5" class="note">Live counts appear when the page is opened from the website. See research-log.csv on GitHub.</td></tr>`; });
 }
 </script>
 </body>
