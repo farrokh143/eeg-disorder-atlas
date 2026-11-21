@@ -1607,6 +1607,36 @@ window.NF_DATA = {
       detail: "Eyes-closed resting EEG in 15 adolescent males with ADHD and 15 controls aged 14-17. Absolute delta and theta were higher across the scalp and the theta/beta ratio was higher. Alpha did not differ; relative beta was lower over posterior sites only. Taken from the abstract; not checked in the full text.",
       design: "Case-control",
       cite: { authors: "Hobbs MJ, et al.", year: 2007, title: "EEG abnormalities in adolescent males with AD/HD", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-18662727", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: [], bands: ["delta","theta","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "down", theta: "up", beta: "mixed" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "ADHD adults: less absolute delta and more relative theta across the scalp than controls",
+      detail: "Eyes-closed resting EEG in 20 adult males with ADHD and age- and gender-matched controls (control size not stated, so n is null). Absolute delta was lower and relative theta higher across the entire scalp; absolute beta was lower at the midline and higher over right posterior sites, so beta is mixed. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Clarke AR, et al.", year: 2008, title: "EEG in adults with attention-deficit/hyperactivity disorder", journal: "Int J Psychophysiol" }
+    },
+    {
+      id: "pm-18813700", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
+      sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "down", beta: "mixed" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "ADHD children: more diffuse delta and theta; less relative alpha1 at some sites than controls",
+      detail: "Eyes-closed resting EEG from 15 sites in 30 children with ADHD and 30 sex- and age-matched controls. Absolute delta and theta were higher in a diffuse pattern; relative alpha1 was lower and absolute beta higher at some electrodes, which are not named in the abstract. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Fonseca LC, et al.", year: 2008, title: "Epileptiform abnormalities and quantitative EEG in children with attention-deficit/hyperactivity disorder", journal: "Arq Neuropsiquiatr" }
+    },
+    {
+      id: "pm-19712709", condition: "adhd", type: "protocol",
+      metrics: { design: 4, control: "active", blinded: null, n: 72, k: null },
+      sites: ["Pz","Cz"], bands: ["theta","alpha"], direction: "ratio", evidence: "moderate",
+      changes: { theta: "down", alpha: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "ADHD children, neurofeedback RCT: theta down and central alpha up vs active control training",
+      detail: "Randomised trial in 72 children with ADHD (46 neurofeedback, 26 active computerised attention control) analysed for resting EEG; 102 were initially enrolled. Combined training reduced theta; the theta/beta block lowered posterior-midline theta and the SCP block raised central-midline alpha, with changes linked to German ADHD rating scale scores. Taken from the abstract; not checked in the full text.",
+      design: "RCT (active-controlled)",
+      cite: { authors: "Gevensleben H, et al.", year: 2009, title: "Distinct EEG effects related to neurofeedback training in children with ADHD: a randomized controlled trial", journal: "Int J Psychophysiol" }
     }
   ],
 
