@@ -1899,16 +1899,6 @@ window.NF_DATA = {
       cite: { authors: "Enriquez-Geppert S, et al.", year: 2025, title: "Theta/Beta Ratio Neurofeedback Effects on Resting and Task-Related Theta Activity in Children with ADHD", journal: "Appl Psychophysiol Biofeedback" }
     },
     {
-      id: "pm-41569061", condition: "adhd", type: "biomarker",
-      metrics: { design: 1, control: null, blinded: null, n: 1, k: null },
-      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","C3","Cz","C4"], bands: ["theta"], direction: "up", evidence: "preliminary",
-      changes: { theta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
-      claim: "Single adult with suspected ADHD: resting relative theta in frontal and central regions was high",
-      detail: "One 31-year-old woman with suspected ADHD, eight-channel eyes-open and eyes-closed resting QEEG. Relative theta power was in excess over frontal and central regions and the theta/beta ratio was above 1.5 at frontal leads. Taken from the abstract; not checked in the full text. Single case report with no control group.",
-      design: "Case report",
-      cite: { authors: "Kopanska M, et al.", year: 2025, title: "Sensing brainwave dynamics in masked attention-deficit/hyper activity disorder: A quantitative electroencephalography-based approach to quantifying electrophysiological biomarkers in a high-functioning adult", journal: "J Physiol Pharmacol" }
-    },
-    {
       id: "pm-42347931", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 2284, k: null },
       sites: [], bands: ["delta","theta","beta"], direction: "up", evidence: "preliminary",
