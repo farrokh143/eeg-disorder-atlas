@@ -1,0 +1,10 @@
+{"id":"pm-15961323","decision":"exclude","code":"MEG","note":"MEG recording with source modelling; not EEG"}
+{"id":"pm-16213753","decision":"exclude","code":"X","reason":"Genotype (CST3 B) comparison within AD/MCI patients; no patients-vs-controls or symptom result; LORETA sources"}
+{"id":"pm-16358334","decision":"exclude","code":"X","reason":"ApoE e4 comparison within MCI/AD patients; no patients-vs-controls or symptom result; LORETA sources"}
+{"id":"pm-16377238","decision":"defer","note":"No PMC full text; LORETA macroregion sources, abstract gives intermediate magnitude in MCI but no clear band direction vs controls"}
+{"id":"pm-16510944","decision":"defer","note":"No PMC full text; abstract gives slow-up/fast-down spectrum in AD but no scalp sites and non-standard band edges (<2 Hz, >8 Hz)"}
+{"id":"pm-16564740","decision":"exclude","code":"X","reason":"Correlation of frontal delta sources with lobar brain volume; no patients-vs-controls band difference or symptom link"}
+{"id":"pm-16854500","decision":"exclude","code":"NODATA","note":"Eyes-open alpha reactivity linked to cognition; no band direction vs controls and no scalp site"}
+{"id":"pm-1689638","decision":"defer","note":"No PMC full text; abstract gives delta/theta up and alpha/beta down in SDAT on an occipital-vertex derivation; 10-20 mapping uncertain"}
+{"id":"pm-17070733","decision":"defer","note":"No PMC full text; 19-channel resting EEG, delta/theta up and alpha2/beta down, but abstract gives no scalp sites for the group effect"}
+{"id":"pm-17170472","decision":"defer","note":"No PMC full text; abstract reports early-stage slowing without bands or sites; complexity is the main result"}
