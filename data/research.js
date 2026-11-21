@@ -2807,6 +2807,26 @@ window.NF_DATA = {
       detail: "307 alcohol-dependent people and 307 age- and sex-matched controls, eyes-closed resting EEG. Absolute theta (3-7 Hz) power was higher at all scalp locations; the increase was strongest centrally and parietally in men and parietally in women. Taken from the abstract; not checked in the full text. Case-control study; craving is the core symptom, not directly measured.",
       design: "Case-control",
       cite: { authors: "Rangaswamy M, et al.", year: 2003, title: "Theta power in the EEG of alcoholics", journal: "Alcohol Clin Exp Res" }
+    },
+    {
+      id: "pm-16179502", condition: "sud", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 48, k: null },
+      sites: ["C3","Cz","C4"], bands: ["delta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up" }, symptoms: ["craving"],
+      claim: "MDMA abusers: higher central delta power than controls (eyes closed)",
+      detail: "8 MDMA abusers, 8 MDMA and marijuana abusers, 15 marijuana abusers and 17 controls, 16-electrode eyes-closed resting EEG. Absolute delta power at central electrode sites was higher in the MDMA abusers than in the other groups. The abstract names no individual electrodes, so C3, Cz and C4 are the central sites; check the full text before relying on them. Alpha-2 power rose only in marijuana abusers and is not recorded here. Taken from the abstract; not checked in the full text. Small cross-sectional study with mixed drug histories.",
+      design: "Case-control",
+      cite: { authors: "Herning RI, et al.", year: 2005, title: "Neuropsychiatric alterations in MDMA users: preliminary findings", journal: "Ann N Y Acad Sci" }
+    },
+    {
+      id: "pm-18974851", condition: "sud", type: "biomarker",
+      metrics: { design: 3, control: null, blinded: null, n: 364, k: null },
+      sites: ["Fz"], bands: ["theta","alpha","beta"], direction: "ratio", evidence: "contested",
+      changes: { theta: "down", alpha: "mixed", beta: "mixed" }, symptoms: ["craving"],
+      claim: "Alcohol use disorder: no alpha or beta link; theta lower at Fz only in alcoholics without anxiety",
+      detail: "364 Plains American Indians (resting eyes-closed EEG at Fz, Pz, P3, P4, O1 and O2). The main analysis found no relationship between alpha or beta power and alcohol use disorder. Theta power at Fz was lower in alcoholics than non-alcoholics only in the subgroup without anxiety disorders (p = 0.03), a post hoc subgroup result. The paper's main aim is genetic linkage of EEG power, so the EEG group comparison is secondary. Cross-sectional, no blinding or sham control. Craving is not measured; the symptom tag is provisional.",
+      design: "Cross-sectional cohort",
+      cite: { authors: "Enoch MA, et al.", year: 2008, title: "Common genetic origins for EEG, alcoholism and anxiety: the role of CRH-BP", journal: "PLoS One" }
     }
   ],
 
