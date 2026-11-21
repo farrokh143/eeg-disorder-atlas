@@ -43,11 +43,15 @@ included as a secondary filter; EEG markers are the main focus.
 - `tools/queries.js`: the PubMed searches for each disorder (single source for bulk pulls).
 - `tools/import-pubmed.js`: imports a PubMed CSV export into the research log as `to-review`, skipping duplicates.
 - `tools/import-pmids.js`: imports a list of PubMed IDs (e.g. from the PubMed connector) as `to-review`; titles are fetched at screening.
+- `RUNBOOK.md`: step-by-step full-text review job (written so a cheaper model such as Haiku can run it unattended).
+- `tools/review-queue.js`, `tools/fulltext-snippets.js`, `tools/apply-review.js`, `tools/validate-data.js`: the review kit used by the runbook. Always add findings through `apply-review.js`, never by hand.
 - `tools/pull-pubmed.js`: pulls every search in `queries.js` straight from the PubMed API and imports it (needs network access to eutils.ncbi.nlm.nih.gov).
 
 GitHub is the database: all research data and decisions live in these files and their commit history.
 
 ## Adding or editing research
+
+For full-text review of papers marked `full-text` in the log, follow `RUNBOOK.md`.
 
 Add entries to `findings` in `data/research.js`:
 
