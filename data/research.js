@@ -2317,6 +2317,26 @@ window.NF_DATA = {
       detail: "13 patients with schizophrenia and 9 age-matched controls, awake eyes-closed resting EEG. Relative alpha frequency activity was higher over frontal regions in patients. Very small study. Taken from the abstract; not checked in the full text.",
       design: "Case-control",
       cite: { authors: "Kahn EM, Weiner RD, et al.", year: 1993, title: "Spectral and topographic analysis of EEG in schizophrenic patients", journal: "Biol Psychiatry" }
+    },
+    {
+      id: "pm-25587799", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 48, k: null },
+      sites: ["T3","T4","T5","T6"], bands: ["gamma"], direction: "ratio", evidence: "contested",
+      changes: { gamma: "mixed" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia: resting gamma (30-100 Hz) in auditory cortex does not differ from controls",
+      detail: "24 patients with chronic schizophrenia and 24 matched controls; resting-state recording in 18 per group. Source-localised (dipole source localisation); mapped to the overlying scalp region (auditory cortex, temporal). No difference in resting gamma power; the positive gamma increase was during auditory steady-state stimulation and is excluded as task EEG. Null resting result.",
+      design: "Case-control",
+      cite: { authors: "Hirano Y, et al.", year: 2015, title: "Spontaneous Gamma Activity in Schizophrenia", journal: "JAMA Psychiatry" }
+    },
+    {
+      id: "pm-26101851", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 306, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4","T5","T6","O1","O2"], bands: ["delta","theta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up", theta: "up" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia: higher eyes-open anterior delta and posterior theta component loadings than controls",
+      detail: "105 patients with schizophrenia, 145 psychotic bipolar probands and 56 healthy controls, 64-channel eyes-open resting EEG analysed with group ICA. Patients had higher loadings on an anterior delta component and a posterior theta component than controls, mapped to frontal and posterior sites. The bipolar group is reported separately and not used here; genetic gene-network results are not used. Case-control design with a genetic analysis.",
+      design: "Case-control",
+      cite: { authors: "Narayanan B, et al.", year: 2015, title: "Multivariate genetic determinants of EEG oscillations in schizophrenia and psychotic bipolar disorder from the BSNIP study", journal: "Transl Psychiatry" }
     }
   ],
 
