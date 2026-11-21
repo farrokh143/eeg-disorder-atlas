@@ -6,7 +6,10 @@
  * against the original paper (use the PubMed link in the app) before relying on it.
  *
  * evidence: "strong" | "moderate" | "preliminary" | "contested"
- * type:     "biomarker" (an EEG difference observed in the condition)
+ * SCOPE: EEG markers are resting-state only (eyes open or eyes closed, awake). Task, evoked-response
+ *        and sleep EEG studies are not included; log them in `excluded` with the reason.
+ *
+ * type:     "biomarker" (a resting-state EEG difference observed in the condition)
  *           "protocol"  (a neurofeedback training protocol tested as treatment)
  * direction:"up" | "down" | "ratio" | "asymmetry"  (summary arrow for the card)
  * changes:  { band: "up" | "down" | "asymmetry" | "regulate" | "mixed" }
@@ -32,11 +35,11 @@ window.NF_DATA = {
   conditions: [
     { id: "alzheimers", name: "Alzheimer's", summary: "One of the most consistent EEG pictures in medicine: slowing. Delta and theta rise, posterior alpha and beta fall, and the alpha peak frequency drops as the disease progresses." },
     { id: "adhd", name: "ADHD", summary: "An elevated theta/beta ratio at the vertex was long proposed as a marker, but it holds only for a subgroup. Neurofeedback on the same bands helps on unblinded ratings; blinded trials are much less convincing." },
-    { id: "schizophrenia", name: "Schizophrenia", summary: "Reduced gamma synchrony, especially the 40 Hz auditory steady-state response over fronto-central sites, is one of the best-replicated findings. Resting slow-wave excess is also common." },
+    { id: "schizophrenia", name: "Schizophrenia", summary: "Resting EEG often shows excess slow activity (delta and theta) and reduced alpha, but these changes are not specific enough to diagnose schizophrenia. The best-known gamma findings come from evoked (task) recordings and are not included here." },
     { id: "depression", name: "Depression", summary: "Frontal alpha asymmetry (F3/F4) is the classic proposed marker, but pooled data do not support it diagnostically. Frontal-midline theta may predict who responds to treatment." },
     { id: "parkinsons", name: "Parkinson's", summary: "Resting EEG slows in Parkinson's disease, and a lower dominant posterior frequency predicts later dementia." },
     { id: "tbi", name: "Brain injury (TBI)", summary: "Focal or diffuse slowing and reduced alpha after head injury. Group differences are real, but qEEG is not reliable for diagnosing mild TBI in an individual." },
-    { id: "insomnia", name: "Insomnia", summary: "The hyperarousal model: more beta and gamma around sleep onset and during NREM sleep. SMR neurofeedback was not better than sham in a blinded trial." },
+    { id: "insomnia", name: "Insomnia", summary: "The hyperarousal model: in resting wakefulness, people with insomnia show more beta, theta and gamma power. SMR neurofeedback was not better than sham in a blinded trial." },
     { id: "autism", name: "Autism", summary: "A U-shaped power profile: excess low (delta/theta) and high (beta/gamma) frequencies with reduced alpha. Results vary a lot by age and sample." },
     { id: "sud", name: "Alcohol & substance use", summary: "Resting beta is elevated in people with alcohol dependence and their relatives, suggesting a trait of cortical hyperexcitability. Alpha-theta neurofeedback has a long clinical history." },
     { id: "epilepsy", name: "Epilepsy", summary: "Diagnosis rests on epileptiform discharges rather than band power. SMR and slow-cortical-potential training reduced seizures in drug-resistant patients." },
@@ -101,26 +104,6 @@ window.NF_DATA = {
     },
     /* ---------------- Schizophrenia ---------------- */
     {
-      id: "scz-kwon-1999", condition: "schizophrenia", type: "biomarker",
-      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
-      sites: ["Fz","Cz"], bands: ["gamma"], direction: "down", evidence: "moderate",
-      changes: { gamma: "down" }, symptoms: ["psychosis"],
-      claim: "Reduced 40 Hz gamma response to auditory clicks",
-      detail: "Patients showed less power and phase-locking in response to 40 Hz click trains, while responses at lower rates were relatively spared. This started a large literature on gamma deficits.",
-      design: "Case-control",
-      cite: { authors: "Kwon JS, O'Donnell BF, Wallenstein GV, et al.", year: 1999, title: "Gamma frequency-range abnormalities to auditory stimulation in schizophrenia", journal: "Archives of General Psychiatry" }
-    },
-    {
-      id: "scz-thune-2016", condition: "schizophrenia", type: "biomarker",
-      metrics: { design: 5, control: null, blinded: null, n: null, k: null },
-      sites: ["Fz","Cz"], bands: ["gamma"], direction: "down", evidence: "strong",
-      changes: { gamma: "down" }, symptoms: ["psychosis"],
-      claim: "40 Hz auditory steady-state deficit confirmed across studies",
-      detail: "Pooled data showed reduced 40 Hz ASSR power and phase-locking in schizophrenia, with moderate effect sizes. Deficits appeared in chronic and first-episode patients.",
-      design: "Meta-analysis",
-      cite: { authors: "Thuné H, Recasens M, Uhlhaas PJ", year: 2016, title: "The 40-Hz auditory steady-state response in patients with schizophrenia: a meta-analysis", journal: "JAMA Psychiatry" }
-    },
-    {
       id: "scz-boutros-2008", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Fz","F3","F4","Cz"], bands: ["delta","theta","alpha"], direction: "up", evidence: "moderate",
@@ -163,16 +146,6 @@ window.NF_DATA = {
       cite: { authors: "Nuwer MR, Hovda DA, Schrader LM, Vespa PM", year: 2005, title: "Routine and quantitative EEG in mild traumatic brain injury", journal: "Clinical Neurophysiology" }
     },
     /* ---------------- Insomnia ---------------- */
-    {
-      id: "ins-perlis-2001", condition: "insomnia", type: "biomarker",
-      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
-      sites: ["C3","C4"], bands: ["beta","gamma"], direction: "up", evidence: "moderate",
-      changes: { beta: "up", gamma: "up" }, symptoms: ["sleep","hyperarousal"],
-      claim: "More beta/gamma during NREM sleep (hyperarousal)",
-      detail: "People with primary insomnia showed more high-frequency activity around sleep onset and during NREM sleep than good sleepers, consistent with cortical hyperarousal.",
-      design: "Case-control (sleep EEG)",
-      cite: { authors: "Perlis ML, Smith MT, Andrews PJ, Orff H, Giles DE", year: 2001, title: "Beta/Gamma EEG activity in patients with primary and secondary insomnia and good sleeper controls", journal: "Sleep" }
-    },
     /* ---------------- Autism ---------------- */
     {
       id: "asd-wang-2013", condition: "autism", type: "biomarker",
@@ -423,10 +396,10 @@ window.NF_DATA = {
     {
       id: "ins-zhao-2021", condition: "insomnia", type: "biomarker",
       metrics: { design: 5, control: null, blinded: null, n: 977, k: 24 },
-      sites: [], bands: ["beta","theta","gamma","delta"], direction: "up", evidence: "strong",
-      changes: { beta: "up", theta: "up", gamma: "up", delta: "down" }, symptoms: ["sleep","hyperarousal"],
-      claim: "Raised beta across wake and sleep; more theta and gamma when awake",
-      detail: "Meta-analysis of 24 studies (977 participants): insomnia disorder showed increased beta power throughout wakefulness and sleep, increased theta and gamma when awake, and less delta during NREM sleep. Pooled across recording sites.",
+      sites: [], bands: ["beta", "theta", "gamma"], direction: "up", evidence: "strong",
+      changes: { beta: "up", theta: "up", gamma: "up" }, symptoms: ["sleep","hyperarousal"],
+      claim: "More beta, theta and gamma in resting wakefulness",
+      detail: "Meta-analysis of 24 studies (977 participants): during wakefulness, people with insomnia disorder showed increased beta, theta and gamma power, in line with cortical hyperarousal. The paper also pooled sleep-stage EEG; those results are not included here. Pooled across recording sites.",
       design: "Meta-analysis",
       cite: { authors: "Zhao W, Van Someren EJW, Li C, et al.", year: 2021, title: "EEG spectral analysis in insomnia disorder: A systematic review and meta-analysis", journal: "Sleep Medicine Reviews" }
     },
@@ -565,5 +538,12 @@ window.NF_DATA = {
     { authors: "Thibault RT, Raz A", year: 2017, title: "The psychology of neurofeedback: clinical intervention even if applied placebo", journal: "American Psychologist", note: "Argues much of the benefit may be non-specific." },
     { authors: "Sitaram R, Ros T, Stoeckel L, et al.", year: 2017, title: "Closed-loop brain training: the science of neurofeedback", journal: "Nature Reviews Neuroscience", note: "Mechanisms overview." },
     { authors: "Newson JJ, Thiagarajan TC", year: 2019, title: "EEG Frequency Bands in Psychiatric Disorders: A Review of Resting State Studies", journal: "Frontiers in Human Neuroscience", note: "Across 184 resting studies, band changes overlapped heavily between disorders, so one pattern rarely points to one diagnosis." }
+  ],
+
+  // Studies reviewed and left out, with the reason (kept for the research log; not shown in the app).
+  excluded: [
+    { id: "scz-kwon-1999", reason: "Task/evoked: 40 Hz auditory steady-state response, not resting-state EEG.", cite: { authors: "Kwon JS, O'Donnell BF, Wallenstein GV, et al.", year: 1999, title: "Gamma frequency-range abnormalities to auditory stimulation in schizophrenia", journal: "Archives of General Psychiatry" } },
+    { id: "scz-thune-2016", reason: "Task/evoked: meta-analysis of the 40 Hz auditory steady-state response, not resting-state EEG.", cite: { authors: "Thuné H, Recasens M, Uhlhaas PJ", year: 2016, title: "The 40-Hz auditory steady-state response in patients with schizophrenia: a meta-analysis", journal: "JAMA Psychiatry" } },
+    { id: "ins-perlis-2001", reason: "Sleep EEG (NREM), not resting wakefulness.", cite: { authors: "Perlis ML, Smith MT, Andrews PJ, Orff H, Giles DE", year: 2001, title: "Beta/Gamma EEG activity in patients with primary and secondary insomnia and good sleeper controls", journal: "Sleep" } }
   ]
 };

@@ -1,8 +1,9 @@
 # EEG Disorder Atlas
 
-A clickable International 10-20 electrode map showing how EEG rhythms differ across
-disorders (EEG markers), plus neurofeedback treatment studies, with the
-evidence behind each finding.
+A clickable International 10-20 electrode map showing how **resting-state** EEG rhythms
+differ across disorders (EEG markers), plus neurofeedback treatment studies, with the
+evidence behind each finding. Task-based, evoked-response and sleep EEG studies are out of
+scope; excluded papers are logged in `excluded` in `data/research.js` with the reason.
 
 - Tap **electrodes** (or a region: frontal, central, ...) on the 10-20 map to pick an area.
 - Narrow with dropdowns: **disorder**, **band**, **direction** (elevated / reduced / asymmetry)

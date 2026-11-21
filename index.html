@@ -295,7 +295,7 @@ html, body { overflow-x: clip; }
   <header class="top">
     <div>
       <h1>EEG Disorder Atlas</h1>
-      <p>Tap electrodes to pick an area, then narrow by disorder, band and direction. See the EEG research for that area and the treatments that target it.</p>
+      <p>Resting-state EEG differences across disorders. Tap electrodes to pick an area, then narrow by disorder, band and direction.</p>
     </div>
     <label class="search"><span class="eyebrow">Search research</span>
       <input id="q" type="search" placeholder="e.g. gamma, slowing, Alzheimer" autocomplete="off">
@@ -360,7 +360,7 @@ html, body { overflow-x: clip; }
     </div>
     <div>
       <h2>About this map</h2>
-      <p class="warn">Group-level EEG differences are not diagnostic tests for individuals, and the same pattern turns up in several conditions. Summaries were compiled from the published literature and are a starting point, not a clinical guide. Check every claim against the original paper before using it with clients. Scalp electrodes pick up activity spread from nearby cortex (volume conduction), and readings also depend on the reference and montage, so findings at neighbouring electrodes are shown too (dashed). Old 10-20 names are used: T3/T4/T5/T6 are T7/T8/P7/P8 in the 10-10 system.</p>
+      <p class="warn">EEG markers are from resting-state recordings only (eyes open or closed); task, evoked-response and sleep studies are left out. Group-level EEG differences are not diagnostic tests for individuals, and the same pattern turns up in several conditions. Summaries were compiled from the published literature and are a starting point, not a clinical guide. Check every claim against the original paper before using it with clients. Scalp electrodes pick up activity spread from nearby cortex (volume conduction), and readings also depend on the reference and montage, so findings at neighbouring electrodes are shown too (dashed). Old 10-20 names are used: T3/T4/T5/T6 are T7/T8/P7/P8 in the 10-10 system.</p>
     </div>
   </section>
 </div>
@@ -720,7 +720,7 @@ html, body { overflow-x: clip; }
     };
     const mHtml = markers.length ? grouped(markers, "biomarker") : empty("No EEG marker studies match. Try a wider area, another band, or clear a filter.");
     const tHtml = treats.length ? grouped(treats, "protocol") : empty("No treatment studies match. Try a wider area or clear a filter.");
-    const mHint = "How the EEG differs in each disorder. Group-level findings, not a diagnostic test. Tap a row for the studies.";
+    const mHint = "Resting-state EEG (eyes open or closed). Group-level findings, not a diagnostic test. Tap a row for the studies.";
     const tHint = state.dir ? "Neurofeedback that trains this band the other way." : "Neurofeedback tested as treatment.";
     requestAnimationFrame(() => syncJump && syncJump());
     $("jump").innerHTML = `See results ↓`;

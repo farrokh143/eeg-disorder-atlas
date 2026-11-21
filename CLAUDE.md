@@ -49,6 +49,11 @@ Evidence grades:
 
 ## Rules
 
+- **Resting-state only for EEG markers.** Biomarker entries must come from resting recordings
+  (eyes open or eyes closed, awake). Do not add task-based, event-related/evoked (e.g. ASSR, ERP)
+  or sleep EEG findings. If a paper mixes conditions, include only its resting results and say so
+  in `detail`. Log anything left out in `excluded` with the reason.
+
 - Only add studies that can be cited precisely (authors, year, exact title, journal).
   If unsure of a detail (e.g. exact electrode sites), say so to the user rather than guessing.
 - Include null and contradicting results (blinded, sham-controlled, meta-analytic),
