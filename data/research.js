@@ -2697,6 +2697,26 @@ window.NF_DATA = {
       detail: "Unmedicated IGE (n=92) and focal epilepsy (n=149) vs healthy controls (n=114), with non-seizure patients (n=99) also recorded. Theta was higher in both epilepsy groups, peaking in medial-basal prefrontal and anterior temporal cortex. Source-localised (LORETA); mapped to the overlying scalp region (frontal and anterior temporal). Taken from the abstract; not checked in the full text. Cross-sectional, sources only.",
       design: "Case-control",
       cite: { authors: "Clemens B, et al.", year: 2023, title: "Epileptic diathesis: An EEG-LORETA study", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-40040314", condition: "epilepsy", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 87, k: null },
+      sites: [], bands: ["delta","theta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up", theta: "up" }, symptoms: ["seizures"],
+      claim: "After a first seizure, later epilepsy: more delta and theta power than controls, widespread",
+      detail: "21 patients who developed epilepsy after a first unprovoked seizure, 20 who did not, and 46 controls, 240 s resting EEG. Patients who developed epilepsy had higher delta and theta power across the scalp, with decreases in delta connectivity (not counted here). Source-localised (source reconstruction; method per paper); widespread vertex-level increases, mapped as whole-head. Retrospective, single-centre.",
+      design: "Case-control",
+      cite: { authors: "Segovia-Oropeza M, et al.", year: 2025, title: "Quantitative EEG signatures in patients with and without epilepsy development after a first seizure", journal: "Epilepsia Open" }
+    },
+    {
+      id: "pm-42217475", condition: "epilepsy", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 180, k: null },
+      sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "down", beta: "down" }, symptoms: ["seizures"],
+      claim: "Epilepsy: more delta and theta, less alpha and beta power than healthy controls, widespread",
+      detail: "120 people with epilepsy (60 drug-resistant, 60 not) and 60 healthy controls, resting eyes-closed 19-channel EEG. Relative power was higher in delta and theta and lower in alpha and beta in all people with epilepsy; in drug-resistant epilepsy delta was higher and alpha lower than non-drug-resistant, with widespread channel differences. Power is channel-averaged, so sites are whole-head. Retrospective, single-centre, no external validation; graph-theory results not counted here.",
+      design: "Case-control",
+      cite: { authors: "Sancetta BM, et al.", year: 2026, title: "A spectral- topological network signature of drug-resistant epilepsy: a phase 1-2 study on resting-state EEG-based diagnostic biomarkers of drug resistance", journal: "Neuroimage Clin" }
     }
   ],
 
