@@ -1537,6 +1537,16 @@ window.NF_DATA = {
       detail: "Resting EEG in 84 unmedicated MDD patients and 143 healthy controls; P7-P8 (T5-T6) asymmetry distinguished the groups (AUC 0.85). Taken from the abstract; not checked in the full text. The agomelatine treatment results and the P3-P4 treatment prediction are left out (treatment-response prediction). Frontal asymmetry showed no predictive value.",
       design: "Case-control",
       cite: { authors: "Lin CE, et al.", year: 2026, title: "Parietal alpha asymmetry as a diagnostic marker for depression and a predictive biomarker for anhedonia improvement after melatonergic antidepressant treatment", journal: "J Affect Disord" }
+    },
+    {
+      id: "pm-8810860", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 65, k: null },
+      sites: ["F3","F4"], bands: ["hibeta"], direction: "up", evidence: "preliminary",
+      changes: { hibeta: "up" }, symptoms: ["lowmood"],
+      claim: "Depressed and remitted MDD: higher frontal beta-2 power than controls at rest, eyes closed",
+      detail: "Eyes-closed resting EEG in 27 medicated patients with melancholic depression, 21 remitted patients on maintenance antidepressants, and 17 controls. Beta-2 (20-40 Hz) power was higher in both patient groups than in controls over the bilateral frontal sites. Taken from the abstract; not checked in the full text. Medication may affect the results; the paper is in Japanese with an English abstract.",
+      design: "Case-control",
+      cite: { authors: "Suzuki H, et al.", year: 1996, title: "[Quantitative EEG characteristics of the state of depressive phase and the state of remission in major depression]", journal: "Seishin Shinkeigaku Zasshi" }
     }
   ],
 
