@@ -1007,6 +1007,16 @@ window.NF_DATA = {
       detail: "Eyes-closed resting EEG in 65 people with epilepsy, 35 with preserved cognition and 30 with cognitive dysfunction by MoCA. Global gamma correlated negatively with MoCA scores, and the cognitively impaired group had lower global alpha, with temporal and parietal topography. Taken from the abstract; not checked in the full text. Cross-sectional correlations, small sample, no healthy controls.",
       design: "Cross-sectional correlation",
       cite: { authors: "Masoumian FN, et al.", year: 2026, title: "Resting-state EEG markers of cognitive dysfunction in epilepsy: evidence from gamma power, alpha activity, and functional connectivity", journal: "Neurol Sci" }
+    },
+    {
+      id: "pm-8272452", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: [], bands: ["theta","delta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up", delta: "up" }, symptoms: ["memory","cogdecline"],
+      claim: "Mild-moderate AD at rest: more theta over large bilateral areas and more bitemporal delta",
+      detail: "Sixteen-channel resting EEG in 41 patients with mild to moderate Alzheimer's dementia, compared with age-matched and younger controls. Theta increased over large bilateral areas, so a whole-head entry is used; the bitemporal delta increase is also reported. The beta increase, which was seen only against younger controls, is not used, and the motor and music-perception task results are excluded. Taken from the abstract; not checked in the full text. Total control numbers are not stated, so n is left blank.",
+      design: "Case-control (two control groups)",
+      cite: { authors: "Günther W, et al.", year: 1993, title: "Findings of electroencephalographic brain mapping in mild to moderate dementia of the Alzheimer type during resting, motor, and music-perception conditions", journal: "Psychiatry Res" }
     }
   ],
 
