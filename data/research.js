@@ -1397,6 +1397,66 @@ window.NF_DATA = {
       detail: "Resting EEG in 30 patients with major depression and 32 matched controls. Neither group showed hemispheric alpha asymmetry at rest, and resting beta showed no asymmetry in either group, so the resting results are null. The group difference appeared only during linguistic tasks, which are excluded here. Taken from the abstract; not checked in the full text.",
       design: "Case-control",
       cite: { authors: "Spironelli C, et al.", year: 2020, title: "Evidence of language-related left hypofrontality in Major Depression: An EEG Beta band study", journal: "Sci Rep" }
+    },
+    {
+      id: "pm-33601739", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 270, k: null },
+      sites: [], bands: ["delta","theta","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "down", theta: "down", beta: "up" }, symptoms: ["lowmood","anxiety"],
+      claim: "MDD with anxiety: lower delta and theta, higher beta over the whole head at rest",
+      detail: "Resting EEG (19 channels) in 135 patients with MDD and anxiety symptoms vs 135 healthy controls. Total delta, theta and beta were compared; frontal and parietal alpha asymmetry showed no difference. Task recordings from the same study were left out. Taken from the abstract; not checked in the full text. Most patients were taking medication, which may affect EEG.",
+      design: "Case-control",
+      cite: { authors: "Lin IM, et al.", year: 2021, title: "Electroencephalogram patterns in patients comorbid with major depressive disorder and anxiety symptoms: Proposing a hypothesis based on hypercortical arousal and not frontal or parietal alpha asymmetry", journal: "J Affect Disord" }
+    },
+    {
+      id: "pm-34256274", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 66, k: null },
+      sites: ["P3","P4","T5","T6","O1","O2"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
+      claim: "Depressed adolescents: more right than left posterior alpha; overall posterior alpha lower than controls",
+      detail: "Eyes-closed 128-channel resting EEG in 31 female adolescents with MDD and 35 healthy female adolescents. Only the depressed group showed more right than left posterior alpha, and its overall posterior alpha was lower (p=0.046). Some participants were medicated and the sample was small and single-sex.",
+      design: "Case-control",
+      cite: { authors: "Umemoto A, et al.", year: 2021, title: "Resting posterior alpha power and adolescent major depressive disorder", journal: "J Psychiatr Res" }
+    },
+    {
+      id: "pm-35412986", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 56, k: null },
+      sites: [], bands: ["beta","gamma"], direction: "up", evidence: "preliminary",
+      changes: { beta: "up", gamma: "up" }, symptoms: ["lowmood"],
+      claim: "First-episode MDD: more widespread beta and gamma power than controls at rest",
+      detail: "Resting EEG with eyes open and eyes closed in 30 first-episode MDD patients and 26 healthy controls. Beta and gamma power were higher across the head in both conditions. Taken from the abstract; not checked in the full text. Single case-control study with a small sample.",
+      design: "Case-control",
+      cite: { authors: "Liu S, et al.", year: 2022, title: "Alterations in Patients With First-Episode Depression in the Eyes-Open and Eyes-Closed Conditions: A Resting-State EEG Study", journal: "IEEE Trans Neural Syst Rehabil Eng" }
+    },
+    {
+      id: "pm-35931231", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 85, k: null },
+      sites: ["P3","Pz","P4","C3","Cz","C4","O1","O2"], bands: ["alpha","beta"], direction: "up", evidence: "preliminary",
+      changes: { alpha: "up", beta: "up" }, symptoms: ["lowmood"],
+      claim: "Late-life depression: higher beta over parietal, central, occipital; higher alpha parietal-central",
+      detail: "Eyes-closed resting EEG in 41 patients with late-life depression and 44 people without depression. Alpha asymmetry and cortical connectivity did not differ between groups. Taken from the abstract; not checked in the full text. Few electrodes were used and the sample was limited.",
+      design: "Case-control",
+      cite: { authors: "Wu Z, et al.", year: 2022, title: "Resting-state electroencephalography of neural oscillation and functional connectivity patterns in late-life depression", journal: "J Affect Disord" }
+    },
+    {
+      id: "cand-mdd-ozcoban-2025", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 126, k: null },
+      sites: [], bands: ["theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", alpha: "mixed", beta: "up" }, symptoms: ["lowmood"],
+      claim: "MDD: higher absolute theta and beta power across most channels at rest; alpha results conflict",
+      detail: "Eyes-closed resting EEG on 19 channels in 48 medication-free MDD patients vs 78 controls. Theta and beta power were higher in most channels. The abstract says alpha was lower, but the results section reports higher relative alpha, so alpha is marked mixed. Single case-control study.",
+      design: "Case-control",
+      cite: { authors: "Özçoban MA, Tan O", year: 2025, title: "Electroencephalographic markers in Major Depressive Disorder: insights from absolute, relative power, and asymmetry analyses", journal: "Frontiers in Psychiatry" }
+    },
+    {
+      id: "cand-mdd-alpha-sex-2012", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 96, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4"], bands: ["alpha"], direction: "up", evidence: "preliminary",
+      changes: { alpha: "up" }, symptoms: ["lowmood"],
+      claim: "Unmedicated MDD: more frontal and parietal alpha-2 power than controls at rest, mainly in males",
+      detail: "Resting EEG in 53 unmedicated MDD patients and 43 controls, referenced to Cz and mastoids. Alpha-2 power was higher over frontal and parietal sites, with the clearest effect in males. Source-localised theta in the subgenual cingulate was left out because it is a deep structure. Single case-control study.",
+      design: "Case-control",
+      cite: { authors: "(verify authors)", year: 2012, title: "Alpha Power, Alpha Asymmetry and Anterior Cingulate Cortex Activity in Depressed Males and Females", journal: "Journal of Psychiatric Research" }
     }
   ],
 
