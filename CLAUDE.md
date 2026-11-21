@@ -21,6 +21,7 @@ included as a secondary filter; EEG markers are the main focus.
 - `README.md`: how to run it and the schema for findings.
 - `data/research-log.csv`: master log of every paper considered (included / excluded / to-review, with reasons).
 - `data/search-protocol.md`: inclusion criteria, exact searches and the record of each search run.
+- `tools/findings-snapshot.js`: writes the readable findings table used in the Claude Project.
 
 GitHub is the database: all research data and decisions live in these files and their commit history.
 
@@ -58,6 +59,17 @@ Evidence grades:
 - **contested**: blinded, sham-controlled or pooled data that fail to support the effect, or a marker that does not hold up diagnostically
 
 ## Rules
+
+- **Keep GitHub and the Claude Project in sync (every development chat).** Before ending any chat or
+  session that changes the atlas (data, site, rules or decisions):
+  1. Commit the change on a branch, open a pull request and merge it to `main` (GitHub Pages publishes `main`).
+  2. Update the Claude Project "EEG Disorder Atlas" documents so they match `main`:
+     - `project-overview.md`: "Last updated" date, Current status counts, Key decisions, Open tasks, and one new Changelog line
+     - `atlas-findings.md`: regenerate with `node tools/findings-snapshot.js`
+     - `research-log.csv` and `search-protocol.md`: copy from `data/`
+     - `project-instructions.md`: copy of this file, if it changed
+  3. Tell the user what changed. If GitHub or the project cannot be updated from that chat, say which
+     part was not updated so it can be done next time.
 
 - **Log every paper.** Any paper added, excluded or queued must have a row in `data/research-log.csv`
   (same `id` as in `research.js`). Follow `data/search-protocol.md` for searches and screening, and
