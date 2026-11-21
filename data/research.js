@@ -1717,6 +1717,36 @@ window.NF_DATA = {
       detail: "Two resting eyes-closed EEG sessions in 52 adults with ADHD; asymmetry was averaged across sessions. ADHD symptom scores were associated with stronger relative right-frontal alpha power, a within-group correlation with no healthy control needed. Taken from the abstract; not checked in the full text. The asymmetry was more pronounced in females, and its link with depression was mediated by ADHD symptoms.",
       design: "Cross-sectional correlation",
       cite: { authors: "Keune PM, et al.", year: 2015, title: "Frontal brain asymmetry in adult attention-deficit/hyperactivity disorder (ADHD): extending the motivational dysfunction hypothesis", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-25200165", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 161, k: null },
+      sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "mixed", beta: "mixed" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "ADHD young people: higher delta and theta at session start only; beta higher at session end only",
+      detail: "Two 3-minute eyes-open resting recordings at the start and end of a 1.5 h session in 76 people with ADHD and 85 controls. The ADHD group had higher delta and theta at the start, but not the end, and higher beta at the end only; alpha and theta/beta showed no clear group difference. Effects were found across regions and midline electrodes, so the whole-head code is used. Results shift with IQ adjustment.",
+      design: "Case-control",
+      cite: { authors: "Kitsune GL, et al.", year: 2015, title: "A Matter of Time: The Influence of Recording Context on EEG Spectral Power in Adolescents and Young Adults with ADHD", journal: "Brain Topogr" }
+    },
+    {
+      id: "pm-27464584", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
+      sites: ["F7","F3","Fz","F4","F8","C3","Cz","C4","P3","Pz","P4"], bands: ["theta"], direction: "up", evidence: "contested",
+      changes: { theta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "ADHD women: higher eyes-open resting theta than controls in a post-hoc test; group main effect not significant",
+      detail: "Eyes-open resting EEG in 20 women with ADHD, 20 with bipolar disorder and 20 controls. Absolute theta was higher in ADHD than controls at rest in a post-hoc test (d = 0.77), but the group main effect across frontal, central and parietal electrode averages was not significant. The bipolar comparison and the task condition are not used here.",
+      design: "Case-control",
+      cite: { authors: "Rommel AS, et al.", year: 2016, title: "Commonalities in EEG Spectral Power Abnormalities Between Women With ADHD and Women With Bipolar Disorder During Rest and Cognitive Performance", journal: "Brain Topogr" }
+    },
+    {
+      id: "pm-28257875", condition: "adhd", type: "protocol",
+      metrics: { design: 4, control: "usual", blinded: null, n: 85, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["delta","alpha"], direction: "ratio", evidence: "moderate",
+      changes: { delta: "down", alpha: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "ADHD children: game-based cognitive and neurofeedback training lowered frontal delta and raised alpha vs waitlist",
+      detail: "Randomised waitlist-controlled trial in 85 children with ADHD or subclinical ADHD using 25 home sessions of working memory, inhibition and neurofeedback training. Parents reported reduced symptoms; frontal delta fell and frontal alpha rose. The abstract does not say whether the frontal EEG changes were recorded at rest or during a task. Taken from the abstract; not checked in the full text.",
+      design: "RCT (waitlist-controlled)",
+      cite: { authors: "Johnstone SJ, et al.", year: 2017, title: "Game-based combined cognitive and neurofeedback training using Focus Pocus reduces symptom severity in children with diagnosed AD/HD and subclinical AD/HD", journal: "Int J Psychophysiol" }
     }
   ],
 
