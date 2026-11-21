@@ -777,6 +777,26 @@ window.NF_DATA = {
       detail: "87 community-dwelling older adults in three groups (healthy, MCI and motoric cognitive risk), 5-minute eyes-closed resting EEG on 19 channels. Frontal theta power was higher in MCI and motoric cognitive risk, most in the latter. The default-mode connectivity result is not used here. Taken from the abstract; not checked in the full text. Cross-sectional study with small groups.",
       design: "Case-control (cross-sectional)",
       cite: { authors: "Noh ES, et al.", year: 2026, title: "Distinct patterns of cortical activity associated with cognitive and motor decline in community-dwelling older adults", journal: "Exp Gerontol" }
+    },
+    {
+      id: "pm-41786925", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 65, k: null },
+      sites: ["T3","T4","T5","T6","P3","Pz","P4","O1","O2"], bands: ["alpha","beta"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down", beta: "down" }, symptoms: ["memory","cogdecline"],
+      claim: "AD vs cognitively normal: temporal, parietal and occipital alpha lower; occipital beta lower",
+      detail: "36 people with AD and 29 cognitively normal controls, eyes-closed resting EEG from a public dataset. Alpha was lower over temporal and parietal sites and both alpha and beta were lower over occipital sites in AD. The same public dataset is used in pm-41246936 (batch 18), so the two papers are not independent samples. Taken from the abstract; not checked in the full text. Connectivity results are not used here.",
+      design: "Case-control",
+      cite: { authors: "Iqbal S, et al.", year: 2026, title: "Quantitative EEG signatures of power and functional connectivity alterations in Alzheimer's disease and frontotemporal dementia", journal: "Sci Rep" }
+    },
+    {
+      id: "pm-42115191", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 48, k: null },
+      sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "down", beta: "down" }, symptoms: ["memory","cogdecline"],
+      claim: "Amyloid-confirmed aMCI: EEG slowing, with theta/alpha ratio best at occipital sites",
+      detail: "24 people with amyloid-positive amnestic MCI (confirmed by PiB-PET) and 24 age-matched controls, resting EEG. Lower-frequency power was higher and higher-frequency power lower in MCI, with the occipital theta/alpha ratio giving the best discrimination (AUC 0.86). The band results are described as widespread, so sites are left as whole-head. Taken from the abstract; not checked in the full text. Small single-centre case-control study with no external validation.",
+      design: "Case-control",
+      cite: { authors: "Liang Y, et al.", year: 2026, title: "Application of resting-state EEG theta /alpha power ratio analysis for diagnosing amnestic mild cognitive impairment", journal: "Sci Rep" }
     }
   ],
 
