@@ -3187,16 +3187,6 @@ window.NF_DATA = {
       detail: "28 chronic migraine patients and 28 controls, 64-electrode eyes-closed resting EEG. Absolute delta (low), high alpha and low beta power were lower across the scalp; relative low alpha was higher and relative high beta lower. Peak alpha frequency and infra-slow power did not differ. Alpha is recorded as mixed because absolute and relative power move in opposite directions. The headache-or-migraine factor did not change the power reductions. Taken from the abstract; not checked in the full text. Cross-sectional study.",
       design: "Case-control",
       cite: { authors: "Wong R, Robertson R, Meylakh N, et al.", year: 2026, title: "Reduced electroencephalogram power and no change in peak alpha frequency in individuals with chronic migraine: a cross-sectional investigation", journal: "Neurophysiol Clin" }
-    },
-    {
-      id: "pm-33728846", condition: "cognition", type: "biomarker",
-      metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
-      sites: ["F4","P3"], bands: ["hibeta"], direction: "up", evidence: "preliminary",
-      changes: { hibeta: "up" }, symptoms: ["cogdecline"],
-      claim: "Coronary bypass patients with postoperative cognitive dysfunction: higher beta-2 (20-30 Hz) power than patients without",
-      detail: "60 patients undergoing coronary artery bypass grafting, neuropsychological tests before surgery and on day 7-10, eyes-closed resting EEG with 62 leads. Patients with postoperative cognitive dysfunction had higher pre- and postoperative beta-2 power. Regression linked dysfunction to higher preoperative beta-2 in right frontal cortex and lower postoperative beta-2 in left parietal areas; F4 and P3 are approximate regional labels, not checked electrodes. Taken from the abstract; not checked in the full text (Russian-language article). Subgroup sizes are not given in the abstract.",
-      design: "Cohort",
-      cite: { authors: "Tarasova IV, Razumnikova OA, Trubnikova OA, Mezentsev YA, Kupriyanova DS, Barbarash OL", year: 2021, title: "[Neurophysiological correlates of postoperative cognitive disorders]", journal: "Zh Nevrol Psikhiatr Im S S Korsakova" }
     }
   ],
 
