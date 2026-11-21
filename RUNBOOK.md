@@ -83,6 +83,9 @@ one band with a direction (higher or lower in the patient group than in controls
 - Cognitive test scores count as symptoms: verbal or working memory → `memory`; attention tests → `inattention`;
   executive tests → `executive`.
 - A source result spanning several lobes: use all their sites together in one finding.
+- `n` is always the whole study sample (all groups), even if the result you record compares only two of them.
+- A null result with named regions uses those regions' sites; `[]` only when no region is named.
+- Studies only of healthy relatives, or only of how stable EEG is over time in patients: exclude with `X` and a short reason.
 - **Comparisons inside a patient group** (e.g. patients with vs without a symptom, or resting EEG correlated with a
   symptom score) count, with no healthy control needed, when the symptom maps to one of the symptom ids below. Use that
   symptom id and say "within <condition>" in the claim. If the symptom has no matching id (e.g. suicidality), exclude
