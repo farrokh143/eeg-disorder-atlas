@@ -2787,6 +2787,26 @@ window.NF_DATA = {
       detail: "20 people with Parkinson's and 19 healthy controls, eyes-closed and eyes-open resting EEG. Alpha reactivity over occipital electrodes (O1, O2, Oz) was reduced in Parkinson's; the group difference was no longer significant after adjusting for MMSE. Within Parkinson's, lower reactivity correlated with greater gait variability. Oz was averaged with O1 and O2 in the analysis. Single-centre case-control.",
       design: "Case-control",
       cite: { authors: "Lirani-Silva E, et al.", year: 2025, title: "Resting-state Alpha Reactivity Is Reduced in Parkinson's Disease and Associated With Gait Variability", journal: "Neurorehabil Neural Repair" }
+    },
+    {
+      id: "pm-12705421", condition: "sud", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 22, k: null },
+      sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "mixed", beta: "mixed" }, symptoms: ["craving"],
+      claim: "Methamphetamine abstinence (4 days): more delta and theta power than controls; alpha and beta unchanged",
+      detail: "11 methamphetamine-dependent people after 4 days of inpatient abstinence vs 11 non-drug-using volunteers, eyes-closed resting EEG. Delta and theta absolute power was higher and alpha and beta did not differ; the authors describe a generalised pattern, so sites are whole-head. Taken from the abstract; not checked in the full text. Small single-centre case-control study.",
+      design: "Case-control",
+      cite: { authors: "Newton TF, et al.", year: 2003, title: "Quantitative EEG abnormalities in recently abstinent methamphetamine dependent individuals", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-12711923", condition: "sud", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 614, k: null },
+      sites: [], bands: ["theta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up" }, symptoms: ["craving"],
+      claim: "Alcohol dependence: more resting theta power than matched controls at all scalp sites",
+      detail: "307 alcohol-dependent people and 307 age- and sex-matched controls, eyes-closed resting EEG. Absolute theta (3-7 Hz) power was higher at all scalp locations; the increase was strongest centrally and parietally in men and parietally in women. Taken from the abstract; not checked in the full text. Case-control study; craving is the core symptom, not directly measured.",
+      design: "Case-control",
+      cite: { authors: "Rangaswamy M, et al.", year: 2003, title: "Theta power in the EEG of alcoholics", journal: "Alcohol Clin Exp Res" }
     }
   ],
 
