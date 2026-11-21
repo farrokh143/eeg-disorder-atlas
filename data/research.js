@@ -2827,6 +2827,66 @@ window.NF_DATA = {
       detail: "364 Plains American Indians (resting eyes-closed EEG at Fz, Pz, P3, P4, O1 and O2). The main analysis found no relationship between alpha or beta power and alcohol use disorder. Theta power at Fz was lower in alcoholics than non-alcoholics only in the subgroup without anxiety disorders (p = 0.03), a post hoc subgroup result. The paper's main aim is genetic linkage of EEG power, so the EEG group comparison is secondary. Cross-sectional, no blinding or sham control. Craving is not measured; the symptom tag is provisional.",
       design: "Cross-sectional cohort",
       cite: { authors: "Enoch MA, et al.", year: 2008, title: "Common genetic origins for EEG, alcoholism and anxiety: the role of CRH-BP", journal: "PLoS One" }
+    },
+    {
+      id: "pm-19278131", condition: "sud", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 141, k: null },
+      sites: ["P3","P4","O1","O2","T5","T6"], bands: ["theta","beta"], direction: "down", evidence: "preliminary",
+      changes: { theta: "down", beta: "down" }, symptoms: ["craving"],
+      claim: "Chronic cocaine users: less posterior theta and beta power than non-drug-using controls",
+      detail: "99 cocaine users (within 5 days of admission) and 42 age-matched controls, 16-lead eyes-closed resting EEG. Absolute theta, beta1 and beta2 power were reduced in posterior regions; the posterior sites were taken as P3, P4, O1, O2, T5 and T6 from the 16-lead montage. Within the users, recent cocaine use correlated with lower delta and theta power. Cross-sectional study with no blinding or sham control.",
+      design: "Case-control",
+      cite: { authors: "Copersino ML, et al.", year: 2009, title: "EEG and cerebral blood flow velocity abnormalities in chronic cocaine users", journal: "Clin EEG Neurosci" }
+    },
+    {
+      id: "pm-26002855", condition: "sud", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: [], bands: ["gamma"], direction: "up", evidence: "preliminary",
+      changes: { gamma: "up" }, symptoms: ["craving"],
+      claim: "Illicit opiate users: higher resting gamma power (37-41 Hz) than healthy controls",
+      detail: "Compared illicit opiate users and healthy controls with eyes-closed resting EEG from 26 sites; gamma power was higher in the illicit users. Source analysis (sLORETA) showed the largest differences in occipital, parietal and frontal lobes, mapped to the overlying scalp region. The methadone maintenance group was not used here because it is a treatment effect. Taken from the abstract; not checked in the full text. Group sizes are not given in the abstract.",
+      design: "Case-control",
+      cite: { authors: "Wang GY, et al.", year: 2016, title: "Quantitative EEG and Low-Resolution Electromagnetic Tomography (LORETA) Imaging of Patients Undergoing Methadone Treatment for Opiate Addiction", journal: "Clin EEG Neurosci" }
+    },
+    {
+      id: "pm-26035281", condition: "sud", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: ["C3","Cz","C4","P3","Pz","P4"], bands: ["beta"], direction: "up", evidence: "preliminary",
+      changes: { beta: "up" }, symptoms: ["impulsivity"],
+      claim: "Hazardous drinkers (not dependent): higher centroparietal beta power than non-drinkers",
+      detail: "University students with hazardous alcohol consumption but no dependence vs students without hazardous drinking, eyes-closed resting EEG. Absolute beta power was higher at centroparietal sites; theta showed no change. The abstract does not name electrodes, so C3, Cz, C4, P3, Pz and P4 are an assumed mapping of centroparietal and should be checked against the full text. Taken from the abstract; not checked in the full text. Group sizes are not given in the abstract.",
+      design: "Case-control",
+      cite: { authors: "Núñez-Jaramillo L, et al.", year: 2015, title: "Quantitative electroencephalography analysis in university students with hazardous alcohol consumption, but not alcohol dependence", journal: "Neuroreport" }
+    },
+    {
+      id: "pm-26051750", condition: "sud", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 83, k: null },
+      sites: [], bands: ["delta","alpha"], direction: "down", evidence: "preliminary",
+      changes: { delta: "down", alpha: "down" }, symptoms: ["craving"],
+      claim: "Daily smokers: lower resting delta and alpha power than non-smokers and nondaily smokers",
+      detail: "22 daily smokers, 31 nondaily smokers and 30 non-smokers, tested in a non-deprived state. Daily smokers had reduced delta and alpha power and higher impulsiveness; power was averaged across the 34-electrode montage, so the result is whole-head. Cross-sectional study with no blinding or sham control; dependence is inferred from smoking behaviour.",
+      design: "Case-control",
+      cite: { authors: "Rass O, et al.", year: 2016, title: "Resting-state EEG, impulsiveness, and personality in daily and nondaily smokers", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-26327686", condition: "sud", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 42, k: null },
+      sites: [], bands: ["delta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up" }, symptoms: ["craving"],
+      claim: "Alcohol use disorder: higher absolute delta power than healthy controls; beta did not differ",
+      detail: "17 people with alcohol use disorder vs 25 healthy controls, eyes-closed resting EEG at 19 sites. Absolute delta power was higher in the AUD group than in controls, while beta power matched the controls. The internet gaming disorder group is not used here. Regional averages are reported in the paper but the AUD-versus-control regional result was not checked. Cross-sectional study with no blinding or sham control.",
+      design: "Case-control",
+      cite: { authors: "Son KL, et al.", year: 2015, title: "Neurophysiological features of Internet gaming disorder and alcohol use disorder: a resting-state EEG study", journal: "Transl Psychiatry" }
+    },
+    {
+      id: "pm-26660886", condition: "sud", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 30, k: null },
+      sites: [], bands: ["beta"], direction: "up", evidence: "preliminary",
+      changes: { beta: "up" }, symptoms: ["impulsivity"],
+      claim: "Women with alcohol use disorder: higher absolute and relative beta power than matched controls",
+      detail: "15 women with alcohol use disorder and 15 age-, sex- and education-matched controls, eyes-closed resting EEG. Absolute and relative beta power were higher in the AUD group, with the beta difference across the entire scalp, so sites are whole-head. Connectivity results are not used here. Taken from the abstract; not checked in the full text. Very small case-control study in women only.",
+      design: "Case-control",
+      cite: { authors: "Herrera-Díaz A, et al.", year: 2016, title: "Functional Connectivity and Quantitative EEG in Women with Alcohol Use Disorders: A Resting-State Study", journal: "Brain Topogr" }
     }
   ],
 
