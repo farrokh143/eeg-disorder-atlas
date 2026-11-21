@@ -151,7 +151,10 @@ A theta/beta ratio that is higher → `{"theta":"up","beta":"down"}` and say "ra
 Midline labels not in the list: Fpz → `Fp1 Fp2`, Oz → `O1 O2`, FCz → `Fz Cz`, CPz → `Cz Pz`. Convert new names: T7→T3, T8→T4, P7→T5, P8→T6. Regions:
 frontal = `Fp1 Fp2 F7 F3 Fz F4 F8`; central = `C3 Cz C4`; temporal = `T3 T4 T5 T6`; parietal = `P3 Pz P4`;
 occipital = `O1 O2`; posterior = `P3 Pz P4 T5 T6 O1 O2`; left/right = keep that side only (odd = left, even = right);
-whole-head, global or "widespread" = `[]`. Electrodes not in the list (e.g. FC3, AF4): use the nearest listed one.
+whole-head, global or "widespread" = `[]`. Combined regions (e.g. "centro-parietal", "fronto-central") = both sets together.
+A result given only as named regions or clusters (no electrodes) uses this table; do not exclude it for lack of electrodes.
+`[]` is also correct for: neurofeedback with individualised or unnamed training sites; tomographic (LORETA) neurofeedback
+aimed at a deep structure such as the ACC (say so in `detail`); a null result whose regions aren't named. Electrodes not in the list (e.g. FC3, AF4): use the nearest listed one.
 
 **symptoms** (ids): inattention impulsivity hyperactivity executive memory cogdecline lowmood anxiety hyperarousal
 intrusions sleep psychosis social craving seizures headache postconcussion motor.
