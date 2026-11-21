@@ -2177,6 +2177,36 @@ window.NF_DATA = {
       detail: "14 patients with schizophrenia and 14 controls, resting EEG. Delta band-limited power was lower over central regions in mixed spectra, but the authors attribute this mainly to a shift in the scale-free (fractal) component rather than oscillations. Small study. Taken from the abstract; not checked in the full text.",
       design: "Case-control",
       cite: { authors: "Racz FS, et al.", year: 2021, title: "Separating scale-free and oscillatory components of neural activity in schizophrenia", journal: "Brain Behav" }
+    },
+    {
+      id: "pm-3495249", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 28, k: null },
+      sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "mixed", alpha: "mixed", beta: "mixed" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia: diffuse mild delta increase over the scalp, not frontal, versus controls",
+      detail: "15 medication-free patients with schizophrenia and 13 controls, 28-channel resting EEG with eye-movement epochs removed. Delta power was mildly higher across the scalp without frontal localisation, and the other bands showed no difference. Small study from 1987. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Karson CN, et al.", year: 1987, title: "Computed electroencephalographic activity mapping in schizophrenia. The resting state reconsidered", journal: "Arch Gen Psychiatry" }
+    },
+    {
+      id: "pm-3751669", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up" }, symptoms: ["psychosis"],
+      claim: "Chronic psychosis: more 5-8 Hz slow activity over frontal sites than matched controls at rest",
+      detail: "10 chronic psychotic patients compared with matched healthy controls, resting EEG. Slow activity at about 5.2-7.6 Hz was higher, particularly over frontal areas, and the difference was smaller with eyes open. Total sample size is not stated in the abstract, so n is left blank. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Müller HF, et al.", year: 1986, title: "Topography and possible physiological significance of EEG amplitude variability in psychosis", journal: "Acta Psychiatr Scand" }
+    },
+    {
+      id: "pm-38217348", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 75, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta","alpha"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up", alpha: "up" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia: higher 6-9 Hz theta/alpha component at rest, mainly prefrontal (source-localised)",
+      detail: "39 chronic patients and 36 matched controls, dense-array resting EEG. A 6-9 Hz theta/alpha component was unique to patients, and their peak alpha frequency was lower. Source-localised (standardised LORETA); the prefrontal source is mapped to the overlying frontal scalp region, and the parahippocampal source is not mapped. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Nakhnikian A, et al.", year: 2024, title: "Spectral decomposition of resting state electroencephalogram reveals unique theta/alpha activity in schizophrenia", journal: "Eur J Neurosci" }
     }
   ],
 
