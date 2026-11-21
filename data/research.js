@@ -637,6 +637,16 @@ window.NF_DATA = {
       detail: "Systematic review and random-effects meta-analysis of resting alpha power across cognitive decline stages. Global alpha power was lower in AD than in MCI (pooled effect -0.30, 6 studies), and lower in MCI than in older adults (effect -1.49, 5 studies, high heterogeneity, to be read with caution). Taken from the abstract; not checked in the full text. Studies differed in MCI diagnosis and EEG measures, so the grade is moderate.",
       design: "Meta-analysis",
       cite: { authors: "Lejko N, et al.", year: 2020, title: "Alpha Power and Functional Connectivity in Cognitive Decline: A Systematic Review and Meta-Analysis", journal: "J Alzheimers Dis" }
+    },
+    {
+      id: "pm-33544703", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: [], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["memory","cogdecline"],
+      claim: "AD (vs age-matched 60-90 controls): widespread more delta and theta, less alpha power",
+      detail: "Resting EEG in 26 AD patients, 53 MCI patients and healthy controls stratified by age (18-40, 40-60, 60-90). Against the oldest control group, AD showed widespread higher delta and theta and lower alpha power; MCI showed a smaller theta rise limited to temporal sites (T3-T6) with no alpha change. Single-centre case-control design; the theta-to-alpha ratio gave the strongest separation.",
+      design: "Case-control",
+      cite: { authors: "Meghdadi AH, et al.", year: 2021, title: "Resting state EEG biomarkers of cognitive decline associated with Alzheimer's disease and mild cognitive impairment", journal: "PLoS One" }
     }
   ],
 
