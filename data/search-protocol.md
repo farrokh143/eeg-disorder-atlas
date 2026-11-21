@@ -98,6 +98,10 @@ Epilepsy gave the fewest survivors (most hits were intracranial, imaging, connec
 
 545 papers screened on title and abstract (depression 317, ADHD 229; some overlap). Same rules as round 1, plus: studies whose only question is whether baseline EEG predicts response to a drug or stimulation treatment were excluded as treatment-response prediction (not a disorder marker). Duplicates of hand-picked or included studies (found by title) were excluded as "Duplicate of <id>" and the hand-picked row moved on. Reviews and commentaries are kept at `full-text` for citation chasing. Decided from titles and abstracts by one reviewer (Claude); human second check still to do.
 
+### Screening round 3 (21 Nov 2026): schizophrenia and Alzheimer's disease
+
+690 papers screened on title and abstract (schizophrenia 248, Alzheimer's/dementia/MCI 449; some overlap): 305 passed to `full-text`, 385 excluded. Same rules as rounds 1 and 2. Of the exclusions, 194 were connectivity, network, microstate or ML-classifier studies outside the atlas schema, 78 were treatment or intervention studies, 39 were task or evoked EEG, and 28 were MEG. Papers that mix resting and task or photic conditions were kept with a note to use the resting results only. Survivors include studies of Lewy body dementia, Parkinson disease with cognitive impairment, Down syndrome and Creutzfeldt-Jakob disease, which are outside the 14 atlas conditions. Decided from titles and abstracts by one reviewer (Claude); human second check still to do.
+
 ## Bulk pull (PubMed)
 
 The searches below use the core query (EEG terms AND resting-state terms AND spectral terms AND humans)
