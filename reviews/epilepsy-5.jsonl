@@ -1,0 +1,4 @@
+{"id":"pm-8167993","decision":"exclude","code":"NR","note":"abstract only: the significant background band increases are in the valproic acid-treated group (drug effect)"}
+{"id":"pm-9579284","decision":"defer","note":"[parked: no full text] abstract gives untreated focal epilepsy vs controls at rest (more delta and theta, less alpha and beta) but names no scalp regions"}
+{"id":"pm-20525164","decision":"exclude","code":"NODATA","note":"full text: rest power differences in Table 1 are not significant; the one significant region (left frontal alpha) has no clear direction; main result is synchronisation and classifier fusion"}
+{"id":"cand-epi-faiman-2021","decision":"exclude","code":"REVIEW","note":"PMID 34091130 (resolved from title): systematic review, not meta-analysis; results not pooled"}
