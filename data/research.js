@@ -2957,6 +2957,36 @@ window.NF_DATA = {
       detail: "33 never-smokers, 28 past-smokers (20+ years abstinent) and 20 current smokers, all male, eyes-closed resting EEG. Relative theta was lower in current and past smokers; relative alpha was higher in current smokers only. The channels with significant group differences are marked in the paper's figure and were not named in the text, so the montage is recorded as whole-head. Cross-sectional study with no blinding or sham control.",
       design: "Case-control",
       cite: { authors: "Lee H, et al.", year: 2023, title: "Persistent impacts of smoking on resting-state EEG in male chronic smokers and past-smokers with 20 years of abstinence", journal: "Sci Rep" }
+    },
+    {
+      id: "pm-9146819", condition: "sud", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 63, k: null },
+      sites: [], bands: ["beta"], direction: "up", evidence: "preliminary",
+      changes: { beta: "up" }, symptoms: ["craving"],
+      claim: "Cocaine-dependent men after about 10 days abstinence: more resting beta than both control groups",
+      detail: "33 cocaine-dependent men compared with 10 non-drug users and 20 drug users who were not cocaine dependent; eight-site resting EEG. Percent beta was higher in the cocaine-dependent men than in both control groups and a normative database. Frontal and central beta correlated with cocaine use in the last 30 days. The abstract names no electrodes, so sites are whole-head. Taken from the abstract; not checked in the full text. Case-control study recorded during early abstinence.",
+      design: "Case-control",
+      cite: { authors: "Herning RI, et al.", year: 1997, title: "Neurophysiological signs of cocaine dependence: increased electroencephalogram beta during withdrawal", journal: "Biol Psychiatry" }
+    },
+    {
+      id: "pm-9224905", condition: "sud", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 28, k: null },
+      sites: [], bands: ["hibeta"], direction: "up", evidence: "preliminary",
+      changes: { hibeta: "up" }, symptoms: ["craving"],
+      claim: "Detoxified alcoholics: higher resting fast beta (20-28 Hz) power than controls",
+      detail: "15 detoxified male alcoholics (at least 2 weeks after detoxification) and 13 controls, 16-channel resting EEG. Resting fast beta power was higher in the alcoholics; the paper also reports abnormal EEG reactivity and no coupling with cerebral blood flow. The abstract names no electrodes, so sites are whole-head. Fast beta is recorded as the hibeta band. Taken from the abstract; not checked in the full text. Very small single-centre study.",
+      design: "Case-control",
+      cite: { authors: "Günther W, et al.", year: 1997, title: "Functional EEG mapping and SPECT in detoxified male alcoholics", journal: "Eur Arch Psychiatry Clin Neurosci" }
+    },
+    {
+      id: "pm-9246556", condition: "sud", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 102, k: null },
+      sites: [], bands: ["beta"], direction: "up", evidence: "preliminary",
+      changes: { beta: "up" }, symptoms: ["craving"],
+      claim: "Alcohol- and cocaine-dependent inpatients (1-6 months abstinent): more beta than non-drug controls",
+      detail: "12 alcohol-dependent and 21 cocaine-dependent patients, and 14 non-drug-dependent controls, with 36 dual-dependent and 19 heroin-dependent patients in the same study. Beta power (high and low) was higher in the alcohol and cocaine groups than in controls, and beta did not correlate with use measures. Only the alcohol and cocaine groups are used here. The abstract names no electrodes, so sites are whole-head. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Costa L, et al.", year: 1997, title: "Quantitative electroencephalographic differences associated with alcohol, cocaine, heroin and dual-substance dependence", journal: "Drug Alcohol Depend" }
     }
   ],
 
