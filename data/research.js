@@ -647,6 +647,16 @@ window.NF_DATA = {
       detail: "Resting EEG in 26 AD patients, 53 MCI patients and healthy controls stratified by age (18-40, 40-60, 60-90). Against the oldest control group, AD showed widespread higher delta and theta and lower alpha power; MCI showed a smaller theta rise limited to temporal sites (T3-T6) with no alpha change. Single-centre case-control design; the theta-to-alpha ratio gave the strongest separation.",
       design: "Case-control",
       cite: { authors: "Meghdadi AH, et al.", year: 2021, title: "Resting state EEG biomarkers of cognitive decline associated with Alzheimer's disease and mild cognitive impairment", journal: "PLoS One" }
+    },
+    {
+      id: "pm-35618112", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 99, k: null },
+      sites: ["F3","F4"], bands: ["alpha","beta"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "mixed", beta: "asymmetry" }, symptoms: ["memory","cogdecline"],
+      claim: "MCI: frontal beta (F3/F4) more asymmetric than controls; no frontal alpha difference",
+      detail: "99 community-dwelling African Americans (41 MCI, 58 neurologically intact controls), eyes-closed resting EEG recorded before a motion task. Frontal beta asymmetry was greater in MCI, and frontal alpha asymmetry did not differ at baseline. Exploratory analysis with highly correlated asymmetry measures (r = 0.85) and no replication yet.",
+      design: "Case-control (exploratory)",
+      cite: { authors: "Martin T, et al.", year: 2022, title: "EEG asymmetry and cognitive testing in MCI identification", journal: "Int J Psychophysiol" }
     }
   ],
 
