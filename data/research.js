@@ -2447,6 +2447,36 @@ window.NF_DATA = {
       detail: "Taken from the abstract; not checked in the full text. 23 people with panic disorder without depression vs 25 healthy controls, spontaneous EEG during rest phases (eyes state not stated in the abstract). Right frontal alpha power was significantly lower than left in patients during rest and anxiety-relevant stimuli; only the rest phases are used here, and the stimulus conditions are not included. The abstract does not give the electrode set, so the frontal region was used. Case-control design, 1999.",
       design: "Case-control",
       cite: { authors: "Wiedemann G, et al.", year: 1999, title: "Frontal brain asymmetry as a biological substrate of emotions in patients with panic disorders", journal: "Arch Gen Psychiatry" }
+    },
+    {
+      id: "pm-18331812", condition: "autism", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 40, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","Cz","Pz","P4","T6","O2"], bands: ["theta","delta","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", delta: "down", beta: "up" }, symptoms: ["social"],
+      claim: "Autism: more right posterior theta, less frontal delta and more midline beta than controls",
+      detail: "Taken from the abstract; not checked in the full text. 20 children with autistic disorder vs 20 matched controls, eyes-closed resting EEG. Theta was higher mainly over right posterior sites, delta was lower over frontal sites, and beta was higher at midline sites. The coherence results were not used (CN). Case-control design with a small sample.",
+      design: "Case-control",
+      cite: { authors: "Coben R, et al.", year: 2008, title: "EEG power and coherence in autistic spectrum disorder", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-21107671", condition: "autism", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: ["F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["social"],
+      claim: "Autism: left frontal alpha asymmetry linked to milder social symptoms within the autism group",
+      detail: "Within-group comparison of higher functioning children with autism (and a comparison group), resting EEG with alpha power (8-13 Hz) at frontal sites. Children with left frontal asymmetry had milder social impairment, but this held mainly for autistic children with lower verbal IQ. The total sample size is not stated in the passages checked, so n is null. Cross-sectional design; the paper calls it a partial replication of Sutton et al. 2005.",
+      design: "Cross-sectional",
+      cite: { authors: "Burnette CP, et al.", year: 2011, title: "Anterior EEG asymmetry and the Modifier Model of Autism", journal: "J Autism Dev Disord" }
+    },
+    {
+      id: "pm-26187351", condition: "autism", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: [], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["social"],
+      claim: "Asperger's: more delta and theta, less relative alpha than controls, across the head",
+      detail: "Taken from the abstract; not checked in the full text. Boys with Asperger's syndrome vs an age- and sex-matched control group (control size not stated), eyes-closed resting EEG on 19 electrodes. Absolute delta and theta were higher globally and relative alpha was lower globally; relative delta was higher anteriorly, which is covered by the whole-head entry. Coherence results were not used (CN). Small case-control study.",
+      design: "Case-control",
+      cite: { authors: "Clarke AR, et al.", year: 2016, title: "EEG activity in children with Asperger's Syndrome", journal: "Clin Neurophysiol" }
     }
   ],
 
