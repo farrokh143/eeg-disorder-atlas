@@ -1,0 +1,10 @@
+{"id":"pm-41619543","decision":"exclude","code":"CN","note":"Z-coherence neurofeedback study; the outcome is fronto-limbic coherence (connectivity), not band power."}
+{"id":"pm-41722855","decision":"exclude","code":"X","reason":"Aperiodic slope and offset in adolescents predicting recurrence; not a band-power result"}
+{"id":"pm-41888277","decision":"defer","note":"[parked: no full text] abstract reports higher relative beta power in MDD but gives no scalp sites, and there is no PMC full text"}
+{"id":"pm-42128317","decision":"exclude","code":"MEG","note":"Resting low-gamma power and connectivity from MEG, not EEG."}
+{"id":"pm-42197874","decision":"exclude","code":"CN","note":"Eight-channel classifier study; the results are classification accuracy with no band-direction result."}
+{"id":"pm-42297310","decision":"exclude","code":"X","reason":"Theta power by inflammation interaction predicting future symptoms; a prospective prediction, not a group difference or symptom correlation"}
+{"id":"pm-42341411","decision":"exclude","code":"NR","note":"EEG predictors of response to tDCS; treatment-response prediction."}
+{"id":"pm-42763994","decision":"exclude","code":"CN","note":"Theta-default mode network functional connectivity in adolescent MDD with internet addiction; connectivity result."}
+{"id":"pm-42848743","decision":"defer","note":"[parked: no full text] abstract reports higher delta and theta power in adolescent MDD but gives no scalp regions, and there is no PMC full text"}
+{"id":"pm-6615936","decision":"defer","note":"[parked: no full text] 1983 abstract reports frontal asymmetry in high vs low BDI scorers but gives no frequency band or electrode sites, and there is no PMC full text"}
