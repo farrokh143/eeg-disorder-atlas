@@ -1287,6 +1287,26 @@ window.NF_DATA = {
       detail: "Eyes-closed resting frontal EEG (F3/F4) in 35 adults with a history of depression. Lower frontal delta power predicted more psychological pain while controlling for depressive symptoms. Frontal alpha asymmetry did not add to the models, and the fractal dimension asymmetry result is not used here. Taken from the abstract; not checked in the full text. Symptom correlation in a small sample.",
       design: "Cross-sectional correlation",
       cite: { authors: "Meerwijk EL, et al.", year: 2015, title: "Resting-state EEG delta power is associated with psychological pain in adults with a history of depression", journal: "Biol Psychol" }
+    },
+    {
+      id: "pm-26363266", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 39, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["lowmood","motor"],
+      claim: "MDD vs healthy: left-lateralised resting frontal alpha asymmetry, with lower activity levels",
+      detail: "Resting eyes-closed EEG in 20 MDD patients and 19 healthy controls. Patients had left-lateralised frontal alpha asymmetry and lower actigraphy activity; asymmetry correlated with activity scores. Patients were on antidepressants, which the abstract lists as a limitation. Taken from the abstract; not checked in the full text. Small sample.",
+      design: "Case-control",
+      cite: { authors: "Cantisani A, et al.", year: 2015, title: "Psychomotor retardation is linked to frontal alpha asymmetry in major depression", journal: "J Affect Disord" }
+    },
+    {
+      id: "pm-26392114", condition: "depression", type: "protocol",
+      metrics: { design: 1, control: "none", blinded: null, n: 20, k: null },
+      sites: ["F3","Pz"], bands: ["beta","alpha","theta"], direction: "ratio", evidence: "preliminary",
+      changes: { beta: "up", alpha: "regulate", theta: "regulate" }, symptoms: ["lowmood","anxiety"],
+      claim: "Neurofeedback (beta at F3, alpha/theta at Pz), 8 weeks, open label: lower depression scores, no asymmetry change",
+      detail: "Open-label, uncontrolled 8-week neurofeedback in 20 people with MDD: beta training at F3 and alpha/theta training at Pz, 60 minutes per session. Depression, anxiety and severity scores improved; the interhemispheric alpha asymmetry score did not change. No control group, so the improvement cannot be attributed to training. Taken from the abstract; not checked in the full text.",
+      design: "Open-label pilot (no control)",
+      cite: { authors: "Cheon EJ, et al.", year: 2016, title: "The Efficacy of Neurofeedback in Patients with Major Depressive Disorder: An Open Labeled Prospective Study", journal: "Appl Psychophysiol Biofeedback" }
     }
   ],
 
