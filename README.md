@@ -8,6 +8,12 @@ evidence behind each finding.
 - Narrow with dropdowns: **disorder**, **band**, **direction** (elevated / reduced / asymmetry)
   and **symptom**, or free-text search.
 - Electrodes with research light up; ring colours show the EEG bands studied there.
+- **Neighbouring electrodes** (dashed) are included by default, because scalp electrodes pick up
+  activity from adjacent cortex (volume conduction). Each card says whether the finding is at a
+  selected site, a neighbouring site, or whole-head.
+- **Direction profile**: for the selected area, chips summarise what the marker studies report
+  (e.g. Theta ↑ 10, Delta ↓ 1). Tap one to look it up.
+- Built phone-first: large tap targets, swipeable chip rows, and a floating results button.
 - Each finding shows evidence grade, study design, per-band direction (e.g. theta ↑, beta ↓),
   the symptoms studied or measured, full citation and a PubMed search link.
 - Findings are split into **EEG markers** (how the EEG differs in a condition) and

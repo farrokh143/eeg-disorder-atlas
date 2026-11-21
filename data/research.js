@@ -508,6 +508,8 @@ window.NF_DATA = {
   ],
 
   methodology: [
+    { authors: "Srinivasan R, Nunez PL, Silberstein RB", year: 1998, title: "Spatial filtering and neocortical dynamics: estimates of EEG coherence", journal: "IEEE Transactions on Biomedical Engineering", note: "Volume conduction through the skull blurs scalp EEG: electrodes up to 10–12 cm apart can look correlated even when the underlying sources are not, which is why neighbouring sites are shown." },
+    { authors: "van den Broek SP, Reinders F, Donderwinkel M, Peters MJ", year: 1998, title: "Volume conduction effects in EEG and MEG", journal: "Electroencephalography and Clinical Neurophysiology", note: "Skull conductivity smears the EEG across the scalp; skull defects and lesions also change what an electrode records." },
     { authors: "Ros T, Enriquez-Geppert S, Zotev V, et al.", year: 2020, title: "Consensus on the reporting and experimental design of clinical and cognitive-behavioural neurofeedback studies (CRED-nf checklist)", journal: "Brain", note: "Checklist for judging study quality." },
     { authors: "Thibault RT, Raz A", year: 2017, title: "The psychology of neurofeedback: clinical intervention even if applied placebo", journal: "American Psychologist", note: "Argues much of the benefit may be non-specific." },
     { authors: "Sitaram R, Ros T, Stoeckel L, et al.", year: 2017, title: "Closed-loop brain training: the science of neurofeedback", journal: "Nature Reviews Neuroscience", note: "Mechanisms overview." },
