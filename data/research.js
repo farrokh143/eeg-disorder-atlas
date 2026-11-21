@@ -2507,6 +2507,56 @@ window.NF_DATA = {
       detail: "142 youth with ASD vs 138 typically developing youth across four sites, eyes-open resting EEG with 124 channels grouped into nine regions. Alpha power was 20-46% lower in the ASD group at all nine regions, so the entry is whole-head. Sex-by-diagnosis gamma effects and correlations with socialisation are not part of this entry. Case-control design.",
       design: "Case-control",
       cite: { authors: "Neuhaus E, et al.", year: 2021, title: "Resting state EEG in youth with ASD: age, sex, and relation to phenotype", journal: "J Neurodev Disord" }
+    },
+    {
+      id: "pm-35585637", condition: "autism", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 411, k: null },
+      sites: [], bands: ["alpha"], direction: "ratio", evidence: "contested",
+      changes: { alpha: "mixed" }, symptoms: ["social"],
+      claim: "Autism: no replicated difference in resting power or alpha peak metrics vs neurotypical people",
+      detail: "212 people with ASD vs 199 neurotypical people (IQ above 75), eyes-open and eyes-closed resting EEG analysed in source space. Power-spectrum and connectivity differences found in the training set (weak; alpha reactivity to eye opening) did not replicate in the 30% validation set, so no difference is reported. Covered by the whole-head entry because the group effects were not regional. Cross-sectional design.",
+      design: "Case-control",
+      cite: { authors: "Garcés P, et al.", year: 2022, title: "Resting state EEG power spectrum and functional connectivity in autism: a cross-sectional analysis", journal: "Mol Autism" }
+    },
+    {
+      id: "pm-37172019", condition: "autism", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: [], bands: ["delta","theta","alpha","beta","gamma"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "mixed", theta: "up", alpha: "up", beta: "up", gamma: "up" }, symptoms: ["social"],
+      claim: "Preschool boys with ASD: higher relative power in delta to gamma bands than controls at rest",
+      detail: "Taken from the abstract; not checked in the full text. Preschool-aged boys with ASD vs matched typically developing boys, resting spectral EEG (pilot). Absolute delta was lower at central and posterior sites, while relative power was higher in delta, theta, alpha, beta and gamma; frontal absolute beta and gamma were higher. The number of children is not stated in the abstract, so n is null. The theta/beta ratio results were not used for the bands. Case-control pilot.",
+      design: "Case-control",
+      cite: { authors: "Zhao Q, et al.", year: 2024, title: "Resting-state EEG patterns of preschool-aged boys with autism spectrum disorder: A pilot study", journal: "Appl Neuropsychol Child" }
+    },
+    {
+      id: "pm-37330940", condition: "autism", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 32, k: null },
+      sites: [], bands: ["hibeta","gamma","theta"], direction: "ratio", evidence: "preliminary",
+      changes: { hibeta: "up", gamma: "up", theta: "down" }, symptoms: ["social"],
+      claim: "Children with ASD: higher high-beta and gamma power, lower theta power, eyes open at rest",
+      detail: "14 children with ASD vs 18 typically developing children (5-11 years), 3 min eyes-open resting EEG on 19 electrodes. Log power in high-beta and gamma was higher across the sample in ASD, and theta was lower in the medial, central and posterior areas, so the entry is whole-head. The coefficient-of-variation and multiscale-entropy results were not used. Small case-control study; high-beta is the 20.5-30 Hz band.",
+      design: "Case-control",
+      cite: { authors: "Angulo-Ruiz BY, et al.", year: 2023, title: "Linear and Non-linear Analyses of EEG in a Group of ASD Children During Resting State Condition", journal: "Brain Topogr" }
+    },
+    {
+      id: "pm-38607475", condition: "autism", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 106, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["gamma"], direction: "ratio", evidence: "contested",
+      changes: { gamma: "mixed" }, symptoms: ["social"],
+      claim: "Young autistic children: no difference in resting frontal gamma power from controls",
+      detail: "Taken from the abstract; not checked in the full text. 48 autistic children vs 58 age- and sex-matched neurotypical children aged 22-60 months, resting frontal gamma power. No group difference was found. Within autistic children, lower frontal gamma tracked better expressive language and non-verbal ability, but those language and cognitive links are not atlas symptoms and are not in this entry. Cross-sectional design.",
+      design: "Case-control",
+      cite: { authors: "Mukerji CE, et al.", year: 2025, title: "Resting Frontal Gamma Power is Associated with Both Expressive Language and Non-verbal Cognitive Abilities in Young Autistic Children", journal: "J Autism Dev Disord" }
+    },
+    {
+      id: "pm-38901364", condition: "autism", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 47, k: null },
+      sites: ["F7","F8","F3","F4","T5","T6","P3","P4"], bands: ["gamma"], direction: "down", evidence: "preliminary",
+      changes: { gamma: "down" }, symptoms: ["social"],
+      claim: "Adults with ASD: lower resting gamma power, most over inferior frontal and temporo-parietal sites",
+      detail: "Taken from the abstract; not checked in the full text. 23 adults with ASD vs 24 typically developing adults, resting high-density EEG, gamma (30-100 Hz) absolute power. Gamma was reduced across the range, most clearly over inferior frontal and temporo-parietal junction areas, and over left dorsolateral prefrontal sites. The abstract names regions rather than electrodes, so F7/F8 (inferior frontal), F3/F4 (dorsolateral prefrontal) and T5/T6/P3/P4 (temporo-parietal) were used. Case-control design.",
+      design: "Case-control",
+      cite: { authors: "Kakuszi B, et al.", year: 2024, title: "Alterations in resting-state gamma-activity is adults with autism spectrum disorder: A High-Density EEG study", journal: "Psychiatry Res" }
     }
   ],
 
