@@ -42,7 +42,7 @@ or to offer options. After each batch, start the next one straight away.
    `reviews/<disorder-slug>-<n>.jsonl` (use the Write tool).
 6. **Check:** `node tools/apply-review.js reviews/<file>.jsonl --check`. Fix every problem it lists and repeat.
 7. **Apply:** `node tools/apply-review.js reviews/<file>.jsonl`. It must end with "Validation OK".
-8. **Merge:** commit the log, `data/research.js` and the review file. Push, open a PR and merge it:
+8. **Merge:** first run `git branch --show-current` and make sure it is your review branch, not `main`. Then commit the log, `data/research.js` and the review file. Push, open a PR and merge it:
    ```
    git add -A && git commit -m "Full-text review: <Disorder> batch <n> (<x> included, <y> excluded, <z> deferred)"
    git push -u origin HEAD
