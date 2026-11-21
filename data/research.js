@@ -1847,6 +1847,36 @@ window.NF_DATA = {
       detail: "Eyes-closed resting EEG from 19 sites in 16 males and 16 females with DSM-5 ADHD, with sex-matched controls. Males with ADHD had globally reduced absolute beta, globally elevated relative theta and a larger theta/beta ratio than male controls; females showed no global group effect. Control group size is not stated in the abstract, so n is null. Taken from the abstract; not checked in the full text.",
       design: "Case-control",
       cite: { authors: "Dupuy FE, et al.", year: 2021, title: "DSM-5 Adult Attention-Deficit/Hyperactivity Disorder: Sex Differences in EEG Activity", journal: "Appl Psychophysiol Biofeedback" }
+    },
+    {
+      id: "pm-35151696", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 225, k: null },
+      sites: [], bands: ["theta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "ADHD subtypes (combined and inattentive) vs controls: globally higher eyes-open relative theta",
+      detail: "225 children aged 5-16 with ADHD combined or inattentive type vs controls, eyes-open resting EEG, with age groups. The AD/HD groups had globally increased relative theta; regional alpha and beta differences had no direction given in the abstract. Taken from the abstract; not checked in the full text. Case-control design.",
+      design: "Case-control",
+      cite: { authors: "Mason LM, et al.", year: 2022, title: "Age-related changes in the EEG in an eyes-open condition: II. Subtypes of AD/HD", journal: "Int J Psychophysiol" }
+    },
+    {
+      id: "pm-35182242", condition: "adhd", type: "protocol",
+      metrics: { design: 4, control: "active", blinded: null, n: 121, k: null },
+      sites: ["O1","O2"], bands: ["alpha"], direction: "up", evidence: "moderate",
+      changes: { alpha: "up" }, symptoms: ["inattention","hyperactivity","impulsivity","executive","memory"],
+      claim: "Remote neurofeedback, computerized cognitive or combined training in children with ADHD: eyes-open alpha rose",
+      detail: "121 children with ADHD randomised to remote neurofeedback, computerized cognitive training (active comparator) or both; 80 completed 3 months of training. Eyes-open relative alpha increased after training in all three groups, with a significant overall effect; no differences between groups. The EEG outcome is at O1 and O2 and the training sites are not described in the passages read. Eyes-closed alpha change was not significant.",
+      design: "RCT (active comparator)",
+      cite: { authors: "Luo X, et al.", year: 2023, title: "A randomized controlled study of remote computerized cognitive, neurofeedback, and combined training in the treatment of children with attention-deficit/hyperactivity disorder", journal: "Eur Child Adolesc Psychiatry" }
+    },
+    {
+      id: "pm-36681294", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 102, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["delta","theta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up", theta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "ADHD combined subtype: more frontal delta and theta than inattentive subtype and controls",
+      detail: "34 children each with ADHD combined type, ADHD inattentive type and typically developing children, frontal single-channel dry-sensor EEG at eyes-closed rest, eyes-open rest and focus tasks. Frontal delta and theta power were higher in the combined subtype in all conditions; alpha and beta effects were moderated by daytime sleepiness and are not used here. Taken from the abstract; not checked in the full text. Cross-sectional comparison of three groups.",
+      design: "Case-control",
+      cite: { authors: "McCabe LE, et al.", year: 2023, title: "Links between excessive daytime sleepiness and EEG power and activation in two subtypes of ADHD", journal: "Biol Psychol" }
     }
   ],
 
