@@ -106,6 +106,10 @@ Epilepsy gave the fewest survivors (most hits were intracranial, imaging, connec
 
 487 papers screened on title and abstract: 155 passed to `full-text` and 332 were excluded (one as a duplicate). Same rules as earlier rounds. New exclusion reasons: "Sleep EEG, not resting wakefulness" (2) and "Retracted publication" (1). Parkinson's papers were mostly excluded because they were deep brain stimulation or local field potential recordings (intracranial, 26 papers across this round) or MEG. Substance-use survivors include acute and chronic drug, alcohol-family-history, nicotine and cannabis studies; acute drug-challenge and treatment-effect studies were excluded. Prodromal synucleinopathy (REM sleep behaviour disorder) and visual snow syndrome studies passed and are outside the 14 atlas conditions. Only 9 hand-picked rows without a PubMed ID remain at `to-review`. First-pass screening of all disorders is now complete. Decided from titles and abstracts by one reviewer (Claude); human second check still to do.
 
+### Full-text review (21 Nov 2026)
+
+All 836 papers that passed screening (plus the hand-picked candidates) were reviewed by Claude Haiku sub-agents following `RUNBOOK.md`, in batches of 10, each merged as its own PR (#16–#122, with runbook fixes in between). Every decision was checked by `tools/apply-review.js` before it was written. Result: 264 studies added to the atlas (atlas total 310), 299 excluded with a reason, 226 set aside (176 with no open full text and an abstract too thin to use; 50 about conditions outside the 14 atlas conditions). About three in four new entries were taken from the abstract alone (labelled in each entry's detail) because PMC had no full text. Exclusions after full text include non-band-power measures (aperiodic exponent, burst statistics, peak alpha frequency, alpha reactivity) under the code NONBAND. One case report and one study filed under the wrong condition were taken back out after spot-checks. No human check yet.
+
 ## Bulk pull (PubMed)
 
 The searches below use the core query (EEG terms AND resting-state terms AND spectral terms AND humans)
