@@ -2887,6 +2887,66 @@ window.NF_DATA = {
       detail: "15 women with alcohol use disorder and 15 age-, sex- and education-matched controls, eyes-closed resting EEG. Absolute and relative beta power were higher in the AUD group, with the beta difference across the entire scalp, so sites are whole-head. Connectivity results are not used here. Taken from the abstract; not checked in the full text. Very small case-control study in women only.",
       design: "Case-control",
       cite: { authors: "Herrera-Díaz A, et al.", year: 2016, title: "Functional Connectivity and Quantitative EEG in Women with Alcohol Use Disorders: A Resting-State Study", journal: "Brain Topogr" }
+    },
+    {
+      id: "pm-27354838", condition: "sud", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 70, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["delta","theta","alpha"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "up" }, symptoms: ["craving"],
+      claim: "Tobacco-smoking mothers: higher frontal delta, theta and alpha power than non-smoking mothers",
+      detail: "35 smoking and 35 non-smoking mothers, resting EEG from a 128-channel net. Low-frequency power (delta, theta, alpha, alpha1) was higher at frontal sites in smokers; alpha2, beta and gamma did not differ. The frontal set above is the frontal region of the montage; the exact electrode labels were not checked against the paper. Cross-sectional study with no blinding or sham control.",
+      design: "Case-control",
+      cite: { authors: "Wilbanks HE, et al.", year: 2016, title: "Tobacco Smoking and the Resting Maternal Brain: A Preliminary Study of Frontal EEG", journal: "Yale J Biol Med" }
+    },
+    {
+      id: "pm-29778070", condition: "sud", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 61, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta","beta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up", beta: "up" }, symptoms: ["impulsivity"],
+      claim: "Binge drinkers: higher frontal theta and beta power than light drinkers; alpha power unchanged",
+      detail: "Young adults in binge-drinking vs light-drinking groups, eyes-open and eyes-closed resting EEG. Frontal theta and beta power were higher in binge drinkers, and alpha peak frequency was 0.7 Hz slower; alpha power did not differ. Theta and alpha slowing persisted after adjusting for depression, anxiety and personality. The frontal set above is the frontal region of the montage; exact electrode labels were not checked. Binge drinking is a drinking pattern, not a diagnosis; cross-sectional design.",
+      design: "Case-control",
+      cite: { authors: "Affan RO, et al.", year: 2018, title: "High-intensity binge drinking is associated with alterations in spontaneous neural oscillations in young adults", journal: "Alcohol" }
+    },
+    {
+      id: "pm-35149322", condition: "sud", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 36, k: null },
+      sites: [], bands: ["beta","delta"], direction: "up", evidence: "preliminary",
+      changes: { beta: "up", delta: "up" }, symptoms: ["impulsivity"],
+      claim: "Prescription opioid use disorder: higher beta and delta power than healthy volunteers; theta and alpha unchanged",
+      detail: "18 people with prescription opioid use disorder and 18 healthy volunteers, resting EEG. Beta1, beta2 and beta3 amplitude density was higher across frontal, temporal-central and posterior areas, and delta was higher; theta and alpha did not differ. Higher beta and delta were linked to poorer impulse control on the BIS-11 subscales. The abstract gives regions, not electrodes, so sites are whole-head. Taken from the abstract; not checked in the full text. Pilot study with a small sample.",
+      design: "Case-control",
+      cite: { authors: "Corace K, et al.", year: 2022, title: "Resting State EEG Activity Related to Impulsivity in People with Prescription Opioid Use Disorder", journal: "Psychiatry Res Neuroimaging" }
+    },
+    {
+      id: "pm-35662565", condition: "sud", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 71, k: null },
+      sites: [], bands: ["theta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", alpha: "down" }, symptoms: ["craving"],
+      claim: "Alcohol use disorder with 2 weeks to 6 months abstinence: more theta and less alpha power than healthy controls",
+      detail: "29 people with AUD abstinent 15 days to 6 months, 26 with AUD abstinent 6 to 13 months, and 16 healthy controls, eyes-closed resting EEG. The shorter-abstinence group had higher theta and lower alpha power than both the longer-abstinence and control groups; the longer-abstinence group resembled controls. Only the short-abstinence comparison is used here. Sites are whole-head because the abstract names no electrodes. Taken from the abstract; not checked in the full text. Cross-sectional study.",
+      design: "Case-control",
+      cite: { authors: "Martínez-Maldonado A, et al.", year: 2022, title: "Brain oscillatory functioning after long-term alcohol abstinence", journal: "Int J Psychophysiol" }
+    },
+    {
+      id: "pm-35698004", condition: "sud", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 48, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "up", evidence: "preliminary",
+      changes: { alpha: "up" }, symptoms: ["inattention"],
+      claim: "Cannabis use disorder: higher relative prefrontal alpha than controls; more alpha, worse attention",
+      detail: "24 people with cannabis use disorder and 24 non-user controls, resting EEG. Relative alpha was higher in the patients and was localised mainly to prefrontal cortex. Source-localised (EEG source imaging); mapped to the overlying scalp region. In patients only, lower attentional performance was linked to higher alpha; the correlation was absent in controls. Cross-sectional study with no blinding or sham control.",
+      design: "Case-control",
+      cite: { authors: "Andriot T, et al.", year: 2022, title: "Electrophysiological and behavioral correlates of cannabis use disorder", journal: "Cogn Affect Behav Neurosci" }
+    },
+    {
+      id: "pm-35699268", condition: "sud", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 85, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["beta","gamma"], direction: "up", evidence: "preliminary",
+      changes: { beta: "up", gamma: "up" }, symptoms: ["craving"],
+      claim: "Mothers with substance use: higher frontal beta and gamma power than non-substance-using mothers",
+      detail: "48 substance-using mothers and 37 non-substance-using mothers, resting frontal EEG across seven bands. Beta and gamma power were higher in the substance-using mothers; no between-group difference was found in parental reflective functioning. The frontal set above is the frontal region of the montage; exact electrode labels were not checked. Cross-sectional study with no blinding or sham control; the substance-use type is mixed.",
+      design: "Case-control",
+      cite: { authors: "Ngoh G, et al.", year: 2022, title: "Exploring resting frontal EEG and reflective functioning in maternal substance use", journal: "Infant Ment Health J" }
     }
   ],
 
