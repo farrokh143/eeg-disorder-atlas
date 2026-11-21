@@ -1207,6 +1207,46 @@ window.NF_DATA = {
       detail: "Eyes-closed resting EEG in 75 people from a multigenerational study: 37 high-risk (descendants of probands with major depression) and 38 low-risk; MRI about 5 years later. The high-risk group had greater alpha asymmetry with relatively less right parietal activity. The alpha-to-cortical-thickness correlation is not used here. Taken from the abstract; not checked in the full text. Risk groups, not patients.",
       design: "Cohort (high-risk vs low-risk)",
       cite: { authors: "Bruder GE, et al.", year: 2012, title: "Relationship of resting EEG with anatomical MRI measures in individuals at high and low risk for depression", journal: "Hum Brain Mapp" }
+    },
+    {
+      id: "pm-22408133", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
+      sites: ["Fp1","F7","F3"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
+      claim: "Euthymic recurrent MDD women: a tendency toward lower left frontal activity (alpha asymmetry)",
+      detail: "Resting EEG in 20 euthymic women with recurrent MDD, all on escitalopram, and 40 matched healthy women. Left frontal activity was a little lower in MDD (p = .04), and discriminant analysis showed more right frontal activation. The effect is small and the patients are medicated, which limits the result. Taken from the abstract; not checked in the full text. The heart-rate results are not used.",
+      design: "Case-control",
+      cite: { authors: "Chang JS, et al.", year: 2012, title: "An integrative assessment of the psychophysiologic alterations in young women with recurrent major depressive disorder", journal: "Psychosom Med" }
+    },
+    {
+      id: "pm-22939462", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 96, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4"], bands: ["alpha"], direction: "up", evidence: "preliminary",
+      changes: { alpha: "up" }, symptoms: ["lowmood"],
+      claim: "Unmedicated MDD vs controls: higher frontal and parietal alpha power, most in males",
+      detail: "Resting EEG in 53 unmedicated MDD patients (29 women) and 43 controls (23 women). Frontal and parietal alpha power was higher in MDD, with left midfrontal hypoactivity, and the effect was strongest in depressed men; women had higher right parietal activity. The subgenual cingulate theta result is deep and is not used. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Jaworska N, et al.", year: 2012, title: "α Power, α asymmetry and anterior cingulate cortex activity in depressed males and females", journal: "J Psychiatr Res" }
+    },
+    {
+      id: "pm-2307762", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 14, k: null },
+      sites: ["Fp1","F7","F3","P4","T6","O2"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
+      claim: "Previously depressed (no current symptoms): less left anterior and less right posterior alpha activation",
+      detail: "Resting EEG in 6 normothymic previously depressed people with no drug treatment and 8 never-depressed controls, across three reference montages. Alpha was the only band with the group interaction; previously depressed people had less left-sided anterior and less right-sided posterior activation. The result is a remitted-history marker, not current depression. Taken from the abstract; not checked in the full text. Very small study; old 1990 design.",
+      design: "Case-control",
+      cite: { authors: "Henriques JB, et al.", year: 1990, title: "Regional brain electrical asymmetries discriminate between previously depressed and healthy control subjects", journal: "J Abnorm Psychol" }
+    },
+    {
+      id: "pm-23733090", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 107, k: null },
+      sites: ["P3","Pz","P4","O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["lowmood"],
+      claim: "MDD: lower parietal-occipital alpha (eyes open) with more severe depression",
+      detail: "Resting EEG in 107 patients with major depressive disorder. Parietal-occipital alpha power (eyes open) was negatively associated with depression severity. The BDNF Val66Met genotype effect on global eyes-closed alpha is a genotype result and is not used here. Taken from the abstract; not checked in the full text. Cross-sectional association, not a diagnostic test.",
+      design: "Cross-sectional correlation",
+      cite: { authors: "Zoon HF, et al.", year: 2013, title: "EEG alpha power as an intermediate measure between brain-derived neurotrophic factor Val66Met and depression severity in patients with major depressive disorder", journal: "J Clin Neurophysiol" }
     }
   ],
 
