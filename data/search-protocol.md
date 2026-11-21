@@ -1,6 +1,6 @@
 # Research collection protocol
 
-How studies are found, screened and recorded for the EEG Disorder Atlas. The aim is a
+How studies are found, screened and recorded for the EEG Disorder Atlas. The goal: link resting-state EEG patterns to disorders and symptoms, with a confidence rating for each link. The public version of this method is `methods.html`. The aim is a
 living systematic review: the same searches, run on a schedule, with every decision logged.
 
 ## Where the data lives (all in this repository)
@@ -74,3 +74,4 @@ Re-run the searches monthly. Record each run below.
 | Date | Searches run | New hits | Included | Excluded | By |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-21 | Seed set (manual, verified citations) | 47 | 44 | 3 | Claude, reviewed by owner |
+| 2026-11-21 | Run 1: web search for gap disorders (schizophrenia, PTSD, anxiety, depression, ADHD symptom links, autism, migraine, epilepsy, Parkinson's) | 15 | 2 | 0 | Claude; 13 left as to-review |

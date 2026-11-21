@@ -45,6 +45,11 @@ No build step. Open `index.html` in a browser, or serve the folder:
 python3 -m http.server 8000   # then open http://localhost:8000
 ```
 
+## Method
+
+The research framework (goal, eligibility, search strategy, screening, grading and limits) is published
+on the site at `methods.html`, with live counts read from `data/research-log.csv`.
+
 ## Data (GitHub is the database)
 
 | File | Contents |
