@@ -8,8 +8,14 @@ evidence behind each finding.
 - Electrodes with research light up; ring colours show the **EEG bands** studied there.
 - Click an **electrode** to list only the studies at that site; filter by band,
   evidence grade, or free-text search.
-- Each finding shows evidence grade, study design, direction (↑ ↓ ratio, asymmetry),
-  full citation and a PubMed search link.
+- Each finding shows evidence grade, study design, per-band direction (e.g. theta ↑, beta ↓),
+  the symptoms studied or measured, full citation and a PubMed search link.
+- Findings are split into **EEG markers** (how the EEG differs in a condition) and
+  **treatment evidence** (neurofeedback studies and how they held up).
+- **Start from a client's EEG**: pick sites (or a region), a band and elevated/reduced,
+  plus the client's symptoms. The atlas lists conditions where that pattern has been
+  reported (ranked by symptom overlap) and treatment studies that train against it.
+  The view is saved in the URL (e.g. `#p/theta/up/F3.Fz.F4/inattention`) so it can be shared.
 
 ## Run
 
@@ -30,7 +36,10 @@ All content lives in [`data/research.js`](data/research.js). Add an entry to `fi
   type: "protocol",             // "protocol" (NF training) | "biomarker" (EEG difference)
   sites: ["Cz"],                // 10-20 labels (T3/T4/T5/T6 naming); [] = individualised
   bands: ["theta", "beta"],     // ids from `bands`
-  direction: "ratio",           // "up" | "down" | "ratio" | "asymmetry"
+  direction: "ratio",           // "up" | "down" | "ratio" | "asymmetry" (summary only)
+  changes: { theta: "down", beta: "up" }, // per band: "up" | "down" | "asymmetry" | "regulate" | "mixed"
+                                // marker = how it differs in the condition; protocol = which way training pushes it
+  symptoms: ["inattention"],    // ids from `symptoms`: marker = core symptoms of the group; protocol = outcomes measured
   evidence: "moderate",         // "strong" | "moderate" | "preliminary" | "contested"
   claim: "One-line finding",
   detail: "Two or three sentences on what the study found.",
