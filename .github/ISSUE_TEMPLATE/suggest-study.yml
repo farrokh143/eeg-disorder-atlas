@@ -1,0 +1,28 @@
+name: Suggest a study
+description: Propose a paper to add. It will be logged in data/research-log.csv and screened.
+title: "[Study] "
+labels: ["study-suggestion"]
+body:
+  - type: input
+    id: citation
+    attributes:
+      label: Citation or link
+      description: Authors, year, title, or a PubMed / DOI link.
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type
+      options: [Resting-state EEG marker, Neurofeedback / EEG feedback treatment, Not sure]
+    validations:
+      required: true
+  - type: input
+    id: disorder
+    attributes:
+      label: Disorder or symptom
+  - type: textarea
+    id: finding
+    attributes:
+      label: What it found
+      description: Band, direction (higher/lower) and scalp sites if you know them.

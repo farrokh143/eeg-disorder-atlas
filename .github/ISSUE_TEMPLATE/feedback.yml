@@ -1,0 +1,22 @@
+name: Feedback on the atlas
+description: Tell us what is confusing, missing or wrong on the site.
+title: "[Feedback] "
+labels: ["feedback"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What did you notice?
+      description: What were you trying to do, and what happened?
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Where on the site?
+      placeholder: e.g. ADHD row, the 10-20 map, the password screen
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device
+      options: [Phone, Tablet, Computer]

@@ -45,6 +45,15 @@ No build step. Open `index.html` in a browser, or serve the folder:
 python3 -m http.server 8000   # then open http://localhost:8000
 ```
 
+## Data (GitHub is the database)
+
+| File | Contents |
+| --- | --- |
+| `data/research.js` | Approved studies shown on the site |
+| `data/research-log.csv` | Every paper considered, with status (`included` / `excluded` / `to-review`) and reason |
+| `data/search-protocol.md` | Inclusion criteria, search strings, screening steps, log of search runs |
+| Issues | Feedback and study suggestions (forms under *New issue*) |
+
 ## Adding research
 
 All content lives in [`data/research.js`](data/research.js). Add an entry to `findings`:
