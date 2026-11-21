@@ -877,6 +877,76 @@ window.NF_DATA = {
       detail: "Resting EEG in 9 patients with presenile AD and 9 age- and sex-matched controls. Delta and theta were raised mainly over frontal regions. The abstract also reports lower alpha and beta, but not where, so they are not listed. Photic-driving results are excluded. Taken from the abstract; not checked in the full text.",
       design: "Case-control (small pilot)",
       cite: { authors: "Nanbu Y, et al.", year: 1997, title: "[Topographic analysis of resting EEG and photic driving responses in patients with presenile Alzheimer's disease]", journal: "Rinsho Byori" }
+    },
+    {
+      id: "pm-30392042", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 40, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["lowmood","executive"],
+      claim: "MDD vs controls: frontal alpha asymmetry, more right than left, in 10-min resting EEG",
+      detail: "20 people with major depression and 20 healthy controls had a 10-minute resting EEG. Frontal alpha asymmetry and lower EEG arousal separated the groups, with about 78-81% accuracy in a discriminant analysis, which is not a diagnostic test. Electrode pairs are not stated in the abstract, so the frontal region is used. Taken from the abstract; not checked in the full text. Main subject is depression; the Alzheimer's tag was from the search.",
+      design: "Case-control (combined biomarkers)",
+      cite: { authors: "Koo PC, et al.", year: 2019, title: "Combined cognitive, psychomotor and electrophysiological biomarkers in major depressive disorder", journal: "Eur Arch Psychiatry Clin Neurosci" }
+    },
+    {
+      id: "pm-30404079", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 122, k: null },
+      sites: ["Fp1","F7","F3","O1","Fp2","F4","F8"], bands: ["theta","alpha"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up", alpha: "up" }, symptoms: ["memory","cogdecline"],
+      claim: "CAD patients with MCI: more left frontal-occipital theta and higher theta/alpha ratio",
+      detail: "122 coronary artery disease patients, 60 with MCI and 62 without, had eyes-open and eyes-closed resting EEG. Higher theta/alpha ratios and left frontal-occipital theta were linked to MCI risk, and right frontal eyes-open alpha 2 power was linked too. This is vascular cognitive impairment rather than Alzheimer's; it is included because the atlas condition covers MCI. Taken from the abstract; not checked in the full text. Logistic regression associations, not a diagnostic test.",
+      design: "Case-control (cross-sectional, MCI vs non-MCI)",
+      cite: { authors: "Tarasova IV, et al.", year: 2018, title: "EEG and Clinical Factors Associated with Mild Cognitive Impairment in Coronary Artery Disease Patients", journal: "Dement Geriatr Cogn Disord" }
+    },
+    {
+      id: "pm-32234263", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 286, k: null },
+      sites: ["P3","Pz","P4","T5","T6","O1","O2"], bands: ["delta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", alpha: "down" }, symptoms: ["memory","cogdecline"],
+      claim: "AD vs healthy older adults: lower posterior alpha and higher widespread delta sources",
+      detail: "Source-localised (eLORETA); mapped to the overlying scalp region. Resting eyes-closed EEG in 85 AD, 136 PD and 65 healthy older adults; the AD result is taken against the healthy group. Delta was higher across widespread cortex, and posterior alpha was lower; the posterior region is used for the finding. Taken from the abstract; not checked in the full text. Main subject is Parkinson's disease.",
+      design: "Case-control (source-level)",
+      cite: { authors: "Babiloni C, et al.", year: 2020, title: "Abnormal cortical neural synchronization mechanisms in quiet wakefulness are related to motor deficits, cognitive symptoms, and visual hallucinations in Parkinson's disease patients: an electroencephalographic study", journal: "Neurobiol Aging" }
+    },
+    {
+      id: "pm-33571883", condition: "parkinsons", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 72, k: null },
+      sites: ["P3","Pz","P4","T5","T6","O1","O2"], bands: ["alpha","theta"], direction: "ratio", evidence: "preliminary",
+      changes: { alpha: "down", theta: "up" }, symptoms: ["cogdecline"],
+      claim: "PD vs healthy: lower alpha/theta ratio, most posteriorly; right occipital ratio tracks visuospatial scores",
+      detail: "36 non-demented people with Parkinson's and 36 matched healthy controls had resting qEEG. The alpha/theta ratio was lower in every region in Parkinson's, with the largest difference posteriorly, and the right occipital ratio was linked to line-orientation test scores. Taken from the abstract; not checked in the full text. No Alzheimer's group; filed under Parkinson's because that is the main subject.",
+      design: "Case-control (cross-sectional correlation)",
+      cite: { authors: "Jaramillo-Jimenez A, et al.", year: 2021, title: "Resting-state EEG alpha/theta ratio related to neuropsychological test performance in Parkinson's Disease", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-35694930", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 100, k: null },
+      sites: ["T3","T4","T5","T6","O1","O2"], bands: ["delta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up" }, symptoms: ["memory","cogdecline"],
+      claim: "Amnestic MCI with epileptiform EEG activity: higher temporal and occipital delta sources",
+      detail: "Source-localised (eLORETA); mapped to the overlying scalp region. Eyes-closed resting EEG in 62 amnestic MCI patients (8 with epileptiform activity) and 38 normal older adults; delta source power was higher in temporal and occipital regions in the epileptiform subgroup than in the other groups. No participant had an epilepsy diagnosis. Taken from the abstract; not checked in the full text. Small subgroup, moderate classification accuracy.",
+      design: "Case-control (source-level, subgroup)",
+      cite: { authors: "Babiloni C, et al.", year: 2022, title: "Alzheimer's Disease with Epileptiform EEG Activity: Abnormal Cortical Sources of Resting State Delta Rhythms in Patients with Amnesic Mild Cognitive Impairment", journal: "J Alzheimers Dis" }
+    },
+    {
+      id: "pm-35973509", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 100, k: null },
+      sites: ["T3","T5","O1","O2"], bands: ["gamma"], direction: "down", evidence: "preliminary",
+      changes: { gamma: "down" }, symptoms: ["lowmood","sleep"],
+      claim: "Drug-naive first-episode MDD: lower gamma power at left temporal and both occipital sites",
+      detail: "Resting EEG in 43 drug-naive first-episode depression patients and 57 healthy controls. Gamma power was lower at left temporal and bilateral occipital sites, and the occipital gamma deficit tracked sleep disturbance. The sample is small and may include some bipolar depression. Taken from the abstract; not checked in the full text. Main subject is depression; the Alzheimer's tag was from the search.",
+      design: "Case-control (cross-sectional correlation)",
+      cite: { authors: "Liu X, et al.", year: 2022, title: "Altered gamma oscillations and beta-gamma coupling in drug-naive first-episode major depressive disorder: Association with sleep and cognitive disturbance", journal: "J Affect Disord" }
+    },
+    {
+      id: "pm-36057818", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 3, control: null, blinded: null, n: 318, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta"], direction: "up", evidence: "moderate",
+      changes: { theta: "up" }, symptoms: ["memory","cogdecline"],
+      claim: "Amyloid-positive memory complainers: more bilateral frontal theta at baseline, not at 2 years",
+      detail: "Source-localised (beamformer); mapped to the overlying scalp region. Resting EEG in 318 cognitively healthy memory complainers from the INSIGHT-preAD cohort, 88 amyloid-positive and 230 amyloid-negative, at baseline. Mid-frontal theta was higher in amyloid-positive people at baseline, but this did not replicate at 2 years; the 2-year posterior cingulate and precuneus theta differences are deep structures and are not used. Cognition was not linked to theta.",
+      design: "Cohort (amyloid-positive vs negative, source-level)",
+      cite: { authors: "Spinelli G, et al.", year: 2022, title: "Theta Band-Power Shapes Amyloid-Driven Longitudinal EEG Changes in Elderly Subjective Memory Complainers At-Risk for Alzheimer's Disease", journal: "J Alzheimers Dis" }
     }
   ],
 
