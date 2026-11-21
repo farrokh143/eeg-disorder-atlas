@@ -1087,6 +1087,46 @@ window.NF_DATA = {
       detail: "Resting EEG from 12 homologous site pairs in 87 offspring of depressed or non-depressed parents (18 with both parents depressed, 40 with one, 29 with none). Lifetime MDD in the offspring was linked to less left frontal activity at lateral sites, compared with offspring without MDD. The parental-risk alpha asymmetry at medial and parietal sites is not used for this entry. Taken from the abstract; not checked in the full text. The offspring are at risk; they are not all patients.",
       design: "Cohort (high-risk, cross-sectional comparison)",
       cite: { authors: "Bruder GE, et al.", year: 2005, title: "Electroencephalographic measures of regional hemispheric activity in offspring at risk for depressive disorders", journal: "Biol Psychiatry" }
+    },
+    {
+      id: "pm-17117963", condition: "sud", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 301, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["craving"],
+      claim: "Alcohol dependence vs controls: anterior alpha asymmetry, less left than right activation",
+      detail: "Resting EEG alpha-band asymmetry in 193 alcohol-dependent subjects and 108 controls. Alcohol-dependent subjects showed lower left, relative to right, activation in anterior regions. The MDD comorbidity effect on asymmetry was inconclusive in the abstract and is not used here. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Hayden EP, et al.", year: 2006, title: "Patterns of regional brain activity in alcohol-dependent subjects", journal: "Alcohol Clin Exp Res" }
+    },
+    {
+      id: "pm-17481594", condition: "depression", type: "biomarker",
+      metrics: { design: 3, control: null, blinded: null, n: 49, k: null },
+      sites: ["P3","Pz","P4"], bands: ["alpha"], direction: "asymmetry", evidence: "moderate",
+      changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
+      claim: "Grandchildren with two depressed generations: greater parietal alpha asymmetry (less right activity), eyes closed",
+      detail: "Eyes-closed resting EEG in 49 right-handed grandchildren: 19 with depression in a parent and a grandparent, 14 with one, and 16 with neither. The parietal alpha asymmetry was greater in the both-generations group than in the group with neither. The high-risk grandchildren are not patients; the result is an endophenotype marker. Taken from the abstract; not checked in the full text.",
+      design: "Cohort (multigenerational high-risk, cross-sectional comparison)",
+      cite: { authors: "Bruder GE, et al.", year: 2007, title: "Grandchildren at high and low risk for depression differ in EEG measures of regional brain asymmetry", journal: "Biol Psychiatry" }
+    },
+    {
+      id: "pm-18079035", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 13, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["lowmood"],
+      claim: "Depressed outpatients: lower bilateral prefrontal alpha predicts more rumination (ecological momentary assessment)",
+      detail: "Resting prefrontal alpha in 6 depressed outpatients and 7 healthy controls, with symptoms rated five times a day for 7 days. In the depressed group only, lower bilateral prefrontal alpha predicted more rumination; the self-esteem link is not used here. Taken from the abstract; not checked in the full text. Very small sample; the correlations are not diagnostic.",
+      design: "Cross-sectional correlation (ecological momentary assessment)",
+      cite: { authors: "Putnam KM, et al.", year: 2008, title: "Depressive symptoms and baseline prefrontal EEG alpha activity: a study utilizing Ecological Momentary Assessment", journal: "Biol Psychol" }
+    },
+    {
+      id: "pm-18958615", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["delta","theta","alpha","beta","hibeta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "up", beta: "up", hibeta: "up" }, symptoms: ["lowmood"],
+      claim: "MDD vs controls: higher LORETA current density in delta to beta2 at prefrontal cortex",
+      detail: "Source-localised (LORETA); mapped to the overlying scalp region. Resting 36-channel EEG in 74 unmedicated MDD subjects and matched healthy controls (control number not stated in the abstract, so n is left blank). Current density was higher in delta, theta, alpha, beta1 and beta2 in prefrontal cortex; the anterior cingulate result is deep and is not used. Removing some prefrontal electrodes weakened the differences. Taken from the abstract; not checked in the full text.",
+      design: "Case-control (source-level)",
+      cite: { authors: "Korb AS, et al.", year: 2008, title: "Brain electrical source differences between depressed subjects and healthy controls", journal: "Brain Topogr" }
     }
   ],
 
