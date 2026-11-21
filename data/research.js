@@ -2557,6 +2557,46 @@ window.NF_DATA = {
       detail: "Taken from the abstract; not checked in the full text. 23 adults with ASD vs 24 typically developing adults, resting high-density EEG, gamma (30-100 Hz) absolute power. Gamma was reduced across the range, most clearly over inferior frontal and temporo-parietal junction areas, and over left dorsolateral prefrontal sites. The abstract names regions rather than electrodes, so F7/F8 (inferior frontal), F3/F4 (dorsolateral prefrontal) and T5/T6/P3/P4 (temporo-parietal) were used. Case-control design.",
       design: "Case-control",
       cite: { authors: "Kakuszi B, et al.", year: 2024, title: "Alterations in resting-state gamma-activity is adults with autism spectrum disorder: A High-Density EEG study", journal: "Psychiatry Res" }
+    },
+    {
+      id: "pm-39251926", condition: "autism", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 101, k: null },
+      sites: [], bands: ["beta","gamma"], direction: "up", evidence: "preliminary",
+      changes: { beta: "up", gamma: "up" }, symptoms: ["social"],
+      claim: "Autism: higher resting beta and gamma power than neurotypical peers, with no alpha change",
+      detail: "Mixed study of fragile X syndrome and autism. Only the autism vs neurotypical comparison is recorded here (49 autistic participants, 52 neurotypical, aged 5 to 20). Eyes-open resting EEG with a movie on screen. Autistic participants showed higher beta power and higher low and high gamma power than neurotypical controls; alpha and signal complexity did not differ from controls. Results are given per broad region of interest, so no single site is named (whole-head). Cross-sectional case-control design.",
+      design: "Case-control",
+      cite: { authors: "Proteau-Lemieux M, et al.", year: 2024, title: "Specific EEG resting state biomarkers in FXS and ASD", journal: "J Neurodev Disord" }
+    },
+    {
+      id: "pm-39555754", condition: "autism", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 52, k: null },
+      sites: ["O1","O2"], bands: ["alpha"], direction: "up", evidence: "preliminary",
+      changes: { alpha: "up" }, symptoms: ["social"],
+      claim: "Autistic adults: higher resting alpha amplitude with eyes open than non-autistic adults",
+      detail: "29 autistic and 23 non-autistic adults. The eyes-open baseline rest period is used here; stimulus-locked alpha results from the same paradigm are not recorded. Autistic adults had higher alpha amplitude at all time points, with the clearest group difference at two posterior channels (EGI channels 66 and 84). The channels are placed here as O1 and O2 approximately; the exact scalp positions were not checked. Sensory-behaviour and cortical volume links are not used. Cross-sectional case-control design.",
+      design: "Case-control",
+      cite: { authors: "Murray SO, et al.", year: 2025, title: "Increased alpha power in autistic adults: Relation to sensory behaviors and cortical volume", journal: "Autism Res" }
+    },
+    {
+      id: "pm-41101705", condition: "autism", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 310, k: null },
+      sites: ["F3","F4"], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["social"],
+      claim: "Youths with autism: lower resting alpha peak power over frontal regions",
+      detail: "164 youths with autism and 146 typically developing youths, aged 8 to 17, with resting eyes-open EEG. Alpha peak power was lower in the autism group, tested over left and right frontal regions of interest. The frontal channels are listed here as F3 and F4 approximately; the exact electrode set was not verified. Peak number and copy-number variant links are not used here. Cross-sectional case-control design.",
+      design: "Case-control",
+      cite: { authors: "Arutiunian V, et al.", year: 2026, title: "Number of Alpha Peaks in the Electroencephalogram Is Associated With Clinical Phenotype and Copy Number Variants in Youths With Autism", journal: "Biol Psychiatry Cogn Neurosci Neuroimaging" }
+    },
+    {
+      id: "pm-41520112", condition: "autism", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 128, k: null },
+      sites: [], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["social"],
+      claim: "Autistic preschoolers with language impairment: lower resting alpha peak amplitude than peers",
+      detail: "64 autistic and 64 age-matched neurotypical children aged 2 to 6, with eyes-open resting 128-channel EEG referenced to Cz. Alpha peak amplitude did not differ between autistic and neurotypical children overall. Autistic children with language impairment had lower alpha peak amplitude than both autistic children without impairment and neurotypical peers. The regional analysis was not verified in the text checked, so the entry is whole-head. The higher aperiodic offset in autistic children is not a band result and is not recorded. Cross-sectional case-control design.",
+      design: "Case-control",
+      cite: { authors: "Chen Y, et al.", year: 2026, title: "Resting state aperiodic and periodic EEG activity in preschool-aged autistic children: differences from neurotypical peers and links to language skills", journal: "Mol Autism" }
     }
   ],
 
