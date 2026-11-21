@@ -3047,6 +3047,46 @@ window.NF_DATA = {
       detail: "29 participants: 10 neurofeedback, 10 motor-imagery brain-computer interface, and 9 controls, in a game-based protocol outside clinic conditions. Neurofeedback sessions raised resting alpha power (8-12 Hz) at Pz, and three of seven clinical measures improved in the neurofeedback group only; the motor-imagery group showed no such rise. The abstract does not state whether groups were randomised or blinded, and the control arm is not described. Taken from the abstract; not checked in the full text. Small study in a non-clinical setting.",
       design: "Controlled pilot",
       cite: { authors: "du Bois N, et al.", year: 2021, title: "Neurofeedback with low-cost, wearable electroencephalography (EEG) reduces symptoms in chronic Post-Traumatic Stress Disorder", journal: "J Affect Disord" }
+    },
+    {
+      id: "pm-26542620", condition: "tbi", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 81, k: null },
+      sites: ["F3","F4"], bands: ["alpha","beta"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry", beta: "asymmetry" }, symptoms: ["lowmood","anxiety"],
+      claim: "Athletes with past concussion (symptom-free): altered frontal alpha and beta asymmetry vs controls",
+      detail: "52 male athletes with a concussion history (9+ months earlier, symptom-free) and 29 controls, resting EEG with mood measures. Frontal alpha and beta asymmetry differed from controls; alpha asymmetry related to depression and anxiety only in the concussion group. The abstract names no electrodes; F3 and F4 are the frontal asymmetry pair assumed. Taken from the abstract; not checked in the full text. Cross-sectional study.",
+      design: "Case-control",
+      cite: { authors: "Moore RD, et al.", year: 2016, title: "Neurophysiological correlates of persistent psycho-affective alterations in athletes with a history of concussion", journal: "Brain Imaging Behav" }
+    },
+    {
+      id: "pm-26737184", condition: "tbi", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 54, k: null },
+      sites: ["Fz","F3","F4"], bands: ["delta","theta","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "down", theta: "down", beta: "up" }, symptoms: ["postconcussion"],
+      claim: "Subacute adolescent concussion: less frontal delta and theta, more beta than controls (source level)",
+      detail: "21 adolescent athletes with subacute sports concussion (3 months or less) and 33 controls, 5-minute eyes-closed resting EEG on 64 channels. Independent components were clustered into a medial frontal source domain; concussed participants had less delta and theta and more beta power there. Source-localised (ICA with Measure Projection Analysis); mapped to the overlying scalp region, so Fz, F3 and F4 are approximate. Male adolescents only; the paper compares with a separate control group.",
+      design: "Case-control",
+      cite: { authors: "Balkan O, et al.", year: 2015, title: "Source-domain spectral EEG analysis of sports-related concussion via Measure Projection Analysis", journal: "Annu Int Conf IEEE Eng Med Biol Soc" }
+    },
+    {
+      id: "pm-31094883", condition: "tbi", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 153, k: null },
+      sites: [], bands: ["theta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", alpha: "down" }, symptoms: ["postconcussion"],
+      claim: "Chronic military mTBI (over 5 months): higher global relative theta and lower relative alpha than controls",
+      detail: "71 individuals with military-related mTBI more than 5 months after injury and 82 controls, eyes-closed resting EEG. Global relative theta was higher and relative alpha lower in the mTBI group. Beta interhemispheric coherence (a connectivity measure) is not used here. Single measures classified individuals poorly (below 60%); a machine-learning composite reached 75%. Sites are whole-head because the abstract names no electrodes. Taken from the abstract; not checked in the full text. Group-level differences are not diagnostic for individuals.",
+      design: "Case-control",
+      cite: { authors: "Lewine JD, et al.", year: 2019, title: "Quantitative EEG Biomarkers for Mild Traumatic Brain Injury", journal: "J Clin Neurophysiol" }
+    },
+    {
+      id: "pm-39420809", condition: "tbi", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 47, k: null },
+      sites: ["Fz"], bands: ["theta"], direction: "ratio", evidence: "contested",
+      changes: { theta: "mixed" }, symptoms: ["memory"],
+      claim: "Subacute mTBI: no resting EEG or source-network difference from controls; anterior theta tracks verbal memory",
+      detail: "26 people with subacute mTBI and 21 healthy controls, 60-second eyes-closed resting EEG. No EEG parameter differed between the groups. Within the mTBI group, anterior cingulate theta and memory-perception network activity correlated negatively with verbal memory. Source-localised (eLORETA); mapped to the overlying scalp region, so Fz approximates the anterior cingulate. Null group result, included as contested. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Ueda M, et al.", year: 2025, title: "EEG Oscillatory Activity and Resting-State Networks Associated with Neurocognitive Function in Mild Traumatic Brain Injury", journal: "Clin EEG Neurosci" }
     }
   ],
 
