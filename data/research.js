@@ -1377,6 +1377,26 @@ window.NF_DATA = {
       detail: "Resting frontal EEG (8 min) in 34 healthy controls, 16 adolescents in remission without anxiety, 22 with acute depression without anxiety, and 23 with acute depression plus anxiety (95 in total). Only the acute depression plus anxiety group differed from controls, with more left-sided alpha power, meaning greater right-frontal activity; the other groups did not differ. The result is attributed by the authors to the anxiety comorbidity. Taken from the abstract; not checked in the full text.",
       design: "Case-control",
       cite: { authors: "Feldmann L, et al.", year: 2018, title: "Resting frontal EEG asymmetry in adolescents with major depression: Impact of disease state and comorbid anxiety disorder", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-31302517", condition: "depression", type: "protocol",
+      metrics: { design: 3, control: "none", blinded: null, n: 87, k: null },
+      sites: ["F3","F4","P3","P4"], bands: ["alpha","hibeta"], direction: "asymmetry", evidence: "contested",
+      changes: { alpha: "asymmetry", hibeta: "down" }, symptoms: ["lowmood","anxiety"],
+      claim: "Alpha-asymmetry and high-beta neurofeedback in MDD with anxiety: symptoms fell, asymmetry did not",
+      detail: "87 patients with comorbid MDD and anxiety symptoms were allocated to alpha-asymmetry neurofeedback, high-beta down-training, or a control group, with ten sessions in each neurofeedback arm. Both neurofeedback groups reduced BDI-II and BAI scores, with no difference between them. The asymmetry score did not change differently across the three groups; high-beta power at P3 fell only in the high-beta group. Taken from the abstract; not checked in the full text.",
+      design: "Controlled study",
+      cite: { authors: "Wang SY, et al.", year: 2019, title: "The effects of alpha asymmetry and high-beta down-training neurofeedback for patients with the major depressive disorder and anxiety symptoms", journal: "J Affect Disord" }
+    },
+    {
+      id: "pm-32424130", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 62, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha","beta"], direction: "ratio", evidence: "contested",
+      changes: { alpha: "mixed", beta: "mixed" }, symptoms: ["lowmood"],
+      claim: "Resting frontal alpha and beta asymmetry: no difference between MDD and matched controls",
+      detail: "Resting EEG in 30 patients with major depression and 32 matched controls. Neither group showed hemispheric alpha asymmetry at rest, and resting beta showed no asymmetry in either group, so the resting results are null. The group difference appeared only during linguistic tasks, which are excluded here. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Spironelli C, et al.", year: 2020, title: "Evidence of language-related left hypofrontality in Major Depression: An EEG Beta band study", journal: "Sci Rep" }
     }
   ],
 
