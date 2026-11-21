@@ -1777,6 +1777,56 @@ window.NF_DATA = {
       detail: "Spontaneous eyes-open EEG in 42 adults with ADHD (25 medication-naive, 17 on methylphenidate) and 59 controls. Gamma 1 and gamma 2 were lower in ADHD, most in the right centroparietal region; gamma was inversely linked to symptom severity within the ADHD group. Taken from the abstract; not checked in the full text. Right centroparietal is mapped to C4 and P4.",
       design: "Case-control",
       cite: { authors: "Tombor L, et al.", year: 2019, title: "Decreased resting gamma activity in adult attention deficit/hyperactivity disorder", journal: "World J Biol Psychiatry" }
+    },
+    {
+      id: "pm-31163371", condition: "adhd", type: "biomarker",
+      metrics: { design: 3, control: null, blinded: null, n: null, k: null },
+      sites: [], bands: ["delta","theta"], direction: "ratio", evidence: "moderate",
+      changes: { delta: "down", theta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "ADHD adults (followed from childhood): less frontal relative delta and more global relative theta than controls",
+      detail: "Eyes-closed resting EEG in 25 men diagnosed with ADHD combined type as children, recorded in childhood and again as adults, compared with controls in adulthood. Adults had lower relative frontal delta and higher relative theta across the scalp. Control group size is not stated in the abstract, so n is null. Taken from the abstract; not checked in the full text. Childhood maturation results are not used.",
+      design: "Longitudinal cohort with controls",
+      cite: { authors: "Clarke AR, et al.", year: 2019, title: "EEG development in Attention Deficit Hyperactivity Disorder: From child to adult", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-31233897", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 169, k: null },
+      sites: ["F7","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "contested",
+      changes: { alpha: "asymmetry" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "ADHD adolescents, low negative affect: more right-frontal (F8/F7) alpha asymmetry; no overall effect",
+      detail: "Resting EEG in 169 adolescents (79 with ADHD). Frontal alpha asymmetry did not differ by diagnosis overall; the rightward asymmetry at F8/F7 was found only in ADHD participants with low negative affect. Inconsistent discipline moderated the link with inattention. Posterior asymmetry showed no group effect.",
+      design: "Cross-sectional case-control",
+      cite: { authors: "Alperin BR, et al.", year: 2019, title: "The relationship between alpha asymmetry and ADHD depends on negative affect level and parenting practices", journal: "J Psychiatr Res" }
+    },
+    {
+      id: "pm-31834950", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 134, k: null },
+      sites: ["F3","Fz","F4","C3","Cz","C4","P3","Pz","P4"], bands: ["delta","theta","alpha","beta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "up", beta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "Adult ADHD: higher eyes-open delta, theta, alpha and beta power at centro-parietal sites than controls",
+      detail: "Eyes-open resting EEG in 38 adults with ADHD, 45 unaffected relatives and 51 controls (134 total). Elevated centro-parietal delta, theta, low-alpha and frontal low-beta and parietal mid-beta best separated ADHD from controls in an elastic-net classifier. Relatives are not used here. TBR did not classify ADHD. Taken from the abstract; not checked in the full text.",
+      design: "Case-control (classifier)",
+      cite: { authors: "Kiiski H, et al.", year: 2020, title: "EEG spectral power, but not theta/beta ratio, is a neuromarker for adult ADHD", journal: "Eur J Neurosci" }
+    },
+    {
+      id: "pm-31903823", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 28, k: null },
+      sites: ["P3","Pz","P4"], bands: ["delta","theta","alpha"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "ADHD children: higher source-localised delta, theta and alpha in the parietal lobe than controls",
+      detail: "Eyes-open resting EEG in 13 children with ADHD and 15 age-matched controls, analysed as current source density. Higher delta, theta and alpha in the parietal lobe for the ADHD group. Source-localised (sLORETA); mapped to the overlying scalp region. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Jouzizadeh M, et al.", year: 2020, title: "A spatial profile difference in electrical distribution of resting-state EEG in ADHD children using sLORETA", journal: "Int J Neurosci" }
+    },
+    {
+      id: "pm-31911342", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 47, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "Adult ADHD: lower relative resting eyes-open alpha in frontal regions than controls at baseline",
+      detail: "Baseline 3-minute eyes-open resting EEG (before neurofeedback) in 25 adults with ADHD and 22 healthy controls. Relative alpha was significantly lower in ADHD over the frontal region. Only the baseline resting result is used; neurofeedback, post-training and task results are not included. Individual frontal electrodes are not listed in the text, so the frontal region is used.",
+      design: "Case-control",
+      cite: { authors: "Deiber MP, et al.", year: 2020, title: "Linking alpha oscillations, attention and inhibitory control in adult ADHD with EEG neurofeedback", journal: "Neuroimage Clin" }
     }
   ],
 
