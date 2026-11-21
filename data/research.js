@@ -2277,6 +2277,46 @@ window.NF_DATA = {
       detail: "Several groups of controls and schizophrenia patients were recorded on four channels (T4-T6, P4-O2, T3-T5, P3-O1) with eyes closed and eyes open; the total participant count is not stated, so n is left blank. The acute schizophrenic group had less alpha power, largely over temporal areas. The chronic outpatient and long-stay groups are not used here. Taken from the abstract; not checked in the full text.",
       design: "Case-control",
       cite: { authors: "Fenton GW, et al.", year: 1980, title: "EEG spectral analysis in schizophrenia", journal: "Br J Psychiatry" }
+    },
+    {
+      id: "pm-7893770", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 34, k: null },
+      sites: [], bands: ["alpha","delta","theta","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { alpha: "down", delta: "mixed", theta: "mixed", beta: "mixed" }, symptoms: ["psychosis"],
+      claim: "First-episode paranoid schizophrenia: lower resting alpha-2 power over all regions than controls",
+      detail: "14 drug-naive patients with first-episode paranoid schizophrenia and 20 matched controls, resting EEG. Alpha-2 amplitude was lower over all recording regions, and no other band differed. Photic stimulation results are not used here. Small case-control study. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Wada Y, et al.", year: 1994, title: "Quantitative EEG analysis at rest and during photic stimulation in drug-naive patients with first-episode paranoid schizophrenia", journal: "Eur Arch Psychiatry Clin Neurosci" }
+    },
+    {
+      id: "pm-7972603", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 326, k: null },
+      sites: [], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["psychosis"],
+      claim: "First-episode schizophrenia: generalised more delta and theta and less alpha than controls at rest",
+      detail: "50 first-episode schizophrenia patients compared with 113 nonpsychiatric subjects; the sample also includes bipolar patients and relatives (n = 326 in total), which are not used here. Resting EEG showed a generalised pattern of more delta and theta and less alpha in schizophrenia. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Clementz BA, et al.", year: 1994, title: "Resting EEG in first-episode schizophrenia patients, bipolar psychosis patients, and their first-degree relatives", journal: "Psychophysiology" }
+    },
+    {
+      id: "pm-8146253", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 204, k: null },
+      sites: [], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia: more delta and theta, less alpha than controls, in both first-episode and chronic patients",
+      detail: "102 schizophrenic patients (44 first-episode, 58 chronic) and 102 normal comparison subjects, resting EEG. Patients showed more delta and theta and less alpha, with no difference between first-episode and chronic patients. No regions are named, so sites are left as whole-head. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Sponheim SR, et al.", year: 1994, title: "Resting EEG in first-episode and chronic schizophrenia", journal: "Psychophysiology" }
+    },
+    {
+      id: "pm-8471683", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 22, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "up", evidence: "preliminary",
+      changes: { alpha: "up" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia: relatively more frontal alpha activity than controls, eyes closed",
+      detail: "13 patients with schizophrenia and 9 age-matched controls, awake eyes-closed resting EEG. Relative alpha frequency activity was higher over frontal regions in patients. Very small study. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Kahn EM, Weiner RD, et al.", year: 1993, title: "Spectral and topographic analysis of EEG in schizophrenic patients", journal: "Biol Psychiatry" }
     }
   ],
 
