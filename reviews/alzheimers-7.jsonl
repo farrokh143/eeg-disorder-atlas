@@ -1,0 +1,10 @@
+{"id":"pm-28073596","decision":"exclude","code":"HI","note":"Nondemented volunteers only; PICALM genotype comparison, no disorder or symptom measure"}
+{"id":"pm-28118690","decision":"defer","note":"condition not in atlas: poststroke cognitive impairment (no PMC full text; abstract gives theta power at three posterior electrodes)"}
+{"id":"pm-28454845","decision":"defer","note":"condition not in atlas: dementia with Lewy bodies and Parkinson's dementia are main groups; LORETA sources, source-level mapping policy unclear"}
+{"id":"pm-28528599","decision":"defer","note":"Geriatric patients with memory impairment but no stated AD diagnosis; significant result is during backward counting (task); resting correlations have no stated direction"}
+{"id":"pm-28550254","decision":"defer","note":"No PMC full text; ICA components and inverse solution for theta and alpha-2 in PSEN1 carriers (precuneus); source-level, mapping policy unclear"}
+{"id":"pm-28621693","decision":"defer","note":"condition not in atlas: Parkinson's MCI is a main group; eLORETA sources; source-level mapping policy unclear"}
+{"id":"pm-28646686","decision":"defer","note":"No PMC full text; amyloid-positive nondemented subjects, delta/theta up and alpha down predict progression (Cox); no scalp sites or whole-head statement"}
+{"id":"pm-29439335","decision":"defer","note":"condition not in atlas: dementia with Lewy bodies is a main group; eLORETA sources; source-level mapping policy unclear"}
+{"id":"pm-29522156","decision":"exclude","code":"MEG","note":"Resting-state magnetoencephalography, not EEG"}
+{"id":"pm-29656189","decision":"exclude","code":"NODATA","note":"Full text read: no significant AD-vs-control band-power difference reported; AD result is dominant-frequency variability, and the band-power results are for DLB/PDD"}
