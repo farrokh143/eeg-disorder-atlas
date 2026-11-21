@@ -28,6 +28,15 @@ scope; excluded papers are logged in `excluded` in `data/research.js` with the r
 - With a direction chosen (e.g. elevated theta), markers show disorders where that change was
   reported, and treatment evidence shows studies that train the band the other way.
 
+## Preview password
+
+The page opens with a password screen while it is in development and shared with a small
+feedback group. The test password is `atlas-preview`. After one correct entry the browser
+remembers it (localStorage key `eegAtlasAccess`). To change the password, replace `HASH` in
+`index.html` with the SHA-256 of the new one, e.g. `printf %s 'new-password' | sha256sum`.
+
+This is a soft gate, not security: the repository and `data/research.js` are public.
+
 ## Run
 
 No build step. Open `index.html` in a browser, or serve the folder:

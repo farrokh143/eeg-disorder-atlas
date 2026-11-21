@@ -244,6 +244,19 @@ details.more[open] summary { margin-bottom: 10px; }
 
 .dsy { color: var(--ink); font-size: 0.86rem; margin-top: -4px; }
 .dsy span.hit { font-weight: 600; text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+
+/* Preview gate */
+html.locked .wrap, html.locked .jump { display: none !important; }
+.gate { display: none; min-height: 100vh; min-height: 100dvh; place-items: center; padding: 24px max(20px, env(safe-area-inset-left, 0px)); }
+html.locked .gate { display: grid; }
+.gate form { width: min(100%, 380px); display: grid; gap: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 28px 24px; }
+.gate h1 { font-size: 1.6rem; }
+.gate .tag { justify-self: start; font-size: 0.78rem; font-weight: 600; color: var(--ev-prelim); border: 1px solid currentColor; border-radius: 999px; padding: 2px 10px; }
+.gate p { margin: 0; color: var(--muted); font-size: 0.94rem; }
+.gate input { font: inherit; font-size: 16px; min-height: 46px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); }
+.gate button { min-height: 46px; border: none; border-radius: 10px; background: var(--ink); color: var(--bg); font-weight: 600; font-size: 1rem; }
+.gate .err { color: var(--ev-contested); font-size: 0.88rem; min-height: 1.2em; }
+.devtag { display: inline-block; vertical-align: middle; margin-left: 8px; font-family: var(--f-body); font-size: 0.72rem; font-weight: 600; letter-spacing: 0; color: var(--ev-prelim); border: 1px solid currentColor; border-radius: 999px; padding: 1px 8px; }
 .el .hit { fill: transparent; }
 .panel { grid-template-columns: minmax(0, 1fr); min-width: 0; }
 .mapbox, #regionBtns, .profile, .profile .row, .filterbar > * { min-width: 0; }
@@ -296,12 +309,27 @@ html, body { overflow-x: clip; }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
+<script>
+  // Preview gate: soft access check for a small feedback group. Not real security:
+  // the page and data are public on GitHub. Remembered per browser after one correct entry.
+  (function () { var ok = false; try { ok = localStorage.getItem("eegAtlasAccess") === "1"; } catch (_) {} if (!ok) document.documentElement.classList.add("locked"); })();
+</script>
 </head>
 <body>
+<div class="gate" role="dialog" aria-labelledby="gateTitle">
+  <form id="gateForm" autocomplete="off">
+    <span class="tag">Under development</span>
+    <h1 id="gateTitle">EEG Disorder Atlas</h1>
+    <p>This research atlas is still being built and is shared with a small group for feedback. Please enter the password you were given.</p>
+    <input id="gatePw" type="password" placeholder="Password" aria-label="Password" autocomplete="current-password" required>
+    <button type="submit">Enter</button>
+    <div class="err" id="gateErr" aria-live="polite"></div>
+  </form>
+</div>
 <div class="wrap">
   <header class="top">
     <div>
-      <h1>EEG Disorder Atlas</h1>
+      <h1>EEG Disorder Atlas <span class="devtag">Preview · in development</span></h1>
       <p>Resting-state EEG patterns by disorder and symptom. Tap electrodes to pick an area, then narrow by band and direction.</p>
     </div>
     <label class="search"><span class="eyebrow">Search research</span>
@@ -373,6 +401,27 @@ html, body { overflow-x: clip; }
   </section>
 </div>
 
+<script>
+  (function () {
+    const HASH = "76c9f3df7aa7c03bbfc9b1dcabfcd535d2cd2c46624151698fb12b957deca9cd"; // sha256 of the test password
+    const form = document.getElementById("gateForm"); if (!form) return;
+    async function sha(t) {
+      const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t));
+      return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, "0")).join("");
+    }
+    form.addEventListener("submit", async e => {
+      e.preventDefault();
+      const pw = document.getElementById("gatePw").value.trim(), err = document.getElementById("gateErr");
+      let ok = false;
+      try { ok = (await sha(pw)) === HASH; } catch (_) { err.textContent = "This browser can't check the password here."; return; }
+      if (!ok) { err.textContent = "That password isn't right. Check with the person who shared the link."; return; }
+      try { localStorage.setItem("eegAtlasAccess", "1"); } catch (_) {}
+      document.documentElement.classList.remove("locked");
+      window.scrollTo(0, 0);
+    });
+    if (document.documentElement.classList.contains("locked")) setTimeout(() => document.getElementById("gatePw").focus(), 50);
+  })();
+</script>
 <script src="data/research.js"></script>
 <script>
 (function () {
