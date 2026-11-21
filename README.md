@@ -13,6 +13,10 @@ evidence behind each finding.
   selected site, a neighbouring site, or whole-head.
 - **Direction profile**: for the selected area, chips summarise what the marker studies report
   (e.g. Theta ↑ 10, Delta ↓ 1). Tap one to look it up.
+- **Confidence ratings**: each group of studies gets High / Moderate / Low / Very low, using a
+  simplified GRADE approach (best supporting design, rated down for conflicting results or a single
+  primary study; treatments with no supportive blinded/sham-controlled study are capped at Low).
+  Each card shows design strength (1–5), type of control and sample size where recorded.
 - Built phone-first: large tap targets, swipeable chip rows, and a floating results button.
 - Each finding shows evidence grade, study design, per-band direction (e.g. theta ↑, beta ↓),
   the symptoms studied or measured, full citation and a PubMed search link.
@@ -44,6 +48,9 @@ All content lives in [`data/research.js`](data/research.js). Add an entry to `fi
   changes: { theta: "down", beta: "up" }, // per band: "up" | "down" | "asymmetry" | "regulate" | "mixed"
                                 // marker = how it differs in the condition; protocol = which way training pushes it
   symptoms: ["inattention"],    // ids from `symptoms`: marker = core symptoms of the group; protocol = outcomes measured
+  metrics: { design: 5, control: null, blinded: null, n: 977, k: 24 },
+                                // design 1-5: 5 meta-analysis, 4 RCT, 3 controlled study/cohort, 2 case-control/narrative review, 1 uncontrolled/pilot
+                                // control: "sham" | "active" | "usual" (waitlist/usual care) | "none" | null; n/k: only if verified, else null
   evidence: "moderate",         // "strong" | "moderate" | "preliminary" | "contested"
   claim: "One-line finding",
   detail: "Two or three sentences on what the study found.",

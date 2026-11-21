@@ -30,6 +30,9 @@ Add entries to `findings` in `data/research.js`:
                                  // biomarker = how the band differs in the condition; protocol = which way training pushes it.
                                  // The "Start from a client's EEG" lookup matches on this, so get each band's direction right.
   symptoms: ["memory", "cogdecline"], // ids from `symptoms`: biomarker = core symptoms of the studied group; protocol = outcomes measured
+  metrics: { design: 5, control: null, blinded: null, n: 977, k: 24 },
+                                // design 1-5: 5 meta-analysis, 4 RCT, 3 controlled study/cohort, 2 case-control/narrative review, 1 uncontrolled/pilot
+                                // control: "sham" | "active" | "usual" (waitlist/usual care) | "none" | null; n/k: only if verified, else null
   evidence: "strong",            // "strong" | "moderate" | "preliminary" | "contested"
   claim: "One-line finding",
   detail: "Two or three plain sentences on what the study found and its limits.",

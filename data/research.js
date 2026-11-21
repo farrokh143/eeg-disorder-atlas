@@ -12,6 +12,9 @@
  * changes:  { band: "up" | "down" | "asymmetry" | "regulate" | "mixed" }
  *           biomarker = how the band differs in the condition; protocol = which way training pushes it.
  * symptoms: ids from `symptoms`. biomarker = core symptoms of the studied group; protocol = outcomes measured.
+ * metrics:  { design: 1-5 (5 meta-analysis, 4 RCT, 3 controlled study or cohort, 2 case-control or narrative review,
+ *           1 uncontrolled / pilot / single session), control: "sham" | "active" | "usual" (waitlist or usual care) | "none" | null,
+ *           blinded: true | false | null, n: participants or null, k: studies pooled or null }. null = not recorded yet.
  * sites:    10-20 labels (old names T3/T4/T5/T6). [] = individualised / QEEG-guided.
  */
 window.NF_DATA = {
@@ -68,6 +71,7 @@ window.NF_DATA = {
     /* ---------------- Alzheimer's ---------------- */
     {
       id: "ad-jeong-2004", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["P3","Pz","P4","O1","O2","T5","T6"], bands: ["delta","theta","alpha","beta"], direction: "up", evidence: "strong",
       changes: { delta: "up", theta: "up", alpha: "down", beta: "down" }, symptoms: ["memory","cogdecline"],
       claim: "EEG slowing: more delta/theta, less posterior alpha and beta",
@@ -77,6 +81,7 @@ window.NF_DATA = {
     },
     {
       id: "ad-babiloni-2020", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["P3","Pz","P4","O1","O2"], bands: ["alpha","delta"], direction: "down", evidence: "strong",
       changes: { alpha: "down", delta: "up" }, symptoms: ["memory","cogdecline"],
       claim: "Posterior resting alpha falls and delta rises from MCI to dementia",
@@ -86,6 +91,7 @@ window.NF_DATA = {
     },
     {
       id: "ad-jelic-2000", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 3, control: null, blinded: null, n: 27, k: null },
       sites: ["T3","T5","O1","T4","T6","O2"], bands: ["theta","alpha","beta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", beta: "down", alpha: "down" }, symptoms: ["memory","cogdecline"],
       claim: "Temporal theta rise and beta fall as MCI progresses to Alzheimer's",
@@ -96,6 +102,7 @@ window.NF_DATA = {
     /* ---------------- Schizophrenia ---------------- */
     {
       id: "scz-kwon-1999", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Fz","Cz"], bands: ["gamma"], direction: "down", evidence: "moderate",
       changes: { gamma: "down" }, symptoms: ["psychosis"],
       claim: "Reduced 40 Hz gamma response to auditory clicks",
@@ -105,6 +112,7 @@ window.NF_DATA = {
     },
     {
       id: "scz-thune-2016", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 5, control: null, blinded: null, n: null, k: null },
       sites: ["Fz","Cz"], bands: ["gamma"], direction: "down", evidence: "strong",
       changes: { gamma: "down" }, symptoms: ["psychosis"],
       claim: "40 Hz auditory steady-state deficit confirmed across studies",
@@ -114,6 +122,7 @@ window.NF_DATA = {
     },
     {
       id: "scz-boutros-2008", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Fz","F3","F4","Cz"], bands: ["delta","theta","alpha"], direction: "up", evidence: "moderate",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["psychosis"],
       claim: "Resting slow-wave excess, reduced alpha",
@@ -124,6 +133,7 @@ window.NF_DATA = {
     /* ---------------- Parkinson's ---------------- */
     {
       id: "pd-klassen-2011", condition: "parkinsons", type: "biomarker",
+      metrics: { design: 3, control: null, blinded: null, n: null, k: null },
       sites: ["O1","O2","P3","P4"], bands: ["alpha","theta"], direction: "down", evidence: "moderate",
       changes: { alpha: "down", theta: "up" }, symptoms: ["cogdecline","motor"],
       claim: "Lower dominant posterior frequency predicts dementia",
@@ -134,6 +144,7 @@ window.NF_DATA = {
     /* ---------------- Brain injury (TBI) ---------------- */
     {
       id: "tbi-thatcher-1989", condition: "tbi", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["F3","F4","Fz","T3","T4"], bands: ["theta","alpha","beta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", alpha: "down", beta: "mixed" }, symptoms: ["postconcussion"],
       claim: "Discriminant qEEG features separate mild TBI from controls",
@@ -143,6 +154,7 @@ window.NF_DATA = {
     },
     {
       id: "tbi-nuwer-2005", condition: "tbi", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["delta","theta","alpha"], direction: "up", evidence: "contested",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["postconcussion","inattention","memory"],
       claim: "Slowing after TBI is real but nonspecific",
@@ -153,6 +165,7 @@ window.NF_DATA = {
     /* ---------------- Insomnia ---------------- */
     {
       id: "ins-perlis-2001", condition: "insomnia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["C3","C4"], bands: ["beta","gamma"], direction: "up", evidence: "moderate",
       changes: { beta: "up", gamma: "up" }, symptoms: ["sleep","hyperarousal"],
       claim: "More beta/gamma during NREM sleep (hyperarousal)",
@@ -163,6 +176,7 @@ window.NF_DATA = {
     /* ---------------- Autism ---------------- */
     {
       id: "asd-wang-2013", condition: "autism", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["F3","F4","C3","C4","P3","P4","O1","O2"], bands: ["delta","theta","alpha","beta","gamma"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down", beta: "up", gamma: "up" }, symptoms: ["social"],
       claim: "U-shaped profile: excess slow and fast power, reduced alpha",
@@ -173,6 +187,7 @@ window.NF_DATA = {
     /* ---------------- Alcohol & substance use ---------------- */
     {
       id: "sud-rangaswamy-2002", condition: "sud", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Cz","C3","C4","Fz"], bands: ["beta","hibeta"], direction: "up", evidence: "moderate",
       changes: { beta: "up", hibeta: "up" }, symptoms: ["craving"],
       claim: "Elevated resting beta in alcohol dependence",
@@ -183,6 +198,7 @@ window.NF_DATA = {
     /* ---------------- ADHD ---------------- */
     {
       id: "adhd-tbr-biomarker", condition: "adhd", type: "biomarker",
+      metrics: { design: 5, control: null, blinded: null, n: null, k: null },
       sites: ["Cz"], bands: ["theta","beta"], direction: "ratio", evidence: "contested",
       changes: { theta: "up", beta: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
       claim: "Elevated theta/beta ratio at Cz",
@@ -192,6 +208,7 @@ window.NF_DATA = {
     },
     {
       id: "adhd-arns-2009", condition: "adhd", type: "protocol",
+      metrics: { design: 5, control: null, blinded: null, n: null, k: null },
       sites: ["Cz","C3","C4"], bands: ["theta","smr","beta"], direction: "ratio", evidence: "strong",
       changes: { theta: "down", smr: "up", beta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
       claim: "Theta down / SMR–beta up reduces inattention and impulsivity",
@@ -201,6 +218,7 @@ window.NF_DATA = {
     },
     {
       id: "adhd-cortese-2016", condition: "adhd", type: "protocol",
+      metrics: { design: 5, control: null, blinded: true, n: null, k: null },
       sites: ["Cz","C3","C4"], bands: ["theta","smr","beta"], direction: "ratio", evidence: "contested",
       changes: { theta: "down", smr: "up", beta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
       claim: "Benefits shrink when raters are blinded",
@@ -210,6 +228,7 @@ window.NF_DATA = {
     },
     {
       id: "adhd-ncg-2021", condition: "adhd", type: "protocol",
+      metrics: { design: 4, control: "sham", blinded: true, n: null, k: null },
       sites: ["Cz"], bands: ["theta","beta"], direction: "ratio", evidence: "contested",
       changes: { theta: "down", beta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
       claim: "Double-blind TBR training matched sham",
@@ -219,6 +238,7 @@ window.NF_DATA = {
     },
     {
       id: "adhd-scp-2006", condition: "adhd", type: "protocol",
+      metrics: { design: 3, control: null, blinded: null, n: null, k: null },
       sites: ["Cz"], bands: ["scp"], direction: "up", evidence: "moderate",
       changes: { scp: "regulate" }, symptoms: ["inattention","impulsivity","hyperactivity"],
       claim: "Slow cortical potential self-regulation",
@@ -228,6 +248,7 @@ window.NF_DATA = {
     },
     {
       id: "adhd-vandoren-2019", condition: "adhd", type: "protocol",
+      metrics: { design: 5, control: null, blinded: null, n: null, k: null },
       sites: ["Cz","C3","C4"], bands: ["theta","smr","scp"], direction: "ratio", evidence: "moderate",
       changes: { theta: "down", smr: "up", scp: "regulate" }, symptoms: ["inattention","impulsivity","hyperactivity"],
       claim: "Effects persist at follow-up",
@@ -237,6 +258,7 @@ window.NF_DATA = {
     },
     {
       id: "adhd-barry-2003", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["F3","Fz","F4","C3","Cz","C4"], bands: ["theta","alpha","beta"], direction: "up", evidence: "moderate",
       changes: { theta: "up", alpha: "down", beta: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
       claim: "Elevated relative theta, reduced alpha and beta at rest",
@@ -246,6 +268,7 @@ window.NF_DATA = {
     },
     {
       id: "adhd-snyder-2006", condition: "adhd", type: "biomarker",
+      metrics: { design: 5, control: null, blinded: null, n: null, k: null },
       sites: ["Cz"], bands: ["theta","beta"], direction: "ratio", evidence: "moderate",
       changes: { theta: "up", beta: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
       claim: "Meta-analysis: raised theta/beta ratio is a common ADHD trait",
@@ -255,6 +278,7 @@ window.NF_DATA = {
     },
     {
       id: "adhd-arns-2012", condition: "adhd", type: "protocol",
+      metrics: { design: 1, control: "none", blinded: false, n: 21, k: null },
       sites: ["Fz","Cz"], bands: ["theta","beta","smr"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "down", beta: "up", smr: "up" }, symptoms: ["inattention","impulsivity","hyperactivity","lowmood"],
       claim: "QEEG-informed protocols: excess fronto-central theta gets theta/beta training",
@@ -264,6 +288,7 @@ window.NF_DATA = {
     },
     {
       id: "adhd-krepel-2020", condition: "adhd", type: "protocol",
+      metrics: { design: 2, control: "none", blinded: false, n: null, k: null },
       sites: ["Fz","Cz"], bands: ["theta","beta","smr"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "down", beta: "up", smr: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
       claim: "Multicentre replication of QEEG-informed neurofeedback",
@@ -274,6 +299,7 @@ window.NF_DATA = {
     /* ---------------- Depression ---------------- */
     {
       id: "dep-henriques-1991", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["F3","F4"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
       claim: "Relatively more left-frontal alpha (left hypoactivation)",
@@ -283,6 +309,7 @@ window.NF_DATA = {
     },
     {
       id: "dep-vandervinne-2017", condition: "depression", type: "biomarker",
+      metrics: { design: 5, control: null, blinded: null, n: null, k: null },
       sites: ["F3","F4"], bands: ["alpha"], direction: "asymmetry", evidence: "contested",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
       claim: "Frontal alpha asymmetry is not a reliable diagnostic marker",
@@ -292,6 +319,7 @@ window.NF_DATA = {
     },
     {
       id: "dep-baehr-2001", condition: "depression", type: "protocol",
+      metrics: { design: 1, control: "none", blinded: false, n: null, k: null },
       sites: ["F3","F4"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
       claim: "Alpha asymmetry training (shift toward right-frontal alpha)",
@@ -301,6 +329,7 @@ window.NF_DATA = {
     },
     {
       id: "dep-choi-2011", condition: "depression", type: "protocol",
+      metrics: { design: 4, control: "sham", blinded: null, n: null, k: null },
       sites: ["F3","F4"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
       claim: "Asymmetry training beat placebo in a pilot RCT",
@@ -310,6 +339,7 @@ window.NF_DATA = {
     },
     {
       id: "dep-pizzagalli-2011", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Fz"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["lowmood"],
       claim: "Higher frontal-midline (rostral ACC) theta predicts treatment response",
@@ -319,6 +349,7 @@ window.NF_DATA = {
     },
     {
       id: "dep-arns-2015", condition: "depression", type: "biomarker",
+      metrics: { design: 3, control: null, blinded: null, n: 1344, k: null },
       sites: ["F3","Fz","F4"], bands: ["theta"], direction: "up", evidence: "contested",
       changes: { theta: "up" }, symptoms: ["lowmood"],
       claim: "Frontal theta and antidepressant response: conflicting results",
@@ -329,6 +360,7 @@ window.NF_DATA = {
     /* ---------------- Anxiety ---------------- */
     {
       id: "anx-hammond-2005", condition: "anxiety", type: "protocol",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Pz","O1","O2"], bands: ["alpha","theta","hibeta"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up", theta: "up", hibeta: "down" }, symptoms: ["anxiety","hyperarousal"],
       claim: "Posterior alpha / alpha-theta uptraining, high beta inhibit",
@@ -339,6 +371,7 @@ window.NF_DATA = {
     /* ---------------- PTSD ---------------- */
     {
       id: "ptsd-peniston-1991", condition: "ptsd", type: "protocol",
+      metrics: { design: 3, control: "usual", blinded: null, n: null, k: null },
       sites: ["O1"], bands: ["alpha","theta"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up", theta: "up" }, symptoms: ["intrusions","anxiety","hyperarousal"],
       claim: "Alpha-theta training for combat-related PTSD",
@@ -348,6 +381,7 @@ window.NF_DATA = {
     },
     {
       id: "ptsd-vanderkolk-2016", condition: "ptsd", type: "protocol",
+      metrics: { design: 4, control: "usual", blinded: null, n: null, k: null },
       sites: ["T4"], bands: ["alpha"], direction: "down", evidence: "moderate",
       changes: { alpha: "down" }, symptoms: ["intrusions","hyperarousal"],
       claim: "Right temporal alpha down-training reduced chronic PTSD symptoms",
@@ -357,6 +391,7 @@ window.NF_DATA = {
     },
     {
       id: "ptsd-kluetsch-2014", condition: "ptsd", type: "protocol",
+      metrics: { design: 1, control: null, blinded: null, n: null, k: null },
       sites: ["Pz"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["hyperarousal"],
       claim: "A single alpha-desynchronising session shifts resting networks",
@@ -367,6 +402,7 @@ window.NF_DATA = {
     /* ---------------- Insomnia ---------------- */
     {
       id: "ins-hoedlmoser-2008", condition: "insomnia", type: "protocol",
+      metrics: { design: 3, control: "active", blinded: null, n: null, k: null },
       sites: ["C3","Cz","C4"], bands: ["smr"], direction: "up", evidence: "preliminary",
       changes: { smr: "up" }, symptoms: ["sleep","memory"],
       claim: "SMR uptraining increases sleep spindles and shortens sleep onset",
@@ -376,6 +412,7 @@ window.NF_DATA = {
     },
     {
       id: "ins-schabus-2017", condition: "insomnia", type: "protocol",
+      metrics: { design: 4, control: "sham", blinded: true, n: null, k: null },
       sites: ["C3","Cz","C4"], bands: ["smr"], direction: "up", evidence: "contested",
       changes: { smr: "up" }, symptoms: ["sleep"],
       claim: "SMR training was no better than sham for primary insomnia",
@@ -385,6 +422,7 @@ window.NF_DATA = {
     },
     {
       id: "ins-zhao-2021", condition: "insomnia", type: "biomarker",
+      metrics: { design: 5, control: null, blinded: null, n: 977, k: 24 },
       sites: [], bands: ["beta","theta","gamma","delta"], direction: "up", evidence: "strong",
       changes: { beta: "up", theta: "up", gamma: "up", delta: "down" }, symptoms: ["sleep","hyperarousal"],
       claim: "Raised beta across wake and sleep; more theta and gamma when awake",
@@ -395,6 +433,7 @@ window.NF_DATA = {
     /* ---------------- Epilepsy ---------------- */
     {
       id: "epi-sterman-2000", condition: "epilepsy", type: "protocol",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["C3","Cz","C4"], bands: ["smr","theta"], direction: "up", evidence: "moderate",
       changes: { smr: "up", theta: "down" }, symptoms: ["seizures"],
       claim: "SMR uptraining with theta inhibit reduces seizures",
@@ -404,6 +443,7 @@ window.NF_DATA = {
     },
     {
       id: "epi-kotchoubey-2001", condition: "epilepsy", type: "protocol",
+      metrics: { design: 3, control: "active", blinded: null, n: null, k: null },
       sites: ["Cz"], bands: ["scp"], direction: "up", evidence: "moderate",
       changes: { scp: "regulate" }, symptoms: ["seizures"],
       claim: "SCP positivity training in drug-resistant epilepsy",
@@ -413,6 +453,7 @@ window.NF_DATA = {
     },
     {
       id: "epi-tan-2009", condition: "epilepsy", type: "protocol",
+      metrics: { design: 5, control: null, blinded: null, n: null, k: null },
       sites: ["C3","Cz","C4"], bands: ["smr","scp"], direction: "up", evidence: "moderate",
       changes: { smr: "up", scp: "regulate" }, symptoms: ["seizures"],
       claim: "Most trained patients report fewer seizures",
@@ -423,6 +464,7 @@ window.NF_DATA = {
     /* ---------------- Autism ---------------- */
     {
       id: "asd-pineda-2008", condition: "autism", type: "protocol",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["C3","C4"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["social"],
       claim: "Mu rhythm (8–13 Hz, sensorimotor) training",
@@ -432,6 +474,7 @@ window.NF_DATA = {
     },
     {
       id: "asd-coben-2007", condition: "autism", type: "protocol",
+      metrics: { design: 3, control: "usual", blinded: null, n: null, k: null },
       sites: [], bands: ["theta","hibeta"], direction: "down", evidence: "preliminary",
       changes: { theta: "down", hibeta: "down" }, symptoms: ["social"],
       claim: "QEEG-guided connectivity training",
@@ -442,6 +485,7 @@ window.NF_DATA = {
     /* ---------------- Alcohol & substance use ---------------- */
     {
       id: "sud-peniston-1989", condition: "sud", type: "protocol",
+      metrics: { design: 3, control: "usual", blinded: null, n: null, k: null },
       sites: ["O1"], bands: ["alpha","theta"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up", theta: "up" }, symptoms: ["craving","lowmood"],
       claim: "Alpha-theta training for alcohol use disorder",
@@ -451,6 +495,7 @@ window.NF_DATA = {
     },
     {
       id: "sud-scott-2005", condition: "sud", type: "protocol",
+      metrics: { design: 4, control: "usual", blinded: null, n: null, k: null },
       sites: ["Cz","Pz"], bands: ["smr","beta","alpha","theta"], direction: "up", evidence: "moderate",
       changes: { smr: "up", beta: "up", alpha: "up", theta: "up" }, symptoms: ["craving","inattention"],
       claim: "Beta/SMR then alpha-theta (Scott-Peniston) improves retention",
@@ -461,6 +506,7 @@ window.NF_DATA = {
     /* ---------------- Migraine ---------------- */
     {
       id: "mig-walker-2011", condition: "migraine", type: "protocol",
+      metrics: { design: 2, control: "usual", blinded: null, n: null, k: null },
       sites: [], bands: ["hibeta"], direction: "down", evidence: "preliminary",
       changes: { hibeta: "down" }, symptoms: ["headache"],
       claim: "QEEG-guided down-training of excess fast activity",
@@ -471,6 +517,7 @@ window.NF_DATA = {
     /* ---------------- Healthy cognition ---------------- */
     {
       id: "cog-hanslmayr-2005", condition: "cognition", type: "protocol",
+      metrics: { design: 3, control: null, blinded: null, n: null, k: null },
       sites: ["Pz"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["executive"],
       claim: "Upper-alpha uptraining improves mental rotation",
@@ -480,6 +527,7 @@ window.NF_DATA = {
     },
     {
       id: "cog-zoefel-2011", condition: "cognition", type: "protocol",
+      metrics: { design: 3, control: "usual", blinded: null, n: null, k: null },
       sites: ["P3","Pz","P4","O1","O2"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["executive"],
       claim: "Five sessions of upper-alpha training boosts mental rotation",
@@ -489,6 +537,7 @@ window.NF_DATA = {
     },
     {
       id: "cog-gruzelier-2014", condition: "cognition", type: "protocol",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Cz","C4","Pz"], bands: ["smr","alpha","theta"], direction: "up", evidence: "moderate",
       changes: { smr: "up", alpha: "up", theta: "up" }, symptoms: ["inattention","memory"],
       claim: "SMR and alpha-theta for attention, memory and artistic performance",
@@ -498,6 +547,7 @@ window.NF_DATA = {
     },
     {
       id: "cog-enriquez-2014", condition: "cognition", type: "protocol",
+      metrics: { design: 3, control: "active", blinded: null, n: null, k: null },
       sites: ["Fz"], bands: ["theta"], direction: "up", evidence: "moderate",
       changes: { theta: "up" }, symptoms: ["executive","memory"],
       claim: "Frontal-midline theta UP-training improved working memory and task switching",
@@ -508,6 +558,7 @@ window.NF_DATA = {
   ],
 
   methodology: [
+    { authors: "Guyatt GH, Oxman AD, Vist GE, et al.", year: 2008, title: "GRADE: an emerging consensus on rating quality of evidence and strength of recommendations", journal: "BMJ", note: "The confidence ratings here follow a simplified GRADE-style logic: start from the best study design, then rate down for conflicting or thin evidence." },
     { authors: "Srinivasan R, Nunez PL, Silberstein RB", year: 1998, title: "Spatial filtering and neocortical dynamics: estimates of EEG coherence", journal: "IEEE Transactions on Biomedical Engineering", note: "Volume conduction through the skull blurs scalp EEG: electrodes up to 10–12 cm apart can look correlated even when the underlying sources are not, which is why neighbouring sites are shown." },
     { authors: "van den Broek SP, Reinders F, Donderwinkel M, Peters MJ", year: 1998, title: "Volume conduction effects in EEG and MEG", journal: "Electroencephalography and Clinical Neurophysiology", note: "Skull conductivity smears the EEG across the scalp; skull defects and lesions also change what an electrode records." },
     { authors: "Ros T, Enriquez-Geppert S, Zotev V, et al.", year: 2020, title: "Consensus on the reporting and experimental design of clinical and cognitive-behavioural neurofeedback studies (CRED-nf checklist)", journal: "Brain", note: "Checklist for judging study quality." },

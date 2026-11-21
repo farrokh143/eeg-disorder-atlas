@@ -120,7 +120,7 @@ svg.head { width: 100%; max-width: 100%; height: auto; display: block; }
 .cite a { color: var(--accent); white-space: nowrap; }
 .empty { padding: 28px; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: 10px; }
 
-.notes { margin-top: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; font-size: 0.86rem; color: var(--muted); }
+.notes { margin-top: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 20px; font-size: 0.86rem; color: var(--muted); }
 .notes h2 { font-size: 1rem; color: var(--ink); margin-bottom: 6px; }
 .notes ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
 .notes dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px; }
@@ -179,6 +179,21 @@ details.more[open] summary { margin-bottom: 10px; }
 .prompt { padding: 22px; border: 1px dashed var(--line); border-radius: 10px; color: var(--muted); }
 .prompt strong { color: var(--ink); }
 [hidden] { display: none !important; }
+
+.conf { display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; align-items: center; padding: 10px 12px; border-radius: 10px; background: var(--surface); border: 1px solid var(--line); }
+.conf .cm { display: inline-flex; gap: 3px; grid-row: span 2; }
+.conf .cm i { width: 10px; height: 22px; border-radius: 3px; background: var(--line); }
+.conf.l4 .cm i.on { background: var(--ev-strong); } .conf.l3 .cm i.on { background: var(--ev-moderate); }
+.conf.l2 .cm i.on { background: var(--ev-prelim); } .conf.l1 .cm i.on, .conf.l0 .cm i.on { background: var(--ev-contested); }
+.conf .cl { font-weight: 600; font-size: 0.9rem; }
+.conf .cn { font-size: 0.8rem; color: var(--muted); font-family: var(--f-mono); }
+.conf .cw { grid-column: 1 / -1; font-size: 0.8rem; color: var(--muted); }
+.prof { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.78rem; color: var(--ink); }
+.prof > span { display: inline-flex; align-items: center; gap: 6px; }
+.prof .na { color: var(--muted); font-style: italic; }
+.prof .db { display: inline-flex; gap: 2px; }
+.prof .db i { width: 5px; height: 11px; border-radius: 1.5px; background: var(--line); }
+.prof .db i.on { background: var(--accent); }
 .el .hit { fill: transparent; }
 .panel { grid-template-columns: minmax(0, 1fr); min-width: 0; }
 .mapbox, #regionBtns, .profile, .profile .row, .filterbar > * { min-width: 0; }
@@ -288,6 +303,16 @@ html, body { overflow-x: clip; }
       </dl>
     </div>
     <div>
+      <h2>Confidence rating</h2>
+      <p style="margin:0 0 6px">Each group of studies gets a rating from High to Very low, following a simplified GRADE approach:</p>
+      <ul>
+        <li>Start from the strongest supporting design: meta-analysis or randomised trial = High, controlled study or cohort = Moderate, case-control or review = Low, uncontrolled = Very low.</li>
+        <li>Rate down one level if any study points the other way or fails to replicate, and one level if the support is a single primary study (reviews and meta-analyses already pool several).</li>
+        <li>For treatments, if no blinded or sham-controlled study supports the effect, the rating is capped at Low.</li>
+        <li>Each card shows design (1–5 bars), type of control, and sample size where it has been recorded.</li>
+      </ul>
+    </div>
+    <div>
       <h2>Reading the studies critically</h2>
       <ul id="method"></ul>
     </div>
@@ -325,6 +350,44 @@ html, body { overflow-x: clip; }
     return m;
   })();
   const EV_ORDER = ["strong", "moderate", "preliminary", "contested"];
+  const DESIGN = { 5: "Meta-analysis", 4: "Randomised trial", 3: "Controlled study / cohort", 2: "Case-control / review", 1: "Uncontrolled / pilot" };
+  const CONTROL = { sham: "Sham / placebo control", active: "Active control", usual: "Waitlist / usual care", none: "No control group" };
+  const LEVEL = ["No supporting evidence", "Very low", "Low", "Moderate", "High"];
+  // Simplified GRADE-style rating for a set of studies on one question.
+  // Start from the best design among supporting studies, then rate down for conflict and thin evidence.
+  function confidence(list, against) {
+    const support = list.filter(f => f.evidence !== "contested");
+    const con = list.filter(f => f.evidence === "contested").concat(against.filter(f => !list.includes(f)));
+    const why = [];
+    if (!support.length) return { level: 0, support, con, why: [con.length ? "Only conflicting or null results" : "No studies"] };
+    const best = Math.max(...support.map(f => f.metrics.design));
+    let level = { 5: 4, 4: 4, 3: 3, 2: 2, 1: 1 }[best];
+    why.push(`best supporting design: ${DESIGN[best].toLowerCase()}`);
+    if (con.length) { level--; why.push(`${plural(con.length, "study", "studies")} against or null`); }
+    const synth = f => /review|meta-analysis/i.test(f.design);
+    if (support.length === 1 && !synth(support[0])) { level--; why.push("single study"); }
+    const blind = [...new Set(list.concat(con))].filter(f => f.metrics.blinded || f.metrics.control === "sham");
+    if (blind.length) {
+      const ok = blind.filter(f => f.evidence !== "contested").length;
+      why.push(`${ok} of ${blind.length} blinded/sham-controlled ${blind.length === 1 ? "study" : "studies"} supportive`);
+      if (!ok) level = Math.min(level, 2);
+    }
+    return { level: Math.max(1, level), support, con, why };
+  }
+  function confHtml(list, against) {
+    const c = confidence(list, against);
+    const known = list.filter(f => f.metrics.n), N = known.reduce((a, f) => a + f.metrics.n, 0);
+    const segs = [1, 2, 3, 4].map(i => `<i class="${i <= c.level ? "on" : ""}"></i>`).join("");
+    return `<div class="conf l${c.level}"><span class="cm">${segs}</span><span class="cl">Confidence: ${LEVEL[c.level]}</span>
+      <span class="cn">${c.support.length} for · ${c.con.length} against${known.length ? ` · n≈${N.toLocaleString()} (${known.length} of ${list.length} report n)` : ""}</span>
+      <span class="cw">${esc(c.why.join(" · "))}</span></div>`;
+  }
+  // For markers: studies in the same disorder reporting the opposite direction for the chosen band (anywhere on the scalp).
+  function opposing(cid, type) {
+    if (!state.band || !(state.dir === "up" || state.dir === "down")) return [];
+    const want = type === "biomarker" ? OPP[state.dir] : state.dir;
+    return D.findings.filter(f => f.condition === cid && f.type === type && f.changes[state.band] === want);
+  }
   const EV_DOTS = { strong: 4, moderate: 3, preliminary: 2, contested: 1 };
   const ARROW = { up: "↑", down: "↓", asymmetry: "⇄", regulate: "⇅", mixed: "~" };
   const OPP = { up: "down", down: "up", asymmetry: "asymmetry" };
@@ -539,9 +602,19 @@ html, body { overflow-x: clip; }
       <div class="tags">${sites}${changeChips(f)}</div>
       <p>${esc(f.detail)}</p>
       <div class="tags"><span class="eyebrow" style="align-self:center">${f.type === "protocol" ? "Outcomes measured" : "Studied in people with"}</span>${syms}</div>
+      ${profileRow(f)}
       <div class="cite"><span>${esc(c.authors)} (${c.year}). ${esc(c.title)}. <em>${esc(c.journal)}</em>.</span>
         <a href="${pub}" target="_blank" rel="noopener">Find on PubMed ↗</a></div>
     </article>`;
+  }
+  function profileRow(f) {
+    const m = f.metrics;
+    const bars = [1, 2, 3, 4, 5].map(i => `<i class="${i <= m.design ? "on" : ""}"></i>`).join("");
+    const ctl = f.type === "protocol"
+      ? (m.control ? CONTROL[m.control] + (m.blinded ? " · blinded" : m.blinded === false ? " · unblinded" : "") : (m.blinded ? "Blinded ratings" : "Control: not recorded"))
+      : "Patients vs controls";
+    const size = [m.k ? `${m.k} studies` : "", m.n ? `n = ${m.n.toLocaleString()}` : ""].filter(Boolean).join(", ") || "Size: not recorded yet";
+    return `<div class="prof"><span title="Study design strength, 1–5"><span class="db">${bars}</span>${DESIGN[m.design]}</span><span>${ctl}</span><span${m.n || m.k ? "" : ' class="na"'}>${size}</span></div>`;
   }
   const empty = msg => `<div class="empty">${msg}</div>`;
   const section = (title, n, hint, inner) =>
@@ -588,16 +661,18 @@ html, body { overflow-x: clip; }
       return `<button data-pb="${b}" data-pd="${d}" aria-pressed="${state.band === b && state.dir === d}"><span class="sw" style="background:${bandColor(b)}"></span>${bandById[b].name} ${ARROW[d]} <b>${prof[k]}</b></button>`;
     }).join("")}</div></div>` : "") + (state.sym ? `<div style="margin-top:6px">Showing research involving <strong>${esc(symById[state.sym].name.toLowerCase())}</strong></div>` : "");
 
-    // Markers: grouped by disorder when no disorder is chosen.
-    let mHtml;
-    if (!markers.length) mHtml = empty("No EEG marker studies match. Try a wider area, another band, or clear a filter.");
-    else if (cond) mHtml = markers.map(card).join("");
-    else {
+    // Each section is grouped by disorder, with a confidence rating per group.
+    const grouped = (items, type) => {
+      if (!items.length) return "";
       const groups = {};
-      markers.forEach(f => (groups[f.condition] = groups[f.condition] || []).push(f));
-      mHtml = Object.keys(groups).sort((a, b) => rank(groups[a][0], groups[b][0]) || groups[b].length - groups[a].length)
-        .map(cid => `<div class="cgroup"><h3>${esc(condById[cid].name)}<span class="n">${plural(groups[cid].length, "study", "studies")}</span></h3>${groups[cid].map(card).join("")}</div>`).join("");
-    }
+      items.forEach(f => (groups[f.condition] = groups[f.condition] || []).push(f));
+      const ids = Object.keys(groups).sort((x, y) => confidence(groups[y], opposing(y, type)).level - confidence(groups[x], opposing(x, type)).level
+        || rank(groups[x][0], groups[y][0]) || groups[y].length - groups[x].length);
+      return ids.map(cid => `<div class="cgroup">${cond ? "" : `<h3>${esc(condById[cid].name)}<span class="n">${plural(groups[cid].length, "study", "studies")}</span></h3>`}
+        ${confHtml(groups[cid], opposing(cid, type))}${groups[cid].map(card).join("")}</div>`).join("");
+    };
+    const mHtml = markers.length ? grouped(markers, "biomarker") : empty("No EEG marker studies match. Try a wider area, another band, or clear a filter.");
+    const tHtml = treats.length ? grouped(treats, "protocol") : empty("No treatment studies match. Try a wider area or clear a filter.");
     const mHint = (state.dir && state.band ? `Studies reporting ${pattern.toLowerCase()} in the disorder. ` : "") + "Group-level differences, not a diagnostic test for an individual.";
     const tHint = state.dir
       ? `Neurofeedback studies that train ${state.band ? bandTxt.toLowerCase() : "the band"} ${state.dir === "asymmetry" ? "toward a different asymmetry" : state.dir === "up" ? "down" : "up"}, i.e. against this pattern. Several were not better than sham when blinded.`
@@ -608,7 +683,7 @@ html, body { overflow-x: clip; }
     $("list").innerHTML =
       section("EEG markers", `${plural(markers.length, "finding", "findings")}${cond ? "" : ` · ${new Set(markers.map(f => f.condition)).size} disorders`}`, mHint, mHtml) +
       section("Treatment evidence", `${plural(treats.length, "study", "studies")}${evSummary(treats)}`, tHint,
-        treats.length ? treats.map(card).join("") : empty("No treatment studies match. Try a wider area or clear a filter."));
+        tHtml);
   }
 
   $("active").addEventListener("click", e => {
