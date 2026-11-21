@@ -1747,6 +1747,36 @@ window.NF_DATA = {
       detail: "Randomised waitlist-controlled trial in 85 children with ADHD or subclinical ADHD using 25 home sessions of working memory, inhibition and neurofeedback training. Parents reported reduced symptoms; frontal delta fell and frontal alpha rose. The abstract does not say whether the frontal EEG changes were recorded at rest or during a task. Taken from the abstract; not checked in the full text.",
       design: "RCT (waitlist-controlled)",
       cite: { authors: "Johnstone SJ, et al.", year: 2017, title: "Game-based combined cognitive and neurofeedback training using Focus Pocus reduces symptom severity in children with diagnosed AD/HD and subclinical AD/HD", journal: "Int J Psychophysiol" }
+    },
+    {
+      id: "pm-28900800", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 92, k: null },
+      sites: ["F7","F3","Fz","F4","F8","C3","Cz","C4","T5","P3","Pz","P4","T6"], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "down", theta: "mixed", alpha: "mixed", beta: "mixed" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "ADHD boys (with or without ASD): lower frontal, central and parietal delta than boys without ADHD",
+      detail: "Eyes-open resting EEG in 19 boys with ASD, 18 with ADHD, 29 with ASD plus ADHD and 26 controls (92 recruited; 74 analysed after artefact exclusion). In the ADHD factorial comparison, delta was lower at frontal, central and parietal clusters; theta, alpha and beta showed no ADHD effect. Within-sample symptom correlations with ADHD scores were not significant. Six ADHD and six ASD plus ADHD boys were on stimulants, withheld for 48 h.",
+      design: "Case-control (factorial)",
+      cite: { authors: "Shephard E, et al.", year: 2018, title: "Resting-State Neurophysiological Activity Patterns in Young People with ASD, ADHD, and ASD + ADHD", journal: "J Autism Dev Disord" }
+    },
+    {
+      id: "pm-29110563", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 80, k: null },
+      sites: [], bands: ["theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", alpha: "down", beta: "up" }, symptoms: ["executive"],
+      claim: "Adult ADHD with high IQ: more theta and less alpha across the scalp, and more beta than controls",
+      detail: "Eyes-closed resting EEG in 40 adults with ADHD (IQ 120 or above) and 40 controls, with executive function measured. Theta was globally higher and alpha globally lower; the beta increase was in central activity only, so sites are whole-head and the beta direction is partly regional. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Li H, et al.", year: 2019, title: "Increased Beta Activity Links to Impaired Emotional Control in ADHD Adults With High IQ", journal: "J Atten Disord" }
+    },
+    {
+      id: "pm-29457912", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 101, k: null },
+      sites: ["C4","P4"], bands: ["gamma"], direction: "down", evidence: "preliminary",
+      changes: { gamma: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "Adult ADHD: lower eyes-open gamma power than controls, most marked over right centroparietal sites",
+      detail: "Spontaneous eyes-open EEG in 42 adults with ADHD (25 medication-naive, 17 on methylphenidate) and 59 controls. Gamma 1 and gamma 2 were lower in ADHD, most in the right centroparietal region; gamma was inversely linked to symptom severity within the ADHD group. Taken from the abstract; not checked in the full text. Right centroparietal is mapped to C4 and P4.",
+      design: "Case-control",
+      cite: { authors: "Tombor L, et al.", year: 2019, title: "Decreased resting gamma activity in adult attention deficit/hyperactivity disorder", journal: "World J Biol Psychiatry" }
     }
   ],
 
