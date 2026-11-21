@@ -567,6 +567,26 @@ window.NF_DATA = {
       detail: "Eyes-open resting EEG (90 s) in 15 drug-naive AD patients, 20 MCI patients and 20 controls; gamma (30-100 Hz) power was higher in AD than controls at C3, P3, Pz, P4, T6, O1 and O2, and MCI did not differ from controls. Gamma power correlated modestly with ADAS-cog. Muscle (EMG) contamination is a limit: the authors report the resting differences were lost at O1 and O2 after removing suspect epochs.",
       design: "Case-control",
       cite: { authors: "van Deursen JA, et al.", year: 2008, title: "Increased EEG gamma band activity in Alzheimer's disease and mild cognitive impairment", journal: "J Neural Transm (Vienna)" }
+    },
+    {
+      id: "pm-23969043", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 95, k: null },
+      sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "down", beta: "down" }, symptoms: ["memory","cogdecline"],
+      claim: "AD severity: higher global slow-to-fast power ratio (delta and theta over alpha and beta)",
+      detail: "Resting scalp EEG in 95 patients with newly diagnosed AD at different stages from four centres; the global delta and theta to alpha and beta power ratio correlated best with AD stage, and interhemispheric alpha coherence was lower in advanced disease. Taken from the abstract; not checked in the full text. Cross-sectional stage comparison with no controls, so it shows severity correlation, not a diagnostic marker.",
+      design: "Cross-sectional (stage comparison)",
+      cite: { authors: "Chen CC, et al.", year: 2015, title: "Frequency power and coherence of electroencephalography are correlated with the severity of Alzheimer's disease: A multicenter analysis in Taiwan", journal: "J Formos Med Assoc" }
+    },
+    {
+      id: "pm-24015222", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 76, k: null },
+      sites: ["O1","O2","Pz","P4","T5","T6","F8"], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "down", beta: "down" }, symptoms: ["memory","cogdecline"],
+      claim: "Mild AD vs controls: more delta and theta, less alpha and beta at posterior sites",
+      detail: "Awake resting EEG with eyes closed in 27 controls, 27 mild AD and 22 moderate AD. The main method is an amplitude-modulation analysis; the conventional band-power comparison (benchmark) found more delta and theta at occipital and parietal sites, and less alpha at Pz and less beta at several sites, in mild AD than in controls. Single small study with no blinding; it is an exploratory comparison.",
+      design: "Case-control",
+      cite: { authors: "Fraga FJ, et al.", year: 2013, title: "Characterizing Alzheimer's disease severity via resting-awake EEG amplitude modulation analysis", journal: "PLoS One" }
     }
   ],
 
