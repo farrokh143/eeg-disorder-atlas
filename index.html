@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Neurofeedback Evidence Map</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>
+/* Layout: instrument panel. Sticky 10-20 montage on the left, evidence ledger on the right; stacks on phones. */
+:root {
+  --bg: #f3f6f8; --surface: #ffffff; --ink: #13202b; --muted: #5a6a77; --line: #d6dee4;
+  --accent: #1d5f8a; --accent-soft: #e3eef6; --scalp: #fbfcfd; --electrode: #eef2f5;
+  --ev-strong: #2b7a3d; --ev-moderate: #1d6fa5; --ev-prelim: #a8650a; --ev-contested: #b3302f;
+  --b-scp: #7a6d55; --b-delta: #3b5bdb; --b-theta: #7048e8; --b-alpha: #0b7f92;
+  --b-smr: #2b8a3e; --b-beta: #d9700a; --b-hibeta: #c92a2a; --b-gamma: #a61e5d;
+  --f-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --f-body: "Inter", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0e1418; --surface: #151d23; --ink: #e2e9ee; --muted: #8d9eab; --line: #26323c;
+  --accent: #6db2df; --accent-soft: #1b2c39; --scalp: #121a20; --electrode: #1c262e;
+  --ev-strong: #6fcf86; --ev-moderate: #6db2df; --ev-prelim: #f0b35a; --ev-contested: #ff7b76;
+  --b-scp: #b8ab8f; --b-delta: #7d95fc; --b-theta: #a088fb; --b-alpha: #3fc6d8;
+  --b-smr: #6ad67c; --b-beta: #ffa94d; --b-hibeta: #ff6b6b; --b-gamma: #f0699a;
+  color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0e1418; --surface: #151d23; --ink: #e2e9ee; --muted: #8d9eab; --line: #26323c;
+  --accent: #6db2df; --accent-soft: #1b2c39; --scalp: #121a20; --electrode: #1c262e;
+  --ev-strong: #6fcf86; --ev-moderate: #6db2df; --ev-prelim: #f0b35a; --ev-contested: #ff7b76;
+  --b-scp: #b8ab8f; --b-delta: #7d95fc; --b-theta: #a088fb; --b-alpha: #3fc6d8;
+  --b-smr: #6ad67c; --b-beta: #ffa94d; --b-hibeta: #ff6b6b; --b-gamma: #f0699a;
+  color-scheme: dark }
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.55 var(--f-body); }
+.wrap { max-width: 1240px; margin: 0 auto; padding-block: 28px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; }
+button { font: inherit; color: inherit; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+header.top { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px 24px; margin-bottom: 20px; }
+header.top h1 { font-size: clamp(1.6rem, 3.2vw, 2.2rem); font-weight: 700; letter-spacing: -0.01em; }
+header.top p { margin: 4px 0 0; color: var(--muted); max-width: 60ch; }
+.search { flex: 0 1 300px; min-width: 0; }
+.search input { width: 100%; padding: 9px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); font: inherit; }
+
+.conds { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 22px; }
+.cond { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 6px 12px; display: inline-flex; gap: 8px; align-items: center; font-weight: 500; font-size: 0.9rem; }
+.cond .n { font-family: var(--f-mono); font-size: 0.75rem; color: var(--muted); }
+.cond[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.cond[aria-pressed="true"] .n { color: inherit; opacity: 0.7; }
+
+.grid { display: grid; grid-template-columns: minmax(0, 420px) minmax(0, 1fr); gap: 28px; align-items: start; }
+@media (max-width: 860px) { .grid { grid-template-columns: minmax(0, 1fr); } }
+
+.panel { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 16px); display: grid; gap: 16px; }
+@media (max-width: 860px) { .panel { position: static; } }
+.mapbox { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
+.maphead { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 4px; }
+.eyebrow { font-family: var(--f-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.clear { border: none; background: none; color: var(--accent); font-size: 0.85rem; padding: 2px 4px; }
+svg.head { width: 100%; max-width: 100%; height: auto; display: block; }
+.scalp { fill: var(--scalp); stroke: var(--ink); stroke-width: 1.5; }
+.guide { fill: none; stroke: var(--line); stroke-width: 1; stroke-dasharray: 3 4; }
+.el { cursor: pointer; }
+.el .disc { fill: var(--electrode); stroke: var(--line); stroke-width: 1.2; transition: stroke-width .15s; }
+.el text { font-family: var(--f-mono); font-size: 10.5px; font-weight: 600; fill: var(--muted); text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+.el.on .disc { stroke: var(--ink); stroke-width: 1.4; }
+.el.on text { fill: var(--ink); }
+.el.sel .disc { stroke: var(--accent); stroke-width: 3.5; }
+.el.hl .disc { stroke: var(--accent); stroke-width: 3; }
+.el.ref { cursor: default; }
+.el .badge { font-size: 8.5px; fill: var(--muted); }
+.el:focus, .el:focus-visible { outline: none; }
+.el:focus-visible .disc { stroke: var(--accent); stroke-width: 3; }
+.maptip { font-size: 0.82rem; color: var(--muted); margin: 6px 2px 0; min-height: 2.6em; }
+
+.bands { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+.band { display: grid; grid-template-columns: 12px 1fr auto; align-items: center; gap: 8px; text-align: left;
+  border: 1px solid var(--line); background: var(--surface); border-radius: 8px; padding: 6px 9px; font-size: 0.85rem; }
+.band .sw { width: 12px; height: 12px; border-radius: 3px; }
+.band .hz { font-family: var(--f-mono); font-size: 0.72rem; color: var(--muted); }
+.band[aria-pressed="true"] { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
+.band.dim { opacity: 0.45; }
+
+.ledger { display: grid; gap: 14px; min-width: 0; }
+.summary { display: grid; gap: 8px; }
+.summary h2 { font-size: 1.45rem; }
+.summary p { margin: 0; max-width: 68ch; }
+.filters { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.filters .lbl { font-size: 0.8rem; color: var(--muted); margin-right: 4px; }
+.fbtn { border: 1px solid var(--line); background: var(--surface); border-radius: 6px; padding: 4px 10px; font-size: 0.82rem; }
+.fbtn[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--ink); }
+.active { font-size: 0.85rem; color: var(--muted); }
+.active strong { color: var(--ink); font-family: var(--f-mono); }
+
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; display: grid; gap: 8px; min-width: 0; }
+.card:hover, .card:focus-within { border-color: var(--accent); }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; font-size: 0.78rem; color: var(--muted); }
+.ev { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: 0.74rem; letter-spacing: 0.06em; text-transform: uppercase; }
+.ev .dots { display: inline-flex; gap: 2px; }
+.ev .dots i { width: 6px; height: 6px; border-radius: 50%; border: 1.2px solid currentColor; }
+.ev .dots i.f { background: currentColor; }
+.ev.strong { color: var(--ev-strong); } .ev.moderate { color: var(--ev-moderate); }
+.ev.preliminary { color: var(--ev-prelim); } .ev.contested { color: var(--ev-contested); }
+.type { font-family: var(--f-mono); font-size: 0.72rem; border: 1px solid var(--line); border-radius: 4px; padding: 1px 6px; }
+.card h3 { font-size: 1.06rem; font-weight: 600; line-height: 1.35; }
+.card p { margin: 0; max-width: 72ch; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { display: inline-flex; align-items: center; gap: 5px; font-size: 0.78rem; border-radius: 4px; padding: 2px 7px; border: 1px solid var(--line); }
+.chip .sw { width: 8px; height: 8px; border-radius: 2px; }
+.chip.site { font-family: var(--f-mono); font-weight: 600; }
+.cite { font-size: 0.82rem; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 8px; display: flex; flex-wrap: wrap; gap: 4px 12px; justify-content: space-between; }
+.cite em { color: var(--ink); font-style: italic; }
+.cite a { color: var(--accent); white-space: nowrap; }
+.empty { padding: 28px; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: 10px; }
+
+.notes { margin-top: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 20px; font-size: 0.86rem; color: var(--muted); }
+.notes h2 { font-size: 1rem; color: var(--ink); margin-bottom: 6px; }
+.notes ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+.notes dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px; }
+.notes dt { font-weight: 600; }
+.notes dd { margin: 0; }
+.warn { border-left: 3px solid var(--ev-prelim); padding: 8px 12px; background: var(--surface); color: var(--ink); border-radius: 0 6px 6px 0; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1>Neurofeedback Evidence Map</h1>
+      <p>Pick a condition, then tap an electrode on the 10-20 montage to see which EEG bands were studied there and how strong the evidence is.</p>
+    </div>
+    <label class="search"><span class="eyebrow">Search research</span>
+      <input id="q" type="search" placeholder="e.g. alpha, Peniston, sham" autocomplete="off">
+    </label>
+  </header>
+
+  <nav class="conds" id="conds" aria-label="Conditions"></nav>
+
+  <div class="grid">
+    <aside class="panel">
+      <div class="mapbox">
+        <div class="maphead">
+          <span class="eyebrow">10-20 system · nose up</span>
+          <button class="clear" id="clearSite" hidden>Clear site</button>
+        </div>
+        <svg class="head" id="head" viewBox="0 0 400 410" role="group" aria-label="10-20 electrode map"></svg>
+        <p class="maptip" id="tip"></p>
+      </div>
+      <div>
+        <div class="eyebrow" style="margin-bottom:6px">EEG bands · tap to filter</div>
+        <div class="bands" id="bands"></div>
+      </div>
+    </aside>
+
+    <main class="ledger">
+      <section class="summary" id="summary"></section>
+      <div class="filters" id="evFilters"></div>
+      <div class="active" id="active"></div>
+      <div id="list" style="display:grid;gap:12px"></div>
+    </main>
+  </div>
+
+  <section class="notes">
+    <div>
+      <h2>Evidence grades</h2>
+      <dl>
+        <dt style="color:var(--ev-strong)">Strong</dt><dd>Meta-analysis or several RCTs pointing the same way.</dd>
+        <dt style="color:var(--ev-moderate)">Moderate</dt><dd>At least one randomised or controlled trial, or a meta-analysis of mixed-quality studies.</dd>
+        <dt style="color:var(--ev-prelim)">Preliminary</dt><dd>Small, open-label, case-control or single-session studies.</dd>
+        <dt style="color:var(--ev-contested)">Contested</dt><dd>Blinded, sham-controlled or pooled data that fail to support the effect.</dd>
+      </dl>
+    </div>
+    <div>
+      <h2>Reading the studies critically</h2>
+      <ul id="method"></ul>
+    </div>
+    <div>
+      <h2>About this map</h2>
+      <p class="warn">Summaries were compiled from the published literature and are a starting point, not a clinical guide. Check every claim against the original paper before using it with clients. Old 10-20 names are used: T3/T4/T5/T6 are T7/T8/P7/P8 in the 10-10 system.</p>
+    </div>
+  </section>
+</div>
+
+<script src="data/research.js"></script>
+<script>
+(function () {
+  const D = window.NF_DATA;
+  const ELECTRODES = {
+    Fp1: [157, 72], Fp2: [243, 72],
+    F7: [87, 123], F3: [142, 138], Fz: [200, 135], F4: [258, 138], F8: [313, 123],
+    T3: [60, 205], C3: [130, 205], Cz: [200, 205], C4: [270, 205], T4: [340, 205],
+    T5: [87, 287], P3: [142, 272], Pz: [200, 275], P4: [258, 272], T6: [313, 287],
+    O1: [157, 338], O2: [243, 338]
+  };
+  const REFS = { A1: [22, 205], A2: [378, 205] };
+  const ALT = { T3: "T7", T4: "T8", T5: "P7", T6: "P8" };
+  const EV_ORDER = ["strong", "moderate", "preliminary", "contested"];
+  const EV_DOTS = { strong: 4, moderate: 3, preliminary: 2, contested: 1 };
+  const DIR = { up: "↑", down: "↓", ratio: "÷", asymmetry: "⇄" };
+  const DIR_TEXT = { up: "increase / uptrain", down: "decrease / downtrain", ratio: "ratio", asymmetry: "left–right asymmetry" };
+  const bandById = Object.fromEntries(D.bands.map(b => [b.id, b]));
+  const condById = Object.fromEntries(D.conditions.map(c => [c.id, c]));
+  const bandColor = id => `var(--b-${id})`;
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+  const state = { cond: "adhd", site: null, band: null, ev: null, q: "" };
+  const fromHash = () => { const h = location.hash.slice(1); if (h === "all" || condById[h]) state.cond = h; };
+  fromHash();
+
+  const $ = id => document.getElementById(id);
+  const svgNS = "http://www.w3.org/2000/svg";
+
+  function matchesText(f) {
+    if (!state.q) return true;
+    const hay = [f.claim, f.detail, f.design, f.cite.authors, f.cite.title, f.cite.journal, f.cite.year,
+      f.sites.join(" "), f.bands.map(b => bandById[b].name).join(" "), condById[f.condition].name].join(" ").toLowerCase();
+    return state.q.toLowerCase().split(/\s+/).every(t => hay.includes(t));
+  }
+  // Findings filtered by everything except site (drives the map).
+  const baseSet = () => D.findings.filter(f =>
+    (state.cond === "all" || f.condition === state.cond) &&
+    (!state.band || f.bands.includes(state.band)) &&
+    (!state.ev || f.evidence === state.ev) && matchesText(f));
+  const listSet = base => base.filter(f => !state.site || f.sites.includes(state.site));
+
+  /* ---------- static: head drawing ---------- */
+  function drawHead() {
+    const s = $("head");
+    s.innerHTML = `
+      <path class="scalp" d="M182 44 L200 14 L218 44" />
+      <ellipse class="scalp" cx="28" cy="205" rx="12" ry="30" />
+      <ellipse class="scalp" cx="372" cy="205" rx="12" ry="30" />
+      <circle class="scalp" cx="200" cy="205" r="165" />
+      <circle class="guide" cx="200" cy="205" r="140" />
+      <line class="guide" x1="200" y1="40" x2="200" y2="370" />
+      <line class="guide" x1="35" y1="205" x2="365" y2="205" />`;
+    const make = (name, [x, y], ref) => {
+      const g = document.createElementNS(svgNS, "g");
+      g.setAttribute("class", "el" + (ref ? " ref" : ""));
+      g.dataset.site = name;
+      g.innerHTML = `<g class="ring"></g><circle class="disc" cx="${x}" cy="${y}" r="16"/>
+        <text x="${x}" y="${y}">${name}</text><text class="badge" x="${x}" y="${y + 27}"></text>`;
+      if (!ref) {
+        g.setAttribute("tabindex", "0");
+        g.setAttribute("role", "button");
+        g.addEventListener("click", () => toggleSite(name));
+        g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggleSite(name); } });
+        g.addEventListener("mouseenter", () => showTip(name));
+        g.addEventListener("focus", () => showTip(name));
+        g.addEventListener("mouseleave", () => showTip(null));
+      }
+      s.appendChild(g);
+    };
+    Object.entries(ELECTRODES).forEach(([n, p]) => make(n, p, false));
+    Object.entries(REFS).forEach(([n, p]) => make(n, p, true));
+  }
+
+  function arc(cx, cy, r, a0, a1) {
+    const p = a => [cx + r * Math.sin(a), cy - r * Math.cos(a)];
+    const [x0, y0] = p(a0), [x1, y1] = p(a1);
+    return `M${x0.toFixed(2)} ${y0.toFixed(2)} A${r} ${r} 0 ${a1 - a0 > Math.PI ? 1 : 0} 1 ${x1.toFixed(2)} ${y1.toFixed(2)}`;
+  }
+
+  let siteInfo = {};
+  function renderMap(base) {
+    siteInfo = {};
+    base.forEach(f => f.sites.forEach(s => {
+      const i = siteInfo[s] || (siteInfo[s] = { n: 0, bands: new Set() });
+      i.n++; f.bands.forEach(b => i.bands.add(b));
+    }));
+    document.querySelectorAll("#head .el:not(.ref)").forEach(g => {
+      const name = g.dataset.site, info = siteInfo[name], [x, y] = ELECTRODES[name];
+      g.classList.toggle("on", !!info);
+      g.classList.toggle("sel", state.site === name);
+      const ring = g.querySelector(".ring");
+      ring.innerHTML = "";
+      if (info) {
+        const bands = D.bands.map(b => b.id).filter(b => info.bands.has(b) && (!state.band || b === state.band));
+        const seg = (2 * Math.PI) / bands.length, gap = bands.length > 1 ? 0.18 : 0;
+        bands.forEach((b, i) => {
+          const el = document.createElementNS(svgNS, bands.length === 1 ? "circle" : "path");
+          if (bands.length === 1) { el.setAttribute("cx", x); el.setAttribute("cy", y); el.setAttribute("r", 20.5); }
+          else el.setAttribute("d", arc(x, y, 20.5, i * seg + gap / 2, (i + 1) * seg - gap / 2));
+          el.setAttribute("fill", "none"); el.setAttribute("stroke", bandColor(b));
+          el.setAttribute("stroke-width", "5"); el.setAttribute("stroke-linecap", "butt");
+          ring.appendChild(el);
+        });
+      }
+      g.querySelector(".badge").textContent = info ? `${info.n} stud${info.n === 1 ? "y" : "ies"}` : "";
+      const alt = ALT[name] ? ` (${ALT[name]})` : "";
+      g.setAttribute("aria-label", `${name}${alt}: ${info ? info.n + " findings" : "no findings"}`);
+      g.setAttribute("aria-pressed", state.site === name ? "true" : "false");
+    });
+    showTip(null);
+  }
+
+  function showTip(name) {
+    const t = $("tip");
+    const n = name || state.site;
+    if (!n) { t.textContent = "Ringed electrodes have research for the current filters. Ring colours show the bands studied there."; return; }
+    const info = siteInfo[n], alt = ALT[n] ? ` (10-10: ${ALT[n]})` : "";
+    t.innerHTML = info
+      ? `<strong>${n}</strong>${alt} · ${info.n} finding${info.n === 1 ? "" : "s"} · ${[...info.bands].map(b => bandById[b].name).join(", ")}`
+      : `<strong>${n}</strong>${alt} · no findings for the current filters`;
+  }
+
+  function highlight(sites) {
+    document.querySelectorAll("#head .el").forEach(g => g.classList.toggle("hl", !!sites && sites.includes(g.dataset.site)));
+  }
+
+  /* ---------- controls ---------- */
+  function renderConds() {
+    const counts = {};
+    D.findings.forEach(f => counts[f.condition] = (counts[f.condition] || 0) + 1);
+    const items = [{ id: "all", name: "All conditions", n: D.findings.length }, ...D.conditions.map(c => ({ ...c, n: counts[c.id] || 0 }))];
+    $("conds").innerHTML = items.map(c =>
+      `<button class="cond" data-c="${c.id}" aria-pressed="${state.cond === c.id}">${esc(c.name)}<span class="n">${c.n}</span></button>`).join("");
+  }
+  $("conds").addEventListener("click", e => {
+    const b = e.target.closest(".cond"); if (!b) return;
+    state.cond = b.dataset.c; state.site = null;
+    try { history.replaceState(null, "", "#" + state.cond); } catch (_) { location.hash = state.cond; }
+    render();
+  });
+  window.addEventListener("hashchange", () => { fromHash(); state.site = null; render(); });
+
+  function renderBands(base) {
+    const present = new Set(base.flatMap(f => f.bands));
+    $("bands").innerHTML = D.bands.map(b =>
+      `<button class="band${present.has(b.id) ? "" : " dim"}" data-b="${b.id}" aria-pressed="${state.band === b.id}" title="${esc(b.note)}">
+        <span class="sw" style="background:${bandColor(b.id)}"></span><span>${b.name}</span><span class="hz">${b.range}</span></button>`).join("");
+  }
+  $("bands").addEventListener("click", e => {
+    const b = e.target.closest(".band"); if (!b) return;
+    state.band = state.band === b.dataset.b ? null : b.dataset.b; render();
+  });
+
+  function renderEv() {
+    $("evFilters").innerHTML = `<span class="lbl">Evidence</span>` +
+      [null, ...EV_ORDER].map(ev => `<button class="fbtn" data-ev="${ev || ""}" aria-pressed="${state.ev === ev}">${ev ? ev[0].toUpperCase() + ev.slice(1) : "Any"}</button>`).join("");
+  }
+  $("evFilters").addEventListener("click", e => {
+    const b = e.target.closest(".fbtn"); if (!b) return;
+    state.ev = b.dataset.ev || null; render();
+  });
+
+  function toggleSite(name) { state.site = state.site === name ? null : name; render(); }
+  $("clearSite").addEventListener("click", () => { state.site = null; render(); });
+  $("q").addEventListener("input", e => { state.q = e.target.value.trim(); render(); });
+
+  /* ---------- ledger ---------- */
+  function card(f) {
+    const dots = Array.from({ length: 4 }, (_, i) => `<i class="${i < EV_DOTS[f.evidence] ? "f" : ""}"></i>`).join("");
+    const bands = f.bands.map(b => `<span class="chip"><span class="sw" style="background:${bandColor(b)}"></span>${bandById[b].name}</span>`).join("");
+    const sites = f.sites.length ? f.sites.map(s => `<span class="chip site">${s}</span>`).join("") : `<span class="chip">Individualised (QEEG-guided)</span>`;
+    const c = f.cite;
+    const pub = "https://pubmed.ncbi.nlm.nih.gov/?term=" + encodeURIComponent(c.title);
+    return `<article class="card" data-sites="${f.sites.join(",")}" tabindex="-1">
+      <div class="meta">
+        <span class="ev ${f.evidence}"><span class="dots">${dots}</span>${f.evidence}</span>
+        <span class="type">${f.type === "biomarker" ? "EEG marker" : "NF protocol"}</span>
+        <span>${esc(f.design)}</span>
+        ${state.cond === "all" ? `<span>· ${esc(condById[f.condition].name)}</span>` : ""}
+      </div>
+      <h3>${esc(f.claim)}</h3>
+      <div class="tags">${sites}<span class="chip" title="${DIR_TEXT[f.direction]}">${DIR[f.direction]} ${DIR_TEXT[f.direction]}</span>${bands}</div>
+      <p>${esc(f.detail)}</p>
+      <div class="cite"><span>${esc(c.authors)} (${c.year}). ${esc(c.title)}. <em>${esc(c.journal)}</em>.</span>
+        <a href="${pub}" target="_blank" rel="noopener">Find on PubMed ↗</a></div>
+    </article>`;
+  }
+
+  function render() {
+    renderConds(); renderEv();
+    const base = baseSet(), list = listSet(base)
+      .sort((a, b) => EV_ORDER.indexOf(a.evidence) - EV_ORDER.indexOf(b.evidence) || b.cite.year - a.cite.year);
+    renderMap(base); renderBands(base);
+
+    const cond = condById[state.cond];
+    const nB = base.filter(f => f.type === "biomarker").length, nP = base.length - nB;
+    $("summary").innerHTML = `<span class="eyebrow">${nP} protocol${nP === 1 ? "" : "s"} · ${nB} EEG marker${nB === 1 ? "" : "s"}</span>
+      <h2>${cond ? esc(cond.name) : "All conditions"}</h2>
+      <p>${cond ? esc(cond.summary) : "Every condition in the dataset. Choose one above to focus the map."}</p>`;
+
+    const parts = [];
+    if (state.site) parts.push(`site <strong>${state.site}</strong>`);
+    if (state.band) parts.push(`band <strong>${bandById[state.band].name}</strong>`);
+    if (state.q) parts.push(`search <strong>“${esc(state.q)}”</strong>`);
+    $("active").innerHTML = `Showing ${list.length} of ${base.length} finding${list.length === 1 ? "" : "s"}${parts.length ? " · " + parts.join(" · ") : ""}`;
+    $("clearSite").hidden = !state.site;
+
+    $("list").innerHTML = list.length ? list.map(card).join("")
+      : `<div class="empty">No research matches these filters. Clear the site, band or search to see more.</div>`;
+  }
+
+  $("list").addEventListener("mouseover", e => { const c = e.target.closest(".card"); highlight(c ? c.dataset.sites.split(",") : null); });
+  $("list").addEventListener("mouseleave", () => highlight(null));
+  $("list").addEventListener("focusin", e => { const c = e.target.closest(".card"); if (c) highlight(c.dataset.sites.split(",")); });
+
+  $("method").innerHTML = D.methodology.map(m =>
+    `<li>${esc(m.note)} <span>${esc(m.authors)} (${m.year}), <em>${esc(m.journal)}</em>. <a style="color:var(--accent)" target="_blank" rel="noopener" href="https://pubmed.ncbi.nlm.nih.gov/?term=${encodeURIComponent(m.title)}">PubMed ↗</a></span></li>`).join("");
+
+  drawHead();
+  render();
+})();
+</script>
+</body>
+</html>
