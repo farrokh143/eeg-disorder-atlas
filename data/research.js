@@ -2607,6 +2607,46 @@ window.NF_DATA = {
       detail: "Longitudinal cohort of 122 autistic and 66 typically developing children aged 1.6 to 6 years, 358 recordings, with mixed-model analysis of whole-brain power. Autistic children had higher power in delta, theta, beta and gamma and no alpha difference. Recordings were made while children watched a cartoon with sound, not a silent resting protocol, so the result is a deviation from standard resting-state. Results are whole-brain (all electrodes), so the entry is whole-head. The language-profile and word-combination gamma results are not recorded here.",
       design: "Controlled cohort",
       cite: { authors: "Latrèche K, et al.", year: 2026, title: "Early Trajectories of Resting-State EEG power in autistic children: a longitudinal study across language profiles", journal: "Transl Psychiatry" }
+    },
+    {
+      id: "pm-12712882", condition: "epilepsy", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 208, k: null },
+      sites: ["O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["seizures"],
+      claim: "Newly diagnosed untreated epilepsy: lower occipital alpha power than healthy controls",
+      detail: "Taken from the abstract; not checked in the full text. Hungarian paper with an English abstract. 171 patients with untreated new epilepsy (aged 5 to 50) and 37 healthy controls, eyes-closed waking resting EEG, two-minute epochs. Absolute and relative alpha power at right and left occipital derivations were lower in the epilepsy groups than in controls; alpha peak frequency differed little. Diagnostic categories were pooled for the main comparison. Cross-sectional case-control design.",
+      design: "Case-control",
+      cite: { authors: "Clemens B, et al.", year: 2003, title: "[Occipital spectral EEG parameters in newly diagnosed, untreated patients with epilepsy]", journal: "Ideggyogy Sz" }
+    },
+    {
+      id: "pm-15134712", condition: "epilepsy", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: [], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["seizures"],
+      claim: "Idiopathic generalised epilepsy: more relative delta and theta power and less relative alpha power at rest",
+      detail: "Taken from the abstract; not checked in the full text. 41 patients with idiopathic generalised epilepsy compared with healthy controls (control count not stated in the abstract), two minutes of eyes-closed waking interictal EEG at 19 electrodes. Relative delta and theta power were greater and relative alpha power was lower in the patients; the main band-specific finding was higher theta coherence. Results are scalp averages, so the entry is whole-head. Cross-sectional case-control design.",
+      design: "Case-control",
+      cite: { authors: "Clemens B", year: 2004, title: "Pathological theta oscillations in idiopathic generalised epilepsy", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-20820898", condition: "epilepsy", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 34, k: null },
+      sites: ["Pz","O1","O2"], bands: ["alpha"], direction: "up", evidence: "preliminary",
+      changes: { alpha: "up" }, symptoms: ["seizures"],
+      claim: "Generalised cryptogenic epilepsy in children: higher parieto-occipital alpha power than healthy children at rest",
+      detail: "Taken from the abstract; not checked in the full text. 10 children with generalised cryptogenic epilepsy compared with 24 healthy children at rest. Global power in the low and mid bands was higher in the epilepsy group, and the epilepsy-related elevation was mainly in alpha at parieto-occipital electrodes. The comparison of healthy children with adults (normal immaturity) is not recorded here. Eyes state is not stated in the abstract. Cross-sectional case-control design.",
+      design: "Case-control",
+      cite: { authors: "Michels L, et al.", year: 2011, title: "Does greater low frequency EEG activity in normal immaturity and in children with epilepsy arise in the same neuronal network?", journal: "Brain Topogr" }
+    },
+    {
+      id: "pm-23922658", condition: "epilepsy", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 24, k: null },
+      sites: ["T3","T4","P3","P4"], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["seizures"],
+      claim: "Left temporal lobe epilepsy: higher temporal and temporo-parietal delta and theta power, lower high-alpha power at rest",
+      detail: "9 people with left temporal lobe epilepsy on anti-seizure medication and 15 healthy controls, eyes-closed and eyes-open resting EEG. Delta power was higher over the left temporal region and theta power higher in focal bilateral temporo-parietal regions. High-alpha (10 to 13 Hz) power was lower, mainly over parietal channels, in patients with eyes closed. Sites are the temporal and parietal regions named in the topography. Synchronisation and graph-theory results are not recorded here. Small single-centre case-control design.",
+      design: "Case-control",
+      cite: { authors: "Quraan MA, et al.", year: 2013, title: "Altered resting state brain dynamics in temporal lobe epilepsy can be observed in spectral power, functional connectivity and graph theory metrics", journal: "PLoS One" }
     }
   ],
 
