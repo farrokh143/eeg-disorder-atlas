@@ -2027,6 +2027,46 @@ window.NF_DATA = {
       detail: "Result is for the higher-minor-physical-anomaly subgroup of 40 drug-free patients vs 20 controls, 192-channel resting EEG. Low gamma (30-50 Hz) was higher over right frontal, parietal and temporal sites; high gamma (71-100 Hz) over left sites; both are listed as gamma. Coherence results are excluded (CN). Taken from the abstract; not checked in the full text. Small case-control study.",
       design: "Case-control",
       cite: { authors: "Tikka SK, et al.", year: 2013, title: "Increased spontaneous gamma power and synchrony in schizophrenia patients having higher minor physical anomalies", journal: "Psychiatry Res" }
+    },
+    {
+      id: "pm-24090715", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 268, k: null },
+      sites: [], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "contested",
+      changes: { delta: "mixed", theta: "mixed", alpha: "mixed" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia vs controls: no difference in resting delta, theta or alpha power (coherence excluded)",
+      detail: "132 schizophrenia patients vs 136 non-psychiatric controls, resting EEG power across frontal, central, parietal and temporal regions. Repeated-measures ANOVA found no significant diagnosis effect for delta, theta, alpha1 or alpha2 power at any region, so this is a null result. Bipolar comparisons and coherence results are not used here (coherence is CN). Medication and age were covariates.",
+      design: "Case-control",
+      cite: { authors: "Kam JW, et al.", year: 2013, title: "Resting state EEG power and coherence abnormalities in bipolar disorder and schizophrenia", journal: "J Psychiatr Res" }
+    },
+    {
+      id: "pm-24439302", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 425, k: null },
+      sites: [], bands: ["delta","theta","alpha","beta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "up", beta: "up" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia probands: higher resting delta, theta, alpha and slow beta than healthy controls",
+      detail: "225 schizophrenia probands vs 200 healthy controls, 64-channel resting EEG reduced by group ICA to spectral components. Theta and slow alpha were higher at most scalp sites, so the result is recorded as whole-head; delta was strongest over frontal sites and slow beta over frontal and central sites. Bipolar probands and relatives are reported separately and are not used here. Case-control design.",
+      design: "Case-control",
+      cite: { authors: "Narayanan B, et al.", year: 2014, title: "Resting state electroencephalogram oscillatory abnormalities in schizophrenia and psychotic bipolar patients and their relatives from the bipolar and schizophrenia network on intermediate phenotypes study", journal: "Biol Psychiatry" }
+    },
+    {
+      id: "pm-25310340", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 50, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia: lacks the left-lateralised resting frontal alpha asymmetry seen in controls",
+      detail: "25 outpatients with schizophrenia vs 25 healthy controls, resting alpha (8-12 Hz) frontal asymmetry. Patients did not show the left-lateralised activity present in controls, which the authors read as reduced approach motivation. Asymmetry did not correlate with symptom ratings within patients. Taken from the abstract; not checked in the full text. Small case-control study.",
+      design: "Case-control",
+      cite: { authors: "Horan WP, et al.", year: 2014, title: "Approach and withdrawal motivation in schizophrenia: an examination of frontal brain asymmetric activity", journal: "PLoS One" }
+    },
+    {
+      id: "pm-25595562", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 180, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","C3","Cz","C4"], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["psychosis"],
+      claim: "Un-medicated schizophrenia: more frontocentral delta and theta, less alpha2 than controls",
+      detail: "90 un-medicated patients vs 90 normal controls, resting eyes-closed EEG across five bands. Increases in delta and theta and a decrease in alpha2 were most marked frontocentral (frontal and central sites together). Alpha1 and beta showed no difference. The reported classifier accuracy (62.2%) is not used. Taken from the abstract; not checked in the full text. Case-control study.",
+      design: "Case-control",
+      cite: { authors: "Kim JW, et al.", year: 2015, title: "Diagnostic utility of quantitative EEG in un-medicated schizophrenia", journal: "Neurosci Lett" }
     }
   ],
 
