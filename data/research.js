@@ -1307,6 +1307,46 @@ window.NF_DATA = {
       detail: "Open-label, uncontrolled 8-week neurofeedback in 20 people with MDD: beta training at F3 and alpha/theta training at Pz, 60 minutes per session. Depression, anxiety and severity scores improved; the interhemispheric alpha asymmetry score did not change. No control group, so the improvement cannot be attributed to training. Taken from the abstract; not checked in the full text.",
       design: "Open-label pilot (no control)",
       cite: { authors: "Cheon EJ, et al.", year: 2016, title: "The Efficacy of Neurofeedback in Patients with Major Depressive Disorder: An Open Labeled Prospective Study", journal: "Appl Psychophysiol Biofeedback" }
+    },
+    {
+      id: "pm-27000108", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 64, k: null },
+      sites: [], bands: ["alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { alpha: "mixed" }, symptoms: ["headache"],
+      claim: "MDD: alpha cordance tracks headache pain, positive at frontal and negative at posterior sites",
+      detail: "Resting qEEG in 64 unmedicated MDD patients, with headache pain rated for the past week. Alpha cordance was associated with headache intensity after controlling for depression severity: positive anteriorly and negative posteriorly. Frontal left-dominant alpha asymmetry correlated with headache but not with depression. Directions differ by site, so the change is marked mixed and a whole-head entry is used. Taken from the abstract; not checked in the full text. Cordance is a power-derived index.",
+      design: "Cross-sectional correlation",
+      cite: { authors: "Scanlon GC, et al.", year: 2017, title: "Neurophysiologic Correlates of Headache Pain in Subjects With Major Depressive Disorder", journal: "Clin EEG Neurosci" }
+    },
+    {
+      id: "pm-27344621", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 73, k: null },
+      sites: ["F3","Fz","F4","C3","Cz","C4"], bands: ["beta","gamma"], direction: "down", evidence: "preliminary",
+      changes: { beta: "down", gamma: "down" }, symptoms: ["inattention"],
+      claim: "MDD: lower fronto-central beta and low-gamma power with more inattention",
+      detail: "Eyes-closed and eyes-open resting qEEG in 73 MDD patients. Beta (12-30 Hz) and low-gamma (30-50 Hz) power at fronto-central sites were negatively correlated with inattention scores, so lower power went with more inattention. Depression and anxiety scores also predicted inattention, and the mediation model is not used here. Taken from the abstract; not checked in the full text. Medication and comorbidity were not fully controlled.",
+      design: "Cross-sectional correlation",
+      cite: { authors: "Roh SC, et al.", year: 2016, title: "EEG beta and low gamma power correlates with inattention in patients with major depressive disorder", journal: "J Affect Disord" }
+    },
+    {
+      id: "pm-28755454", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 124, k: null },
+      sites: ["F7","F3"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
+      claim: "Women with childhood-onset depression and no anxiety: less left lateral frontal activity than controls",
+      detail: "Resting EEG in 37 women with a history of childhood-onset depression and no anxiety disorder, 18 with the same history plus an anxiety disorder, and 69 psychiatrically healthy controls (124 in total). Reduced left lateral frontal activity was found in the depression-only group, while the anxious group did not differ from controls. Taken from the abstract; not checked in the full text. Remitted history rather than current depression.",
+      design: "Case-control",
+      cite: { authors: "Nusslock R, et al.", year: 2018, title: "Comorbid anxiety moderates the relationship between depression history and prefrontal EEG asymmetry", journal: "Psychophysiology" }
+    },
+    {
+      id: "pm-29023805", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
+      claim: "Lifetime depression: less left than right activity in midfrontal and precentral sources (alpha asymmetry)",
+      detail: "Source-localised (eLORETA); mapped to the overlying scalp region. Resting-state alpha asymmetry in a large resting data set; participants with any lifetime depressive episode showed less left than right activity in the precentral and midfrontal gyri. Anhedonia accounted for part of the link to lifetime MDD. The abstract does not state the sample size, so n is left blank. Taken from the abstract; not checked in the full text.",
+      design: "Cross-sectional group comparison (source-level)",
+      cite: { authors: "Smith EE, et al.", year: 2018, title: "Intracranial source activity (eLORETA) related to scalp-level asymmetry scores and depression status", journal: "Psychophysiology" }
     }
   ],
 
