@@ -2097,6 +2097,56 @@ window.NF_DATA = {
       detail: "20 remitted schizophrenia patients, 20 unaffected siblings and 20 healthy controls, awake resting 192-channel EEG. High-gamma power was lower over right temporo-parietal and midline regions in patients and siblings than controls. Sibling group included, but the sample is not only relatives. Taken from the abstract; not checked in the full text.",
       design: "Case-control",
       cite: { authors: "Umesh S, et al.", year: 2018, title: "Social anhedonia and gamma band abnormalities as a composite/multivariate endophenotype for schizophrenia: a dense array EEG study", journal: "Early Interv Psychiatry" }
+    },
+    {
+      id: "pm-28483096", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 30, k: null },
+      sites: ["Fp1","F7","F3","T3","T5"], bands: ["alpha","theta"], direction: "ratio", evidence: "preliminary",
+      changes: { alpha: "down", theta: "up" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia: lower left frontal and temporal alpha/theta ratio than controls, linked to negative symptoms",
+      detail: "15 drug-free or drug-naive patients with schizophrenia and 15 matched controls, 192-channel resting EEG. The alpha/theta ratio was lower over left frontal and left temporal sites in patients and tracked negative symptom scores. Small case-control study. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Mitra S, et al.", year: 2017, title: "Electroencephalogram alpha-to-theta ratio over left fronto-temporal region correlates with negative symptoms in schizophrenia", journal: "Asian J Psychiatr" }
+    },
+    {
+      id: "pm-2898871", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 36, k: null },
+      sites: ["O1","O2"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["psychosis","anxiety"],
+      claim: "Within schizophrenia: left/right asymmetry of posterior alpha tracks anxiety/depression and psychotic symptoms",
+      detail: "36 schizophrenic outpatients on neuroleptics, resting EEG with absolute alpha power at F3, F4, O1 and O2. A more left-lateralised posterior alpha ratio went with higher anxiety/depression scores, and psychotic symptoms followed an inverted-U pattern. Cross-sectional correlations in patients only, with no healthy control group. Taken from the abstract; not checked in the full text.",
+      design: "Cross-sectional correlation",
+      cite: { authors: "Gaebel W, et al.", year: 1988, title: "Topographical distribution of absolute alpha-power in the EEG and psychopathology in schizophrenic outpatients", journal: "Acta Psychiatr Scand" }
+    },
+    {
+      id: "pm-29569047", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 136, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","C3","Cz","C4","P3","Pz","P4","T5","T6","O1","O2"], bands: ["gamma"], direction: "up", evidence: "preliminary",
+      changes: { gamma: "up" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia: higher eyes-closed gamma (30-48 Hz) over fronto-central and posterior sites than controls",
+      detail: "60 patients with schizophrenia and 76 healthy controls, 256-channel eyes-closed resting EEG. Absolute gamma power was higher in patients, clustered in fronto-central and posterior regions, and rose with PANSS severity. Sites are the union of the named frontal, central and posterior regions. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Baradits M, et al.", year: 2019, title: "Alterations in resting-state gamma activity in patients with schizophrenia: a high-density EEG study", journal: "Eur Arch Psychiatry Clin Neurosci" }
+    },
+    {
+      id: "pm-29643331", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 109, k: null },
+      sites: [], bands: ["delta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", alpha: "down" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia: higher delta/alpha ratio than controls, mostly across the whole head (eyes closed and open)",
+      detail: "28 patients with schizophrenia, 28 with bipolar I psychosis, 24 with methamphetamine-induced psychosis and 29 controls, resting EEG eyes open and closed. The delta/alpha ratio was higher in schizophrenia than controls, mostly globally. The bipolar and methamphetamine groups are reported separately and not used here. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Howells FM, et al.", year: 2018, title: "Electroencephalographic delta/alpha frequency activity differentiates psychotic disorders: a study of schizophrenia, bipolar disorder and methamphetamine-induced psychotic disorder", journal: "Transl Psychiatry" }
+    },
+    {
+      id: "pm-31634240", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 103, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","C3","Cz","C4"], bands: ["delta","theta","alpha"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "up" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia: more delta, theta and alpha over anterior and central sites than controls (eyes open)",
+      detail: "33 healthy controls, 35 unaffected first-degree relatives and 35 patients with schizophrenia, resting eyes-open EEG. Patients showed increased delta, theta and alpha power over anterior and central regions. The relatives' gamma correlation with schizotypy is not used here. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Chen C, et al.", year: 2019, title: "The relationship between resting electroencephalogram oscillatory abnormalities and schizotypal personality traits in the first-degree relatives of schizophrenia patients", journal: "Neuroreport" }
     }
   ],
 
