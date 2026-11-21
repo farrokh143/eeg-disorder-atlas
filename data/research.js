@@ -657,6 +657,36 @@ window.NF_DATA = {
       detail: "99 community-dwelling African Americans (41 MCI, 58 neurologically intact controls), eyes-closed resting EEG recorded before a motion task. Frontal beta asymmetry was greater in MCI, and frontal alpha asymmetry did not differ at baseline. Exploratory analysis with highly correlated asymmetry measures (r = 0.85) and no replication yet.",
       design: "Case-control (exploratory)",
       cite: { authors: "Martin T, et al.", year: 2022, title: "EEG asymmetry and cognitive testing in MCI identification", journal: "Int J Psychophysiol" }
+    },
+    {
+      id: "pm-36330876", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 156, k: null },
+      sites: ["C3","P3","C4","P4","O1","O2"], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "mixed" }, symptoms: ["memory","cogdecline"],
+      claim: "AD dementia: delta and theta up, high alpha down at parieto-occipital channels",
+      detail: "88 people with Alzheimer's dementia vs 68 normal elderly controls, eyes-closed resting EEG from six posterior bipolar channels (C3-P3, C4-P4, P3-O1, P4-O2). Low alpha and high alpha moved in opposite directions. Classification reached 90% AUC using alpha2/theta at C3-P3. Taken from the abstract; not checked in the full text. Single-centre case-control study.",
+      design: "Case-control",
+      cite: { authors: "Del Percio C, et al.", year: 2022, title: "What a single electroencephalographic (EEG) channel can tell us about patients with dementia due to Alzheimer's disease", journal: "Int J Psychophysiol" }
+    },
+    {
+      id: "pm-36413420", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 145, k: null },
+      sites: ["C3","P3","C4","P4","O1","O2"], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["memory","cogdecline"],
+      claim: "MCI due to AD: delta up, alpha down at parieto-occipital channels; theta up only at C3-P3",
+      detail: "75 people with MCI due to AD vs 70 normal elderly controls, eyes-closed resting EEG from six monopolar scalp electrodes forming four posterior bipolar channels. Delta and alpha changed at all four bipolar channels, but theta differed only at C3-P3. Taken from the abstract; not checked in the full text. Single-centre case-control study.",
+      design: "Case-control",
+      cite: { authors: "Del Percio C, et al.", year: 2023, title: "What a Single Electroencephalographic (EEG) Channel Can Tell us About Alzheimer's Disease Patients With Mild Cognitive Impairment", journal: "Clin EEG Neurosci" }
+    },
+    {
+      id: "pm-37248895", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 99, k: null },
+      sites: ["Fz","Cz","Pz","O1","O2","F3","F4"], bands: ["theta","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", beta: "down" }, symptoms: ["memory","cogdecline"],
+      claim: "MCI: theta/beta ratio higher than controls, with right-leaning frontal ratio asymmetry",
+      detail: "99 community-dwelling older African Americans (41 MCI, 58 controls), eyes-closed resting EEG before and after a motion task; the MCI difference held at both times. Midline theta/beta ratio was higher in MCI, and frontal ratio asymmetry leaned right only in MCI. Oz is listed as O1 and O2. Exploratory secondary analysis of the same sample as the frontal asymmetry study, not yet replicated.",
+      design: "Case-control (exploratory)",
+      cite: { authors: "Martin T, et al.", year: 2023, title: "Mild Cognitive Impairment in African Americans Is Associated with Differences in EEG Theta/Beta Ratio", journal: "J Alzheimers Dis" }
     }
   ],
 
