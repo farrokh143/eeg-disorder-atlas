@@ -2207,6 +2207,46 @@ window.NF_DATA = {
       detail: "39 chronic patients and 36 matched controls, dense-array resting EEG. A 6-9 Hz theta/alpha component was unique to patients, and their peak alpha frequency was lower. Source-localised (standardised LORETA); the prefrontal source is mapped to the overlying frontal scalp region, and the parahippocampal source is not mapped. Taken from the abstract; not checked in the full text.",
       design: "Case-control",
       cite: { authors: "Nakhnikian A, et al.", year: 2024, title: "Spectral decomposition of resting state electroencephalogram reveals unique theta/alpha activity in schizophrenia", journal: "Eur J Neurosci" }
+    },
+    {
+      id: "pm-39799666", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 101, k: null },
+      sites: ["F3","F4"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["social"],
+      claim: "Schizophrenia: frontal alpha asymmetry differs from controls, but is not linked to social functioning",
+      detail: "33 patients with schizophrenia, 38 healthy controls and 30 autism participants analysed (101 of 103 recruited), 64-channel eyes-open resting EEG. Alpha asymmetry from homologous F3 and F4 differed between patients and controls, but was not related to social functioning in patients. The autism group is reported separately and not used here. Small cross-sectional study.",
+      design: "Case-control",
+      cite: { authors: "Farina EA, et al.", year: 2025, title: "Social functioning and frontal alpha asymmetry in schizophrenia", journal: "J Psychiatr Res" }
+    },
+    {
+      id: "pm-40550812", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 116, k: null },
+      sites: ["T3","T4","T5","T6","O1","O2"], bands: ["alpha"], direction: "up", evidence: "preliminary",
+      changes: { alpha: "up" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia: higher eyes-open low alpha (about 8 Hz) over temporal and occipital sites than controls",
+      detail: "55 patients with schizophrenia and 61 healthy controls, resting EEG with eyes open and closed. Low alpha (about 8 Hz) power was higher in patients with eyes open, most clearly over temporal-occipital sites; the eyes-closed difference was weaker. High-alpha correlations with symptoms are not used here. Small case-control study.",
+      design: "Case-control",
+      cite: { authors: "Han C, et al.", year: 2025, title: "Distinct oscillatory mechanisms in low and high alpha-band activities for screening and potential treatment of Schizophrenia", journal: "Transl Psychiatry" }
+    },
+    {
+      id: "pm-40792462", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 134, k: null },
+      sites: [], bands: ["theta","alpha"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up", alpha: "up" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia: more resting 4-10 Hz power over widespread regions than controls",
+      detail: "66 neurotypical controls and 68 patients with schizophrenia, resting EEG. Resting power in the 4-10 Hz range was higher over widespread regions in patients. The auditory steady-state and rest-task shift results are not used here. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Mitoma R, et al.", year: 2025, title: "Abnormal spontaneous activity and rest-task shift in schizophrenia", journal: "Psychiatry Clin Neurosci" }
+    },
+    {
+      id: "pm-41045101", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 249, k: null },
+      sites: [], bands: ["theta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up" }, symptoms: ["psychosis","memory"],
+      claim: "Schizophrenia spectrum: higher scalp theta power at rest than controls, linked to worse working memory",
+      detail: "152 healthy controls and 97 patients with schizophrenia spectrum disorders, resting EEG. Global scalp theta power was higher in patients, and higher frontoinsular theta was linked to worse cognition within patients. Deep frontoinsular sources are not mapped to scalp sites. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Hasanaj G, et al.", year: 2025, title: "Periodic and Aperiodic Alterations of Resting-State EEG in Schizophrenia Spectrum Disorders: Cognitive and Clinical Insights", journal: "Eur J Neurosci" }
     }
   ],
 
