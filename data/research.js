@@ -1827,6 +1827,26 @@ window.NF_DATA = {
       detail: "Baseline 3-minute eyes-open resting EEG (before neurofeedback) in 25 adults with ADHD and 22 healthy controls. Relative alpha was significantly lower in ADHD over the frontal region. Only the baseline resting result is used; neurofeedback, post-training and task results are not included. Individual frontal electrodes are not listed in the text, so the frontal region is used.",
       design: "Case-control",
       cite: { authors: "Deiber MP, et al.", year: 2020, title: "Linking alpha oscillations, attention and inhibitory control in adult ADHD with EEG neurofeedback", journal: "Neuroimage Clin" }
+    },
+    {
+      id: "pm-32682239", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 81, k: null },
+      sites: ["F3","Fz","F4","Cz","T3","T4"], bands: ["theta","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", beta: "down" }, symptoms: ["inattention","hyperactivity"],
+      claim: "ADHD children: higher theta/beta ratio and more fronto-central and temporal theta source power than controls",
+      detail: "Eyes-open resting EEG in 40 children with combined or inattentive ADHD and 41 age-matched controls, analysed at sensor level and as eLORETA cortical sources. Combined subtype showed a higher diffuse theta/beta ratio and a widespread beta source decrease; both subtypes showed higher theta/beta ratio, and ADHD showed fronto-central and temporal theta source power rising with age. Source regions are given at lobe level in the abstract and are mapped to the overlying scalp sites here. Taken from the abstract; not checked in the full text.",
+      design: "Case-control (source analysis)",
+      cite: { authors: "Ahmadi M, et al.", year: 2020, title: "Cortical source analysis of resting state EEG data in children with attention deficit hyperactivity disorder", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-34529233", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: [], bands: ["theta","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", beta: "down" }, symptoms: ["inattention","hyperactivity"],
+      claim: "Adult ADHD males (DSM-5): globally lower absolute beta and higher relative theta; no global effect in females",
+      detail: "Eyes-closed resting EEG from 19 sites in 16 males and 16 females with DSM-5 ADHD, with sex-matched controls. Males with ADHD had globally reduced absolute beta, globally elevated relative theta and a larger theta/beta ratio than male controls; females showed no global group effect. Control group size is not stated in the abstract, so n is null. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Dupuy FE, et al.", year: 2021, title: "DSM-5 Adult Attention-Deficit/Hyperactivity Disorder: Sex Differences in EEG Activity", journal: "Appl Psychophysiol Biofeedback" }
     }
   ],
 
