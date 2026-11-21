@@ -727,6 +727,36 @@ window.NF_DATA = {
       detail: "Three independent eyes-closed resting EEG cohorts of AD and prodromal AD (MCI due to AD) compared with age-matched controls. Theta was higher in AD and replicated in two cohorts, with theta connectivity lower. In prodromal AD, gamma power and gamma/alpha ratio were higher, mainly over left fronto-central and parietal areas, with delta also higher. Alpha did not differ consistently. Sites are listed as widespread. Case-control design with two pipelines; not a diagnostic test.",
       design: "Case-control",
       cite: { authors: "Chetty CA, et al.", year: 2024, title: "EEG biomarkers in Alzheimer's and prodromal Alzheimer's: a comprehensive analysis of spectral and connectivity features", journal: "Alzheimers Res Ther" }
+    },
+    {
+      id: "pm-40359673", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 182, k: null },
+      sites: [], bands: ["theta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", alpha: "mixed" }, symptoms: ["memory","cogdecline"],
+      claim: "AD vs healthy: resting theta power higher across all regions; alpha not different",
+      detail: "22 healthy controls and 160 people with AD, resting-state EEG. Theta power (4-8 Hz) was higher in AD in all regions, and alpha did not differ between eyes-closed and eyes-open recordings. Interhemispheric correlation and the random-forest classifier are not used here. Taken from the abstract; not checked in the full text. Case-control study with no external validation of the classifier.",
+      design: "Case-control",
+      cite: { authors: "Lee AL, et al.", year: 2025, title: "Exploring the diagnostic potential of EEG theta power and interhemispheric correlation of temporal lobe activities in Alzheimer's Disease through random forest analysis", journal: "Comput Biol Med" }
+    },
+    {
+      id: "pm-40413989", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 28, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["beta","delta","alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { beta: "up", delta: "down", alpha: "asymmetry" }, symptoms: ["memory","cogdecline"],
+      claim: "Suspected MCI on a health-check screen: frontal beta up, delta down, frontal alpha asymmetry",
+      detail: "14 people over 65 with suspected MCI and 14 propensity-matched people without cognitive impairment, short resting-state EEG. Frontal beta power was higher and delta lower in the suspected-MCI group, which also had a higher theta/beta ratio and frontal alpha asymmetry. Across participants, beta power correlated negatively with screen performance, while delta and theta/beta correlated positively. Taken from the abstract; not checked in the full text. Pilot cross-sectional study.",
+      design: "Case-control (cross-sectional pilot)",
+      cite: { authors: "Nikaido Y, et al.", year: 2025, title: "Short-term resting-state electroencephalography fast activity is associated with cognitive decline in older adults: A population-based cross-sectional pilot study", journal: "Psychiatry Res Neuroimaging" }
+    },
+    {
+      id: "pm-40755242", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 65, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["gamma"], direction: "ratio", evidence: "contested",
+      changes: { gamma: "mixed" }, symptoms: ["memory","cogdecline"],
+      claim: "AD vs healthy: resting frontal gamma band power shows no difference",
+      detail: "36 people with AD and 29 healthy older adults, resting-state EEG. Gamma power did not differ at any of the seven frontal electrodes tested (p from 0.42 to 0.91). The paper uses this null result to support gamma-tACS work in AD. Taken from the abstract; not checked in the full text. Small case-control study.",
+      design: "Case-control (null result)",
+      cite: { authors: "S V, et al.", year: 2026, title: "Assessment of Gamma Band Power of Electroencephalogram in Alzheimer's disease", journal: "Appl Neuropsychol Adult" }
     }
   ],
 
