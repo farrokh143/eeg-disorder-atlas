@@ -2437,6 +2437,16 @@ window.NF_DATA = {
       detail: "60 adult women with internalising disorders in a double-blind, sham-controlled pilot RCT, 6 sessions of infraslow neurofeedback. Slow and delta source activity fell at the targeted posterior cingulate in one active arm relative to sham (source-localised, LORETA-KEY), but HADS scores improved similarly in all arms, so there was no specific effect. The target is a deep structure, so sites are []; the anterior cingulate and connectivity results were not used.",
       design: "RCT (sham-controlled)",
       cite: { authors: "Perez TM, et al.", year: 2025, title: "Infraslow Closed-Loop Brain Training for Anxiety and Depression (ISAD): A pilot randomised, sham-controlled trial in adult females with internalizing disorders", journal: "Cogn Affect Behav Neurosci" }
+    },
+    {
+      id: "pm-9892259", condition: "anxiety", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 48, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["anxiety"],
+      claim: "Panic disorder: right frontal alpha lower than left at rest; controls show no asymmetry",
+      detail: "Taken from the abstract; not checked in the full text. 23 people with panic disorder without depression vs 25 healthy controls, spontaneous EEG during rest phases (eyes state not stated in the abstract). Right frontal alpha power was significantly lower than left in patients during rest and anxiety-relevant stimuli; only the rest phases are used here, and the stimulus conditions are not included. The abstract does not give the electrode set, so the frontal region was used. Case-control design, 1999.",
+      design: "Case-control",
+      cite: { authors: "Wiedemann G, et al.", year: 1999, title: "Frontal brain asymmetry as a biological substrate of emotions in patients with panic disorders", journal: "Arch Gen Psychiatry" }
     }
   ],
 
