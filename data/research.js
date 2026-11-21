@@ -1457,6 +1457,26 @@ window.NF_DATA = {
       detail: "Resting EEG in 53 unmedicated MDD patients and 43 controls, referenced to Cz and mastoids. Alpha-2 power was higher over frontal and parietal sites, with the clearest effect in males. Source-localised theta in the subgenual cingulate was left out because it is a deep structure. Single case-control study.",
       design: "Case-control",
       cite: { authors: "(verify authors)", year: 2012, title: "Alpha Power, Alpha Asymmetry and Anterior Cingulate Cortex Activity in Depressed Males and Females", journal: "Journal of Psychiatric Research" }
+    },
+    {
+      id: "pm-37480706", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 100, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4","O1","O2"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
+      claim: "Melancholia subscale tracks alpha asymmetry in opposite directions: frontal vs parietal-occipital",
+      detail: "Eyes-closed resting EEG and Zung depression scores in 100 community adults; the correlation held in the 33 with clinically significant depression. Frontal alpha asymmetry was inversely related and parietal-occipital asymmetry directly related to one melancholia subcomponent. Taken from the abstract; not checked in the full text. Electrode labels are not in the abstract, so sites are the frontal and parietal-occipital regions; the study is correlational.",
+      design: "Cross-sectional correlation",
+      cite: { authors: "Sharpley CF, et al.", year: 2023, title: "Alpha wave asymmetry is associated with only one component of melancholia, and in different directions across brain regions", journal: "Psychiatry Res Neuroimaging" }
+    },
+    {
+      id: "pm-37957613", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 80, k: null },
+      sites: ["O1","O2"], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["lowmood"],
+      claim: "First-episode MDD: higher low delta and theta, lower alpha over occipital sites at rest",
+      detail: "Eyes-closed resting EEG for 10 minutes in 40 first-episode, medication-naive MDD patients and 40 healthy controls. Relative low delta and theta were higher in the right occipital region, and alpha was lower across the posterior occipital region. Taken from the abstract; not checked in the full text. Machine-learning classification is also reported but was not used for the band result.",
+      design: "Case-control",
+      cite: { authors: "Huang Y, et al.", year: 2023, title: "Analysis of EEG features and study of automatic classification in first-episode and drug-naïve patients with major depressive disorder", journal: "BMC Psychiatry" }
     }
   ],
 
