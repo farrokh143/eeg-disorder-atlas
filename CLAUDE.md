@@ -3,6 +3,23 @@
 Use this file as the instructions for a Claude Project (claude.ai → Projects →
 instructions) or for Claude Code working in this repository.
 
+## Coordinating between chats (read first)
+
+Several chats may work on this project at once and none can see the others. They communicate
+only through the Claude Project docs, using `chat-board.md`.
+
+1. **At the start of every chat**, read `chat-board.md` and `project-overview.md` before doing anything else.
+2. **Before changing any project doc or pushing to GitHub**, check "Active work" on the board. If another
+   chat has claimed that doc or file, don't edit it: post a message on the board instead and tell the user.
+3. **Claim before you write.** Add a line to "Active work" (time, short chat label, task, docs/files you'll change).
+4. **Re-read right before saving.** Project docs are replaced whole on save, so always read the latest
+   version immediately before writing, merge your change into it, then save. Never save from an old copy.
+   On GitHub, fetch the latest `main` before branching and rebase before merging.
+5. **Check the board again** before each later write and before ending the chat, in case another chat
+   posted something.
+6. **When you finish**, remove your claim and post a one-line message saying what changed.
+7. Keep board messages short; move anything lasting into `project-overview.md` (Key decisions / Changelog).
+
 ## Goal
 
 Let people link a resting-state EEG pattern (band, direction, scalp site) to the disorders and
@@ -68,12 +85,14 @@ Evidence grades:
 - **Keep GitHub and the Claude Project in sync (every development chat).** Before ending any chat or
   session that changes the atlas (data, site, rules or decisions):
   1. Commit the change on a branch, open a pull request and merge it to `main` (GitHub Pages publishes `main`).
-  2. Update the Claude Project "EEG Disorder Atlas" documents so they match `main`:
+  2. Update the Claude Project "EEG Disorder Atlas" documents so they match `main`
+     (following "Coordinating between chats" above):
      - `project-overview.md`: "Last updated" date, Current status counts, Key decisions, Open tasks, and one new Changelog line
      - `atlas-findings.md`: regenerate with `node tools/findings-snapshot.js`
      - `research-log-summary.md`: regenerate with `node tools/log-summary.js` (the full log is too large for the project; it stays on GitHub)
      - `search-protocol.md`: copy from `data/`
      - `project-instructions.md`: copy of this file, if it changed
+     - `chat-board.md`: remove your claim and post what changed
   3. Tell the user what changed. If GitHub or the project cannot be updated from that chat, say which
      part was not updated so it can be done next time.
 
