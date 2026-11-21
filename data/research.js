@@ -2717,6 +2717,26 @@ window.NF_DATA = {
       detail: "120 people with epilepsy (60 drug-resistant, 60 not) and 60 healthy controls, resting eyes-closed 19-channel EEG. Relative power was higher in delta and theta and lower in alpha and beta in all people with epilepsy; in drug-resistant epilepsy delta was higher and alpha lower than non-drug-resistant, with widespread channel differences. Power is channel-averaged, so sites are whole-head. Retrospective, single-centre, no external validation; graph-theory results not counted here.",
       design: "Case-control",
       cite: { authors: "Sancetta BM, et al.", year: 2026, title: "A spectral- topological network signature of drug-resistant epilepsy: a phase 1-2 study on resting-state EEG-based diagnostic biomarkers of drug resistance", journal: "Neuroimage Clin" }
+    },
+    {
+      id: "pm-18457962", condition: "parkinsons", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 58, k: null },
+      sites: [], bands: ["theta","beta","gamma"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up", beta: "up", gamma: "up" }, symptoms: ["motor"],
+      claim: "Parkinson's: more resting theta, beta and gamma power than controls, frontal for beta and gamma",
+      detail: "24 people with Parkinson's vs 34 healthy controls, resting EEG. Power was higher over 2-100 Hz, with the largest difference in 6-9 Hz theta at all electrodes; beta and gamma were highest at frontal electrodes. Source-localised (LORETA); theta and beta sources were fronto-insulo-temporal, mapped to the overlying scalp region (frontal and temporal). Taken from the abstract; not checked in the full text. Small single-centre case-control study.",
+      design: "Case-control",
+      cite: { authors: "Moazami-Goudarzi M, et al.", year: 2008, title: "Enhanced frontal low and high frequency power and synchronization in the resting EEG of parkinsonian patients", journal: "Neuroimage" }
+    },
+    {
+      id: "pm-32116262", condition: "parkinsons", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 42, k: null },
+      sites: ["T3","T4","T5","T6"], bands: ["theta","alpha"], direction: "down", evidence: "preliminary",
+      changes: { theta: "down", alpha: "down" }, symptoms: ["motor"],
+      claim: "Parkinson's off medication: less temporal theta and alpha source activity than controls",
+      detail: "Resting eyes-closed EEG in Parkinson's patients off medication vs age-matched controls (42 subjects in the analysis). Source-localised (LORETA); the temporal-lobe decreases in theta and alpha are mapped to the overlying temporal region. The anterior cingulate delta increase is a deep-structure result and is not mapped to a site. Coherence results and the classifier are not counted here.",
+      design: "Case-control",
+      cite: { authors: "Waninger S, et al.", year: 2020, title: "Neurophysiological Biomarkers of Parkinson's Disease", journal: "J Parkinsons Dis" }
     }
   ],
 
