@@ -108,6 +108,7 @@ If the log row has no title, authors, year or journal, add
 | RT | retracted |
 | NODATA | full text read, but no resting band-power result with a direction |
 | SOURCE | only source-space regions (LORETA etc.) that cannot be mapped to 10-20 sites |
+| NONBAND | the only result is a measure that isn't band power: aperiodic exponent, beta bursts or events, synchronisation index, entropy |
 | REVIEW | a review or narrative paper, not a meta-analysis (meta-analyses with pooled results are included) |
 | X | anything else; add `"reason":"..."` |
 
@@ -147,7 +148,7 @@ Band ids: `delta` 1–4 Hz, `theta` 4–8, `alpha` 8–12 (alpha1/alpha2/mu → 
 A theta/beta ratio that is higher → `{"theta":"up","beta":"down"}` and say "ratio" in the claim.
 
 **sites**: only these labels: `Fp1 Fp2 F7 F3 Fz F4 F8 T3 C3 Cz C4 T4 T5 P3 Pz P4 T6 O1 O2`.
-Convert new names: T7→T3, T8→T4, P7→T5, P8→T6. Regions:
+Midline labels not in the list: Fpz → `Fp1 Fp2`, Oz → `O1 O2`, FCz → `Fz Cz`, CPz → `Cz Pz`. Convert new names: T7→T3, T8→T4, P7→T5, P8→T6. Regions:
 frontal = `Fp1 Fp2 F7 F3 Fz F4 F8`; central = `C3 Cz C4`; temporal = `T3 T4 T5 T6`; parietal = `P3 Pz P4`;
 occipital = `O1 O2`; posterior = `P3 Pz P4 T5 T6 O1 O2`; left/right = keep that side only (odd = left, even = right);
 whole-head, global or "widespread" = `[]`. Electrodes not in the list (e.g. FC3, AF4): use the nearest listed one.
