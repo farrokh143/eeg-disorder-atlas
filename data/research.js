@@ -2777,6 +2777,16 @@ window.NF_DATA = {
       detail: "26 people with Parkinson's (on and off medication) and 26 age-matched controls, eyes-closed and eyes-open resting EEG. Total alpha and beta power were higher in Parkinson's in both states, widely distributed across the scalp. After removing the aperiodic component, the beta difference disappeared and the alpha difference remained only for eyes-open; the aperiodic exponent and offset were higher (not counted as band results). Single-centre case-control.",
       design: "Case-control",
       cite: { authors: "McKeown DJ, et al.", year: 2024, title: "Medication-invariant resting aperiodic and periodic neural activity in Parkinson's disease", journal: "Psychophysiology" }
+    },
+    {
+      id: "pm-40552872", condition: "parkinsons", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 39, k: null },
+      sites: ["O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["motor"],
+      claim: "Parkinson's: reduced occipital alpha reactivity (eyes closed to open), linked to gait variability",
+      detail: "20 people with Parkinson's and 19 healthy controls, eyes-closed and eyes-open resting EEG. Alpha reactivity over occipital electrodes (O1, O2, Oz) was reduced in Parkinson's; the group difference was no longer significant after adjusting for MMSE. Within Parkinson's, lower reactivity correlated with greater gait variability. Oz was averaged with O1 and O2 in the analysis. Single-centre case-control.",
+      design: "Case-control",
+      cite: { authors: "Lirani-Silva E, et al.", year: 2025, title: "Resting-state Alpha Reactivity Is Reduced in Parkinson's Disease and Associated With Gait Variability", journal: "Neurorehabil Neural Repair" }
     }
   ],
 
