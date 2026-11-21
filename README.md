@@ -12,7 +12,7 @@ scope; excluded papers are logged in `excluded` in `data/research.js` with the r
 - **Neighbouring electrodes** (dashed) are included by default, because scalp electrodes pick up
   activity from adjacent cortex (volume conduction). Each card says whether the finding is at a
   selected site, a neighbouring site, or whole-head.
-- Results are grouped **by symptom** (default) or by disorder. Symptom rows say which disorders
+- Results are grouped **by disorder** (default, with each disorder's symptoms listed under it) or **by symptom**. Symptom rows say which disorders
   the link comes through and are rated down for indirectness when no study measured the symptom.
 - Results show one row per disorder with its EEG marker (e.g. Theta ↑ Beta ↓) and a confidence
   rating; tap a row to see the studies behind it.

@@ -241,6 +241,9 @@ details.more[open] summary { margin-bottom: 10px; }
 .byseg { max-width: 320px; margin-bottom: 4px; }
 .dv { grid-column: 1 / -1; font-size: 0.8rem; color: var(--muted); margin-top: -2px; }
 .link { margin: 0; font-size: 0.84rem; color: var(--ink); background: var(--accent-soft); border-radius: 8px; padding: 8px 10px; }
+
+.dsy { color: var(--ink); font-size: 0.86rem; margin-top: -4px; }
+.dsy span.hit { font-weight: 600; text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; }
 .el .hit { fill: transparent; }
 .panel { grid-template-columns: minmax(0, 1fr); min-width: 0; }
 .mapbox, #regionBtns, .profile, .profile .row, .filterbar > * { min-width: 0; }
@@ -299,7 +302,7 @@ html, body { overflow-x: clip; }
   <header class="top">
     <div>
       <h1>EEG Disorder Atlas</h1>
-      <p>Resting-state EEG patterns linked to symptoms and disorders. Tap electrodes to pick an area, then narrow by band, direction or symptom.</p>
+      <p>Resting-state EEG patterns by disorder and symptom. Tap electrodes to pick an area, then narrow by band and direction.</p>
     </div>
     <label class="search"><span class="eyebrow">Search research</span>
       <input id="q" type="search" placeholder="e.g. gamma, slowing, Alzheimer" autocomplete="off">
@@ -307,10 +310,10 @@ html, body { overflow-x: clip; }
   </header>
 
   <div class="filterbar" id="filterbar">
-    <label class="dd"><span>Symptom</span><select id="fSym"></select></label>
+    <label class="dd"><span>Disorder</span><select id="fCond"></select></label>
     <label class="dd"><span>Band</span><select id="fBand"></select></label>
     <div class="dd"><span id="dirLbl">Direction</span><div class="seg" id="fDir" role="group" aria-labelledby="dirLbl"></div></div>
-    <label class="dd"><span>Disorder</span><select id="fCond"></select></label>
+    <label class="dd"><span>Symptom</span><select id="fSym"></select></label>
     <button class="clear" id="resetAll">Reset all</button>
   </div>
 
@@ -448,7 +451,7 @@ html, body { overflow-x: clip; }
   const $ = id => document.getElementById(id);
   const svgNS = "http://www.w3.org/2000/svg";
 
-  const state = { sites: new Set(), near: true, cond: "all", band: "", dir: "", sym: "", ev: "", q: "", by: "symptom" };
+  const state = { sites: new Set(), near: true, cond: "all", band: "", dir: "", sym: "", ev: "", q: "", by: "disorder" };
   const fromHash = () => { const h = location.hash.slice(1); state.cond = condById[h] ? h : "all"; };
   fromHash();
 
@@ -725,15 +728,18 @@ html, body { overflow-x: clip; }
         const g = groups[k], c = conf[k], segs = [1, 2, 3, 4].map(i => `<i class="${i <= c.level ? "on" : ""}"></i>`).join("");
         const conds = [...new Set(g.map(f => f.condition))].map(cid => condById[cid].name);
         const name = bySym ? symById[k].name : condById[k].name;
-        const via = bySym ? `<span class="dv">${type === "protocol" ? "Trials in" : "Seen in"} ${esc(conds.join(", "))}</span>` : "";
+        const symsOf = [...new Set(D.findings.filter(f => f.condition === k && f.type === type).flatMap(f => f.symptoms))];
+        const via = bySym ? `<span class="dv">${type === "protocol" ? "Trials in" : "Seen in"} ${esc(conds.join(", "))}</span>`
+          : symsOf.length ? `<span class="dv dsy">${type === "protocol" ? "Outcomes: " : ""}${symsOf.map(x => `<span${state.sym === x ? ' class="hit"' : ""}>${esc(symById[x].name)}</span>`).join(" · ")}</span>` : "";
         const link = !bySym ? "" : type === "protocol"
           ? `<p class="link">How this is linked: ${esc(name.toLowerCase())} was measured as an outcome in these trials.</p>`
           : `<p class="link">How this is linked: these studies compared people diagnosed with ${esc(conds.join(" / "))} against controls. None measured ${esc(name.toLowerCase())} directly, so the link to the symptom is indirect.</p>`;
         return `<details class="drow"${one ? " open" : ""}><summary>
           <span class="dn">${esc(name)}</span>
           <span class="dc l${c.level}" title="Confidence"><span class="cm">${segs}</span>${LEVEL[c.level].replace("No supporting evidence", "None")}</span>
+${via}
           <span class="dm">${markerChips(g, type)}</span>
-          <span class="dk">${plural(g.length, "study", "studies")}</span>${via}
+          <span class="dk">${plural(g.length, "study", "studies")}</span>
         </summary><div class="dbody">${link}${confHtml(g, against(k), indirect)}${g.map(card).join("")}</div></details>`;
       }).join("");
     };
@@ -741,14 +747,14 @@ html, body { overflow-x: clip; }
     const tHtml = treats.length ? grouped(treats, "protocol") : empty("No treatment studies match. Try a wider area or clear a filter.");
     const mHint = state.by === "symptom"
       ? "Resting-state EEG patterns linked to each symptom, through the disorders where it occurs. Group-level findings, not a diagnostic test."
-      : "Resting-state EEG (eyes open or closed). Group-level findings, not a diagnostic test. Tap a row for the studies.";
+      : "Each disorder with its main symptoms and resting-state EEG marker. Group-level findings, not a diagnostic test. Tap a row for the studies.";
     const tHint = state.dir ? "Neurofeedback that trains this band the other way." : "Neurofeedback tested as treatment.";
     requestAnimationFrame(() => syncJump && syncJump());
     $("jump").innerHTML = `See results ↓`;
     const unit = state.by === "symptom" ? ["symptom", "symptoms"] : ["disorder", "disorders"];
     const nKeys = list => state.by === "symptom" ? new Set(list.flatMap(f => f.symptoms.filter(x => !state.sym || x === state.sym))).size : new Set(list.map(f => f.condition)).size;
     $("list").innerHTML =
-      `<div class="seg byseg" role="group" aria-label="Group results by">${[["symptom", "By symptom"], ["disorder", "By disorder"]].map(([v, l]) => `<button data-by="${v}" aria-pressed="${state.by === v}">${l}</button>`).join("")}</div>` +
+      `<div class="seg byseg" role="group" aria-label="Group results by">${[["disorder", "By disorder"], ["symptom", "By symptom"]].map(([v, l]) => `<button data-by="${v}" aria-pressed="${state.by === v}">${l}</button>`).join("")}</div>` +
       section("EEG markers", plural(nKeys(markers), ...unit), mHint, mHtml) +
       section("Treatment evidence", plural(nKeys(treats), ...unit), tHint, tHtml);
   }
