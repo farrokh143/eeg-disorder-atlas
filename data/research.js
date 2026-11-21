@@ -1017,6 +1017,26 @@ window.NF_DATA = {
       detail: "Sixteen-channel resting EEG in 41 patients with mild to moderate Alzheimer's dementia, compared with age-matched and younger controls. Theta increased over large bilateral areas, so a whole-head entry is used; the bitemporal delta increase is also reported. The beta increase, which was seen only against younger controls, is not used, and the motor and music-perception task results are excluded. Taken from the abstract; not checked in the full text. Total control numbers are not stated, so n is left blank.",
       design: "Case-control (two control groups)",
       cite: { authors: "Günther W, et al.", year: 1993, title: "Findings of electroencephalographic brain mapping in mild to moderate dementia of the Alzheimer type during resting, motor, and music-perception conditions", journal: "Psychiatry Res" }
+    },
+    {
+      id: "pm-12426037", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 88, k: null },
+      sites: ["T3","T4","T5","T6"], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["lowmood"],
+      claim: "Unmedicated depression: lower alpha1 (right) and alpha2 (left) temporal source activity at rest",
+      detail: "Source-localised (LORETA); mapped to the overlying scalp region. Resting EEG in 30 unmedicated depressive patients, with 20 normal subjects, 19 schizophrenic and 19 schizotypal participants in the same study (88 in total). Alpha1 was lower over the right temporal lobe and alpha2 over the left temporal lobe. The abstract does not name the comparison group for the depressive result; it is read as the normal subjects. Taken from the abstract; not checked in the full text. Anterior cingulate results are deep structures and are not used.",
+      design: "Case-control (source-level)",
+      cite: { authors: "Mientus S, et al.", year: 2002, title: "Cortical hypoactivation during resting EEG in schizophrenics but not in depressives and schizotypal subjects as revealed by low resolution electromagnetic tomography (LORETA)", journal: "Psychiatry Res" }
+    },
+    {
+      id: "pm-39248267", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 735, k: null },
+      sites: ["C3","Cz","C4"], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["lowmood"],
+      claim: "MDD vs healthy: lower central alpha power, the most consistent feature in machine-learning models",
+      detail: "Resting 19-channel EEG in 240 inpatients with MDD, 250 with schizophrenia and 245 healthy controls (735 in total). Central alpha (8-11 Hz) power decrease was the most consistently predictive feature for MDD and schizophrenia. Classifier accuracy (67% for MDD vs controls) is not used as the finding. Taken from the abstract; not checked in the full text. Cross-sectional; not a diagnostic test.",
+      design: "Case-control (machine learning, cross-sectional)",
+      cite: { authors: "Sarisik E, et al.", year: 2025, title: "EEG-based Signatures of Schizophrenia, Depression, and Aberrant Aging: A Supervised Machine Learning Investigation", journal: "Schizophr Bull" }
     }
   ],
 
