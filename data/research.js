@@ -977,6 +977,36 @@ window.NF_DATA = {
       detail: "Source-localised (eLORETA); mapped to the overlying scalp region. Eyes-closed resting EEG in 70 ADMCI, 45 non-AD MCI and 45 healthy older adults. Posterior alpha source activity was lower in ADMCI than in both comparison groups, and was linked to CSF tau. Taken from the abstract; not checked in the full text. Case-control design; the CSF association is not diagnostic.",
       design: "Case-control (source-level)",
       cite: { authors: "Del Percio C, et al.", year: 2025, title: "Resting-State EEG Alpha Rhythms Are Related to CSF Tau Biomarkers in Prodromal Alzheimer's Disease", journal: "Int J Mol Sci" }
+    },
+    {
+      id: "pm-40976159", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 134, k: null },
+      sites: ["O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["lowmood"],
+      claim: "First-episode drug-naive MDD, with or without suicidal ideation: lower occipital relative alpha",
+      detail: "Eyes-closed resting EEG, 10 minutes, in 90 first-episode drug-naive depression patients and 44 healthy controls. Relative occipital alpha was lower in both depression groups than in controls; the suicidal-ideation groups did not differ from each other. Taken from the abstract; not checked in the full text. Only the alpha result is in this entry; the delta, gamma and frontal asymmetry findings are not used here.",
+      design: "Case-control (cross-sectional)",
+      cite: { authors: "Yi Y, et al.", year: 2025, title: "Absence of differences in resting-state EEG spectral power and cognitive impairments between first-episode, drug-naïve MDD patients with and without suicidal ideation", journal: "J Psychiatr Res" }
+    },
+    {
+      id: "pm-41619714", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 218, k: null },
+      sites: [], bands: ["delta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", alpha: "down" }, symptoms: ["memory","cogdecline"],
+      claim: "AD vs healthy controls: widespread higher delta and lower alpha source activity",
+      detail: "Source-localised (eLORETA); mapped to the overlying scalp region. Eyes-closed resting EEG in 81 AD patients and 102 healthy controls, from 30 electrodes, with 35 Huntington's patients in the same study; only the AD-vs-control result is used here. Widespread delta increase and alpha decrease were found in AD. Taken from the abstract; not checked in the full text. Exploratory study; clinical sites harmonised.",
+      design: "Case-control (source-level)",
+      cite: { authors: "Jakhar D, et al.", year: 2026, title: "Abnormal Resting-State EEG delta and alpha rhythms in Huntington's and Alzheimer's Diseases: An exploratory study", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-42215811", condition: "epilepsy", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 65, k: null },
+      sites: [], bands: ["gamma","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { gamma: "up", alpha: "down" }, symptoms: ["cogdecline"],
+      claim: "Epilepsy: higher global gamma and lower alpha with poorer MoCA cognition, mainly in comorbid cognitive dysfunction",
+      detail: "Eyes-closed resting EEG in 65 people with epilepsy, 35 with preserved cognition and 30 with cognitive dysfunction by MoCA. Global gamma correlated negatively with MoCA scores, and the cognitively impaired group had lower global alpha, with temporal and parietal topography. Taken from the abstract; not checked in the full text. Cross-sectional correlations, small sample, no healthy controls.",
+      design: "Cross-sectional correlation",
+      cite: { authors: "Masoumian FN, et al.", year: 2026, title: "Resting-state EEG markers of cognitive dysfunction in epilepsy: evidence from gamma power, alpha activity, and functional connectivity", journal: "Neurol Sci" }
     }
   ],
 
