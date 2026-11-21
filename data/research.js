@@ -2477,6 +2477,36 @@ window.NF_DATA = {
       detail: "Taken from the abstract; not checked in the full text. Boys with Asperger's syndrome vs an age- and sex-matched control group (control size not stated), eyes-closed resting EEG on 19 electrodes. Absolute delta and theta were higher globally and relative alpha was lower globally; relative delta was higher anteriorly, which is covered by the whole-head entry. Coherence results were not used (CN). Small case-control study.",
       design: "Case-control",
       cite: { authors: "Clarke AR, et al.", year: 2016, title: "EEG activity in children with Asperger's Syndrome", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-31669326", condition: "autism", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 64, k: null },
+      sites: ["Fz","Cz","Pz"], bands: ["theta"], direction: "down", evidence: "preliminary",
+      changes: { theta: "down" }, symptoms: ["social"],
+      claim: "Autism: lower midline theta power at eyes-open rest than typically developing children",
+      detail: "Taken from the abstract; not checked in the full text. 32 children with ASD vs 32 age-, IQ- and sex-matched typically developing children, eyes-open resting EEG. Theta power (4-7.5 Hz) was lower at midline leads; the abstract does not list them, so Fz, Cz and Pz were used. Blink-rate and dopamine results are not part of this entry. Case-control design.",
+      design: "Case-control",
+      cite: { authors: "Hornung T, et al.", year: 2019, title: "Dopaminergic hypo-activity and reduced theta-band power in autism spectrum disorder: A resting-state EEG study", journal: "Int J Psychophysiol" }
+    },
+    {
+      id: "pm-33407072", condition: "autism", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 62, k: null },
+      sites: ["Pz"], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["social"],
+      claim: "Autism: lower posterior midline alpha power at rest than typically developing children",
+      detail: "31 children and adolescents with ASD vs 31 age- and IQ-matched typically developing children, resting EEG with alpha (8-12 Hz) power at midline frontal, central and posterior regions. The group difference was significant only at the posterior (Pz) region. The sensory-processing and MRS results are not part of this entry. Case-control design with a small sample.",
+      design: "Case-control",
+      cite: { authors: "Pierce S, et al.", year: 2021, title: "Associations between sensory processing and electrophysiological and neurochemical measures in children with ASD: an EEG-MRS study", journal: "J Neurodev Disord" }
+    },
+    {
+      id: "pm-34517813", condition: "autism", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 280, k: null },
+      sites: [], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["social"],
+      claim: "Youth with ASD: lower alpha power across all nine scalp regions at eyes-open rest",
+      detail: "142 youth with ASD vs 138 typically developing youth across four sites, eyes-open resting EEG with 124 channels grouped into nine regions. Alpha power was 20-46% lower in the ASD group at all nine regions, so the entry is whole-head. Sex-by-diagnosis gamma effects and correlations with socialisation are not part of this entry. Case-control design.",
+      design: "Case-control",
+      cite: { authors: "Neuhaus E, et al.", year: 2021, title: "Resting state EEG in youth with ASD: age, sex, and relation to phenotype", journal: "J Neurodev Disord" }
     }
   ],
 
