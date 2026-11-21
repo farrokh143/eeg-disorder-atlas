@@ -1637,6 +1637,16 @@ window.NF_DATA = {
       detail: "Randomised trial in 72 children with ADHD (46 neurofeedback, 26 active computerised attention control) analysed for resting EEG; 102 were initially enrolled. Combined training reduced theta; the theta/beta block lowered posterior-midline theta and the SCP block raised central-midline alpha, with changes linked to German ADHD rating scale scores. Taken from the abstract; not checked in the full text.",
       design: "RCT (active-controlled)",
       cite: { authors: "Gevensleben H, et al.", year: 2009, title: "Distinct EEG effects related to neurofeedback training in children with ADHD: a randomized controlled trial", journal: "Int J Psychophysiol" }
+    },
+    {
+      id: "pm-21309436", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 90, k: null },
+      sites: [], bands: ["delta","theta","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "mixed", theta: "up", beta: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "ADHD girls: more absolute and relative theta and less relative beta across the scalp than controls",
+      detail: "Eyes-closed resting EEG from 21 electrodes in 30 girls with combined-type ADHD, 30 with inattentive-type ADHD and 30 controls. Across the scalp, both ADHD groups had higher absolute delta and theta, lower relative delta and beta, and higher relative theta, so delta is mixed. Taken from the abstract; not checked in the full text. Subtype differences are not included here.",
+      design: "Case-control",
+      cite: { authors: "Dupuy FE, et al.", year: 2011, title: "Girls with attention-deficit/hyperactivity disorder: EEG differences between DSM-IV types", journal: "Clin EEG Neurosci" }
     }
   ],
 
