@@ -2947,6 +2947,16 @@ window.NF_DATA = {
       detail: "48 substance-using mothers and 37 non-substance-using mothers, resting frontal EEG across seven bands. Beta and gamma power were higher in the substance-using mothers; no between-group difference was found in parental reflective functioning. The frontal set above is the frontal region of the montage; exact electrode labels were not checked. Cross-sectional study with no blinding or sham control; the substance-use type is mixed.",
       design: "Case-control",
       cite: { authors: "Ngoh G, et al.", year: 2022, title: "Exploring resting frontal EEG and reflective functioning in maternal substance use", journal: "Infant Ment Health J" }
+    },
+    {
+      id: "pm-36890138", condition: "sud", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 81, k: null },
+      sites: [], bands: ["theta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "down", alpha: "up" }, symptoms: ["craving"],
+      claim: "Current male smokers (20+ years): lower relative theta and higher relative alpha than never-smokers",
+      detail: "33 never-smokers, 28 past-smokers (20+ years abstinent) and 20 current smokers, all male, eyes-closed resting EEG. Relative theta was lower in current and past smokers; relative alpha was higher in current smokers only. The channels with significant group differences are marked in the paper's figure and were not named in the text, so the montage is recorded as whole-head. Cross-sectional study with no blinding or sham control.",
+      design: "Case-control",
+      cite: { authors: "Lee H, et al.", year: 2023, title: "Persistent impacts of smoking on resting-state EEG in male chronic smokers and past-smokers with 20 years of abstinence", journal: "Sci Rep" }
     }
   ],
 
