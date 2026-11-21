@@ -547,6 +547,16 @@ window.NF_DATA = {
       detail: "Healthy adults trained to raise frontal-midline theta, compared with an active pseudo-neurofeedback group. The trained group improved on 3-back accuracy and task-switching costs. Note: task-related frontal-midline theta is a different signal from excess resting frontal theta.",
       design: "Controlled study (active control, healthy adults)",
       cite: { authors: "Enriquez-Geppert S, Huster RJ, Figge C, Herrmann CS", year: 2014, title: "Self-regulation of frontal-midline theta facilitates memory updating and mental set shifting", journal: "Frontiers in Behavioral Neuroscience" }
+    },
+    {
+      id: "pm-28577262", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: ["F7","F3","Fz","F4","F8","C3","Cz","C4","P3","Pz","P4"], bands: ["delta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "ADHD and preterm adolescents: higher resting delta power than controls",
+      detail: "Eyes-open resting EEG in 69 adolescents with ADHD, 186 preterm-born and 135 term-born controls; the cued task data are not used here. Delta power was higher in the ADHD and preterm groups than in controls, and parent-rated ADHD symptoms correlated with resting delta in the preterm group. The ADHD-control difference lost significance when IQ was added as a covariate, and electrodes were averaged by frontal, central and parietal region.",
+      design: "Case-control",
+      cite: { authors: "Rommel AS, et al.", year: 2017, title: "Altered EEG spectral power during rest and cognitive performance: a comparison of preterm-born adolescents to adolescents with ADHD", journal: "Eur Child Adolesc Psychiatry" }
     }
   ],
 
