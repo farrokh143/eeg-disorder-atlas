@@ -557,6 +557,16 @@ window.NF_DATA = {
       detail: "Eyes-open resting EEG in 69 adolescents with ADHD, 186 preterm-born and 135 term-born controls; the cued task data are not used here. Delta power was higher in the ADHD and preterm groups than in controls, and parent-rated ADHD symptoms correlated with resting delta in the preterm group. The ADHD-control difference lost significance when IQ was added as a covariate, and electrodes were averaged by frontal, central and parietal region.",
       design: "Case-control",
       cite: { authors: "Rommel AS, et al.", year: 2017, title: "Altered EEG spectral power during rest and cognitive performance: a comparison of preterm-born adolescents to adolescents with ADHD", journal: "Eur Child Adolesc Psychiatry" }
+    },
+    {
+      id: "pm-18607528", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: ["C3","P3","Pz","P4","T6","O1","O2"], bands: ["gamma"], direction: "up", evidence: "preliminary",
+      changes: { gamma: "up" }, symptoms: ["memory","cogdecline"],
+      claim: "Drug-naive AD: higher resting gamma power than controls over parieto-occipital sites",
+      detail: "Eyes-open resting EEG (90 s) in 15 drug-naive AD patients, 20 MCI patients and 20 controls; gamma (30-100 Hz) power was higher in AD than controls at C3, P3, Pz, P4, T6, O1 and O2, and MCI did not differ from controls. Gamma power correlated modestly with ADAS-cog. Muscle (EMG) contamination is a limit: the authors report the resting differences were lost at O1 and O2 after removing suspect epochs.",
+      design: "Case-control",
+      cite: { authors: "van Deursen JA, et al.", year: 2008, title: "Increased EEG gamma band activity in Alzheimer's disease and mild cognitive impairment", journal: "J Neural Transm (Vienna)" }
     }
   ],
 
