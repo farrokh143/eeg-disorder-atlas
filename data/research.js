@@ -947,6 +947,36 @@ window.NF_DATA = {
       detail: "Source-localised (beamformer); mapped to the overlying scalp region. Resting EEG in 318 cognitively healthy memory complainers from the INSIGHT-preAD cohort, 88 amyloid-positive and 230 amyloid-negative, at baseline. Mid-frontal theta was higher in amyloid-positive people at baseline, but this did not replicate at 2 years; the 2-year posterior cingulate and precuneus theta differences are deep structures and are not used. Cognition was not linked to theta.",
       design: "Cohort (amyloid-positive vs negative, source-level)",
       cite: { authors: "Spinelli G, et al.", year: 2022, title: "Theta Band-Power Shapes Amyloid-Driven Longitudinal EEG Changes in Elderly Subjective Memory Complainers At-Risk for Alzheimer's Disease", journal: "J Alzheimers Dis" }
+    },
+    {
+      id: "pm-37657750", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 162, k: null },
+      sites: ["Fp1","Fp2"], bands: ["gamma"], direction: "up", evidence: "preliminary",
+      changes: { gamma: "up" }, symptoms: ["psychosis"],
+      claim: "First-episode schizophrenia: higher resting gamma at frontal pole sites Fp1 and Fp2",
+      detail: "Resting EEG gamma at Fp1 and Fp2 in 87 first-episode schizophrenia patients and 75 healthy controls. Gamma was higher in patients and was associated with PANSS symptom scores and processing speed; serum BDNF was also measured. Taken from the abstract; not checked in the full text. Cross-sectional correlations, not a diagnostic test.",
+      design: "Case-control (cross-sectional)",
+      cite: { authors: "Li G, et al.", year: 2023, title: "Correlation study of brain-derived neurotrophic factor, EEG γ activity and cognitive function in first-episode schizophrenia", journal: "Brain Res" }
+    },
+    {
+      id: "pm-37918574", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 105, k: null },
+      sites: ["P3","Pz","P4","T5","T6","O1","O2"], bands: ["gamma"], direction: "up", evidence: "preliminary",
+      changes: { gamma: "up" }, symptoms: ["lowmood","executive"],
+      claim: "Late-life depression: higher posterior upper-gamma power at eyes-closed rest in both severity groups",
+      detail: "Eyes-closed resting EEG in 65 late-life depression patients and 40 older adults without depression. Upper gamma power was higher at posterior sites in both depression groups; the connectivity findings are not used here. Taken from the abstract; not checked in the full text. Small cross-sectional study; medication use was a limit.",
+      design: "Case-control (cross-sectional)",
+      cite: { authors: "Zeng Y, et al.", year: 2024, title: "Altered resting-state brain oscillation and the associated cognitive impairments in late-life depression with different depressive severity: An EEG power spectrum and functional connectivity study", journal: "J Affect Disord" }
+    },
+    {
+      id: "pm-39796211", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 160, k: null },
+      sites: ["P3","Pz","P4","T5","T6","O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["memory","cogdecline"],
+      claim: "ADMCI: lower posterior resting alpha than healthy and non-AD MCI people",
+      detail: "Source-localised (eLORETA); mapped to the overlying scalp region. Eyes-closed resting EEG in 70 ADMCI, 45 non-AD MCI and 45 healthy older adults. Posterior alpha source activity was lower in ADMCI than in both comparison groups, and was linked to CSF tau. Taken from the abstract; not checked in the full text. Case-control design; the CSF association is not diagnostic.",
+      design: "Case-control (source-level)",
+      cite: { authors: "Del Percio C, et al.", year: 2025, title: "Resting-State EEG Alpha Rhythms Are Related to CSF Tau Biomarkers in Prodromal Alzheimer's Disease", journal: "Int J Mol Sci" }
     }
   ],
 
