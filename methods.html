@@ -116,7 +116,7 @@ html.locked .gate { display: grid; }
     <div class="stat exc"><b id="nExc">–</b><span>excluded, with reasons</span></div>
   </div>
   <div class="scroll"><table id="coverage" aria-label="Coverage by disorder"><thead><tr><th>Disorder</th><th>Resting EEG markers</th><th>Treatment studies</th><th>To review</th></tr></thead><tbody><tr><td colspan="4" class="note">Loading…</td></tr></tbody></table></div>
-  <p class="note">Search run 1 (21 Nov 2026) used general web search to find candidates. Full searches of the bibliographic databases listed below have not been run yet; until they are, coverage is incomplete.</p>
+  <p class="note">Search run 2 (21 Nov 2026) searched PubMed for all 13 disorders: 2,110 unique papers, now waiting for title and abstract screening. Embase, Web of Science and PsycINFO have not been searched yet, so coverage is not complete.</p>
 
   <h2 id="question">The question</h2>
   <p>For each disorder and each of its core symptoms: <strong>which resting-state EEG band-power differences have been reported, at which scalp sites, in which direction, and how confident can we be?</strong> As a second question: which EEG feedback (neurofeedback) treatments target those patterns, and how well did they hold up?</p>
@@ -162,10 +162,11 @@ html.locked .gate { display: grid; }
   </ol>
   <h3>The core query</h3>
   <p>Three blocks are combined: EEG terms, resting-state terms and spectral terms, plus the disorder. Exclusion words are applied at screening rather than in the query, so that relevant papers are not lost by accident.</p>
-  <pre>(electroencephalography[MeSH] OR EEG OR qEEG OR "quantitative EEG")
-AND ("resting state" OR resting OR "eyes closed" OR "eyes open")
-AND (power OR spectral OR spectrum OR "theta/beta" OR asymmetry OR delta OR theta OR alpha OR beta OR gamma)
-AND [disorder MeSH term OR symptom terms]</pre>
+  <pre>(electroencephalography[MeSH] OR EEG OR qEEG OR electroencephalogram)
+AND (resting OR "eyes closed" OR "eyes open")
+AND (power OR spectral OR spectrum OR asymmetry OR theta OR alpha OR delta OR beta OR gamma OR oscillations)
+AND humans[MeSH] AND [disorder MeSH term]</pre>
+  <p>This is version 2. Version 1 failed the benchmark check: it missed two known papers whose abstracts say "theta activity" or "alpha oscillations" instead of "power", so band names and "oscillations" were added. Version 2 finds all six benchmark papers.</p>
   <p>A second query targets direct symptom links (EEG correlated with symptom ratings), and a third targets treatment trials. The exact strings are kept in <a href="https://github.com/farrokh143/eeg-disorder-atlas/blob/main/data/search-protocol.md">search-protocol.md</a>.</p>
 
   <h2 id="screening">Screening</h2>

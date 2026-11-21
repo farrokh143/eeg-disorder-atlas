@@ -75,13 +75,21 @@ Re-run the searches monthly. Record each run below.
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-21 | Seed set (manual, verified citations) | 47 | 44 | 3 | Claude, reviewed by owner |
 | 2026-11-21 | Run 1: web search for gap disorders (schizophrenia, PTSD, anxiety, depression, ADHD symptom links, autism, migraine, epilepsy, Parkinson's) | 15 | 2 | 0 | Claude; 13 left as to-review |
+| 2026-11-21 | Run 2: PubMed (connector), core query v1 + v2 supplement, 13 disorders | 2,271 records / 2,110 unique (2,104 new) | 0 | 0 | Claude; all to-review, not yet screened |
+
+### Run 2 notes
+
+- **Benchmark check:** query v1 found 4 of 6 benchmark papers and missed 2 (Pediatr Neurol 2005 ADHD theta, PMID 15797181; eNeuro 2020 PTSD alpha, PMID 32690671), because their abstracts say "theta activity" / "α oscillations" rather than "power". Query v2 adds `electroencephalogram`, the band names and `oscillations`; with v2 all 6 were found (also 12559224, 38097538, 39261817, 25936227).
+- **How v2 was run:** the PubMed connector allows at most 20 boolean operators and 200 results per call, so v2 was run as v1 plus two supplements: (a) papers matching band names / "oscillations" but none of power/spectral/spectrum/asymmetry, and (b) papers saying "electroencephalogram" but not "EEG", with spectral terms. PTSD was pulled with the full v2 query directly.
+- **Per disorder (records):** Alzheimer's/MCI 466, Depression 351, Schizophrenia 270, ADHD 237, Epilepsy 224, Autism 170, Parkinson's 161, Alcohol & substance use 129, Anxiety 120, PTSD 48, Brain injury 36, Insomnia 31, Migraine 28, unassigned catch-up 3.
+- **Next:** title/abstract screening in batches (fetch metadata for 25–50 PMIDs at a time), then full text.
 
 ## Bulk pull (PubMed)
 
 The searches below use the core query (EEG terms AND resting-state terms AND spectral terms AND humans)
 plus each disorder's MeSH term. They are generated from `tools/queries.js`, so edit the query there.
 
-**Option A (automatic):** use the PubMed connector in a Claude chat, or run `node tools/pull-pubmed.js "Run 2 (PubMed)"` where the network allows eutils.ncbi.nlm.nih.gov (`--counts` shows hit numbers only).
+**Option A (automatic):** use the PubMed connector in a Claude chat (import its ID lists with `node tools/import-pmids.js ids.txt "<Disorder>" "<Run>"`), or run `node tools/pull-pubmed.js "Run 2 (PubMed)"` where the network allows eutils.ncbi.nlm.nih.gov (`--counts` shows hit numbers only).
 
 **Option B (manual export):** open a link, tap **Save**, choose **Selection: All results** and **Format: CSV**,
 then give the file to Claude or run:
