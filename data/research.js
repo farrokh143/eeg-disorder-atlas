@@ -687,6 +687,26 @@ window.NF_DATA = {
       detail: "99 community-dwelling older African Americans (41 MCI, 58 controls), eyes-closed resting EEG before and after a motion task; the MCI difference held at both times. Midline theta/beta ratio was higher in MCI, and frontal ratio asymmetry leaned right only in MCI. Oz is listed as O1 and O2. Exploratory secondary analysis of the same sample as the frontal asymmetry study, not yet replicated.",
       design: "Case-control (exploratory)",
       cite: { authors: "Martin T, et al.", year: 2023, title: "Mild Cognitive Impairment in African Americans Is Associated with Differences in EEG Theta/Beta Ratio", journal: "J Alzheimers Dis" }
+    },
+    {
+      id: "pm-37858173", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 1, control: null, blinded: null, n: 148, k: null },
+      sites: ["T3","T4","T5","T6","P3","Pz","P4","O1","O2"], bands: ["theta","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", beta: "down" }, symptoms: ["memory","cogdecline"],
+      claim: "Amyloid-positive MCI or AD: theta up and beta down over time at temporal and parieto-occipital sites",
+      detail: "148 amyloid-positive people with MCI (88) or AD dementia (60), with two or more eyes-closed resting 21-channel EEG recordings. Relative theta rose and relative beta fell over follow-up, most at temporal and parieto-occipital sites; the MCI group changed fastest. There is no control group, so the change over time is not compared with healthy ageing. Retrospective longitudinal study.",
+      design: "Longitudinal (uncontrolled)",
+      cite: { authors: "Scheijbeler EP, et al.", year: 2023, title: "Longitudinal resting-state EEG in amyloid-positive patients along the Alzheimer's disease continuum: considerations for clinical trials", journal: "Alzheimers Res Ther" }
+    },
+    {
+      id: "pm-38217593", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 53, k: null },
+      sites: [], bands: ["beta","theta","delta"], direction: "ratio", evidence: "preliminary",
+      changes: { beta: "down", theta: "up", delta: "up" }, symptoms: ["memory","cogdecline"],
+      claim: "Amnestic MCI: global beta down, global theta and delta up in resting qEEG",
+      detail: "30 people with amnestic MCI and 23 matched controls, resting-state qEEG. Global relative beta was lower, and global relative theta and delta higher, in the MCI group. The coherence result in a right centroparietal area is a connectivity finding and is not used here. Taken from the abstract; not checked in the full text. Small single-centre case-control study.",
+      design: "Case-control",
+      cite: { authors: "Zawiślak-Fornagiel K, et al.", year: 2024, title: "Quantitative EEG Spectral and Connectivity Analysis for Cognitive Decline in Amnestic Mild Cognitive Impairment", journal: "J Alzheimers Dis" }
     }
   ],
 
