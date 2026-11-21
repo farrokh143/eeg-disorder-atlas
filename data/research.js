@@ -1347,6 +1347,36 @@ window.NF_DATA = {
       detail: "Source-localised (eLORETA); mapped to the overlying scalp region. Resting-state alpha asymmetry in a large resting data set; participants with any lifetime depressive episode showed less left than right activity in the precentral and midfrontal gyri. Anhedonia accounted for part of the link to lifetime MDD. The abstract does not state the sample size, so n is left blank. Taken from the abstract; not checked in the full text.",
       design: "Cross-sectional group comparison (source-level)",
       cite: { authors: "Smith EE, et al.", year: 2018, title: "Intracranial source activity (eLORETA) related to scalp-level asymmetry scores and depression status", journal: "Psychophysiology" }
+    },
+    {
+      id: "pm-29305876", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 51, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
+      claim: "Adolescent MDD vs controls: less left-sided frontal alpha power, so no asymmetry in controls",
+      detail: "Resting frontal EEG in 20 adolescents with unipolar depression (12 first episode, 8 recurrent) and 31 healthy age-matched controls (51 in total). Patients had significantly less left-sided frontal alpha power over the regions of interest, while controls showed no asymmetry. In controls, more left-sided frontal alpha tracked higher depression scores; that link was absent in patients. Taken from the abstract; not checked in the full text. Small sample.",
+      design: "Case-control",
+      cite: { authors: "Grünewald BD, et al.", year: 2018, title: "Resting frontal EEG asymmetry patterns in adolescents with and without major depression", journal: "Biol Psychol" }
+    },
+    {
+      id: "pm-30182751", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 123, k: null },
+      sites: [], bands: ["alpha"], direction: "up", evidence: "preliminary",
+      changes: { alpha: "up" }, symptoms: ["lowmood"],
+      claim: "Depressed vs controls, 2-min eyes-closed EEG: more time in dominant-alpha (A) stages and more stable arousal",
+      detail: "Eyes-closed resting EEG (2 min) in 87 depressed patients and 36 healthy controls from four EMBARC sites, analysed with the automatic VIGALL vigilance-stage classifier rather than band power. Depressed patients showed more A-stage (dominant alpha) time and higher arousal stability, and less B1 (low-voltage non-alpha) time, with no difference in B2/3. The alpha direction is inferred from the A-stage measure and is not a band-power result. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Ulke C, et al.", year: 2019, title: "Resting EEG Measures of Brain Arousal in a Multisite Study of Major Depression", journal: "Clin EEG Neurosci" }
+    },
+    {
+      id: "pm-30415151", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 95, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["lowmood","anxiety"],
+      claim: "Adolescents with acute depression and comorbid anxiety vs controls: more left than right frontal alpha power",
+      detail: "Resting frontal EEG (8 min) in 34 healthy controls, 16 adolescents in remission without anxiety, 22 with acute depression without anxiety, and 23 with acute depression plus anxiety (95 in total). Only the acute depression plus anxiety group differed from controls, with more left-sided alpha power, meaning greater right-frontal activity; the other groups did not differ. The result is attributed by the authors to the anxiety comorbidity. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Feldmann L, et al.", year: 2018, title: "Resting frontal EEG asymmetry in adolescents with major depression: Impact of disease state and comorbid anxiety disorder", journal: "Clin Neurophysiol" }
     }
   ],
 
