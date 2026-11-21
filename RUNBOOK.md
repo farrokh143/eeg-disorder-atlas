@@ -62,6 +62,9 @@ You need all of these from the paper: **(1)** resting recording (eyes open or cl
 one band with a direction (higher or lower in the patient group than in controls, or linked to symptom severity);
 **(3)** where on the scalp (electrodes or regions), or that it was whole-head/global.
 
+- **If the paper has a PMC id, fetch and read the full text; `source: "abstract"` is only for papers without one.**
+  If the full text has been read and the band direction or sites are still unclear, exclude with `NODATA` (don't defer).
+  If `fulltext-snippets.js` shows too little, rerun it with a bigger limit (`15000`) before deciding.
 - `source`: `"full-text"` if you read the PMC full text. `"abstract"` is allowed only when the abstract itself states
   the band, the direction and the scalp region. Then `detail` must include the sentence
   "Taken from the abstract; not checked in the full text."
