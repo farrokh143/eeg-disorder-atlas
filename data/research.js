@@ -2677,6 +2677,26 @@ window.NF_DATA = {
       detail: "Taken from the abstract; not checked in the full text. 16 patients in clinical seizure remission compared with non-epileptic age-matched controls (control count not stated). Absolute theta and alpha power were higher, mainly over centrotemporal electrodes; the authors read this as delayed cortical maturation. Eyes state is not stated in the abstract. Sites are the centrotemporal electrodes, given here as C3, C4, T3 and T4 approximately. Cross-sectional case-control design.",
       design: "Case-control",
       cite: { authors: "Siripornpanich V, et al.", year: 2019, title: "Delayed cortical maturation at the centrotemporal brain regions in patients with benign childhood epilepsy with centrotemporal spikes (BCECTS)", journal: "Epilepsy Res" }
+    },
+    {
+      id: "pm-34687043", condition: "epilepsy", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 62, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","T3","T4","T5","T6","P3","Pz","P4","O1","O2"], bands: ["alpha","delta","theta"], direction: "ratio", evidence: "preliminary",
+      changes: { alpha: "down", delta: "up", theta: "up" }, symptoms: ["seizures"],
+      claim: "Temporal lobe epilepsy: lower alpha-delta and alpha-theta ratios than controls, on the focus side",
+      detail: "39 adults with temporal lobe epilepsy vs 23 controls, resting wakefulness EEG (FFT power ratios). Lower alpha-delta ratio in the posterior quadrant ipsilateral to the focus and lower alpha-theta ratio in ipsilateral anterior and posterior quadrants and temporal region; sites recorded as frontal, temporal and posterior because the side depends on the focus. Taken from the abstract; not checked in the full text. Cross-sectional, single-centre.",
+      design: "Case-control",
+      cite: { authors: "Fonseca E, et al.", year: 2022, title: "Interictal brain activity changes in temporal lobe epilepsy: A quantitative electroencephalogram analysis", journal: "Acta Neurol Scand" }
+    },
+    {
+      id: "pm-36442376", condition: "epilepsy", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 454, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","T3","T4"], bands: ["theta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up" }, symptoms: ["seizures"],
+      claim: "Idiopathic generalised and focal epilepsy: more resting theta than controls, frontal and anterior temporal",
+      detail: "Unmedicated IGE (n=92) and focal epilepsy (n=149) vs healthy controls (n=114), with non-seizure patients (n=99) also recorded. Theta was higher in both epilepsy groups, peaking in medial-basal prefrontal and anterior temporal cortex. Source-localised (LORETA); mapped to the overlying scalp region (frontal and anterior temporal). Taken from the abstract; not checked in the full text. Cross-sectional, sources only.",
+      design: "Case-control",
+      cite: { authors: "Clemens B, et al.", year: 2023, title: "Epileptic diathesis: An EEG-LORETA study", journal: "Clin Neurophysiol" }
     }
   ],
 
