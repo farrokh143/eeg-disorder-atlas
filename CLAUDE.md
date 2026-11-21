@@ -13,6 +13,10 @@ included as a secondary filter; EEG markers are the main focus.
 - `index.html`: the entire app. One static page, vanilla JS, no build step, no backend.
 - `data/research.js`: all content, as `window.NF_DATA` (bands, conditions, symptoms, findings, methodology, excluded).
 - `README.md`: how to run it and the schema for findings.
+- `data/research-log.csv`: master log of every paper considered (included / excluded / to-review, with reasons).
+- `data/search-protocol.md`: inclusion criteria, exact searches and the record of each search run.
+
+GitHub is the database: all research data and decisions live in these files and their commit history.
 
 ## Adding or editing research
 
@@ -48,6 +52,10 @@ Evidence grades:
 - **contested**: blinded, sham-controlled or pooled data that fail to support the effect, or a marker that does not hold up diagnostically
 
 ## Rules
+
+- **Log every paper.** Any paper added, excluded or queued must have a row in `data/research-log.csv`
+  (same `id` as in `research.js`). Follow `data/search-protocol.md` for searches and screening, and
+  record each search run in its table.
 
 - **Resting-state only for EEG markers.** Biomarker entries must come from resting recordings
   (eyes open or eyes closed, awake). Do not add task-based, event-related/evoked (e.g. ASSR, ERP)
