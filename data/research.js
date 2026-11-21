@@ -1987,6 +1987,46 @@ window.NF_DATA = {
       detail: "14 patients vs 14 matched controls, whole-head resting EEG. Absolute alpha and beta power were globally lower (mapped to whole-head); relative alpha was higher over prefrontal sites and lower over posterior sites, so alpha is marked mixed. Alpha effects were linked to PANSS symptoms and chronicity within patients. Taken from the abstract; not checked in the full text. Very small case-control study.",
       design: "Case-control",
       cite: { authors: "Knyazeva MG, et al.", year: 2008, title: "Alpha rhythm and hypofrontality in schizophrenia", journal: "Acta Psychiatr Scand" }
+    },
+    {
+      id: "pm-19199131", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 20, k: null },
+      sites: ["Fp1","F7","F3"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["psychosis"],
+      claim: "Within schizophrenia: more positive symptoms linked to greater relative left frontal EEG activity",
+      detail: "20 community outpatients with schizophrenia, resting eyes-based regional alpha activity; the within-patient correlation of positive symptoms with left frontal relative activity is used, with no healthy control group. Shyness and sociability results are not part of the atlas. Taken from the abstract; not checked in the full text. Small pilot cross-sectional study.",
+      design: "Cross-sectional correlation (pilot)",
+      cite: { authors: "Jetha MK, et al.", year: 2009, title: "Resting frontal EEG asymmetry and shyness and sociability in schizophrenia: a pilot study of community-based outpatients", journal: "Int J Neurosci" }
+    },
+    {
+      id: "pm-21862398", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 318, k: null },
+      sites: [], bands: ["delta","theta","alpha","gamma"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "up", gamma: "up" }, symptoms: ["psychosis"],
+      claim: "Medicated schizophrenia: resting theta-alpha, delta and gamma power higher than controls",
+      detail: "128 medicated patients vs 110 controls (80 unmedicated relatives also recorded, reported separately and not used here), eyes-closed resting EEG on 10 channels. The theta-alpha increase (5-11 Hz) was significant in all 10 channels, so it is recorded as whole-head; gamma (40-85 Hz) and delta were higher in patients. The sensory gating (paired-click) results are evoked and excluded.",
+      design: "Case-control",
+      cite: { authors: "Hong LE, et al.", year: 2012, title: "A shared low-frequency oscillatory rhythm abnormality in resting and sensory gating in schizophrenia", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-22125634", condition: "epilepsy", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 42, k: null },
+      sites: ["P3","Pz","P4"], bands: ["theta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up" }, symptoms: ["psychosis"],
+      claim: "Within epilepsy: psychotic patients show more parietal theta source activity than non-psychotic patients",
+      detail: "21 patients with schizophrenia-like psychosis of epilepsy vs 21 non-psychotic epilepsy patients, resting eyes-closed EEG. Source-localised (eLORETA); mapped to the overlying scalp region: theta higher in medial and lateral parietal cortex bilaterally. Beta2 connectivity results are excluded (CN). Small case-control study.",
+      design: "Case-control",
+      cite: { authors: "Canuet L, et al.", year: 2011, title: "Resting-state EEG source localization and functional connectivity in schizophrenia-like psychosis of epilepsy", journal: "PLoS One" }
+    },
+    {
+      id: "pm-23051885", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
+      sites: ["Fp1","Fp2","F7","F3","F4","F8","T3","T4","T5","T6","P3","P4"], bands: ["gamma"], direction: "up", evidence: "preliminary",
+      changes: { gamma: "up" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia with more minor physical anomalies: higher resting gamma power over frontal, temporal and parietal sites",
+      detail: "Result is for the higher-minor-physical-anomaly subgroup of 40 drug-free patients vs 20 controls, 192-channel resting EEG. Low gamma (30-50 Hz) was higher over right frontal, parietal and temporal sites; high gamma (71-100 Hz) over left sites; both are listed as gamma. Coherence results are excluded (CN). Taken from the abstract; not checked in the full text. Small case-control study.",
+      design: "Case-control",
+      cite: { authors: "Tikka SK, et al.", year: 2013, title: "Increased spontaneous gamma power and synchrony in schizophrenia patients having higher minor physical anomalies", journal: "Psychiatry Res" }
     }
   ],
 
