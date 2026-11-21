@@ -757,6 +757,26 @@ window.NF_DATA = {
       detail: "36 people with AD and 29 healthy older adults, resting-state EEG. Gamma power did not differ at any of the seven frontal electrodes tested (p from 0.42 to 0.91). The paper uses this null result to support gamma-tACS work in AD. Taken from the abstract; not checked in the full text. Small case-control study.",
       design: "Case-control (null result)",
       cite: { authors: "S V, et al.", year: 2026, title: "Assessment of Gamma Band Power of Electroencephalogram in Alzheimer's disease", journal: "Appl Neuropsychol Adult" }
+    },
+    {
+      id: "pm-41246936", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 65, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4","T5","T6","O1","O2"], bands: ["alpha","theta"], direction: "ratio", evidence: "preliminary",
+      changes: { alpha: "down", theta: "up" }, symptoms: ["memory","cogdecline"],
+      claim: "AD vs healthy: posterior alpha power down and frontal theta power up",
+      detail: "36 people with AD, 29 healthy controls and 23 with FTD, from a public dataset; resting EEG recorded with eyes closed and eyes open. Posterior alpha was lower and frontal theta higher in AD; the FTD group differed mainly by frontal and central alpha reduction, which is not recorded here. Taken from the abstract; not checked in the full text. Single open-access dataset, case-control design.",
+      design: "Case-control",
+      cite: { authors: "Pan Y, et al.", year: 2026, title: "EEG spectral power differences in Alzheimer's disease and frontotemporal dementia", journal: "Int J Neurosci" }
+    },
+    {
+      id: "pm-41407022", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 87, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up" }, symptoms: ["memory","cogdecline"],
+      claim: "MCI and motoric cognitive risk: frontal theta power up in eyes-closed resting EEG",
+      detail: "87 community-dwelling older adults in three groups (healthy, MCI and motoric cognitive risk), 5-minute eyes-closed resting EEG on 19 channels. Frontal theta power was higher in MCI and motoric cognitive risk, most in the latter. The default-mode connectivity result is not used here. Taken from the abstract; not checked in the full text. Cross-sectional study with small groups.",
+      design: "Case-control (cross-sectional)",
+      cite: { authors: "Noh ES, et al.", year: 2026, title: "Distinct patterns of cortical activity associated with cognitive and motor decline in community-dwelling older adults", journal: "Exp Gerontol" }
     }
   ],
 
