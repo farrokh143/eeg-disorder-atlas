@@ -1,0 +1,10 @@
+{"id":"pm-18805495","decision":"defer","note":"No PMC full text; LORETA alpha1 source power (posterior and temporal) vs hippocampal volume; source-level, mapping policy unclear"}
+{"id":"pm-2010321","decision":"defer","note":"No PMC full text; abstract gives slow-up and fast-down in AD and a 1 Hz peak but no scalp sites (12 unnamed areas)"}
+{"id":"pm-2015328","decision":"defer","note":"No PMC full text; theta higher over right posterior sites in AD, but the comparison group is multi-infarct dementia, not controls"}
+{"id":"pm-20930306","decision":"defer","note":"No PMC full text; LORETA alpha1 sources lower at rest in MCI/AD (delta up); reactivity focus; source-level, mapping policy unclear"}
+{"id":"pm-21181798","decision":"defer","note":"PMC has no full text; LORETA posterior alpha1 sources higher in MCI patients who stayed stable; source-level, mapping policy unclear"}
+{"id":"pm-21673406","decision":"defer","note":"No PMC full text; LORETA sources vs white-matter lesion load in MCI/AD; source-level, mapping policy unclear"}
+{"id":"pm-21870471","decision":"exclude","code":"NODATA","note":"Eyes-open reactivity indices and an alpha/theta ratio; abstract gives no band direction vs controls by scalp site"}
+{"id":"pm-21924950","decision":"defer","note":"No PMC full text; LORETA posterior alpha1 sources lower in AD and PDD; source-level, mapping policy unclear; main subject also includes Parkinson's dementia"}
+{"id":"pm-21971460","decision":"exclude","code":"REVIEW","note":"Narrative review of AD progression markers, not a meta-analysis"}
+{"id":"pm-21971461","decision":"exclude","code":"REVIEW","note":"Narrative review of field EEG literature, not a meta-analysis"}
