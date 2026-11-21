@@ -717,6 +717,16 @@ window.NF_DATA = {
       detail: "68 older people with and without subjective memory complaints, eyes-closed resting EEG. Alpha3 power was lower in the complaint group, and the reduction was significant in women only. Individual alpha peak and transition frequency did not differ. Taken from the abstract; not checked in the full text. Sites are the posterior electrodes the abstract describes, not individually named there.",
       design: "Case-control (cross-sectional)",
       cite: { authors: "Perez V, et al.", year: 2024, title: "Individual posterior alpha rhythms and cognitive reserve as possible early prognostic markers in people with subjective memory complaints", journal: "Behav Brain Res" }
+    },
+    {
+      id: "pm-39449097", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: [], bands: ["theta","delta","gamma","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", delta: "up", gamma: "up", alpha: "mixed" }, symptoms: ["memory","cogdecline"],
+      claim: "AD: theta power up across the scalp; prodromal AD: gamma and delta power up",
+      detail: "Three independent eyes-closed resting EEG cohorts of AD and prodromal AD (MCI due to AD) compared with age-matched controls. Theta was higher in AD and replicated in two cohorts, with theta connectivity lower. In prodromal AD, gamma power and gamma/alpha ratio were higher, mainly over left fronto-central and parietal areas, with delta also higher. Alpha did not differ consistently. Sites are listed as widespread. Case-control design with two pipelines; not a diagnostic test.",
+      design: "Case-control",
+      cite: { authors: "Chetty CA, et al.", year: 2024, title: "EEG biomarkers in Alzheimer's and prodromal Alzheimer's: a comprehensive analysis of spectral and connectivity features", journal: "Alzheimers Res Ther" }
     }
   ],
 
