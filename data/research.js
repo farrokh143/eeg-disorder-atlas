@@ -587,6 +587,26 @@ window.NF_DATA = {
       detail: "Awake resting EEG with eyes closed in 27 controls, 27 mild AD and 22 moderate AD. The main method is an amplitude-modulation analysis; the conventional band-power comparison (benchmark) found more delta and theta at occipital and parietal sites, and less alpha at Pz and less beta at several sites, in mild AD than in controls. Single small study with no blinding; it is an exploratory comparison.",
       design: "Case-control",
       cite: { authors: "Fraga FJ, et al.", year: 2013, title: "Characterizing Alzheimer's disease severity via resting-awake EEG amplitude modulation analysis", journal: "PLoS One" }
+    },
+    {
+      id: "pm-29991135", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: [], bands: ["theta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up" }, symptoms: ["memory","cogdecline"],
+      claim: "Dementia due to AD: globally higher relative theta power than healthy controls, eyes closed",
+      detail: "Standard eyes-closed EEGs from 117 AD patients, 117 MCI patients and 138 healthy controls across six Nordic memory clinics, recorded before diagnosis. At group level, relative theta power was higher across the scalp in AD (less so in MCI), theta correlated with several memory tests, and temporal high-frequency power was lower. Taken from the abstract; not checked in the full text. Retrospective single-time-point case-control design.",
+      design: "Case-control",
+      cite: { authors: "Musaeus CS, et al.", year: 2018, title: "EEG Theta Power Is an Early Marker of Cognitive Decline in Dementia due to Alzheimer's Disease", journal: "J Alzheimers Dis" }
+    },
+    {
+      id: "pm-31211359", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 3, control: null, blinded: null, n: 314, k: null },
+      sites: ["F3","Fz","F4","C3","Cz","C4"], bands: ["delta","beta","gamma"], direction: "ratio", evidence: "moderate",
+      changes: { delta: "down", beta: "up", gamma: "up" }, symptoms: ["memory","cogdecline"],
+      claim: "Preclinical AD: more frontocentral beta and gamma, less delta than controls",
+      detail: "Eyes-closed 1-minute resting EEG (256 channels) in 314 cognitively normal people aged 70-85 with subjective memory complaints, grouped by amyloid and FDG-PET neurodegeneration status. Neurodegeneration-positive people had higher beta and gamma and lower delta power, mainly at frontocentral sites; the amyloid-related pattern was non-linear. Taken from the abstract; not checked in the full text. Cross-sectional controlled cohort without blinding.",
+      design: "Controlled cohort (biomarker groups)",
+      cite: { authors: "Gaubert S, et al.", year: 2019, title: "EEG evidence of compensatory mechanisms in preclinical Alzheimer's disease", journal: "Brain" }
     }
   ],
 
