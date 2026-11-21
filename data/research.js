@@ -797,6 +797,56 @@ window.NF_DATA = {
       detail: "24 people with amyloid-positive amnestic MCI (confirmed by PiB-PET) and 24 age-matched controls, resting EEG. Lower-frequency power was higher and higher-frequency power lower in MCI, with the occipital theta/alpha ratio giving the best discrimination (AUC 0.86). The band results are described as widespread, so sites are left as whole-head. Taken from the abstract; not checked in the full text. Small single-centre case-control study with no external validation.",
       design: "Case-control",
       cite: { authors: "Liang Y, et al.", year: 2026, title: "Application of resting-state EEG theta /alpha power ratio analysis for diagnosing amnestic mild cognitive impairment", journal: "Sci Rep" }
+    },
+    {
+      id: "pm-42740150", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 88, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", alpha: "down" }, symptoms: ["memory","cogdecline"],
+      claim: "AD vs healthy: higher frontal theta/alpha ratio in resting eyes-closed EEG",
+      detail: "Eyes-closed resting EEG from 36 AD, 23 FTD and 29 healthy controls. The theta/alpha ratio was the strongest marker, highest over frontal sites in AD. AD vs FTD classification was not above chance (p = 0.270); the photobiomodulation single-case part is excluded.",
+      design: "Case-control (machine-learning classification)",
+      cite: { authors: "Šverko Z, et al.", year: 2026, title: "Spectral and Directed Connectivity EEG Markers for Classifying Alzheimer's Disease, Frontotemporal Dementia, and Healthy Controls with Exploratory Photobiomodulation Case-Study Projection", journal: "Sensors (Basel)" }
+    },
+    {
+      id: "pm-42769165", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 360, k: null },
+      sites: [], bands: ["theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", alpha: "down", beta: "down" }, symptoms: ["memory","cogdecline"],
+      claim: "AD dementia: more theta and less alpha2 and beta1 power than controls and MCI",
+      detail: "Eyes-closed resting EEG from 154 AD dementia, 116 MCI and 90 normal participants, recorded at 16 electrodes. The pattern was seen in several regions, so no single site is listed. The cross-sectional design and machine-learning AUCs of 0.70-0.87 are not yet validated in prospective cohorts; the plasma P-tau217 correlations are not used.",
+      design: "Case-control (cross-sectional, three groups)",
+      cite: { authors: "Yang L, et al.", year: 2026, title: "Resting-state EEG biomarkers of general and domain-specific cognitive impairment and plasma P-tau217 in patients with Alzheimer's disease and mild cognitive impairment", journal: "Front Neurol" }
+    },
+    {
+      id: "pm-42803709", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 90, k: null },
+      sites: ["T3","T4","T5","T6"], bands: ["gamma","delta","theta","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { gamma: "up", delta: "up", theta: "up", beta: "down" }, symptoms: ["memory","cogdecline"],
+      claim: "aMCI: higher temporal gamma; right temporal delta and theta/beta ratio raised",
+      detail: "Resting 128-channel high-density EEG from 55 amnestic MCI and 35 controls, with temporal sub-regions analysed separately. Right temporal delta activity was negatively linked to memory scores, and the theta/beta ratio was raised mainly on the right. Taken from the abstract; not checked in the full text.",
+      design: "Case-control (cross-sectional)",
+      cite: { authors: "Wen S, et al.", year: 2026, title: "Subregion-specific temporal lobe EEG signatures in amnestic mild cognitive impairment: Evidence from high-density EEG", journal: "J Alzheimers Dis" }
+    },
+    {
+      id: "pm-6187529", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 80, k: null },
+      sites: ["O1","O2"], bands: ["theta","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", beta: "down" }, symptoms: ["memory","cogdecline"],
+      claim: "Mild senile dementia (Alzheimer type): more theta and less beta than matched controls",
+      detail: "Resting awake EEG from 40 people with mild Alzheimer-type dementia and 40 matched elderly controls, derived from occipital-to-vertex pairs. Alpha and delta did not differ. Taken from the abstract; not checked in the full text.",
+      design: "Case-control (matched)",
+      cite: { authors: "Coben LA, et al.", year: 1983, title: "Frequency analysis of the resting awake EEG in mild senile dementia of Alzheimer type", journal: "Electroencephalogr Clin Neurophysiol" }
+    },
+    {
+      id: "pm-7613077", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 189, k: null },
+      sites: ["T5","T6","P3","Pz","P4"], bands: ["theta","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", beta: "down" }, symptoms: ["memory","cogdecline"],
+      claim: "AD: more theta and less beta over posterior temporal and parietal sites",
+      detail: "Resting awake qEEG from 60 people with probable AD and 129 controls, with a split-half replication. A discriminant function from one half classified 86% of the other half correctly. The evoked-potential part of the study is not used. Taken from the abstract; not checked in the full text.",
+      design: "Case-control (split-half replication)",
+      cite: { authors: "Duffy FH, et al.", year: 1995, title: "Temporoparietal electrophysiological differences characterize patients with Alzheimer's disease: a split-half replication study", journal: "Cereb Cortex" }
     }
   ],
 
