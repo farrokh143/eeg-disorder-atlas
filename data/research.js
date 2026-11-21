@@ -1497,6 +1497,46 @@ window.NF_DATA = {
       detail: "Resting frontal EEG asymmetry in 25 young adults with lifetime MDD and anxiety and 26 healthy controls, with a five-year follow-up in a subsample. The comorbid group showed more relative left frontal alpha; asymmetry was stable over five years in that group. Taken from the abstract; not checked in the full text. Single small case-control study.",
       design: "Case-control",
       cite: { authors: "Zsigo C, et al.", year: 2025, title: "Frontal alpha asymmetry in major depression and comorbid anxiety disorder: a five-year follow-up study", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-40945766", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 152, k: null },
+      sites: [], bands: ["gamma"], direction: "down", evidence: "preliminary",
+      changes: { gamma: "down" }, symptoms: ["lowmood"],
+      claim: "MDD, recurrent or not: lower absolute gamma power across the head at rest, stable over time",
+      detail: "Resting qEEG at three visits in 85 outpatients with MDD (59 recurrent, 26 non-recurrent) and 67 healthy controls. Absolute gamma was lower in both MDD groups than in controls across widespread regions; other bands showed no consistent difference. Taken from the abstract; not checked in the full text. Single-centre study with an unmatched treatment course.",
+      design: "Case-control",
+      cite: { authors: "Arıkan MK, et al.", year: 2026, title: "Gamma-band qEEG biomarkers as trait indicators in depression", journal: "J Affect Disord" }
+    },
+    {
+      id: "pm-41214062", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 40, k: null },
+      sites: ["Fp1","Fp2"], bands: ["alpha"], direction: "up", evidence: "preliminary",
+      changes: { alpha: "up" }, symptoms: ["lowmood","anxiety"],
+      claim: "MDD: higher prefrontal high-alpha (11.9 Hz) power than controls at rest, eyes closed",
+      detail: "Eyes-closed resting EEG from a 3-channel prefrontal device, checked against a 128-channel system, in 18 MDD patients and 22 controls drawn from the MODMA dataset. High-alpha relative power was higher in MDD (r=0.32, p=0.042). The paper averaged Fp1, Fpz and Fp2; Fpz is not a listed label, so Fp1 and Fp2 are recorded. The effect was modest (AUC 0.65) and the sample small.",
+      design: "Case-control",
+      cite: { authors: "Tang S, et al.", year: 2025, title: "High alpha oscillations in portable prefrontal EEG indicate gender-sensitive biomarkers for emotional disorders", journal: "Sci Rep" }
+    },
+    {
+      id: "pm-41308891", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 98, k: null },
+      sites: ["F3","F4"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
+      claim: "Females with MDD: higher frontal alpha asymmetry at F3/F4 than controls, eyes closed",
+      detail: "Resting EEG (eyes open and closed) in 68 MDD patients, 51 patients with bipolar disorder and 30 controls. Among females, F3/F4 asymmetry was higher in MDD than controls with eyes closed (p=0.041); in males the difference was in the bipolar group. Taken from the abstract; not checked in the full text. Small subgroup result from a single study.",
+      design: "Case-control",
+      cite: { authors: "Sun G, et al.", year: 2026, title: "Frontal alpha asymmetry across genders as a distinction between major depressive disorder and bipolar disorder", journal: "J Affect Disord" }
+    },
+    {
+      id: "pm-41422967", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 227, k: null },
+      sites: ["T5","T6"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
+      claim: "Unmedicated MDD: reduced parietal alpha asymmetry at P7-P8 (T5-T6) vs controls at rest",
+      detail: "Resting EEG in 84 unmedicated MDD patients and 143 healthy controls; P7-P8 (T5-T6) asymmetry distinguished the groups (AUC 0.85). Taken from the abstract; not checked in the full text. The agomelatine treatment results and the P3-P4 treatment prediction are left out (treatment-response prediction). Frontal asymmetry showed no predictive value.",
+      design: "Case-control",
+      cite: { authors: "Lin CE, et al.", year: 2026, title: "Parietal alpha asymmetry as a diagnostic marker for depression and a predictive biomarker for anhedonia improvement after melatonergic antidepressant treatment", journal: "J Affect Disord" }
     }
   ],
 
