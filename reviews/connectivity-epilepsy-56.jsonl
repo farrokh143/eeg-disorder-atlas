@@ -1,0 +1,3 @@
+{"id":"pm-42217475","decision":"no-connectivity","type":"connectivity","note":"graph-theory metrics (betweenness, small-world, efficiency) only; no named pairs"}
+{"id":"pm-42470913","decision":"exclude","code":"CN","note":"EEG microstate dwell time and transition statistics only (abstract)"}
+{"id":"pm-42595733","decision":"exclude","code":"T","note":"SSVEP photic-stimulation (evoked) main results; resting results lack region and band direction (abstract)"}
