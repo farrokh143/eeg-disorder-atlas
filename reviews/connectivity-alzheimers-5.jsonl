@@ -1,0 +1,10 @@
+{"id":"pm-26964294","decision":"exclude","code":"CN","note":"synchronization likelihood, graph clustering and global efficiency only; no named site pairs"}
+{"id":"pm-27103525","decision":"exclude","code":"CN","note":"phase transfer entropy is directed; DLB and AD vs controls"}
+{"id":"pm-27143432","decision":"exclude","code":"CN","note":"whole-brain PLI and minimum spanning tree graph metrics only; no named site pairs"}
+{"id":"pm-27836429","decision":"exclude","code":"CN","note":"classifier accuracy study (coherence and DTF features); no band-direction pair result in abstract"}
+{"id":"pm-27886711","decision":"exclude","code":"X","reason":"Band power by epoch selection; no connectivity result"}
+{"id":"pm-28958179","decision":"exclude","code":"MEG","note":"MEG source-space graph metrics (smallworldness, clustering, modularity) only"}
+{"id":"pm-29407464","decision":"defer","note":"[parked: no full text] abstract gives only widespread eLORETA source pairs (no named regions); no PMC full text"}
+{"id":"pm-29448151","decision":"defer","note":"[parked: no full text] abstract gives posterior and widespread eLORETA alpha source pairs; no PMC full text"}
+{"id":"pm-29526598","decision":"exclude","code":"X","reason":"No separate result for Alzheimer's: study is first-episode schizophrenia vs controls"}
+{"id":"pm-30797169","decision":"defer","note":"[parked: no full text] abstract gives only widespread eLORETA alpha source pairs (no named regions); no PMC full text"}
