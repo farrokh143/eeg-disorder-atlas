@@ -3356,6 +3356,28 @@ window.NF_DATA = {
       detail: "169 people from an AD spectrum sample: 44 healthy controls, 84 amnestic MCI and 41 AD, resting EEG. Source-localised (eLORETA); mapped to the overlying scalp region. Alpha-band mutual information rate (MIR, an undirected pairwise measure) was lower between frontal and parietal default-mode regions in AD. The paper's main focus is three-order O-information; the pairwise MIR result is a secondary comparison.",
       design: "Case-control",
       cite: { authors: "Azami H, et al.", year: 2026, title: "Three-order interactions in the alpha band of default mode network EEGs based on O-information rate: insights from aging and Alzheimer's disease", journal: "Alzheimers Res Ther" }
+    },
+    {
+      id: "pm-22384265-fc", source: "full-text", condition: "depression", type: "connectivity",
+      measure: "coherence", pairs: [["frontal","temporal"],["frontal","parietal"],["frontal","occipital"],["frontal","frontal"],["temporal","temporal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 158, k: null },
+      bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "mixed", beta: "up" }, symptoms: ["lowmood"],
+      claim: "MDD: higher resting coherence than controls in delta, theta and beta; alpha mixed",
+      detail: "121 unmedicated people with MDD and 37 controls, resting eyes-closed EEG, 19 electrodes, weighted network analysis of coherence. Coherence was higher in MDD in delta and theta (mainly frontopolar links to temporal and parietooccipital sites) and in beta (within prefrontal and temporal sites). Alpha was mixed: most frontopolar and DLPFC to temporal or parietooccipital links were higher, but one right parietooccipital link was lower. Case-control study.",
+      design: "Case-control",
+      cite: { authors: "Leuchter AF, et al.", year: 2012, title: "Resting-state quantitative electroencephalography reveals increased neurophysiologic connectivity in depression", journal: "PLoS One" }
+    },
+    {
+      id: "pm-24674895-fc", source: "abstract", condition: "depression", type: "connectivity",
+      measure: "phase", pairs: [["frontal","frontal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 120, k: null },
+      bands: ["alpha"], direction: "up", evidence: "preliminary",
+      changes: { alpha: "up" }, symptoms: ["lowmood"],
+      claim: "MDD: higher alpha lagged phase synchrony between frontal (prefrontal) source sites than controls",
+      detail: "60 unmedicated people with MDD and 60 healthy controls, 15-min resting EEG, eLORETA source estimates. Alpha lagged phase synchronisation was higher in MDD between subgenual prefrontal and left dorsolateral/medial prefrontal regions. Source-localised (eLORETA); mapped to the overlying scalp region. Taken from the abstract; not checked in the full text. Case-control study.",
+      design: "Case-control",
+      cite: { authors: "Olbrich S, et al.", year: 2014, title: "Functional connectivity in major depression: increased phase synchronization between frontal cortical EEG-source estimates", journal: "Psychiatry Res" }
     }
   ],
 
