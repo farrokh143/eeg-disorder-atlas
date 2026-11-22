@@ -3584,6 +3584,17 @@ window.NF_DATA = {
       detail: "22 first-episode patients and 22 matched controls, eyes-closed resting 64-channel EEG, orthogonalized power envelope correlation at 40 Hz. Patients had higher gamma connectivity in a left-lateralised network of inferior frontal, temporal and inferior parietal areas; within patients, higher connectivity went with lower positive and disorganisation scores. Taken from the abstract; not checked in the full text.",
       design: "Case-control",
       cite: { authors: "Andreou C, et al.", year: 2015, title: "Increased Resting-State Gamma-Band Connectivity in First-Episode Schizophrenia", journal: "Schizophr Bull" }
+    },
+    {
+      id: "pm-29202390-fc", source: "abstract", condition: "schizophrenia", type: "connectivity",
+      measure: "phase", pairs: [["frontal","frontal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 52, k: null },
+      bands: ["beta"], direction: "down", evidence: "preliminary",
+      changes: { beta: "down" }, symptoms: ["psychosis"],
+      claim: "Drug-naive schizophrenia: less frontal beta phase lag index connectivity than controls",
+      detail: "21 drug-naive patients (14 re-tested after antipsychotic treatment) vs 31 age-matched controls, resting-state EEG, phase lag index. Beta-band connectivity across frontal regions was lower in patients; the gamma reduction is described only as throughout the scalp with no named pairs, so it is not coded. Antipsychotic treatment did not change connectivity. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Takahashi T, et al.", year: 2018, title: "Abnormal functional connectivity of high-frequency rhythms in drug-naïve schizophrenia", journal: "Clin Neurophysiol" }
     }
   ],
 

@@ -1,0 +1,10 @@
+{"id":"pm-29202390","decision":"include","type":"connectivity","source":"abstract","condition":"schizophrenia","measure":"phase","pairs":[["frontal","frontal"]],"changes":{"beta":"down"},"symptoms":["psychosis"],"design_level":2,"control":null,"blinded":null,"n":52,"k":null,"evidence":"preliminary","claim":"Drug-naive schizophrenia: less frontal beta phase lag index connectivity than controls","detail":"21 drug-naive patients (14 re-tested after antipsychotic treatment) vs 31 age-matched controls, resting-state EEG, phase lag index. Beta-band connectivity across frontal regions was lower in patients; the gamma reduction is described only as throughout the scalp with no named pairs, so it is not coded. Antipsychotic treatment did not change connectivity. Taken from the abstract; not checked in the full text.","design":"Case-control"}
+{"id":"pm-26525736","decision":"exclude","code":"CN","note":"PCA/discriminant coherence factors; no named electrode pair result"}
+{"id":"pm-26582260","decision":"exclude","code":"CN","note":"microstate neurofeedback feasibility in healthy participants; microstate measure only"}
+{"id":"pm-29253805","decision":"exclude","code":"NONBAND","note":"theta-gamma phase-amplitude coupling and classifier; not band power"}
+{"id":"pm-29397081","decision":"exclude","code":"NONBAND","note":"phase-amplitude coupling in auditory cortex; cross-frequency measure, partly task (ASSR)"}
+{"id":"pm-29571753","decision":"exclude","code":"X","reason":"fMRI functional network connectivity only (full text read); not EEG"}
+{"id":"pm-30322279","decision":"exclude","code":"CN","note":"minimum spanning tree graph metrics only"}
+{"id":"pm-31270391","decision":"exclude","code":"CN","note":"minimum spanning tree graph metrics (hubs, betweenness centrality) only (full text read)"}
+{"id":"pm-31875364","decision":"exclude","code":"CN","note":"entropy and relative power features for classification; no directional group result; no full text in PMC result"}
+{"id":"pm-31883931","decision":"exclude","code":"NONBAND","note":"theta phase-gamma amplitude coupling in source signals; cross-frequency measure"}
