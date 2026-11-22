@@ -3297,6 +3297,16 @@ window.NF_DATA = {
       detail: "17 patients with idiopathic generalised epilepsy and 17 age-matched controls, resting EEG with LORETA source analysis. Delta activity was higher in the medial frontal gyrus (BA 9) in patients with discharges; left medial frontal default-mode ROI values were also higher. Source-localised (LORETA); mapped to the overlying scalp region. Single case-control study. Taken from the abstract; not checked in the full text.",
       design: "Case-control",
       cite: { authors: "Bistriceanu CE, et al.", year: 2023, title: "Default mode function in patients with generalised epilepsy syndromes: from generalised to focal findings", journal: "Neurol Neurochir Pol" }
+    },
+    {
+      id: "pm-28809667", source: "abstract", condition: "sud", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 40, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4"], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["craving"],
+      claim: "Abstinent heroin users: weaker alpha source activity in frontal and parietal lobes than controls",
+      detail: "20 abstinent heroin users vs 20 matched controls, 5-minute resting EEG. Alpha activity was weaker in frontal (BA4, BA6) and parietal (BA3, BA7) regions. Taken from the abstract; not checked in the full text. Source-localised (method not named in the abstract); mapped to overlying scalp region.",
+      design: "Case-control",
+      cite: { authors: "Zhao Q, et al.", year: 2017, title: "Nonlinear Dynamic Complexity and Sources of Resting-state EEG in Abstinent Heroin Addicts", journal: "IEEE Trans Nanobioscience" }
     }
   ],
 
@@ -3961,6 +3971,39 @@ window.NF_DATA = {
       detail: "52 drug-naive panic disorder patients and 43 controls analysed (100 enrolled), resting 128-channel EEG. Source-localised (minimum norm, PLI); mapped to overlying scalp region. Only baseline group differences are recorded; the post-venlafaxine changes are left out as a drug effect. Cross-sectional comparison; the authors note no brain-behaviour association survived correction.",
       design: "Case-control",
       cite: { authors: "Zhang H, et al.", year: 2026, title: "Cortical Network Alterations and Treatment-Induced Reorganization in Panic Disorder: A Longitudinal High-Density EEG Study", journal: "CNS Neurosci Ther" }
+    },
+    {
+      id: "pm-26660886-fc", source: "abstract", condition: "sud", type: "connectivity",
+      measure: "other", pairs: [["frontal","central"],["occipital","parietal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 30, k: null },
+      bands: ["alpha","beta"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down", beta: "down" }, symptoms: ["craving","impulsivity"],
+      claim: "AUD women: less alpha and beta synchronisation likelihood than matched controls",
+      detail: "15 women with alcohol use disorder vs 15 matched controls, resting EEG, synchronization likelihood. Alpha connectivity was lower at fronto-central and occipito-parietal regions, and beta lower over the whole scalp; alpha at fronto-central sites was linked to non-planning impulsivity. Taken from the abstract; not checked in the full text. Small single case-control study.",
+      design: "Case-control",
+      cite: { authors: "Herrera-Díaz A, et al.", year: 2016, title: "Functional Connectivity and Quantitative EEG in Women with Alcohol Use Disorders: A Resting-State Study", journal: "Brain Topogr" }
+    },
+    {
+      id: "pm-29159061-fc", source: "full-text", condition: "sud", type: "connectivity",
+      measure: "coherence", pairs: [["frontal","central"],["frontal","parietal"],["central","parietal"],["parietal","occipital"]],
+      metrics: { design: 2, control: null, blinded: null, n: 41, k: null },
+      bands: ["theta","alpha","gamma","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", alpha: "up", gamma: "down", beta: "mixed" }, symptoms: ["craving"],
+      claim: "Long-term abstinent alcoholics: higher theta and alpha, lower gamma coherence than controls",
+      detail: "20 long-term abstinent alcoholics vs 21 non-substance-abusing controls, eyes-open resting 64-channel EEG (coherence). The EEG coherence component linked to fMRI networks was mostly higher in theta and alpha and lower in gamma in the abstinent group; beta contributed little. Small sample; the result comes from a multimodal parallel-ICA component rather than a per-pair test.",
+      design: "Case-control",
+      cite: { authors: "Cardenas VA, et al.", year: 2018, title: "EEG coherence related to fMRI resting state synchrony in long-term abstinent alcoholics", journal: "Neuroimage Clin" }
+    },
+    {
+      id: "pm-31825996-fc", source: "full-text", condition: "sud", type: "connectivity",
+      measure: "phase", pairs: [["frontal","frontal"],["frontal","temporal"],["frontal","occipital"]],
+      metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
+      bands: ["delta","theta","alpha","beta","gamma"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "mixed", alpha: "down", beta: "mixed", gamma: "up" }, symptoms: ["craving"],
+      claim: "Methamphetamine users: more gamma and delta wPLI links, fewer frontal alpha links than controls",
+      detail: "36 men with methamphetamine use disorder (1-6 months abstinent) vs 24 male controls, eyes-open resting EEG. Source-localised (sLORETA, AAL atlas); mapped to overlying scalp region. Pairs are the frontal, temporal and occipital pairs named in the discussion; deep-structure pairs and graph metrics are left out. No theta difference; beta had both directions, so it is recorded as mixed.",
+      design: "Case-control",
+      cite: { authors: "Khajehpour H, et al.", year: 2019, title: "Disrupted resting-state brain functional network in methamphetamine abusers: A brain source space study by EEG", journal: "PLoS One" }
     }
   ],
 
