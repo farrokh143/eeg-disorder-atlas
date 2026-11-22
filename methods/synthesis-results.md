@@ -47,6 +47,7 @@ Shown on the atlas with their study list and certainty, without a test. Largest:
 | ADHD | power | beta | central | 5 | 0 / 3 / 2 | Very low |
 | Alzheimer's | power | alpha | central | 5 | 0 / 3 / 2 | Very low |
 | ADHD | power | theta | parietal | 5 | 3 / 1 / 1 | Very low |
+| Schizophrenia | power | theta | temporal | 5 | 4 / 0 / 1 | Very low |
 | Alcohol & substance use | power | alpha | frontal | 5 | 3 / 1 / 1 | Low |
 | Schizophrenia | power | delta | central | 4 | 3 / 0 / 1 | Very low |
 | Schizophrenia | power | theta | central | 4 | 3 / 0 / 1 | Very low |
@@ -60,4 +61,3 @@ Shown on the atlas with their study list and certainty, without a test. Largest:
 | Alcohol & substance use | power | beta | frontal | 4 | 3 / 0 / 1 | Low |
 | ADHD | power | alpha | central | 4 | 0 / 2 / 2 | Very low |
 | ADHD | power | delta | frontal | 4 | 2 / 2 / 0 | Very low |
-| ADHD | power | delta | central | 4 | 2 / 2 / 0 | Very low |
