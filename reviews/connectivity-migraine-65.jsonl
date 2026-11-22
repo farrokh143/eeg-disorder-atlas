@@ -1,0 +1,3 @@
+{"id":"pm-27807767","decision":"no-connectivity","note":"connectivity is isolated effective coherence (directed); no undirected pairs"}
+{"id":"pm-31520332","decision":"exclude","code":"CN","note":"machine-learning classifier on connectivity; theta difference is aura subtype with no named pairs"}
+{"id":"pm-40083312","decision":"exclude","code":"CN","note":"EEG microstates only"}
