@@ -3235,6 +3235,17 @@ window.NF_DATA = {
       detail: "21 mild AD and 21 MCI patients, resting EEG. Delta coherence was higher in AD between bilateral precentral areas and between the left supplementary motor area and both precentral and postcentral areas. Source-localised (MNE coherence); mapped to the overlying scalp region. Taken from the abstract; not checked in the full text.",
       design: "Cross-sectional group comparison",
       cite: { authors: "Hsiao FJ, et al.", year: 2014, title: "Altered source-based EEG coherence of resting-state sensorimotor network in early-stage Alzheimer's disease compared to mild cognitive impairment", journal: "Neurosci Lett" }
+    },
+    {
+      id: "pm-26541308-fc", source: "abstract", condition: "alzheimers", type: "connectivity",
+      measure: "phase", pairs: [["frontal","parietal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 58, k: null },
+      bands: ["delta","theta"], direction: "down", evidence: "preliminary",
+      changes: { delta: "down", theta: "down" }, symptoms: ["cogdecline"],
+      claim: "AD: lower delta lagged phase synchronization than controls; theta lower right frontal-parietal",
+      detail: "28 probable AD patients and 30 healthy controls, resting EEG, lagged phase synchronization (eLORETA). Delta synchrony was lower across most cortical regions and theta synchrony between right DLPFC and right parietal sites was lower. Source-localised (eLORETA lagged phase synchronization); mapped to the overlying scalp region. Taken from the abstract; not checked in the full text. Delta links correlated with MMSE.",
+      design: "Case-control",
+      cite: { authors: "Hata M, et al.", year: 2016, title: "Functional connectivity assessed by resting state EEG correlates with cognitive decline of Alzheimer's disease - An eLORETA study", journal: "Clin Neurophysiol" }
     }
   ],
 
