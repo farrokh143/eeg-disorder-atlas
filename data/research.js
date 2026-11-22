@@ -3562,6 +3562,28 @@ window.NF_DATA = {
       detail: "14 patients hospitalised for acute exacerbation, resting EEG at two time points, no control group. Left F7-T5 beta coherence was lower than the right pair at first test, and the change in coherence tracked the change in BPRS positive symptoms. Same research group as the 2006 study; sample overlap not checked. Taken from the abstract; not checked in the full text.",
       design: "Longitudinal within-patient",
       cite: { authors: "Higashima M, et al.", year: 2007, title: "State-dependent changes in intrahemispheric EEG coherence for patients with acute exacerbation of schizophrenia", journal: "Psychiatry Res" }
+    },
+    {
+      id: "pm-24090715-fc", source: "full-text", condition: "schizophrenia", type: "connectivity",
+      measure: "coherence", pairs: [["central","parietal"],["central","temporal"],["parietal","temporal"],["frontal","central"],["frontal","parietal"],["frontal","temporal"],["temporal","temporal"],["frontal","frontal"],["central","central"]],
+      metrics: { design: 2, control: null, blinded: null, n: 344, k: null },
+      bands: ["delta","alpha","beta","theta"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "mixed", alpha: "up", beta: "down", theta: "down" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia vs controls: mixed delta coherence; more alpha, less beta1 and theta coherence",
+      detail: "132 schizophrenia patients, 76 bipolar and 136 non-psychiatric controls, 3-minute eyes-closed resting EEG, coherence on reference-free current source density. Delta was higher within hemispheres (central-parietal, central-temporal) and lower across hemispheres (frontal); this band is marked mixed. Alpha was higher across temporal pairs and within hemispheres; beta1 within hemispheres (no regional breakdown, so all six hemisphere pairs are listed) and interhemispheric central theta were lower. Bipolar results are not used here. Cross-sectional comparison; blinding not stated.",
+      design: "Case-control",
+      cite: { authors: "Kam JW, et al.", year: 2013, title: "Resting state EEG power and coherence abnormalities in bipolar disorder and schizophrenia", journal: "J Psychiatr Res" }
+    },
+    {
+      id: "pm-25170031-fc", source: "abstract", condition: "schizophrenia", type: "connectivity",
+      measure: "aec", pairs: [["frontal","temporal"],["temporal","temporal"],["temporal","parietal"],["frontal","parietal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 44, k: null },
+      bands: ["gamma"], direction: "up", evidence: "preliminary",
+      changes: { gamma: "up" }, symptoms: ["psychosis"],
+      claim: "First-episode SZ: more left-lateral gamma envelope connectivity than controls, frontal-temporal-parietal",
+      detail: "22 first-episode patients and 22 matched controls, eyes-closed resting 64-channel EEG, orthogonalized power envelope correlation at 40 Hz. Patients had higher gamma connectivity in a left-lateralised network of inferior frontal, temporal and inferior parietal areas; within patients, higher connectivity went with lower positive and disorganisation scores. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Andreou C, et al.", year: 2015, title: "Increased Resting-State Gamma-Band Connectivity in First-Episode Schizophrenia", journal: "Schizophr Bull" }
     }
   ],
 
