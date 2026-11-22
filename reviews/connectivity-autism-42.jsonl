@@ -1,0 +1,10 @@
+{"id":"pm-38678958","decision":"exclude","code":"CN","note":"CNN-LSTM classifier on FC maps; measure and direction not stated in abstract (no PMC id)"}
+{"id":"pm-38703700","decision":"exclude","code":"NONBAND","note":"theta excitation-inhibition ratio, not connectivity or band power (no PMC id)"}
+{"id":"pm-38812386","decision":"exclude","code":"CN","note":"graph node-strength indicators and classifier only"}
+{"id":"pm-39427869","decision":"exclude","code":"CN","note":"EEG dynamic states and fNIRS covariance; no named EEG site pairs (no PMC id)"}
+{"id":"pm-39455733","decision":"exclude","code":"CN","note":"ML model-selection associations; connectivity measure and pairs not named as a group result (full text read)"}
+{"id":"pm-39951212","decision":"exclude","code":"CN","note":"graph metrics only (global efficiency, clustering, small-worldness)"}
+{"id":"pm-40088831","decision":"exclude","code":"CN","note":"deep learning classifier; no connectivity result by pair or region"}
+{"id":"pm-40582490","decision":"exclude","code":"CN","note":"dynamical systems, Lyapunov and global phase synchrony; no named pairs (no PMC id)"}
+{"id":"pm-40663763","decision":"exclude","code":"CN","note":"hypergraph classifier; no direction or named pair stated in abstract (no PMC id)"}
+{"id":"pm-41207481","decision":"defer","note":"[parked: no full text] abstract gives band and direction but no measure or named sites (no PMC id)"}
