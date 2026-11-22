@@ -3267,6 +3267,16 @@ window.NF_DATA = {
       detail: "36 PD patients (18 with freezing of gait, 18 without) and 18 healthy controls, eyes-open resting high-density EEG. Freezers had diffusely higher theta relative power than controls; this tracked executive deficits. Single case-control study. Taken from the abstract; not checked in the full text.",
       design: "Case-control",
       cite: { authors: "Bayot M, et al.", year: 2022, title: "Functional networks underlying freezing of gait: a resting-state electroencephalographic study", journal: "Neurophysiol Clin" }
+    },
+    {
+      id: "pm-39956357", source: "abstract", condition: "parkinsons", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 65, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","C3","Cz","C4","P3","Pz","P4"], bands: ["beta","delta"], direction: "up", evidence: "preliminary",
+      changes: { beta: "up", delta: "up" }, symptoms: ["motor"],
+      claim: "Within PD: symptom fluctuations linked to higher resting beta and delta power than without fluctuations",
+      detail: "35 PD patients (with and without symptom fluctuations) and 30 healthy controls; resting EEG with ECG and pulse. Patients with fluctuations had higher beta power over frontal, parietal and central regions and higher parietal delta. Single cross-sectional comparison. Taken from the abstract; not checked in the full text.",
+      design: "Cross-sectional comparison",
+      cite: { authors: "Zhang T, et al.", year: 2025, title: "Characteristics of multimodal physiological signal differences in symptom fluctuations in Parkinson's disease", journal: "Neuroscience" }
     }
   ],
 
@@ -3843,6 +3853,17 @@ window.NF_DATA = {
       detail: "26 levodopa-naive early PD patients and 20 controls, resting high-density EEG; wPLI between source regions. Theta links were lower across prefrontal-limbic-temporal areas, alpha lower across frontoparietal areas, and beta higher across sensorimotor-frontal areas. Source-localised (source reconstruction); mapped to the overlying scalp region. Single case-control study. Taken from the abstract; not checked in the full text.",
       design: "Case-control",
       cite: { authors: "Conti M, et al.", year: 2023, title: "Band-Specific Altered Cortical Connectivity in Early Parkinson's Disease and its Clinical Correlates", journal: "Mov Disord" }
+    },
+    {
+      id: "pm-39657395-fc", source: "full-text", condition: "parkinsons", type: "connectivity",
+      measure: "phase", pairs: [["frontal","frontal"],["frontal","central"],["central","parietal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 138, k: null },
+      bands: ["theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "down", alpha: "mixed", beta: "up" }, symptoms: ["motor"],
+      claim: "Early PD vs controls: less theta and more beta phase connectivity; alpha lower only in men",
+      detail: "69 early-stage PD patients and 69 age-matched controls, 64-channel resting EEG, wPLI between source regions. Theta connectivity was lower in prefrontal and sensorimotor areas and beta higher in sensorimotor and parietal areas in both sexes; alpha was lower only in male PD. Source-localised (source reconstruction); mapped to the overlying scalp region. Cross-sectional case-control study.",
+      design: "Case-control",
+      cite: { authors: "Conti M, et al.", year: 2025, title: "Sex hormones shape EEG-based functional connectivity in early-stage Parkinson's disease patients", journal: "Neuroimage Clin" }
     }
   ],
 
