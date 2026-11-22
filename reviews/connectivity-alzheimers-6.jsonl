@@ -1,0 +1,10 @@
+{"id":"pm-31112938","decision":"defer","note":"[parked: no full text] AEC dynamic connectivity lower in AD in alpha and beta-1; abstract names no sites or regions; no PMC full text"}
+{"id":"pm-31366317","decision":"exclude","code":"X","reason":"Fractal dimension, ApEn and homologous-lobe asymmetry index; no connectivity result"}
+{"id":"pm-31725401","decision":"exclude","code":"X","reason":"Modulation-spectrum patch power features; no connectivity result"}
+{"id":"pm-31759193","decision":"exclude","code":"NR","note":"drug trial (PQ912 vs placebo); treatment effect on AEC connectivity"}
+{"id":"pm-31840287","decision":"exclude","code":"CN","note":"global whole-skull coherence and slowing ratio only; no named site pairs"}
+{"id":"pm-31947167","decision":"exclude","code":"X","reason":"TREND recurrence-quantification measure; not connectivity"}
+{"id":"pm-31957512","decision":"exclude","code":"CN","note":"small-world index (graph theory) in DMN nodes only; no pair-level result"}
+{"id":"pm-32000144","decision":"exclude","code":"X","reason":"Kullback-Leibler non-stationarity and recurrence measures; not connectivity"}
+{"id":"pm-32058892","decision":"exclude","code":"CN","note":"CNN classifier on multispectral EEG images; classifier results only"}
+{"id":"pm-32114060","decision":"exclude","code":"CN","note":"WPLI minimum spanning tree and hub (betweenness) graph metrics only; no named pair result"}
