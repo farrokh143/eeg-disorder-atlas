@@ -3474,6 +3474,39 @@ window.NF_DATA = {
       detail: "30 people with DSM-IV MDD and 28 healthy controls, 5-minute eyes-closed resting EEG, 19 channels, sensor-level analysis. Theta PLV and PLI were lower across frontal-to-posterior, fronto-central and parieto-occipital pairs; alpha PLV and coherence were lower at frontal and posterior links; beta results were sparse and the beta mutual-information results were higher, so beta is marked mixed. Coherence results were similar in theta and alpha. Single small case-control study.",
       design: "Case-control",
       cite: { authors: "Rose SJ, et al.", year: 2026, title: "Multi-Metric EEG Connectivity and Graph Analysis Reveal Altered Resting-State Networks in Major Depressive Disorder", journal: "Brain Behav" }
+    },
+    {
+      id: "pm-27127785-fc", source: "full-text", condition: "autism", type: "connectivity",
+      measure: "coherence", pairs: [["central","central"],["frontal","frontal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 46, k: null },
+      bands: ["alpha","theta"], direction: "ratio", evidence: "preliminary",
+      changes: { alpha: "up", theta: "down" }, symptoms: ["social"],
+      claim: "Autism without comorbidity: more alpha coherence across central sites, less frontal theta coherence than controls",
+      detail: "Autism without comorbid conditions was compared with neurotypical controls in 128-channel resting EEG, eyes closed and eyes open. Eyes-closed alpha coherence between C3 and C4 was higher in autism; eyes-closed theta coherence within the frontal (Fp-F) electrodes was lower. The alpha result is interhemispheric and the theta result intrahemispheric. Total sample n=46 across four groups; single cross-sectional study with small groups.",
+      design: "Case-control",
+      cite: { authors: "Saunders A, et al.", year: 2016, title: "Hemispheric Coherence in ASD with and without Comorbid ADHD and Anxiety", journal: "Biomed Res Int" }
+    },
+    {
+      id: "pm-30864354-fc", source: "abstract", condition: "autism", type: "connectivity",
+      measure: "coherence", pairs: [["frontal","frontal"],["central","central"],["parietal","parietal"],["temporal","temporal"],["occipital","occipital"]],
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      bands: ["delta","theta"], direction: "down", evidence: "preliminary",
+      changes: { delta: "down", theta: "down" }, symptoms: ["social"],
+      claim: "Asperger syndrome: lower within-hemisphere delta and theta coherence than controls at almost all sites",
+      detail: "Asperger syndrome was compared with healthy controls (and other groups) in resting EEG with eyes open and eyes closed. Intrahemispheric delta and theta coherence was lower in both conditions across almost all sites. Taken from the abstract; not checked in the full text. Group sizes are not given in the abstract, so n is left blank.",
+      design: "Case-control",
+      cite: { authors: "Markovska-Simoska S, et al.", year: 2018, title: "Inter- and Intra-Hemispheric EEG Coherence Study in Adults with Neuropsychiatric Disorders", journal: "Pril (Makedon Akad Nauk Umet Odd Med Nauki)" }
+    },
+    {
+      id: "pm-18331812-fc", source: "abstract", condition: "autism", type: "connectivity",
+      measure: "coherence", pairs: [["frontal","frontal"],["temporal","temporal"],["parietal","parietal"],["occipital","occipital"]],
+      metrics: { design: 2, control: null, blinded: null, n: 40, k: null },
+      bands: ["delta","theta","alpha","beta"], direction: "down", evidence: "preliminary",
+      changes: { delta: "down", theta: "down", alpha: "down", beta: "down" }, symptoms: ["social"],
+      claim: "Autism: lower delta, theta, alpha and beta coherence than controls across frontal, temporal and posterior sites",
+      detail: "20 children with autistic disorder and 20 matched controls, eyes-closed resting EEG, intra- and interhemispheric coherence. Frontal interhemispheric delta and theta, temporal delta, theta and alpha, and posterior delta, theta and beta coherence were lower in autism. Taken from the abstract; not checked in the full text. The paper also reports power differences, not used here.",
+      design: "Case-control",
+      cite: { authors: "Coben R, et al.", year: 2008, title: "EEG power and coherence in autistic spectrum disorder", journal: "Clin Neurophysiol" }
     }
   ],
 
