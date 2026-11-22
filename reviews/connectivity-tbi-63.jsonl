@@ -1,0 +1,9 @@
+{"id":"pm-21216191","decision":"exclude","code":"CN","note":"non-stationarity measure (SEPFS) only; no connectivity"}
+{"id":"pm-28258840","decision":"exclude","code":"CN","note":"classifier (QEEG algorithm) results only"}
+{"id":"pm-38349652","decision":"exclude","code":"CN","note":"unsupervised coclustering into subtypes; no named pairs"}
+{"id":"pm-38812391","decision":"defer","note":"[parked: no full text] NBS subnetworks named only as bilateral; no site or region pairs in abstract"}
+{"id":"pm-39275911","decision":"exclude","code":"CN","note":"nonlinear measures (PLE, entropy, DFA) only; no connectivity"}
+{"id":"pm-39420809","decision":"no-connectivity","note":"lagged phase synchronization showed no group difference; no named pairs; correlations are source activity"}
+{"id":"pm-39648797","decision":"exclude","code":"CN","note":"whole-brain and network-level connectivity only; no named scalp pairs; pre/post exercise change"}
+{"id":"pm-41029228","decision":"exclude","code":"CN","note":"microstate-specific cross-frequency coupling networks and classifier"}
+{"id":"pm-42441477","decision":"exclude","code":"CN","note":"inter-avalanche interval statistics; no connectivity"}
