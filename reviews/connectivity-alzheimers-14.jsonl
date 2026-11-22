@@ -1,0 +1,10 @@
+{"id":"pm-41264935","decision":"defer","note":"[parked: no full text] PAC between sites reported by lobe, no frequency band or direction for the coupling pairs in the abstract"}
+{"id":"pm-41327435","decision":"exclude","code":"CN","note":"global average connectivity strength and graph density only (PLV, PLI, WPLI, coherence); no named site or region pairs"}
+{"id":"pm-41336040","decision":"defer","note":"[parked: no full text] abstract gives lower alpha coherence in AD but names no sites or region pairs"}
+{"id":"pm-41337319","decision":"exclude","code":"CN","note":"classifier study on temporal-electrode band-power features; no connectivity result"}
+{"id":"pm-41398345","decision":"exclude","code":"CN","note":"deep-learning classifier; explainability maps only, no connectivity result"}
+{"id":"pm-41534360","decision":"exclude","code":"CN","note":"phase-amplitude coupling and complexity only, no site pairs; spectral results are electrode-averaged (global band power), not connectivity"}
+{"id":"pm-41571385","decision":"exclude","code":"CN","note":"graph-theory metrics only (global efficiency, small-worldness, node degree); no named site pairs"}
+{"id":"pm-41604947","decision":"exclude","code":"CN","note":"threshold classifier on band-specific features; no connectivity result"}
+{"id":"pm-41666658","decision":"exclude","code":"CN","note":"deep-learning classifier; no connectivity result"}
+{"id":"pm-41760696","decision":"exclude","code":"CN","note":"EEG microstates only"}
