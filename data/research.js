@@ -3452,6 +3452,17 @@ window.NF_DATA = {
       detail: "26 women with dysphoria and 38 healthy women, 4-minute resting EEG with phase locking value (mean phase coherence). Theta connectivity was higher between right frontal-central and right temporal-left occipital sites; alpha was higher between prefrontal and frontal-central-occipital sites. Taken from the abstract; not checked in the full text. Band power did not differ, and the design is cross-sectional.",
       design: "Case-control",
       cite: { authors: "Dell'Acqua C, et al.", year: 2021, title: "Increased functional connectivity within alpha and theta frequency bands in dysphoria: A resting-state EEG study", journal: "J Affect Disord" }
+    },
+    {
+      id: "pm-38889861-fc", source: "abstract", condition: "depression", type: "connectivity",
+      measure: "coherence", pairs: [["frontal","frontal"],["parietal","parietal"],["frontal","parietal"],["temporal","parietal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 319, k: null },
+      bands: ["hibeta","delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { hibeta: "up", delta: "mixed", theta: "mixed", alpha: "mixed", beta: "mixed" }, symptoms: ["lowmood","anxiety"],
+      claim: "MDD with anxiety: more high-beta coherence within the default mode network than controls",
+      detail: "154 people with MDD and anxiety symptoms and 165 healthy controls, 19-channel resting EEG, coherence. High-beta coherence was higher within DMN regions in MDD; delta, theta, alpha and beta showed no difference. Taken from the abstract; not checked in the full text. The anterior and posterior DMN regions are not named by electrode, so the pairs use the regions.",
+      design: "Case-control",
+      cite: { authors: "Ho SI, et al.", year: 2024, title: "EEG coherences of the default mode network among patients comorbid with major depressive disorder and anxiety symptoms", journal: "J Affect Disord" }
     }
   ],
 
