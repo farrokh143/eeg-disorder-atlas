@@ -4004,6 +4004,17 @@ window.NF_DATA = {
       detail: "36 men with methamphetamine use disorder (1-6 months abstinent) vs 24 male controls, eyes-open resting EEG. Source-localised (sLORETA, AAL atlas); mapped to overlying scalp region. Pairs are the frontal, temporal and occipital pairs named in the discussion; deep-structure pairs and graph metrics are left out. No theta difference; beta had both directions, so it is recorded as mixed.",
       design: "Case-control",
       cite: { authors: "Khajehpour H, et al.", year: 2019, title: "Disrupted resting-state brain functional network in methamphetamine abusers: A brain source space study by EEG", journal: "PLoS One" }
+    },
+    {
+      id: "pm-42872911-fc", source: "full-text", condition: "sud", type: "connectivity",
+      measure: "phase", pairs: [["parietal","parietal"],["parietal","occipital"],["parietal","temporal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 100, k: null },
+      bands: ["delta","theta","alpha","beta","gamma"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "down", theta: "mixed", alpha: "mixed", beta: "mixed", gamma: "mixed" }, symptoms: ["craving","impulsivity"],
+      claim: "Etomidate use disorder: less delta phase-locking between parietal and occipital/temporal sites than controls",
+      detail: "54 men with etomidate use disorder vs 46 controls, eyes-closed resting EEG (PLV between ROI time series). Source-localised (ROI time series; method not named in the passages read); mapped to overlying scalp region. Delta-band network decoupling was significant; other bands showed no group difference. The simultaneous fNIRS results are not recorded here.",
+      design: "Case-control",
+      cite: { authors: "Le J, et al.", year: 2026, title: "Multimodal evidence for large-scale network imbalance in etomidate use disorder", journal: "Int J Neuropsychopharmacol" }
     }
   ],
 
