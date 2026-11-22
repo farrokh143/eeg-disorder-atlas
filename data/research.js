@@ -3187,6 +3187,26 @@ window.NF_DATA = {
       detail: "28 chronic migraine patients and 28 controls, 64-electrode eyes-closed resting EEG. Absolute delta (low), high alpha and low beta power were lower across the scalp; relative low alpha was higher and relative high beta lower. Peak alpha frequency and infra-slow power did not differ. Alpha is recorded as mixed because absolute and relative power move in opposite directions. The headache-or-migraine factor did not change the power reductions. Taken from the abstract; not checked in the full text. Cross-sectional study.",
       design: "Case-control",
       cite: { authors: "Wong R, Robertson R, Meylakh N, et al.", year: 2026, title: "Reduced electroencephalogram power and no change in peak alpha frequency in individuals with chronic migraine: a cross-sectional investigation", journal: "Neurophysiol Clin" }
+    },
+    {
+      id: "pm-41534360", source: "full-text", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 128, k: null },
+      sites: [], bands: ["theta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", alpha: "down" }, symptoms: ["memory","cogdecline"],
+      claim: "AD-MCI and AD dementia: more global theta and less global alpha power than controls",
+      detail: "128 people with subjective cognitive decline, AD-MCI or AD dementia, 32-channel eyes-closed resting EEG. Channel-averaged theta power rose and alpha power fell across stages, with the group differences significant for global theta and alpha. Single-site cross-sectional study; the correlations with plasma p-tau217 did not survive multiple-comparison correction.",
+      design: "Case-control",
+      cite: { authors: "Cecchetti G, et al.", year: 2026, title: "Resting-State EEG captures functional network correlates of plasma p-Tau-217 in Alzheimer's disease", journal: "Neuroimage Clin" }
+    },
+    {
+      id: "pm-40101271", source: "full-text", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 65, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", alpha: "down" }, symptoms: ["memory","cogdecline"],
+      claim: "AD: more frontal theta and less frontal alpha power than healthy controls",
+      detail: "36 people with AD and 29 healthy controls, 19-channel resting EEG (pilot pipeline study). Frontal theta power was higher and frontal alpha power lower in AD. Single pilot case-control study; the paper also reports complexity and classifier results, which are not used here.",
+      design: "Case-control",
+      cite: { authors: "Simmatis LE, et al.", year: 2025, title: "EEG biomarkers for Alzheimer's disease: A novel automated pipeline for detecting and monitoring disease progression", journal: "J Alzheimers Dis" }
     }
   ],
 
@@ -3411,6 +3431,17 @@ window.NF_DATA = {
       detail: "25 adolescents with MDD and 14 age- and sex-matched healthy controls, resting qEEG. Average theta coherence was lower in MDD, and frontal coherence was lower in theta and alpha. Taken from the abstract; not checked in the full text. Cross-sectional pilot study.",
       design: "Case-control (pilot)",
       cite: { authors: "McVoy M, et al.", year: 2019, title: "Resting-State Quantitative Electroencephalography Demonstrates Differential Connectivity in Adolescents with Major Depressive Disorder", journal: "J Child Adolesc Psychopharmacol" }
+    },
+    {
+      id: "pm-33326893-fc", source: "abstract", condition: "depression", type: "connectivity",
+      measure: "phase", pairs: [["F4","C4"],["T4","O1"],["Fp1","Fp2"],["frontal","occipital"],["central","occipital"],["frontal","central"]],
+      metrics: { design: 2, control: null, blinded: null, n: 64, k: null },
+      bands: ["theta","alpha"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up", alpha: "up" }, symptoms: ["lowmood"],
+      claim: "Dysphoria: more theta and alpha phase-locking between frontal, central and occipital sites than controls",
+      detail: "26 women with dysphoria and 38 healthy women, 4-minute resting EEG with phase locking value (mean phase coherence). Theta connectivity was higher between right frontal-central and right temporal-left occipital sites; alpha was higher between prefrontal and frontal-central-occipital sites. Taken from the abstract; not checked in the full text. Band power did not differ, and the design is cross-sectional.",
+      design: "Case-control",
+      cite: { authors: "Dell'Acqua C, et al.", year: 2021, title: "Increased functional connectivity within alpha and theta frequency bands in dysphoria: A resting-state EEG study", journal: "J Affect Disord" }
     }
   ],
 
