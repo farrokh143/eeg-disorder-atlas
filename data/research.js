@@ -3875,6 +3875,17 @@ window.NF_DATA = {
       detail: "62 PD patients; 10-minute eyes-closed resting wake EEG taken after awakening from polysomnography. Lower wPLI in the 8-10 Hz occipital region was the best EEG predictor of higher Epworth sleepiness scores (r about -0.49, FDR-corrected); spectral power was not related. No healthy controls. Single cross-sectional study.",
       design: "Cross-sectional correlation",
       cite: { authors: "Rosinvil T, et al.", year: 2026, title: "The Relationship Between Resting State Quantitative EEG and Daytime Sleepiness Complaints in Parkinson's Disease", journal: "J Sleep Res" }
+    },
+    {
+      id: "pm-26794010-fc", source: "abstract", condition: "epilepsy", type: "connectivity",
+      measure: "other", pairs: [["frontal","frontal"],["frontal","temporal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 36, k: null },
+      bands: ["beta"], direction: "up", evidence: "preliminary",
+      changes: { beta: "up" }, symptoms: ["seizures"],
+      claim: "BECTS children: higher beta source-level correlation between frontal regions and frontal-temporal than controls",
+      detail: "17 unmedicated BECTS children and 19 healthy controls, 3 minutes of spike-free resting EEG. Beta-band LORETA-source correlation (undirected, not coherence or phase) was higher between frontal regions and between frontal and temporal regions. Source-localised (LORETA); mapped to the overlying scalp region. Single case-control study. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Clemens B, et al.", year: 2016, title: "Increased resting-state EEG functional connectivity in benign childhood epilepsy with centro-temporal spikes", journal: "Seizure" }
     }
   ],
 

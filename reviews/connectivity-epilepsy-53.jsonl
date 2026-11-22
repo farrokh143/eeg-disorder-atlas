@@ -1,0 +1,10 @@
+{"id":"pm-26794010","decision":"include","type":"connectivity","source":"abstract","condition":"epilepsy","measure":"other","pairs":[["frontal","frontal"],["frontal","temporal"]],"changes":{"beta":"up"},"symptoms":["seizures"],"design_level":2,"control":null,"blinded":null,"n":36,"k":null,"evidence":"preliminary","claim":"BECTS children: higher beta source-level correlation between frontal regions and frontal-temporal than controls","detail":"17 unmedicated BECTS children and 19 healthy controls, 3 minutes of spike-free resting EEG. Beta-band LORETA-source correlation (undirected, not coherence or phase) was higher between frontal regions and between frontal and temporal regions. Source-localised (LORETA); mapped to the overlying scalp region. Single case-control study. Taken from the abstract; not checked in the full text.","design":"Case-control"}
+{"id":"pm-14691759","decision":"defer","note":"[parked: no full text] Spanish abstract: interictal coherence altered in temporal regions; band and direction not stated"}
+{"id":"pm-23886656","decision":"defer","note":"[parked: no full text] JME resting EEGfC up in delta/theta/alpha1 and down in alpha2/beta; connectivity measure not named in abstract"}
+{"id":"pm-15982767","decision":"exclude","code":"INV","note":"intracranial thalamic LFP coherence in mixed neurological patients (abstract)"}
+{"id":"pm-21856123","decision":"exclude","code":"OT","note":"fMRI regional homogeneity, not EEG connectivity"}
+{"id":"pm-25263846","decision":"exclude","code":"MEG","note":"MEG global mutual information and efficiency only (abstract)"}
+{"id":"pm-26431333","decision":"exclude","code":"CN","note":"PLV-based graph degree and small-world metrics only (full text)"}
+{"id":"pm-26437574","decision":"exclude","code":"CN","note":"partial directed coherence (directed measure) (abstract)"}
+{"id":"pm-20820898","decision":"no-connectivity","note":"resting band power and source spectra only; no connectivity result (abstract)"}
+{"id":"pm-23922658","decision":"no-connectivity","note":"global band synchronization and graph metrics; no named site pairs in full-text passages checked"}
