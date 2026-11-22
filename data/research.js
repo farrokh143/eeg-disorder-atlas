@@ -3605,6 +3605,17 @@ window.NF_DATA = {
       detail: "21 drug-naive patients (14 re-tested after antipsychotic treatment) vs 31 age-matched controls, resting-state EEG, phase lag index. Beta-band connectivity across frontal regions was lower in patients; the gamma reduction is described only as throughout the scalp with no named pairs, so it is not coded. Antipsychotic treatment did not change connectivity. Taken from the abstract; not checked in the full text.",
       design: "Case-control",
       cite: { authors: "Takahashi T, et al.", year: 2018, title: "Abnormal functional connectivity of high-frequency rhythms in drug-naïve schizophrenia", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-37109695-fc", source: "full-text", condition: "schizophrenia", type: "connectivity",
+      measure: "phase", pairs: [["temporal","occipital"]],
+      metrics: { design: 2, control: null, blinded: null, n: 72, k: null },
+      bands: ["beta","gamma"], direction: "up", evidence: "preliminary",
+      changes: { beta: "up", gamma: "up" }, symptoms: ["inattention"],
+      claim: "Schizophrenia (within-patient): more occipito-temporal beta and gamma phase synchrony with worse attention",
+      detail: "72 stabilised patients, resting-state EEG, lagged phase synchronization between 84 sources. Higher beta connectivity (fusiform-lingual) and gamma connectivity (cuneus with transverse and superior temporal gyri) predicted worse CPT-II variability and reaction-time scores. Source-localised (eLORETA); mapped to the overlying scalp region. Within-patient correlation; no control group.",
+      design: "Correlation (within patients)",
+      cite: { authors: "Yeh TC, et al.", year: 2023, title: "Resting-State EEG Connectivity at High-Frequency Bands and Attentional Performance Dysfunction in Stabilized Schizophrenia Patients", journal: "Medicina (Kaunas)" }
     }
   ],
 
