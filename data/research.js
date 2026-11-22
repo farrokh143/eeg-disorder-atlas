@@ -3345,6 +3345,17 @@ window.NF_DATA = {
       detail: "21 people with amnestic MCI and 62 cognitively normal controls, resting EEG with eyes open and eyes closed, 19 electrodes. Partial coherence was higher in MCI in the gamma 1 (30-50 Hz) and gamma 2 (50-100 Hz) bands, mostly for central electrode pairs. Taken from the abstract; not checked in the full text. Small single-centre case-control study.",
       design: "Case-control",
       cite: { authors: "Vlachos I, et al.", year: 2025, title: "Resting EEG partial coherence demonstrates increased γ range central functional connectivity in amnestic mild cognitive impairment", journal: "Brain Res" }
+    },
+    {
+      id: "pm-42449404-fc", source: "full-text", condition: "alzheimers", type: "connectivity",
+      measure: "other", pairs: [["frontal","parietal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 169, k: null },
+      bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["memory","cogdecline"],
+      claim: "AD: lower alpha mutual information rate between frontal and parietal DMN regions than controls",
+      detail: "169 people from an AD spectrum sample: 44 healthy controls, 84 amnestic MCI and 41 AD, resting EEG. Source-localised (eLORETA); mapped to the overlying scalp region. Alpha-band mutual information rate (MIR, an undirected pairwise measure) was lower between frontal and parietal default-mode regions in AD. The paper's main focus is three-order O-information; the pairwise MIR result is a secondary comparison.",
+      design: "Case-control",
+      cite: { authors: "Azami H, et al.", year: 2026, title: "Three-order interactions in the alpha band of default mode network EEGs based on O-information rate: insights from aging and Alzheimer's disease", journal: "Alzheimers Res Ther" }
     }
   ],
 
