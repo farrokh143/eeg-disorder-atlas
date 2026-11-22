@@ -3287,6 +3287,16 @@ window.NF_DATA = {
       detail: "10 patients with eyelid myoclonia with absences and 10 controls, resting EEG with LORETA-based source networks. Patients had reduced alpha activity over the occipital lobe and reduced beta over the frontal lobe. Source-localised (LORETA ICA); mapped to the overlying scalp region. Single small case-control study. Taken from the abstract; not checked in the full text.",
       design: "Case-control",
       cite: { authors: "Giuliano L, et al.", year: 2019, title: "Abnormal visual sensitivity in eyelid myoclonia with absences: Evidence from electrocortical connectivity and non-linear quantitative analysis of EEG signal", journal: "Seizure" }
+    },
+    {
+      id: "pm-37955596", source: "abstract", condition: "epilepsy", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 34, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["delta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up" }, symptoms: ["seizures"],
+      claim: "Generalised epilepsy with discharges: higher resting delta source activity in medial frontal gyrus than controls",
+      detail: "17 patients with idiopathic generalised epilepsy and 17 age-matched controls, resting EEG with LORETA source analysis. Delta activity was higher in the medial frontal gyrus (BA 9) in patients with discharges; left medial frontal default-mode ROI values were also higher. Source-localised (LORETA); mapped to the overlying scalp region. Single case-control study. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Bistriceanu CE, et al.", year: 2023, title: "Default mode function in patients with generalised epilepsy syndromes: from generalised to focal findings", journal: "Neurol Neurochir Pol" }
     }
   ],
 
