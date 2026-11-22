@@ -3648,6 +3648,17 @@ window.NF_DATA = {
       detail: "Baseline resting frontal gamma coherence in patients from a neurofeedback trial was positively correlated with working memory impairment across all participants. The trial itself (active vs placebo neurofeedback) is not coded here. Sample size at baseline not stated in the abstract. Taken from the abstract; not checked in the full text.",
       design: "Cross-sectional correlation (baseline of RCT)",
       cite: { authors: "Shu IW, et al.", year: 2025, title: "A Canonical Correlation Approach Towards Identifying Latent Neurofeedback Responses in Patients with Schizophrenia", journal: "Appl Psychophysiol Biofeedback" }
+    },
+    {
+      id: "pm-28540866-fc", source: "full-text", condition: "autism", type: "connectivity",
+      measure: "coherence", pairs: [["frontal","frontal"]],
+      metrics: { design: 2, control: "none", blinded: null, n: 40, k: null },
+      bands: ["delta","theta","beta"], direction: "down", evidence: "preliminary",
+      changes: { delta: "down", theta: "down", beta: "down" }, symptoms: ["social"],
+      claim: "Children with autism: lower coherence between resting EEG network components in delta, theta and beta bands",
+      detail: "Eyes-closed resting 128-channel EEG from 20 autistic and 20 typically developing children. Coherence between independent-component networks was lower in autism in delta, theta and beta, with the largest changes involving frontal networks. Components were not source-localised, so the frontal pair is a network-level summary rather than exact scalp sites.",
+      design: "Case-control study",
+      cite: { authors: "Shou G, et al.", year: 2017, title: "Electrophysiological signatures of atypical intrinsic brain connectivity networks in autism", journal: "J Neural Eng" }
     }
   ],
 
