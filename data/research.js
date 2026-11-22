@@ -3213,6 +3213,28 @@ window.NF_DATA = {
       detail: "125 AD patients and 60 elderly controls, eyes-closed resting EEG, lagged phase synchronization between 19 electrode-site regions. Alpha2 links from medial frontal and precuneus sites to temporal and parietal sites were lower in AD; theta links from temporal sites were higher and correlated with lower MMSE. Source-localised (eLORETA lagged phase synchronization); mapped to the overlying scalp region. Pairs listed are regions covering the significant links in both bands.",
       design: "Case-control",
       cite: { authors: "Canuet L, et al.", year: 2012, title: "Resting-state network disruption and APOE genotype in Alzheimer's disease: a lagged functional connectivity study", journal: "PLoS One" }
+    },
+    {
+      id: "pm-23969043-fc", source: "abstract", condition: "alzheimers", type: "connectivity",
+      measure: "coherence", pairs: [["central","central"],["parietal","parietal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 95, k: null },
+      bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["cogdecline"],
+      claim: "Within AD: less centroparietal interhemispheric alpha coherence in more advanced stages",
+      detail: "95 patients with newly diagnosed AD at different stages, resting EEG with eyes closed, interhemispheric alpha coherence and power ratios. Decreased centroparietal interhemispheric alpha coherence was most prominent and tracked disease stage. Taken from the abstract; not checked in the full text. Multicentre retrospective analysis.",
+      design: "Cross-sectional stage comparison",
+      cite: { authors: "Chen CC, et al.", year: 2015, title: "Frequency power and coherence of electroencephalography are correlated with the severity of Alzheimer's disease: A multicenter analysis in Taiwan", journal: "J Formos Med Assoc" }
+    },
+    {
+      id: "pm-24211686-fc", source: "abstract", condition: "alzheimers", type: "connectivity",
+      measure: "coherence", pairs: [["central","central"],["frontal","central"]],
+      metrics: { design: 2, control: null, blinded: null, n: 42, k: null },
+      bands: ["delta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up" }, symptoms: ["memory","cogdecline"],
+      claim: "Mild AD vs MCI: higher delta source coherence in the sensorimotor network",
+      detail: "21 mild AD and 21 MCI patients, resting EEG. Delta coherence was higher in AD between bilateral precentral areas and between the left supplementary motor area and both precentral and postcentral areas. Source-localised (MNE coherence); mapped to the overlying scalp region. Taken from the abstract; not checked in the full text.",
+      design: "Cross-sectional group comparison",
+      cite: { authors: "Hsiao FJ, et al.", year: 2014, title: "Altered source-based EEG coherence of resting-state sensorimotor network in early-stage Alzheimer's disease compared to mild cognitive impairment", journal: "Neurosci Lett" }
     }
   ],
 
