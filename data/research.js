@@ -3767,6 +3767,17 @@ window.NF_DATA = {
       detail: "Two ADHD subgroups (excess-theta and excess-alpha EEG profiles), 26 children each, and 26 controls; eyes-closed resting EEG, wave-shape coherence. Both subgroups are reported together here. Frontal interhemispheric theta was higher; long-distance alpha was lower in the excess-alpha group. Taken from the abstract; not checked in the full text. Small case-control study.",
       design: "Case-control",
       cite: { authors: "Robbie JC, et al.", year: 2016, title: "Coherence in children with AD/HD and excess alpha power in their EEG", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-35235255-fc", source: "abstract", condition: "adhd", type: "connectivity",
+      measure: "phase", pairs: [["frontal","frontal"],["central","central"]],
+      metrics: { design: 2, control: null, blinded: null, n: 78, k: null },
+      bands: ["theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", alpha: "mixed", beta: "mixed" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "Young ADHD children at rest: mixed frontal and central phase-locking, higher central theta",
+      detail: "43 children aged 5 to 7 with ADHD and 35 with typical development; resting EEG, phase-locking value. Resting results only: frontal interhemispheric beta was lower, central interhemispheric theta, alpha and beta were higher in ADHD. Task-related change is excluded. Taken from the abstract; not checked in the full text. Small case-control study.",
+      design: "Case-control (resting state only)",
+      cite: { authors: "Chen IC, et al.", year: 2022, title: "Atypical functional connectivity during rest and task-related dynamic alteration in young children with attention deficit hyperactivity disorder: An analysis using the phase-locking value", journal: "Psychiatry Clin Neurosci" }
     }
   ],
 
