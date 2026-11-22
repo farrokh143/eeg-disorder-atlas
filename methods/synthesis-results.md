@@ -2,7 +2,7 @@
 
 Generated 2026-11-22 by `tools/synthesize.js` following `methods/synthesis-protocol.md` (v1.0).
 
-- Patterns with any eligible study: 336
+- Patterns with any eligible study: 366
 - Testable (≥ 6 studies with a clear direction): 11
 - Consistent difference (q_BY < 0.05): 0
 - Robust in sensitivity analyses S2, S3, S4 and S7: 0
@@ -25,7 +25,7 @@ Eligible evidence: primary studies checked in full text (or hand-curated). Abstr
 | ADHD | power | theta | frontal | 7 | 5 / 1 / 1 | 83% (44–97) | 89% | 0.219 | 0.063 | 0.661 | no consistent difference | Moderate | no | consistently higher |
 | ADHD | power | theta | central | 7 | 5 / 1 / 1 | 83% (44–97) | 89% | 0.219 | 0.063 | 0.661 | no consistent difference | Moderate | no | consistently higher |
 
-## Too few studies to test (319 patterns)
+## Too few studies to test (349 patterns)
 
 Shown on the atlas with their study list and certainty, without a test. Largest:
 
