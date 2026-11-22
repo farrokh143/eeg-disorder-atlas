@@ -3463,6 +3463,17 @@ window.NF_DATA = {
       detail: "154 people with MDD and anxiety symptoms and 165 healthy controls, 19-channel resting EEG, coherence. High-beta coherence was higher within DMN regions in MDD; delta, theta, alpha and beta showed no difference. Taken from the abstract; not checked in the full text. The anterior and posterior DMN regions are not named by electrode, so the pairs use the regions.",
       design: "Case-control",
       cite: { authors: "Ho SI, et al.", year: 2024, title: "EEG coherences of the default mode network among patients comorbid with major depressive disorder and anxiety symptoms", journal: "J Affect Disord" }
+    },
+    {
+      id: "pm-42902871-fc", source: "full-text", condition: "depression", type: "connectivity",
+      measure: "phase", pairs: [["frontal","parietal"],["frontal","occipital"],["frontal","central"],["temporal","parietal"],["central","occipital"],["frontal","frontal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 58, k: null },
+      bands: ["theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "down", alpha: "down", beta: "mixed" }, symptoms: ["lowmood"],
+      claim: "MDD: lower theta and alpha phase connectivity (PLV, PLI) across frontal-posterior sensor pairs than controls",
+      detail: "30 people with DSM-IV MDD and 28 healthy controls, 5-minute eyes-closed resting EEG, 19 channels, sensor-level analysis. Theta PLV and PLI were lower across frontal-to-posterior, fronto-central and parieto-occipital pairs; alpha PLV and coherence were lower at frontal and posterior links; beta results were sparse and the beta mutual-information results were higher, so beta is marked mixed. Coherence results were similar in theta and alpha. Single small case-control study.",
+      design: "Case-control",
+      cite: { authors: "Rose SJ, et al.", year: 2026, title: "Multi-Metric EEG Connectivity and Graph Analysis Reveal Altered Resting-State Networks in Major Depressive Disorder", journal: "Brain Behav" }
     }
   ],
 
