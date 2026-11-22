@@ -3507,6 +3507,61 @@ window.NF_DATA = {
       detail: "20 children with autistic disorder and 20 matched controls, eyes-closed resting EEG, intra- and interhemispheric coherence. Frontal interhemispheric delta and theta, temporal delta, theta and alpha, and posterior delta, theta and beta coherence were lower in autism. Taken from the abstract; not checked in the full text. The paper also reports power differences, not used here.",
       design: "Case-control",
       cite: { authors: "Coben R, et al.", year: 2008, title: "EEG power and coherence in autistic spectrum disorder", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-29526598-fc", source: "abstract", condition: "schizophrenia", type: "connectivity",
+      measure: "phase", pairs: [["frontal","frontal"],["parietal","parietal"],["occipital","occipital"]],
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      bands: ["theta","alpha","gamma"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", alpha: "down", gamma: "down" }, symptoms: ["psychosis"],
+      claim: "First-episode schizophrenia: more posterior theta phase lag index, less frontal alpha than controls",
+      detail: "32 first-episode patients vs healthy controls, resting-state qEEG, phase lag index in six bands. Theta synchrony was higher in posterior areas, frontal low-alpha synchrony was lower, and gamma was lower; the abstract links these to slower processing speed. Control group size not given in the abstract. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Krukow P, et al.", year: 2018, title: "Disturbed functional connectivity within the left prefrontal cortex and sensorimotor areas predicts impaired cognitive speed in patients with first-episode schizophrenia", journal: "Psychiatry Res Neuroimaging" }
+    },
+    {
+      id: "pm-22125634-fc", source: "full-text", condition: "schizophrenia", type: "connectivity",
+      measure: "phase", pairs: [["temporal","frontal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 42, k: null },
+      bands: ["hibeta"], direction: "up", evidence: "preliminary",
+      changes: { hibeta: "up" }, symptoms: ["psychosis"],
+      claim: "SLPE (epilepsy with psychosis): more beta2 temporal-frontal phase synchrony than non-psychotic epilepsy",
+      detail: "21 people with focal epilepsy and psychosis vs 21 non-psychotic epilepsy patients, eyes-closed resting EEG, eLORETA lagged phase synchronization. Beta2 (21-30 Hz) synchrony between temporal and frontal regions was higher in the psychotic group, and correlated with positive symptoms and auditory hallucination scores. Source-localised (eLORETA); mapped to the overlying scalp region. Small single case-control comparison between two patient groups.",
+      design: "Case-control",
+      cite: { authors: "Canuet L, et al.", year: 2011, title: "Resting-state EEG source localization and functional connectivity in schizophrenia-like psychosis of epilepsy", journal: "PLoS One" }
+    },
+    {
+      id: "pm-11343872-fc", source: "abstract", condition: "schizophrenia", type: "connectivity",
+      measure: "coherence", pairs: [["temporal","temporal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 342, k: null },
+      bands: ["delta"], direction: "down", evidence: "preliminary",
+      changes: { delta: "down" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia: less interhemispheric posterior temporal coherence (0.5-5 Hz) than controls, also in unaffected siblings",
+      detail: "Two independent samples (59 patients, 76 and 90 unaffected siblings, 32 and 26 controls), resting EEG. Coherence over temporal areas was reduced in patients and siblings, most clearly for interhemispheric posterior temporal pairs. The 0.5-5 Hz coherence range is recorded here as delta. Taken from the abstract; not checked in the full text. Siblings are a secondary group; the schizophrenia comparison is the atlas result.",
+      design: "Case-control",
+      cite: { authors: "Winterer G, et al.", year: 2001, title: "An association between reduced interhemispheric EEG coherence in the temporal lobe and genetic risk for schizophrenia", journal: "Schizophr Res" }
+    },
+    {
+      id: "pm-16475479-fc", source: "abstract", condition: "schizophrenia", type: "connectivity",
+      measure: "coherence", pairs: [["frontal","frontal"]],
+      metrics: { design: 3, control: null, blinded: null, n: 15, k: null },
+      bands: ["beta"], direction: "down", evidence: "preliminary",
+      changes: { beta: "down" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia (within-patient): less frontal beta coherence with more psychotic symptoms",
+      detail: "15 patients hospitalised for acute exacerbation, resting EEG at two time points during treatment, no control group. Beta coherence between left and right frontal electrode pairs rose as symptoms improved, and the rise tracked lower BPRS total and positive scores. Taken from the abstract; not checked in the full text.",
+      design: "Longitudinal within-patient",
+      cite: { authors: "Higashima M, et al.", year: 2006, title: "Functional connectivity between hemispheres and schizophrenic symptoms: a longitudinal study of interhemispheric EEG coherence in patients with acute exacerbations of schizophrenia", journal: "Clin EEG Neurosci" }
+    },
+    {
+      id: "pm-17140670-fc", source: "abstract", condition: "schizophrenia", type: "connectivity",
+      measure: "coherence", pairs: [["F7","T5"]],
+      metrics: { design: 3, control: null, blinded: null, n: 14, k: null },
+      bands: ["beta"], direction: "down", evidence: "preliminary",
+      changes: { beta: "down" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia (within-patient): less left frontal-temporal beta coherence with more positive symptoms",
+      detail: "14 patients hospitalised for acute exacerbation, resting EEG at two time points, no control group. Left F7-T5 beta coherence was lower than the right pair at first test, and the change in coherence tracked the change in BPRS positive symptoms. Same research group as the 2006 study; sample overlap not checked. Taken from the abstract; not checked in the full text.",
+      design: "Longitudinal within-patient",
+      cite: { authors: "Higashima M, et al.", year: 2007, title: "State-dependent changes in intrahemispheric EEG coherence for patients with acute exacerbation of schizophrenia", journal: "Psychiatry Res" }
     }
   ],
 
