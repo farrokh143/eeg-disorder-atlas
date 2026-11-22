@@ -1,0 +1,2 @@
+{"id":"pm-42350829","decision":"no-connectivity","note":"band power and LORETA current density only; no connectivity measure (checked by Opus from abstract)"}
+{"id":"pm-42625140","decision":"exclude","code":"CN","note":"graph-theoretical measures; edge-level results from Directed Transfer Function (directed measure)"}
