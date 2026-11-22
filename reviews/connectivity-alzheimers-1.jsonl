@@ -1,0 +1,10 @@
+{"id":"ad-babiloni-2020","decision":"no-connectivity","note":"expert review (log); no original resting connectivity result of its own"}
+{"id":"pm-15128412","decision":"include","type":"connectivity","source":"abstract","condition":"alzheimers","measure":"other","pairs":[["frontal","parietal"]],"changes":{"alpha":"down"},"symptoms":["memory","cogdecline"],"design_level":2,"control":null,"blinded":null,"n":148,"k":null,"evidence":"preliminary","claim":"Mild AD: less fronto-parietal alpha synchronization likelihood than normal elderly controls","detail":"82 mild AD, 41 normal elderly and 25 vascular dementia patients, resting EEG with surface Laplacian; connectivity by synchronization likelihood (SL). Fronto-parietal alpha-1 SL was lower in mild AD than in normal elderly. Reductions in delta and beta at inter-hemispheric pairs were also reported. Taken from the abstract; not checked in the full text.","design":"Case-control"}
+{"id":"pm-15582746","decision":"exclude","code":"CN","note":"global field synchronization only; no named site pairs or regions"}
+{"id":"pm-15721085","decision":"exclude","code":"CN","note":"mean synchronization likelihood across the whole head; no named pairs or regions in abstract"}
+{"id":"pm-15754423","decision":"defer","note":"[parked: no full text] PMC1389734 returned no full text; abstract gives coherence, alpha, direction and pairs but abstract-only use needs no PMC id"}
+{"id":"pm-17156848","decision":"exclude","code":"CN","note":"classifier accuracy; synchronization used only as classifier features"}
+{"id":"pm-17979121","decision":"exclude","code":"CN","note":"directed transfer function (directed measure) only"}
+{"id":"pm-18490193","decision":"defer","note":"[parked: no full text] SL decreases in AD reported without named regions; no PMC full text"}
+{"id":"pm-18706477","decision":"exclude","code":"CN","note":"correlation dimension and Lyapunov exponent (complexity) only"}
+{"id":"pm-18774201","decision":"defer","note":"[parked: no full text] regional multivariate phase synchronization; pairs not stated in abstract; no PMC full text"}
