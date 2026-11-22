@@ -3290,6 +3290,39 @@ window.NF_DATA = {
       detail: "65 people with late-life depression (two severity groups) and 40 older controls, eyes-closed resting EEG, weighted phase lag index. In the moderate-severe group, parietal and fronto-parietal/occipital theta connectivity was higher, and linked to attention impairment. Taken from the abstract; not checked in the full text. Cross-sectional study.",
       design: "Cross-sectional case-control",
       cite: { authors: "Zeng Y, et al.", year: 2024, title: "Altered resting-state brain oscillation and the associated cognitive impairments in late-life depression with different depressive severity: An EEG power spectrum and functional connectivity study", journal: "J Affect Disord" }
+    },
+    {
+      id: "pm-39449097-fc", source: "full-text", condition: "alzheimers", type: "connectivity",
+      measure: "phase", pairs: [["frontal","temporal"],["frontal","parietal"],["frontal","occipital"]],
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      bands: ["gamma"], direction: "up", evidence: "preliminary",
+      changes: { gamma: "up" }, symptoms: ["cogdecline","memory"],
+      claim: "Prodromal AD: more gamma phase consistency from left fronto-central sites to right posterior areas",
+      detail: "Resting eyes-closed EEG in AD, prodromal AD (MCI due to AD) and controls, pairwise phase consistency (PPC). Gamma connectivity was higher in prodromal AD between left fronto-central electrodes and right temporal, parietal and occipital areas; fronto-central is mapped to frontal. Theta PPC was lower in AD, but the pairs are not named in the text read, so it is not recorded. Single-centre study across several cohorts.",
+      design: "Case-control",
+      cite: { authors: "Chetty CA, et al.", year: 2024, title: "EEG biomarkers in Alzheimer's and prodromal Alzheimer's: a comprehensive analysis of spectral and connectivity features", journal: "Alzheimers Res Ther" }
+    },
+    {
+      id: "pm-39708531-fc", source: "abstract", condition: "alzheimers", type: "connectivity",
+      measure: "other", pairs: [["frontal","frontal"],["central","central"],["parietal","occipital"]],
+      metrics: { design: 2, control: null, blinded: null, n: 88, k: null },
+      bands: ["theta","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "down", beta: "up" }, symptoms: ["cogdecline"],
+      claim: "AD: less frontal and central theta connectivity than controls; posterior beta connectivity higher",
+      detail: "36 AD, 23 FTD and 29 healthy controls, resting EEG, connectivity by Pearson correlation, mutual information and phase lag index. Frontal theta connectivity was lower in both AD and FTD; central theta was lower in AD only, and posterior beta was higher in both. Taken from the abstract; not checked in the full text. Single cross-sectional study; SVM classification was also reported.",
+      design: "Case-control",
+      cite: { authors: "Zheng H, et al.", year: 2025, title: "Time-Frequency functional connectivity alterations in Alzheimer's disease and frontotemporal dementia: An EEG analysis using machine learning", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-40059173-fc", source: "abstract", condition: "alzheimers", type: "connectivity",
+      measure: "phase", pairs: [["parietal","occipital"]],
+      metrics: { design: 2, control: null, blinded: null, n: 57, k: null },
+      bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["cogdecline"],
+      claim: "AD and MCI: lower mean alpha phase synchrony (PLV) than healthy controls",
+      detail: "16 outpatients with AD, 20 with MCI and 21 healthy controls, eyes-closed resting EEG, alpha band (8-13 Hz), phase lag index and phase-locked value. Mean PLV network connectivity was lower in AD and MCI than in controls; parietal-occipital connectivity differed in all groups. Single-centre case-control study; the direction of the parietal-occipital difference is not stated in the abstract. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Cao J, et al.", year: 2025, title: "Identification of Alzheimer's disease brain networks based on EEG phase synchronization", journal: "Biomed Eng Online" }
     }
   ],
 
