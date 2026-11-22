@@ -236,7 +236,8 @@ the abstract names the measure, band, direction and the sites or regions):
 3. a band and a direction: **more** connectivity in the patient group (`up`), **less** (`down`), or no difference /
    mixed (`mixed`).
 
-Not eligible (exclude with `CN`): graph-theory measures only (clustering, path length, hubs, small-world), microstates,
+A PMC id that returns no full text counts as "no PMC full text" (use the abstract rule).
+Not eligible (exclude with `CN`): multivariate or global synchrony with no named site or region pair; graph-theory measures only (clustering, path length, hubs, small-world), microstates,
 directed measures (Granger, DTF, PDC, transfer entropy), classifier accuracy, source-space networks that name only deep
 structures, and whole-brain "global connectivity" with no sites or regions.
 

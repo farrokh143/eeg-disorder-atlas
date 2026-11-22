@@ -105,12 +105,16 @@ const fmt = f => `    {
       cite: { authors: ${J(f.cite.authors)}, year: ${f.cite.year}, title: ${J(f.cite.title)}, journal: ${J(f.cite.journal)} }
     }`;
 for (const line of lines) { const x = JSON.parse(line), r = byId[x.id];
+  // Recompute here: the validation pass parsed its own copies of the records.
+  x._cn = r.status === "excluded" && /^Outside atlas schema/.test(r.reason) && !/Connectivity re-review/.test(r.notes);
+  if (x._cn && x.decision === "include") addNote(r, `Connectivity re-review ${today}: included`);
   if (x.decision === "exclude") { r.status = "excluded"; r.reason = x.code === "X" ? x.reason : REASONS[x.code]; addNote(r, `${x._cn ? "Connectivity re-review" : "Full-text review"} ${today}: excluded${x.note ? " (" + x.note + ")" : ""}`); nExc++; }
   else if (x.decision === "no-connectivity") { addNote(r, `Connectivity checked ${today}: no usable channel-pair or regional connectivity result${x.note ? " (" + x.note + ")" : ""}`); nDef++; }
   else if (x.decision === "defer") { if (r.status === "excluded") { r.status = "full-text"; r.reason = ""; } addNote(r, `Full-text review deferred ${today}: ${x.note}`); nDef++; }
   else if (x.decision === "pass") { r.status = "full-text"; addNote(r, `Passed screening ${today}${x.note ? ": " + x.note : ""}`); nPass++; } }
 for (const { x, r, f } of findings) {
-  if (f.type === "connectivity" && r.status === "included") { addNote(r, `Connectivity added (${x.source}) ${today}`); nInc++; continue; }
+  if (f.type === "connectivity") addNote(r, `Connectivity added (${x.source}) ${today}`);
+  if (f.type === "connectivity" && r.status === "included") { nInc++; continue; }
   r.status = "included"; r.reason = ""; r.type = f.type === "protocol" ? "treatment" : f.type === "connectivity" ? "eeg-connectivity" : "eeg-marker"; r.recording = "resting";
   r.design = f.design; r.evidence = f.evidence; r.n = f.metrics.n ?? ""; r.k = f.metrics.k ?? "";
   addNote(r, `Included after ${x.source === "abstract" ? "abstract-only" : "full-text"} review ${today}`); nInc++;
