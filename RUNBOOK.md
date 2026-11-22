@@ -210,3 +210,57 @@ reply; the chat that started you does the sync.
   (or `tools/revert-finding.js` to take a wrong entry back out).
 - Never include task, evoked or sleep EEG results.
 - Never change `index.html` or `methods.html` during review.
+
+---
+
+# Part 2: Connectivity pass
+
+Goal: record resting-state **functional connectivity between scalp sites or regions** for the statistical synthesis in
+`methods/synthesis-protocol.md`. Same batch loop, decision file, checks and merging as Part 1. Only the queue and the
+record format differ.
+
+## Queue
+
+`node tools/review-queue.js --connectivity` shows counts; `node tools/review-queue.js --connectivity "<Disorder>" 10`
+lists the next 10. It contains (a) papers excluded earlier as "connectivity-only" and (b) included papers whose title
+suggests connectivity results. Work through disorders in the Part 1 order.
+
+## What counts
+
+Include a result when **all** of these are in the paper (full text preferred; abstract only when there is no PMC id and
+the abstract names the measure, band, direction and the sites or regions):
+1. resting recording (eyes open or closed, awake);
+2. an **undirected** connectivity measure between two named sites or regions: coherence (incl. imaginary/lagged
+   coherence), phase synchrony (PLI, wPLI, PLV, phase-locking), amplitude-envelope correlation (AEC), or another
+   undirected measure (e.g. synchronization likelihood → `other`);
+3. a band and a direction: **more** connectivity in the patient group (`up`), **less** (`down`), or no difference /
+   mixed (`mixed`).
+
+Not eligible (exclude with `CN`): graph-theory measures only (clustering, path length, hubs, small-world), microstates,
+directed measures (Granger, DTF, PDC, transfer entropy), classifier accuracy, source-space networks that name only deep
+structures, and whole-brain "global connectivity" with no sites or regions.
+
+## Record format
+
+```json
+{"id":"pm-12345","decision":"include","type":"connectivity","source":"full-text","condition":"alzheimers","measure":"phase","pairs":[["F3","P3"],["frontal","parietal"]],"changes":{"alpha":"down"},"symptoms":["memory","cogdecline"],"design_level":2,"control":null,"blinded":null,"n":60,"k":null,"evidence":"preliminary","claim":"Mild AD: less fronto-parietal alpha phase synchrony (wPLI) than controls","detail":"30 people with mild AD and 30 controls, eyes-closed resting EEG, wPLI. Alpha-band synchrony between frontal and parietal sites was lower in AD. Single case-control study.","design":"Case-control"}
+```
+
+- `measure`: `coherence`, `phase` (PLI, wPLI, PLV), `aec` or `other`. Name the exact measure in `claim` or `detail`.
+- `pairs`: each pair is two 10-20 sites (same list as Part 1) **or** two regions: `frontal`, `central`, `temporal`,
+  `parietal`, `occipital`. "Interhemispheric frontal" = `["frontal","frontal"]`; "fronto-parietal" = `["frontal","parietal"]`;
+  "long-range anterior-posterior" = `["frontal","occipital"]` and `["frontal","parietal"]`. List every pair that shows
+  the result, up to about 6; if the paper gives more, use the regions.
+- If different pairs go in **different** directions in the same band, mark that band `mixed` and explain in `detail`.
+- `sample`: if the paper says it re-uses a public dataset or a sample already published, add `"sample":"<short key>"`
+  (e.g. `"ds-miltiadous"`), using the same key every time that dataset appears.
+- A paper can have **both** a band-power result and a connectivity result: write two lines with the same `id`, one with
+  `"type":"biomarker"` (Part 1 format, only if the paper is not already included) and one with `"type":"connectivity"`.
+- For an **included** paper with no usable connectivity result:
+  `{"id":"pm-12345","decision":"no-connectivity","note":"graph metrics only"}`.
+- For a **connectivity-only exclusion** that still doesn't qualify: `{"id":"pm-12345","decision":"exclude","code":"CN","note":"microstates only"}`
+  (or `NONBAND`, `T`, etc. if a different reason applies now).
+- If you can't tell without the full text and there is no PMC id: `defer` with `[parked: no full text]`.
+
+After each batch also run `node tools/synthesize.js` and commit `data/synthesis.js` and `methods/synthesis-results.md`
+with the batch.
