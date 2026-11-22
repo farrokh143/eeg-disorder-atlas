@@ -1,0 +1,10 @@
+{"id":"pm-35585637","decision":"no-connectivity","note":"source-space PS and FC classifier; no replicated named site or region pair"}
+{"id":"pm-36030210","decision":"exclude","code":"CN","note":"sLORETA network-level alpha lagged phase within and between DMN, SMN, DAN; no lobe or 10-20 pairs"}
+{"id":"pm-36341882","decision":"exclude","code":"X","reason":"Typically developing children; trait measure only; 'right anterior' region not mappable from abstract (no PMC id)"}
+{"id":"pm-36494861","decision":"defer","note":"[parked: non-atlas condition fragile X] FXS sample, frontal connectivity with executive function"}
+{"id":"pm-37246142","decision":"exclude","code":"CN","note":"EEG microstate analysis only"}
+{"id":"pm-37950877","decision":"defer","note":"[parked: no full text] abstract gives no connectivity measure or named sites (no PMC id)"}
+{"id":"pm-38040298","decision":"exclude","code":"CN","note":"graph neural network classifier on resting connectivity; no named pair results"}
+{"id":"pm-38145528","decision":"exclude","code":"CN","note":"deep learning classifier; no connectivity result by named pair or region"}
+{"id":"pm-38309329","decision":"exclude","code":"CN","note":"EEG microstate analysis only"}
+{"id":"pm-38468061","decision":"exclude","code":"CN","note":"complexity measures only (correlation dimension, Lyapunov, fractal); no connectivity"}
