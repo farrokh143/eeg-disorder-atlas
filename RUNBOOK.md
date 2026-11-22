@@ -252,6 +252,7 @@ structures, and whole-brain "global connectivity" with no sites or regions.
   `parietal`, `occipital`. "Interhemispheric frontal" = `["frontal","frontal"]`; "fronto-parietal" = `["frontal","parietal"]`;
   "long-range anterior-posterior" = `["frontal","occipital"]` and `["frontal","parietal"]`. List every pair that shows
   the result, up to about 6; if the paper gives more, use the regions.
+  **Never** list all region pairs to stand for a global or whole-head result: global connectivity is `CN`.
 - If different pairs go in **different** directions in the same band, mark that band `mixed` and explain in `detail`.
 - `sample`: if the paper says it re-uses a public dataset or a sample already published, add `"sample":"<short key>"`
   (e.g. `"ds-miltiadous"`), using the same key every time that dataset appears.
