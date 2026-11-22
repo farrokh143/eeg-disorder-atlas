@@ -3939,6 +3939,28 @@ window.NF_DATA = {
       detail: "98 GAD patients and 92 controls, 10-minute eyes-closed resting 16-channel EEG; connectivity measure not named in the paper's abstract. Ipsilateral fronto-temporal and parieto-temporal connectivity was lower in the lower bands; frontal-parietal and frontal-occipital were lower in beta-gamma. Single case-control study.",
       design: "Case-control",
       cite: { authors: "Wang H, Mou S, Pei X, Zhang X, Shen S, Zhang J, Shen X, Shen Z", year: 2025, title: "The power spectrum and functional connectivity characteristics of resting-state EEG in patients with generalized anxiety disorder", journal: "Scientific Reports" }
+    },
+    {
+      id: "pm-42638376-fc", source: "full-text", condition: "anxiety", type: "connectivity",
+      measure: "phase", pairs: [["frontal","frontal"],["frontal","central"],["central","temporal"],["central","parietal"],["frontal","occipital"]],
+      metrics: { design: 2, control: null, blinded: null, n: 74, k: null },
+      bands: ["alpha","delta","theta","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { alpha: "up", delta: "mixed", theta: "mixed", beta: "mixed" }, symptoms: ["anxiety","sleep"],
+      claim: "GAD with short sleep: stronger alpha wPLI synchrony across most scalp regions than controls",
+      detail: "37 young adults with clinically diagnosed GAD and self-reported short sleep vs 37 controls, resting EEG (wPLI, 30 scalp nodes). Alpha-band wPLI was higher in the GAD group in a widespread network-based component (434 edges), with no significant difference in delta, theta or beta; AEC-c showed no difference. Node strength and graph metrics are not recorded here. Cross-sectional; short sleep was self-reported.",
+      design: "Case-control",
+      cite: { authors: "Shi C, et al.", year: 2026, title: "Resting-State EEG Functional Connectivity in Young Adults With Clinically Diagnosed Generalized Anxiety Disorder and Self-Reported Habitual Short Sleep: An Alpha-Band Network Analysis", journal: "Brain Behav" }
+    },
+    {
+      id: "pm-43023642-fc", source: "full-text", condition: "anxiety", type: "connectivity",
+      measure: "phase", pairs: [["frontal","parietal"],["frontal","temporal"],["frontal","frontal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 95, k: null },
+      bands: ["alpha","theta","delta","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { alpha: "up", theta: "down", delta: "down", beta: "mixed" }, symptoms: ["anxiety"],
+      claim: "Panic disorder: more alpha phase synchrony (PLI) fronto-parietal, less theta and delta than controls",
+      detail: "52 drug-naive panic disorder patients and 43 controls analysed (100 enrolled), resting 128-channel EEG. Source-localised (minimum norm, PLI); mapped to overlying scalp region. Only baseline group differences are recorded; the post-venlafaxine changes are left out as a drug effect. Cross-sectional comparison; the authors note no brain-behaviour association survived correction.",
+      design: "Case-control",
+      cite: { authors: "Zhang H, et al.", year: 2026, title: "Cortical Network Alterations and Treatment-Induced Reorganization in Panic Disorder: A Longitudinal High-Density EEG Study", journal: "CNS Neurosci Ther" }
     }
   ],
 
