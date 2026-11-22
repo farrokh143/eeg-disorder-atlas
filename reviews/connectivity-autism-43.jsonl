@@ -1,0 +1,9 @@
+{"id":"pm-41326740","decision":"exclude","code":"CN","note":"directed transfer entropy only; occipital alpha direction not clear in full text"}
+{"id":"pm-41335975","decision":"exclude","code":"CN","note":"deep-learning classifier on spectral and spatio-temporal features; no connectivity result"}
+{"id":"pm-41576766","decision":"exclude","code":"NONBAND","note":"bedside brain signal entropy in NICU infants; not connectivity or band power"}
+{"id":"pm-41698611","decision":"exclude","code":"CN","note":"EEG microstate analysis only"}
+{"id":"pm-41902031","decision":"exclude","code":"CN","note":"massive feature extraction classifier; no connectivity result by pair or region"}
+{"id":"pm-42034291","decision":"exclude","code":"CN","note":"EEG microstate ensemble classifier only"}
+{"id":"pm-42426840","decision":"exclude","code":"T","note":"phase-locking group differences reported for the task-state condition; resting results weaker and not the basis"}
+{"id":"pm-42603613","decision":"exclude","code":"CN","note":"visibility-graph classifier; no connectivity result by pair or region"}
+{"id":"pm-42770310","decision":"exclude","code":"CN","note":"neural signal complexity only"}
