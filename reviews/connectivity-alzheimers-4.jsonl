@@ -1,0 +1,10 @@
+{"id":"pm-25570573","decision":"defer","note":"[parked: no full text] canonical correlation synchrony in resting delta and theta; channel groups not named in abstract; no PMC full text"}
+{"id":"pm-25613102","decision":"exclude","code":"CN","note":"graph path length (global) only; no named site pairs"}
+{"id":"pm-25863694","decision":"exclude","code":"X","reason":"Single-electrode wavelet power and entropy features; no connectivity result"}
+{"id":"pm-26142876","decision":"defer","note":"[parked: no full text] PCMI coupling strength and direction between unnamed brain regions; no PMC full text"}
+{"id":"pm-26289045","decision":"exclude","code":"CN","note":"regional mean PLI and graph hub (betweenness) measures only; no pair-level result"}
+{"id":"pm-26444753","decision":"exclude","code":"X","reason":"Source-space delta/alpha power ratio marker; no connectivity result"}
+{"id":"pm-26541308","decision":"include","type":"connectivity","source":"abstract","condition":"alzheimers","measure":"phase","pairs":[["frontal","parietal"]],"changes":{"delta":"down","theta":"down"},"symptoms":["cogdecline"],"design_level":2,"control":null,"blinded":null,"n":58,"k":null,"evidence":"preliminary","claim":"AD: lower delta lagged phase synchronization than controls; theta lower right frontal-parietal","detail":"28 probable AD patients and 30 healthy controls, resting EEG, lagged phase synchronization (eLORETA). Delta synchrony was lower across most cortical regions and theta synchrony between right DLPFC and right parietal sites was lower. Source-localised (eLORETA lagged phase synchronization); mapped to the overlying scalp region. Taken from the abstract; not checked in the full text. Delta links correlated with MMSE.","design":"Case-control"}
+{"id":"pm-26603651","decision":"exclude","code":"CN","note":"small-world graph measures only"}
+{"id":"pm-26718102","decision":"exclude","code":"CN","note":"PLI computed within EEG microstates; microstate connectivity is not eligible"}
+{"id":"pm-26724581","decision":"exclude","code":"CN","note":"small-world graph measures only"}
