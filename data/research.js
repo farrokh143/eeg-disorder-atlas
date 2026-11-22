@@ -3207,6 +3207,16 @@ window.NF_DATA = {
       detail: "36 people with AD and 29 healthy controls, 19-channel resting EEG (pilot pipeline study). Frontal theta power was higher and frontal alpha power lower in AD. Single pilot case-control study; the paper also reports complexity and classifier results, which are not used here.",
       design: "Case-control",
       cite: { authors: "Simmatis LE, et al.", year: 2025, title: "EEG biomarkers for Alzheimer's disease: A novel automated pipeline for detecting and monitoring disease progression", journal: "J Alzheimers Dis" }
+    },
+    {
+      id: "pm-36792002", source: "abstract", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 142, k: null },
+      sites: ["Fp1","F7","F3","Fz"], bands: ["theta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up" }, symptoms: ["lowmood"],
+      claim: "Remitted depression: more left and midline frontal theta power than healthy adults",
+      detail: "37 people with depression, 56 with remitted depression and 49 healthy adults, 64-channel resting EEG. Theta power was greater over left and midfrontal sites in remitted depression than in healthy adults. Taken from the abstract; not checked in the full text. Electrode names are not given in the abstract, so the sites are the nearest listed left and midline frontal electrodes. Source-space coherence results are not used here.",
+      design: "Case-control",
+      cite: { authors: "Ray KL, et al.", year: 2023, title: "Altered electroencephalography resting state network coherence in remitted MDD", journal: "Brain Res" }
     }
   ],
 
