@@ -1,0 +1,10 @@
+{"id":"pm-39909854","decision":"exclude","code":"NR","note":"full text: beta PEC; the only named-pair result is trMDD vs grMDD (treatment-response contrast); MDD vs HC is widespread hypoconnectivity without named pairs"}
+{"id":"pm-39952669","decision":"exclude","code":"MEG","note":"MEG heart-brain phase-amplitude coupling; not EEG"}
+{"id":"pm-40184943","decision":"exclude","code":"CN","note":"graph-theory indices (diameter, global efficiency) and severity prediction; no named pairs with a band direction"}
+{"id":"pm-40414904","decision":"exclude","code":"CN","note":"SHAP-based classifier and severity regression; band power without direction"}
+{"id":"pm-40785447","decision":"defer","note":"[parked: no full text] no PMC id; abstract names channel pairs in MDD vs HC coherence but not the band for each pair"}
+{"id":"pm-41045734","decision":"exclude","code":"CN","note":"cross-frequency coupling and graph-theory metrics; classifier for severity"}
+{"id":"pm-41046843","decision":"exclude","code":"CN","note":"convergent cross mapping is directed brain-heart interaction, not site connectivity"}
+{"id":"pm-41200986","decision":"defer","note":"[parked: no full text] no PMC id; abstract gives frontal-parietal alpha connectivity up in adolescent MDD but does not name the connectivity measure"}
+{"id":"pm-41335752","decision":"exclude","code":"CN","note":"frequency-domain convergent cross mapping is directed effective connectivity"}
+{"id":"pm-41369099","decision":"exclude","code":"X","reason":"Within-group comparison on a symptom the atlas does not track (suicide attempt vs ideation)"}
