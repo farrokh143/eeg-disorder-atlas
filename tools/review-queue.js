@@ -12,7 +12,7 @@ const parked = r => /\[parked:/.test(r.notes);
 if (process.argv[2] === "--connectivity") {
   const FC = /coheren|connectiv|synchron|phase[- ]lag|\bPLI\b|\bPLV\b|phase locking|network|coupling/i;
   const conn = rows.filter(r => (r.status === "excluded" && /^Outside atlas schema/.test(r.reason) && !/Connectivity re-review/.test(r.notes)) ||
-    (r.status === "included" && FC.test(r.title) && !/Connectivity (checked|added)/.test(r.notes)));
+    (r.status === "included" && FC.test(r.title) && !/Connectivity (checked|added|deferred)/.test(r.notes)));
   const d = process.argv[3], n = +(process.argv[4] || 10);
   if (!d) { const c = {}; for (const r of conn) for (const x of r.disorder.split("; ")) c[x] = (c[x] || 0) + 1;
     console.log("Waiting for connectivity review, by disorder:"); for (const [k, v] of Object.entries(c).sort((a, b) => b[1] - a[1])) console.log(`  ${v}\t${k}`);
