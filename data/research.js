@@ -3864,6 +3864,17 @@ window.NF_DATA = {
       detail: "69 early-stage PD patients and 69 age-matched controls, 64-channel resting EEG, wPLI between source regions. Theta connectivity was lower in prefrontal and sensorimotor areas and beta higher in sensorimotor and parietal areas in both sexes; alpha was lower only in male PD. Source-localised (source reconstruction); mapped to the overlying scalp region. Cross-sectional case-control study.",
       design: "Case-control",
       cite: { authors: "Conti M, et al.", year: 2025, title: "Sex hormones shape EEG-based functional connectivity in early-stage Parkinson's disease patients", journal: "Neuroimage Clin" }
+    },
+    {
+      id: "pm-42604986-fc", source: "full-text", condition: "parkinsons", type: "connectivity",
+      measure: "phase", pairs: [["occipital","occipital"]],
+      metrics: { design: 2, control: null, blinded: null, n: 62, k: null },
+      bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["sleep"],
+      claim: "Within PD: lower occipital low-alpha phase connectivity linked to higher daytime sleepiness",
+      detail: "62 PD patients; 10-minute eyes-closed resting wake EEG taken after awakening from polysomnography. Lower wPLI in the 8-10 Hz occipital region was the best EEG predictor of higher Epworth sleepiness scores (r about -0.49, FDR-corrected); spectral power was not related. No healthy controls. Single cross-sectional study.",
+      design: "Cross-sectional correlation",
+      cite: { authors: "Rosinvil T, et al.", year: 2026, title: "The Relationship Between Resting State Quantitative EEG and Daytime Sleepiness Complaints in Parkinson's Disease", journal: "J Sleep Res" }
     }
   ],
 
