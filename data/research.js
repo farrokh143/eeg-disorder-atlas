@@ -3237,6 +3237,26 @@ window.NF_DATA = {
       detail: "30 people with chronic schizophrenia and 30 healthy controls, resting EEG recorded with eyes open. Theta relative power was higher in patients over centroparietal channels (CPz, Pz, P2) and at several frontal and central sites. Cross-sectional comparison in a small single study.",
       design: "Case-control",
       cite: { authors: "Domingos C, et al.", year: 2025, title: "Functional Connectivity in Chronic Schizophrenia: An EEG Resting-State Study with Corrected Imaginary Phase-Locking", journal: "Brain Behav" }
+    },
+    {
+      id: "pm-32815287", source: "full-text", condition: "autism", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 28, k: null },
+      sites: ["Fz"], bands: ["delta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up" }, symptoms: ["social"],
+      claim: "Children with ASD: higher delta power at Fz than typically developing children",
+      detail: "13 children with ASD and 15 typically developing children, resting EEG. Delta power at Fz was higher in the ASD group (t = 3.21, p = .01). Small case-control study.",
+      design: "Case-control",
+      cite: { authors: "Wang J, et al.", year: 2020, title: "Increased EEG coherence in long-distance and short-distance connectivity in children with autism spectrum disorders", journal: "Brain Behav" }
+    },
+    {
+      id: "pm-33125837", source: "full-text", condition: "autism", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 109, k: null },
+      sites: ["O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["social"],
+      claim: "Children with ASD: lower occipital alpha peak frequency and alpha power than typical children",
+      detail: "46 children with ASD and 63 typically developing children aged 3 to 5, resting EEG with eyes open. Alpha peak frequency and alpha power at O1 and O2 were lower in ASD. Single case-control study; the classifier accuracy is not a diagnostic test.",
+      design: "Case-control",
+      cite: { authors: "Zhao J, et al.", year: 2020, title: "A study on EEG feature extraction and classification in autistic children based on singular spectrum analysis method", journal: "Brain Behav" }
     }
   ],
 
@@ -3670,6 +3690,17 @@ window.NF_DATA = {
       detail: "Taken from the abstract; not checked in the full text. Gamma-band independent-component networks from resting EEG. Motor networks were mapped to the central region; components were not source-localised. Frontal and left parietal networks showed higher local power, so the gamma result is mixed.",
       design: "Conference paper",
       cite: { authors: "Shou G, et al.", year: 2018, title: "Resting-state Gamma-band EEG Abnormalities in Autism", journal: "Annu Int Conf IEEE Eng Med Biol Soc" }
+    },
+    {
+      id: "pm-32815287-fc", source: "full-text", condition: "autism", type: "connectivity",
+      measure: "coherence", pairs: [["T3","T5"],["T4","T6"],["O1","O2"],["C4","P4"],["frontal","frontal"],["frontal","occipital"]],
+      metrics: { design: 2, control: null, blinded: null, n: 28, k: null },
+      bands: ["delta","theta","alpha","beta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "up", beta: "up" }, symptoms: ["social"],
+      claim: "Children with ASD: more EEG coherence at temporal, occipital and long-range sites across bands",
+      detail: "13 children with ASD and 15 typically developing children, resting EEG, coherence between electrode pairs. Short- and long-distance pairs were higher in ASD; links to AQ and ADI-R scores were reported. Small case-control study.",
+      design: "Case-control",
+      cite: { authors: "Wang J, et al.", year: 2020, title: "Increased EEG coherence in long-distance and short-distance connectivity in children with autism spectrum disorders", journal: "Brain Behav" }
     }
   ],
 
