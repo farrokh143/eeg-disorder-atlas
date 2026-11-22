@@ -2,7 +2,7 @@
 
 Generated 2026-11-22 by `tools/synthesize.js` following `methods/synthesis-protocol.md` (v1.0).
 
-- Patterns with any eligible study: 332
+- Patterns with any eligible study: 334
 - Testable (≥ 6 studies with a clear direction): 11
 - Consistent difference (q_BY < 0.05): 0
 - Robust in sensitivity analyses S2, S3, S4 and S7: 0
@@ -25,7 +25,7 @@ Eligible evidence: primary studies checked in full text (or hand-curated). Abstr
 | ADHD | power | theta | frontal | 7 | 5 / 1 / 1 | 83% (44–97) | 89% | 0.219 | 0.063 | 0.661 | no consistent difference | Moderate | no | consistently higher |
 | ADHD | power | theta | central | 7 | 5 / 1 / 1 | 83% (44–97) | 89% | 0.219 | 0.063 | 0.661 | no consistent difference | Moderate | no | consistently higher |
 
-## Too few studies to test (315 patterns)
+## Too few studies to test (317 patterns)
 
 Shown on the atlas with their study list and certainty, without a test. Largest:
 
@@ -39,6 +39,7 @@ Shown on the atlas with their study list and certainty, without a test. Largest:
 | Alzheimer's | power | delta | temporal | 5 | 4 / 0 / 1 | Very low |
 | Schizophrenia | power | delta | frontal | 5 | 4 / 0 / 1 | Very low |
 | Schizophrenia | power | theta | frontal | 5 | 4 / 0 / 1 | Very low |
+| Schizophrenia | power | theta | central | 5 | 4 / 0 / 1 | Very low |
 | Autism | power | alpha | frontal | 5 | 0 / 4 / 1 | Very low |
 | Autism | power | alpha | parietal | 5 | 0 / 4 / 1 | Very low |
 | Autism | power | alpha | occipital | 5 | 1 / 3 / 1 | Very low |
@@ -48,9 +49,9 @@ Shown on the atlas with their study list and certainty, without a test. Largest:
 | Alzheimer's | power | alpha | central | 5 | 0 / 3 / 2 | Very low |
 | ADHD | power | theta | parietal | 5 | 3 / 1 / 1 | Very low |
 | Schizophrenia | power | theta | temporal | 5 | 4 / 0 / 1 | Very low |
+| Schizophrenia | power | theta | parietal | 5 | 4 / 0 / 1 | Very low |
 | Alcohol & substance use | power | alpha | frontal | 5 | 3 / 1 / 1 | Low |
 | Schizophrenia | power | delta | central | 4 | 3 / 0 / 1 | Very low |
-| Schizophrenia | power | theta | central | 4 | 3 / 0 / 1 | Very low |
 | Schizophrenia | power | alpha | frontal | 4 | 2 / 1 / 1 | Very low |
 | Schizophrenia | power | alpha | central | 4 | 2 / 1 / 1 | Very low |
 | Autism | power | alpha | central | 4 | 0 / 3 / 1 | Very low |
@@ -60,4 +61,3 @@ Shown on the atlas with their study list and certainty, without a test. Largest:
 | Autism | power | gamma | occipital | 4 | 4 / 0 / 0 | Very low |
 | Alcohol & substance use | power | beta | frontal | 4 | 3 / 0 / 1 | Low |
 | ADHD | power | alpha | central | 4 | 0 / 2 / 2 | Very low |
-| ADHD | power | delta | frontal | 4 | 2 / 2 / 0 | Very low |

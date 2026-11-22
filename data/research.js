@@ -3227,6 +3227,16 @@ window.NF_DATA = {
       detail: "148 patients and 143 controls, resting EEG with eyes open, ICA source localisation. Theta, beta and gamma power was higher over the middle temporal gyrus, temporal pole and fusiform sources; theta power in the right middle temporal gyrus correlated with verbal memory in patients. Source-localised (ICA dipoles); mapped to the overlying scalp region. Cross-sectional; the posterior cingulate result is not coded because cingulate has no lobe.",
       design: "Case-control",
       cite: { authors: "Koshiyama D, et al.", year: 2021, title: "Abnormal phase discontinuity of alpha- and theta-frequency oscillations in schizophrenia", journal: "Schizophr Res" }
+    },
+    {
+      id: "pm-40079512", source: "full-text", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
+      sites: ["C3","Cz","C4","P3","Pz","P4"], bands: ["theta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up" }, symptoms: ["psychosis"],
+      claim: "Chronic SZ: more centroparietal theta relative power than healthy controls, eyes open",
+      detail: "30 people with chronic schizophrenia and 30 healthy controls, resting EEG recorded with eyes open. Theta relative power was higher in patients over centroparietal channels (CPz, Pz, P2) and at several frontal and central sites. Cross-sectional comparison in a small single study.",
+      design: "Case-control",
+      cite: { authors: "Domingos C, et al.", year: 2025, title: "Functional Connectivity in Chronic Schizophrenia: An EEG Resting-State Study with Corrected Imaginary Phase-Locking", journal: "Brain Behav" }
     }
   ],
 
@@ -3616,6 +3626,28 @@ window.NF_DATA = {
       detail: "72 stabilised patients, resting-state EEG, lagged phase synchronization between 84 sources. Higher beta connectivity (fusiform-lingual) and gamma connectivity (cuneus with transverse and superior temporal gyri) predicted worse CPT-II variability and reaction-time scores. Source-localised (eLORETA); mapped to the overlying scalp region. Within-patient correlation; no control group.",
       design: "Correlation (within patients)",
       cite: { authors: "Yeh TC, et al.", year: 2023, title: "Resting-State EEG Connectivity at High-Frequency Bands and Attentional Performance Dysfunction in Stabilized Schizophrenia Patients", journal: "Medicina (Kaunas)" }
+    },
+    {
+      id: "pm-40079512-fc", source: "full-text", condition: "schizophrenia", type: "connectivity",
+      measure: "phase", pairs: [["frontal","parietal"],["frontal","temporal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
+      bands: ["beta"], direction: "ratio", evidence: "preliminary",
+      changes: { beta: "mixed" }, symptoms: ["psychosis"],
+      claim: "Chronic SZ: beta phase locking mixed: frontoparietal up within hemispheres, frontotemporal down across",
+      detail: "30 chronic patients vs 30 controls, resting EEG, corrected imaginary phase locking value (designed to reduce zero-lag volume conduction). Beta connectivity was higher within hemispheres between frontal and parietal nodes and lower across hemispheres between frontal and temporal nodes, so the band is marked mixed. Theta connectivity is not coded because its direction was not clear from the passages read. Small cross-sectional study.",
+      design: "Case-control",
+      cite: { authors: "Domingos C, et al.", year: 2025, title: "Functional Connectivity in Chronic Schizophrenia: An EEG Resting-State Study with Corrected Imaginary Phase-Locking", journal: "Brain Behav" }
+    },
+    {
+      id: "pm-40445258-fc", source: "abstract", condition: "schizophrenia", type: "connectivity",
+      measure: "coherence", pairs: [["frontal","frontal"]],
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      bands: ["gamma"], direction: "up", evidence: "preliminary",
+      changes: { gamma: "up" }, symptoms: ["memory"],
+      claim: "Schizophrenia (baseline, within patients): higher resting frontal gamma coherence with worse working memory",
+      detail: "Baseline resting frontal gamma coherence in patients from a neurofeedback trial was positively correlated with working memory impairment across all participants. The trial itself (active vs placebo neurofeedback) is not coded here. Sample size at baseline not stated in the abstract. Taken from the abstract; not checked in the full text.",
+      design: "Cross-sectional correlation (baseline of RCT)",
+      cite: { authors: "Shu IW, et al.", year: 2025, title: "A Canonical Correlation Approach Towards Identifying Latent Neurofeedback Responses in Patients with Schizophrenia", journal: "Appl Psychophysiol Biofeedback" }
     }
   ],
 
