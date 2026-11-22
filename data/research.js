@@ -3323,6 +3323,28 @@ window.NF_DATA = {
       detail: "16 outpatients with AD, 20 with MCI and 21 healthy controls, eyes-closed resting EEG, alpha band (8-13 Hz), phase lag index and phase-locked value. Mean PLV network connectivity was lower in AD and MCI than in controls; parietal-occipital connectivity differed in all groups. Single-centre case-control study; the direction of the parietal-occipital difference is not stated in the abstract. Taken from the abstract; not checked in the full text.",
       design: "Case-control",
       cite: { authors: "Cao J, et al.", year: 2025, title: "Identification of Alzheimer's disease brain networks based on EEG phase synchronization", journal: "Biomed Eng Online" }
+    },
+    {
+      id: "pm-40389648-fc", source: "full-text", sample: "ds-miltiadous", condition: "alzheimers", type: "connectivity",
+      measure: "phase", pairs: [["frontal","frontal"],["frontal","occipital"]],
+      metrics: { design: 2, control: null, blinded: null, n: 88, k: null },
+      bands: ["alpha","beta"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down", beta: "down" }, symptoms: ["memory","cogdecline"],
+      claim: "AD: lower frontal-frontal and frontal-occipital alpha and beta ISPC than controls",
+      detail: "88 people with eyes-closed resting EEG from the public OpenNeuro ds004504 set: 36 AD, 23 FTD and 29 controls. Inter-site phase clustering (ISPC) was lower in alpha and beta in each dementia group than controls, mainly for frontal-frontal and frontal-occipital pairs. The paper is mainly a machine-learning classifier study; the connectivity comparisons are secondary.",
+      design: "Case-control (ML study)",
+      cite: { authors: "Jungrungrueang T, et al.", year: 2025, title: "Translational approach for dementia subtype classification using convolutional neural network based on EEG connectome dynamics", journal: "Sci Rep" }
+    },
+    {
+      id: "pm-41027526-fc", source: "abstract", condition: "alzheimers", type: "connectivity",
+      measure: "coherence", pairs: [["central","central"]],
+      metrics: { design: 2, control: null, blinded: null, n: 83, k: null },
+      bands: ["gamma"], direction: "up", evidence: "preliminary",
+      changes: { gamma: "up" }, symptoms: ["memory","cogdecline"],
+      claim: "Amnestic MCI: higher central gamma partial coherence than controls, eyes open and closed",
+      detail: "21 people with amnestic MCI and 62 cognitively normal controls, resting EEG with eyes open and eyes closed, 19 electrodes. Partial coherence was higher in MCI in the gamma 1 (30-50 Hz) and gamma 2 (50-100 Hz) bands, mostly for central electrode pairs. Taken from the abstract; not checked in the full text. Small single-centre case-control study.",
+      design: "Case-control",
+      cite: { authors: "Vlachos I, et al.", year: 2025, title: "Resting EEG partial coherence demonstrates increased γ range central functional connectivity in amnestic mild cognitive impairment", journal: "Brain Res" }
     }
   ],
 
