@@ -3659,6 +3659,28 @@ window.NF_DATA = {
       detail: "Eyes-closed resting 128-channel EEG from 20 autistic and 20 typically developing children. Coherence between independent-component networks was lower in autism in delta, theta and beta, with the largest changes involving frontal networks. Components were not source-localised, so the frontal pair is a network-level summary rather than exact scalp sites.",
       design: "Case-control study",
       cite: { authors: "Shou G, et al.", year: 2017, title: "Electrophysiological signatures of atypical intrinsic brain connectivity networks in autism", journal: "J Neural Eng" }
+    },
+    {
+      id: "pm-29176705-fc", source: "full-text", condition: "autism", type: "connectivity",
+      measure: "phase", pairs: [["frontal","frontal"],["frontal","central"],["frontal","temporal"],["frontal","parietal"],["frontal","occipital"],["central","central"],["central","temporal"],["central","parietal"],["central","occipital"],["temporal","temporal"],["temporal","parietal"],["temporal","occipital"],["parietal","parietal"],["parietal","occipital"],["occipital","occipital"]],
+      metrics: { design: 2, control: "none", blinded: null, n: null, k: null },
+      bands: ["theta","alpha"], direction: "down", evidence: "preliminary",
+      changes: { theta: "down", alpha: "down" }, symptoms: ["social"],
+      claim: "Autism: lower global phase lag index across channel pairs at rest, in theta and alpha bands",
+      detail: "Eyes-open resting 128-channel EEG. Mean phase lag index over all channel pairs was lower in autism in theta and alpha, so the pairs list every region combination (whole-head). Graph-theory results were not recorded here. Group sizes were not checked in the extract.",
+      design: "Case-control study",
+      cite: { authors: "Zeng K, et al.", year: 2017, title: "Disrupted Brain Network in Children with Autism Spectrum Disorder", journal: "Sci Rep" }
+    },
+    {
+      id: "pm-30440772-fc", source: "abstract", condition: "autism", type: "connectivity",
+      measure: "coherence", pairs: [["central","central"]],
+      metrics: { design: 2, control: "none", blinded: null, n: null, k: null },
+      bands: ["gamma"], direction: "ratio", evidence: "preliminary",
+      changes: { gamma: "mixed" }, symptoms: ["social"],
+      claim: "Autism (resting EEG): lower gamma coherence between left and right motor networks, with mixed overall gamma changes",
+      detail: "Taken from the abstract; not checked in the full text. Gamma-band independent-component networks from resting EEG. Motor networks were mapped to the central region; components were not source-localised. Frontal and left parietal networks showed higher local power, so the gamma result is mixed.",
+      design: "Conference paper",
+      cite: { authors: "Shou G, et al.", year: 2018, title: "Resting-state Gamma-band EEG Abnormalities in Autism", journal: "Annu Int Conf IEEE Eng Med Biol Soc" }
     }
   ],
 
