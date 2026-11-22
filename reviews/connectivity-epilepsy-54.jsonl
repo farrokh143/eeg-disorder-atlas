@@ -1,0 +1,10 @@
+{"id":"pm-31015102","decision":"include","source":"abstract","condition":"epilepsy","type":"biomarker","sites":["O1","O2","Fp1","Fp2","F7","F3","Fz","F4","F8"],"changes":{"alpha":"down","beta":"down"},"symptoms":["seizures"],"design_level":2,"control":null,"blinded":null,"n":20,"k":null,"evidence":"preliminary","claim":"Eyelid myoclonia with absences: less resting occipital alpha and less frontal beta than controls","detail":"10 patients with eyelid myoclonia with absences and 10 controls, resting EEG with LORETA-based source networks. Patients had reduced alpha activity over the occipital lobe and reduced beta over the frontal lobe. Source-localised (LORETA ICA); mapped to the overlying scalp region. Single small case-control study. Taken from the abstract; not checked in the full text.","design":"Case-control"}
+{"id":"pm-27775899","decision":"exclude","code":"CN","note":"Granger-causal directed connectivity (abstract)"}
+{"id":"pm-32096905","decision":"exclude","code":"MEG","note":"resting MEG connectivity in cingulate epilepsy (abstract)"}
+{"id":"pm-32295523","decision":"exclude","code":"T","note":"group effect is for executive-control (attention task) EEG; resting network showed no group change (abstract)"}
+{"id":"pm-33501642","decision":"exclude","code":"CN","note":"graph metrics only (path length, clustering, small-world index) (abstract)"}
+{"id":"pm-34044189","decision":"exclude","code":"CN","note":"graph metrics only (small-world index, hubness) (abstract)"}
+{"id":"pm-35380976","decision":"exclude","code":"CN","note":"microstate-based dynamic network and global efficiency only (abstract)"}
+{"id":"pm-35435566","decision":"exclude","code":"CN","note":"CNN classifier on directed Granger connectivity (abstract)"}
+{"id":"pm-36257103","decision":"exclude","code":"CN","note":"dynamic network flexibility and integration (graph-type metrics) only (abstract)"}
+{"id":"pm-37354244","decision":"exclude","code":"SOURCE","note":"only thalamus-to-precuneus seed-based connectivity (deep structure and precuneus); EEG-fMRI (abstract)"}

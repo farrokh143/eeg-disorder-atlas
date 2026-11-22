@@ -3277,6 +3277,16 @@ window.NF_DATA = {
       detail: "35 PD patients (with and without symptom fluctuations) and 30 healthy controls; resting EEG with ECG and pulse. Patients with fluctuations had higher beta power over frontal, parietal and central regions and higher parietal delta. Single cross-sectional comparison. Taken from the abstract; not checked in the full text.",
       design: "Cross-sectional comparison",
       cite: { authors: "Zhang T, et al.", year: 2025, title: "Characteristics of multimodal physiological signal differences in symptom fluctuations in Parkinson's disease", journal: "Neuroscience" }
+    },
+    {
+      id: "pm-31015102", source: "abstract", condition: "epilepsy", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 20, k: null },
+      sites: ["O1","O2","Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha","beta"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down", beta: "down" }, symptoms: ["seizures"],
+      claim: "Eyelid myoclonia with absences: less resting occipital alpha and less frontal beta than controls",
+      detail: "10 patients with eyelid myoclonia with absences and 10 controls, resting EEG with LORETA-based source networks. Patients had reduced alpha activity over the occipital lobe and reduced beta over the frontal lobe. Source-localised (LORETA ICA); mapped to the overlying scalp region. Single small case-control study. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Giuliano L, et al.", year: 2019, title: "Abnormal visual sensitivity in eyelid myoclonia with absences: Evidence from electrocortical connectivity and non-linear quantitative analysis of EEG signal", journal: "Seizure" }
     }
   ],
 
