@@ -261,7 +261,10 @@ structures, and whole-brain "global connectivity" with no sites or regions.
   `{"id":"pm-12345","decision":"no-connectivity","note":"graph metrics only"}`.
 - For a **connectivity-only exclusion** that still doesn't qualify: `{"id":"pm-12345","decision":"exclude","code":"CN","note":"microstates only"}`
   (or `NONBAND`, `T`, etc. if a different reason applies now).
-- If you can't tell without the full text and there is no PMC id: `defer` with `[parked: no full text]`.
+- If you can't tell without the full text and there is no PMC id: `defer` with `[parked: no full text]`. For an
+  already-included paper add `"type":"connectivity"` to the defer line (the paper stays included).
+- If a paper's connectivity result is about a different atlas condition than the queue's disorder, include it under that
+  condition (not exclude).
 
 After each batch also run `node tools/synthesize.js` and commit `data/synthesis.js` and `methods/synthesis-results.md`
 with the batch.

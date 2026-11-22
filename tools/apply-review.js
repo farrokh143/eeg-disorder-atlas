@@ -37,7 +37,7 @@ lines.forEach((line, i) => {
   const isFC = x.type === "connectivity", key = x.id + (isFC ? "-fc" : "");
   if (seen.has(key)) return P("this id (and type) appears twice in this file"); seen.add(key);
   const cnExcluded = r.status === "excluded" && /^Outside atlas schema/.test(r.reason);
-  const okStatus = ["full-text", "to-review"].includes(r.status) || cnExcluded || (isFC && x.decision === "include" && r.status === "included") || (x.decision === "no-connectivity" && r.status === "included");
+  const okStatus = ["full-text", "to-review"].includes(r.status) || cnExcluded || (isFC && x.decision === "include" && r.status === "included") || (x.decision === "no-connectivity" && r.status === "included") || (x.decision === "defer" && isFC && r.status === "included");
   if (!okStatus) return P(`log status is "${r.status}"; only full-text or to-review rows, rows excluded as "outside atlas schema", or (for connectivity) included rows can be reviewed`);
   if (isFC && r.status === "included" && D.connectivity.some(f => f.id === key)) return P("this paper already has a connectivity entry");
   x._cn = cnExcluded;
@@ -110,6 +110,7 @@ for (const line of lines) { const x = JSON.parse(line), r = byId[x.id];
   if (x._cn && x.decision === "include") addNote(r, `Connectivity re-review ${today}: included`);
   if (x.decision === "exclude") { r.status = "excluded"; r.reason = x.code === "X" ? x.reason : REASONS[x.code]; addNote(r, `${x._cn ? "Connectivity re-review" : "Full-text review"} ${today}: excluded${x.note ? " (" + x.note + ")" : ""}`); nExc++; }
   else if (x.decision === "no-connectivity") { addNote(r, `Connectivity checked ${today}: no usable channel-pair or regional connectivity result${x.note ? " (" + x.note + ")" : ""}`); nDef++; }
+  else if (x.decision === "defer" && r.status === "included") { addNote(r, `Connectivity deferred ${today}: ${x.note}`); nDef++; }
   else if (x.decision === "defer") { if (r.status === "excluded") { r.status = "full-text"; r.reason = ""; } addNote(r, `Full-text review deferred ${today}: ${x.note}`); nDef++; }
   else if (x.decision === "pass") { r.status = "full-text"; addNote(r, `Passed screening ${today}${x.note ? ": " + x.note : ""}`); nPass++; } }
 for (const { x, r, f } of findings) {
