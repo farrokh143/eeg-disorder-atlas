@@ -3279,6 +3279,17 @@ window.NF_DATA = {
       detail: "108 people with Parkinson's disease grouped by cognition (dementia, MCI, cognitively normal), resting EEG, coherence and phase lag index. In the dementia group, coherence was mostly lower than in cognitively normal PD, most clearly in theta (temporal-frontal) and alpha (occipital-frontal). Taken from the abstract; not checked in the full text. Cross-sectional study; the comparison is within a PD group, not against healthy controls.",
       design: "Cross-sectional comparison",
       cite: { authors: "Zawiślak-Fornagiel K, et al.", year: 2023, title: "Specific patterns of coherence and phase lag index in particular regions as biomarkers of cognitive impairment in Parkinson's disease", journal: "Parkinsonism Relat Disord" }
+    },
+    {
+      id: "pm-37918574-fc", source: "abstract", condition: "depression", type: "connectivity",
+      measure: "phase", pairs: [["parietal","parietal"],["frontal","parietal"],["frontal","occipital"]],
+      metrics: { design: 2, control: null, blinded: null, n: 105, k: null },
+      bands: ["theta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up" }, symptoms: ["lowmood","inattention"],
+      claim: "LLD: more theta wPLI connectivity in moderate-severe late-life depression than controls",
+      detail: "65 people with late-life depression (two severity groups) and 40 older controls, eyes-closed resting EEG, weighted phase lag index. In the moderate-severe group, parietal and fronto-parietal/occipital theta connectivity was higher, and linked to attention impairment. Taken from the abstract; not checked in the full text. Cross-sectional study.",
+      design: "Cross-sectional case-control",
+      cite: { authors: "Zeng Y, et al.", year: 2024, title: "Altered resting-state brain oscillation and the associated cognitive impairments in late-life depression with different depressive severity: An EEG power spectrum and functional connectivity study", journal: "J Affect Disord" }
     }
   ],
 
