@@ -3778,6 +3778,39 @@ window.NF_DATA = {
       detail: "43 children aged 5 to 7 with ADHD and 35 with typical development; resting EEG, phase-locking value. Resting results only: frontal interhemispheric beta was lower, central interhemispheric theta, alpha and beta were higher in ADHD. Task-related change is excluded. Taken from the abstract; not checked in the full text. Small case-control study.",
       design: "Case-control (resting state only)",
       cite: { authors: "Chen IC, et al.", year: 2022, title: "Atypical functional connectivity during rest and task-related dynamic alteration in young children with attention deficit hyperactivity disorder: An analysis using the phase-locking value", journal: "Psychiatry Clin Neurosci" }
+    },
+    {
+      id: "pm-18457962-fc", source: "abstract", condition: "parkinsons", type: "connectivity",
+      measure: "coherence", pairs: [["frontal","frontal"],["parietal","parietal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 58, k: null },
+      bands: ["theta","alpha","hibeta","gamma"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", alpha: "down", hibeta: "up", gamma: "up" }, symptoms: ["motor"],
+      claim: "PD: higher frontal coherence in theta, high beta and gamma; lower parietal coherence near 10 Hz",
+      detail: "24 PD patients vs 34 controls, resting EEG. Coherence within the frontal region was higher in theta, high beta and gamma; coherence within the parietal region was lower around 10 Hz. Single case-control study. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Moazami-Goudarzi M, et al.", year: 2008, title: "Enhanced frontal low and high frequency power and synchronization in the resting EEG of parkinsonian patients", journal: "Neuroimage" }
+    },
+    {
+      id: "pm-27433473-fc", source: "full-text", condition: "parkinsons", type: "connectivity",
+      measure: "coherence", pairs: [["F3","P3"],["F4","P4"]],
+      metrics: { design: 2, control: null, blinded: null, n: 68, k: null },
+      bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["executive"],
+      claim: "Within Parkinson's: lower alpha F3-P3 coherence linked to worse executive function",
+      detail: "68 nondemented PD patients, eyes-closed resting EEG; no healthy controls. Patients with low left frontoparietal alpha coherence had worse executive scores (BADS); the right-side pair (F4-P4) was not significant after adjustment. Single cross-sectional study.",
+      design: "Cross-sectional correlation",
+      cite: { authors: "Teramoto H, et al.", year: 2016, title: "Relation between Resting State Front-Parietal EEG Coherence and Executive Function in Parkinson's Disease", journal: "Biomed Res Int" }
+    },
+    {
+      id: "pm-28367403-fc", source: "full-text", condition: "parkinsons", type: "connectivity",
+      measure: "phase", pairs: [["frontal","temporal"],["frontal","central"],["frontal","parietal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 124, k: null },
+      bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["cogdecline"],
+      claim: "Within Parkinson's: lower alpha phase-locking (PLV) between regions in patients with worse cognition",
+      detail: "124 PD patients in three cognitive groups, eyes-closed resting dense EEG; no healthy controls. Pairwise PLV between 68 source regions; alpha 1 and alpha 2 differences were mainly fronto-temporal and fronto-central, lower in patients with more cognitive deficit. Source-localised (dense-EEG source connectivity); mapped to the overlying scalp region. Single cross-sectional study.",
+      design: "Cross-sectional correlation",
+      cite: { authors: "Hassan M, et al.", year: 2017, title: "Functional connectivity disruptions correlate with cognitive phenotypes in Parkinson's disease", journal: "Neuroimage Clin" }
     }
   ],
 
