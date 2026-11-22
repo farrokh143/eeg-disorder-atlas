@@ -255,6 +255,11 @@ structures, and whole-brain "global connectivity" with no sites or regions.
 - If different pairs go in **different** directions in the same band, mark that band `mixed` and explain in `detail`.
 - `sample`: if the paper says it re-uses a public dataset or a sample already published, add `"sample":"<short key>"`
   (e.g. `"ds-miltiadous"`), using the same key every time that dataset appears.
+- **Edge strength** between two named sites or regions is pairwise connectivity (include). **Node strength**, degree or
+  other per-node graph summaries are graph metrics (`CN`).
+- Papers that mix resting and task connectivity: use the resting results only and say so in `detail`.
+- **Papers excluded earlier as connectivity-only may also report band power.** Check: if the paper gives resting band
+  power with a direction and region, add a `"type":"biomarker"` line (Part 1 format) as well.
 - A paper can have **both** a band-power result and a connectivity result: write two lines with the same `id`, one with
   `"type":"biomarker"` (Part 1 format, only if the paper is not already included) and one with `"type":"connectivity"`.
 - For an **included** paper with no usable connectivity result:
