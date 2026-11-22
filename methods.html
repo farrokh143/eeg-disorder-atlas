@@ -3,54 +3,52 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>How the EEG Disorder Atlas works</title>
+<title>Method · restmap</title>
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/svg+xml" href="assets/mark.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap">
 <style>
 /* Methods page: a calm, well-set research protocol. Same palette and type as the atlas. */
 :root {
-  --bg: #f3f6f8; --surface: #ffffff; --ink: #13202b; --muted: #5a6a77; --line: #d6dee4;
-  --accent: #1d5f8a; --accent-soft: #e3eef6;
-  --ev-strong: #2b7a3d; --ev-moderate: #1d6fa5; --ev-prelim: #a8650a; --ev-contested: #b3302f;
-  --f-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
-  --f-body: "Inter", "Segoe UI", system-ui, sans-serif;
-  --f-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  --bg: #000000; --surface: #111114; --ink: #f5f5f7; --muted: #a4a4ae; --line: #2b2b31;
+  --accent: #a79fff; --accent-fill: #6a5bff; --accent-soft: #1c1840;
+  --ev-strong: #a79fff; --ev-moderate: #8f86ff; --ev-prelim: #e6e3ff; --ev-contested: #ff8a80;
+  --f-display: "IBM Plex Sans", system-ui, sans-serif;
+  --f-body: "IBM Plex Sans", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme: dark;
 }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
-  --bg: #0e1418; --surface: #151d23; --ink: #e2e9ee; --muted: #8d9eab; --line: #26323c; --accent: #6db2df; --accent-soft: #1b2c39;
-  --ev-strong: #6fcf86; --ev-moderate: #6db2df; --ev-prelim: #f0b35a; --ev-contested: #ff7b76; color-scheme: dark } }
-:root[data-theme="dark"] { --bg: #0e1418; --surface: #151d23; --ink: #e2e9ee; --muted: #8d9eab; --line: #26323c; --accent: #6db2df; --accent-soft: #1b2c39;
-  --ev-strong: #6fcf86; --ev-moderate: #6db2df; --ev-prelim: #f0b35a; --ev-contested: #ff7b76; color-scheme: dark }
 * { box-sizing: border-box; min-width: 0; }
 html { scroll-padding-top: 64px; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 var(--f-body); overflow-x: clip; }
 .wrap { max-width: 860px; margin: 0 auto; padding: 28px max(18px, env(safe-area-inset-left, 0px)) 72px; }
-h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; line-height: 1.15; margin: 0; }
-h1 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); }
+h1, h2, h3 { font-family: var(--f-display); font-weight: 500; letter-spacing: -0.02em; text-wrap: balance; line-height: 1.15; margin: 0; }
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); letter-spacing: -0.04em; line-height: 1.04; }
 h2 { font-size: 1.35rem; margin: 40px 0 10px; padding-top: 18px; border-top: 1px solid var(--line); }
 h3 { font-size: 1.02rem; margin: 18px 0 6px; }
 p, li { max-width: 68ch; }
 a { color: var(--accent); }
 .back { font-size: 0.9rem; font-weight: 600; text-decoration: none; }
-.lede { font-size: 1.08rem; color: var(--muted); margin: 10px 0 0; }
-.tag { display: inline-block; font-size: 0.74rem; font-weight: 600; color: var(--ev-prelim); border: 1px solid currentColor; border-radius: 999px; padding: 1px 9px; margin-bottom: 10px; }
+.lede { font-weight: 300; font-size: 1.15rem; color: var(--muted); margin: 10px 0 0; }
+.tag { display: inline-block; font: 600 0.7rem/1.6 var(--f-mono); letter-spacing: .05em; text-transform: uppercase; color: var(--muted); border: 1px solid currentColor; border-radius: 999px; padding: 1px 9px; margin-bottom: 10px; }
 .toc { display: flex; gap: 6px; overflow-x: auto; padding: 14px 0 6px; scrollbar-width: none; }
 .toc::-webkit-scrollbar { display: none; }
-.toc a { flex: none; font-size: 0.84rem; text-decoration: none; color: var(--ink); border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 6px 12px; }
+.toc a { flex: none; font-size: 0.88rem; min-height: 40px; display: inline-flex; align-items: center; text-decoration: none; color: var(--ink); border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 0 16px; }
 @media (min-width: 900px) { .toc { position: sticky; top: 0; background: var(--bg); z-index: 2; } }
 .flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 16px 0 6px; }
-.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
-.stat b { display: block; font-family: var(--f-display); font-size: 1.9rem; line-height: 1; }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 14px; }
+.stat b { display: block; font-family: var(--f-mono); font-weight: 500; font-size: 1.9rem; line-height: 1; }
 .stat span { font-size: 0.84rem; color: var(--muted); }
 .stat.inc b { color: var(--ev-strong); } .stat.rev b { color: var(--ev-prelim); } .stat.exc b { color: var(--ev-contested); }
-.box { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin: 12px 0; }
-.box.key { border-left: 4px solid var(--accent); }
+.box { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 14px 16px; margin: 12px 0; }
+.box.key { border-color: var(--accent-fill); }
 .steps { counter-reset: s; list-style: none; padding: 0; display: grid; gap: 10px; }
-.steps > li { counter-increment: s; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px 12px 52px; position: relative; max-width: none; }
-.steps > li::before { content: counter(s); position: absolute; left: 14px; top: 12px; width: 26px; height: 26px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 600; font-size: 0.85rem; display: grid; place-items: center; }
+.steps > li { counter-increment: s; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 12px 14px 12px 52px; position: relative; max-width: none; }
+.steps > li::before { content: counter(s); position: absolute; left: 14px; top: 12px; width: 26px; height: 26px; border-radius: 50%; background: var(--accent-fill); color: #fff; font-weight: 600; font-size: 0.85rem; display: grid; place-items: center; }
 .steps b { display: block; }
-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
 th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
 th { font-size: 0.78rem; color: var(--muted); font-weight: 600; }
 td.n { text-align: right; font-family: var(--f-mono); white-space: nowrap; }
@@ -58,17 +56,19 @@ td.n { text-align: right; font-family: var(--f-mono); white-space: nowrap; }
 pre { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px; font: 0.8rem/1.5 var(--f-mono); white-space: pre-wrap; }
 .lv { display: inline-flex; gap: 2px; vertical-align: middle; margin-right: 6px; }
 .lv i { width: 6px; height: 13px; border-radius: 2px; background: var(--line); }
-.l4 i { background: var(--ev-strong); } .l3 i:nth-child(-n+3) { background: var(--ev-moderate); } .l2 i:nth-child(-n+2) { background: var(--ev-prelim); } .l1 i:first-child { background: var(--ev-contested); }
+.l4 i { background: var(--accent-fill); } .l3 i:nth-child(-n+3) { background: var(--accent-fill); } .l2 i:nth-child(-n+2) { background: var(--accent-fill); } .l1 i:first-child { background: var(--accent-fill); }
 .refs li { font-size: 0.88rem; color: var(--muted); margin-bottom: 6px; }
 .note { font-size: 0.84rem; color: var(--muted); }
+.brandbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 600; font-size: 21px; letter-spacing: -0.03em; }
 /* Shared preview gate (same remembered password as the atlas) */
 html.locked .wrap { display: none !important; }
 .gate { display: none; min-height: 100vh; min-height: 100dvh; place-items: center; padding: 24px; }
 html.locked .gate { display: grid; }
-.gate form { width: min(100%, 380px); display: grid; gap: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 28px 24px; }
+.gate form { width: min(100%, 380px); display: grid; gap: 16px; text-align: center; }
 .gate p { margin: 0; color: var(--muted); font-size: 0.94rem; }
-.gate input { font: inherit; font-size: 16px; min-height: 46px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); }
-.gate button { min-height: 46px; border: none; border-radius: 10px; background: var(--ink); color: var(--bg); font-weight: 600; font-size: 1rem; }
+.gate input { font: inherit; font-size: 16px; min-height: 52px; padding: 0 22px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); text-align: center; }
+.gate button { min-height: 52px; border: none; border-radius: 999px; background: var(--accent-fill); color: #fff; font-weight: 500; font-size: 1.05rem; }
 .gate .err { color: var(--ev-contested); font-size: 0.88rem; min-height: 1.2em; }
 @media (max-width: 600px) { body { font-size: 15.5px; } h2 { margin-top: 32px; } }
 </style>
@@ -79,9 +79,8 @@ html.locked .gate { display: grid; }
 <body>
 <div class="gate" role="dialog" aria-labelledby="gateTitle">
   <form id="gateForm" autocomplete="off">
-    <span class="tag">Under development</span>
-    <h1 id="gateTitle" style="font-size:1.6rem">EEG Disorder Atlas</h1>
-    <p>This research atlas is still being built and is shared with a small group for feedback. Please enter the password you were given.</p>
+    <span class="brand" id="gateTitle" style="justify-content:center;font-size:26px"><svg width="30" height="30" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="21" r="16" fill="none" stroke="#f5f5f7" stroke-width="2.4"/><path d="M16.5 5.6 L20 1.8 L23.5 5.6" fill="none" stroke="#f5f5f7" stroke-width="2.4" stroke-linejoin="round"/><circle cx="20" cy="13" r="3.4" fill="#6a5bff"/><circle cx="12" cy="21" r="2.2" fill="#f5f5f7"/><circle cx="20" cy="21" r="2.2" fill="#f5f5f7"/><circle cx="28" cy="21" r="2.2" fill="#f5f5f7"/><circle cx="20" cy="29" r="2.2" fill="#f5f5f7"/></svg>restmap</span>
+    <p>Preview for invited testers. Enter the password you were given.</p>
     <input id="gatePw" type="password" placeholder="Password" aria-label="Password" required>
     <button type="submit">Enter</button>
     <div class="err" id="gateErr" aria-live="polite"></div>
@@ -91,12 +90,12 @@ html.locked .gate { display: grid; }
 <div class="wrap">
   <a class="back" href="index.html">← Back to the atlas</a>
   <header style="margin-top:18px">
-    <span class="tag">Research framework · in development</span>
+    <span class="tag">Method · in development</span>
     <h1>How the atlas finds, judges and links the research</h1>
     <p class="lede">The atlas is run as a living systematic review: fixed rules for what counts, repeatable searches, every decision logged in public, and an explicit confidence rating for each link.</p>
   </header>
   <div class="box key" style="margin-top:18px">
-    <b style="font-family:var(--f-display);font-size:1.1rem">The goal</b>
+    <b style="font-size:1.1rem;font-weight:600">The goal</b>
     <p style="margin:6px 0 0">Let people link a <strong>resting-state EEG pattern</strong> (which band, higher or lower, where on the scalp) to the <strong>disorders and symptoms</strong> it has been reported in, and show how confident the research lets us be about each link.</p>
     <p class="note" style="margin:8px 0 0">Every rule below serves that goal. Treatment (neurofeedback) studies are a secondary layer, shown for the same patterns.</p>
   </div>
@@ -194,6 +193,7 @@ AND humans[MeSH] AND [disorder MeSH term]</pre>
   </table></div>
 
   <h2 id="grading">How confident are we?</h2>
+  <div class="box key"><b>Pooled results.</b> The atlas lookup ranks each disorder by a direction-based synthesis of the full-text studies (vote counting with a sign test, GRADE certainty, sensitivity analyses). Abstract-only studies are listed but not pooled. Full protocol: <a href="https://github.com/farrokh143/eeg-disorder-atlas/blob/main/methods/synthesis-protocol.md">synthesis protocol v1.0</a> · <a href="https://github.com/farrokh143/eeg-disorder-atlas/blob/main/methods/synthesis-results.md">results table</a>.</div>
   <p>Each link (for example, "theta higher in ADHD") gets a rating from High to Very low. The steps follow the GRADE approach used in clinical guidelines, which separates quality of evidence into four levels <a href="#r-grade">[Guyatt 2008]</a>, simplified for this atlas:</p>
   <ol class="steps">
     <li><b>Start from the best supporting design</b><span class="lv l4"><i></i><i></i><i></i><i></i></span>High: meta-analysis or randomised trial · <span class="lv l3"><i></i><i></i><i></i><i></i></span>Moderate: controlled study or cohort · <span class="lv l2"><i></i><i></i><i></i><i></i></span>Low: case-control or narrative review · <span class="lv l1"><i></i><i></i><i></i><i></i></span>Very low: uncontrolled</li>
