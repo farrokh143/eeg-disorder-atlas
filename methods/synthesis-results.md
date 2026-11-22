@@ -2,7 +2,7 @@
 
 Generated 2026-11-22 by `tools/synthesize.js` following `methods/synthesis-protocol.md` (v1.0).
 
-- Patterns with any eligible study: 336
+- Patterns with any eligible study: 352
 - Testable (≥ 6 studies with a clear direction): 11
 - Consistent difference (q_BY < 0.05): 0
 - Robust in sensitivity analyses S2, S3, S4 and S7: 0
@@ -25,7 +25,7 @@ Eligible evidence: primary studies checked in full text (or hand-curated). Abstr
 | ADHD | power | theta | frontal | 7 | 5 / 1 / 1 | 83% (44–97) | 89% | 0.219 | 0.063 | 0.661 | no consistent difference | Moderate | no | consistently higher |
 | ADHD | power | theta | central | 7 | 5 / 1 / 1 | 83% (44–97) | 89% | 0.219 | 0.063 | 0.661 | no consistent difference | Moderate | no | consistently higher |
 
-## Too few studies to test (319 patterns)
+## Too few studies to test (335 patterns)
 
 Shown on the atlas with their study list and certainty, without a test. Largest:
 
@@ -35,6 +35,7 @@ Shown on the atlas with their study list and certainty, without a test. Largest:
 | Alzheimer's | power | delta | occipital | 6 | 5 / 0 / 1 | Very low |
 | Alzheimer's | power | beta | parietal | 6 | 0 / 5 / 1 | Low |
 | Alzheimer's | power | beta | temporal | 6 | 0 / 5 / 1 | Low |
+| Autism | power | alpha | occipital | 6 | 1 / 4 / 1 | Low |
 | Alzheimer's | power | theta | central | 6 | 5 / 0 / 1 | Very low |
 | Alzheimer's | power | delta | temporal | 5 | 4 / 0 / 1 | Very low |
 | Schizophrenia | power | delta | frontal | 5 | 4 / 0 / 1 | Very low |
@@ -42,7 +43,6 @@ Shown on the atlas with their study list and certainty, without a test. Largest:
 | Schizophrenia | power | theta | central | 5 | 4 / 0 / 1 | Very low |
 | Autism | power | alpha | frontal | 5 | 0 / 4 / 1 | Very low |
 | Autism | power | alpha | parietal | 5 | 0 / 4 / 1 | Very low |
-| Autism | power | alpha | occipital | 5 | 1 / 3 / 1 | Very low |
 | ADHD | power | alpha | frontal | 5 | 0 / 3 / 2 | Very low |
 | ADHD | power | beta | frontal | 5 | 0 / 3 / 2 | Very low |
 | ADHD | power | beta | central | 5 | 0 / 3 / 2 | Very low |
