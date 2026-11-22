@@ -3378,6 +3378,39 @@ window.NF_DATA = {
       detail: "60 unmedicated people with MDD and 60 healthy controls, 15-min resting EEG, eLORETA source estimates. Alpha lagged phase synchronisation was higher in MDD between subgenual prefrontal and left dorsolateral/medial prefrontal regions. Source-localised (eLORETA); mapped to the overlying scalp region. Taken from the abstract; not checked in the full text. Case-control study.",
       design: "Case-control",
       cite: { authors: "Olbrich S, et al.", year: 2014, title: "Functional connectivity in major depression: increased phase synchronization between frontal cortical EEG-source estimates", journal: "Psychiatry Res" }
+    },
+    {
+      id: "pm-28557820-fc", source: "abstract", condition: "depression", type: "connectivity",
+      measure: "coherence", pairs: [["T5","P3"]],
+      metrics: { design: 2, control: null, blinded: null, n: 45, k: null },
+      bands: ["theta"], direction: "down", evidence: "preliminary",
+      changes: { theta: "down" }, symptoms: ["lowmood"],
+      claim: "MDD: lower theta coherence between T5 and P3 than healthy controls",
+      detail: "15 people with major depressive disorder, 15 with somatic symptom disorder and 15 healthy volunteers, resting EEG, 21 channels, theta coherence. Theta coherence between T5 and P3 (left temporoparietal sites) was lower in the MDD and somatic symptom groups than in controls. Taken from the abstract; not checked in the full text. Small pilot case-control study.",
+      design: "Case-control (pilot)",
+      cite: { authors: "Ahn J, et al.", year: 2017, title: "Features of Resting-State Electroencephalogram Theta Coherence in Somatic Symptom Disorder Compared With Major Depressive Disorder: A Pilot Study", journal: "Psychosom Med" }
+    },
+    {
+      id: "pm-29397079-fc", source: "full-text", condition: "depression", type: "connectivity",
+      measure: "phase", pairs: [["frontal","temporal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 174, k: null },
+      bands: ["beta","hibeta"], direction: "up", evidence: "preliminary",
+      changes: { beta: "up", hibeta: "up" }, symptoms: ["lowmood"],
+      claim: "MDD: higher beta-band lagged phase synchrony between frontal and temporal default-mode regions than controls",
+      detail: "65 people with MDD, 79 healthy controls and 30 in remission, eyes-closed resting EEG, 128 channels. Lagged phase synchrony was higher in MDD in beta-2 within the default-mode network (right superior frontal to right parahippocampal) and in beta-1 between default-mode and fronto-parietal regions (left superior frontal to right middle temporal); the remission group did not differ from controls. Source-localised (eLORETA); mapped to the overlying scalp region. The beta-1 between-network result is significant only uncorrected (p<0.001). Case-control study.",
+      design: "Case-control",
+      cite: { authors: "Whitton AE, et al.", year: 2018, title: "Electroencephalography Source Functional Connectivity Reveals Abnormal High-Frequency Communication Among Large-Scale Functional Networks in Depression", journal: "Biol Psychiatry Cogn Neurosci Neuroimaging" }
+    },
+    {
+      id: "pm-31038351-fc", source: "abstract", condition: "depression", type: "connectivity",
+      measure: "coherence", pairs: [["frontal","frontal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 39, k: null },
+      bands: ["theta","alpha"], direction: "down", evidence: "preliminary",
+      changes: { theta: "down", alpha: "down" }, symptoms: ["lowmood"],
+      claim: "Adolescent MDD: lower resting frontal theta and alpha coherence than healthy controls",
+      detail: "25 adolescents with MDD and 14 age- and sex-matched healthy controls, resting qEEG. Average theta coherence was lower in MDD, and frontal coherence was lower in theta and alpha. Taken from the abstract; not checked in the full text. Cross-sectional pilot study.",
+      design: "Case-control (pilot)",
+      cite: { authors: "McVoy M, et al.", year: 2019, title: "Resting-State Quantitative Electroencephalography Demonstrates Differential Connectivity in Adolescents with Major Depressive Disorder", journal: "J Child Adolesc Psychopharmacol" }
     }
   ],
 
