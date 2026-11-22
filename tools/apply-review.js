@@ -62,6 +62,7 @@ lines.forEach((line, i) => {
     if (!Array.isArray(x.pairs) || !x.pairs.length || x.pairs.some(pr => !Array.isArray(pr) || pr.length !== 2 || !pr.every(okEnd)))
       P(`pairs must be a list like [["F3","F4"],["frontal","parietal"]] using 10-20 sites or regions (${REGIONS.join(", ")})`);
     if (x.sites) P("connectivity entries use pairs, not sites");
+    if (Array.isArray(x.pairs) && x.pairs.length >= 10) P("10 or more pairs looks like a whole-head or global result; global connectivity with no named pairs is excluded with CN (list at most about 6 pairs, or use regions)");
   } else if (!Array.isArray(x.sites) || x.sites.some(s => !ELECTRODES.includes(s))) P(`sites must be 10-20 labels from: ${ELECTRODES.join(" ")} (or [] for whole-head)`);
   const ch = x.changes || {}, ok = isFC ? ["up", "down", "mixed"] : x.type === "protocol" ? ["up", "down", "asymmetry", "regulate", "mixed"] : ["up", "down", "asymmetry", "mixed"];
   if (!Object.keys(ch).length) P("changes is empty");

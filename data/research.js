@@ -3661,17 +3661,6 @@ window.NF_DATA = {
       cite: { authors: "Shou G, et al.", year: 2017, title: "Electrophysiological signatures of atypical intrinsic brain connectivity networks in autism", journal: "J Neural Eng" }
     },
     {
-      id: "pm-29176705-fc", source: "full-text", condition: "autism", type: "connectivity",
-      measure: "phase", pairs: [["frontal","frontal"],["frontal","central"],["frontal","temporal"],["frontal","parietal"],["frontal","occipital"],["central","central"],["central","temporal"],["central","parietal"],["central","occipital"],["temporal","temporal"],["temporal","parietal"],["temporal","occipital"],["parietal","parietal"],["parietal","occipital"],["occipital","occipital"]],
-      metrics: { design: 2, control: "none", blinded: null, n: null, k: null },
-      bands: ["theta","alpha"], direction: "down", evidence: "preliminary",
-      changes: { theta: "down", alpha: "down" }, symptoms: ["social"],
-      claim: "Autism: lower global phase lag index across channel pairs at rest, in theta and alpha bands",
-      detail: "Eyes-open resting 128-channel EEG. Mean phase lag index over all channel pairs was lower in autism in theta and alpha, so the pairs list every region combination (whole-head). Graph-theory results were not recorded here. Group sizes were not checked in the extract.",
-      design: "Case-control study",
-      cite: { authors: "Zeng K, et al.", year: 2017, title: "Disrupted Brain Network in Children with Autism Spectrum Disorder", journal: "Sci Rep" }
-    },
-    {
       id: "pm-30440772-fc", source: "abstract", condition: "autism", type: "connectivity",
       measure: "coherence", pairs: [["central","central"]],
       metrics: { design: 2, control: "none", blinded: null, n: null, k: null },
