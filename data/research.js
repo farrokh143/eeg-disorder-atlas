@@ -3906,6 +3906,39 @@ window.NF_DATA = {
       detail: "17 unmedicated BECTS children and 19 healthy controls, 3 minutes of spike-free resting EEG. Beta-band LORETA-source correlation (undirected, not coherence or phase) was higher between frontal regions and between frontal and temporal regions. Source-localised (LORETA); mapped to the overlying scalp region. Single case-control study. Taken from the abstract; not checked in the full text.",
       design: "Case-control",
       cite: { authors: "Clemens B, et al.", year: 2016, title: "Increased resting-state EEG functional connectivity in benign childhood epilepsy with centro-temporal spikes", journal: "Seizure" }
+    },
+    {
+      id: "pm-27920976-fc", source: "full-text", condition: "anxiety", type: "connectivity",
+      measure: "phase", pairs: [["frontal","frontal"],["frontal","central"],["frontal","parietal"],["frontal","temporal"],["frontal","occipital"]],
+      metrics: { design: 2, control: null, blinded: null, n: 64, k: null },
+      bands: ["theta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up" }, symptoms: ["anxiety"],
+      claim: "Social anxiety disorder: higher theta phase connectivity from midline frontal sites than controls",
+      detail: "32 people with generalised social anxiety disorder and 32 matched controls, resting EEG, wPLI between electrodes. Midline frontal channels (Fz, Cz) had stronger theta connections to most electrodes in the patients; the correlation with state anxiety was within the patient group. Graph metrics were not used. Single case-control study.",
+      design: "Case-control",
+      cite: { authors: "Xing M, et al.", year: 2017, title: "Resting-state theta band connectivity and graph analysis in generalized social anxiety disorder", journal: "Neuroimage Clin" }
+    },
+    {
+      id: "pm-35891100-fc", source: "full-text", condition: "anxiety", type: "connectivity",
+      measure: "phase", pairs: [["frontal","central"],["frontal","temporal"],["frontal","parietal"],["frontal","occipital"]],
+      metrics: { design: 2, control: null, blinded: null, n: 81, k: null },
+      bands: ["theta","alpha","beta"], direction: "down", evidence: "preliminary",
+      changes: { theta: "down", alpha: "down", beta: "down" }, symptoms: ["anxiety"],
+      claim: "GAD: lower frontal-to-other-region PLI connectivity in theta, alpha and beta than controls",
+      detail: "45 GAD patients and 36 controls, eyes-closed resting 16-channel EEG, phase lag index. Most frontal-linked connections were weaker in GAD (77% of significant edges lower). Single case-control study with machine-learning classification added; the connectivity result is the statistical comparison.",
+      design: "Case-control",
+      cite: { authors: "Shen Z, et al.", year: 2022, title: "Aberrated Multidimensional EEG Characteristics in Patients with Generalized Anxiety Disorder: A Machine-Learning Based Analysis Framework", journal: "Sensors (Basel)" }
+    },
+    {
+      id: "cand-gad-wang-2025-fc", source: "full-text", condition: "anxiety", type: "connectivity",
+      measure: "other", pairs: [["frontal","temporal"],["parietal","temporal"],["frontal","parietal"],["frontal","occipital"]],
+      metrics: { design: 2, control: null, blinded: null, n: 190, k: null },
+      bands: ["theta","alpha","beta","gamma"], direction: "down", evidence: "preliminary",
+      changes: { theta: "down", alpha: "down", beta: "down", gamma: "down" }, symptoms: ["anxiety"],
+      claim: "GAD: lower fronto-temporal and parieto-temporal connectivity in theta to beta; frontal-parietal lower in beta-gamma",
+      detail: "98 GAD patients and 92 controls, 10-minute eyes-closed resting 16-channel EEG; connectivity measure not named in the paper's abstract. Ipsilateral fronto-temporal and parieto-temporal connectivity was lower in the lower bands; frontal-parietal and frontal-occipital were lower in beta-gamma. Single case-control study.",
+      design: "Case-control",
+      cite: { authors: "Wang H, Mou S, Pei X, Zhang X, Shen S, Zhang J, Shen X, Shen Z", year: 2025, title: "The power spectrum and functional connectivity characteristics of resting-state EEG in patients with generalized anxiety disorder", journal: "Scientific Reports" }
     }
   ],
 
