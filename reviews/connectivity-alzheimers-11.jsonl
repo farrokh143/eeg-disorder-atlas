@@ -1,0 +1,10 @@
+{"id":"pm-37844524","decision":"exclude","code":"X","reason":"HIV-positive cohort; not an atlas condition"}
+{"id":"pm-37918574","decision":"include","type":"connectivity","source":"abstract","condition":"depression","measure":"phase","pairs":[["parietal","parietal"],["frontal","parietal"],["frontal","occipital"]],"changes":{"theta":"up"},"symptoms":["lowmood","inattention"],"design_level":2,"control":null,"blinded":null,"n":105,"k":null,"evidence":"preliminary","claim":"LLD: more theta wPLI connectivity in moderate-severe late-life depression than controls","detail":"65 people with late-life depression (two severity groups) and 40 older controls, eyes-closed resting EEG, weighted phase lag index. In the moderate-severe group, parietal and fronto-parietal/occipital theta connectivity was higher, and linked to attention impairment. Taken from the abstract; not checked in the full text. Cross-sectional study.","design":"Cross-sectional case-control"}
+{"id":"pm-37922187","decision":"exclude","code":"CN","note":"multilayer cross-frequency network features and classifier; not pair-level undirected connectivity"}
+{"id":"pm-38087950","decision":"exclude","code":"CN","note":"EEG microstates in ALS; not an atlas condition and no connectivity result"}
+{"id":"pm-38217593","decision":"no-connectivity","note":"aMCI vs controls: decreased coherence in right centroparietal area, but the frequency band is not stated in the abstract; no PMC full text"}
+{"id":"pm-38531248","decision":"exclude","code":"REVIEW","note":"narrative review of EEG microstates"}
+{"id":"pm-38688139","decision":"exclude","code":"CN","note":"association networks across MEG and EEG features; classifier results; no named pair result"}
+{"id":"pm-38727873","decision":"exclude","code":"CN","note":"EEG microstate parameters in AD; no connectivity result"}
+{"id":"pm-38965489","decision":"exclude","code":"CN","note":"global mean PLI and AEC-c and graph metrics only; no named pair-level result"}
+{"id":"pm-39067554","decision":"exclude","code":"CN","note":"graph metrics in children after perinatal stroke; not an atlas condition"}
