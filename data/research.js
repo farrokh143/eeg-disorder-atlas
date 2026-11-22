@@ -3202,6 +3202,17 @@ window.NF_DATA = {
       detail: "82 mild AD, 41 normal elderly and 25 vascular dementia patients, resting EEG with surface Laplacian; connectivity by synchronization likelihood (SL). Fronto-parietal alpha-1 SL was lower in mild AD than in normal elderly. Reductions in delta and beta at inter-hemispheric pairs were also reported. Taken from the abstract; not checked in the full text.",
       design: "Case-control",
       cite: { authors: "Babiloni C, et al.", year: 2004, title: "Abnormal fronto-parietal coupling of brain rhythms in mild Alzheimer's disease: a multicentric EEG study", journal: "Eur J Neurosci" }
+    },
+    {
+      id: "pm-23050006-fc", source: "full-text", condition: "alzheimers", type: "connectivity",
+      measure: "phase", pairs: [["temporal","parietal"],["temporal","central"],["parietal","central"],["parietal","parietal"],["temporal","frontal"],["frontal","central"],["frontal","occipital"]],
+      metrics: { design: 2, control: null, blinded: null, n: 185, k: null },
+      bands: ["alpha","theta"], direction: "ratio", evidence: "preliminary",
+      changes: { alpha: "down", theta: "up" }, symptoms: ["memory","cogdecline"],
+      claim: "AD: less alpha2 and more theta lagged phase connectivity than controls, theta linked to lower MMSE",
+      detail: "125 AD patients and 60 elderly controls, eyes-closed resting EEG, lagged phase synchronization between 19 electrode-site regions. Alpha2 links from medial frontal and precuneus sites to temporal and parietal sites were lower in AD; theta links from temporal sites were higher and correlated with lower MMSE. Source-localised (eLORETA lagged phase synchronization); mapped to the overlying scalp region. Pairs listed are regions covering the significant links in both bands.",
+      design: "Case-control",
+      cite: { authors: "Canuet L, et al.", year: 2012, title: "Resting-state network disruption and APOE genotype in Alzheimer's disease: a lagged functional connectivity study", journal: "PLoS One" }
     }
   ],
 
