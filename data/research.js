@@ -3192,6 +3192,17 @@ window.NF_DATA = {
 
   // Functional connectivity between sites or regions (resting state). Schema: README.md.
   connectivity: [
+    {
+      id: "pm-15128412-fc", source: "abstract", condition: "alzheimers", type: "connectivity",
+      measure: "other", pairs: [["frontal","parietal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 148, k: null },
+      bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["memory","cogdecline"],
+      claim: "Mild AD: less fronto-parietal alpha synchronization likelihood than normal elderly controls",
+      detail: "82 mild AD, 41 normal elderly and 25 vascular dementia patients, resting EEG with surface Laplacian; connectivity by synchronization likelihood (SL). Fronto-parietal alpha-1 SL was lower in mild AD than in normal elderly. Reductions in delta and beta at inter-hemispheric pairs were also reported. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Babiloni C, et al.", year: 2004, title: "Abnormal fronto-parietal coupling of brain rhythms in mild Alzheimer's disease: a multicentric EEG study", journal: "Eur J Neurosci" }
+    }
   ],
 
   methodology: [
