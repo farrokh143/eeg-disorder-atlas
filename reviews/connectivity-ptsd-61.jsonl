@@ -1,0 +1,10 @@
+{"id":"cand-ptsd-eneuro-2020","decision":"no-connectivity","note":"connectivity is Granger (directed) only; alpha power already covered"}
+{"id":"ptsd-kluetsch-2014","decision":"no-connectivity","note":"connectivity is fMRI only; EEG result is alpha power"}
+{"id":"pm-31964161","decision":"include","type":"connectivity","source":"abstract","condition":"ptsd","measure":"aec","pairs":[["frontal","frontal"],["frontal","parietal"]],"changes":{"theta":"down"},"symptoms":["memory"],"design_level":2,"control":null,"blinded":null,"n":237,"k":null,"evidence":"preliminary","claim":"PTSD veterans: less theta power-envelope connectivity, mainly orbital and anterior middle frontal, than controls","detail":"Veterans with PTSD vs combat-exposed controls: 201 in the case-control study plus 36 in a separate validation study, eyes-open and eyes-closed resting 64-channel EEG. Source-localised (eLORETA, orthogonalised power-envelope correlation); mapped to overlying scalp region. Frontal underconnectivity was most prominent; digit-span performance linked to some connections. Taken from the abstract; not checked in the full text.","design":"Case-control"}
+{"id":"pm-22353322","decision":"defer","note":"[parked: no full text] abstract gives nonlinear interdependence and sites but no frequency band"}
+{"id":"pm-24447944","decision":"exclude","code":"CN","note":"nodal graph metrics only (degree, efficiency, betweenness); no named pairs"}
+{"id":"pm-25046862","decision":"defer","type":"connectivity","note":"[parked: no full text] alpha connectivity at Pz-P4 but measure not named in abstract"}
+{"id":"pm-28895942","decision":"exclude","code":"CN","note":"full text read: PLV used but only global and nodal graph metrics reported, no pairwise results"}
+{"id":"pm-34105902","decision":"exclude","code":"X","reason":"Mixed group: complex PTSD combined with complex dissociative disorder; no separate PTSD result"}
+{"id":"pm-36002969","decision":"exclude","code":"CN","note":"EEG microstate analysis only"}
+{"id":"pm-36250685","decision":"exclude","code":"CN","note":"machine-learning classifier; network-level DAN/VAN connectivity"}

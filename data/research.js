@@ -4015,6 +4015,17 @@ window.NF_DATA = {
       detail: "54 men with etomidate use disorder vs 46 controls, eyes-closed resting EEG (PLV between ROI time series). Source-localised (ROI time series; method not named in the passages read); mapped to overlying scalp region. Delta-band network decoupling was significant; other bands showed no group difference. The simultaneous fNIRS results are not recorded here.",
       design: "Case-control",
       cite: { authors: "Le J, et al.", year: 2026, title: "Multimodal evidence for large-scale network imbalance in etomidate use disorder", journal: "Int J Neuropsychopharmacol" }
+    },
+    {
+      id: "pm-31964161-fc", source: "abstract", condition: "ptsd", type: "connectivity",
+      measure: "aec", pairs: [["frontal","frontal"],["frontal","parietal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 237, k: null },
+      bands: ["theta"], direction: "down", evidence: "preliminary",
+      changes: { theta: "down" }, symptoms: ["memory"],
+      claim: "PTSD veterans: less theta power-envelope connectivity, mainly orbital and anterior middle frontal, than controls",
+      detail: "Veterans with PTSD vs combat-exposed controls: 201 in the case-control study plus 36 in a separate validation study, eyes-open and eyes-closed resting 64-channel EEG. Source-localised (eLORETA, orthogonalised power-envelope correlation); mapped to overlying scalp region. Frontal underconnectivity was most prominent; digit-span performance linked to some connections. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Toll RT, et al.", year: 2020, title: "An Electroencephalography Connectomic Profile of Posttraumatic Stress Disorder", journal: "Am J Psychiatry" }
     }
   ],
 
