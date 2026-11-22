@@ -1,0 +1,10 @@
+{"id":"pm-41529733","decision":"exclude","code":"MEG","note":"MEG source-level gamma connectivity in MDD with insomnia; not EEG"}
+{"id":"pm-41564947","decision":"defer","note":"[parked: no full text] no PMC id; abstract gives widespread MDD enhancement across bands without band-specific pairs for the group difference"}
+{"id":"pm-41619543","decision":"defer","note":"[parked: no full text] neurofeedback study (protocol) with amygdala coherence pairs; no PMC id and the connectivity format has no protocol field"}
+{"id":"pm-41829384","decision":"exclude","code":"CN","note":"three-channel deep-learning classifier; no connectivity or directional band result"}
+{"id":"pm-41887003","decision":"exclude","code":"CN","note":"machine-learning classifier using PLV, PLI and wPLI; no directional pair result in the abstract"}
+{"id":"pm-42050491","decision":"exclude","code":"X","reason":"Within-group comparison on suicidal ideation (not tracked); MDD vs control results are graph metrics only"}
+{"id":"pm-42112542","decision":"exclude","code":"NONBAND","note":"band-scale entropy and cross-sample entropy; not band power or pairwise connectivity"}
+{"id":"pm-42197874","decision":"exclude","code":"CN","note":"classifier study; coherence ablation without a directional group result"}
+{"id":"pm-42251933","decision":"defer","note":"[parked: no full text] no PMC id; abstract gives reduced theta FC across regions incl. putamen and thalamus but not the edges"}
+{"id":"pm-42372881","decision":"exclude","code":"MEG","note":"MEG alpha connectivity and DTI coupling; not EEG"}
