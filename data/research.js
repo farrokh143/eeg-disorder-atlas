@@ -3756,6 +3756,17 @@ window.NF_DATA = {
       detail: "40 children with ADHD and 40 age- and sex-matched controls, eyes-closed resting EEG, coherence in delta to gamma. Theta was higher and alpha lower in several pairs; reduced frontal coherence in delta, alpha and gamma, and reduced L>R laterality. Smaller frontal coherence correlated with symptom scores. Taken from the abstract; not checked in the full text. Small case-control study.",
       design: "Case-control",
       cite: { authors: "Barry RJ, et al.", year: 2011, title: "EEG coherence and symptom profiles of children with Attention-Deficit/Hyperactivity Disorder", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-27072085-fc", source: "abstract", condition: "adhd", type: "connectivity",
+      measure: "coherence", pairs: [["frontal","frontal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 78, k: null },
+      bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "down", beta: "mixed" }, symptoms: ["inattention","impulsivity","hyperactivity"],
+      claim: "ADHD children: higher frontal interhemispheric theta coherence and lower long-distance alpha coherence than controls",
+      detail: "Two ADHD subgroups (excess-theta and excess-alpha EEG profiles), 26 children each, and 26 controls; eyes-closed resting EEG, wave-shape coherence. Both subgroups are reported together here. Frontal interhemispheric theta was higher; long-distance alpha was lower in the excess-alpha group. Taken from the abstract; not checked in the full text. Small case-control study.",
+      design: "Case-control",
+      cite: { authors: "Robbie JC, et al.", year: 2016, title: "Coherence in children with AD/HD and excess alpha power in their EEG", journal: "Clin Neurophysiol" }
     }
   ],
 
