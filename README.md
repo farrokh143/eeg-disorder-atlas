@@ -50,11 +50,18 @@ python3 -m http.server 8000   # then open http://localhost:8000
 The research framework (goal, eligibility, search strategy, screening, grading and limits) is published
 on the site at `methods.html`, with live counts read from `data/research-log.csv`.
 
+The statistical evidence synthesis (direction-based synthesis without meta-analysis with sign tests, sample-size
+weighting, Benjamini–Yekutieli correction and GRADE certainty) is specified in
+[`methods/synthesis-protocol.md`](methods/synthesis-protocol.md). Run `node tools/synthesize.js` after any data change;
+it writes `data/synthesis.js` (read by the site) and `methods/synthesis-results.md`. `node tools/test-synthesize.js`
+checks the statistics against known values.
+
 ## Data (GitHub is the database)
 
 | File | Contents |
 | --- | --- |
-| `data/research.js` | Approved studies shown on the site |
+| `data/research.js` | Approved studies shown on the site: `findings` (band power, neurofeedback) and `connectivity` |
+| `data/synthesis.js` | Generated pooled results per pattern (do not edit by hand) |
 | `data/research-log.csv` | Every paper considered, with status (`included` / `excluded` / `to-review`) and reason |
 | `data/search-protocol.md` | Inclusion criteria, search strings, screening steps, log of search runs |
 | Issues | Feedback and study suggestions (forms under *New issue*) |
@@ -67,7 +74,9 @@ All content lives in [`data/research.js`](data/research.js). Add an entry to `fi
 
 ```js
 {
-  id: "unique-id",
+  id: "unique-id",              // same id as the paper's row in research-log.csv
+  source: "full-text",          // "full-text" | "abstract" | "curated"; only full-text and curated enter the pooled synthesis
+  sample: "ds-tdbrain",         // optional: shared key for papers reporting the same participants (counted once)
   condition: "adhd",            // id from `conditions`
   type: "protocol",             // "protocol" (NF training) | "biomarker" (EEG difference)
   sites: ["Cz"],                // 10-20 labels (T3/T4/T5/T6 naming); [] = individualised
@@ -86,6 +95,20 @@ All content lives in [`data/research.js`](data/research.js). Add an entry to `fi
   cite: { authors: "Surname A, ...", year: 2020, title: "...", journal: "..." }
 }
 ```
+
+Connectivity results go in `connectivity` (id = paper id + `-fc`):
+
+```js
+{
+  id: "pm-12345-fc", source: "full-text", condition: "adhd", type: "connectivity",
+  measure: "phase",             // "coherence" | "phase" (PLI, wPLI, PLV) | "aec" (amplitude envelope) | "other"
+  pairs: [["F3", "F4"], ["frontal", "parietal"]], // 10-20 sites or regions: frontal, central, temporal, parietal, occipital
+  bands: ["alpha"], changes: { alpha: "down" },   // "up" = more connectivity in the condition | "down" | "mixed"
+  // metrics, evidence, symptoms, claim, detail, design, cite: as for findings
+}
+```
+
+Always add entries with `tools/apply-review.js` (see `RUNBOOK.md`); it validates everything before writing.
 
 ### Evidence grades
 

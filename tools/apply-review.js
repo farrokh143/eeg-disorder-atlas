@@ -34,8 +34,13 @@ lines.forEach((line, i) => {
   let x; const P = m => problems.push(`line ${i + 1}${x && x.id ? " (" + x.id + ")" : ""}: ${m}`);
   try { x = JSON.parse(line); } catch (e) { return P("not valid JSON: " + e.message); }
   const r = byId[x.id]; if (!r) return P("no log row with this id");
-  if (seen.has(x.id)) return P("id appears twice in this file"); seen.add(x.id);
-  if (!["full-text", "to-review"].includes(r.status)) return P(`log status is "${r.status}"; only full-text or to-review rows can be reviewed`);
+  const isFC = x.type === "connectivity", key = x.id + (isFC ? "-fc" : "");
+  if (seen.has(key)) return P("this id (and type) appears twice in this file"); seen.add(key);
+  const cnExcluded = r.status === "excluded" && /^Outside atlas schema/.test(r.reason);
+  const okStatus = ["full-text", "to-review"].includes(r.status) || cnExcluded || (isFC && x.decision === "include" && r.status === "included");
+  if (!okStatus) return P(`log status is "${r.status}"; only full-text or to-review rows, rows excluded as "outside atlas schema", or (for connectivity) included rows can be reviewed`);
+  if (isFC && r.status === "included" && D.connectivity.some(f => f.id === key)) return P("this paper already has a connectivity entry");
+  x._cn = cnExcluded;
   if (x.decision === "exclude") {
     const reason = x.code === "X" ? x.reason : REASONS[x.code];
     if (!reason) return P(`unknown exclude code "${x.code}" (use one from RUNBOOK.md, or "X" with a "reason")`);
@@ -46,10 +51,18 @@ lines.forEach((line, i) => {
   if (x.decision !== "include") return P(`decision must be include, exclude, defer or pass (got "${x.decision}")`);
   // include
   if (!C.has(x.condition)) P(`condition "${x.condition}" is not an atlas condition (use defer with a note if the paper is about another condition)`);
-  if (!["biomarker", "protocol"].includes(x.type)) P('type must be "biomarker" or "protocol"');
+  if (!["biomarker", "protocol", "connectivity"].includes(x.type)) P('type must be "biomarker", "protocol" or "connectivity"');
   if (!["full-text", "abstract"].includes(x.source)) P('source must be "full-text" or "abstract"');
-  if (!Array.isArray(x.sites) || x.sites.some(s => !ELECTRODES.includes(s))) P(`sites must be 10-20 labels from: ${ELECTRODES.join(" ")} (or [] for whole-head)`);
-  const ch = x.changes || {}, ok = x.type === "protocol" ? ["up", "down", "asymmetry", "regulate", "mixed"] : ["up", "down", "asymmetry", "mixed"];
+  if (x.sample != null && !/^[a-z0-9-]+$/.test(x.sample)) P('sample must be a lowercase key such as "ds-tdbrain" (or leave it out)');
+  const REGIONS = ["frontal", "central", "temporal", "parietal", "occipital"];
+  if (isFC) {
+    if (!["coherence", "phase", "aec", "other"].includes(x.measure)) P('measure must be "coherence", "phase" (PLI, wPLI, PLV), "aec" (amplitude envelope) or "other"');
+    const okEnd = e => ELECTRODES.includes(e) || REGIONS.includes(e);
+    if (!Array.isArray(x.pairs) || !x.pairs.length || x.pairs.some(pr => !Array.isArray(pr) || pr.length !== 2 || !pr.every(okEnd)))
+      P(`pairs must be a list like [["F3","F4"],["frontal","parietal"]] using 10-20 sites or regions (${REGIONS.join(", ")})`);
+    if (x.sites) P("connectivity entries use pairs, not sites");
+  } else if (!Array.isArray(x.sites) || x.sites.some(s => !ELECTRODES.includes(s))) P(`sites must be 10-20 labels from: ${ELECTRODES.join(" ")} (or [] for whole-head)`);
+  const ch = x.changes || {}, ok = isFC ? ["up", "down", "mixed"] : x.type === "protocol" ? ["up", "down", "asymmetry", "regulate", "mixed"] : ["up", "down", "asymmetry", "mixed"];
   if (!Object.keys(ch).length) P("changes is empty");
   for (const [b, v] of Object.entries(ch)) { if (!B.has(b)) P(`unknown band "${b}" (bands: ${[...B].join(" ")})`); if (!ok.includes(v)) P(`change for ${b} must be one of ${ok.join("/")}`); }
   if (!Array.isArray(x.symptoms) || !x.symptoms.length || x.symptoms.some(s => !S.has(s))) P(`symptoms must be ids from: ${[...S].join(" ")}`);
@@ -69,9 +82,10 @@ lines.forEach((line, i) => {
   const vals = Object.values(ch);
   const direction = x.direction || (vals.includes("asymmetry") ? "asymmetry" : vals.every(v => v === vals[0]) && ["up", "down"].includes(vals[0]) ? vals[0] : "ratio");
   if (!["up", "down", "ratio", "asymmetry"].includes(direction)) P("direction must be up, down, ratio or asymmetry");
-  findings.push({ x, r, f: { id: r.id, condition: x.condition, type: x.type,
+  findings.push({ x, r, f: { id: key, source: x.source, ...(x.sample ? { sample: x.sample } : {}), condition: x.condition, type: x.type,
+    ...(isFC ? { measure: x.measure, pairs: x.pairs } : {}),
     metrics: { design: x.design_level, control: x.control ?? null, blinded: x.blinded ?? null, n: x.n ?? null, k: x.k ?? null },
-    sites: x.sites, bands: Object.keys(ch), direction, evidence: x.evidence, changes: ch, symptoms: x.symptoms,
+    ...(isFC ? {} : { sites: x.sites }), bands: Object.keys(ch), direction, evidence: x.evidence, changes: ch, symptoms: x.symptoms,
     claim: x.claim, detail: x.detail, design: x.design,
     cite: { authors: r.authors, year: +r.year, title: r.title.replace(/\.$/, ""), journal: r.journal } } });
 });
@@ -79,9 +93,10 @@ if (problems.length) { console.log("Nothing applied. Fix these and run again:\n"
 if (check) { console.log(`Check passed: ${lines.length} record(s) are valid. Run again without --check to apply.`); process.exit(0); }
 const J = JSON.stringify;
 const fmt = f => `    {
-      id: ${J(f.id)}, condition: ${J(f.condition)}, type: ${J(f.type)},
+      id: ${J(f.id)}, source: ${J(f.source)},${f.sample ? ` sample: ${J(f.sample)},` : ""} condition: ${J(f.condition)}, type: ${J(f.type)},${f.measure ? `
+      measure: ${J(f.measure)}, pairs: ${J(f.pairs)},` : ""}
       metrics: { design: ${f.metrics.design}, control: ${J(f.metrics.control)}, blinded: ${J(f.metrics.blinded)}, n: ${J(f.metrics.n)}, k: ${J(f.metrics.k)} },
-      sites: ${J(f.sites)}, bands: ${J(f.bands)}, direction: ${J(f.direction)}, evidence: ${J(f.evidence)},
+      ${f.sites ? `sites: ${J(f.sites)}, ` : ""}bands: ${J(f.bands)}, direction: ${J(f.direction)}, evidence: ${J(f.evidence)},
       changes: { ${Object.entries(f.changes).map(([k, v]) => `${k}: ${J(v)}`).join(", ")} }, symptoms: ${J(f.symptoms)},
       claim: ${J(f.claim)},
       detail: ${J(f.detail)},
@@ -89,20 +104,29 @@ const fmt = f => `    {
       cite: { authors: ${J(f.cite.authors)}, year: ${f.cite.year}, title: ${J(f.cite.title)}, journal: ${J(f.cite.journal)} }
     }`;
 for (const line of lines) { const x = JSON.parse(line), r = byId[x.id];
-  if (x.decision === "exclude") { r.status = "excluded"; r.reason = x._reason || (x.code === "X" ? x.reason : REASONS[x.code]); addNote(r, `Full-text review ${today}: excluded${x.note ? " (" + x.note + ")" : ""}`); nExc++; }
-  else if (x.decision === "defer") { addNote(r, `Full-text review deferred ${today}: ${x.note}`); nDef++; }
+  if (x.decision === "exclude") { r.status = "excluded"; r.reason = x.code === "X" ? x.reason : REASONS[x.code]; addNote(r, `${x.type === "connectivity" || /^Outside atlas schema/.test(r.reason) ? "Connectivity re-review" : "Full-text review"} ${today}: excluded${x.note ? " (" + x.note + ")" : ""}`); nExc++; }
+  else if (x.decision === "defer") { if (r.status === "excluded") { r.status = "full-text"; r.reason = ""; } addNote(r, `Full-text review deferred ${today}: ${x.note}`); nDef++; }
   else if (x.decision === "pass") { r.status = "full-text"; addNote(r, `Passed screening ${today}${x.note ? ": " + x.note : ""}`); nPass++; } }
 for (const { x, r, f } of findings) {
-  r.status = "included"; r.reason = ""; r.type = f.type === "protocol" ? "treatment" : "eeg-marker"; r.recording = "resting";
+  if (f.type === "connectivity" && r.status === "included") { addNote(r, `Connectivity added (${x.source}) ${today}`); nInc++; continue; }
+  r.status = "included"; r.reason = ""; r.type = f.type === "protocol" ? "treatment" : f.type === "connectivity" ? "eeg-connectivity" : "eeg-marker"; r.recording = "resting";
   r.design = f.design; r.evidence = f.evidence; r.n = f.metrics.n ?? ""; r.k = f.metrics.k ?? "";
   addNote(r, `Included after ${x.source === "abstract" ? "abstract-only" : "full-text"} review ${today}`); nInc++;
 }
 writeLog({ header, rows });
-if (findings.length) {
-  const marker = "\n  ],\n\n  methodology:"; const at = src.indexOf(marker);
-  if (at < 0) { console.log("Could not find the end of findings in research.js; log was updated but findings were not added."); process.exit(1); }
-  fs.writeFileSync(DATA, src.slice(0, at) + ",\n" + findings.map(z => fmt(z.f)).join(",\n") + src.slice(at));
+// Insert new entries at the end of the right array. Markers: findings end before the connectivity comment,
+// connectivity ends before methodology.
+function insertAt(text, marker, entries) {
+  if (!entries.length) return text;
+  const at = text.indexOf(marker);
+  if (at < 0) { console.log(`Could not find "${marker.trim()}" in research.js; log was updated but entries were not added.`); process.exit(1); }
+  const empty = /\[\s*$/.test(text.slice(0, at));
+  return text.slice(0, at) + (empty ? "\n" : ",\n") + entries.map(fmt).join(",\n") + text.slice(at);
 }
+let out = src;
+out = insertAt(out, "\n  ],\n\n  methodology:", findings.filter(z => z.f.type === "connectivity").map(z => z.f));
+out = insertAt(out, "\n  ],\n\n  // Functional connectivity", findings.filter(z => z.f.type !== "connectivity").map(z => z.f));
+if (out !== src) fs.writeFileSync(DATA, out);
 const errs = validate();
 console.log(`Applied: ${nInc} included, ${nExc} excluded, ${nDef} deferred, ${nPass} passed to full text.`);
 if (errs.length) { console.log("WARNING, validation problems:\n" + errs.join("\n")); process.exit(1); }

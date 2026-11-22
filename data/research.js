@@ -73,7 +73,7 @@ window.NF_DATA = {
   findings: [
     /* ---------------- Alzheimer's ---------------- */
     {
-      id: "ad-jeong-2004", condition: "alzheimers", type: "biomarker",
+      id: "ad-jeong-2004", source: "curated", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["P3","Pz","P4","O1","O2","T5","T6"], bands: ["delta","theta","alpha","beta"], direction: "up", evidence: "strong",
       changes: { delta: "up", theta: "up", alpha: "down", beta: "down" }, symptoms: ["memory","cogdecline"],
@@ -83,7 +83,7 @@ window.NF_DATA = {
       cite: { authors: "Jeong J", year: 2004, title: "EEG dynamics in patients with Alzheimer's disease", journal: "Clinical Neurophysiology" }
     },
     {
-      id: "ad-babiloni-2020", condition: "alzheimers", type: "biomarker",
+      id: "ad-babiloni-2020", source: "curated", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["P3","Pz","P4","O1","O2"], bands: ["alpha","delta"], direction: "down", evidence: "strong",
       changes: { alpha: "down", delta: "up" }, symptoms: ["memory","cogdecline"],
@@ -93,7 +93,7 @@ window.NF_DATA = {
       cite: { authors: "Babiloni C, Blinowska K, Bonanni L, et al.", year: 2020, title: "What electrophysiology tells us about Alzheimer's disease: a window into the synchronization and connectivity of brain neurons", journal: "Neurobiology of Aging" }
     },
     {
-      id: "ad-jelic-2000", condition: "alzheimers", type: "biomarker",
+      id: "ad-jelic-2000", source: "curated", condition: "alzheimers", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: 27, k: null },
       sites: ["T3","T5","O1","T4","T6","O2"], bands: ["theta","alpha","beta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", beta: "down", alpha: "down" }, symptoms: ["memory","cogdecline"],
@@ -104,7 +104,7 @@ window.NF_DATA = {
     },
     /* ---------------- Schizophrenia ---------------- */
     {
-      id: "scz-boutros-2008", condition: "schizophrenia", type: "biomarker",
+      id: "scz-boutros-2008", source: "curated", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Fz","F3","F4","Cz"], bands: ["delta","theta","alpha"], direction: "up", evidence: "moderate",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["psychosis"],
@@ -115,7 +115,7 @@ window.NF_DATA = {
     },
     /* ---------------- Parkinson's ---------------- */
     {
-      id: "pd-klassen-2011", condition: "parkinsons", type: "biomarker",
+      id: "pd-klassen-2011", source: "curated", condition: "parkinsons", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: null, k: null },
       sites: ["O1","O2","P3","P4"], bands: ["alpha","theta"], direction: "down", evidence: "moderate",
       changes: { alpha: "down", theta: "up" }, symptoms: ["cogdecline","motor"],
@@ -126,7 +126,7 @@ window.NF_DATA = {
     },
     /* ---------------- Brain injury (TBI) ---------------- */
     {
-      id: "tbi-thatcher-1989", condition: "tbi", type: "biomarker",
+      id: "tbi-thatcher-1989", source: "curated", condition: "tbi", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["F3","F4","Fz","T3","T4"], bands: ["theta","alpha","beta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", alpha: "down", beta: "mixed" }, symptoms: ["postconcussion"],
@@ -136,7 +136,7 @@ window.NF_DATA = {
       cite: { authors: "Thatcher RW, Walker RA, Gerson I, Geisler FH", year: 1989, title: "EEG discriminant analyses of mild head trauma", journal: "Electroencephalography and Clinical Neurophysiology" }
     },
     {
-      id: "tbi-nuwer-2005", condition: "tbi", type: "biomarker",
+      id: "tbi-nuwer-2005", source: "curated", condition: "tbi", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["delta","theta","alpha"], direction: "up", evidence: "contested",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["postconcussion","inattention","memory"],
@@ -148,7 +148,7 @@ window.NF_DATA = {
     /* ---------------- Insomnia ---------------- */
     /* ---------------- Autism ---------------- */
     {
-      id: "asd-wang-2013", condition: "autism", type: "biomarker",
+      id: "asd-wang-2013", source: "curated", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["F3","F4","C3","C4","P3","P4","O1","O2"], bands: ["delta","theta","alpha","beta","gamma"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down", beta: "up", gamma: "up" }, symptoms: ["social"],
@@ -159,7 +159,7 @@ window.NF_DATA = {
     },
     /* ---------------- Alcohol & substance use ---------------- */
     {
-      id: "sud-rangaswamy-2002", condition: "sud", type: "biomarker",
+      id: "sud-rangaswamy-2002", source: "curated", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Cz","C3","C4","Fz"], bands: ["beta","hibeta"], direction: "up", evidence: "moderate",
       changes: { beta: "up", hibeta: "up" }, symptoms: ["craving"],
@@ -170,7 +170,7 @@ window.NF_DATA = {
     },
     /* ---------------- ADHD ---------------- */
     {
-      id: "adhd-tbr-biomarker", condition: "adhd", type: "biomarker",
+      id: "adhd-tbr-biomarker", source: "curated", condition: "adhd", type: "biomarker",
       metrics: { design: 5, control: null, blinded: null, n: null, k: null },
       sites: ["Cz"], bands: ["theta","beta"], direction: "ratio", evidence: "contested",
       changes: { theta: "up", beta: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -180,7 +180,7 @@ window.NF_DATA = {
       cite: { authors: "Arns M, Conners CK, Kraemer HC", year: 2013, title: "A decade of EEG theta/beta ratio research in ADHD: a meta-analysis", journal: "Journal of Attention Disorders" }
     },
     {
-      id: "adhd-arns-2009", condition: "adhd", type: "protocol",
+      id: "adhd-arns-2009", source: "curated", condition: "adhd", type: "protocol",
       metrics: { design: 5, control: null, blinded: null, n: null, k: null },
       sites: ["Cz","C3","C4"], bands: ["theta","smr","beta"], direction: "ratio", evidence: "strong",
       changes: { theta: "down", smr: "up", beta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -190,7 +190,7 @@ window.NF_DATA = {
       cite: { authors: "Arns M, de Ridder S, Strehl U, Breteler M, Coenen A", year: 2009, title: "Efficacy of neurofeedback treatment in ADHD: the effects on inattention, impulsivity and hyperactivity: a meta-analysis", journal: "Clinical EEG and Neuroscience" }
     },
     {
-      id: "adhd-cortese-2016", condition: "adhd", type: "protocol",
+      id: "adhd-cortese-2016", source: "curated", condition: "adhd", type: "protocol",
       metrics: { design: 5, control: null, blinded: true, n: null, k: null },
       sites: ["Cz","C3","C4"], bands: ["theta","smr","beta"], direction: "ratio", evidence: "contested",
       changes: { theta: "down", smr: "up", beta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -200,7 +200,7 @@ window.NF_DATA = {
       cite: { authors: "Cortese S, Ferrin M, Brandeis D, et al.", year: 2016, title: "Neurofeedback for attention-deficit/hyperactivity disorder: meta-analysis of clinical and neuropsychological outcomes from randomized controlled trials", journal: "Journal of the American Academy of Child & Adolescent Psychiatry" }
     },
     {
-      id: "adhd-ncg-2021", condition: "adhd", type: "protocol",
+      id: "adhd-ncg-2021", source: "curated", condition: "adhd", type: "protocol",
       metrics: { design: 4, control: "sham", blinded: true, n: null, k: null },
       sites: ["Cz"], bands: ["theta","beta"], direction: "ratio", evidence: "contested",
       changes: { theta: "down", beta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -210,7 +210,7 @@ window.NF_DATA = {
       cite: { authors: "Neurofeedback Collaborative Group", year: 2021, title: "Double-blind placebo-controlled randomized clinical trial of neurofeedback for attention-deficit/hyperactivity disorder with 13-month follow-up", journal: "Journal of the American Academy of Child & Adolescent Psychiatry" }
     },
     {
-      id: "adhd-scp-2006", condition: "adhd", type: "protocol",
+      id: "adhd-scp-2006", source: "curated", condition: "adhd", type: "protocol",
       metrics: { design: 3, control: null, blinded: null, n: null, k: null },
       sites: ["Cz"], bands: ["scp"], direction: "up", evidence: "moderate",
       changes: { scp: "regulate" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -220,7 +220,7 @@ window.NF_DATA = {
       cite: { authors: "Strehl U, Leins U, Goth G, Klinger C, Hinterberger T, Birbaumer N", year: 2006, title: "Self-regulation of slow cortical potentials: a new treatment for children with attention-deficit/hyperactivity disorder", journal: "Pediatrics" }
     },
     {
-      id: "adhd-vandoren-2019", condition: "adhd", type: "protocol",
+      id: "adhd-vandoren-2019", source: "curated", condition: "adhd", type: "protocol",
       metrics: { design: 5, control: null, blinded: null, n: null, k: null },
       sites: ["Cz","C3","C4"], bands: ["theta","smr","scp"], direction: "ratio", evidence: "moderate",
       changes: { theta: "down", smr: "up", scp: "regulate" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -230,7 +230,7 @@ window.NF_DATA = {
       cite: { authors: "Van Doren J, Arns M, Heinrich H, Vollebregt MA, Strehl U, Loo SK", year: 2019, title: "Sustained effects of neurofeedback in ADHD: a systematic review and meta-analysis", journal: "European Child & Adolescent Psychiatry" }
     },
     {
-      id: "adhd-barry-2003", condition: "adhd", type: "biomarker",
+      id: "adhd-barry-2003", source: "curated", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["F3","Fz","F4","C3","Cz","C4"], bands: ["theta","alpha","beta"], direction: "up", evidence: "moderate",
       changes: { theta: "up", alpha: "down", beta: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -240,7 +240,7 @@ window.NF_DATA = {
       cite: { authors: "Barry RJ, Clarke AR, Johnstone SJ", year: 2003, title: "A review of electrophysiology in attention-deficit/hyperactivity disorder: I. Qualitative and quantitative electroencephalography", journal: "Clinical Neurophysiology" }
     },
     {
-      id: "adhd-snyder-2006", condition: "adhd", type: "biomarker",
+      id: "adhd-snyder-2006", source: "curated", condition: "adhd", type: "biomarker",
       metrics: { design: 5, control: null, blinded: null, n: null, k: null },
       sites: ["Cz"], bands: ["theta","beta"], direction: "ratio", evidence: "moderate",
       changes: { theta: "up", beta: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -250,7 +250,7 @@ window.NF_DATA = {
       cite: { authors: "Snyder SM, Hall JR", year: 2006, title: "A meta-analysis of quantitative EEG power associated with attention-deficit hyperactivity disorder", journal: "Journal of Clinical Neurophysiology" }
     },
     {
-      id: "adhd-arns-2012", condition: "adhd", type: "protocol",
+      id: "adhd-arns-2012", source: "curated", condition: "adhd", type: "protocol",
       metrics: { design: 1, control: "none", blinded: false, n: 21, k: null },
       sites: ["Fz","Cz"], bands: ["theta","beta","smr"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "down", beta: "up", smr: "up" }, symptoms: ["inattention","impulsivity","hyperactivity","lowmood"],
@@ -260,7 +260,7 @@ window.NF_DATA = {
       cite: { authors: "Arns M, Drinkenburg W, Kenemans JL", year: 2012, title: "The effects of QEEG-informed neurofeedback in ADHD: an open-label pilot study", journal: "Applied Psychophysiology and Biofeedback" }
     },
     {
-      id: "adhd-krepel-2020", condition: "adhd", type: "protocol",
+      id: "adhd-krepel-2020", source: "curated", condition: "adhd", type: "protocol",
       metrics: { design: 2, control: "none", blinded: false, n: null, k: null },
       sites: ["Fz","Cz"], bands: ["theta","beta","smr"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "down", beta: "up", smr: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -271,7 +271,7 @@ window.NF_DATA = {
     },
     /* ---------------- Depression ---------------- */
     {
-      id: "dep-henriques-1991", condition: "depression", type: "biomarker",
+      id: "dep-henriques-1991", source: "curated", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["F3","F4"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -281,7 +281,7 @@ window.NF_DATA = {
       cite: { authors: "Henriques JB, Davidson RJ", year: 1991, title: "Left frontal hypoactivation in depression", journal: "Journal of Abnormal Psychology" }
     },
     {
-      id: "dep-vandervinne-2017", condition: "depression", type: "biomarker",
+      id: "dep-vandervinne-2017", source: "curated", condition: "depression", type: "biomarker",
       metrics: { design: 5, control: null, blinded: null, n: null, k: null },
       sites: ["F3","F4"], bands: ["alpha"], direction: "asymmetry", evidence: "contested",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -291,7 +291,7 @@ window.NF_DATA = {
       cite: { authors: "van der Vinne N, Vollebregt MA, van Putten MJAM, Arns M", year: 2017, title: "Frontal alpha asymmetry as a diagnostic marker in depression: fact or fiction? A meta-analysis", journal: "NeuroImage: Clinical" }
     },
     {
-      id: "dep-baehr-2001", condition: "depression", type: "protocol",
+      id: "dep-baehr-2001", source: "curated", condition: "depression", type: "protocol",
       metrics: { design: 1, control: "none", blinded: false, n: null, k: null },
       sites: ["F3","F4"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -301,7 +301,7 @@ window.NF_DATA = {
       cite: { authors: "Baehr E, Rosenfeld JP, Baehr R", year: 2001, title: "Clinical use of an alpha asymmetry neurofeedback protocol in the treatment of mood disorders: follow-up study one to five years post therapy", journal: "Journal of Neurotherapy" }
     },
     {
-      id: "dep-choi-2011", condition: "depression", type: "protocol",
+      id: "dep-choi-2011", source: "curated", condition: "depression", type: "protocol",
       metrics: { design: 4, control: "sham", blinded: null, n: null, k: null },
       sites: ["F3","F4"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -311,7 +311,7 @@ window.NF_DATA = {
       cite: { authors: "Choi SW, Chi SE, Chung SY, Kim JW, Ahn CY, Kim HT", year: 2011, title: "Is alpha wave neurofeedback effective with randomized clinical trials in depression? A pilot study", journal: "Neuropsychobiology" }
     },
     {
-      id: "dep-pizzagalli-2011", condition: "depression", type: "biomarker",
+      id: "dep-pizzagalli-2011", source: "curated", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Fz"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["lowmood"],
@@ -321,7 +321,7 @@ window.NF_DATA = {
       cite: { authors: "Pizzagalli DA", year: 2011, title: "Frontocingulate dysfunction in depression: toward biomarkers of treatment response", journal: "Neuropsychopharmacology" }
     },
     {
-      id: "dep-arns-2015", condition: "depression", type: "biomarker",
+      id: "dep-arns-2015", source: "curated", condition: "depression", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: 1344, k: null },
       sites: ["F3","Fz","F4"], bands: ["theta"], direction: "up", evidence: "contested",
       changes: { theta: "up" }, symptoms: ["lowmood"],
@@ -332,7 +332,7 @@ window.NF_DATA = {
     },
     /* ---------------- Anxiety ---------------- */
     {
-      id: "anx-hammond-2005", condition: "anxiety", type: "protocol",
+      id: "anx-hammond-2005", source: "curated", condition: "anxiety", type: "protocol",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Pz","O1","O2"], bands: ["alpha","theta","hibeta"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up", theta: "up", hibeta: "down" }, symptoms: ["anxiety","hyperarousal"],
@@ -343,7 +343,7 @@ window.NF_DATA = {
     },
     /* ---------------- PTSD ---------------- */
     {
-      id: "ptsd-peniston-1991", condition: "ptsd", type: "protocol",
+      id: "ptsd-peniston-1991", source: "curated", condition: "ptsd", type: "protocol",
       metrics: { design: 3, control: "usual", blinded: null, n: null, k: null },
       sites: ["O1"], bands: ["alpha","theta"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up", theta: "up" }, symptoms: ["intrusions","anxiety","hyperarousal"],
@@ -353,7 +353,7 @@ window.NF_DATA = {
       cite: { authors: "Peniston EG, Kulkosky PJ", year: 1991, title: "Alpha-theta brainwave neurofeedback for Vietnam veterans with combat-related post-traumatic stress disorder", journal: "Medical Psychotherapy" }
     },
     {
-      id: "ptsd-vanderkolk-2016", condition: "ptsd", type: "protocol",
+      id: "ptsd-vanderkolk-2016", source: "curated", condition: "ptsd", type: "protocol",
       metrics: { design: 4, control: "usual", blinded: null, n: null, k: null },
       sites: ["T4"], bands: ["alpha"], direction: "down", evidence: "moderate",
       changes: { alpha: "down" }, symptoms: ["intrusions","hyperarousal"],
@@ -363,7 +363,7 @@ window.NF_DATA = {
       cite: { authors: "van der Kolk BA, Hodgdon H, Gapen M, et al.", year: 2016, title: "A randomized controlled study of neurofeedback for chronic PTSD", journal: "PLoS ONE" }
     },
     {
-      id: "ptsd-kluetsch-2014", condition: "ptsd", type: "protocol",
+      id: "ptsd-kluetsch-2014", source: "curated", condition: "ptsd", type: "protocol",
       metrics: { design: 1, control: null, blinded: null, n: null, k: null },
       sites: ["Pz"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["hyperarousal"],
@@ -374,7 +374,7 @@ window.NF_DATA = {
     },
     /* ---------------- Insomnia ---------------- */
     {
-      id: "ins-hoedlmoser-2008", condition: "insomnia", type: "protocol",
+      id: "ins-hoedlmoser-2008", source: "curated", condition: "insomnia", type: "protocol",
       metrics: { design: 3, control: "active", blinded: null, n: null, k: null },
       sites: ["C3","Cz","C4"], bands: ["smr"], direction: "up", evidence: "preliminary",
       changes: { smr: "up" }, symptoms: ["sleep","memory"],
@@ -384,7 +384,7 @@ window.NF_DATA = {
       cite: { authors: "Hoedlmoser K, Pecherstorfer T, Gruber G, et al.", year: 2008, title: "Instrumental conditioning of human sensorimotor rhythm (12–15 Hz) and its impact on sleep as well as declarative learning", journal: "Sleep" }
     },
     {
-      id: "ins-schabus-2017", condition: "insomnia", type: "protocol",
+      id: "ins-schabus-2017", source: "curated", condition: "insomnia", type: "protocol",
       metrics: { design: 4, control: "sham", blinded: true, n: null, k: null },
       sites: ["C3","Cz","C4"], bands: ["smr"], direction: "up", evidence: "contested",
       changes: { smr: "up" }, symptoms: ["sleep"],
@@ -394,7 +394,7 @@ window.NF_DATA = {
       cite: { authors: "Schabus M, Griessenberger H, Gnjezda MT, Heib DPJ, Wislowska M, Hoedlmoser K", year: 2017, title: "Better than sham? A double-blind placebo-controlled neurofeedback study in primary insomnia", journal: "Brain" }
     },
     {
-      id: "ins-zhao-2021", condition: "insomnia", type: "biomarker",
+      id: "ins-zhao-2021", source: "curated", condition: "insomnia", type: "biomarker",
       metrics: { design: 5, control: null, blinded: null, n: 977, k: 24 },
       sites: [], bands: ["beta", "theta", "gamma"], direction: "up", evidence: "strong",
       changes: { beta: "up", theta: "up", gamma: "up" }, symptoms: ["sleep","hyperarousal"],
@@ -405,7 +405,7 @@ window.NF_DATA = {
     },
     /* ---------------- Epilepsy ---------------- */
     {
-      id: "epi-sterman-2000", condition: "epilepsy", type: "protocol",
+      id: "epi-sterman-2000", source: "curated", condition: "epilepsy", type: "protocol",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["C3","Cz","C4"], bands: ["smr","theta"], direction: "up", evidence: "moderate",
       changes: { smr: "up", theta: "down" }, symptoms: ["seizures"],
@@ -415,7 +415,7 @@ window.NF_DATA = {
       cite: { authors: "Sterman MB", year: 2000, title: "Basic concepts and clinical findings in the treatment of seizure disorders with EEG operant conditioning", journal: "Clinical Electroencephalography" }
     },
     {
-      id: "epi-kotchoubey-2001", condition: "epilepsy", type: "protocol",
+      id: "epi-kotchoubey-2001", source: "curated", condition: "epilepsy", type: "protocol",
       metrics: { design: 3, control: "active", blinded: null, n: null, k: null },
       sites: ["Cz"], bands: ["scp"], direction: "up", evidence: "moderate",
       changes: { scp: "regulate" }, symptoms: ["seizures"],
@@ -425,7 +425,7 @@ window.NF_DATA = {
       cite: { authors: "Kotchoubey B, Strehl U, Uhlmann C, et al.", year: 2001, title: "Modification of slow cortical potentials in patients with refractory epilepsy: a controlled outcome study", journal: "Epilepsia" }
     },
     {
-      id: "epi-tan-2009", condition: "epilepsy", type: "protocol",
+      id: "epi-tan-2009", source: "curated", condition: "epilepsy", type: "protocol",
       metrics: { design: 5, control: null, blinded: null, n: null, k: null },
       sites: ["C3","Cz","C4"], bands: ["smr","scp"], direction: "up", evidence: "moderate",
       changes: { smr: "up", scp: "regulate" }, symptoms: ["seizures"],
@@ -436,7 +436,7 @@ window.NF_DATA = {
     },
     /* ---------------- Autism ---------------- */
     {
-      id: "asd-pineda-2008", condition: "autism", type: "protocol",
+      id: "asd-pineda-2008", source: "curated", condition: "autism", type: "protocol",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["C3","C4"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["social"],
@@ -446,7 +446,7 @@ window.NF_DATA = {
       cite: { authors: "Pineda JA, Brang D, Hecht E, et al.", year: 2008, title: "Positive behavioral outcomes after mu rhythm neurofeedback training in children with autism spectrum disorder", journal: "Research in Autism Spectrum Disorders" }
     },
     {
-      id: "asd-coben-2007", condition: "autism", type: "protocol",
+      id: "asd-coben-2007", source: "curated", condition: "autism", type: "protocol",
       metrics: { design: 3, control: "usual", blinded: null, n: null, k: null },
       sites: [], bands: ["theta","hibeta"], direction: "down", evidence: "preliminary",
       changes: { theta: "down", hibeta: "down" }, symptoms: ["social"],
@@ -456,7 +456,7 @@ window.NF_DATA = {
       cite: { authors: "Coben R, Padolsky I", year: 2007, title: "Assessment-guided neurofeedback for autistic spectrum disorder", journal: "Journal of Neurotherapy" }
     },
     {
-      id: "asd-neo-2023", condition: "autism", type: "biomarker",
+      id: "asd-neo-2023", source: "curated", condition: "autism", type: "biomarker",
       sites: [], bands: ["alpha", "gamma"], direction: "down", evidence: "strong",
       metrics: { design: 5, control: null, blinded: null, n: 2701, k: 41 },
       changes: { alpha: "down", gamma: "up" }, symptoms: ["social"],
@@ -467,7 +467,7 @@ window.NF_DATA = {
     },
     /* ---------------- Alcohol & substance use ---------------- */
     {
-      id: "sud-peniston-1989", condition: "sud", type: "protocol",
+      id: "sud-peniston-1989", source: "curated", condition: "sud", type: "protocol",
       metrics: { design: 3, control: "usual", blinded: null, n: null, k: null },
       sites: ["O1"], bands: ["alpha","theta"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up", theta: "up" }, symptoms: ["craving","lowmood"],
@@ -477,7 +477,7 @@ window.NF_DATA = {
       cite: { authors: "Peniston EG, Kulkosky PJ", year: 1989, title: "Alpha-theta brainwave training and beta-endorphin levels in alcoholics", journal: "Alcoholism: Clinical and Experimental Research" }
     },
     {
-      id: "sud-scott-2005", condition: "sud", type: "protocol",
+      id: "sud-scott-2005", source: "curated", condition: "sud", type: "protocol",
       metrics: { design: 4, control: "usual", blinded: null, n: null, k: null },
       sites: ["Cz","Pz"], bands: ["smr","beta","alpha","theta"], direction: "up", evidence: "moderate",
       changes: { smr: "up", beta: "up", alpha: "up", theta: "up" }, symptoms: ["craving","inattention"],
@@ -488,7 +488,7 @@ window.NF_DATA = {
     },
     /* ---------------- Migraine ---------------- */
     {
-      id: "mig-walker-2011", condition: "migraine", type: "protocol",
+      id: "mig-walker-2011", source: "curated", condition: "migraine", type: "protocol",
       metrics: { design: 2, control: "usual", blinded: null, n: null, k: null },
       sites: [], bands: ["hibeta"], direction: "down", evidence: "preliminary",
       changes: { hibeta: "down" }, symptoms: ["headache"],
@@ -498,7 +498,7 @@ window.NF_DATA = {
       cite: { authors: "Walker JE", year: 2011, title: "QEEG-guided neurofeedback for recurrent migraine headaches", journal: "Clinical EEG and Neuroscience" }
     },
     {
-      id: "mig-zebhauser-2024", condition: "migraine", type: "biomarker",
+      id: "mig-zebhauser-2024", source: "curated", condition: "migraine", type: "biomarker",
       sites: [], bands: ["theta"], direction: "up", evidence: "moderate",
       metrics: { design: 5, control: null, blinded: null, n: null, k: 27 },
       changes: { theta: "up" }, symptoms: ["headache"],
@@ -509,7 +509,7 @@ window.NF_DATA = {
     },
     /* ---------------- Healthy cognition ---------------- */
     {
-      id: "cog-hanslmayr-2005", condition: "cognition", type: "protocol",
+      id: "cog-hanslmayr-2005", source: "curated", condition: "cognition", type: "protocol",
       metrics: { design: 3, control: null, blinded: null, n: null, k: null },
       sites: ["Pz"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["executive"],
@@ -519,7 +519,7 @@ window.NF_DATA = {
       cite: { authors: "Hanslmayr S, Sauseng P, Doppelmayr M, Schabus M, Klimesch W", year: 2005, title: "Increasing individual upper alpha power by neurofeedback improves cognitive performance in human subjects", journal: "Applied Psychophysiology and Biofeedback" }
     },
     {
-      id: "cog-zoefel-2011", condition: "cognition", type: "protocol",
+      id: "cog-zoefel-2011", source: "curated", condition: "cognition", type: "protocol",
       metrics: { design: 3, control: "usual", blinded: null, n: null, k: null },
       sites: ["P3","Pz","P4","O1","O2"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["executive"],
@@ -529,7 +529,7 @@ window.NF_DATA = {
       cite: { authors: "Zoefel B, Huster RJ, Herrmann CS", year: 2011, title: "Neurofeedback training of the upper alpha frequency band in EEG improves cognitive performance", journal: "NeuroImage" }
     },
     {
-      id: "cog-gruzelier-2014", condition: "cognition", type: "protocol",
+      id: "cog-gruzelier-2014", source: "curated", condition: "cognition", type: "protocol",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Cz","C4","Pz"], bands: ["smr","alpha","theta"], direction: "up", evidence: "moderate",
       changes: { smr: "up", alpha: "up", theta: "up" }, symptoms: ["inattention","memory"],
@@ -539,7 +539,7 @@ window.NF_DATA = {
       cite: { authors: "Gruzelier JH", year: 2014, title: "EEG-neurofeedback for optimising performance. I: A review of cognitive and affective outcome in healthy participants", journal: "Neuroscience & Biobehavioral Reviews" }
     },
     {
-      id: "cog-enriquez-2014", condition: "cognition", type: "protocol",
+      id: "cog-enriquez-2014", source: "curated", condition: "cognition", type: "protocol",
       metrics: { design: 3, control: "active", blinded: null, n: null, k: null },
       sites: ["Fz"], bands: ["theta"], direction: "up", evidence: "moderate",
       changes: { theta: "up" }, symptoms: ["executive","memory"],
@@ -549,7 +549,7 @@ window.NF_DATA = {
       cite: { authors: "Enriquez-Geppert S, Huster RJ, Figge C, Herrmann CS", year: 2014, title: "Self-regulation of frontal-midline theta facilitates memory updating and mental set shifting", journal: "Frontiers in Behavioral Neuroscience" }
     },
     {
-      id: "pm-28577262", condition: "adhd", type: "biomarker",
+      id: "pm-28577262", source: "full-text", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["F7","F3","Fz","F4","F8","C3","Cz","C4","P3","Pz","P4"], bands: ["delta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -559,7 +559,7 @@ window.NF_DATA = {
       cite: { authors: "Rommel AS, et al.", year: 2017, title: "Altered EEG spectral power during rest and cognitive performance: a comparison of preterm-born adolescents to adolescents with ADHD", journal: "Eur Child Adolesc Psychiatry" }
     },
     {
-      id: "pm-18607528", condition: "alzheimers", type: "biomarker",
+      id: "pm-18607528", source: "full-text", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["C3","P3","Pz","P4","T6","O1","O2"], bands: ["gamma"], direction: "up", evidence: "preliminary",
       changes: { gamma: "up" }, symptoms: ["memory","cogdecline"],
@@ -569,7 +569,7 @@ window.NF_DATA = {
       cite: { authors: "van Deursen JA, et al.", year: 2008, title: "Increased EEG gamma band activity in Alzheimer's disease and mild cognitive impairment", journal: "J Neural Transm (Vienna)" }
     },
     {
-      id: "pm-23969043", condition: "alzheimers", type: "biomarker",
+      id: "pm-23969043", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 95, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down", beta: "down" }, symptoms: ["memory","cogdecline"],
@@ -579,7 +579,7 @@ window.NF_DATA = {
       cite: { authors: "Chen CC, et al.", year: 2015, title: "Frequency power and coherence of electroencephalography are correlated with the severity of Alzheimer's disease: A multicenter analysis in Taiwan", journal: "J Formos Med Assoc" }
     },
     {
-      id: "pm-24015222", condition: "alzheimers", type: "biomarker",
+      id: "pm-24015222", source: "full-text", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 76, k: null },
       sites: ["O1","O2","Pz","P4","T5","T6","F8"], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down", beta: "down" }, symptoms: ["memory","cogdecline"],
@@ -589,7 +589,7 @@ window.NF_DATA = {
       cite: { authors: "Fraga FJ, et al.", year: 2013, title: "Characterizing Alzheimer's disease severity via resting-awake EEG amplitude modulation analysis", journal: "PLoS One" }
     },
     {
-      id: "pm-29991135", condition: "alzheimers", type: "biomarker",
+      id: "pm-29991135", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["memory","cogdecline"],
@@ -599,7 +599,7 @@ window.NF_DATA = {
       cite: { authors: "Musaeus CS, et al.", year: 2018, title: "EEG Theta Power Is an Early Marker of Cognitive Decline in Dementia due to Alzheimer's Disease", journal: "J Alzheimers Dis" }
     },
     {
-      id: "pm-31211359", condition: "alzheimers", type: "biomarker",
+      id: "pm-31211359", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: 314, k: null },
       sites: ["F3","Fz","F4","C3","Cz","C4"], bands: ["delta","beta","gamma"], direction: "ratio", evidence: "moderate",
       changes: { delta: "down", beta: "up", gamma: "up" }, symptoms: ["memory","cogdecline"],
@@ -609,7 +609,7 @@ window.NF_DATA = {
       cite: { authors: "Gaubert S, et al.", year: 2019, title: "EEG evidence of compensatory mechanisms in preclinical Alzheimer's disease", journal: "Brain" }
     },
     {
-      id: "pm-32641111", condition: "alzheimers", type: "biomarker",
+      id: "pm-32641111", source: "full-text", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "contested",
       changes: { delta: "mixed", theta: "mixed", alpha: "mixed", beta: "mixed" }, symptoms: ["memory","cogdecline"],
@@ -619,7 +619,7 @@ window.NF_DATA = {
       cite: { authors: "Schumacher J, et al.", year: 2020, title: "Quantitative EEG as a biomarker in mild cognitive impairment with Lewy bodies", journal: "Alzheimers Res Ther" }
     },
     {
-      id: "pm-33080295", condition: "alzheimers", type: "biomarker",
+      id: "pm-33080295", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down", beta: "down" }, symptoms: ["memory","cogdecline"],
@@ -629,7 +629,7 @@ window.NF_DATA = {
       cite: { authors: "Babiloni C, et al.", year: 2020, title: "Resting-state electroencephalographic delta rhythms may reflect global cortical arousal in healthy old seniors and patients with Alzheimer's disease dementia", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-33185607", condition: "alzheimers", type: "biomarker",
+      id: "pm-33185607", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 5, control: null, blinded: null, n: null, k: 6 },
       sites: [], bands: ["alpha"], direction: "down", evidence: "moderate",
       changes: { alpha: "down" }, symptoms: ["memory","cogdecline"],
@@ -639,7 +639,7 @@ window.NF_DATA = {
       cite: { authors: "Lejko N, et al.", year: 2020, title: "Alpha Power and Functional Connectivity in Cognitive Decline: A Systematic Review and Meta-Analysis", journal: "J Alzheimers Dis" }
     },
     {
-      id: "pm-33544703", condition: "alzheimers", type: "biomarker",
+      id: "pm-33544703", source: "full-text", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["memory","cogdecline"],
@@ -649,7 +649,7 @@ window.NF_DATA = {
       cite: { authors: "Meghdadi AH, et al.", year: 2021, title: "Resting state EEG biomarkers of cognitive decline associated with Alzheimer's disease and mild cognitive impairment", journal: "PLoS One" }
     },
     {
-      id: "pm-35618112", condition: "alzheimers", type: "biomarker",
+      id: "pm-35618112", source: "full-text", sample: "martin-ad-99", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 99, k: null },
       sites: ["F3","F4"], bands: ["alpha","beta"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "mixed", beta: "asymmetry" }, symptoms: ["memory","cogdecline"],
@@ -659,7 +659,7 @@ window.NF_DATA = {
       cite: { authors: "Martin T, et al.", year: 2022, title: "EEG asymmetry and cognitive testing in MCI identification", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-36330876", condition: "alzheimers", type: "biomarker",
+      id: "pm-36330876", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 156, k: null },
       sites: ["C3","P3","C4","P4","O1","O2"], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "mixed" }, symptoms: ["memory","cogdecline"],
@@ -669,7 +669,7 @@ window.NF_DATA = {
       cite: { authors: "Del Percio C, et al.", year: 2022, title: "What a single electroencephalographic (EEG) channel can tell us about patients with dementia due to Alzheimer's disease", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-36413420", condition: "alzheimers", type: "biomarker",
+      id: "pm-36413420", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 145, k: null },
       sites: ["C3","P3","C4","P4","O1","O2"], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["memory","cogdecline"],
@@ -679,7 +679,7 @@ window.NF_DATA = {
       cite: { authors: "Del Percio C, et al.", year: 2023, title: "What a Single Electroencephalographic (EEG) Channel Can Tell us About Alzheimer's Disease Patients With Mild Cognitive Impairment", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-37248895", condition: "alzheimers", type: "biomarker",
+      id: "pm-37248895", source: "full-text", sample: "martin-ad-99", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 99, k: null },
       sites: ["Fz","Cz","Pz","O1","O2","F3","F4"], bands: ["theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", beta: "down" }, symptoms: ["memory","cogdecline"],
@@ -689,7 +689,7 @@ window.NF_DATA = {
       cite: { authors: "Martin T, et al.", year: 2023, title: "Mild Cognitive Impairment in African Americans Is Associated with Differences in EEG Theta/Beta Ratio", journal: "J Alzheimers Dis" }
     },
     {
-      id: "pm-37858173", condition: "alzheimers", type: "biomarker",
+      id: "pm-37858173", source: "full-text", condition: "alzheimers", type: "biomarker",
       metrics: { design: 1, control: null, blinded: null, n: 148, k: null },
       sites: ["T3","T4","T5","T6","P3","Pz","P4","O1","O2"], bands: ["theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", beta: "down" }, symptoms: ["memory","cogdecline"],
@@ -699,7 +699,7 @@ window.NF_DATA = {
       cite: { authors: "Scheijbeler EP, et al.", year: 2023, title: "Longitudinal resting-state EEG in amyloid-positive patients along the Alzheimer's disease continuum: considerations for clinical trials", journal: "Alzheimers Res Ther" }
     },
     {
-      id: "pm-38217593", condition: "alzheimers", type: "biomarker",
+      id: "pm-38217593", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 53, k: null },
       sites: [], bands: ["beta","theta","delta"], direction: "ratio", evidence: "preliminary",
       changes: { beta: "down", theta: "up", delta: "up" }, symptoms: ["memory","cogdecline"],
@@ -709,7 +709,7 @@ window.NF_DATA = {
       cite: { authors: "Zawiślak-Fornagiel K, et al.", year: 2024, title: "Quantitative EEG Spectral and Connectivity Analysis for Cognitive Decline in Amnestic Mild Cognitive Impairment", journal: "J Alzheimers Dis" }
     },
     {
-      id: "pm-38969018", condition: "alzheimers", type: "biomarker",
+      id: "pm-38969018", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 68, k: null },
       sites: ["P3","Pz","P4","T5","T6","O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["memory"],
@@ -719,7 +719,7 @@ window.NF_DATA = {
       cite: { authors: "Perez V, et al.", year: 2024, title: "Individual posterior alpha rhythms and cognitive reserve as possible early prognostic markers in people with subjective memory complaints", journal: "Behav Brain Res" }
     },
     {
-      id: "pm-39449097", condition: "alzheimers", type: "biomarker",
+      id: "pm-39449097", source: "full-text", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["theta","delta","gamma","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", delta: "up", gamma: "up", alpha: "mixed" }, symptoms: ["memory","cogdecline"],
@@ -729,7 +729,7 @@ window.NF_DATA = {
       cite: { authors: "Chetty CA, et al.", year: 2024, title: "EEG biomarkers in Alzheimer's and prodromal Alzheimer's: a comprehensive analysis of spectral and connectivity features", journal: "Alzheimers Res Ther" }
     },
     {
-      id: "pm-40359673", condition: "alzheimers", type: "biomarker",
+      id: "pm-40359673", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 182, k: null },
       sites: [], bands: ["theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", alpha: "mixed" }, symptoms: ["memory","cogdecline"],
@@ -739,7 +739,7 @@ window.NF_DATA = {
       cite: { authors: "Lee AL, et al.", year: 2025, title: "Exploring the diagnostic potential of EEG theta power and interhemispheric correlation of temporal lobe activities in Alzheimer's Disease through random forest analysis", journal: "Comput Biol Med" }
     },
     {
-      id: "pm-40413989", condition: "alzheimers", type: "biomarker",
+      id: "pm-40413989", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 28, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["beta","delta","alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { beta: "up", delta: "down", alpha: "asymmetry" }, symptoms: ["memory","cogdecline"],
@@ -749,7 +749,7 @@ window.NF_DATA = {
       cite: { authors: "Nikaido Y, et al.", year: 2025, title: "Short-term resting-state electroencephalography fast activity is associated with cognitive decline in older adults: A population-based cross-sectional pilot study", journal: "Psychiatry Res Neuroimaging" }
     },
     {
-      id: "pm-40755242", condition: "alzheimers", type: "biomarker",
+      id: "pm-40755242", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 65, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["gamma"], direction: "ratio", evidence: "contested",
       changes: { gamma: "mixed" }, symptoms: ["memory","cogdecline"],
@@ -759,7 +759,7 @@ window.NF_DATA = {
       cite: { authors: "S V, et al.", year: 2026, title: "Assessment of Gamma Band Power of Electroencephalogram in Alzheimer's disease", journal: "Appl Neuropsychol Adult" }
     },
     {
-      id: "pm-41246936", condition: "alzheimers", type: "biomarker",
+      id: "pm-41246936", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 65, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4","T5","T6","O1","O2"], bands: ["alpha","theta"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "down", theta: "up" }, symptoms: ["memory","cogdecline"],
@@ -769,7 +769,7 @@ window.NF_DATA = {
       cite: { authors: "Pan Y, et al.", year: 2026, title: "EEG spectral power differences in Alzheimer's disease and frontotemporal dementia", journal: "Int J Neurosci" }
     },
     {
-      id: "pm-41407022", condition: "alzheimers", type: "biomarker",
+      id: "pm-41407022", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 87, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["memory","cogdecline"],
@@ -779,7 +779,7 @@ window.NF_DATA = {
       cite: { authors: "Noh ES, et al.", year: 2026, title: "Distinct patterns of cortical activity associated with cognitive and motor decline in community-dwelling older adults", journal: "Exp Gerontol" }
     },
     {
-      id: "pm-41786925", condition: "alzheimers", type: "biomarker",
+      id: "pm-41786925", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 65, k: null },
       sites: ["T3","T4","T5","T6","P3","Pz","P4","O1","O2"], bands: ["alpha","beta"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down", beta: "down" }, symptoms: ["memory","cogdecline"],
@@ -789,7 +789,7 @@ window.NF_DATA = {
       cite: { authors: "Iqbal S, et al.", year: 2026, title: "Quantitative EEG signatures of power and functional connectivity alterations in Alzheimer's disease and frontotemporal dementia", journal: "Sci Rep" }
     },
     {
-      id: "pm-42115191", condition: "alzheimers", type: "biomarker",
+      id: "pm-42115191", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 48, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down", beta: "down" }, symptoms: ["memory","cogdecline"],
@@ -799,7 +799,7 @@ window.NF_DATA = {
       cite: { authors: "Liang Y, et al.", year: 2026, title: "Application of resting-state EEG theta /alpha power ratio analysis for diagnosing amnestic mild cognitive impairment", journal: "Sci Rep" }
     },
     {
-      id: "pm-42740150", condition: "alzheimers", type: "biomarker",
+      id: "pm-42740150", source: "full-text", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 88, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", alpha: "down" }, symptoms: ["memory","cogdecline"],
@@ -809,7 +809,7 @@ window.NF_DATA = {
       cite: { authors: "Šverko Z, et al.", year: 2026, title: "Spectral and Directed Connectivity EEG Markers for Classifying Alzheimer's Disease, Frontotemporal Dementia, and Healthy Controls with Exploratory Photobiomodulation Case-Study Projection", journal: "Sensors (Basel)" }
     },
     {
-      id: "pm-42769165", condition: "alzheimers", type: "biomarker",
+      id: "pm-42769165", source: "full-text", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 360, k: null },
       sites: [], bands: ["theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", alpha: "down", beta: "down" }, symptoms: ["memory","cogdecline"],
@@ -819,7 +819,7 @@ window.NF_DATA = {
       cite: { authors: "Yang L, et al.", year: 2026, title: "Resting-state EEG biomarkers of general and domain-specific cognitive impairment and plasma P-tau217 in patients with Alzheimer's disease and mild cognitive impairment", journal: "Front Neurol" }
     },
     {
-      id: "pm-42803709", condition: "alzheimers", type: "biomarker",
+      id: "pm-42803709", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 90, k: null },
       sites: ["T3","T4","T5","T6"], bands: ["gamma","delta","theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { gamma: "up", delta: "up", theta: "up", beta: "down" }, symptoms: ["memory","cogdecline"],
@@ -829,7 +829,7 @@ window.NF_DATA = {
       cite: { authors: "Wen S, et al.", year: 2026, title: "Subregion-specific temporal lobe EEG signatures in amnestic mild cognitive impairment: Evidence from high-density EEG", journal: "J Alzheimers Dis" }
     },
     {
-      id: "pm-6187529", condition: "alzheimers", type: "biomarker",
+      id: "pm-6187529", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 80, k: null },
       sites: ["O1","O2"], bands: ["theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", beta: "down" }, symptoms: ["memory","cogdecline"],
@@ -839,7 +839,7 @@ window.NF_DATA = {
       cite: { authors: "Coben LA, et al.", year: 1983, title: "Frequency analysis of the resting awake EEG in mild senile dementia of Alzheimer type", journal: "Electroencephalogr Clin Neurophysiol" }
     },
     {
-      id: "pm-7613077", condition: "alzheimers", type: "biomarker",
+      id: "pm-7613077", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 189, k: null },
       sites: ["T5","T6","P3","Pz","P4"], bands: ["theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", beta: "down" }, symptoms: ["memory","cogdecline"],
@@ -849,7 +849,7 @@ window.NF_DATA = {
       cite: { authors: "Duffy FH, et al.", year: 1995, title: "Temporoparietal electrophysiological differences characterize patients with Alzheimer's disease: a split-half replication study", journal: "Cereb Cortex" }
     },
     {
-      id: "pm-8676989", condition: "alzheimers", type: "biomarker",
+      id: "pm-8676989", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 129, k: null },
       sites: [], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["memory","cogdecline"],
@@ -859,7 +859,7 @@ window.NF_DATA = {
       cite: { authors: "Förstl H, et al.", year: 1996, title: "[Volumetric brain changes and quantitative EEG in normal aging and Alzheimer's dementia]", journal: "Nervenarzt" }
     },
     {
-      id: "pm-8681465", condition: "alzheimers", type: "biomarker",
+      id: "pm-8681465", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 30, k: null },
       sites: ["O1","O2"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["memory","cogdecline"],
@@ -869,7 +869,7 @@ window.NF_DATA = {
       cite: { authors: "Stam CJ, et al.", year: 1996, title: "Diagnostic usefulness of linear and nonlinear quantitative EEG analysis in Alzheimer's disease", journal: "Clin Electroencephalogr" }
     },
     {
-      id: "pm-9086836", condition: "alzheimers", type: "biomarker",
+      id: "pm-9086836", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 18, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["delta","theta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up" }, symptoms: ["memory","cogdecline"],
@@ -879,7 +879,7 @@ window.NF_DATA = {
       cite: { authors: "Nanbu Y, et al.", year: 1997, title: "[Topographic analysis of resting EEG and photic driving responses in patients with presenile Alzheimer's disease]", journal: "Rinsho Byori" }
     },
     {
-      id: "pm-30392042", condition: "depression", type: "biomarker",
+      id: "pm-30392042", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 40, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood","executive"],
@@ -889,7 +889,7 @@ window.NF_DATA = {
       cite: { authors: "Koo PC, et al.", year: 2019, title: "Combined cognitive, psychomotor and electrophysiological biomarkers in major depressive disorder", journal: "Eur Arch Psychiatry Clin Neurosci" }
     },
     {
-      id: "pm-30404079", condition: "alzheimers", type: "biomarker",
+      id: "pm-30404079", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 122, k: null },
       sites: ["Fp1","F7","F3","O1","Fp2","F4","F8"], bands: ["theta","alpha"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", alpha: "up" }, symptoms: ["memory","cogdecline"],
@@ -899,7 +899,7 @@ window.NF_DATA = {
       cite: { authors: "Tarasova IV, et al.", year: 2018, title: "EEG and Clinical Factors Associated with Mild Cognitive Impairment in Coronary Artery Disease Patients", journal: "Dement Geriatr Cogn Disord" }
     },
     {
-      id: "pm-32234263", condition: "alzheimers", type: "biomarker",
+      id: "pm-32234263", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 286, k: null },
       sites: ["P3","Pz","P4","T5","T6","O1","O2"], bands: ["delta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", alpha: "down" }, symptoms: ["memory","cogdecline"],
@@ -909,7 +909,7 @@ window.NF_DATA = {
       cite: { authors: "Babiloni C, et al.", year: 2020, title: "Abnormal cortical neural synchronization mechanisms in quiet wakefulness are related to motor deficits, cognitive symptoms, and visual hallucinations in Parkinson's disease patients: an electroencephalographic study", journal: "Neurobiol Aging" }
     },
     {
-      id: "pm-33571883", condition: "parkinsons", type: "biomarker",
+      id: "pm-33571883", source: "abstract", condition: "parkinsons", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 72, k: null },
       sites: ["P3","Pz","P4","T5","T6","O1","O2"], bands: ["alpha","theta"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "down", theta: "up" }, symptoms: ["cogdecline"],
@@ -919,7 +919,7 @@ window.NF_DATA = {
       cite: { authors: "Jaramillo-Jimenez A, et al.", year: 2021, title: "Resting-state EEG alpha/theta ratio related to neuropsychological test performance in Parkinson's Disease", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-35694930", condition: "alzheimers", type: "biomarker",
+      id: "pm-35694930", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 100, k: null },
       sites: ["T3","T4","T5","T6","O1","O2"], bands: ["delta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up" }, symptoms: ["memory","cogdecline"],
@@ -929,7 +929,7 @@ window.NF_DATA = {
       cite: { authors: "Babiloni C, et al.", year: 2022, title: "Alzheimer's Disease with Epileptiform EEG Activity: Abnormal Cortical Sources of Resting State Delta Rhythms in Patients with Amnesic Mild Cognitive Impairment", journal: "J Alzheimers Dis" }
     },
     {
-      id: "pm-35973509", condition: "depression", type: "biomarker",
+      id: "pm-35973509", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 100, k: null },
       sites: ["T3","T5","O1","O2"], bands: ["gamma"], direction: "down", evidence: "preliminary",
       changes: { gamma: "down" }, symptoms: ["lowmood","sleep"],
@@ -939,7 +939,7 @@ window.NF_DATA = {
       cite: { authors: "Liu X, et al.", year: 2022, title: "Altered gamma oscillations and beta-gamma coupling in drug-naive first-episode major depressive disorder: Association with sleep and cognitive disturbance", journal: "J Affect Disord" }
     },
     {
-      id: "pm-36057818", condition: "alzheimers", type: "biomarker",
+      id: "pm-36057818", source: "full-text", condition: "alzheimers", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: 318, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta"], direction: "up", evidence: "moderate",
       changes: { theta: "up" }, symptoms: ["memory","cogdecline"],
@@ -949,7 +949,7 @@ window.NF_DATA = {
       cite: { authors: "Spinelli G, et al.", year: 2022, title: "Theta Band-Power Shapes Amyloid-Driven Longitudinal EEG Changes in Elderly Subjective Memory Complainers At-Risk for Alzheimer's Disease", journal: "J Alzheimers Dis" }
     },
     {
-      id: "pm-37657750", condition: "schizophrenia", type: "biomarker",
+      id: "pm-37657750", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 162, k: null },
       sites: ["Fp1","Fp2"], bands: ["gamma"], direction: "up", evidence: "preliminary",
       changes: { gamma: "up" }, symptoms: ["psychosis"],
@@ -959,7 +959,7 @@ window.NF_DATA = {
       cite: { authors: "Li G, et al.", year: 2023, title: "Correlation study of brain-derived neurotrophic factor, EEG γ activity and cognitive function in first-episode schizophrenia", journal: "Brain Res" }
     },
     {
-      id: "pm-37918574", condition: "depression", type: "biomarker",
+      id: "pm-37918574", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 105, k: null },
       sites: ["P3","Pz","P4","T5","T6","O1","O2"], bands: ["gamma"], direction: "up", evidence: "preliminary",
       changes: { gamma: "up" }, symptoms: ["lowmood","executive"],
@@ -969,7 +969,7 @@ window.NF_DATA = {
       cite: { authors: "Zeng Y, et al.", year: 2024, title: "Altered resting-state brain oscillation and the associated cognitive impairments in late-life depression with different depressive severity: An EEG power spectrum and functional connectivity study", journal: "J Affect Disord" }
     },
     {
-      id: "pm-39796211", condition: "alzheimers", type: "biomarker",
+      id: "pm-39796211", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 160, k: null },
       sites: ["P3","Pz","P4","T5","T6","O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["memory","cogdecline"],
@@ -979,7 +979,7 @@ window.NF_DATA = {
       cite: { authors: "Del Percio C, et al.", year: 2025, title: "Resting-State EEG Alpha Rhythms Are Related to CSF Tau Biomarkers in Prodromal Alzheimer's Disease", journal: "Int J Mol Sci" }
     },
     {
-      id: "pm-40976159", condition: "depression", type: "biomarker",
+      id: "pm-40976159", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 134, k: null },
       sites: ["O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["lowmood"],
@@ -989,7 +989,7 @@ window.NF_DATA = {
       cite: { authors: "Yi Y, et al.", year: 2025, title: "Absence of differences in resting-state EEG spectral power and cognitive impairments between first-episode, drug-naïve MDD patients with and without suicidal ideation", journal: "J Psychiatr Res" }
     },
     {
-      id: "pm-41619714", condition: "alzheimers", type: "biomarker",
+      id: "pm-41619714", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 218, k: null },
       sites: [], bands: ["delta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", alpha: "down" }, symptoms: ["memory","cogdecline"],
@@ -999,7 +999,7 @@ window.NF_DATA = {
       cite: { authors: "Jakhar D, et al.", year: 2026, title: "Abnormal Resting-State EEG delta and alpha rhythms in Huntington's and Alzheimer's Diseases: An exploratory study", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-42215811", condition: "epilepsy", type: "biomarker",
+      id: "pm-42215811", source: "abstract", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 65, k: null },
       sites: [], bands: ["gamma","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { gamma: "up", alpha: "down" }, symptoms: ["cogdecline"],
@@ -1009,7 +1009,7 @@ window.NF_DATA = {
       cite: { authors: "Masoumian FN, et al.", year: 2026, title: "Resting-state EEG markers of cognitive dysfunction in epilepsy: evidence from gamma power, alpha activity, and functional connectivity", journal: "Neurol Sci" }
     },
     {
-      id: "pm-8272452", condition: "alzheimers", type: "biomarker",
+      id: "pm-8272452", source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["theta","delta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", delta: "up" }, symptoms: ["memory","cogdecline"],
@@ -1019,7 +1019,7 @@ window.NF_DATA = {
       cite: { authors: "Günther W, et al.", year: 1993, title: "Findings of electroencephalographic brain mapping in mild to moderate dementia of the Alzheimer type during resting, motor, and music-perception conditions", journal: "Psychiatry Res" }
     },
     {
-      id: "pm-12426037", condition: "depression", type: "biomarker",
+      id: "pm-12426037", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 88, k: null },
       sites: ["T3","T4","T5","T6"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["lowmood"],
@@ -1029,7 +1029,7 @@ window.NF_DATA = {
       cite: { authors: "Mientus S, et al.", year: 2002, title: "Cortical hypoactivation during resting EEG in schizophrenics but not in depressives and schizotypal subjects as revealed by low resolution electromagnetic tomography (LORETA)", journal: "Psychiatry Res" }
     },
     {
-      id: "pm-39248267", condition: "depression", type: "biomarker",
+      id: "pm-39248267", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 735, k: null },
       sites: ["C3","Cz","C4"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["lowmood"],
@@ -1039,7 +1039,7 @@ window.NF_DATA = {
       cite: { authors: "Sarisik E, et al.", year: 2025, title: "EEG-based Signatures of Schizophrenia, Depression, and Aberrant Aging: A Supervised Machine Learning Investigation", journal: "Schizophr Bull" }
     },
     {
-      id: "pm-11196007", condition: "depression", type: "biomarker",
+      id: "pm-11196007", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 35, k: null },
       sites: ["P3","Pz","P4","T5","T6","O1","O2"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1049,7 +1049,7 @@ window.NF_DATA = {
       cite: { authors: "Kentgen LM, et al.", year: 2000, title: "Electroencephalographic asymmetries in adolescents with major depression: influence of comorbidity with anxiety disorders", journal: "J Abnorm Psychol" }
     },
     {
-      id: "pm-11306251", condition: "depression", type: "biomarker",
+      id: "pm-11306251", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 93, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["beta","alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { beta: "up", alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1059,7 +1059,7 @@ window.NF_DATA = {
       cite: { authors: "Knott V, et al.", year: 2001, title: "EEG power, frequency, asymmetry and coherence in male depression", journal: "Psychiatry Res" }
     },
     {
-      id: "pm-12204318", condition: "depression", type: "biomarker",
+      id: "pm-12204318", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 61, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "asymmetry", evidence: "preliminary",
       changes: { delta: "down", theta: "down", alpha: "down", beta: "asymmetry" }, symptoms: ["lowmood"],
@@ -1069,7 +1069,7 @@ window.NF_DATA = {
       cite: { authors: "Volf NV, et al.", year: 2002, title: "EEG mapping in seasonal affective disorder", journal: "J Affect Disord" }
     },
     {
-      id: "pm-12436054", condition: "depression", type: "biomarker",
+      id: "pm-12436054", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 151, k: null },
       sites: ["Fp2","F4","F8"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["lowmood"],
@@ -1079,7 +1079,7 @@ window.NF_DATA = {
       cite: { authors: "Bauer LO, et al.", year: 2002, title: "Lateral asymmetries in the frontal brain: effects of depression and a family history of alcoholism in female adolescents", journal: "Alcohol Clin Exp Res" }
     },
     {
-      id: "pm-15705347", condition: "depression", type: "biomarker",
+      id: "pm-15705347", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: 87, k: null },
       sites: ["F7","F3"], bands: ["alpha"], direction: "asymmetry", evidence: "moderate",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1089,7 +1089,7 @@ window.NF_DATA = {
       cite: { authors: "Bruder GE, et al.", year: 2005, title: "Electroencephalographic measures of regional hemispheric activity in offspring at risk for depressive disorders", journal: "Biol Psychiatry" }
     },
     {
-      id: "pm-17117963", condition: "sud", type: "biomarker",
+      id: "pm-17117963", source: "abstract", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 301, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["craving"],
@@ -1099,7 +1099,7 @@ window.NF_DATA = {
       cite: { authors: "Hayden EP, et al.", year: 2006, title: "Patterns of regional brain activity in alcohol-dependent subjects", journal: "Alcohol Clin Exp Res" }
     },
     {
-      id: "pm-17481594", condition: "depression", type: "biomarker",
+      id: "pm-17481594", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: 49, k: null },
       sites: ["P3","Pz","P4"], bands: ["alpha"], direction: "asymmetry", evidence: "moderate",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1109,7 +1109,7 @@ window.NF_DATA = {
       cite: { authors: "Bruder GE, et al.", year: 2007, title: "Grandchildren at high and low risk for depression differ in EEG measures of regional brain asymmetry", journal: "Biol Psychiatry" }
     },
     {
-      id: "pm-18079035", condition: "depression", type: "biomarker",
+      id: "pm-18079035", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 13, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["lowmood"],
@@ -1119,7 +1119,7 @@ window.NF_DATA = {
       cite: { authors: "Putnam KM, et al.", year: 2008, title: "Depressive symptoms and baseline prefrontal EEG alpha activity: a study utilizing Ecological Momentary Assessment", journal: "Biol Psychol" }
     },
     {
-      id: "pm-18958615", condition: "depression", type: "biomarker",
+      id: "pm-18958615", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["delta","theta","alpha","beta","hibeta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "up", beta: "up", hibeta: "up" }, symptoms: ["lowmood"],
@@ -1129,7 +1129,7 @@ window.NF_DATA = {
       cite: { authors: "Korb AS, et al.", year: 2008, title: "Brain electrical source differences between depressed subjects and healthy controls", journal: "Brain Topogr" }
     },
     {
-      id: "pm-19952564", condition: "depression", type: "biomarker",
+      id: "pm-19952564", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["P3","Pz","P4","O1","O2"], bands: ["theta","alpha","beta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", alpha: "up", beta: "up" }, symptoms: ["lowmood"],
@@ -1139,7 +1139,7 @@ window.NF_DATA = {
       cite: { authors: "Grin-Yatsenko VA, et al.", year: 2009, title: "EEG power spectra at early stages of depressive disorders", journal: "J Clin Neurophysiol" }
     },
     {
-      id: "pm-20006545", condition: "depression", type: "biomarker",
+      id: "pm-20006545", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 637, k: null },
       sites: ["P3","Pz","P4","O1","O2"], bands: ["theta","alpha","beta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", alpha: "up", beta: "up" }, symptoms: ["lowmood"],
@@ -1149,7 +1149,7 @@ window.NF_DATA = {
       cite: { authors: "Grin-Yatsenko VA, et al.", year: 2010, title: "Independent component approach to the analysis of EEG recordings at early stages of depressive disorders", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-20525011", condition: "depression", type: "biomarker",
+      id: "pm-20525011", source: "abstract", sample: "stewart-dep-306", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 306, k: null },
       sites: ["P3","Pz","P4"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1159,7 +1159,7 @@ window.NF_DATA = {
       cite: { authors: "Stewart JL, et al.", year: 2011, title: "The oft-neglected role of parietal EEG asymmetry and risk for major depressive disorder", journal: "Psychophysiology" }
     },
     {
-      id: "pm-20677839", condition: "depression", type: "biomarker",
+      id: "pm-20677839", source: "abstract", sample: "stewart-dep-306", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 306, k: null },
       sites: ["Fp1","F7","F3"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1169,7 +1169,7 @@ window.NF_DATA = {
       cite: { authors: "Stewart JL, et al.", year: 2010, title: "Resting frontal EEG asymmetry as an endophenotype for depression risk: sex-specific patterns of frontal brain asymmetry", journal: "J Abnorm Psychol" }
     },
     {
-      id: "pm-20708650", condition: "depression", type: "biomarker",
+      id: "pm-20708650", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 44, k: null },
       sites: [], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["lowmood"],
@@ -1179,7 +1179,7 @@ window.NF_DATA = {
       cite: { authors: "Kemp AH, et al.", year: 2010, title: "Disorder specificity despite comorbidity: resting EEG alpha asymmetry in major depressive disorder and post-traumatic stress disorder", journal: "Biol Psychol" }
     },
     {
-      id: "pm-21309442", condition: "depression", type: "biomarker",
+      id: "pm-21309442", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 34, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "ratio", evidence: "contested",
       changes: { alpha: "mixed" }, symptoms: ["lowmood"],
@@ -1189,7 +1189,7 @@ window.NF_DATA = {
       cite: { authors: "Segrave RA, et al.", year: 2011, title: "Individualized alpha activity and frontal asymmetry in major depression", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-21381804", condition: "depression", type: "biomarker",
+      id: "pm-21381804", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: null, k: null },
       sites: ["Fp1","F7","F3"], bands: ["alpha"], direction: "asymmetry", evidence: "moderate",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1199,7 +1199,7 @@ window.NF_DATA = {
       cite: { authors: "Nusslock R, et al.", year: 2011, title: "Cognitive vulnerability and frontal brain asymmetry: common predictors of first prospective depressive episode", journal: "J Abnorm Psychol" }
     },
     {
-      id: "pm-21500316", condition: "depression", type: "biomarker",
+      id: "pm-21500316", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: 75, k: null },
       sites: ["P3","Pz","P4"], bands: ["alpha"], direction: "asymmetry", evidence: "moderate",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1209,7 +1209,7 @@ window.NF_DATA = {
       cite: { authors: "Bruder GE, et al.", year: 2012, title: "Relationship of resting EEG with anatomical MRI measures in individuals at high and low risk for depression", journal: "Hum Brain Mapp" }
     },
     {
-      id: "pm-22408133", condition: "depression", type: "biomarker",
+      id: "pm-22408133", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
       sites: ["Fp1","F7","F3"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1219,7 +1219,7 @@ window.NF_DATA = {
       cite: { authors: "Chang JS, et al.", year: 2012, title: "An integrative assessment of the psychophysiologic alterations in young women with recurrent major depressive disorder", journal: "Psychosom Med" }
     },
     {
-      id: "pm-22939462", condition: "depression", type: "biomarker",
+      id: "pm-22939462", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 96, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["lowmood"],
@@ -1229,7 +1229,7 @@ window.NF_DATA = {
       cite: { authors: "Jaworska N, et al.", year: 2012, title: "α Power, α asymmetry and anterior cingulate cortex activity in depressed males and females", journal: "J Psychiatr Res" }
     },
     {
-      id: "pm-2307762", condition: "depression", type: "biomarker",
+      id: "pm-2307762", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 14, k: null },
       sites: ["Fp1","F7","F3","P4","T6","O2"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1239,7 +1239,7 @@ window.NF_DATA = {
       cite: { authors: "Henriques JB, et al.", year: 1990, title: "Regional brain electrical asymmetries discriminate between previously depressed and healthy control subjects", journal: "J Abnorm Psychol" }
     },
     {
-      id: "pm-23733090", condition: "depression", type: "biomarker",
+      id: "pm-23733090", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 107, k: null },
       sites: ["P3","Pz","P4","O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["lowmood"],
@@ -1249,7 +1249,7 @@ window.NF_DATA = {
       cite: { authors: "Zoon HF, et al.", year: 2013, title: "EEG alpha power as an intermediate measure between brain-derived neurotrophic factor Val66Met and depression severity in patients with major depressive disorder", journal: "J Clin Neurophysiol" }
     },
     {
-      id: "pm-24467874", condition: "depression", type: "biomarker",
+      id: "pm-24467874", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 237, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1259,7 +1259,7 @@ window.NF_DATA = {
       cite: { authors: "Quinn CR, et al.", year: 2014, title: "The impact of melancholia versus non-melancholia on resting-state, EEG alpha asymmetry: electrophysiological evidence for depression heterogeneity", journal: "Psychiatry Res" }
     },
     {
-      id: "pm-24630467", condition: "depression", type: "biomarker",
+      id: "pm-24630467", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 168, k: null },
       sites: ["Fz"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["lowmood"],
@@ -1269,7 +1269,7 @@ window.NF_DATA = {
       cite: { authors: "Cook IA, et al.", year: 2014, title: "Do prefrontal midline electrodes provide unique neurophysiologic information in Major Depressive Disorder?", journal: "J Psychiatr Res" }
     },
     {
-      id: "pm-25568149", condition: "depression", type: "biomarker",
+      id: "pm-25568149", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 40, k: null },
       sites: ["C3","Cz","C4"], bands: ["theta","alpha","beta"], direction: "asymmetry", evidence: "preliminary",
       changes: { theta: "asymmetry", alpha: "asymmetry", beta: "asymmetry" }, symptoms: ["lowmood"],
@@ -1279,7 +1279,7 @@ window.NF_DATA = {
       cite: { authors: "Kremer H, et al.", year: 2016, title: "Interhemispheric Asymmetries and Theta Activity in the Rostral Anterior Cingulate Cortex as EEG Signature of HIV-Related Depression: Gender Matters", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-25600291", condition: "depression", type: "biomarker",
+      id: "pm-25600291", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 35, k: null },
       sites: ["F3","F4"], bands: ["delta"], direction: "down", evidence: "preliminary",
       changes: { delta: "down" }, symptoms: ["lowmood"],
@@ -1289,7 +1289,7 @@ window.NF_DATA = {
       cite: { authors: "Meerwijk EL, et al.", year: 2015, title: "Resting-state EEG delta power is associated with psychological pain in adults with a history of depression", journal: "Biol Psychol" }
     },
     {
-      id: "pm-26363266", condition: "depression", type: "biomarker",
+      id: "pm-26363266", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 39, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood","motor"],
@@ -1299,7 +1299,7 @@ window.NF_DATA = {
       cite: { authors: "Cantisani A, et al.", year: 2015, title: "Psychomotor retardation is linked to frontal alpha asymmetry in major depression", journal: "J Affect Disord" }
     },
     {
-      id: "pm-26392114", condition: "depression", type: "protocol",
+      id: "pm-26392114", source: "abstract", condition: "depression", type: "protocol",
       metrics: { design: 1, control: "none", blinded: null, n: 20, k: null },
       sites: ["F3","Pz"], bands: ["beta","alpha","theta"], direction: "ratio", evidence: "preliminary",
       changes: { beta: "up", alpha: "regulate", theta: "regulate" }, symptoms: ["lowmood","anxiety"],
@@ -1309,7 +1309,7 @@ window.NF_DATA = {
       cite: { authors: "Cheon EJ, et al.", year: 2016, title: "The Efficacy of Neurofeedback in Patients with Major Depressive Disorder: An Open Labeled Prospective Study", journal: "Appl Psychophysiol Biofeedback" }
     },
     {
-      id: "pm-27000108", condition: "depression", type: "biomarker",
+      id: "pm-27000108", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 64, k: null },
       sites: [], bands: ["alpha"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "mixed" }, symptoms: ["headache"],
@@ -1319,7 +1319,7 @@ window.NF_DATA = {
       cite: { authors: "Scanlon GC, et al.", year: 2017, title: "Neurophysiologic Correlates of Headache Pain in Subjects With Major Depressive Disorder", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-27344621", condition: "depression", type: "biomarker",
+      id: "pm-27344621", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 73, k: null },
       sites: ["F3","Fz","F4","C3","Cz","C4"], bands: ["beta","gamma"], direction: "down", evidence: "preliminary",
       changes: { beta: "down", gamma: "down" }, symptoms: ["inattention"],
@@ -1329,7 +1329,7 @@ window.NF_DATA = {
       cite: { authors: "Roh SC, et al.", year: 2016, title: "EEG beta and low gamma power correlates with inattention in patients with major depressive disorder", journal: "J Affect Disord" }
     },
     {
-      id: "pm-28755454", condition: "depression", type: "biomarker",
+      id: "pm-28755454", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 124, k: null },
       sites: ["F7","F3"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1339,7 +1339,7 @@ window.NF_DATA = {
       cite: { authors: "Nusslock R, et al.", year: 2018, title: "Comorbid anxiety moderates the relationship between depression history and prefrontal EEG asymmetry", journal: "Psychophysiology" }
     },
     {
-      id: "pm-29023805", condition: "depression", type: "biomarker",
+      id: "pm-29023805", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1349,7 +1349,7 @@ window.NF_DATA = {
       cite: { authors: "Smith EE, et al.", year: 2018, title: "Intracranial source activity (eLORETA) related to scalp-level asymmetry scores and depression status", journal: "Psychophysiology" }
     },
     {
-      id: "pm-29305876", condition: "depression", type: "biomarker",
+      id: "pm-29305876", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 51, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1359,7 +1359,7 @@ window.NF_DATA = {
       cite: { authors: "Grünewald BD, et al.", year: 2018, title: "Resting frontal EEG asymmetry patterns in adolescents with and without major depression", journal: "Biol Psychol" }
     },
     {
-      id: "pm-30182751", condition: "depression", type: "biomarker",
+      id: "pm-30182751", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 123, k: null },
       sites: [], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["lowmood"],
@@ -1369,7 +1369,7 @@ window.NF_DATA = {
       cite: { authors: "Ulke C, et al.", year: 2019, title: "Resting EEG Measures of Brain Arousal in a Multisite Study of Major Depression", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-30415151", condition: "depression", type: "biomarker",
+      id: "pm-30415151", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 95, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood","anxiety"],
@@ -1379,7 +1379,7 @@ window.NF_DATA = {
       cite: { authors: "Feldmann L, et al.", year: 2018, title: "Resting frontal EEG asymmetry in adolescents with major depression: Impact of disease state and comorbid anxiety disorder", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-31302517", condition: "depression", type: "protocol",
+      id: "pm-31302517", source: "abstract", condition: "depression", type: "protocol",
       metrics: { design: 3, control: "none", blinded: null, n: 87, k: null },
       sites: ["F3","F4","P3","P4"], bands: ["alpha","hibeta"], direction: "asymmetry", evidence: "contested",
       changes: { alpha: "asymmetry", hibeta: "down" }, symptoms: ["lowmood","anxiety"],
@@ -1389,7 +1389,7 @@ window.NF_DATA = {
       cite: { authors: "Wang SY, et al.", year: 2019, title: "The effects of alpha asymmetry and high-beta down-training neurofeedback for patients with the major depressive disorder and anxiety symptoms", journal: "J Affect Disord" }
     },
     {
-      id: "pm-32424130", condition: "depression", type: "biomarker",
+      id: "pm-32424130", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 62, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha","beta"], direction: "ratio", evidence: "contested",
       changes: { alpha: "mixed", beta: "mixed" }, symptoms: ["lowmood"],
@@ -1399,7 +1399,7 @@ window.NF_DATA = {
       cite: { authors: "Spironelli C, et al.", year: 2020, title: "Evidence of language-related left hypofrontality in Major Depression: An EEG Beta band study", journal: "Sci Rep" }
     },
     {
-      id: "pm-33601739", condition: "depression", type: "biomarker",
+      id: "pm-33601739", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 270, k: null },
       sites: [], bands: ["delta","theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "down", theta: "down", beta: "up" }, symptoms: ["lowmood","anxiety"],
@@ -1409,7 +1409,7 @@ window.NF_DATA = {
       cite: { authors: "Lin IM, et al.", year: 2021, title: "Electroencephalogram patterns in patients comorbid with major depressive disorder and anxiety symptoms: Proposing a hypothesis based on hypercortical arousal and not frontal or parietal alpha asymmetry", journal: "J Affect Disord" }
     },
     {
-      id: "pm-34256274", condition: "depression", type: "biomarker",
+      id: "pm-34256274", source: "full-text", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 66, k: null },
       sites: ["P3","P4","T5","T6","O1","O2"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1419,7 +1419,7 @@ window.NF_DATA = {
       cite: { authors: "Umemoto A, et al.", year: 2021, title: "Resting posterior alpha power and adolescent major depressive disorder", journal: "J Psychiatr Res" }
     },
     {
-      id: "pm-35412986", condition: "depression", type: "biomarker",
+      id: "pm-35412986", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 56, k: null },
       sites: [], bands: ["beta","gamma"], direction: "up", evidence: "preliminary",
       changes: { beta: "up", gamma: "up" }, symptoms: ["lowmood"],
@@ -1429,7 +1429,7 @@ window.NF_DATA = {
       cite: { authors: "Liu S, et al.", year: 2022, title: "Alterations in Patients With First-Episode Depression in the Eyes-Open and Eyes-Closed Conditions: A Resting-State EEG Study", journal: "IEEE Trans Neural Syst Rehabil Eng" }
     },
     {
-      id: "pm-35931231", condition: "depression", type: "biomarker",
+      id: "pm-35931231", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 85, k: null },
       sites: ["P3","Pz","P4","C3","Cz","C4","O1","O2"], bands: ["alpha","beta"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up", beta: "up" }, symptoms: ["lowmood"],
@@ -1439,7 +1439,7 @@ window.NF_DATA = {
       cite: { authors: "Wu Z, et al.", year: 2022, title: "Resting-state electroencephalography of neural oscillation and functional connectivity patterns in late-life depression", journal: "J Affect Disord" }
     },
     {
-      id: "cand-mdd-ozcoban-2025", condition: "depression", type: "biomarker",
+      id: "cand-mdd-ozcoban-2025", source: "full-text", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 126, k: null },
       sites: [], bands: ["theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", alpha: "mixed", beta: "up" }, symptoms: ["lowmood"],
@@ -1449,7 +1449,7 @@ window.NF_DATA = {
       cite: { authors: "Özçoban MA, Tan O", year: 2025, title: "Electroencephalographic markers in Major Depressive Disorder: insights from absolute, relative power, and asymmetry analyses", journal: "Frontiers in Psychiatry" }
     },
     {
-      id: "cand-mdd-alpha-sex-2012", condition: "depression", type: "biomarker",
+      id: "cand-mdd-alpha-sex-2012", source: "full-text", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 96, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["lowmood"],
@@ -1459,7 +1459,7 @@ window.NF_DATA = {
       cite: { authors: "(verify authors)", year: 2012, title: "Alpha Power, Alpha Asymmetry and Anterior Cingulate Cortex Activity in Depressed Males and Females", journal: "Journal of Psychiatric Research" }
     },
     {
-      id: "pm-37480706", condition: "depression", type: "biomarker",
+      id: "pm-37480706", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 100, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4","O1","O2"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1469,7 +1469,7 @@ window.NF_DATA = {
       cite: { authors: "Sharpley CF, et al.", year: 2023, title: "Alpha wave asymmetry is associated with only one component of melancholia, and in different directions across brain regions", journal: "Psychiatry Res Neuroimaging" }
     },
     {
-      id: "pm-37957613", condition: "depression", type: "biomarker",
+      id: "pm-37957613", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 80, k: null },
       sites: ["O1","O2"], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["lowmood"],
@@ -1479,7 +1479,7 @@ window.NF_DATA = {
       cite: { authors: "Huang Y, et al.", year: 2023, title: "Analysis of EEG features and study of automatic classification in first-episode and drug-naïve patients with major depressive disorder", journal: "BMC Psychiatry" }
     },
     {
-      id: "pm-40153921", condition: "depression", type: "biomarker",
+      id: "pm-40153921", source: "full-text", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 140, k: null },
       sites: [], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["lowmood","anxiety"],
@@ -1489,7 +1489,7 @@ window.NF_DATA = {
       cite: { authors: "Kovacevic N, et al.", year: 2025, title: "Differences in resting state and task-based EEG measures between patients with major depressive disorder and healthy controls", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-40561721", condition: "depression", type: "biomarker",
+      id: "pm-40561721", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 51, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood","anxiety"],
@@ -1499,7 +1499,7 @@ window.NF_DATA = {
       cite: { authors: "Zsigo C, et al.", year: 2025, title: "Frontal alpha asymmetry in major depression and comorbid anxiety disorder: a five-year follow-up study", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-40945766", condition: "depression", type: "biomarker",
+      id: "pm-40945766", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 152, k: null },
       sites: [], bands: ["gamma"], direction: "down", evidence: "preliminary",
       changes: { gamma: "down" }, symptoms: ["lowmood"],
@@ -1509,7 +1509,7 @@ window.NF_DATA = {
       cite: { authors: "Arıkan MK, et al.", year: 2026, title: "Gamma-band qEEG biomarkers as trait indicators in depression", journal: "J Affect Disord" }
     },
     {
-      id: "pm-41214062", condition: "depression", type: "biomarker",
+      id: "pm-41214062", source: "full-text", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 40, k: null },
       sites: ["Fp1","Fp2"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["lowmood","anxiety"],
@@ -1519,7 +1519,7 @@ window.NF_DATA = {
       cite: { authors: "Tang S, et al.", year: 2025, title: "High alpha oscillations in portable prefrontal EEG indicate gender-sensitive biomarkers for emotional disorders", journal: "Sci Rep" }
     },
     {
-      id: "pm-41308891", condition: "depression", type: "biomarker",
+      id: "pm-41308891", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 98, k: null },
       sites: ["F3","F4"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1529,7 +1529,7 @@ window.NF_DATA = {
       cite: { authors: "Sun G, et al.", year: 2026, title: "Frontal alpha asymmetry across genders as a distinction between major depressive disorder and bipolar disorder", journal: "J Affect Disord" }
     },
     {
-      id: "pm-41422967", condition: "depression", type: "biomarker",
+      id: "pm-41422967", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 227, k: null },
       sites: ["T5","T6"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1539,7 +1539,7 @@ window.NF_DATA = {
       cite: { authors: "Lin CE, et al.", year: 2026, title: "Parietal alpha asymmetry as a diagnostic marker for depression and a predictive biomarker for anhedonia improvement after melatonergic antidepressant treatment", journal: "J Affect Disord" }
     },
     {
-      id: "pm-8810860", condition: "depression", type: "biomarker",
+      id: "pm-8810860", source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 65, k: null },
       sites: ["F3","F4"], bands: ["hibeta"], direction: "up", evidence: "preliminary",
       changes: { hibeta: "up" }, symptoms: ["lowmood"],
@@ -1549,7 +1549,7 @@ window.NF_DATA = {
       cite: { authors: "Suzuki H, et al.", year: 1996, title: "[Quantitative EEG characteristics of the state of depressive phase and the state of remission in major depression]", journal: "Seishin Shinkeigaku Zasshi" }
     },
     {
-      id: "cand-adhd-theta-cog-2005", condition: "adhd", type: "biomarker",
+      id: "cand-adhd-theta-cog-2005", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Fp1","F7","F3"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["inattention"],
@@ -1559,7 +1559,7 @@ window.NF_DATA = {
       cite: { authors: "Hermens DF, et al.", year: 2005, title: "Resting EEG theta activity predicts cognitive performance in attention-deficit hyperactivity disorder", journal: "Pediatr Neurol" }
     },
     {
-      id: "pm-12374635", condition: "adhd", type: "biomarker",
+      id: "pm-12374635", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4","T5","T6","O1","O2"], bands: ["theta","alpha","delta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", alpha: "down", delta: "up", beta: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1569,7 +1569,7 @@ window.NF_DATA = {
       cite: { authors: "Clarke AR, et al.", year: 2002, title: "Children with attention-deficit/hyperactivity disorder and comorbid oppositional defiant disorder: an EEG analysis", journal: "Psychiatry Res" }
     },
     {
-      id: "cand-adhd-wang-2024", condition: "adhd", type: "biomarker",
+      id: "cand-adhd-wang-2024", source: "full-text", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 100, k: null },
       sites: ["F7","F3","Fz","F4","F8","Cz"], bands: ["theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", beta: "down" }, symptoms: ["inattention"],
@@ -1579,7 +1579,7 @@ window.NF_DATA = {
       cite: { authors: "Wang TS, Wang SS, Wang CL, Wong SB", year: 2024, title: "Theta/beta ratio in EEG correlated with attentional capacity assessed by Conners Continuous Performance Test in children with ADHD", journal: "Frontiers in Psychiatry" }
     },
     {
-      id: "cand-adhd-takacs-2023", condition: "adhd", type: "biomarker",
+      id: "cand-adhd-takacs-2023", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 132, k: null },
       sites: ["Fz"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["inattention"],
@@ -1589,7 +1589,7 @@ window.NF_DATA = {
       cite: { authors: "Takács M, et al. (verify)", year: 2023, title: "Theta and alpha activity are differentially associated with physiological and rating scale measures of affective processing in adolescents with but not without ADHD", journal: "Development and Psychopathology" }
     },
     {
-      id: "pm-15978508", condition: "adhd", type: "biomarker",
+      id: "pm-15978508", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1599,7 +1599,7 @@ window.NF_DATA = {
       cite: { authors: "Hermens DF, et al.", year: 2005, title: "Sex differences in adolescent ADHD: findings from concurrent EEG and EDA", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-17166762", condition: "adhd", type: "biomarker",
+      id: "pm-17166762", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 30, k: null },
       sites: [], bands: ["theta","delta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", delta: "up", alpha: "mixed", beta: "mixed" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1609,7 +1609,7 @@ window.NF_DATA = {
       cite: { authors: "Hobbs MJ, et al.", year: 2007, title: "EEG abnormalities in adolescent males with AD/HD", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-18662727", condition: "adhd", type: "biomarker",
+      id: "pm-18662727", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["delta","theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "down", theta: "up", beta: "mixed" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1619,7 +1619,7 @@ window.NF_DATA = {
       cite: { authors: "Clarke AR, et al.", year: 2008, title: "EEG in adults with attention-deficit/hyperactivity disorder", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-18813700", condition: "adhd", type: "biomarker",
+      id: "pm-18813700", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down", beta: "mixed" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1629,7 +1629,7 @@ window.NF_DATA = {
       cite: { authors: "Fonseca LC, et al.", year: 2008, title: "Epileptiform abnormalities and quantitative EEG in children with attention-deficit/hyperactivity disorder", journal: "Arq Neuropsiquiatr" }
     },
     {
-      id: "pm-19712709", condition: "adhd", type: "protocol",
+      id: "pm-19712709", source: "abstract", condition: "adhd", type: "protocol",
       metrics: { design: 4, control: "active", blinded: null, n: 72, k: null },
       sites: ["Pz","Cz"], bands: ["theta","alpha"], direction: "ratio", evidence: "moderate",
       changes: { theta: "down", alpha: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1639,7 +1639,7 @@ window.NF_DATA = {
       cite: { authors: "Gevensleben H, et al.", year: 2009, title: "Distinct EEG effects related to neurofeedback training in children with ADHD: a randomized controlled trial", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-21309436", condition: "adhd", type: "biomarker",
+      id: "pm-21309436", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 90, k: null },
       sites: [], bands: ["delta","theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "mixed", theta: "up", beta: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1649,7 +1649,7 @@ window.NF_DATA = {
       cite: { authors: "Dupuy FE, et al.", year: 2011, title: "Girls with attention-deficit/hyperactivity disorder: EEG differences between DSM-IV types", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-23053601", condition: "adhd", type: "biomarker",
+      id: "pm-23053601", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 105, k: null },
       sites: [], bands: ["theta","beta"], direction: "ratio", evidence: "contested",
       changes: { theta: "mixed", beta: "mixed" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1659,7 +1659,7 @@ window.NF_DATA = {
       cite: { authors: "Liechti MD, et al.", year: 2013, title: "Diagnostic value of resting electroencephalogram in attention-deficit/hyperactivity disorder across the lifespan", journal: "Brain Topogr" }
     },
     {
-      id: "pm-23249444", condition: "adhd", type: "biomarker",
+      id: "pm-23249444", source: "full-text", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 35, k: null },
       sites: [], bands: ["theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", alpha: "down", beta: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1669,7 +1669,7 @@ window.NF_DATA = {
       cite: { authors: "Woltering S, et al.", year: 2012, title: "Resting state EEG oscillatory power differences in ADHD college students and their peers", journal: "Behav Brain Funct" }
     },
     {
-      id: "pm-23355416", condition: "adhd", type: "biomarker",
+      id: "pm-23355416", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 28, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1679,7 +1679,7 @@ window.NF_DATA = {
       cite: { authors: "Jaworska N, et al.", year: 2013, title: "The resting electrophysiological profile in adults with ADHD and comorbid dysfunctional anger: a pilot study", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-23467799", condition: "adhd", type: "biomarker",
+      id: "pm-23467799", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 76, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1689,7 +1689,7 @@ window.NF_DATA = {
       cite: { authors: "Fonseca LC, et al.", year: 2013, title: "Electroencephalographic alpha reactivity on opening the eyes in children with attention-deficit hyperactivity disorder", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-23619205", condition: "adhd", type: "biomarker",
+      id: "pm-23619205", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 171, k: null },
       sites: [], bands: ["theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", alpha: "down", beta: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1699,7 +1699,7 @@ window.NF_DATA = {
       cite: { authors: "Clarke AR, et al.", year: 2013, title: "Excess beta activity in the EEG of children with attention-deficit/hyperactivity disorder: a disorder of arousal?", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-24125854", condition: "adhd", type: "biomarker",
+      id: "pm-24125854", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 80, k: null },
       sites: [], bands: ["delta","beta","gamma"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", beta: "down", gamma: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1709,7 +1709,7 @@ window.NF_DATA = {
       cite: { authors: "Dupuy FE, et al.", year: 2014, title: "EEG and electrodermal activity in girls with Attention-Deficit/Hyperactivity Disorder", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-25097090", condition: "adhd", type: "biomarker",
+      id: "pm-25097090", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 52, k: null },
       sites: ["Fp2","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1719,7 +1719,7 @@ window.NF_DATA = {
       cite: { authors: "Keune PM, et al.", year: 2015, title: "Frontal brain asymmetry in adult attention-deficit/hyperactivity disorder (ADHD): extending the motivational dysfunction hypothesis", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-25200165", condition: "adhd", type: "biomarker",
+      id: "pm-25200165", source: "full-text", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 161, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "mixed", beta: "mixed" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1729,7 +1729,7 @@ window.NF_DATA = {
       cite: { authors: "Kitsune GL, et al.", year: 2015, title: "A Matter of Time: The Influence of Recording Context on EEG Spectral Power in Adolescents and Young Adults with ADHD", journal: "Brain Topogr" }
     },
     {
-      id: "pm-27464584", condition: "adhd", type: "biomarker",
+      id: "pm-27464584", source: "full-text", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
       sites: ["F7","F3","Fz","F4","F8","C3","Cz","C4","P3","Pz","P4"], bands: ["theta"], direction: "up", evidence: "contested",
       changes: { theta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1739,7 +1739,7 @@ window.NF_DATA = {
       cite: { authors: "Rommel AS, et al.", year: 2016, title: "Commonalities in EEG Spectral Power Abnormalities Between Women With ADHD and Women With Bipolar Disorder During Rest and Cognitive Performance", journal: "Brain Topogr" }
     },
     {
-      id: "pm-28257875", condition: "adhd", type: "protocol",
+      id: "pm-28257875", source: "abstract", condition: "adhd", type: "protocol",
       metrics: { design: 4, control: "usual", blinded: null, n: 85, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["delta","alpha"], direction: "ratio", evidence: "moderate",
       changes: { delta: "down", alpha: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1749,7 +1749,7 @@ window.NF_DATA = {
       cite: { authors: "Johnstone SJ, et al.", year: 2017, title: "Game-based combined cognitive and neurofeedback training using Focus Pocus reduces symptom severity in children with diagnosed AD/HD and subclinical AD/HD", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-28900800", condition: "adhd", type: "biomarker",
+      id: "pm-28900800", source: "full-text", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 92, k: null },
       sites: ["F7","F3","Fz","F4","F8","C3","Cz","C4","T5","P3","Pz","P4","T6"], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "down", theta: "mixed", alpha: "mixed", beta: "mixed" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1759,7 +1759,7 @@ window.NF_DATA = {
       cite: { authors: "Shephard E, et al.", year: 2018, title: "Resting-State Neurophysiological Activity Patterns in Young People with ASD, ADHD, and ASD + ADHD", journal: "J Autism Dev Disord" }
     },
     {
-      id: "pm-29110563", condition: "adhd", type: "biomarker",
+      id: "pm-29110563", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 80, k: null },
       sites: [], bands: ["theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", alpha: "down", beta: "up" }, symptoms: ["executive"],
@@ -1769,7 +1769,7 @@ window.NF_DATA = {
       cite: { authors: "Li H, et al.", year: 2019, title: "Increased Beta Activity Links to Impaired Emotional Control in ADHD Adults With High IQ", journal: "J Atten Disord" }
     },
     {
-      id: "pm-29457912", condition: "adhd", type: "biomarker",
+      id: "pm-29457912", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 101, k: null },
       sites: ["C4","P4"], bands: ["gamma"], direction: "down", evidence: "preliminary",
       changes: { gamma: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1779,7 +1779,7 @@ window.NF_DATA = {
       cite: { authors: "Tombor L, et al.", year: 2019, title: "Decreased resting gamma activity in adult attention deficit/hyperactivity disorder", journal: "World J Biol Psychiatry" }
     },
     {
-      id: "pm-31163371", condition: "adhd", type: "biomarker",
+      id: "pm-31163371", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["delta","theta"], direction: "ratio", evidence: "moderate",
       changes: { delta: "down", theta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1789,7 +1789,7 @@ window.NF_DATA = {
       cite: { authors: "Clarke AR, et al.", year: 2019, title: "EEG development in Attention Deficit Hyperactivity Disorder: From child to adult", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-31233897", condition: "adhd", type: "biomarker",
+      id: "pm-31233897", source: "full-text", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 169, k: null },
       sites: ["F7","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "contested",
       changes: { alpha: "asymmetry" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1799,7 +1799,7 @@ window.NF_DATA = {
       cite: { authors: "Alperin BR, et al.", year: 2019, title: "The relationship between alpha asymmetry and ADHD depends on negative affect level and parenting practices", journal: "J Psychiatr Res" }
     },
     {
-      id: "pm-31834950", condition: "adhd", type: "biomarker",
+      id: "pm-31834950", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 134, k: null },
       sites: ["F3","Fz","F4","C3","Cz","C4","P3","Pz","P4"], bands: ["delta","theta","alpha","beta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "up", beta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1809,7 +1809,7 @@ window.NF_DATA = {
       cite: { authors: "Kiiski H, et al.", year: 2020, title: "EEG spectral power, but not theta/beta ratio, is a neuromarker for adult ADHD", journal: "Eur J Neurosci" }
     },
     {
-      id: "pm-31903823", condition: "adhd", type: "biomarker",
+      id: "pm-31903823", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 28, k: null },
       sites: ["P3","Pz","P4"], bands: ["delta","theta","alpha"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1819,7 +1819,7 @@ window.NF_DATA = {
       cite: { authors: "Jouzizadeh M, et al.", year: 2020, title: "A spatial profile difference in electrical distribution of resting-state EEG in ADHD children using sLORETA", journal: "Int J Neurosci" }
     },
     {
-      id: "pm-31911342", condition: "adhd", type: "biomarker",
+      id: "pm-31911342", source: "full-text", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 47, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1829,7 +1829,7 @@ window.NF_DATA = {
       cite: { authors: "Deiber MP, et al.", year: 2020, title: "Linking alpha oscillations, attention and inhibitory control in adult ADHD with EEG neurofeedback", journal: "Neuroimage Clin" }
     },
     {
-      id: "pm-32682239", condition: "adhd", type: "biomarker",
+      id: "pm-32682239", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 81, k: null },
       sites: ["F3","Fz","F4","Cz","T3","T4"], bands: ["theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", beta: "down" }, symptoms: ["inattention","hyperactivity"],
@@ -1839,7 +1839,7 @@ window.NF_DATA = {
       cite: { authors: "Ahmadi M, et al.", year: 2020, title: "Cortical source analysis of resting state EEG data in children with attention deficit hyperactivity disorder", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-34529233", condition: "adhd", type: "biomarker",
+      id: "pm-34529233", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", beta: "down" }, symptoms: ["inattention","hyperactivity"],
@@ -1849,7 +1849,7 @@ window.NF_DATA = {
       cite: { authors: "Dupuy FE, et al.", year: 2021, title: "DSM-5 Adult Attention-Deficit/Hyperactivity Disorder: Sex Differences in EEG Activity", journal: "Appl Psychophysiol Biofeedback" }
     },
     {
-      id: "pm-35151696", condition: "adhd", type: "biomarker",
+      id: "pm-35151696", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 225, k: null },
       sites: [], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1859,7 +1859,7 @@ window.NF_DATA = {
       cite: { authors: "Mason LM, et al.", year: 2022, title: "Age-related changes in the EEG in an eyes-open condition: II. Subtypes of AD/HD", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-35182242", condition: "adhd", type: "protocol",
+      id: "pm-35182242", source: "full-text", condition: "adhd", type: "protocol",
       metrics: { design: 4, control: "active", blinded: null, n: 121, k: null },
       sites: ["O1","O2"], bands: ["alpha"], direction: "up", evidence: "moderate",
       changes: { alpha: "up" }, symptoms: ["inattention","hyperactivity","impulsivity","executive","memory"],
@@ -1869,7 +1869,7 @@ window.NF_DATA = {
       cite: { authors: "Luo X, et al.", year: 2023, title: "A randomized controlled study of remote computerized cognitive, neurofeedback, and combined training in the treatment of children with attention-deficit/hyperactivity disorder", journal: "Eur Child Adolesc Psychiatry" }
     },
     {
-      id: "pm-36681294", condition: "adhd", type: "biomarker",
+      id: "pm-36681294", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 102, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["delta","theta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1879,7 +1879,7 @@ window.NF_DATA = {
       cite: { authors: "McCabe LE, et al.", year: 2023, title: "Links between excessive daytime sleepiness and EEG power and activation in two subtypes of ADHD", journal: "Biol Psychol" }
     },
     {
-      id: "pm-38858839", condition: "adhd", type: "biomarker",
+      id: "pm-38858839", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 66, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","C3","Cz","C4"], bands: ["theta","beta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", beta: "up" }, symptoms: ["inattention","hyperactivity","impulsivity"],
@@ -1889,7 +1889,7 @@ window.NF_DATA = {
       cite: { authors: "Dakwar-Kawar O, et al.", year: 2024, title: "Aperiodic and periodic components of oscillatory brain activity in relation to cognition and symptoms in pediatric ADHD", journal: "Cereb Cortex" }
     },
     {
-      id: "pm-39674997", condition: "adhd", type: "protocol",
+      id: "pm-39674997", source: "full-text", condition: "adhd", type: "protocol",
       metrics: { design: 4, control: "sham", blinded: true, n: 142, k: null },
       sites: ["Fz","Cz"], bands: ["theta"], direction: "ratio", evidence: "contested",
       changes: { theta: "mixed" }, symptoms: ["inattention","hyperactivity","impulsivity"],
@@ -1899,7 +1899,7 @@ window.NF_DATA = {
       cite: { authors: "Enriquez-Geppert S, et al.", year: 2025, title: "Theta/Beta Ratio Neurofeedback Effects on Resting and Task-Related Theta Activity in Children with ADHD", journal: "Appl Psychophysiol Biofeedback" }
     },
     {
-      id: "pm-42347931", condition: "adhd", type: "biomarker",
+      id: "pm-42347931", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 2284, k: null },
       sites: [], bands: ["delta","theta","beta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up", beta: "up" }, symptoms: ["inattention","hyperactivity","impulsivity"],
@@ -1909,7 +1909,7 @@ window.NF_DATA = {
       cite: { authors: "Wang Z, et al.", year: 2026, title: "Dissociable EEG connectivity patterns reflect the latent general and specific dimensions of ADHD in children and adolescents", journal: "Eur Child Adolesc Psychiatry" }
     },
     {
-      id: "pm-42350829", condition: "adhd", type: "biomarker",
+      id: "pm-42350829", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 70, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "down", evidence: "preliminary",
       changes: { delta: "down", theta: "down", alpha: "down", beta: "down" }, symptoms: ["inattention","hyperactivity","impulsivity"],
@@ -1919,7 +1919,7 @@ window.NF_DATA = {
       cite: { authors: "Schoenberg PLA, et al.", year: 2026, title: "Electrocortical Indices of Default Mode Network-Related Activity in ADHD and Modulation Through Mindfulness-Based Cognitive Therapy", journal: "Brain Topogr" }
     },
     {
-      id: "pm-9472424", condition: "adhd", type: "biomarker",
+      id: "pm-9472424", source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 52, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["inattention","hyperactivity","impulsivity"],
@@ -1929,7 +1929,7 @@ window.NF_DATA = {
       cite: { authors: "Lazzaro I, et al.", year: 1998, title: "Quantified EEG activity in adolescent attention deficit hyperactivity disorder", journal: "Clin Electroencephalogr" }
     },
     {
-      id: "pm-31429702", condition: "adhd", type: "biomarker",
+      id: "pm-31429702", source: "full-text", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 31, k: null },
       sites: ["F3","Fz","F4","C3","Cz","C4","P3","Pz","P4","O1","O2"], bands: ["delta","theta"], direction: "down", evidence: "preliminary",
       changes: { delta: "down", theta: "down" }, symptoms: ["lowmood"],
@@ -1939,7 +1939,7 @@ window.NF_DATA = {
       cite: { authors: "Huang J, et al.", year: 2019, title: "Brain arousal regulation and depressive symptomatology in adults with attention-deficit/hyperactivity disorder (ADHD)", journal: "BMC Neurosci" }
     },
     {
-      id: "pm-10466736", condition: "schizophrenia", type: "biomarker",
+      id: "pm-10466736", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 45, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P4","T6","O2"], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "down", alpha: "down", beta: "up" }, symptoms: ["psychosis"],
@@ -1949,7 +1949,7 @@ window.NF_DATA = {
       cite: { authors: "Pascual-Marqui RD, et al.", year: 1999, title: "Low resolution brain electromagnetic tomography (LORETA) functional imaging in acute, neuroleptic-naive, first-episode, productive schizophrenia", journal: "Psychiatry Res" }
     },
     {
-      id: "pm-11295374", condition: "schizophrenia", type: "biomarker",
+      id: "pm-11295374", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["delta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up" }, symptoms: ["psychosis"],
@@ -1959,7 +1959,7 @@ window.NF_DATA = {
       cite: { authors: "Wuebben Y, et al.", year: 2001, title: "Hypofrontality -- a risk-marker related to schizophrenia?", journal: "Schizophr Res" }
     },
     {
-      id: "pm-14595470", condition: "schizophrenia", type: "biomarker",
+      id: "pm-14595470", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 65, k: null },
       sites: ["Fp2","F4","F8"], bands: ["delta","theta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up" }, symptoms: ["psychosis"],
@@ -1969,7 +1969,7 @@ window.NF_DATA = {
       cite: { authors: "Veiga H, et al.", year: 2003, title: "Neurocortical electrical activity tomography in chronic schizophrenics", journal: "Arq Neuropsiquiatr" }
     },
     {
-      id: "pm-18381357", condition: "schizophrenia", type: "biomarker",
+      id: "pm-18381357", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["beta"], direction: "up", evidence: "preliminary",
       changes: { beta: "up" }, symptoms: ["psychosis"],
@@ -1979,7 +1979,7 @@ window.NF_DATA = {
       cite: { authors: "Venables NC, et al.", year: 2009, title: "Genetic and disorder-specific aspects of resting state EEG abnormalities in schizophrenia", journal: "Schizophr Bull" }
     },
     {
-      id: "pm-18636993", condition: "schizophrenia", type: "biomarker",
+      id: "pm-18636993", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 28, k: null },
       sites: [], bands: ["alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "mixed", beta: "down" }, symptoms: ["psychosis"],
@@ -1989,7 +1989,7 @@ window.NF_DATA = {
       cite: { authors: "Knyazeva MG, et al.", year: 2008, title: "Alpha rhythm and hypofrontality in schizophrenia", journal: "Acta Psychiatr Scand" }
     },
     {
-      id: "pm-19199131", condition: "schizophrenia", type: "biomarker",
+      id: "pm-19199131", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 20, k: null },
       sites: ["Fp1","F7","F3"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["psychosis"],
@@ -1999,7 +1999,7 @@ window.NF_DATA = {
       cite: { authors: "Jetha MK, et al.", year: 2009, title: "Resting frontal EEG asymmetry and shyness and sociability in schizophrenia: a pilot study of community-based outpatients", journal: "Int J Neurosci" }
     },
     {
-      id: "pm-21862398", condition: "schizophrenia", type: "biomarker",
+      id: "pm-21862398", source: "full-text", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 318, k: null },
       sites: [], bands: ["delta","theta","alpha","gamma"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "up", gamma: "up" }, symptoms: ["psychosis"],
@@ -2009,7 +2009,7 @@ window.NF_DATA = {
       cite: { authors: "Hong LE, et al.", year: 2012, title: "A shared low-frequency oscillatory rhythm abnormality in resting and sensory gating in schizophrenia", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-22125634", condition: "epilepsy", type: "biomarker",
+      id: "pm-22125634", source: "full-text", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 42, k: null },
       sites: ["P3","Pz","P4"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["psychosis"],
@@ -2019,7 +2019,7 @@ window.NF_DATA = {
       cite: { authors: "Canuet L, et al.", year: 2011, title: "Resting-state EEG source localization and functional connectivity in schizophrenia-like psychosis of epilepsy", journal: "PLoS One" }
     },
     {
-      id: "pm-23051885", condition: "schizophrenia", type: "biomarker",
+      id: "pm-23051885", source: "abstract", sample: "tikka-scz-60", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
       sites: ["Fp1","Fp2","F7","F3","F4","F8","T3","T4","T5","T6","P3","P4"], bands: ["gamma"], direction: "up", evidence: "preliminary",
       changes: { gamma: "up" }, symptoms: ["psychosis"],
@@ -2029,7 +2029,7 @@ window.NF_DATA = {
       cite: { authors: "Tikka SK, et al.", year: 2013, title: "Increased spontaneous gamma power and synchrony in schizophrenia patients having higher minor physical anomalies", journal: "Psychiatry Res" }
     },
     {
-      id: "pm-24090715", condition: "schizophrenia", type: "biomarker",
+      id: "pm-24090715", source: "full-text", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 268, k: null },
       sites: [], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "contested",
       changes: { delta: "mixed", theta: "mixed", alpha: "mixed" }, symptoms: ["psychosis"],
@@ -2039,7 +2039,7 @@ window.NF_DATA = {
       cite: { authors: "Kam JW, et al.", year: 2013, title: "Resting state EEG power and coherence abnormalities in bipolar disorder and schizophrenia", journal: "J Psychiatr Res" }
     },
     {
-      id: "pm-24439302", condition: "schizophrenia", type: "biomarker",
+      id: "pm-24439302", source: "full-text", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 425, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "up", beta: "up" }, symptoms: ["psychosis"],
@@ -2049,7 +2049,7 @@ window.NF_DATA = {
       cite: { authors: "Narayanan B, et al.", year: 2014, title: "Resting state electroencephalogram oscillatory abnormalities in schizophrenia and psychotic bipolar patients and their relatives from the bipolar and schizophrenia network on intermediate phenotypes study", journal: "Biol Psychiatry" }
     },
     {
-      id: "pm-25310340", condition: "schizophrenia", type: "biomarker",
+      id: "pm-25310340", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 50, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["psychosis"],
@@ -2059,7 +2059,7 @@ window.NF_DATA = {
       cite: { authors: "Horan WP, et al.", year: 2014, title: "Approach and withdrawal motivation in schizophrenia: an examination of frontal brain asymmetric activity", journal: "PLoS One" }
     },
     {
-      id: "pm-25595562", condition: "schizophrenia", type: "biomarker",
+      id: "pm-25595562", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 180, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","C3","Cz","C4"], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["psychosis"],
@@ -2069,7 +2069,7 @@ window.NF_DATA = {
       cite: { authors: "Kim JW, et al.", year: 2015, title: "Diagnostic utility of quantitative EEG in un-medicated schizophrenia", journal: "Neurosci Lett" }
     },
     {
-      id: "pm-26159669", condition: "schizophrenia", type: "biomarker",
+      id: "pm-26159669", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 36, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["psychosis"],
@@ -2079,7 +2079,7 @@ window.NF_DATA = {
       cite: { authors: "Goldstein MR, et al.", year: 2015, title: "Topographic deficits in alpha-range resting EEG activity and steady state visual evoked responses in schizophrenia", journal: "Schizophr Res" }
     },
     {
-      id: "pm-26952695", condition: "schizophrenia", type: "biomarker",
+      id: "pm-26952695", source: "abstract", sample: "tikka-scz-60", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
       sites: ["Fp2","F4","F8","C4","T4","P4","T6","O2"], bands: ["gamma"], direction: "up", evidence: "preliminary",
       changes: { gamma: "up" }, symptoms: ["psychosis"],
@@ -2089,7 +2089,7 @@ window.NF_DATA = {
       cite: { authors: "Tikka SK, et al.", year: 2016, title: "Schneiderian first rank symptoms in schizophrenia: A developmental neuroscience evaluation", journal: "Int J Dev Neurosci" }
     },
     {
-      id: "pm-27001559", condition: "schizophrenia", type: "biomarker",
+      id: "pm-27001559", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
       sites: ["T4","T6","P4","Fz","Cz","Pz"], bands: ["gamma"], direction: "down", evidence: "preliminary",
       changes: { gamma: "down" }, symptoms: ["psychosis"],
@@ -2099,7 +2099,7 @@ window.NF_DATA = {
       cite: { authors: "Umesh S, et al.", year: 2018, title: "Social anhedonia and gamma band abnormalities as a composite/multivariate endophenotype for schizophrenia: a dense array EEG study", journal: "Early Interv Psychiatry" }
     },
     {
-      id: "pm-28483096", condition: "schizophrenia", type: "biomarker",
+      id: "pm-28483096", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 30, k: null },
       sites: ["Fp1","F7","F3","T3","T5"], bands: ["alpha","theta"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "down", theta: "up" }, symptoms: ["psychosis"],
@@ -2109,7 +2109,7 @@ window.NF_DATA = {
       cite: { authors: "Mitra S, et al.", year: 2017, title: "Electroencephalogram alpha-to-theta ratio over left fronto-temporal region correlates with negative symptoms in schizophrenia", journal: "Asian J Psychiatr" }
     },
     {
-      id: "pm-2898871", condition: "schizophrenia", type: "biomarker",
+      id: "pm-2898871", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 36, k: null },
       sites: ["O1","O2"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["psychosis","anxiety"],
@@ -2119,7 +2119,7 @@ window.NF_DATA = {
       cite: { authors: "Gaebel W, et al.", year: 1988, title: "Topographical distribution of absolute alpha-power in the EEG and psychopathology in schizophrenic outpatients", journal: "Acta Psychiatr Scand" }
     },
     {
-      id: "pm-29569047", condition: "schizophrenia", type: "biomarker",
+      id: "pm-29569047", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 136, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","C3","Cz","C4","P3","Pz","P4","T5","T6","O1","O2"], bands: ["gamma"], direction: "up", evidence: "preliminary",
       changes: { gamma: "up" }, symptoms: ["psychosis"],
@@ -2129,7 +2129,7 @@ window.NF_DATA = {
       cite: { authors: "Baradits M, et al.", year: 2019, title: "Alterations in resting-state gamma activity in patients with schizophrenia: a high-density EEG study", journal: "Eur Arch Psychiatry Clin Neurosci" }
     },
     {
-      id: "pm-29643331", condition: "schizophrenia", type: "biomarker",
+      id: "pm-29643331", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 109, k: null },
       sites: [], bands: ["delta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", alpha: "down" }, symptoms: ["psychosis"],
@@ -2139,7 +2139,7 @@ window.NF_DATA = {
       cite: { authors: "Howells FM, et al.", year: 2018, title: "Electroencephalographic delta/alpha frequency activity differentiates psychotic disorders: a study of schizophrenia, bipolar disorder and methamphetamine-induced psychotic disorder", journal: "Transl Psychiatry" }
     },
     {
-      id: "pm-31634240", condition: "schizophrenia", type: "biomarker",
+      id: "pm-31634240", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 103, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","C3","Cz","C4"], bands: ["delta","theta","alpha"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "up" }, symptoms: ["psychosis"],
@@ -2149,7 +2149,7 @@ window.NF_DATA = {
       cite: { authors: "Chen C, et al.", year: 2019, title: "The relationship between resting electroencephalogram oscillatory abnormalities and schizotypal personality traits in the first-degree relatives of schizophrenia patients", journal: "Neuroreport" }
     },
     {
-      id: "pm-33434730", condition: "schizophrenia", type: "biomarker",
+      id: "pm-33434730", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 43, k: null },
       sites: [], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["psychosis"],
@@ -2159,7 +2159,7 @@ window.NF_DATA = {
       cite: { authors: "Zhang Y, et al.", year: 2021, title: "Distinct alterations in resting-state electroencephalogram during eyes closed and eyes open and between morning and evening are present in first-episode psychosis patients", journal: "Schizophr Res" }
     },
     {
-      id: "pm-33503585", condition: "schizophrenia", type: "biomarker",
+      id: "pm-33503585", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 59, k: null },
       sites: [], bands: ["gamma"], direction: "up", evidence: "preliminary",
       changes: { gamma: "up" }, symptoms: ["psychosis"],
@@ -2169,7 +2169,7 @@ window.NF_DATA = {
       cite: { authors: "Yadav S, et al.", year: 2021, title: "Resting state quantitative electroencephalogram gamma power spectra in patients with first episode psychosis: An observational study", journal: "Asian J Psychiatr" }
     },
     {
-      id: "pm-33538105", condition: "schizophrenia", type: "biomarker",
+      id: "pm-33538105", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 28, k: null },
       sites: ["C3","Cz","C4"], bands: ["delta"], direction: "down", evidence: "preliminary",
       changes: { delta: "down" }, symptoms: ["psychosis"],
@@ -2179,7 +2179,7 @@ window.NF_DATA = {
       cite: { authors: "Racz FS, et al.", year: 2021, title: "Separating scale-free and oscillatory components of neural activity in schizophrenia", journal: "Brain Behav" }
     },
     {
-      id: "pm-3495249", condition: "schizophrenia", type: "biomarker",
+      id: "pm-3495249", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 28, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "mixed", alpha: "mixed", beta: "mixed" }, symptoms: ["psychosis"],
@@ -2189,7 +2189,7 @@ window.NF_DATA = {
       cite: { authors: "Karson CN, et al.", year: 1987, title: "Computed electroencephalographic activity mapping in schizophrenia. The resting state reconsidered", journal: "Arch Gen Psychiatry" }
     },
     {
-      id: "pm-3751669", condition: "schizophrenia", type: "biomarker",
+      id: "pm-3751669", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["psychosis"],
@@ -2199,7 +2199,7 @@ window.NF_DATA = {
       cite: { authors: "Müller HF, et al.", year: 1986, title: "Topography and possible physiological significance of EEG amplitude variability in psychosis", journal: "Acta Psychiatr Scand" }
     },
     {
-      id: "pm-38217348", condition: "schizophrenia", type: "biomarker",
+      id: "pm-38217348", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 75, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta","alpha"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", alpha: "up" }, symptoms: ["psychosis"],
@@ -2209,7 +2209,7 @@ window.NF_DATA = {
       cite: { authors: "Nakhnikian A, et al.", year: 2024, title: "Spectral decomposition of resting state electroencephalogram reveals unique theta/alpha activity in schizophrenia", journal: "Eur J Neurosci" }
     },
     {
-      id: "pm-39799666", condition: "schizophrenia", type: "biomarker",
+      id: "pm-39799666", source: "full-text", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 101, k: null },
       sites: ["F3","F4"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["social"],
@@ -2219,7 +2219,7 @@ window.NF_DATA = {
       cite: { authors: "Farina EA, et al.", year: 2025, title: "Social functioning and frontal alpha asymmetry in schizophrenia", journal: "J Psychiatr Res" }
     },
     {
-      id: "pm-40550812", condition: "schizophrenia", type: "biomarker",
+      id: "pm-40550812", source: "full-text", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 116, k: null },
       sites: ["T3","T4","T5","T6","O1","O2"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["psychosis"],
@@ -2229,7 +2229,7 @@ window.NF_DATA = {
       cite: { authors: "Han C, et al.", year: 2025, title: "Distinct oscillatory mechanisms in low and high alpha-band activities for screening and potential treatment of Schizophrenia", journal: "Transl Psychiatry" }
     },
     {
-      id: "pm-40792462", condition: "schizophrenia", type: "biomarker",
+      id: "pm-40792462", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 134, k: null },
       sites: [], bands: ["theta","alpha"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", alpha: "up" }, symptoms: ["psychosis"],
@@ -2239,7 +2239,7 @@ window.NF_DATA = {
       cite: { authors: "Mitoma R, et al.", year: 2025, title: "Abnormal spontaneous activity and rest-task shift in schizophrenia", journal: "Psychiatry Clin Neurosci" }
     },
     {
-      id: "pm-41045101", condition: "schizophrenia", type: "biomarker",
+      id: "pm-41045101", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 249, k: null },
       sites: [], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["psychosis","memory"],
@@ -2249,7 +2249,7 @@ window.NF_DATA = {
       cite: { authors: "Hasanaj G, et al.", year: 2025, title: "Periodic and Aperiodic Alterations of Resting-State EEG in Schizophrenia Spectrum Disorders: Cognitive and Clinical Insights", journal: "Eur J Neurosci" }
     },
     {
-      id: "pm-42759803", condition: "schizophrenia", type: "biomarker",
+      id: "pm-42759803", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 18, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","C3","Cz","C4","T3","T4","T5","T6"], bands: ["delta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up" }, symptoms: ["psychosis"],
@@ -2259,7 +2259,7 @@ window.NF_DATA = {
       cite: { authors: "Vahid-Vahdat P, et al.", year: 2026, title: "Frequency-specific QEEG spectral power correlates of positive and negative symptom severity in recent-onset schizophrenia", journal: "Neuroscience" }
     },
     {
-      id: "pm-474178", condition: "schizophrenia", type: "biomarker",
+      id: "pm-474178", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["P3","O1"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["psychosis"],
@@ -2269,7 +2269,7 @@ window.NF_DATA = {
       cite: { authors: "Etevenon P, et al.", year: 1979, title: "Intra- and interhemispheric EEG differences quantified by spectral analysis. Comparative study of two groups of schizophrenics and a control group", journal: "Acta Psychiatr Scand" }
     },
     {
-      id: "pm-7388249", condition: "schizophrenia", type: "biomarker",
+      id: "pm-7388249", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["T3","T4","T5","T6"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["psychosis"],
@@ -2279,7 +2279,7 @@ window.NF_DATA = {
       cite: { authors: "Fenton GW, et al.", year: 1980, title: "EEG spectral analysis in schizophrenia", journal: "Br J Psychiatry" }
     },
     {
-      id: "pm-7893770", condition: "schizophrenia", type: "biomarker",
+      id: "pm-7893770", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 34, k: null },
       sites: [], bands: ["alpha","delta","theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "down", delta: "mixed", theta: "mixed", beta: "mixed" }, symptoms: ["psychosis"],
@@ -2289,7 +2289,7 @@ window.NF_DATA = {
       cite: { authors: "Wada Y, et al.", year: 1994, title: "Quantitative EEG analysis at rest and during photic stimulation in drug-naive patients with first-episode paranoid schizophrenia", journal: "Eur Arch Psychiatry Clin Neurosci" }
     },
     {
-      id: "pm-7972603", condition: "schizophrenia", type: "biomarker",
+      id: "pm-7972603", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 326, k: null },
       sites: [], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["psychosis"],
@@ -2299,7 +2299,7 @@ window.NF_DATA = {
       cite: { authors: "Clementz BA, et al.", year: 1994, title: "Resting EEG in first-episode schizophrenia patients, bipolar psychosis patients, and their first-degree relatives", journal: "Psychophysiology" }
     },
     {
-      id: "pm-8146253", condition: "schizophrenia", type: "biomarker",
+      id: "pm-8146253", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 204, k: null },
       sites: [], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["psychosis"],
@@ -2309,7 +2309,7 @@ window.NF_DATA = {
       cite: { authors: "Sponheim SR, et al.", year: 1994, title: "Resting EEG in first-episode and chronic schizophrenia", journal: "Psychophysiology" }
     },
     {
-      id: "pm-8471683", condition: "schizophrenia", type: "biomarker",
+      id: "pm-8471683", source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 22, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["psychosis"],
@@ -2319,7 +2319,7 @@ window.NF_DATA = {
       cite: { authors: "Kahn EM, Weiner RD, et al.", year: 1993, title: "Spectral and topographic analysis of EEG in schizophrenic patients", journal: "Biol Psychiatry" }
     },
     {
-      id: "pm-25587799", condition: "schizophrenia", type: "biomarker",
+      id: "pm-25587799", source: "full-text", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 48, k: null },
       sites: ["T3","T4","T5","T6"], bands: ["gamma"], direction: "ratio", evidence: "contested",
       changes: { gamma: "mixed" }, symptoms: ["psychosis"],
@@ -2329,7 +2329,7 @@ window.NF_DATA = {
       cite: { authors: "Hirano Y, et al.", year: 2015, title: "Spontaneous Gamma Activity in Schizophrenia", journal: "JAMA Psychiatry" }
     },
     {
-      id: "pm-26101851", condition: "schizophrenia", type: "biomarker",
+      id: "pm-26101851", source: "full-text", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 306, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4","T5","T6","O1","O2"], bands: ["delta","theta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up" }, symptoms: ["psychosis"],
@@ -2339,7 +2339,7 @@ window.NF_DATA = {
       cite: { authors: "Narayanan B, et al.", year: 2015, title: "Multivariate genetic determinants of EEG oscillations in schizophrenia and psychotic bipolar disorder from the BSNIP study", journal: "Transl Psychiatry" }
     },
     {
-      id: "cand-gad-wang-2025", condition: "anxiety", type: "biomarker",
+      id: "cand-gad-wang-2025", source: "full-text", condition: "anxiety", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 190, k: null },
       sites: ["C3","Cz","C4","T3","T4","T5","T6"], bands: ["beta","alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { beta: "up", alpha: "asymmetry" }, symptoms: ["anxiety"],
@@ -2349,7 +2349,7 @@ window.NF_DATA = {
       cite: { authors: "Wang H, Mou S, Pei X, Zhang X, Shen S, Zhang J, Shen X, Shen Z", year: 2025, title: "The power spectrum and functional connectivity characteristics of resting-state EEG in patients with generalized anxiety disorder", journal: "Scientific Reports" }
     },
     {
-      id: "pm-38280864", condition: "anxiety", type: "biomarker",
+      id: "pm-38280864", source: "full-text", condition: "anxiety", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 93, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4"], bands: ["delta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", beta: "down" }, symptoms: ["anxiety"],
@@ -2359,7 +2359,7 @@ window.NF_DATA = {
       cite: { authors: "Yassine S, et al.", year: 2024, title: "Electrophysiological signatures of anxiety in Parkinson's disease", journal: "Transl Psychiatry" }
     },
     {
-      id: "pm-28582479", condition: "ptsd", type: "biomarker",
+      id: "pm-28582479", source: "abstract", sample: "clancy-ptsd-69", condition: "ptsd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 69, k: null },
       sites: ["O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["hyperarousal","intrusions"],
@@ -2369,7 +2369,7 @@ window.NF_DATA = {
       cite: { authors: "Clancy K, et al.", year: 2017, title: "Restless 'rest': intrinsic sensory hyperactivity and disinhibition in post-traumatic stress disorder", journal: "Brain" }
     },
     {
-      id: "cand-anx-yuan-2024", condition: "anxiety", type: "biomarker",
+      id: "cand-anx-yuan-2024", source: "full-text", condition: "anxiety", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 112, k: null },
       sites: ["T3","T4","T5","T6","Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["beta","theta"], direction: "ratio", evidence: "preliminary",
       changes: { beta: "down", theta: "up" }, symptoms: ["anxiety","inattention"],
@@ -2379,7 +2379,7 @@ window.NF_DATA = {
       cite: { authors: "Yuan D, Yang X, Wang P, Yang L, Yang T, He F, Xu Y, Li Z", year: 2024, title: "Quantitative EEG and its relationship with attentional control in patients with anxiety disorders", journal: "Frontiers in Psychiatry" }
     },
     {
-      id: "pm-20950657", condition: "anxiety", type: "biomarker",
+      id: "pm-20950657", source: "abstract", condition: "anxiety", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 156, k: null },
       sites: [], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["anxiety"],
@@ -2389,7 +2389,7 @@ window.NF_DATA = {
       cite: { authors: "Wise V, et al.", year: 2011, title: "An integrative assessment of brain and body function 'at rest' in panic disorder: a combined quantitative EEG/autonomic function study", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-26970143", condition: "anxiety", type: "biomarker",
+      id: "pm-26970143", source: "abstract", condition: "anxiety", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4"], bands: ["alpha"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "mixed" }, symptoms: ["anxiety"],
@@ -2399,7 +2399,7 @@ window.NF_DATA = {
       cite: { authors: "Smith EE, et al.", year: 2016, title: "Patterns of alpha asymmetry in those with elevated worry, trait anxiety, and obsessive-compulsive symptoms: A test of the worry and avoidance models of alpha asymmetry", journal: "Neuropsychologia" }
     },
     {
-      id: "pm-34224782", condition: "anxiety", type: "biomarker",
+      id: "pm-34224782", source: "abstract", condition: "anxiety", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 97, k: null },
       sites: ["F7","F3","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["anxiety"],
@@ -2409,7 +2409,7 @@ window.NF_DATA = {
       cite: { authors: "Thoma L, et al.", year: 2021, title: "Fronto-lateral alpha power asymmetry in panic disorder", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-35192865", condition: "anxiety", type: "biomarker",
+      id: "pm-35192865", source: "abstract", condition: "anxiety", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 103, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha","delta"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "down", delta: "up" }, symptoms: ["anxiety"],
@@ -2419,7 +2419,7 @@ window.NF_DATA = {
       cite: { authors: "Schmidt LA, et al.", year: 2022, title: "Frontal EEG alpha-delta ratio and social anxiety across early adolescence", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-35891100", condition: "anxiety", type: "biomarker",
+      id: "pm-35891100", source: "full-text", condition: "anxiety", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 81, k: null },
       sites: ["Fp1","Fp2","F7","F3","F4","F8","T3","T4","T5","T6","C3","C4"], bands: ["alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "down", beta: "up" }, symptoms: ["anxiety"],
@@ -2429,7 +2429,7 @@ window.NF_DATA = {
       cite: { authors: "Shen Z, et al.", year: 2022, title: "Aberrated Multidimensional EEG Characteristics in Patients with Generalized Anxiety Disorder: A Machine-Learning Based Analysis Framework", journal: "Sensors (Basel)" }
     },
     {
-      id: "pm-40102367", condition: "anxiety", type: "protocol",
+      id: "pm-40102367", source: "full-text", condition: "anxiety", type: "protocol",
       metrics: { design: 4, control: "sham", blinded: true, n: 60, k: null },
       sites: [], bands: ["delta"], direction: "down", evidence: "contested",
       changes: { delta: "down" }, symptoms: ["anxiety","lowmood"],
@@ -2439,7 +2439,7 @@ window.NF_DATA = {
       cite: { authors: "Perez TM, et al.", year: 2025, title: "Infraslow Closed-Loop Brain Training for Anxiety and Depression (ISAD): A pilot randomised, sham-controlled trial in adult females with internalizing disorders", journal: "Cogn Affect Behav Neurosci" }
     },
     {
-      id: "pm-9892259", condition: "anxiety", type: "biomarker",
+      id: "pm-9892259", source: "abstract", condition: "anxiety", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 48, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["anxiety"],
@@ -2449,7 +2449,7 @@ window.NF_DATA = {
       cite: { authors: "Wiedemann G, et al.", year: 1999, title: "Frontal brain asymmetry as a biological substrate of emotions in patients with panic disorders", journal: "Arch Gen Psychiatry" }
     },
     {
-      id: "pm-18331812", condition: "autism", type: "biomarker",
+      id: "pm-18331812", source: "abstract", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 40, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","Cz","Pz","P4","T6","O2"], bands: ["theta","delta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", delta: "down", beta: "up" }, symptoms: ["social"],
@@ -2459,7 +2459,7 @@ window.NF_DATA = {
       cite: { authors: "Coben R, et al.", year: 2008, title: "EEG power and coherence in autistic spectrum disorder", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-21107671", condition: "autism", type: "biomarker",
+      id: "pm-21107671", source: "full-text", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["social"],
@@ -2469,7 +2469,7 @@ window.NF_DATA = {
       cite: { authors: "Burnette CP, et al.", year: 2011, title: "Anterior EEG asymmetry and the Modifier Model of Autism", journal: "J Autism Dev Disord" }
     },
     {
-      id: "pm-26187351", condition: "autism", type: "biomarker",
+      id: "pm-26187351", source: "abstract", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["social"],
@@ -2479,7 +2479,7 @@ window.NF_DATA = {
       cite: { authors: "Clarke AR, et al.", year: 2016, title: "EEG activity in children with Asperger's Syndrome", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-31669326", condition: "autism", type: "biomarker",
+      id: "pm-31669326", source: "abstract", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 64, k: null },
       sites: ["Fz","Cz","Pz"], bands: ["theta"], direction: "down", evidence: "preliminary",
       changes: { theta: "down" }, symptoms: ["social"],
@@ -2489,7 +2489,7 @@ window.NF_DATA = {
       cite: { authors: "Hornung T, et al.", year: 2019, title: "Dopaminergic hypo-activity and reduced theta-band power in autism spectrum disorder: A resting-state EEG study", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-33407072", condition: "autism", type: "biomarker",
+      id: "pm-33407072", source: "full-text", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 62, k: null },
       sites: ["Pz"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["social"],
@@ -2499,7 +2499,7 @@ window.NF_DATA = {
       cite: { authors: "Pierce S, et al.", year: 2021, title: "Associations between sensory processing and electrophysiological and neurochemical measures in children with ASD: an EEG-MRS study", journal: "J Neurodev Disord" }
     },
     {
-      id: "pm-34517813", condition: "autism", type: "biomarker",
+      id: "pm-34517813", source: "full-text", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 280, k: null },
       sites: [], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["social"],
@@ -2509,7 +2509,7 @@ window.NF_DATA = {
       cite: { authors: "Neuhaus E, et al.", year: 2021, title: "Resting state EEG in youth with ASD: age, sex, and relation to phenotype", journal: "J Neurodev Disord" }
     },
     {
-      id: "pm-35585637", condition: "autism", type: "biomarker",
+      id: "pm-35585637", source: "full-text", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 411, k: null },
       sites: [], bands: ["alpha"], direction: "ratio", evidence: "contested",
       changes: { alpha: "mixed" }, symptoms: ["social"],
@@ -2519,7 +2519,7 @@ window.NF_DATA = {
       cite: { authors: "Garcés P, et al.", year: 2022, title: "Resting state EEG power spectrum and functional connectivity in autism: a cross-sectional analysis", journal: "Mol Autism" }
     },
     {
-      id: "pm-37172019", condition: "autism", type: "biomarker",
+      id: "pm-37172019", source: "abstract", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["delta","theta","alpha","beta","gamma"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "mixed", theta: "up", alpha: "up", beta: "up", gamma: "up" }, symptoms: ["social"],
@@ -2529,7 +2529,7 @@ window.NF_DATA = {
       cite: { authors: "Zhao Q, et al.", year: 2024, title: "Resting-state EEG patterns of preschool-aged boys with autism spectrum disorder: A pilot study", journal: "Appl Neuropsychol Child" }
     },
     {
-      id: "pm-37330940", condition: "autism", type: "biomarker",
+      id: "pm-37330940", source: "full-text", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 32, k: null },
       sites: [], bands: ["hibeta","gamma","theta"], direction: "ratio", evidence: "preliminary",
       changes: { hibeta: "up", gamma: "up", theta: "down" }, symptoms: ["social"],
@@ -2539,7 +2539,7 @@ window.NF_DATA = {
       cite: { authors: "Angulo-Ruiz BY, et al.", year: 2023, title: "Linear and Non-linear Analyses of EEG in a Group of ASD Children During Resting State Condition", journal: "Brain Topogr" }
     },
     {
-      id: "pm-38607475", condition: "autism", type: "biomarker",
+      id: "pm-38607475", source: "abstract", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 106, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["gamma"], direction: "ratio", evidence: "contested",
       changes: { gamma: "mixed" }, symptoms: ["social"],
@@ -2549,7 +2549,7 @@ window.NF_DATA = {
       cite: { authors: "Mukerji CE, et al.", year: 2025, title: "Resting Frontal Gamma Power is Associated with Both Expressive Language and Non-verbal Cognitive Abilities in Young Autistic Children", journal: "J Autism Dev Disord" }
     },
     {
-      id: "pm-38901364", condition: "autism", type: "biomarker",
+      id: "pm-38901364", source: "abstract", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 47, k: null },
       sites: ["F7","F8","F3","F4","T5","T6","P3","P4"], bands: ["gamma"], direction: "down", evidence: "preliminary",
       changes: { gamma: "down" }, symptoms: ["social"],
@@ -2559,7 +2559,7 @@ window.NF_DATA = {
       cite: { authors: "Kakuszi B, et al.", year: 2024, title: "Alterations in resting-state gamma-activity is adults with autism spectrum disorder: A High-Density EEG study", journal: "Psychiatry Res" }
     },
     {
-      id: "pm-39251926", condition: "autism", type: "biomarker",
+      id: "pm-39251926", source: "full-text", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 101, k: null },
       sites: [], bands: ["beta","gamma"], direction: "up", evidence: "preliminary",
       changes: { beta: "up", gamma: "up" }, symptoms: ["social"],
@@ -2569,7 +2569,7 @@ window.NF_DATA = {
       cite: { authors: "Proteau-Lemieux M, et al.", year: 2024, title: "Specific EEG resting state biomarkers in FXS and ASD", journal: "J Neurodev Disord" }
     },
     {
-      id: "pm-39555754", condition: "autism", type: "biomarker",
+      id: "pm-39555754", source: "full-text", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 52, k: null },
       sites: ["O1","O2"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["social"],
@@ -2579,7 +2579,7 @@ window.NF_DATA = {
       cite: { authors: "Murray SO, et al.", year: 2025, title: "Increased alpha power in autistic adults: Relation to sensory behaviors and cortical volume", journal: "Autism Res" }
     },
     {
-      id: "pm-41101705", condition: "autism", type: "biomarker",
+      id: "pm-41101705", source: "full-text", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 310, k: null },
       sites: ["F3","F4"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["social"],
@@ -2589,7 +2589,7 @@ window.NF_DATA = {
       cite: { authors: "Arutiunian V, et al.", year: 2026, title: "Number of Alpha Peaks in the Electroencephalogram Is Associated With Clinical Phenotype and Copy Number Variants in Youths With Autism", journal: "Biol Psychiatry Cogn Neurosci Neuroimaging" }
     },
     {
-      id: "pm-41520112", condition: "autism", type: "biomarker",
+      id: "pm-41520112", source: "full-text", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 128, k: null },
       sites: [], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["social"],
@@ -2599,7 +2599,7 @@ window.NF_DATA = {
       cite: { authors: "Chen Y, et al.", year: 2026, title: "Resting state aperiodic and periodic EEG activity in preschool-aged autistic children: differences from neurotypical peers and links to language skills", journal: "Mol Autism" }
     },
     {
-      id: "pm-42185252", condition: "autism", type: "biomarker",
+      id: "pm-42185252", source: "full-text", condition: "autism", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: 188, k: null },
       sites: [], bands: ["delta","theta","beta","gamma"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up", beta: "up", gamma: "up" }, symptoms: ["social"],
@@ -2609,7 +2609,7 @@ window.NF_DATA = {
       cite: { authors: "Latrèche K, et al.", year: 2026, title: "Early Trajectories of Resting-State EEG power in autistic children: a longitudinal study across language profiles", journal: "Transl Psychiatry" }
     },
     {
-      id: "pm-12712882", condition: "epilepsy", type: "biomarker",
+      id: "pm-12712882", source: "abstract", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 208, k: null },
       sites: ["O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["seizures"],
@@ -2619,7 +2619,7 @@ window.NF_DATA = {
       cite: { authors: "Clemens B, et al.", year: 2003, title: "[Occipital spectral EEG parameters in newly diagnosed, untreated patients with epilepsy]", journal: "Ideggyogy Sz" }
     },
     {
-      id: "pm-15134712", condition: "epilepsy", type: "biomarker",
+      id: "pm-15134712", source: "abstract", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["seizures"],
@@ -2629,7 +2629,7 @@ window.NF_DATA = {
       cite: { authors: "Clemens B", year: 2004, title: "Pathological theta oscillations in idiopathic generalised epilepsy", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-20820898", condition: "epilepsy", type: "biomarker",
+      id: "pm-20820898", source: "abstract", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 34, k: null },
       sites: ["Pz","O1","O2"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["seizures"],
@@ -2639,7 +2639,7 @@ window.NF_DATA = {
       cite: { authors: "Michels L, et al.", year: 2011, title: "Does greater low frequency EEG activity in normal immaturity and in children with epilepsy arise in the same neuronal network?", journal: "Brain Topogr" }
     },
     {
-      id: "pm-23922658", condition: "epilepsy", type: "biomarker",
+      id: "pm-23922658", source: "full-text", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 24, k: null },
       sites: ["T3","T4","P3","P4"], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["seizures"],
@@ -2649,7 +2649,7 @@ window.NF_DATA = {
       cite: { authors: "Quraan MA, et al.", year: 2013, title: "Altered resting state brain dynamics in temporal lobe epilepsy can be observed in spectral power, functional connectivity and graph theory metrics", journal: "PLoS One" }
     },
     {
-      id: "pm-26509114", condition: "epilepsy", type: "biomarker",
+      id: "pm-26509114", source: "abstract", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 17, k: null },
       sites: ["C4","T4"], bands: ["theta","alpha","beta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", alpha: "up", beta: "up" }, symptoms: ["seizures"],
@@ -2659,7 +2659,7 @@ window.NF_DATA = {
       cite: { authors: "Adebimpe A, et al.", year: 2015, title: "EEG resting state analysis of cortical sources in patients with benign epilepsy with centrotemporal spikes", journal: "Neuroimage Clin" }
     },
     {
-      id: "pm-30847365", condition: "epilepsy", type: "biomarker",
+      id: "pm-30847365", source: "abstract", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 102, k: null },
       sites: ["Fz","O1","O2"], bands: ["alpha"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "mixed" }, symptoms: ["seizures"],
@@ -2669,7 +2669,7 @@ window.NF_DATA = {
       cite: { authors: "Abela E, et al.", year: 2019, title: "Slower alpha rhythm associates with poorer seizure control in epilepsy", journal: "Ann Clin Transl Neurol" }
     },
     {
-      id: "pm-31129368", condition: "epilepsy", type: "biomarker",
+      id: "pm-31129368", source: "abstract", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 16, k: null },
       sites: ["C3","C4","T3","T4"], bands: ["theta","alpha"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", alpha: "up" }, symptoms: ["seizures"],
@@ -2679,7 +2679,7 @@ window.NF_DATA = {
       cite: { authors: "Siripornpanich V, et al.", year: 2019, title: "Delayed cortical maturation at the centrotemporal brain regions in patients with benign childhood epilepsy with centrotemporal spikes (BCECTS)", journal: "Epilepsy Res" }
     },
     {
-      id: "pm-34687043", condition: "epilepsy", type: "biomarker",
+      id: "pm-34687043", source: "abstract", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 62, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","T3","T4","T5","T6","P3","Pz","P4","O1","O2"], bands: ["alpha","delta","theta"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "down", delta: "up", theta: "up" }, symptoms: ["seizures"],
@@ -2689,7 +2689,7 @@ window.NF_DATA = {
       cite: { authors: "Fonseca E, et al.", year: 2022, title: "Interictal brain activity changes in temporal lobe epilepsy: A quantitative electroencephalogram analysis", journal: "Acta Neurol Scand" }
     },
     {
-      id: "pm-36442376", condition: "epilepsy", type: "biomarker",
+      id: "pm-36442376", source: "abstract", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 454, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","T3","T4"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["seizures"],
@@ -2699,7 +2699,7 @@ window.NF_DATA = {
       cite: { authors: "Clemens B, et al.", year: 2023, title: "Epileptic diathesis: An EEG-LORETA study", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-40040314", condition: "epilepsy", type: "biomarker",
+      id: "pm-40040314", source: "full-text", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 87, k: null },
       sites: [], bands: ["delta","theta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up" }, symptoms: ["seizures"],
@@ -2709,7 +2709,7 @@ window.NF_DATA = {
       cite: { authors: "Segovia-Oropeza M, et al.", year: 2025, title: "Quantitative EEG signatures in patients with and without epilepsy development after a first seizure", journal: "Epilepsia Open" }
     },
     {
-      id: "pm-42217475", condition: "epilepsy", type: "biomarker",
+      id: "pm-42217475", source: "full-text", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 180, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down", beta: "down" }, symptoms: ["seizures"],
@@ -2719,7 +2719,7 @@ window.NF_DATA = {
       cite: { authors: "Sancetta BM, et al.", year: 2026, title: "A spectral- topological network signature of drug-resistant epilepsy: a phase 1-2 study on resting-state EEG-based diagnostic biomarkers of drug resistance", journal: "Neuroimage Clin" }
     },
     {
-      id: "pm-18457962", condition: "parkinsons", type: "biomarker",
+      id: "pm-18457962", source: "abstract", condition: "parkinsons", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 58, k: null },
       sites: [], bands: ["theta","beta","gamma"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", beta: "up", gamma: "up" }, symptoms: ["motor"],
@@ -2729,7 +2729,7 @@ window.NF_DATA = {
       cite: { authors: "Moazami-Goudarzi M, et al.", year: 2008, title: "Enhanced frontal low and high frequency power and synchronization in the resting EEG of parkinsonian patients", journal: "Neuroimage" }
     },
     {
-      id: "pm-32116262", condition: "parkinsons", type: "biomarker",
+      id: "pm-32116262", source: "full-text", condition: "parkinsons", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 42, k: null },
       sites: ["T3","T4","T5","T6"], bands: ["theta","alpha"], direction: "down", evidence: "preliminary",
       changes: { theta: "down", alpha: "down" }, symptoms: ["motor"],
@@ -2739,7 +2739,7 @@ window.NF_DATA = {
       cite: { authors: "Waninger S, et al.", year: 2020, title: "Neurophysiological Biomarkers of Parkinson's Disease", journal: "J Parkinsons Dis" }
     },
     {
-      id: "pm-35042630", condition: "parkinsons", type: "biomarker",
+      id: "pm-35042630", source: "abstract", condition: "parkinsons", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 108, k: null },
       sites: ["Fp2","F4","F8"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["anxiety"],
@@ -2749,7 +2749,7 @@ window.NF_DATA = {
       cite: { authors: "Betrouni N, et al.", year: 2022, title: "Anxiety in Parkinson's disease: A resting-state high density EEG study", journal: "Neurophysiol Clin" }
     },
     {
-      id: "pm-37146531", condition: "parkinsons", type: "biomarker",
+      id: "pm-37146531", source: "abstract", condition: "parkinsons", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 169, k: null },
       sites: [], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["motor"],
@@ -2759,7 +2759,7 @@ window.NF_DATA = {
       cite: { authors: "Jaramillo-Jimenez A, et al.", year: 2023, title: "Spectral features of resting-state EEG in Parkinson's Disease: A multicenter study using functional data analysis", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-37787445", condition: "parkinsons", type: "biomarker",
+      id: "pm-37787445", source: "abstract", condition: "parkinsons", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta","alpha"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", alpha: "up" }, symptoms: ["executive"],
@@ -2769,7 +2769,7 @@ window.NF_DATA = {
       cite: { authors: "Lorek K, et al.", year: 2023, title: "Slowing of EEG waves correlates with striatal [^18^ F]fluorodopa PET/CT uptake and executive dysfunction in Parkinson's disease", journal: "Eur J Neurosci" }
     },
     {
-      id: "pm-37937898", condition: "parkinsons", type: "biomarker",
+      id: "pm-37937898", source: "full-text", condition: "parkinsons", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 52, k: null },
       sites: [], bands: ["alpha","beta"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up", beta: "up" }, symptoms: ["motor"],
@@ -2779,7 +2779,7 @@ window.NF_DATA = {
       cite: { authors: "McKeown DJ, et al.", year: 2024, title: "Medication-invariant resting aperiodic and periodic neural activity in Parkinson's disease", journal: "Psychophysiology" }
     },
     {
-      id: "pm-40552872", condition: "parkinsons", type: "biomarker",
+      id: "pm-40552872", source: "full-text", condition: "parkinsons", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 39, k: null },
       sites: ["O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["motor"],
@@ -2789,7 +2789,7 @@ window.NF_DATA = {
       cite: { authors: "Lirani-Silva E, et al.", year: 2025, title: "Resting-state Alpha Reactivity Is Reduced in Parkinson's Disease and Associated With Gait Variability", journal: "Neurorehabil Neural Repair" }
     },
     {
-      id: "pm-12705421", condition: "sud", type: "biomarker",
+      id: "pm-12705421", source: "abstract", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 22, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "mixed", beta: "mixed" }, symptoms: ["craving"],
@@ -2799,7 +2799,7 @@ window.NF_DATA = {
       cite: { authors: "Newton TF, et al.", year: 2003, title: "Quantitative EEG abnormalities in recently abstinent methamphetamine dependent individuals", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-12711923", condition: "sud", type: "biomarker",
+      id: "pm-12711923", source: "abstract", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 614, k: null },
       sites: [], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["craving"],
@@ -2809,7 +2809,7 @@ window.NF_DATA = {
       cite: { authors: "Rangaswamy M, et al.", year: 2003, title: "Theta power in the EEG of alcoholics", journal: "Alcohol Clin Exp Res" }
     },
     {
-      id: "pm-16179502", condition: "sud", type: "biomarker",
+      id: "pm-16179502", source: "abstract", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 48, k: null },
       sites: ["C3","Cz","C4"], bands: ["delta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up" }, symptoms: ["craving"],
@@ -2819,7 +2819,7 @@ window.NF_DATA = {
       cite: { authors: "Herning RI, et al.", year: 2005, title: "Neuropsychiatric alterations in MDMA users: preliminary findings", journal: "Ann N Y Acad Sci" }
     },
     {
-      id: "pm-18974851", condition: "sud", type: "biomarker",
+      id: "pm-18974851", source: "full-text", condition: "sud", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: 364, k: null },
       sites: ["Fz"], bands: ["theta","alpha","beta"], direction: "ratio", evidence: "contested",
       changes: { theta: "down", alpha: "mixed", beta: "mixed" }, symptoms: ["craving"],
@@ -2829,7 +2829,7 @@ window.NF_DATA = {
       cite: { authors: "Enoch MA, et al.", year: 2008, title: "Common genetic origins for EEG, alcoholism and anxiety: the role of CRH-BP", journal: "PLoS One" }
     },
     {
-      id: "pm-19278131", condition: "sud", type: "biomarker",
+      id: "pm-19278131", source: "full-text", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 141, k: null },
       sites: ["P3","P4","O1","O2","T5","T6"], bands: ["theta","beta"], direction: "down", evidence: "preliminary",
       changes: { theta: "down", beta: "down" }, symptoms: ["craving"],
@@ -2839,7 +2839,7 @@ window.NF_DATA = {
       cite: { authors: "Copersino ML, et al.", year: 2009, title: "EEG and cerebral blood flow velocity abnormalities in chronic cocaine users", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-26002855", condition: "sud", type: "biomarker",
+      id: "pm-26002855", source: "abstract", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["gamma"], direction: "up", evidence: "preliminary",
       changes: { gamma: "up" }, symptoms: ["craving"],
@@ -2849,7 +2849,7 @@ window.NF_DATA = {
       cite: { authors: "Wang GY, et al.", year: 2016, title: "Quantitative EEG and Low-Resolution Electromagnetic Tomography (LORETA) Imaging of Patients Undergoing Methadone Treatment for Opiate Addiction", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-26035281", condition: "sud", type: "biomarker",
+      id: "pm-26035281", source: "abstract", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["C3","Cz","C4","P3","Pz","P4"], bands: ["beta"], direction: "up", evidence: "preliminary",
       changes: { beta: "up" }, symptoms: ["impulsivity"],
@@ -2859,7 +2859,7 @@ window.NF_DATA = {
       cite: { authors: "Núñez-Jaramillo L, et al.", year: 2015, title: "Quantitative electroencephalography analysis in university students with hazardous alcohol consumption, but not alcohol dependence", journal: "Neuroreport" }
     },
     {
-      id: "pm-26051750", condition: "sud", type: "biomarker",
+      id: "pm-26051750", source: "full-text", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 83, k: null },
       sites: [], bands: ["delta","alpha"], direction: "down", evidence: "preliminary",
       changes: { delta: "down", alpha: "down" }, symptoms: ["craving"],
@@ -2869,7 +2869,7 @@ window.NF_DATA = {
       cite: { authors: "Rass O, et al.", year: 2016, title: "Resting-state EEG, impulsiveness, and personality in daily and nondaily smokers", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-26327686", condition: "sud", type: "biomarker",
+      id: "pm-26327686", source: "full-text", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 42, k: null },
       sites: [], bands: ["delta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up" }, symptoms: ["craving"],
@@ -2879,7 +2879,7 @@ window.NF_DATA = {
       cite: { authors: "Son KL, et al.", year: 2015, title: "Neurophysiological features of Internet gaming disorder and alcohol use disorder: a resting-state EEG study", journal: "Transl Psychiatry" }
     },
     {
-      id: "pm-26660886", condition: "sud", type: "biomarker",
+      id: "pm-26660886", source: "abstract", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 30, k: null },
       sites: [], bands: ["beta"], direction: "up", evidence: "preliminary",
       changes: { beta: "up" }, symptoms: ["impulsivity"],
@@ -2889,7 +2889,7 @@ window.NF_DATA = {
       cite: { authors: "Herrera-Díaz A, et al.", year: 2016, title: "Functional Connectivity and Quantitative EEG in Women with Alcohol Use Disorders: A Resting-State Study", journal: "Brain Topogr" }
     },
     {
-      id: "pm-27354838", condition: "sud", type: "biomarker",
+      id: "pm-27354838", source: "full-text", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 70, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["delta","theta","alpha"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "up" }, symptoms: ["craving"],
@@ -2899,7 +2899,7 @@ window.NF_DATA = {
       cite: { authors: "Wilbanks HE, et al.", year: 2016, title: "Tobacco Smoking and the Resting Maternal Brain: A Preliminary Study of Frontal EEG", journal: "Yale J Biol Med" }
     },
     {
-      id: "pm-29778070", condition: "sud", type: "biomarker",
+      id: "pm-29778070", source: "full-text", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 61, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta","beta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", beta: "up" }, symptoms: ["impulsivity"],
@@ -2909,7 +2909,7 @@ window.NF_DATA = {
       cite: { authors: "Affan RO, et al.", year: 2018, title: "High-intensity binge drinking is associated with alterations in spontaneous neural oscillations in young adults", journal: "Alcohol" }
     },
     {
-      id: "pm-35149322", condition: "sud", type: "biomarker",
+      id: "pm-35149322", source: "abstract", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 36, k: null },
       sites: [], bands: ["beta","delta"], direction: "up", evidence: "preliminary",
       changes: { beta: "up", delta: "up" }, symptoms: ["impulsivity"],
@@ -2919,7 +2919,7 @@ window.NF_DATA = {
       cite: { authors: "Corace K, et al.", year: 2022, title: "Resting State EEG Activity Related to Impulsivity in People with Prescription Opioid Use Disorder", journal: "Psychiatry Res Neuroimaging" }
     },
     {
-      id: "pm-35662565", condition: "sud", type: "biomarker",
+      id: "pm-35662565", source: "abstract", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 71, k: null },
       sites: [], bands: ["theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", alpha: "down" }, symptoms: ["craving"],
@@ -2929,7 +2929,7 @@ window.NF_DATA = {
       cite: { authors: "Martínez-Maldonado A, et al.", year: 2022, title: "Brain oscillatory functioning after long-term alcohol abstinence", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-35698004", condition: "sud", type: "biomarker",
+      id: "pm-35698004", source: "full-text", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 48, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["inattention"],
@@ -2939,7 +2939,7 @@ window.NF_DATA = {
       cite: { authors: "Andriot T, et al.", year: 2022, title: "Electrophysiological and behavioral correlates of cannabis use disorder", journal: "Cogn Affect Behav Neurosci" }
     },
     {
-      id: "pm-35699268", condition: "sud", type: "biomarker",
+      id: "pm-35699268", source: "full-text", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 85, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["beta","gamma"], direction: "up", evidence: "preliminary",
       changes: { beta: "up", gamma: "up" }, symptoms: ["craving"],
@@ -2949,7 +2949,7 @@ window.NF_DATA = {
       cite: { authors: "Ngoh G, et al.", year: 2022, title: "Exploring resting frontal EEG and reflective functioning in maternal substance use", journal: "Infant Ment Health J" }
     },
     {
-      id: "pm-36890138", condition: "sud", type: "biomarker",
+      id: "pm-36890138", source: "full-text", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 81, k: null },
       sites: [], bands: ["theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "down", alpha: "up" }, symptoms: ["craving"],
@@ -2959,7 +2959,7 @@ window.NF_DATA = {
       cite: { authors: "Lee H, et al.", year: 2023, title: "Persistent impacts of smoking on resting-state EEG in male chronic smokers and past-smokers with 20 years of abstinence", journal: "Sci Rep" }
     },
     {
-      id: "pm-9146819", condition: "sud", type: "biomarker",
+      id: "pm-9146819", source: "abstract", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 63, k: null },
       sites: [], bands: ["beta"], direction: "up", evidence: "preliminary",
       changes: { beta: "up" }, symptoms: ["craving"],
@@ -2969,7 +2969,7 @@ window.NF_DATA = {
       cite: { authors: "Herning RI, et al.", year: 1997, title: "Neurophysiological signs of cocaine dependence: increased electroencephalogram beta during withdrawal", journal: "Biol Psychiatry" }
     },
     {
-      id: "pm-9224905", condition: "sud", type: "biomarker",
+      id: "pm-9224905", source: "abstract", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 28, k: null },
       sites: [], bands: ["hibeta"], direction: "up", evidence: "preliminary",
       changes: { hibeta: "up" }, symptoms: ["craving"],
@@ -2979,7 +2979,7 @@ window.NF_DATA = {
       cite: { authors: "Günther W, et al.", year: 1997, title: "Functional EEG mapping and SPECT in detoxified male alcoholics", journal: "Eur Arch Psychiatry Clin Neurosci" }
     },
     {
-      id: "pm-9246556", condition: "sud", type: "biomarker",
+      id: "pm-9246556", source: "abstract", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 102, k: null },
       sites: [], bands: ["beta"], direction: "up", evidence: "preliminary",
       changes: { beta: "up" }, symptoms: ["craving"],
@@ -2989,7 +2989,7 @@ window.NF_DATA = {
       cite: { authors: "Costa L, et al.", year: 1997, title: "Quantitative electroencephalographic differences associated with alcohol, cocaine, heroin and dual-substance dependence", journal: "Drug Alcohol Depend" }
     },
     {
-      id: "pm-14522608", condition: "ptsd", type: "biomarker",
+      id: "pm-14522608", source: "abstract", condition: "ptsd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 116, k: null },
       sites: [], bands: ["alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "down", beta: "up" }, symptoms: ["intrusions","hyperarousal"],
@@ -2999,7 +2999,7 @@ window.NF_DATA = {
       cite: { authors: "Jokić-Begić N, et al.", year: 2003, title: "Quantitative electroencephalogram (qEEG) in combat veterans with post-traumatic stress disorder (PTSD)", journal: "Nord J Psychiatry" }
     },
     {
-      id: "pm-25046862", condition: "ptsd", type: "biomarker",
+      id: "pm-25046862", source: "abstract", condition: "ptsd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 34, k: null },
       sites: ["P3","Pz","P4","Fz"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["intrusions","hyperarousal"],
@@ -3009,7 +3009,7 @@ window.NF_DATA = {
       cite: { authors: "Imperatori C, et al.", year: 2014, title: "Aberrant EEG functional connectivity and EEG power spectra in resting state post-traumatic stress disorder: a sLORETA study", journal: "Biol Psychol" }
     },
     {
-      id: "pm-27238074", condition: "ptsd", type: "biomarker",
+      id: "pm-27238074", source: "abstract", condition: "ptsd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["T4","T6","P4"], bands: ["delta","theta"], direction: "down", evidence: "preliminary",
       changes: { delta: "down", theta: "down" }, symptoms: ["intrusions","hyperarousal"],
@@ -3019,7 +3019,7 @@ window.NF_DATA = {
       cite: { authors: "Franke LM, et al.", year: 2016, title: "Distinction in EEG slow oscillations between chronic mild traumatic brain injury and PTSD", journal: "Int J Psychophysiol" }
     },
     {
-      id: "cand-ptsd-eneuro-2020", condition: "ptsd", type: "biomarker",
+      id: "cand-ptsd-eneuro-2020", source: "full-text", sample: "clancy-ptsd-69", condition: "ptsd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 69, k: null },
       sites: ["O1","O2","Pz","Fz"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["hyperarousal"],
@@ -3029,7 +3029,7 @@ window.NF_DATA = {
       cite: { authors: "Clancy KJ, et al.", year: 2020, title: "Posttraumatic Stress Disorder Is Associated with α Dysrhythmia across the Visual Cortex and the Default Mode Network", journal: "eNeuro" }
     },
     {
-      id: "pm-41066303", condition: "ptsd", type: "protocol",
+      id: "pm-41066303", source: "abstract", condition: "ptsd", type: "protocol",
       metrics: { design: 1, control: "none", blinded: null, n: 21, k: null },
       sites: ["T3"], bands: ["beta"], direction: "down", evidence: "preliminary",
       changes: { beta: "down" }, symptoms: ["intrusions","hyperarousal","sleep","executive"],
@@ -3039,7 +3039,7 @@ window.NF_DATA = {
       cite: { authors: "Im S", year: 2026, title: "Exploring the Effects of Z-Score Neurofeedback Training in PTSD: A Preliminary Investigation", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-34706446", condition: "ptsd", type: "protocol",
+      id: "pm-34706446", source: "abstract", condition: "ptsd", type: "protocol",
       metrics: { design: 3, control: null, blinded: null, n: 29, k: null },
       sites: ["Pz"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["intrusions","hyperarousal"],
@@ -3049,7 +3049,7 @@ window.NF_DATA = {
       cite: { authors: "du Bois N, et al.", year: 2021, title: "Neurofeedback with low-cost, wearable electroencephalography (EEG) reduces symptoms in chronic Post-Traumatic Stress Disorder", journal: "J Affect Disord" }
     },
     {
-      id: "pm-26542620", condition: "tbi", type: "biomarker",
+      id: "pm-26542620", source: "abstract", condition: "tbi", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 81, k: null },
       sites: ["F3","F4"], bands: ["alpha","beta"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry", beta: "asymmetry" }, symptoms: ["lowmood","anxiety"],
@@ -3059,7 +3059,7 @@ window.NF_DATA = {
       cite: { authors: "Moore RD, et al.", year: 2016, title: "Neurophysiological correlates of persistent psycho-affective alterations in athletes with a history of concussion", journal: "Brain Imaging Behav" }
     },
     {
-      id: "pm-26737184", condition: "tbi", type: "biomarker",
+      id: "pm-26737184", source: "full-text", condition: "tbi", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 54, k: null },
       sites: ["Fz","F3","F4"], bands: ["delta","theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "down", theta: "down", beta: "up" }, symptoms: ["postconcussion"],
@@ -3069,7 +3069,7 @@ window.NF_DATA = {
       cite: { authors: "Balkan O, et al.", year: 2015, title: "Source-domain spectral EEG analysis of sports-related concussion via Measure Projection Analysis", journal: "Annu Int Conf IEEE Eng Med Biol Soc" }
     },
     {
-      id: "pm-31094883", condition: "tbi", type: "biomarker",
+      id: "pm-31094883", source: "abstract", condition: "tbi", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 153, k: null },
       sites: [], bands: ["theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", alpha: "down" }, symptoms: ["postconcussion"],
@@ -3079,7 +3079,7 @@ window.NF_DATA = {
       cite: { authors: "Lewine JD, et al.", year: 2019, title: "Quantitative EEG Biomarkers for Mild Traumatic Brain Injury", journal: "J Clin Neurophysiol" }
     },
     {
-      id: "pm-39420809", condition: "tbi", type: "biomarker",
+      id: "pm-39420809", source: "abstract", condition: "tbi", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 47, k: null },
       sites: ["Fz"], bands: ["theta"], direction: "ratio", evidence: "contested",
       changes: { theta: "mixed" }, symptoms: ["memory"],
@@ -3089,7 +3089,7 @@ window.NF_DATA = {
       cite: { authors: "Ueda M, et al.", year: 2025, title: "EEG Oscillatory Activity and Resting-State Networks Associated with Neurocognitive Function in Mild Traumatic Brain Injury", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-42642967", condition: "tbi", type: "biomarker",
+      id: "pm-42642967", source: "abstract", condition: "tbi", type: "biomarker",
       metrics: { design: 5, control: null, blinded: null, n: 1236, k: 14 },
       sites: [], bands: ["theta"], direction: "up", evidence: "moderate",
       changes: { theta: "up" }, symptoms: ["postconcussion"],
@@ -3099,7 +3099,7 @@ window.NF_DATA = {
       cite: { authors: "Nwakamma MC, et al.", year: 2026, title: "Resting-state EEG spectral power alterations following traumatic brain injury: a comprehensive systematic review and meta-analysis of clinical and injury-related moderators", journal: "Brain Inj" }
     },
     {
-      id: "pm-1733616", condition: "migraine", type: "biomarker",
+      id: "pm-1733616", source: "abstract", condition: "migraine", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 70, k: null },
       sites: ["O1","O2","P3","Pz","P4"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["headache"],
@@ -3109,7 +3109,7 @@ window.NF_DATA = {
       cite: { authors: "Tsounis S, et al.", year: 1992, title: "Alpha rhythm power and the effect of photic stimulation in migraine with brain mapping", journal: "Clin Electroencephalogr" }
     },
     {
-      id: "pm-18679787", condition: "migraine", type: "biomarker",
+      id: "pm-18679787", source: "abstract", condition: "migraine", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 40, k: null },
       sites: ["O2","Fz"], bands: ["alpha"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "mixed" }, symptoms: ["headache"],
@@ -3119,7 +3119,7 @@ window.NF_DATA = {
       cite: { authors: "Clemens B, et al.", year: 2008, title: "Three-dimensional localization of abnormal EEG activity in migraine: a low resolution electromagnetic tomography (LORETA) study of migraine patients in the pain-free interval", journal: "Brain Topogr" }
     },
     {
-      id: "pm-2050517", condition: "migraine", type: "biomarker",
+      id: "pm-2050517", source: "abstract", condition: "migraine", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 34, k: null },
       sites: ["O1"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["headache"],
@@ -3129,7 +3129,7 @@ window.NF_DATA = {
       cite: { authors: "Neufeld MY, et al.", year: 1991, title: "EEG and topographic frequency analysis in common and classic migraine", journal: "Headache" }
     },
     {
-      id: "pm-27807767", condition: "migraine", type: "biomarker",
+      id: "pm-27807767", source: "full-text", condition: "migraine", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 70, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "down", evidence: "preliminary",
       changes: { delta: "down", theta: "down", alpha: "down", beta: "down" }, symptoms: ["headache"],
@@ -3139,7 +3139,7 @@ window.NF_DATA = {
       cite: { authors: "Cao Z, et al.", year: 2016, title: "Resting-state EEG power and coherence vary between migraine phases", journal: "J Headache Pain" }
     },
     {
-      id: "pm-29385895", condition: "migraine", type: "biomarker",
+      id: "pm-29385895", source: "abstract", condition: "migraine", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["O1","O2"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["headache"],
@@ -3149,7 +3149,7 @@ window.NF_DATA = {
       cite: { authors: "O'Hare L, et al.", year: 2018, title: "Resting-State Alpha-Band Oscillations in Migraine", journal: "Perception" }
     },
     {
-      id: "pm-31530007", condition: "migraine", type: "biomarker",
+      id: "pm-31530007", source: "abstract", condition: "migraine", type: "biomarker",
       metrics: { design: 1, control: "none", blinded: null, n: 24, k: null },
       sites: [], bands: ["delta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "down", beta: "up" }, symptoms: ["headache"],
@@ -3159,7 +3159,7 @@ window.NF_DATA = {
       cite: { authors: "Martins IP, et al.", year: 2020, title: "Brain state monitoring for the future prediction of migraine attacks", journal: "Cephalalgia" }
     },
     {
-      id: "pm-36474355", condition: "migraine", type: "biomarker",
+      id: "pm-36474355", source: "abstract", condition: "migraine", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 45, k: null },
       sites: ["Fz","Cz","O1","O2","Pz","T3","T4"], bands: ["theta","alpha","delta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", alpha: "down", delta: "up" }, symptoms: ["headache"],
@@ -3169,7 +3169,7 @@ window.NF_DATA = {
       cite: { authors: "Ojha P, et al.", year: 2024, title: "Resting-state Quantitative EEG Spectral Patterns in Migraine During Ictal Phase Reveal Deviant Brain Oscillations: Potential Role of Density Spectral Array", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-42166268", condition: "migraine", type: "biomarker",
+      id: "pm-42166268", source: "abstract", condition: "migraine", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 95, k: null },
       sites: ["Fz","O1","O2"], bands: ["delta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "down", alpha: "up" }, symptoms: ["headache"],
@@ -3179,7 +3179,7 @@ window.NF_DATA = {
       cite: { authors: "Ko LW, Diddi SVS, Wu WH, He C, Lai KL, Wang YF, Wang SJ", year: 2026, title: "Frontal Delta Decreasing and Occipital Ictal Alpha Increasing Associated With Migraine in Preictal and Ictal Phases", journal: "IEEE Trans Neural Syst Rehabil Eng" }
     },
     {
-      id: "pm-42349315", condition: "migraine", type: "biomarker",
+      id: "pm-42349315", source: "abstract", condition: "migraine", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 56, k: null },
       sites: [], bands: ["delta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "down", alpha: "mixed", beta: "down" }, symptoms: ["headache"],
@@ -3188,6 +3188,10 @@ window.NF_DATA = {
       design: "Case-control",
       cite: { authors: "Wong R, Robertson R, Meylakh N, et al.", year: 2026, title: "Reduced electroencephalogram power and no change in peak alpha frequency in individuals with chronic migraine: a cross-sectional investigation", journal: "Neurophysiol Clin" }
     }
+  ],
+
+  // Functional connectivity between sites or regions (resting state). Schema: README.md.
+  connectivity: [
   ],
 
   methodology: [
