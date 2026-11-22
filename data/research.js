@@ -3246,6 +3246,28 @@ window.NF_DATA = {
       detail: "28 probable AD patients and 30 healthy controls, resting EEG, lagged phase synchronization (eLORETA). Delta synchrony was lower across most cortical regions and theta synchrony between right DLPFC and right parietal sites was lower. Source-localised (eLORETA lagged phase synchronization); mapped to the overlying scalp region. Taken from the abstract; not checked in the full text. Delta links correlated with MMSE.",
       design: "Case-control",
       cite: { authors: "Hata M, et al.", year: 2016, title: "Functional connectivity assessed by resting state EEG correlates with cognitive decline of Alzheimer's disease - An eLORETA study", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-33185607-fc", source: "full-text", condition: "alzheimers", type: "connectivity",
+      measure: "other", pairs: [["frontal","parietal"],["temporal","temporal"],["parietal","parietal"]],
+      metrics: { design: 5, control: null, blinded: null, n: null, k: null },
+      bands: ["alpha"], direction: "ratio", evidence: "moderate",
+      changes: { alpha: "mixed" }, symptoms: ["cogdecline","memory"],
+      claim: "MCI and AD: alpha connectivity both lower and higher than controls across studies",
+      detail: "Systematic review and meta-analysis of 68 studies of alpha power and synchronization in MCI and AD. Some studies found less fronto-parietal and posterior inter-hemispheric alpha connectivity, others more temporal inter-hemispheric connectivity; measures were coherence, PLI and AEC. Only power was pooled, so the connectivity direction is narrative.",
+      design: "Meta-analysis",
+      cite: { authors: "Lejko N, et al.", year: 2020, title: "Alpha Power and Functional Connectivity in Cognitive Decline: A Systematic Review and Meta-Analysis", journal: "J Alzheimers Dis" }
+    },
+    {
+      id: "pm-33450572-fc", source: "abstract", condition: "parkinsons", type: "connectivity",
+      measure: "phase", pairs: [["frontal","frontal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 45, k: null },
+      bands: ["delta","theta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up", theta: "up" }, symptoms: ["cogdecline"],
+      claim: "PD: more frontal delta and theta phase connectivity than healthy controls",
+      detail: "30 people with Parkinson's disease and 15 healthy controls, resting EEG, phase-based connectivity (exact index not named in abstract). Frontal delta and theta connectivity was higher in PD, and linked to cognition after about 8 years of disease. Taken from the abstract; not checked in the full text. Single cross-sectional study. Listed under Alzheimer's but the study has no AD group.",
+      design: "Case-control",
+      cite: { authors: "Sánchez-Dinorín G, et al.", year: 2021, title: "Frontal functional connectivity and disease duration interactively predict cognitive decline in Parkinson's disease", journal: "Clin Neurophysiol" }
     }
   ],
 
