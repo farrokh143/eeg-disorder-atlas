@@ -1,0 +1,10 @@
+{"id":"pm-33621696","decision":"exclude","code":"CN","note":"instantaneous amplitude correlation meta-states (community detection); no named site or region pair result"}
+{"id":"pm-33927783","decision":"exclude","code":"CN","note":"multifractal DFA and information-transfer modelling (directed); mild blast TBI, not AD"}
+{"id":"pm-34030487","decision":"defer","note":"[parked: no full text] lagged phase synchronization between 84 Brodmann-area sources; abstract names no lobe pairs beyond BA 32-33; no PMC full text"}
+{"id":"pm-34092648","decision":"exclude","code":"CN","note":"small-world graph metrics on eLORETA lagged coherence networks only; no pair-level result"}
+{"id":"pm-34319193","decision":"exclude","code":"CN","note":"COPD study with graph theory metrics only; no Alzheimer's group"}
+{"id":"pm-34346104","decision":"exclude","code":"CN","note":"EEG microstates only; mild cognitive impairment with Lewy bodies, not AD"}
+{"id":"pm-34711165","decision":"exclude","code":"CN","note":"SVM classifier of AD vs DLB using source connectivity features; classifier results only"}
+{"id":"pm-34759276","decision":"exclude","code":"CN","note":"multi-disorder DMN study: AD results are clustering coefficients only; pair-level theta result not specific to AD"}
+{"id":"pm-34806601","decision":"defer","note":"[parked: no full text] AD theta frontal-parietal connectivity vs cognition; abstract does not name the connectivity measure; no PMC full text"}
+{"id":"pm-35213376","decision":"exclude","code":"X","reason":"Age-related vestibular loss study; cognitive-impairment group is not an Alzheimer's group"}
