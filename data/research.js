@@ -3257,6 +3257,16 @@ window.NF_DATA = {
       detail: "46 children with ASD and 63 typically developing children aged 3 to 5, resting EEG with eyes open. Alpha peak frequency and alpha power at O1 and O2 were lower in ASD. Single case-control study; the classifier accuracy is not a diagnostic test.",
       design: "Case-control",
       cite: { authors: "Zhao J, et al.", year: 2020, title: "A study on EEG feature extraction and classification in autistic children based on singular spectrum analysis method", journal: "Brain Behav" }
+    },
+    {
+      id: "pm-35351387", source: "abstract", condition: "parkinsons", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 54, k: null },
+      sites: [], bands: ["theta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up" }, symptoms: ["motor","executive"],
+      claim: "PD freezers: diffusely higher resting theta power than controls, eyes open",
+      detail: "36 PD patients (18 with freezing of gait, 18 without) and 18 healthy controls, eyes-open resting high-density EEG. Freezers had diffusely higher theta relative power than controls; this tracked executive deficits. Single case-control study. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Bayot M, et al.", year: 2022, title: "Functional networks underlying freezing of gait: a resting-state electroencephalographic study", journal: "Neurophysiol Clin" }
     }
   ],
 
@@ -3811,6 +3821,17 @@ window.NF_DATA = {
       detail: "124 PD patients in three cognitive groups, eyes-closed resting dense EEG; no healthy controls. Pairwise PLV between 68 source regions; alpha 1 and alpha 2 differences were mainly fronto-temporal and fronto-central, lower in patients with more cognitive deficit. Source-localised (dense-EEG source connectivity); mapped to the overlying scalp region. Single cross-sectional study.",
       design: "Cross-sectional correlation",
       cite: { authors: "Hassan M, et al.", year: 2017, title: "Functional connectivity disruptions correlate with cognitive phenotypes in Parkinson's disease", journal: "Neuroimage Clin" }
+    },
+    {
+      id: "pm-35420713-fc", source: "full-text", condition: "parkinsons", type: "connectivity",
+      measure: "phase", pairs: [["frontal","frontal"],["frontal","temporal"],["frontal","central"],["frontal","occipital"]],
+      metrics: { design: 3, control: null, blinded: null, n: 109, k: null },
+      bands: ["alpha","beta"], direction: "down", evidence: "moderate",
+      changes: { alpha: "down", beta: "down" }, symptoms: ["cogdecline","motor"],
+      claim: "Within PD: alpha2 and beta phase connectivity falls over 5 years; controls show no change",
+      detail: "77 PD patients at baseline (35 followed to 5 years) and 32 controls; eyes-closed resting HD-EEG, PLV between sources. Decreases in alpha2 and beta networks were mostly frontal-temporal and frontal-frontal, and tracked MoCA decline; controls were not tested over 5 years. Source-localised (EEG source connectivity); mapped to the overlying scalp region. Longitudinal cohort with small follow-up group.",
+      design: "Longitudinal cohort",
+      cite: { authors: "Yassine S, et al.", year: 2022, title: "Functional Brain Dysconnectivity in Parkinson's Disease: A 5-Year Longitudinal Study", journal: "Mov Disord" }
     }
   ],
 
