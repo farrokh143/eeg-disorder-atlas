@@ -1,0 +1,10 @@
+{"id":"pm-41786925","decision":"no-connectivity","note":"edge and node strength (graph metrics) only; no named site or region pairs"}
+{"id":"pm-41814083","decision":"exclude","code":"CN","note":"classifier study; alpha-coherence used as a classifier input and SHAP explanation, no connectivity result"}
+{"id":"pm-41823065","decision":"exclude","code":"CN","note":"hybrid machine-learning model; connectivity features only as model inputs"}
+{"id":"pm-41905093","decision":"exclude","code":"CN","note":"machine-learning prediction study; no connectivity result"}
+{"id":"pm-42018511","decision":"exclude","code":"NONBAND","note":"phase average wavelength of alpha in Parkinson's disease; not band power or connectivity"}
+{"id":"pm-42143838","decision":"exclude","code":"CN","note":"multimodal machine-learning study; frontal alpha asymmetry is not a connectivity measure"}
+{"id":"pm-42187454","decision":"exclude","code":"CN","note":"EEG microstates only"}
+{"id":"pm-42215811","decision":"defer","type":"connectivity","note":"[parked: no full text] magnitude-squared coherence differs between groups mainly in alpha; abstract gives no direction or sites"}
+{"id":"pm-42229510","decision":"exclude","code":"CN","note":"transformer classifier; autocorrelation, complexity and PSD drivers, no connectivity result"}
+{"id":"pm-42269977","decision":"defer","note":"[parked: no full text] wPLI alpha desynchronisation and theta/beta changes in AD given without named sites or region pairs"}
