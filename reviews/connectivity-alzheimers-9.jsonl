@@ -1,0 +1,10 @@
+{"id":"pm-35404271","decision":"exclude","code":"CN","note":"SVM classification of PSEN1 carriers vs non-carriers from spectral features; classifier results only"}
+{"id":"pm-35418202","decision":"exclude","code":"CN","note":"graph theory measures in aMCI vs naMCI; no pair-level result and no Alzheimer's-vs-control group"}
+{"id":"pm-35758261","decision":"exclude","code":"X","reason":"sLORETA-ICA resting-state network activity (power per network); not pairwise connectivity"}
+{"id":"pm-35973509","decision":"no-connectivity","note":"depression study (listed under Alzheimer's): abstract reports weaker gamma wPLI between left hemisphere and right frontal, but the left-side region is not named; no PMC full text, so no usable pair"}
+{"id":"pm-36372646","decision":"defer","note":"[parked: no full text] imaginary coherence higher in EOAD by band; abstract names no site pairs or regions; no PMC full text"}
+{"id":"pm-36538178","decision":"exclude","code":"X","reason":"Approximate entropy per channel in aging; not connectivity"}
+{"id":"pm-36732071","decision":"exclude","code":"CN","note":"temporal irreversibility from time-shifted correlations (directed arrow of time); not an undirected pair measure"}
+{"id":"pm-36745929","decision":"exclude","code":"CN","note":"transformer deep-learning classification of SCD vs MCI; classifier results only"}
+{"id":"pm-36818579","decision":"exclude","code":"CN","note":"CNN classification on power modulation spectrograms; classifier results only"}
+{"id":"pm-36894582","decision":"exclude","code":"X","reason":"eLORETA-ICA resting-state network activity (power); not pairwise connectivity"}
