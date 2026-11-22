@@ -3832,6 +3832,17 @@ window.NF_DATA = {
       detail: "77 PD patients at baseline (35 followed to 5 years) and 32 controls; eyes-closed resting HD-EEG, PLV between sources. Decreases in alpha2 and beta networks were mostly frontal-temporal and frontal-frontal, and tracked MoCA decline; controls were not tested over 5 years. Source-localised (EEG source connectivity); mapped to the overlying scalp region. Longitudinal cohort with small follow-up group.",
       design: "Longitudinal cohort",
       cite: { authors: "Yassine S, et al.", year: 2022, title: "Functional Brain Dysconnectivity in Parkinson's Disease: A 5-Year Longitudinal Study", journal: "Mov Disord" }
+    },
+    {
+      id: "pm-37860930-fc", source: "abstract", condition: "parkinsons", type: "connectivity",
+      measure: "phase", pairs: [["frontal","temporal"],["frontal","parietal"],["frontal","central"]],
+      metrics: { design: 2, control: null, blinded: null, n: 46, k: null },
+      bands: ["theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "down", alpha: "down", beta: "up" }, symptoms: ["motor"],
+      claim: "Early PD: less theta and alpha phase connectivity, more beta connectivity frontal-sensorimotor",
+      detail: "26 levodopa-naive early PD patients and 20 controls, resting high-density EEG; wPLI between source regions. Theta links were lower across prefrontal-limbic-temporal areas, alpha lower across frontoparietal areas, and beta higher across sensorimotor-frontal areas. Source-localised (source reconstruction); mapped to the overlying scalp region. Single case-control study. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Conti M, et al.", year: 2023, title: "Band-Specific Altered Cortical Connectivity in Early Parkinson's Disease and its Clinical Correlates", journal: "Mov Disord" }
     }
   ],
 
