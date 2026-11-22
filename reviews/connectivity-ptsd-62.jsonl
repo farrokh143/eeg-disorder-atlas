@@ -1,0 +1,2 @@
+{"id":"pm-38642455","decision":"exclude","code":"CN","note":"DMN small-worldness (graph metric) only; no named pairs"}
+{"id":"pm-38669765","decision":"exclude","code":"MEG","note":"MEG recording, not EEG"}
