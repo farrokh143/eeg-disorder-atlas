@@ -3268,6 +3268,17 @@ window.NF_DATA = {
       detail: "30 people with Parkinson's disease and 15 healthy controls, resting EEG, phase-based connectivity (exact index not named in abstract). Frontal delta and theta connectivity was higher in PD, and linked to cognition after about 8 years of disease. Taken from the abstract; not checked in the full text. Single cross-sectional study. Listed under Alzheimer's but the study has no AD group.",
       design: "Case-control",
       cite: { authors: "Sánchez-Dinorín G, et al.", year: 2021, title: "Frontal functional connectivity and disease duration interactively predict cognitive decline in Parkinson's disease", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-37167834-fc", source: "abstract", condition: "parkinsons", type: "connectivity",
+      measure: "coherence", pairs: [["temporal","frontal"],["occipital","frontal"]],
+      metrics: { design: 2, control: null, blinded: null, n: 108, k: null },
+      bands: ["theta","alpha"], direction: "down", evidence: "preliminary",
+      changes: { theta: "down", alpha: "down" }, symptoms: ["cogdecline"],
+      claim: "Within PD: less temporal-frontal and occipital-frontal coherence in PD dementia than cognitively normal PD",
+      detail: "108 people with Parkinson's disease grouped by cognition (dementia, MCI, cognitively normal), resting EEG, coherence and phase lag index. In the dementia group, coherence was mostly lower than in cognitively normal PD, most clearly in theta (temporal-frontal) and alpha (occipital-frontal). Taken from the abstract; not checked in the full text. Cross-sectional study; the comparison is within a PD group, not against healthy controls.",
+      design: "Cross-sectional comparison",
+      cite: { authors: "Zawiślak-Fornagiel K, et al.", year: 2023, title: "Specific patterns of coherence and phase lag index in particular regions as biomarkers of cognitive impairment in Parkinson's disease", journal: "Parkinsonism Relat Disord" }
     }
   ],
 
