@@ -1,0 +1,8 @@
+{"id":"pm-42600369","decision":"exclude","code":"NR","note":"machine-learning prediction of training outcome from resting EEG in a tACS/training trial"}
+{"id":"pm-22658819","decision":"defer","note":"[retry] abstract: lower LORETA alpha-2 and alpha-3 sources over parietal, occipital and temporal regions in dyslexic vs control children. Included data would need a learning symptom id (none in the atlas list); owner to decide"}
+{"id":"pm-41016501","decision":"exclude","code":"CN","note":"functional connectivity (PCC, PLV, RHO) in dyslexia; connectivity only"}
+{"id":"pm-42249028","decision":"exclude","code":"NR","note":"binaural-beat intervention in dyslexia; coherence change is a treatment effect"}
+{"id":"pm-32387396","decision":"exclude","code":"CN","note":"isolated effective coherence between sources; connectivity only"}
+{"id":"pm-1606487","decision":"defer","note":"[parked: no full text] resting null result across bands in dysphonemic dyslexia; bands tested are not named in the abstract"}
+{"id":"pm-81746","decision":"exclude","code":"X","reason":"Dyslexic vs dysphasic children with no control group; eye-state reversal of theta asymmetry is within-subject"}
+{"id":"pm-3594927","decision":"exclude","code":"NODATA","note":"visual grading of EEG abnormality in learning-disabled vs control children; no band-power result with direction"}
