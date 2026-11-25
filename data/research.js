@@ -3652,7 +3652,7 @@ window.NF_DATA = {
       cite: { authors: "Molnár M, Csuhaj R, Horváth S, Vastagh I, Gaál ZA, Czigler B, Bálint A, Csikós D, Nagy Z", year: 2006, title: "Spectral and complexity features of the EEG changed by visual input in a case of subcortical stroke compared to healthy controls", journal: "Clinical neurophysiology" }
     },
     {
-      id: "pm-17889600", source: "abstract", condition: "stroke", type: "biomarker",
+      id: "pm-17889600", rec: { eyes: "unclear", power: "unclear", icd11: "8B1", dx: "unclear" }, source: "abstract", condition: "stroke", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 13, k: null },
       sites: [], bands: ["delta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", alpha: "down" }, symptoms: ["motor"],
@@ -3662,7 +3662,7 @@ window.NF_DATA = {
       cite: { authors: "Finnigan SP, Walsh M, Rose SE, Chalk JB", year: 2007, title: "Quantitative EEG indices of sub-acute ischaemic stroke correlate with clinical outcomes", journal: "Clinical neurophysiology" }
     },
     {
-      id: "pm-24967904", source: "full-text", condition: "stroke", type: "biomarker",
+      id: "pm-24967904", rec: { eyes: "unclear", power: "unclear", icd11: "8B1", dx: "clinical diagnosis" }, source: "full-text", condition: "stroke", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 55, k: null },
       sites: [], bands: ["delta","theta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up" }, symptoms: ["motor"],
@@ -3672,7 +3672,7 @@ window.NF_DATA = {
       cite: { authors: "Zappasodi F, Olejarczyk E, Marzetti L, Assenza G, Pizzella V, Tecchio F", year: 2014, title: "Fractal Dimension of EEG Activity Senses Neuronal Impairment in Acute Stroke", journal: "PLoS One" }
     },
     {
-      id: "pm-27509209", source: "full-text", condition: "stroke", type: "biomarker",
+      id: "pm-27509209", rec: { eyes: "unclear", power: "unclear", icd11: "8B1", dx: "unclear" }, source: "full-text", condition: "stroke", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 38, k: null },
       sites: [], bands: ["delta","theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", beta: "down" }, symptoms: ["motor"],
@@ -3682,7 +3682,7 @@ window.NF_DATA = {
       cite: { authors: "van Wijngaarden JBG, Zucca R, Finnigan S, Verschure PFMJ", year: 2016, title: "The Impact of Cortical Lesions on Thalamo-Cortical Network Dynamics after Acute Ischaemic Stroke: A Combined Experimental and Theoretical Study", journal: "PLoS computational biology" }
     },
     {
-      id: "pm-30422939", source: "abstract", condition: "learning", type: "biomarker",
+      id: "pm-30422939", rec: { eyes: "unclear", power: "unclear", icd11: "6A03", dx: "unclear" }, source: "abstract", condition: "learning", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 216, k: null },
       sites: [], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["reading"],
@@ -3692,7 +3692,7 @@ window.NF_DATA = {
       cite: { authors: "Jäncke L, Saka MY, Badawood O, Alhamadi N", year: 2019, title: "Resting-state electroencephalogram in learning-disabled children: power and connectivity analyses", journal: "Neuroreport" }
     },
     {
-      id: "pm-40493313", source: "full-text", condition: "learning", type: "biomarker",
+      id: "pm-40493313", rec: { eyes: "unclear", power: "absolute", icd11: "6A03", dx: "clinical diagnosis" }, source: "full-text", condition: "learning", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 136, k: null },
       sites: [], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["reading"],
@@ -3702,7 +3702,7 @@ window.NF_DATA = {
       cite: { authors: "Yang Y, Huo S, Wang J, Maurer U", year: 2025, title: "Spectral and Topological Abnormalities of Resting and Task State EEG in Chinese Children with Developmental Dyslexia", journal: "Brain topography" }
     },
     {
-      id: "pm-26545819", source: "abstract", condition: "learning", type: "biomarker",
+      id: "pm-26545819", rec: { eyes: "unclear", power: "unclear", icd11: "6A03", dx: "unclear" }, source: "abstract", condition: "learning", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["theta","beta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", beta: "down", alpha: "down" }, symptoms: ["reading"],
@@ -3712,7 +3712,7 @@ window.NF_DATA = {
       cite: { authors: "Jäncke L, Alahmadi N", year: 2016, title: "Resting State EEG in Children With Learning Disabilities: An Independent Component Analysis Approach", journal: "Clinical EEG and neuroscience" }
     },
     {
-      id: "pm-16917604", source: "abstract", condition: "learning", type: "biomarker",
+      id: "pm-16917604", rec: { eyes: "unclear", power: "both", icd11: "6A03", dx: "unclear" }, source: "abstract", condition: "learning", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 72, k: null },
       sites: [], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "mixed" }, symptoms: ["reading"],
@@ -3722,7 +3722,7 @@ window.NF_DATA = {
       cite: { authors: "Fonseca LC, Tedrus GMAS, Chiodi MG, Cerqueira JN, Tonelotto JMF", year: 2006, title: "Quantitative EEG in children with learning disabilities: analysis of band power", journal: "Arquivos de neuro-psiquiatria" }
     },
     {
-      id: "pm-41016426", source: "abstract", condition: "learning", type: "biomarker",
+      id: "pm-41016426", rec: { eyes: "unclear", power: "unclear", icd11: "6A03", dx: "unclear" }, source: "abstract", condition: "learning", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 120, k: null },
       sites: ["P3","T5","O1"], bands: ["delta","theta"], direction: "down", evidence: "preliminary",
       changes: { delta: "down", theta: "down" }, symptoms: ["reading"],
@@ -3732,7 +3732,7 @@ window.NF_DATA = {
       cite: { authors: "Garnica-Agudelo D, Smith SDW, van de Velden D, Stier C, Brockmann K, Schroeder S, Neef NE, Focke NK", year: 2025, title: "Source reconstruction of clinical resting-state EEG reveals differences in power and functional connectivity in children with developmental dyslexia", journal: "Neuropsychologia" }
     },
     {
-      id: "pm-2417821", source: "abstract", condition: "learning", type: "biomarker",
+      id: "pm-2417821", rec: { eyes: "unclear", power: "both", icd11: "6A03", dx: "unclear" }, source: "abstract", condition: "learning", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["C3","C4","P3","P4","T3","T4"], bands: ["beta","hibeta"], direction: "down", evidence: "preliminary",
       changes: { beta: "down", hibeta: "down" }, symptoms: ["reading"],
@@ -3742,7 +3742,7 @@ window.NF_DATA = {
       cite: { authors: "Fein G, Galin D, Yingling CD, Johnstone J, Davenport L, Herron J", year: 1986, title: "EEG spectra in dyslexic and control boys during resting conditions", journal: "Electroencephalography and clinical neurophysiology" }
     },
     {
-      id: "pm-22658819", source: "abstract", condition: "learning", type: "biomarker",
+      id: "pm-22658819", rec: { eyes: "closed", power: "unclear", icd11: "6A03", dx: "unclear" }, source: "abstract", condition: "learning", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 37, k: null },
       sites: ["P3","Pz","P4","O1","O2","T5","T6"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["reading"],
