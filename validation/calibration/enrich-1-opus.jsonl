@@ -1,0 +1,20 @@
+{"id":"pm-35182242","eyes":"open","power":"n/a","icd11":"6A05","dx":"DSM-IV","n":null,"pmid":"35182242","quote":"In the EO condition, the relative alpha increased significantly after training (EC change n.s.)"}
+{"id":"pm-35699268","eyes":"both","power":"unclear","icd11":"6C4","dx":"mixed","n":null,"pmid":"35699268","quote":"alternating 1-minute segments of eyes open (EO) and eyes closed (EC); averaged across condition"}
+{"id":"pm-39449097","eyes":"closed","power":"absolute","icd11":"6D80+6D71","dx":"unclear","n":217,"pmid":"39449097","quote":"One-minute resting-state eyes-closed EEG data was used for all further analysis"}
+{"id":"pm-23249444","eyes":"both","power":"both","icd11":"6A05","dx":"clinical diagnosis","n":null,"pmid":"23249444","quote":"computed for the eyes-open as well as eyes-closed condition"}
+{"id":"pm-39799666","eyes":"open","power":"absolute","icd11":"6A2","dx":"DSM-IV","n":null,"pmid":"39799666","quote":"instructed to keep their eyes open and to fixate"}
+{"id":"pm-36057818","eyes":"unclear","power":"relative","icd11":"subclinical","dx":"research criteria","n":null,"pmid":"36057818","quote":"EC and EO recorded (30 s each); results not split by eye state"}
+{"id":"pm-42872911-fc","eyes":"closed","power":"n/a","icd11":"6C4","dx":"DSM-5","n":null,"pmid":"42872911","quote":"instructions to close their eyes, relax, and remain awake"}
+{"id":"pm-36890138","eyes":"closed","power":"relative","icd11":"6C4A","dx":"unclear","n":null,"pmid":"36890138","quote":"for the eyes-closed condition, significant group differences were found in theta and alpha"}
+{"id":"pm-37955596","eyes":"unclear","power":"unclear","icd11":"8A6","dx":"unclear","n":null,"pmid":"37955596","quote":""}
+{"id":"pm-27001559","eyes":"unclear","power":"unclear","icd11":"6A20","dx":"unclear","n":null,"pmid":"27001559","quote":""}
+{"id":"pm-40413989","eyes":"unclear","power":"unclear","icd11":"subclinical","dx":"scale cut-off","n":null,"pmid":"40413989","quote":""}
+{"id":"pm-26392114","eyes":"unclear","power":"n/a","icd11":"6A7","dx":"unclear","n":null,"pmid":"26392114","quote":""}
+{"id":"pm-12705421","eyes":"closed","power":"absolute","icd11":"6C46","dx":"unclear","n":null,"pmid":"12705421","quote":"EEGs were recorded in the eyes-closed resting state, and absolute EEG power"}
+{"id":"pm-38969018","eyes":"closed","power":"unclear","icd11":"subclinical","dx":"unclear","n":null,"pmid":"38969018","quote":"eyes-closed rsEEG were recorded in 68 older people"}
+{"id":"pm-40059173-fc","eyes":"closed","power":"n/a","icd11":"6D80+6D71","dx":"ICD-10","n":null,"pmid":"40059173","quote":"seated with eyes closed for 5 min"}
+{"id":"pm-15705347","eyes":"unclear","power":"unclear","icd11":"6A7","dx":"unclear","n":null,"pmid":"15705347","quote":""}
+{"id":"dep-baehr-2001","eyes":"unclear","power":"n/a","icd11":"6A7","dx":"unclear","n":null,"pmid":null,"quote":""}
+{"id":"tbi-nuwer-2005","eyes":"unclear","power":"unclear","icd11":"NA07.0","dx":"mixed","n":null,"pmid":"16029958","quote":""}
+{"id":"asd-pineda-2008","eyes":"unclear","power":"n/a","icd11":"6A02","dx":"unclear","n":null,"pmid":null,"quote":""}
+{"id":"dep-vandervinne-2017","eyes":"closed","power":"unclear","icd11":"6A7","dx":"DSM-IV","n":null,"pmid":"28761811","quote":"When both EO and EC data was available, EC was used for further analysis"}

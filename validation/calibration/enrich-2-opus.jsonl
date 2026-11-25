@@ -1,0 +1,20 @@
+{"id":"pm-42217475","eyes":"closed","power":"relative","icd11":"8A6","dx":"research criteria","n":null,"pmid":"42217475","quote":"during quiet rest with eyes closed"}
+{"id":"pm-37109695-fc","eyes":"closed","power":"n/a","icd11":"6A2","dx":"DSM-5","n":null,"pmid":"37109695","quote":"Only accepted epochs of eyes-closed rsEEG data were chosen"}
+{"id":"pm-27464584","eyes":"open","power":"absolute","icd11":"6A05","dx":"DSM-IV","n":null,"pmid":"27464584","quote":"eyes-open resting-state condition (EO)"}
+{"id":"pm-40389648-fc","eyes":"closed","power":"n/a","icd11":"6D80","dx":"unclear","n":null,"pmid":"40389648","quote":"resting-state, eyes-closed EEG recordings from 88 participants"}
+{"id":"pm-33544703","eyes":"closed","power":"relative","icd11":"6D80","dx":"research criteria","n":81,"pmid":"33544703","quote":"Only eyes-closed resting state data were selected for further analysis"}
+{"id":"pm-22384265-fc","eyes":"closed","power":"n/a","icd11":"6A7","dx":"DSM-IV","n":null,"pmid":"22384265","quote":"subjects lay quietly with eyes closed"}
+{"id":"cand-ptsd-eneuro-2020","eyes":"open","power":"unclear","icd11":"6B40","dx":"DSM-5","n":null,"pmid":"32690671","quote":"standard, eyes-open resting state (S-RS)"}
+{"id":"pm-34517813","eyes":"open","power":"absolute","icd11":"6A02","dx":"DSM-IV","n":null,"pmid":"34517813","quote":"280 provided artifact-free eyes open resting EEG data"}
+{"id":"pm-29202390-fc","eyes":"unclear","power":"n/a","icd11":"6A20","dx":"unclear","n":null,"pmid":"29202390","quote":""}
+{"id":"pm-18679787","eyes":"closed","power":"absolute","icd11":"8A80","dx":"unclear","n":null,"pmid":"18679787","quote":"60 x 2-s epochs of eyes-closed, waking-relaxed activity"}
+{"id":"pm-35235255-fc","eyes":"unclear","power":"n/a","icd11":"6A05","dx":"unclear","n":null,"pmid":"35235255","quote":""}
+{"id":"pm-18662727","eyes":"closed","power":"both","icd11":"6A05","dx":"unclear","n":null,"pmid":"18662727","quote":"during an eyes-closed resting condition"}
+{"id":"pm-42347931","eyes":"unclear","power":"unclear","icd11":"subclinical","dx":"unclear","n":null,"pmid":"42347931","quote":""}
+{"id":"pm-26952695","eyes":"unclear","power":"unclear","icd11":"6A20","dx":"unclear","n":null,"pmid":"26952695","quote":""}
+{"id":"pm-36442376","eyes":"unclear","power":"unclear","icd11":"8A6","dx":"unclear","n":null,"pmid":"36442376","quote":""}
+{"id":"pm-9224905","eyes":"unclear","power":"unclear","icd11":"6C40","dx":"DSM-III","n":null,"pmid":"9224905","quote":""}
+{"id":"ad-jelic-2000","eyes":"unclear","power":"relative","icd11":"6D71","dx":"unclear","n":null,"pmid":"10924766","quote":""}
+{"id":"pd-klassen-2011","eyes":"unclear","power":"relative","icd11":"8A00","dx":"unclear","n":null,"pmid":"21633128","quote":""}
+{"id":"epi-kotchoubey-2001","eyes":"unclear","power":"n/a","icd11":"8A6","dx":"unclear","n":null,"pmid":"11442161","quote":""}
+{"id":"sud-rangaswamy-2002","eyes":"closed","power":"absolute","icd11":"6C40","dx":"unclear","n":614,"pmid":"12372655","quote":"in the eyes-closed EEG of 307 alcohol-dependent subjects"}
