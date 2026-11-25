@@ -16,7 +16,8 @@ const ICD = {
   alzheimers: ["6D80", "6D71", "6D80+6D71", "6D8"], adhd: ["6A05"], schizophrenia: ["6A20", "6A2"], depression: ["6A70", "6A71", "6A7", "6A60-6A61"],
   parkinsons: ["8A00"], tbi: ["NA07", "NA07.0"], insomnia: ["7A00", "7A01", "7A0"], autism: ["6A02"],
   sud: ["6C40", "6C41", "6C43", "6C44", "6C45", "6C46", "6C4A", "6C4"], epilepsy: ["8A6"], ptsd: ["6B40", "6B41"],
-  anxiety: ["6B00", "6B01", "6B02", "6B03", "6B04", "6B0"], migraine: ["8A80"], cognition: ["none"]
+  anxiety: ["6B00", "6B01", "6B02", "6B03", "6B04", "6B0"], migraine: ["8A80"], cognition: ["none"],
+  bipolar: ["6A60", "6A61", "6A6"], ocd: ["6B20"], lewy: ["6D82", "6D82+8A00"], ftd: ["6D83"], intellectual: ["6A00"], learning: ["6A03"], ms: ["8A40"], stroke: ["8B1", "8B2", "8B1+8B2"]
 };
 const today = new Date().toISOString().slice(0, 10);
 const { rows, header } = readLog();

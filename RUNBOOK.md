@@ -26,6 +26,12 @@ or to offer options. After each batch, start the next one straight away.
 5. Run `node tools/review-queue.js --counts`. Work through disorders in this order:
    Alzheimer's, Depression, ADHD, Schizophrenia, Anxiety, Autism, Epilepsy, Parkinson's,
    Alcohol & substance use, PTSD, Brain injury (TBI), Migraine, Insomnia, Unassigned.
+   Run 3 (25 Nov 2026, ICD-11 amendment) added: OCD, Bipolar, Lewy body dementia, Frontotemporal dementia,
+   Multiple sclerosis, Intellectual disability, Learning disorders, Stroke. Their rows are mostly `to-review`
+   (not yet screened): decide them in the same batch. `exclude` from the abstract when it clearly fails the
+   criteria; otherwise read the full text and `include` or `exclude`. Condition ids: `ocd`, `bipolar`, `lewy`, `ftd`,
+   `ms`, `intellectual`, `learning`, `stroke`. Extra symptom ids: `mania`, `compulsions`. A sample of patients with the
+   new disorder against healthy controls is required, as for every condition.
 
 ## One batch (10 papers): repeat until the queue is empty
 
