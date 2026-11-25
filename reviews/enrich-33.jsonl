@@ -1,0 +1,10 @@
+{"id":"pm-28772244","eyes":"unclear","power":"unclear","icd11":"8A40","dx":"unclear"}
+{"id":"pm-10896692","eyes":"unclear","power":"unclear","icd11":"8A40","dx":"clinical diagnosis"}
+{"id":"pm-42876599","eyes":"closed","power":"absolute","icd11":"8A40","dx":"clinical diagnosis","quote":"These effects were specific to the eyes-closed condition"}
+{"id":"pm-38424592","eyes":"closed","power":"relative","icd11":"8B1","dx":"clinical diagnosis","quote":"with their eyes closed"}
+{"id":"pm-42304473","eyes":"open","power":"relative","icd11":"8B1","dx":"unclear","n":56,"quote":"Resting-state EEG (eyes open, central fixation, 5 min)"}
+{"id":"pm-32472782","eyes":"unclear","power":"absolute","icd11":"8B1","dx":"unclear"}
+{"id":"pm-41937362","eyes":"unclear","power":"relative","icd11":"8B1","dx":"clinical diagnosis"}
+{"id":"pm-38460956","eyes":"unclear","power":"relative","icd11":"8B1","dx":"unclear"}
+{"id":"pm-24971913","eyes":"unclear","power":"relative","icd11":"8B1","dx":"unclear"}
+{"id":"pm-35068216","eyes":"open","power":"unclear","icd11":"8B1","dx":"unclear","quote":"pairwise derived brain symmetry index (pdBSI) in eyes-open condition"}
