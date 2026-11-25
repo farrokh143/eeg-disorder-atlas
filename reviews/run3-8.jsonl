@@ -1,0 +1,6 @@
+{"id":"pm-37138179","decision":"exclude","code":"NONBAND","note":"main result is aperiodic (1/f) slope; oscillatory power difference reported without band or direction"}
+{"id":"pm-39442361","decision":"exclude","code":"NONBAND","note":"DLB with vs without visual hallucinations: only Higuchi fractal dimension discriminated; no band-power result with direction"}
+{"id":"pm-40849483","decision":"exclude","code":"CN","note":"dynamic and static functional connectivity (fluidity, node strength) only"}
+{"id":"pm-42398889","decision":"defer","note":"[parked: no full text] abstract reports baseline slowing and alpha coherence without naming bands or sites; longitudinal theta change is within DLB"}
+{"id":"pm-26545633","decision":"defer","note":"[parked: non-atlas condition REM sleep behaviour disorder] iRBD cohort converting to synucleinopathy"}
+{"id":"pm-38497896","decision":"defer","note":"[parked: non-atlas condition REM sleep behaviour disorder] iRBD cohort converting to synucleinopathy"}
