@@ -81,7 +81,7 @@ For an exclusion, give the reason in a few words. Use the full text when the abs
 - `bands_and_directions`: e.g. `theta:up alpha:down`
 - `sites_or_pairs`: 10-20 labels (old T3/T4/T5/T6 names) separated by spaces, or region pairs such as
   `frontal-parietal`, or empty for whole-head
-- `n`: total participants
+- `n`: whole study sample analysed (all groups), as in RUNBOOK Part 1
 - `design`: 1 to 5, as in `README.md`
 - `eyes`, `power` and `icd11`: as in RUNBOOK Part 3
 
