@@ -1149,7 +1149,7 @@ window.NF_DATA = {
       cite: { authors: "Grin-Yatsenko VA, et al.", year: 2009, title: "EEG power spectra at early stages of depressive disorders", journal: "J Clin Neurophysiol" }
     },
     {
-      id: "pm-20006545", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-20006545", rec: { eyes: "both", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 637, k: null },
       sites: ["P3","Pz","P4","O1","O2"], bands: ["theta","alpha","beta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", alpha: "up", beta: "up" }, symptoms: ["lowmood"],
@@ -1159,7 +1159,7 @@ window.NF_DATA = {
       cite: { authors: "Grin-Yatsenko VA, et al.", year: 2010, title: "Independent component approach to the analysis of EEG recordings at early stages of depressive disorders", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-20525011", source: "abstract", sample: "stewart-dep-306", condition: "depression", type: "biomarker",
+      id: "pm-20525011", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "DSM-IV" }, source: "abstract", sample: "stewart-dep-306", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 306, k: null },
       sites: ["P3","Pz","P4"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1169,7 +1169,7 @@ window.NF_DATA = {
       cite: { authors: "Stewart JL, et al.", year: 2011, title: "The oft-neglected role of parietal EEG asymmetry and risk for major depressive disorder", journal: "Psychophysiology" }
     },
     {
-      id: "pm-20677839", source: "abstract", sample: "stewart-dep-306", condition: "depression", type: "biomarker",
+      id: "pm-20677839", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "DSM-IV" }, source: "abstract", sample: "stewart-dep-306", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 306, k: null },
       sites: ["Fp1","F7","F3"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1179,7 +1179,7 @@ window.NF_DATA = {
       cite: { authors: "Stewart JL, et al.", year: 2010, title: "Resting frontal EEG asymmetry as an endophenotype for depression risk: sex-specific patterns of frontal brain asymmetry", journal: "J Abnorm Psychol" }
     },
     {
-      id: "pm-20708650", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-20708650", rec: { eyes: "closed", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 44, k: null },
       sites: [], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["lowmood"],
@@ -1189,7 +1189,7 @@ window.NF_DATA = {
       cite: { authors: "Kemp AH, et al.", year: 2010, title: "Disorder specificity despite comorbidity: resting EEG alpha asymmetry in major depressive disorder and post-traumatic stress disorder", journal: "Biol Psychol" }
     },
     {
-      id: "pm-21309442", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-21309442", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 34, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "ratio", evidence: "contested",
       changes: { alpha: "mixed" }, symptoms: ["lowmood"],
@@ -1199,7 +1199,7 @@ window.NF_DATA = {
       cite: { authors: "Segrave RA, et al.", year: 2011, title: "Individualized alpha activity and frontal asymmetry in major depression", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-21381804", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-21381804", rec: { eyes: "unclear", power: "relative", icd11: "subclinical", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: null, k: null },
       sites: ["Fp1","F7","F3"], bands: ["alpha"], direction: "asymmetry", evidence: "moderate",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1209,7 +1209,7 @@ window.NF_DATA = {
       cite: { authors: "Nusslock R, et al.", year: 2011, title: "Cognitive vulnerability and frontal brain asymmetry: common predictors of first prospective depressive episode", journal: "J Abnorm Psychol" }
     },
     {
-      id: "pm-21500316", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-21500316", rec: { eyes: "closed", power: "unclear", icd11: "subclinical", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: 75, k: null },
       sites: ["P3","Pz","P4"], bands: ["alpha"], direction: "asymmetry", evidence: "moderate",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1219,7 +1219,7 @@ window.NF_DATA = {
       cite: { authors: "Bruder GE, et al.", year: 2012, title: "Relationship of resting EEG with anatomical MRI measures in individuals at high and low risk for depression", journal: "Hum Brain Mapp" }
     },
     {
-      id: "pm-22408133", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-22408133", rec: { eyes: "unclear", power: "absolute", icd11: "6A71", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
       sites: ["Fp1","F7","F3"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1229,7 +1229,7 @@ window.NF_DATA = {
       cite: { authors: "Chang JS, et al.", year: 2012, title: "An integrative assessment of the psychophysiologic alterations in young women with recurrent major depressive disorder", journal: "Psychosom Med" }
     },
     {
-      id: "pm-22939462", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-22939462", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 96, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["lowmood"],
@@ -1239,7 +1239,7 @@ window.NF_DATA = {
       cite: { authors: "Jaworska N, et al.", year: 2012, title: "α Power, α asymmetry and anterior cingulate cortex activity in depressed males and females", journal: "J Psychiatr Res" }
     },
     {
-      id: "pm-2307762", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-2307762", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 14, k: null },
       sites: ["Fp1","F7","F3","P4","T6","O2"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
