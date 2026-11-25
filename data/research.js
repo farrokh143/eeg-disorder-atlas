@@ -3627,6 +3627,16 @@ window.NF_DATA = {
       detail: "41 first-ever ischaemic stroke patients, resting EEG at 3, 5, 12 and 26 weeks. Delta directional brain symmetry index was linked within and between patients to Fugl-Meyer upper-limb scores, and the affected-hemisphere delta/alpha ratio to NIHSS; both measures normalised over time. Electrodes are not named in the abstract, so sites are whole-head. Taken from the abstract; not checked in the full text. Prospective longitudinal cohort with no healthy control group.",
       design: "Prospective cohort",
       cite: { authors: "Saes M, Zandvliet SB, Andringa AS, Daffertshofer A, Twisk JWR, Meskers CGM, van Wegen EEH, Kwakkel G", year: 2020, title: "Is Resting-State EEG Longitudinally Associated With Recovery of Clinical Neurological Impairments Early Poststroke? A Prospective Cohort Study", journal: "Neurorehabilitation and Neural Repair" }
+    },
+    {
+      id: "pm-26936984", source: "abstract", condition: "stroke", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 24, k: null },
+      sites: [], bands: ["delta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up" }, symptoms: ["motor"],
+      claim: "Acute ischaemic stroke: larger infarcts go with higher delta power bilaterally; whole-brain delta tracks NIHSS",
+      detail: "24 patients with acute ischaemic stroke, 3-minute resting dense-array (256-electrode) EEG at bedside. Whole-brain partial least squares models of delta or beta power tracked NIHSS scores, and larger infarct volume was linked to higher delta power bilaterally. Beta direction is not stated in the abstract, so only delta is coded. Sites are whole-head. Taken from the abstract; not checked in the full text. Cross-sectional evaluation with no healthy control group.",
+      design: "Evaluation study",
+      cite: { authors: "Wu J, Srinivasan R, Burke Quinlan E, Solodkin A, Small SL, Cramer SC", year: 2016, title: "Utility of EEG measures of brain function in patients with acute stroke", journal: "Journal of neurophysiology" }
     }
   ],
 
