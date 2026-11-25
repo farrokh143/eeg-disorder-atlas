@@ -3152,7 +3152,7 @@ window.NF_DATA = {
       cite: { authors: "Cao Z, et al.", year: 2016, title: "Resting-state EEG power and coherence vary between migraine phases", journal: "J Headache Pain" }
     },
     {
-      id: "pm-29385895", source: "abstract", condition: "migraine", type: "biomarker",
+      id: "pm-29385895", rec: { eyes: "closed", power: "unclear", icd11: "8A80", dx: "unclear" }, source: "abstract", condition: "migraine", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["O1","O2"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["headache"],
@@ -3162,7 +3162,7 @@ window.NF_DATA = {
       cite: { authors: "O'Hare L, et al.", year: 2018, title: "Resting-State Alpha-Band Oscillations in Migraine", journal: "Perception" }
     },
     {
-      id: "pm-31530007", source: "abstract", condition: "migraine", type: "biomarker",
+      id: "pm-31530007", rec: { eyes: "unclear", power: "relative", icd11: "8A80", dx: "research criteria" }, source: "abstract", condition: "migraine", type: "biomarker",
       metrics: { design: 1, control: "none", blinded: null, n: 24, k: null },
       sites: [], bands: ["delta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "down", beta: "up" }, symptoms: ["headache"],
@@ -3172,7 +3172,7 @@ window.NF_DATA = {
       cite: { authors: "Martins IP, et al.", year: 2020, title: "Brain state monitoring for the future prediction of migraine attacks", journal: "Cephalalgia" }
     },
     {
-      id: "pm-36474355", source: "abstract", condition: "migraine", type: "biomarker",
+      id: "pm-36474355", rec: { eyes: "unclear", power: "both", icd11: "8A80", dx: "unclear" }, source: "abstract", condition: "migraine", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 45, k: null },
       sites: ["Fz","Cz","O1","O2","Pz","T3","T4"], bands: ["theta","alpha","delta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", alpha: "down", delta: "up" }, symptoms: ["headache"],
@@ -3182,7 +3182,7 @@ window.NF_DATA = {
       cite: { authors: "Ojha P, et al.", year: 2024, title: "Resting-state Quantitative EEG Spectral Patterns in Migraine During Ictal Phase Reveal Deviant Brain Oscillations: Potential Role of Density Spectral Array", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-42166268", source: "abstract", condition: "migraine", type: "biomarker",
+      id: "pm-42166268", rec: { eyes: "closed", power: "unclear", icd11: "8A80", dx: "unclear" }, source: "abstract", condition: "migraine", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 95, k: null },
       sites: ["Fz","O1","O2"], bands: ["delta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "down", alpha: "up" }, symptoms: ["headache"],
@@ -3192,7 +3192,7 @@ window.NF_DATA = {
       cite: { authors: "Ko LW, Diddi SVS, Wu WH, He C, Lai KL, Wang YF, Wang SJ", year: 2026, title: "Frontal Delta Decreasing and Occipital Ictal Alpha Increasing Associated With Migraine in Preictal and Ictal Phases", journal: "IEEE Trans Neural Syst Rehabil Eng" }
     },
     {
-      id: "pm-42349315", source: "abstract", condition: "migraine", type: "biomarker",
+      id: "pm-42349315", rec: { eyes: "unclear", power: "both", icd11: "8A80", dx: "unclear" }, source: "abstract", condition: "migraine", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 56, k: null },
       sites: [], bands: ["delta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "down", alpha: "mixed", beta: "down" }, symptoms: ["headache"],
@@ -3202,7 +3202,7 @@ window.NF_DATA = {
       cite: { authors: "Wong R, Robertson R, Meylakh N, et al.", year: 2026, title: "Reduced electroencephalogram power and no change in peak alpha frequency in individuals with chronic migraine: a cross-sectional investigation", journal: "Neurophysiol Clin" }
     },
     {
-      id: "pm-41534360", source: "full-text", condition: "alzheimers", type: "biomarker",
+      id: "pm-41534360", rec: { eyes: "unclear", power: "unclear", icd11: "6D8", dx: "clinical diagnosis" }, source: "full-text", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 128, k: null },
       sites: [], bands: ["theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", alpha: "down" }, symptoms: ["memory","cogdecline"],
@@ -3212,7 +3212,7 @@ window.NF_DATA = {
       cite: { authors: "Cecchetti G, et al.", year: 2026, title: "Resting-State EEG captures functional network correlates of plasma p-Tau-217 in Alzheimer's disease", journal: "Neuroimage Clin" }
     },
     {
-      id: "pm-40101271", source: "full-text", condition: "alzheimers", type: "biomarker",
+      id: "pm-40101271", rec: { eyes: "unclear", power: "unclear", icd11: "6D8", dx: "unclear" }, source: "full-text", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 65, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", alpha: "down" }, symptoms: ["memory","cogdecline"],
@@ -3222,7 +3222,7 @@ window.NF_DATA = {
       cite: { authors: "Simmatis LE, et al.", year: 2025, title: "EEG biomarkers for Alzheimer's disease: A novel automated pipeline for detecting and monitoring disease progression", journal: "J Alzheimers Dis" }
     },
     {
-      id: "pm-36792002", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-36792002", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 142, k: null },
       sites: ["Fp1","F7","F3","Fz"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["lowmood"],
@@ -3232,7 +3232,7 @@ window.NF_DATA = {
       cite: { authors: "Ray KL, et al.", year: 2023, title: "Altered electroencephalography resting state network coherence in remitted MDD", journal: "Brain Res" }
     },
     {
-      id: "pm-33780847", source: "full-text", condition: "schizophrenia", type: "biomarker",
+      id: "pm-33780847", rec: { eyes: "unclear", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "full-text", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 291, k: null },
       sites: ["T3","T4","T5","T6"], bands: ["theta","beta","gamma"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", beta: "up", gamma: "up" }, symptoms: ["psychosis","memory"],
@@ -3242,7 +3242,7 @@ window.NF_DATA = {
       cite: { authors: "Koshiyama D, et al.", year: 2021, title: "Abnormal phase discontinuity of alpha- and theta-frequency oscillations in schizophrenia", journal: "Schizophr Res" }
     },
     {
-      id: "pm-40079512", source: "full-text", condition: "schizophrenia", type: "biomarker",
+      id: "pm-40079512", rec: { eyes: "unclear", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "full-text", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
       sites: ["C3","Cz","C4","P3","Pz","P4"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["psychosis"],
@@ -4161,7 +4161,7 @@ window.NF_DATA = {
       cite: { authors: "Yeh TC, et al.", year: 2023, title: "Resting-State EEG Connectivity at High-Frequency Bands and Attentional Performance Dysfunction in Stabilized Schizophrenia Patients", journal: "Medicina (Kaunas)" }
     },
     {
-      id: "pm-40079512-fc", source: "full-text", condition: "schizophrenia", type: "connectivity",
+      id: "pm-40079512-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6A20", dx: "unclear" }, source: "full-text", condition: "schizophrenia", type: "connectivity",
       measure: "phase", pairs: [["frontal","parietal"],["frontal","temporal"]],
       metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
       bands: ["beta"], direction: "ratio", evidence: "preliminary",
