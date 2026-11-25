@@ -949,7 +949,7 @@ window.NF_DATA = {
       cite: { authors: "Liu X, et al.", year: 2022, title: "Altered gamma oscillations and beta-gamma coupling in drug-naive first-episode major depressive disorder: Association with sleep and cognitive disturbance", journal: "J Affect Disord" }
     },
     {
-      id: "pm-36057818", source: "full-text", condition: "alzheimers", type: "biomarker",
+      id: "pm-36057818", rec: { eyes: "both", power: "absolute", icd11: "subclinical", dx: "unclear" }, source: "full-text", condition: "alzheimers", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: 318, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta"], direction: "up", evidence: "moderate",
       changes: { theta: "up" }, symptoms: ["memory","cogdecline"],
@@ -959,7 +959,7 @@ window.NF_DATA = {
       cite: { authors: "Spinelli G, et al.", year: 2022, title: "Theta Band-Power Shapes Amyloid-Driven Longitudinal EEG Changes in Elderly Subjective Memory Complainers At-Risk for Alzheimer's Disease", journal: "J Alzheimers Dis" }
     },
     {
-      id: "pm-37657750", source: "abstract", condition: "schizophrenia", type: "biomarker",
+      id: "pm-37657750", rec: { eyes: "unclear", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 162, k: null },
       sites: ["Fp1","Fp2"], bands: ["gamma"], direction: "up", evidence: "preliminary",
       changes: { gamma: "up" }, symptoms: ["psychosis"],
@@ -969,7 +969,7 @@ window.NF_DATA = {
       cite: { authors: "Li G, et al.", year: 2023, title: "Correlation study of brain-derived neurotrophic factor, EEG γ activity and cognitive function in first-episode schizophrenia", journal: "Brain Res" }
     },
     {
-      id: "pm-37918574", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-37918574", rec: { eyes: "closed", power: "absolute", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 105, k: null },
       sites: ["P3","Pz","P4","T5","T6","O1","O2"], bands: ["gamma"], direction: "up", evidence: "preliminary",
       changes: { gamma: "up" }, symptoms: ["lowmood","executive"],
@@ -979,7 +979,7 @@ window.NF_DATA = {
       cite: { authors: "Zeng Y, et al.", year: 2024, title: "Altered resting-state brain oscillation and the associated cognitive impairments in late-life depression with different depressive severity: An EEG power spectrum and functional connectivity study", journal: "J Affect Disord" }
     },
     {
-      id: "pm-39796211", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-39796211", rec: { eyes: "closed", power: "unclear", icd11: "6D71", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 160, k: null },
       sites: ["P3","Pz","P4","T5","T6","O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["memory","cogdecline"],
@@ -989,7 +989,7 @@ window.NF_DATA = {
       cite: { authors: "Del Percio C, et al.", year: 2025, title: "Resting-State EEG Alpha Rhythms Are Related to CSF Tau Biomarkers in Prodromal Alzheimer's Disease", journal: "Int J Mol Sci" }
     },
     {
-      id: "pm-40976159", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-40976159", rec: { eyes: "closed", power: "relative", icd11: "6A70", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 134, k: null },
       sites: ["O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["lowmood"],
@@ -999,7 +999,7 @@ window.NF_DATA = {
       cite: { authors: "Yi Y, et al.", year: 2025, title: "Absence of differences in resting-state EEG spectral power and cognitive impairments between first-episode, drug-naïve MDD patients with and without suicidal ideation", journal: "J Psychiatr Res" }
     },
     {
-      id: "pm-41619714", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-41619714", rec: { eyes: "unclear", power: "unclear", icd11: "6D80", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 218, k: null },
       sites: [], bands: ["delta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", alpha: "down" }, symptoms: ["memory","cogdecline"],
@@ -1009,7 +1009,7 @@ window.NF_DATA = {
       cite: { authors: "Jakhar D, et al.", year: 2026, title: "Abnormal Resting-State EEG delta and alpha rhythms in Huntington's and Alzheimer's Diseases: An exploratory study", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-42215811", source: "abstract", condition: "epilepsy", type: "biomarker",
+      id: "pm-42215811", rec: { eyes: "closed", power: "absolute", icd11: "8A6", dx: "scale cut-off" }, source: "abstract", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 65, k: null },
       sites: [], bands: ["gamma","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { gamma: "up", alpha: "down" }, symptoms: ["cogdecline"],
@@ -1019,7 +1019,7 @@ window.NF_DATA = {
       cite: { authors: "Masoumian FN, et al.", year: 2026, title: "Resting-state EEG markers of cognitive dysfunction in epilepsy: evidence from gamma power, alpha activity, and functional connectivity", journal: "Neurol Sci" }
     },
     {
-      id: "pm-8272452", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-8272452", rec: { eyes: "unclear", power: "unclear", icd11: "6D80", dx: "DSM-III" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["theta","delta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", delta: "up" }, symptoms: ["memory","cogdecline"],
@@ -1029,7 +1029,7 @@ window.NF_DATA = {
       cite: { authors: "Günther W, et al.", year: 1993, title: "Findings of electroencephalographic brain mapping in mild to moderate dementia of the Alzheimer type during resting, motor, and music-perception conditions", journal: "Psychiatry Res" }
     },
     {
-      id: "pm-12426037", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-12426037", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 88, k: null },
       sites: ["T3","T4","T5","T6"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["lowmood"],
@@ -1039,7 +1039,7 @@ window.NF_DATA = {
       cite: { authors: "Mientus S, et al.", year: 2002, title: "Cortical hypoactivation during resting EEG in schizophrenics but not in depressives and schizotypal subjects as revealed by low resolution electromagnetic tomography (LORETA)", journal: "Psychiatry Res" }
     },
     {
-      id: "pm-39248267", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-39248267", rec: { eyes: "open", power: "absolute", icd11: "6A7", dx: "ICD-10" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 735, k: null },
       sites: ["C3","Cz","C4"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["lowmood"],
@@ -3571,7 +3571,7 @@ window.NF_DATA = {
       cite: { authors: "Zawiślak-Fornagiel K, et al.", year: 2023, title: "Specific patterns of coherence and phase lag index in particular regions as biomarkers of cognitive impairment in Parkinson's disease", journal: "Parkinsonism Relat Disord" }
     },
     {
-      id: "pm-37918574-fc", source: "abstract", condition: "depression", type: "connectivity",
+      id: "pm-37918574-fc", rec: { eyes: "closed", power: "n/a", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "connectivity",
       measure: "phase", pairs: [["parietal","parietal"],["frontal","parietal"],["frontal","occipital"]],
       metrics: { design: 2, control: null, blinded: null, n: 105, k: null },
       bands: ["theta"], direction: "up", evidence: "preliminary",

@@ -1,0 +1,10 @@
+{"id":"pm-36057818","eyes":"both","power":"absolute","icd11":"subclinical","dx":"unclear","quote":"covariance matrix was calculated after merging EO with EC"}
+{"id":"pm-37657750","eyes":"unclear","power":"unclear","icd11":"6A20","dx":"unclear"}
+{"id":"pm-37918574","eyes":"closed","power":"absolute","icd11":"6A7","dx":"unclear","quote":"under eyes-closed conditions"}
+{"id":"pm-39796211","eyes":"closed","power":"unclear","icd11":"6D71","dx":"unclear","quote":"resting-state eyes-closed electroencephalographic"}
+{"id":"pm-40976159","eyes":"closed","power":"relative","icd11":"6A70","dx":"unclear","quote":"recorded for 10 min with eyes closed"}
+{"id":"pm-41619714","eyes":"unclear","power":"unclear","icd11":"6D80","dx":"unclear"}
+{"id":"pm-42215811","eyes":"closed","power":"absolute","icd11":"8A6","dx":"scale cut-off","quote":"eyes-closed resting-state EEG"}
+{"id":"pm-8272452","eyes":"unclear","power":"unclear","icd11":"6D80","dx":"DSM-III"}
+{"id":"pm-12426037","eyes":"unclear","power":"unclear","icd11":"6A7","dx":"unclear"}
+{"id":"pm-39248267","eyes":"open","power":"absolute","icd11":"6A7","dx":"ICD-10","quote":"only the eyes-open condition of the resting-state EEG recordings was included"}

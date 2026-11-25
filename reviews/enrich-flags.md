@@ -11,3 +11,4 @@ with `tools/revert-finding.js` plus a corrected `include` through `tools/apply-r
 - ins-hoedlmoser-2008: condition is insomnia, but the paper (Sleep 2008, PMID 18853937) studied 27 healthy subjects, not patients; coded icd11 "subclinical". Check the condition and whether the entry should stay.
 - ins-zhao-2021: the meta-analysis pools wakefulness and sleep-stage EEG (REM, NREM); CLAUDE.md excludes sleep EEG biomarkers, so the sleep-stage results may need removing (resting wake data only).
 - pm-38969018: sample is older people with subjective memory complaints, not diagnosed AD or MCI; coded icd11 subclinical. Check whether the alzheimers condition fits.
+- pm-39248267: Methods say the resting EEG was eyes-closed, but the limitations say only the eyes-open condition was analysed; check the eyes-state wording in the entry detail (coded open here).
