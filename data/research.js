@@ -1549,7 +1549,7 @@ window.NF_DATA = {
       cite: { authors: "Lin CE, et al.", year: 2026, title: "Parietal alpha asymmetry as a diagnostic marker for depression and a predictive biomarker for anhedonia improvement after melatonergic antidepressant treatment", journal: "J Affect Disord" }
     },
     {
-      id: "pm-8810860", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-8810860", rec: { eyes: "closed", power: "absolute", icd11: "6A7", dx: "DSM-III" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 65, k: null },
       sites: ["F3","F4"], bands: ["hibeta"], direction: "up", evidence: "preliminary",
       changes: { hibeta: "up" }, symptoms: ["lowmood"],
@@ -1559,7 +1559,7 @@ window.NF_DATA = {
       cite: { authors: "Suzuki H, et al.", year: 1996, title: "[Quantitative EEG characteristics of the state of depressive phase and the state of remission in major depression]", journal: "Seishin Shinkeigaku Zasshi" }
     },
     {
-      id: "cand-adhd-theta-cog-2005", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "cand-adhd-theta-cog-2005", rec: { eyes: "unclear", power: "unclear", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Fp1","F7","F3"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["inattention"],
@@ -1569,7 +1569,7 @@ window.NF_DATA = {
       cite: { authors: "Hermens DF, et al.", year: 2005, title: "Resting EEG theta activity predicts cognitive performance in attention-deficit hyperactivity disorder", journal: "Pediatr Neurol" }
     },
     {
-      id: "pm-12374635", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "pm-12374635", rec: { eyes: "closed", power: "both", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4","T5","T6","O1","O2"], bands: ["theta","alpha","delta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", alpha: "down", delta: "up", beta: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1579,7 +1579,7 @@ window.NF_DATA = {
       cite: { authors: "Clarke AR, et al.", year: 2002, title: "Children with attention-deficit/hyperactivity disorder and comorbid oppositional defiant disorder: an EEG analysis", journal: "Psychiatry Res" }
     },
     {
-      id: "cand-adhd-wang-2024", source: "full-text", condition: "adhd", type: "biomarker",
+      id: "cand-adhd-wang-2024", rec: { eyes: "closed", power: "relative", icd11: "6A05", dx: "DSM-5" }, source: "full-text", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 100, k: null },
       sites: ["F7","F3","Fz","F4","F8","Cz"], bands: ["theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", beta: "down" }, symptoms: ["inattention"],
@@ -1589,7 +1589,7 @@ window.NF_DATA = {
       cite: { authors: "Wang TS, Wang SS, Wang CL, Wong SB", year: 2024, title: "Theta/beta ratio in EEG correlated with attentional capacity assessed by Conners Continuous Performance Test in children with ADHD", journal: "Frontiers in Psychiatry" }
     },
     {
-      id: "cand-adhd-takacs-2023", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "cand-adhd-takacs-2023", rec: { eyes: "unclear", power: "unclear", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 132, k: null },
       sites: ["Fz"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["inattention"],
@@ -1599,7 +1599,7 @@ window.NF_DATA = {
       cite: { authors: "Takács M, et al. (verify)", year: 2023, title: "Theta and alpha activity are differentially associated with physiological and rating scale measures of affective processing in adolescents with but not without ADHD", journal: "Development and Psychopathology" }
     },
     {
-      id: "pm-15978508", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "pm-15978508", rec: { eyes: "closed", power: "unclear", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1609,7 +1609,7 @@ window.NF_DATA = {
       cite: { authors: "Hermens DF, et al.", year: 2005, title: "Sex differences in adolescent ADHD: findings from concurrent EEG and EDA", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-17166762", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "pm-17166762", rec: { eyes: "closed", power: "both", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 30, k: null },
       sites: [], bands: ["theta","delta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", delta: "up", alpha: "mixed", beta: "mixed" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1629,7 +1629,7 @@ window.NF_DATA = {
       cite: { authors: "Clarke AR, et al.", year: 2008, title: "EEG in adults with attention-deficit/hyperactivity disorder", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-18813700", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "pm-18813700", rec: { eyes: "closed", power: "both", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down", beta: "mixed" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1639,7 +1639,7 @@ window.NF_DATA = {
       cite: { authors: "Fonseca LC, et al.", year: 2008, title: "Epileptiform abnormalities and quantitative EEG in children with attention-deficit/hyperactivity disorder", journal: "Arq Neuropsiquiatr" }
     },
     {
-      id: "pm-19712709", source: "abstract", condition: "adhd", type: "protocol",
+      id: "pm-19712709", rec: { eyes: "unclear", power: "n/a", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "protocol",
       metrics: { design: 4, control: "active", blinded: null, n: 72, k: null },
       sites: ["Pz","Cz"], bands: ["theta","alpha"], direction: "ratio", evidence: "moderate",
       changes: { theta: "down", alpha: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1649,7 +1649,7 @@ window.NF_DATA = {
       cite: { authors: "Gevensleben H, et al.", year: 2009, title: "Distinct EEG effects related to neurofeedback training in children with ADHD: a randomized controlled trial", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-21309436", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "pm-21309436", rec: { eyes: "closed", power: "both", icd11: "6A05", dx: "DSM-IV" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 90, k: null },
       sites: [], bands: ["delta","theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "mixed", theta: "up", beta: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
