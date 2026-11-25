@@ -45,3 +45,5 @@ with `tools/revert-finding.js` plus a corrected `include` through `tools/apply-r
 - Batch 30: pm-41534360, pm-40101271, pm-33780847 and pm-40079512 are full-text entries coded from the abstracts only; eye state and power measure are unclear in the abstracts and may be stated in the full texts. Check these four.
 - pm-32815287: the measure is EEG coherence (connectivity), not spectral power; power coded unclear. Check the power field for connectivity entries.
 - pm-41776190 and pm-41917996: full-text entries coded from abstracts; the entry covers several diagnoses (schizophrenia, bipolar, depression) in pm-41776190, so only the 6A20 code fits the entry condition. Check.
+- pm-28454845: sample also includes 42 ADD patients; icd11 coded 6D82+8A00 for the Lewy groups the entry is about, ADD not coded
+- pm-22775582: sample is cyclothymia (n=16) plus bipolar II (n=42); cyclothymia has no code in the allowed list, so icd11 is 6A6
