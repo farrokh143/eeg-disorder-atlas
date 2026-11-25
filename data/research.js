@@ -3352,7 +3352,7 @@ window.NF_DATA = {
       cite: { authors: "Liu W, Wei C, Lan Y, et al.", year: 2026, title: "Lesion-specific EEG signatures in stroke: a multi-scale framework integrating oscillations, connectivity, and asymmetry for machine learning decoding", journal: "J Neuroeng Rehabil" }
     },
     {
-      id: "pm-37245318", source: "abstract", condition: "ocd", type: "biomarker",
+      id: "pm-37245318", rec: { eyes: "closed", power: "unclear", icd11: "6B20", dx: "unclear" }, source: "abstract", condition: "ocd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 52, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","T3","T4","T5","T6","P3","Pz","P4"], bands: ["delta","theta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up" }, symptoms: ["compulsions"],
@@ -3362,7 +3362,7 @@ window.NF_DATA = {
       cite: { authors: "Perera MPN, et al.", year: 2023, title: "Obsessive-compulsive disorder (OCD) is associated with increased electroencephalographic (EEG) delta and theta oscillatory power but reduced delta connectivity", journal: "J Psychiatr Res" }
     },
     {
-      id: "pm-32321573", source: "full-text", condition: "lewy", type: "biomarker",
+      id: "pm-32321573", rec: { eyes: "both", power: "relative", icd11: "6D82+8A00", dx: "research criteria" }, source: "full-text", condition: "lewy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 102, k: null },
       sites: ["O1","O2"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["cogdecline"],
@@ -3372,7 +3372,7 @@ window.NF_DATA = {
       cite: { authors: "Schumacher J, et al.", year: 2020, title: "EEG alpha reactivity and cholinergic system integrity in Lewy body dementia and Alzheimer's disease", journal: "Alzheimers Res Ther" }
     },
     {
-      id: "pm-19683062", source: "abstract", condition: "ocd", type: "biomarker",
+      id: "pm-19683062", rec: { eyes: "unclear", power: "unclear", icd11: "6B20", dx: "unclear" }, source: "abstract", condition: "ocd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 74, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4"], bands: ["beta"], direction: "up", evidence: "preliminary",
       changes: { beta: "up" }, symptoms: ["compulsions"],
@@ -3382,7 +3382,7 @@ window.NF_DATA = {
       cite: { authors: "Velikova S, et al.", year: 2010, title: "Dysfunctional brain circuitry in obsessive-compulsive disorder: source and coherence analysis of EEG rhythms", journal: "Neuroimage" }
     },
     {
-      id: "pm-21354363", source: "abstract", condition: "ocd", type: "biomarker",
+      id: "pm-21354363", rec: { eyes: "unclear", power: "unclear", icd11: "6B20", dx: "unclear" }, source: "abstract", condition: "ocd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 100, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["delta","theta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up" }, symptoms: ["compulsions"],
@@ -3392,7 +3392,7 @@ window.NF_DATA = {
       cite: { authors: "Kopřivová J, et al.", year: 2011, title: "EEG source analysis in obsessive-compulsive disorder", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-22375965", source: "full-text", condition: "bipolar", type: "biomarker",
+      id: "pm-22375965", rec: { eyes: "closed", power: "relative", icd11: "6A60", dx: "DSM-IV" }, source: "full-text", condition: "bipolar", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 21, k: null },
       sites: ["F3","F4","C3","C4"], bands: ["theta","beta","hibeta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "down", beta: "up", hibeta: "up" }, symptoms: ["inattention"],
@@ -3402,7 +3402,7 @@ window.NF_DATA = {
       cite: { authors: "Howells FM, Ives-Deliperi VL, Horn NR, Stein DJ", year: 2012, title: "Mindfulness based cognitive therapy improves frontal control in bipolar disorder: a pilot EEG study", journal: "BMC Psychiatry" }
     },
     {
-      id: "pm-22775582", source: "full-text", condition: "bipolar", type: "biomarker",
+      id: "pm-22775582", rec: { eyes: "both", power: "absolute", icd11: "6A6", dx: "DSM-IV" }, source: "full-text", condition: "bipolar", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: 117, k: null },
       sites: ["F3","F4","F7","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "moderate",
       changes: { alpha: "asymmetry" }, symptoms: ["mania"],
@@ -3412,7 +3412,7 @@ window.NF_DATA = {
       cite: { authors: "Nusslock R, Harmon-Jones E, Alloy LB, Urosevic S, Goldstein K, Abramson LY", year: 2012, title: "Elevated left mid-frontal cortical activity prospectively predicts conversion to bipolar I disorder", journal: "J Abnorm Psychol" }
     },
     {
-      id: "pm-11333067", source: "abstract", condition: "bipolar", type: "biomarker",
+      id: "pm-11333067", rec: { eyes: "unclear", power: "unclear", icd11: "6A6", dx: "unclear" }, source: "abstract", condition: "bipolar", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 55, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "up", beta: "up" }, symptoms: ["mania","lowmood"],
@@ -3422,7 +3422,7 @@ window.NF_DATA = {
       cite: { authors: "El-Badri SM, et al.", year: 2001, title: "Electrophysiological and cognitive function in young euthymic patients with bipolar affective disorder", journal: "Bipolar Disord" }
     },
     {
-      id: "pm-28454845", source: "abstract", condition: "lewy", type: "biomarker",
+      id: "pm-28454845", rec: { eyes: "closed", power: "unclear", icd11: "6D82+8A00", dx: "unclear" }, source: "abstract", condition: "lewy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 158, k: null },
       sites: ["P3","Pz","P4","T5","T6","O1","O2"], bands: ["alpha","delta"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "down", delta: "up" }, symptoms: ["cogdecline"],
@@ -3432,7 +3432,7 @@ window.NF_DATA = {
       cite: { authors: "Babiloni C, et al.", year: 2017, title: "Abnormalities of cortical neural synchronization mechanisms in patients with dementia due to Alzheimer's and Lewy body diseases: an EEG study", journal: "Neurobiol Aging" }
     },
     {
-      id: "pm-33039748", source: "abstract", condition: "lewy", type: "biomarker",
+      id: "pm-33039748", rec: { eyes: "unclear", power: "unclear", icd11: "6D82", dx: "unclear" }, source: "abstract", condition: "lewy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 180, k: null },
       sites: [], bands: ["delta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", alpha: "down" }, symptoms: ["cogdecline"],
@@ -3442,7 +3442,7 @@ window.NF_DATA = {
       cite: { authors: "Pascarelli MT, et al.", year: 2020, title: "Abnormalities of resting-state EEG in patients with prodromal and overt dementia with Lewy bodies: Relation to clinical symptoms", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-38138258", source: "full-text", condition: "ftd", type: "biomarker",
+      id: "pm-38138258", rec: { eyes: "closed", power: "ratio-only", icd11: "6D83", dx: "mixed" }, source: "full-text", condition: "ftd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 52, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","T3","T4","T5","T6"], bands: ["theta","alpha","beta","gamma"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", alpha: "down", beta: "down", gamma: "up" }, symptoms: ["cogdecline"],
