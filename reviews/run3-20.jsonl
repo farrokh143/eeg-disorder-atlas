@@ -1,0 +1,8 @@
+{"id":"pm-26545819","decision":"defer","note":"[retry] abstract: theta/beta and theta/alpha ratios higher and frontal ICA-component slowing in learning disabilities vs controls. Included data would need a learning symptom id (none in the atlas list); owner to decide"}
+{"id":"pm-38751127","decision":"exclude","code":"NR","note":"school-based cognitive behavioural intervention; ratio change pre vs post is a treatment effect, no control group"}
+{"id":"pm-35575241","decision":"exclude","code":"X","reason":"Unsupervised clustering of dyslexic children's z-scores; no control group comparison; training effect"}
+{"id":"pm-9105947","decision":"exclude","code":"CN","note":"EEG coherence follow-up in reading-disabled children; coherence only"}
+{"id":"pm-6165544","decision":"exclude","code":"T","note":"alpha topography during speech and music listening (task); method paper"}
+{"id":"pm-16917604","decision":"defer","note":"[retry] abstract: absolute delta and theta up, relative theta up and relative alpha-2 down over most electrodes in learning disabilities vs controls. Included data would need a learning symptom id (none in the atlas list); owner to decide"}
+{"id":"pm-28708890","decision":"exclude","code":"X","reason":"Within-group comparison of learning-disorder subgroups defined by reading and writing performance, a symptom the atlas does not track; no control group"}
+{"id":"pm-27476025","decision":"exclude","code":"CN","note":"minimum spanning tree and phase-lag-index connectivity in dyslexia; graph and connectivity only"}
