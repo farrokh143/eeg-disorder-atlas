@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>restmap · resting EEG patterns, mapped to disorders</title>
-<meta name="description" content="Pick an EEG band and a scalp area; see which disorders it has been reported in and how sure the research is.">
+<title>Neurofeedback Atlas · resting EEG patterns and neurofeedback evidence</title>
+<meta name="description" content="Assess a resting EEG against the research, then see which neurofeedback protocols have been studied and how strong the evidence is.">
 <meta name="theme-color" content="#000000">
 <link rel="icon" type="image/svg+xml" href="assets/mark.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap">
 <style>
-/* restmap: black ground, one violet accent, pill controls. Data in IBM Plex Mono. */
+/* Neurofeedback Atlas: black ground, one violet accent, pill controls. Data in IBM Plex Mono. */
 :root {
   --bg: #000000; --surface: #111114; --raise: #18181d; --ink: #f5f5f7; --muted: #a4a4ae; --faint: #6f6f78; --line: #2b2b31;
   --accent: #6a5bff; --accent-ink: #ffffff; --link: #a79fff; --accent-soft: #1c1840;
@@ -34,16 +34,14 @@ h1, h2, h3 { margin: 0; font-weight: 500; letter-spacing: -0.02em; text-wrap: ba
 /* top bar */
 .top { position: sticky; top: 0; z-index: 20; background: rgba(0,0,0,.86); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
 .top .wrap { display: flex; align-items: center; gap: 16px 28px; min-height: 64px; flex-wrap: wrap; padding-block: 8px; }
-.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 600; font-size: 21px; letter-spacing: -0.03em; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 600; font-size: 21px; letter-spacing: -0.03em; white-space: nowrap; }
+@media (max-width: 420px) { .brand { font-size: 18px; } .pv { display: none; } }
 .brand svg { flex: none; }
 .pv { font: 600 10.5px/1 var(--f-mono); letter-spacing: .06em; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 5px 9px; }
 .nav { display: flex; gap: 24px; margin-left: auto; font-weight: 500; font-size: 15px; }
 .nav a { color: var(--muted); text-decoration: none; padding: 10px 0; }
 .nav a:hover, .nav a[aria-current] { color: var(--ink); }
-.search { flex: 0 1 260px; }
-.search input { width: 100%; min-height: 44px; padding: 0 18px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font-size: 16px; }
-.search input::placeholder { color: var(--faint); }
-@media (max-width: 760px) { .nav { display: none; } .search { flex: 1 1 100%; order: 3; } }
+@media (max-width: 760px) { .nav { display: none; } }
 
 /* hero */
 .hero { text-align: center; padding: 72px 0 0; display: flex; flex-direction: column; align-items: center; gap: 20px; }
@@ -158,7 +156,7 @@ svg.head { width: 100%; height: auto; display: block; }
 .legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font: 500 12px/1 var(--f-mono); color: var(--muted); }
 .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
 
-/* study list (search + detail) */
+/* study list (detail sheet) */
 .study { display: grid; gap: 6px; padding: 14px 0; border-bottom: 1px solid var(--line); }
 .study:last-child { border-bottom: 0; }
 .study .c { font-weight: 500; font-size: 15.5px; line-height: 1.4; }
@@ -214,7 +212,7 @@ html.locked .app { display: none; }
 
 <div class="gate" role="dialog" aria-labelledby="gateTitle">
   <form id="gateForm" autocomplete="off">
-    <span class="brand" id="gateTitle"><svg width="34" height="34" aria-hidden="true"><use href="#mark"/></svg>restmap</span>
+    <span class="brand" id="gateTitle"><svg width="34" height="34" aria-hidden="true"><use href="#mark"/></svg>Neurofeedback Atlas</span>
     <p>Preview for invited testers. Enter the password you were given.</p>
     <label class="sr" for="gatePw">Password</label>
     <input id="gatePw" type="password" placeholder="Password" autocomplete="current-password" required>
@@ -226,10 +224,9 @@ html.locked .app { display: none; }
 <div class="app">
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="./"><svg width="30" height="30" aria-hidden="true"><use href="#mark"/></svg>restmap</a>
+    <a class="brand" href="./"><svg width="30" height="30" aria-hidden="true"><use href="#mark"/></svg>Neurofeedback Atlas</a>
     <span class="pv">PREVIEW</span>
     <nav class="nav" aria-label="Site"><a href="./" aria-current="page">Atlas</a><a href="methods.html">Method</a><a href="https://github.com/farrokh143/eeg-disorder-atlas/issues/new/choose">Suggest a study</a></nav>
-    <label class="search"><span class="sr">Search studies</span><input id="q" type="search" placeholder="Search studies, authors" autocomplete="off"></label>
   </div>
 </header>
 
@@ -352,7 +349,7 @@ html.locked .app { display: none; }
   })();
   // step: assess | treat. from: eeg (start from what the EEG shows) | dx (start from the diagnosis).
   const DEF = { step: "assess", from: "eeg", band: "theta", dir: "up", sites: REGIONS.frontal.join(","), near: "1", cond: "", conn: "0" };
-  const state = Object.assign({}, DEF, { q: "", open: null });
+  const state = Object.assign({}, DEF);
   try {
     const h = new URLSearchParams(location.hash.slice(1));
     Object.keys(DEF).forEach(k => { if (h.has(k)) state[k] = h.get(k); });
@@ -445,7 +442,6 @@ html.locked .app { display: none; }
     const sel = selSites(), grp = GROUPS[b.dataset.v], all = grp.every(x => sel.has(x));
     grp.forEach(x => all ? sel.delete(x) : sel.add(x)); setSites(sel); update();
   });
-  let qt; $("q").addEventListener("input", e => { clearTimeout(qt); qt = setTimeout(() => { state.q = e.target.value.trim(); render(); }, 120); });
 
   // ---------- map (the original 10-20 head: nose, ears, A1/A2 references, single-electrode picking) ----------
   const svgNS = "http://www.w3.org/2000/svg";
@@ -639,7 +635,6 @@ html.locked .app { display: none; }
   let ROWS = [], LIMIT = 12;
   function render() {
     derive(); syncControls();
-    if (state.q) return renderSearch();
     const needCond = state.step === "assess" && state.from === "dx" && !F.cond;
     ROWS = needCond ? [] : F.layer === "nf" ? rowsNF() : rowsSynth();
     $("rTitle").textContent = cap(title());
@@ -698,15 +693,7 @@ html.locked .app { display: none; }
       <span class="tags">${tags.join("")}</span>
       <details><summary>Details</summary><p style="margin:8px 0">${esc(f.detail)}</p><em>${esc(c.title)}</em> <a href="${pubLink(f)}" target="_blank" rel="noopener">PubMed ↗</a></details></div>`;
   }
-  function renderSearch() {
-    const q = state.q.toLowerCase();
-    const hits = ALLF.filter(f => [f.claim, f.detail, f.cite && f.cite.authors, f.cite && f.cite.title, COND[f.condition] && COND[f.condition].name].join(" ").toLowerCase().includes(q));
-    $("rTitle").textContent = `“${state.q}”`;
-    $("rCount").textContent = `${hits.length} ${hits.length === 1 ? "study" : "studies"}`;
-    $("list").innerHTML = hits.length ? hits.slice(0, 60).map(f => studyHtml(f, null, f.source === "abstract")).join("") + (hits.length > 60 ? `<p class="note" style="padding:12px 0">First 60 shown. Narrow the search.</p>` : "")
-      : `<div class="empty">No studies match.</div>`;
-    $("legend").innerHTML = ""; paintHead([]);
-  }
+
 
   // ---------- detail sheet ----------
   let lastFocus = null;
