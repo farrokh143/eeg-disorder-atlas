@@ -3557,6 +3557,36 @@ window.NF_DATA = {
       detail: "35 stroke patients with depressed mood, 24 without, and 35 age-matched healthy controls; 16-electrode resting EEG, spectral power. Delta, theta and beta2 (coded as hibeta, 20-30 Hz) were higher in the depressed group, particularly in temporal regions. The abstract does not spell out each comparison, so the comparator for the increases is stated only as the three-group design. Taken from the abstract; not checked in the full text. Case-control design with small groups.",
       design: "Case-control",
       cite: { authors: "Wang C, Chen Y, Sun C, Zhang Y, Ming D, Du J", year: 2018, title: "Electrophysiological changes in poststroke subjects with depressed mood: A quantitative EEG study", journal: "Int J Geriatr Psychiatry" }
+    },
+    {
+      id: "pm-33248434", source: "abstract", condition: "stroke", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 39, k: null },
+      sites: [], bands: ["theta"], direction: "asymmetry", evidence: "preliminary",
+      changes: { theta: "asymmetry" }, symptoms: ["motor"],
+      claim: "Stroke (within stroke): more theta power asymmetry early on predicts worse arm motor function at 6 months",
+      detail: "39 adults within three weeks of a first ischaemic hemispheric stroke, 62-channel resting EEG; Fugl-Meyer upper-extremity score at 26 weeks. Theta brain symmetry index (more power asymmetry between hemispheres) was the strongest EEG predictor of more upper-limb impairment, and it added prognostic value beyond baseline Fugl-Meyer. Electrodes are not named in the abstract, so sites are whole-head. Taken from the abstract; not checked in the full text. Prospective observational study without a healthy control group.",
+      design: "Prospective observational (within stroke)",
+      cite: { authors: "Saes M, Meskers CGM, Daffertshofer A, van Wegen EEH, Kwakkel G, 4D-EEG consortium", year: 2021, title: "Are early measured resting-state EEG parameters predictive for upper limb motor impairment six months poststroke?", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-31707947", source: "abstract", condition: "stroke", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 16, k: null },
+      sites: ["Fp1"], bands: ["theta"], direction: "down", evidence: "preliminary",
+      changes: { theta: "down" }, symptoms: ["motor"],
+      claim: "Stroke (within stroke): lower acute frontal (Fp1) theta goes with worse function at 30 and 90 days",
+      detail: "16 adults with a first stroke; resting EEG from a single left prefrontal channel (Fp1) within 72 hours, function at 30 and 90 days by modified Rankin and Barthel scales (daily activities, so coded to the motor symptom). Higher acute theta was associated with better outcome (correlations 0.45-0.60), so the direction coded is lower theta with greater impairment. Taken from the abstract; not checked in the full text. Small observational correlation study without a healthy control group.",
+      design: "Observational correlation (within stroke)",
+      cite: { authors: "Rogers J, Middleton S, Wilson PH, Johnstone SJ", year: 2020, title: "Predicting functional outcomes after stroke: an observational study of acute single-channel EEG", journal: "Top Stroke Rehabil" }
+    },
+    {
+      id: "pm-30902439", source: "abstract", condition: "stroke", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 32, k: null },
+      sites: [], bands: ["delta","theta"], direction: "asymmetry", evidence: "preliminary",
+      changes: { delta: "asymmetry", theta: "asymmetry" }, symptoms: ["motor"],
+      claim: "Chronic stroke: higher delta and theta power asymmetry than controls; asymmetry tracks arm motor loss",
+      detail: "21 chronic stroke survivors with upper-limb paresis and 11 matched controls; high-density resting EEG. Brain symmetry index was higher in patients, most in delta and theta, and was negatively associated with Fugl-Meyer upper-extremity scores in those bands. Electrodes are not named in the abstract, so sites are whole-head. Taken from the abstract; not checked in the full text. Small case-control study.",
+      design: "Case-control",
+      cite: { authors: "Saes M, Meskers CGM, Daffertshofer A, de Munck JC, Kwakkel G, van Wegen EEH, 4D-EEG consortium", year: 2019, title: "How does upper extremity Fugl-Meyer motor score relate to resting-state EEG in chronic stroke? A power spectral density analysis", journal: "Clin Neurophysiol" }
     }
   ],
 
