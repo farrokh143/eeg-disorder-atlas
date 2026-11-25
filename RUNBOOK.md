@@ -309,9 +309,9 @@ Same stopping rule, branches, merging and sync as Part 1. Batches of 10. Decisio
 - **icd11**: the group the patients actually belong to, from the allowed list. Alzheimer's: `6D80` dementia due to
   Alzheimer disease, `6D71` MCI / mild neurocognitive disorder, `6D80+6D71` when the finding pools both. Anxiety:
   `6B00` GAD, `6B01` panic, `6B04` social anxiety, `6B02`/`6B03` phobias, `6B0` mixed or unspecified. Substance use:
-  `6C40` alcohol, `6C41` cannabis, `6C43` opioids, `6C45` cocaine, `6C46` other stimulants, `6C4A` nicotine, `6C4`
+  `6C40` alcohol, `6C41` cannabis, `6C43` opioids, `6C44` sedatives/hypnotics, `6C45` cocaine, `6C46` other stimulants, `6C4A` nicotine, `6C4`
   mixed. Depression in bipolar disorder: `6A60-6A61`. Use `subclinical` when participants were not diagnosed (high
-  scorers on a scale, students, community volunteers).
+  scorers on a scale, students, community volunteers), and `unclear` when the group cannot be told from what you can read.
 - **dx**: `DSM-III`, `DSM-IV` (incl. IV-TR), `DSM-5` (incl. 5-TR), `ICD-10`, `ICD-11`, `research criteria` (e.g.
   NIA-AA, Petersen MCI, UK Brain Bank, ILAE, ICHD), `clinical diagnosis` (diagnosed by a clinician, criteria not
   named), `scale cut-off`, `mixed` (reviews pooling studies), `unclear`.
