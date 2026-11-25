@@ -77,7 +77,10 @@ window.NF_DATA = {
     { id: "postconcussion", name: "Post-concussion symptoms" },
     { id: "motor", name: "Motor symptoms (tremor, stiffness)" },
     { id: "mania", name: "Mania / hypomania" },
-    { id: "compulsions", name: "Obsessions and compulsions" }
+    { id: "compulsions", name: "Obsessions and compulsions" },
+    { id: "reading", name: "Reading and learning difficulty" },
+    { id: "vertigo", name: "Dizziness / vertigo" },
+    { id: "delirium", name: "Delirium (acute confusion)" }
   ],
 
   findings: [
