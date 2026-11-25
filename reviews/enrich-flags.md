@@ -22,3 +22,5 @@ with `tools/revert-finding.js` plus a corrected `include` through `tools/apply-r
 - pm-24439302: the paper reports 1091 participants (225 SZ, 234 PBP, 201 SZR, 231 PBPR, 200 HC), but the entry n is 425 (not changed). The 425 may be the probands plus controls subset; check the entry n.
 - pm-24439302: the power measure is ICA spatial weights (dimensionless), so power is coded unclear. Check the power field.
 - pm-29643331: the study also has a task condition (visual continuous performance task); only the resting eyes-open and eyes-closed results are used here.
+- pm-40792462: the paper is built on an ASSR (task) paradigm and resting power; only the resting results are relevant. Eyes and power are coded unclear from the abstract, and no full text was checked.
+- pm-39799666: the sample includes an ASD group as well as schizophrenia and controls; the power measure is log alpha power with a log difference score (asymmetry), coded absolute. Check the power field.

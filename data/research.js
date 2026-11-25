@@ -2189,7 +2189,7 @@ window.NF_DATA = {
       cite: { authors: "Racz FS, et al.", year: 2021, title: "Separating scale-free and oscillatory components of neural activity in schizophrenia", journal: "Brain Behav" }
     },
     {
-      id: "pm-3495249", source: "abstract", condition: "schizophrenia", type: "biomarker",
+      id: "pm-3495249", rec: { eyes: "unclear", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 28, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "mixed", alpha: "mixed", beta: "mixed" }, symptoms: ["psychosis"],
@@ -2199,7 +2199,7 @@ window.NF_DATA = {
       cite: { authors: "Karson CN, et al.", year: 1987, title: "Computed electroencephalographic activity mapping in schizophrenia. The resting state reconsidered", journal: "Arch Gen Psychiatry" }
     },
     {
-      id: "pm-3751669", source: "abstract", condition: "schizophrenia", type: "biomarker",
+      id: "pm-3751669", rec: { eyes: "unclear", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["psychosis"],
@@ -2209,7 +2209,7 @@ window.NF_DATA = {
       cite: { authors: "Müller HF, et al.", year: 1986, title: "Topography and possible physiological significance of EEG amplitude variability in psychosis", journal: "Acta Psychiatr Scand" }
     },
     {
-      id: "pm-38217348", source: "abstract", condition: "schizophrenia", type: "biomarker",
+      id: "pm-38217348", rec: { eyes: "unclear", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 75, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta","alpha"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", alpha: "up" }, symptoms: ["psychosis"],
@@ -2219,7 +2219,7 @@ window.NF_DATA = {
       cite: { authors: "Nakhnikian A, et al.", year: 2024, title: "Spectral decomposition of resting state electroencephalogram reveals unique theta/alpha activity in schizophrenia", journal: "Eur J Neurosci" }
     },
     {
-      id: "pm-39799666", source: "full-text", condition: "schizophrenia", type: "biomarker",
+      id: "pm-39799666", rec: { eyes: "open", power: "absolute", icd11: "6A20", dx: "DSM-IV" }, source: "full-text", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 101, k: null },
       sites: ["F3","F4"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["social"],
@@ -2229,7 +2229,7 @@ window.NF_DATA = {
       cite: { authors: "Farina EA, et al.", year: 2025, title: "Social functioning and frontal alpha asymmetry in schizophrenia", journal: "J Psychiatr Res" }
     },
     {
-      id: "pm-40550812", source: "full-text", condition: "schizophrenia", type: "biomarker",
+      id: "pm-40550812", rec: { eyes: "both", power: "relative", icd11: "6A20", dx: "DSM-5" }, source: "full-text", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 116, k: null },
       sites: ["T3","T4","T5","T6","O1","O2"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["psychosis"],
@@ -2239,7 +2239,7 @@ window.NF_DATA = {
       cite: { authors: "Han C, et al.", year: 2025, title: "Distinct oscillatory mechanisms in low and high alpha-band activities for screening and potential treatment of Schizophrenia", journal: "Transl Psychiatry" }
     },
     {
-      id: "pm-40792462", source: "abstract", condition: "schizophrenia", type: "biomarker",
+      id: "pm-40792462", rec: { eyes: "unclear", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 134, k: null },
       sites: [], bands: ["theta","alpha"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", alpha: "up" }, symptoms: ["psychosis"],
@@ -2249,7 +2249,7 @@ window.NF_DATA = {
       cite: { authors: "Mitoma R, et al.", year: 2025, title: "Abnormal spontaneous activity and rest-task shift in schizophrenia", journal: "Psychiatry Clin Neurosci" }
     },
     {
-      id: "pm-41045101", source: "abstract", condition: "schizophrenia", type: "biomarker",
+      id: "pm-41045101", rec: { eyes: "unclear", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 249, k: null },
       sites: [], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["psychosis","memory"],
@@ -2259,7 +2259,7 @@ window.NF_DATA = {
       cite: { authors: "Hasanaj G, et al.", year: 2025, title: "Periodic and Aperiodic Alterations of Resting-State EEG in Schizophrenia Spectrum Disorders: Cognitive and Clinical Insights", journal: "Eur J Neurosci" }
     },
     {
-      id: "pm-42759803", source: "abstract", condition: "schizophrenia", type: "biomarker",
+      id: "pm-42759803", rec: { eyes: "open", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 18, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","C3","Cz","C4","T3","T4","T5","T6"], bands: ["delta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up" }, symptoms: ["psychosis"],
@@ -2269,7 +2269,7 @@ window.NF_DATA = {
       cite: { authors: "Vahid-Vahdat P, et al.", year: 2026, title: "Frequency-specific QEEG spectral power correlates of positive and negative symptom severity in recent-onset schizophrenia", journal: "Neuroscience" }
     },
     {
-      id: "pm-474178", source: "abstract", condition: "schizophrenia", type: "biomarker",
+      id: "pm-474178", rec: { eyes: "closed", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["P3","O1"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["psychosis"],
@@ -2279,7 +2279,7 @@ window.NF_DATA = {
       cite: { authors: "Etevenon P, et al.", year: 1979, title: "Intra- and interhemispheric EEG differences quantified by spectral analysis. Comparative study of two groups of schizophrenics and a control group", journal: "Acta Psychiatr Scand" }
     },
     {
-      id: "pm-7388249", source: "abstract", condition: "schizophrenia", type: "biomarker",
+      id: "pm-7388249", rec: { eyes: "both", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["T3","T4","T5","T6"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["psychosis"],
