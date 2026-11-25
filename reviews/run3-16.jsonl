@@ -1,0 +1,8 @@
+{"id":"pm-41663425","decision":"defer","note":"[parked: non-atlas condition fragile X] human resting alpha in FXS plus Fmr1 mouse data"}
+{"id":"pm-36473166","decision":"exclude","code":"MOD","note":"serotonin agonist effects on EEG in Fmr1 knockout mice; animal model paper"}
+{"id":"pm-2439292","decision":"exclude","code":"CN","note":"EEG coherence in mildly intellectually disabled children; coherence only, no band-power result"}
+{"id":"pm-30616629","decision":"defer","note":"[parked: non-atlas condition IMPA1 mutation (genetic intellectual disability)] family-based genotype association of resting frontal theta power"}
+{"id":"pm-30877793","decision":"defer","note":"[parked: non-atlas condition Down syndrome] resting theta-alpha power and cognition in adults with Down syndrome"}
+{"id":"pm-459161","decision":"exclude","code":"NONBAND","note":"coefficient of variation of power across children; variability is not a band-power difference with direction"}
+{"id":"pm-1378376","decision":"exclude","code":"CN","note":"EEG coherence in Down syndrome; coherence only"}
+{"id":"pm-21484947","decision":"defer","note":"[parked: non-atlas condition Down syndrome] LORETA source power and cognition in adults with Down syndrome"}
