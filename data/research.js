@@ -3447,6 +3447,16 @@ window.NF_DATA = {
       detail: "23 patients with FTD and 29 healthy controls (open OpenNeuro dataset), eyes-closed resting EEG, FFT band power. Frontal alpha and temporal alpha were lower in FTD. Ratios were higher for frontal theta/temporal alpha and frontal theta/frontal alpha, and lower for frontal alpha/temporal theta and temporal beta/temporal gamma; by the ratio rule, theta is coded up, alpha down, beta down and gamma up, with sites pooled across frontal and temporal regions. Single case-control study with a diagnostic focus; the paper's band edges (gamma 30-45 Hz) differ from the atlas bands.",
       design: "Case-control",
       cite: { authors: "Chang J, et al.", year: 2023, title: "Quantitative Electroencephalography Markers for an Accurate Diagnosis of Frontotemporal Dementia: A Spectral Power Ratio Approach", journal: "Medicina (Kaunas)" }
+    },
+    {
+      id: "pm-28772244", source: "abstract", condition: "ms", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 25, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", beta: "down" }, symptoms: ["inattention"],
+      claim: "MS: higher frontal theta/beta ratio with clinically impaired attention (within MS, exploratory)",
+      detail: "25 people with MS, no healthy control group, resting EEG; attention measured with the Test of Attention Performance. In an exploratory within-patient analysis, impaired attention was linked to a higher frontal theta/beta ratio, coded as theta up and beta down over frontal sites. Global alpha was linked to processing speed (SDMT), which has no symptom id, so it is not coded. Taken from the abstract; not checked in the full text. Cross-sectional correlation.",
+      design: "Cross-sectional correlation (within MS)",
+      cite: { authors: "Keune PM, Hansen S, Weber E, Zapf F, Habich J, Muenssinger J, et al.", year: 2017, title: "Exploring resting-state EEG brain oscillatory activity in relation to cognitive functioning in multiple sclerosis", journal: "Clin Neurophysiol" }
     }
   ],
 
