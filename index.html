@@ -3,200 +3,144 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Neurofeedback Atlas · resting EEG patterns and neurofeedback evidence</title>
-<meta name="description" content="Assess a resting EEG against the research, then see which neurofeedback protocols have been studied and how strong the evidence is.">
+<title>Neurofeedback Atlas · resting EEG findings by electrode</title>
+<meta name="description" content="Resting EEG findings by electrode, band and disorder: where studies found the band higher or lower, with the papers behind each line.">
 <meta name="theme-color" content="#000000">
 <link rel="icon" type="image/svg+xml" href="assets/mark.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
-/* Neurofeedback Atlas: black ground, one violet accent, pill controls. Data in IBM Plex Mono. */
+/* Neurofeedback Atlas: filters, map, one plain evidence list. Papers open in a side panel. */
 :root {
-  --bg: #000000; --surface: #111114; --raise: #18181d; --ink: #f5f5f7; --muted: #a4a4ae; --faint: #6f6f78; --line: #2b2b31;
-  --accent: #6a5bff; --accent-ink: #ffffff; --link: #a79fff; --accent-soft: #1c1840;
-  --up: #6a5bff; --down: #e6e3ff; --unclear: #4a4a52;
+  --bg: #000; --surface: #111114; --raise: #18181d; --ink: #f5f5f7; --muted: #a4a4ae; --faint: #6f6f78; --line: #2b2b31;
+  --accent: #6a5bff; --link: #a79fff; --accent-soft: #1c1840; --down: #e6e3ff;
   --f-body: "IBM Plex Sans", system-ui, sans-serif; --f-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
   --r: 18px; color-scheme: dark;
 }
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
-body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 var(--f-body); }
+* { box-sizing: border-box; min-width: 0; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 var(--f-body); overflow-x: clip; }
 a { color: var(--link); }
 button, select, input { font: inherit; color: inherit; }
 button { cursor: pointer; }
 :focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
-h1, h2, h3 { margin: 0; font-weight: 500; letter-spacing: -0.02em; text-wrap: balance; }
+h1, h2 { margin: 0; font-weight: 500; letter-spacing: -0.02em; text-wrap: balance; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-.wrap { max-width: 1240px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
-.mono { font-family: var(--f-mono); }
+.wrap { max-width: 980px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
 
-/* top bar */
-.top { position: sticky; top: 0; z-index: 20; background: rgba(0,0,0,.86); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
-.top .wrap { display: flex; align-items: center; gap: 16px 28px; min-height: 64px; flex-wrap: wrap; padding-block: 8px; }
-.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 600; font-size: 21px; letter-spacing: -0.03em; white-space: nowrap; }
-@media (max-width: 420px) { .brand { font-size: 18px; } .pv { display: none; } }
-.brand svg { flex: none; }
+.top { border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; gap: 12px 24px; min-height: 64px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 600; font-size: 20px; letter-spacing: -0.03em; white-space: nowrap; }
 .pv { font: 600 10.5px/1 var(--f-mono); letter-spacing: .06em; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 5px 9px; }
-.nav { display: flex; gap: 24px; margin-left: auto; font-weight: 500; font-size: 15px; }
-.nav a { color: var(--muted); text-decoration: none; padding: 10px 0; }
-.nav a:hover, .nav a[aria-current] { color: var(--ink); }
-@media (max-width: 760px) { .nav { display: none; } }
+.top nav { margin-left: auto; display: flex; gap: 20px; font-size: 15px; }
+.top nav a { color: var(--muted); text-decoration: none; padding: 10px 0; }
+@media (max-width: 480px) { .pv { display: none; } .brand { font-size: 18px; } }
 
-/* hero */
-.hero { text-align: center; padding: 56px 0 28px; display: flex; flex-direction: column; align-items: center; gap: 20px; }
-.hero h1 { font-size: clamp(2.3rem, 6.2vw, 4.6rem); line-height: 1.02; letter-spacing: -0.045em; max-width: 16ch; }
-.hero p { margin: 0; font-weight: 300; font-size: clamp(1.05rem, 2vw, 1.3rem); color: var(--muted); max-width: 38ch; }
-.pill { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 30px; border-radius: 999px; border: 0; font-weight: 500; font-size: 17px; text-decoration: none; }
-.pill.go { background: var(--accent); color: var(--accent-ink); }
-.pill.alt { background: #232328; color: var(--ink); }
+main { padding: 28px 0 40px; display: grid; gap: 20px; }
+.intro { margin: 0; color: var(--muted); font-size: 15px; }
 
-/* steps + question */
-#steps { scroll-margin-top: 80px; }
-.steps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 8px; }
-.step { display: flex; align-items: center; gap: 14px; text-align: left; padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); color: var(--muted); min-height: 72px; }
-.step b { flex: none; width: 34px; height: 34px; border-radius: 999px; display: grid; place-items: center; border: 1px solid var(--line); font: 600 15px/1 var(--f-mono); }
-.step span { display: grid; gap: 3px; font-weight: 600; font-size: 17px; }
-.step small { font-weight: 400; font-size: 13.5px; color: var(--muted); }
-.step[aria-current="step"] { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); }
-.step[aria-current="step"] b { background: var(--accent); border-color: var(--accent); color: #fff; }
-@media (max-width: 560px) { .step { padding: 12px; gap: 10px; } .step small { display: none; } }
-.ask { margin-top: 12px; padding: 18px; display: grid; gap: 14px; }
-.q { display: grid; gap: 8px; }
-.q > span { font-size: 14px; color: var(--muted); }
-.q > span b { color: var(--ink); font-weight: 600; }
-.chips { display: flex; flex-wrap: wrap; gap: 6px; }
-.chips .chip { min-height: 40px; font-size: 15px; }
-.chip small { font: 500 11px var(--f-mono); color: var(--faint); margin-left: 6px; }
-.seg.small { min-height: 44px; max-width: 420px; }
-.textbtn { border: 0; background: none; color: var(--link); font-weight: 500; font-size: 14px; padding: 6px 0; justify-self: start; min-height: 36px; }
-.next { display: flex; flex-wrap: wrap; gap: 8px; }
-.next:empty { display: none; }
-.cta { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 20px; border-radius: 999px; border: 0; background: var(--accent); color: #fff; font-weight: 500; font-size: 15px; }
-.match { color: var(--link); font: 600 10.5px/1 var(--f-mono); letter-spacing: .05em; text-transform: uppercase; border: 1px solid var(--accent); border-radius: 999px; padding: 4px 8px; margin-left: 6px; white-space: nowrap; }
-.mapbox.passive .el { cursor: default; pointer-events: none; }
-.mapbox.passive .regions, .mapbox.passive #nearBox { display: none; }
+/* 1. filters */
+.filters { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 720px) { .filters { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.fld { display: grid; gap: 6px; }
+.fld span { font-size: 13px; color: var(--muted); }
+.fld select { appearance: none; -webkit-appearance: none; width: 100%; min-height: 48px; padding: 0 36px 0 16px; border: 1px solid var(--line); border-radius: 999px; font-size: 16px; font-weight: 500;
+  background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23a4a4ae' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 16px center; }
+.fld select.set { border-color: var(--accent); background-color: var(--accent-soft); }
+.reset { justify-self: start; border: 0; background: none; color: var(--link); font-size: 14px; font-weight: 500; min-height: 36px; padding: 0; }
 
-/* main grid */
-.grid { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; padding: 28px 0 40px; }
-.side { flex: 1 1 300px; max-width: 400px; display: grid; gap: 12px; position: sticky; top: 84px; z-index: 1; }
-.results { flex: 999 1 560px; min-width: 0; display: grid; gap: 14px; }
-@media (max-width: 900px) { .side { position: static; max-width: none; } }
-.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); }
-.mapbox { padding: 16px; display: grid; gap: 12px; }
-@media (max-width: 900px) { svg.head { max-width: 380px; margin: 0 auto; } }
-.maphead { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
-.maphead b { font: 500 11px/1 var(--f-mono); letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
-.clear { border: 0; background: none; color: var(--link); font-weight: 500; font-size: 14px; min-height: 36px; padding: 0 4px; }
-.maptip { margin: 0; font-size: 13px; color: var(--muted); min-height: 2.6em; }
-.maptip strong { color: var(--ink); font-weight: 600; }
-.near { display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; align-items: center; font-size: 14px; font-weight: 500; cursor: pointer; }
-.near input { width: 20px; height: 20px; accent-color: var(--accent); margin: 0; }
-.near small { grid-column: 2; font-weight: 400; color: var(--muted); font-size: 12.5px; }
-svg.head { width: 100%; height: auto; display: block; }
+/* 2. map */
+.mapbox { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; display: grid; justify-items: center; gap: 8px; }
+svg.head { width: 100%; max-width: 440px; height: auto; display: block; }
 .scalp { fill: none; stroke: var(--ink); stroke-width: 1.4; }
 .guide { fill: none; stroke: var(--line); stroke-width: 1; stroke-dasharray: 2 4; }
 .el { cursor: pointer; }
 .el .hit { fill: transparent; }
-.el .disc { fill: var(--raise); stroke: var(--line); stroke-width: 1.2; transition: fill .15s, stroke .15s; }
+.el .disc { fill: var(--raise); stroke: var(--line); stroke-width: 1.2; }
 .el text { font: 600 10.5px var(--f-mono); fill: var(--faint); text-anchor: middle; dominant-baseline: central; pointer-events: none; }
 .el.lv1 .disc { fill: color-mix(in srgb, var(--accent) 22%, var(--raise)); stroke: color-mix(in srgb, var(--accent) 45%, var(--line)); }
 .el.lv2 .disc { fill: color-mix(in srgb, var(--accent) 42%, var(--raise)); stroke: color-mix(in srgb, var(--accent) 65%, var(--line)); }
 .el.lv3 .disc { fill: color-mix(in srgb, var(--accent) 62%, var(--raise)); stroke: var(--accent); }
 .el.lv1 text, .el.lv2 text, .el.lv3 text { fill: var(--ink); }
+.el.inreg .disc { stroke: var(--link); stroke-width: 2; stroke-dasharray: 3 2.5; }
 .el.sel .disc { fill: var(--accent); stroke: #fff; stroke-width: 2.5; }
 .el.sel text { fill: #fff; }
-.el.nb .disc { stroke: var(--link); stroke-width: 1.8; stroke-dasharray: 3 2.5; }
-.el.ref { cursor: default; } .el.ref .disc { fill: none; stroke-dasharray: 2 2; } .el.ref text { fill: var(--faint); }
+.el.ref { cursor: default; } .el.ref .disc { fill: none; stroke-dasharray: 2 2; }
 .el:hover .disc { stroke: var(--link); }
 .el:focus { outline: none; } .el:focus-visible .disc { stroke: var(--link); stroke-width: 3; }
-@media (max-width: 640px) { .el text { font-size: 12px; } }
-.link-line { stroke: var(--link); stroke-width: 2.5; stroke-linecap: round; opacity: .85; fill: none; }
-.regions { display: flex; flex-wrap: wrap; gap: 6px; }
-.chip { border: 1px solid var(--line); background: none; border-radius: 999px; padding: 0 14px; min-height: 36px; font-size: 14px; font-weight: 500; color: var(--muted); }
-.chip[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); }
-.note { margin: 0; font-size: 13px; color: var(--muted); }
+.maptip { margin: 0; font-size: 13px; color: var(--muted); text-align: center; min-height: 1.5em; }
+@media (max-width: 560px) { .el text { font-size: 12px; } }
 
-.rhead { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 16px; }
-.rhead h2 { font-size: clamp(1.5rem, 3vw, 1.9rem); }
+/* 3. evidence */
+.ehead { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 16px; }
+.ehead h2 { font-size: 1.5rem; }
 .count { font: 500 13px/1 var(--f-mono); color: var(--muted); }
-.table { padding: 6px 18px; }
-.thead, .row { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr) minmax(0, 1.2fr) minmax(0, 1.3fr) 18px; gap: 14px; align-items: center; }
-.thead { padding: 12px 2px 10px; border-bottom: 1px solid var(--line); font: 500 11px/1 var(--f-mono); letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
-.row { width: 100%; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--line); padding: 16px 2px; color: var(--ink); }
-.row:last-child { border-bottom: 0; }
-.row:hover .d { color: var(--link); }
-.row .d { font-weight: 600; font-size: 17px; line-height: 1.25; }
-.row .sub { display: block; font: 500 12px/1.3 var(--f-mono); color: var(--muted); margin-top: 3px; font-weight: 500; }
+.list { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 4px 16px; }
+.row { width: 100%; display: grid; grid-template-columns: 64px minmax(0, 1fr) minmax(0, 1.4fr) auto 16px; gap: 12px; align-items: center; text-align: left;
+  background: none; border: 0; border-bottom: 1px solid var(--line); padding: 14px 2px; color: var(--ink); min-height: 52px; }
+.row:last-of-type { border-bottom: 0; }
+.row:hover .dx { color: var(--link); }
+.row .site { font: 600 15px/1 var(--f-mono); }
+.row .band { color: var(--muted); }
+.row .site.whole { font-size: 12px; line-height: 1.2; color: var(--muted); }
+.row .dx { font-weight: 500; }
+.row .ud { font: 600 15px/1 var(--f-mono); white-space: nowrap; display: flex; gap: 14px; justify-content: flex-end; }
+.ud .u { color: var(--link); } .ud .d { color: var(--down); } .ud .z { color: var(--faint); font-weight: 500; }
 .row .chev { color: var(--faint); font-size: 20px; line-height: 1; }
-.row.ghost .d, .row.ghost .votes, .row.ghost .cert, .row.ghost .verdict { color: var(--faint); }
-.votes { display: grid; gap: 6px; font: 500 13px/1 var(--f-mono); color: var(--muted); }
-.bar { display: flex; height: 6px; border-radius: 3px; overflow: hidden; background: var(--line); max-width: 160px; }
-.bar i { display: block; height: 100%; }
-.bar .u { background: var(--up); } .bar .dn { background: var(--down); } .bar .q { background: var(--unclear); }
-.cert { display: inline-flex; align-items: center; gap: 9px; font-size: 15px; font-weight: 500; }
-.meter { display: inline-flex; gap: 3px; }
-.meter i { width: 9px; height: 9px; border-radius: 2px; border: 1.5px solid var(--line); }
-.meter i.f { background: var(--accent); border-color: var(--accent); }
-.verdict { font-size: 14px; color: var(--muted); }
-.verdict.yes { color: var(--ink); font-weight: 600; }
-@media (max-width: 640px) {
-  .thead { display: none; }
-  .table { padding: 2px 16px; }
-  .row { grid-template-columns: minmax(0, 1fr) auto; gap: 8px 12px; }
+.ehead + .foot { margin: 4px 0 10px; }
+.trow { grid-template-columns: 96px minmax(0, 1.5fr) minmax(0, 1fr) auto 16px; }
+.trow .site { font-size: 13px; line-height: 1.3; white-space: normal; }
+.trow .ev { font-size: 14px; color: var(--muted); text-align: right; white-space: nowrap; }
+@media (max-width: 560px) {
+  .row { grid-template-columns: 52px minmax(0, 1fr) auto; gap: 2px 10px; }
+  .row .site { grid-row: span 2; }
+  .row .band { grid-column: 2; grid-row: 2; font-size: 14px; }
+  .row .dx { grid-column: 2; grid-row: 1; }
+  .row .ud { grid-column: 3; grid-row: span 2; }
   .row .chev { display: none; }
-  .row .votes { grid-column: 1; } .row .cert { grid-column: 2; justify-self: end; }
-  .row .verdict { grid-column: 2; grid-row: 1; justify-self: end; text-align: right; font-size: 13px; }
+  .trow { grid-template-columns: 76px minmax(0, 1fr) auto; }
+  .trow .band { grid-column: 2; grid-row: 1; color: var(--ink); font-weight: 500; }
+  .trow .dx { grid-column: 2; grid-row: 2; font-weight: 400; color: var(--muted); font-size: 14px; }
+  .trow .ev { grid-column: 3; grid-row: span 2; }
 }
-.more { padding: 14px 2px; border: 0; background: none; color: var(--link); font-weight: 500; font-size: 15px; }
-.empty { padding: 36px 20px; text-align: center; color: var(--muted); }
-.foot { font-size: 13px; color: var(--muted); margin: 0; }
-.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font: 500 12px/1 var(--f-mono); color: var(--muted); }
-.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+.more { border: 0; background: none; color: var(--link); font-weight: 500; font-size: 15px; padding: 14px 2px; }
+.empty { padding: 28px 8px; text-align: center; color: var(--muted); }
+.foot { margin: 0; font-size: 13px; color: var(--muted); }
 
-/* study list (detail sheet) */
-.study { display: grid; gap: 6px; padding: 14px 0; border-bottom: 1px solid var(--line); }
-.study:last-child { border-bottom: 0; }
-.study .c { font-weight: 500; font-size: 15.5px; line-height: 1.4; }
-.study .m { font: 500 12px/1.4 var(--f-mono); color: var(--muted); }
-.study .tags { display: flex; flex-wrap: wrap; gap: 6px; }
-.tag { font: 600 10.5px/1 var(--f-mono); letter-spacing: .05em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 5px 9px; }
-.tag.v { color: var(--ink); }
-.study.ghost .c { color: var(--muted); }
-.study a { font-size: 13px; font-weight: 500; text-decoration: none; }
-.study details { font-size: 14px; color: var(--muted); }
-.study summary { cursor: pointer; color: var(--link); font-size: 13px; font-weight: 500; }
-
-/* detail sheet */
+/* papers panel */
 .sheet { position: fixed; inset: 0; z-index: 40; display: none; }
 .sheet.open { display: block; }
-.sheet .scrim { position: absolute; inset: 0; background: rgba(0,0,0,.6); border: 0; width: 100%; }
-.sheet .body { position: absolute; top: 0; right: 0; bottom: 0; width: min(560px, 100%); background: var(--surface); border-left: 1px solid var(--line); overflow-y: auto; overscroll-behavior: contain;
-  padding: max(16px, env(safe-area-inset-top, 0px)) 24px max(32px, env(safe-area-inset-bottom, 0px)); display: grid; gap: 18px; align-content: start; }
-.sheet .bar-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.x { width: 44px; height: 44px; border-radius: 999px; border: 1px solid var(--line); background: var(--raise); display: inline-flex; align-items: center; justify-content: center; font-size: 20px; }
-.sheet h2 { font-size: 2rem; letter-spacing: -0.03em; }
-.facts { display: flex; flex-wrap: wrap; gap: 14px 28px; }
-.fact { display: grid; gap: 6px; }
-.fact > span { font: 500 11px/1 var(--f-mono); letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
-.fact b { font-weight: 600; font-size: 18px; }
-.why { margin: 0; padding-left: 18px; font-size: 14.5px; color: var(--ink); display: grid; gap: 4px; }
-.sec { font: 500 11px/1 var(--f-mono); letter-spacing: .07em; text-transform: uppercase; color: var(--muted); padding-top: 6px; border-top: 1px solid var(--line); padding-top: 18px; }
-.syms { display: flex; flex-wrap: wrap; gap: 6px; }
+.scrim { position: absolute; inset: 0; width: 100%; background: rgba(0,0,0,.6); border: 0; }
+.body { position: absolute; top: 0; right: 0; bottom: 0; width: min(560px, 100%); background: var(--surface); border-left: 1px solid var(--line); overflow-y: auto; overscroll-behavior: contain;
+  padding: max(16px, env(safe-area-inset-top, 0px)) 22px max(32px, env(safe-area-inset-bottom, 0px)); display: grid; gap: 14px; align-content: start; }
+.bar-top { display: flex; justify-content: flex-end; }
+.x { width: 44px; height: 44px; border-radius: 999px; border: 1px solid var(--line); background: var(--raise); font-size: 20px; }
+.body h2 { font-size: 1.7rem; letter-spacing: -0.03em; }
+.big { display: flex; gap: 24px; font: 600 22px/1 var(--f-mono); }
+.big small { display: block; font: 400 13px/1.4 var(--f-body); color: var(--muted); margin-top: 6px; }
+.pooled { margin: 0; font-size: 14px; color: var(--muted); padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; }
+.pooled b { color: var(--ink); font-weight: 600; }
+.sec { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; }
+.paper { display: grid; gap: 4px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.paper:last-child { border-bottom: 0; }
+.paper .c { font-size: 15px; line-height: 1.4; }
+.paper .m { font: 500 12px/1.4 var(--f-mono); color: var(--muted); }
+.paper a { font-size: 13px; text-decoration: none; }
+.paper .ab { color: var(--faint); }
 
-footer.site { border-top: 1px solid var(--line); padding: 26px 0 40px; }
-footer.site .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: space-between; font-size: 13px; color: var(--muted); }
-footer.site nav { display: flex; gap: 20px; }
-footer.site a { color: var(--muted); }
+footer { border-top: 1px solid var(--line); padding: 22px 0 36px; font-size: 13px; color: var(--muted); }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; }
+footer a { color: var(--muted); }
 
 /* preview gate */
 .gate { display: none; min-height: 100vh; min-height: 100dvh; place-items: center; padding: 24px; }
 html.locked .gate { display: grid; }
 html.locked .app { display: none; }
-.gate form { width: min(100%, 380px); display: grid; gap: 16px; justify-items: stretch; text-align: center; }
-.gate .brand { justify-content: center; font-size: 26px; }
+.gate form { width: min(100%, 380px); display: grid; gap: 16px; text-align: center; }
+.gate .brand { justify-content: center; font-size: 24px; }
 .gate p { margin: 0; color: var(--muted); }
 .gate input { min-height: 52px; padding: 0 22px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font-size: 16px; text-align: center; }
+.gate button { min-height: 52px; border: 0; border-radius: 999px; background: var(--accent); color: #fff; font-weight: 500; font-size: 17px; }
 .gate .err { color: #ff8a80; font-size: 14px; min-height: 1.3em; }
 </style>
 <script>
@@ -210,11 +154,11 @@ html.locked .app { display: none; }
 
 <div class="gate" role="dialog" aria-labelledby="gateTitle">
   <form id="gateForm" autocomplete="off">
-    <span class="brand" id="gateTitle"><svg width="34" height="34" aria-hidden="true"><use href="#mark"/></svg>Neurofeedback Atlas</span>
+    <span class="brand" id="gateTitle"><svg width="32" height="32" aria-hidden="true"><use href="#mark"/></svg>Neurofeedback Atlas</span>
     <p>Preview for invited testers. Enter the password you were given.</p>
     <label class="sr" for="gatePw">Password</label>
     <input id="gatePw" type="password" placeholder="Password" autocomplete="current-password" required>
-    <button class="pill go" type="submit">Enter</button>
+    <button type="submit">Enter</button>
     <div class="err" id="gateErr" aria-live="polite"></div>
   </form>
 </div>
@@ -222,54 +166,44 @@ html.locked .app { display: none; }
 <div class="app">
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="./"><svg width="30" height="30" aria-hidden="true"><use href="#mark"/></svg>Neurofeedback Atlas</a>
+    <a class="brand" href="./"><svg width="28" height="28" aria-hidden="true"><use href="#mark"/></svg>Neurofeedback Atlas</a>
     <span class="pv">PREVIEW</span>
-    <nav class="nav" aria-label="Site"><a href="./" aria-current="page">Atlas</a><a href="methods.html">Method</a><a href="https://github.com/farrokh143/eeg-disorder-atlas/issues/new/choose">Suggest a study</a></nav>
+    <nav aria-label="Site"><a href="methods.html">Method</a><a href="https://github.com/farrokh143/eeg-disorder-atlas/issues/new/choose">Feedback</a></nav>
   </div>
 </header>
 
-<main>
-  <section class="wrap hero">
-    <h1>Resting EEG patterns, mapped to disorders.</h1>
-    <p id="heroSub">Assess a client's resting EEG against the research, then see which neurofeedback protocols have been studied.</p>
+<main class="wrap">
+  <p class="intro">Resting EEG findings from published studies, by electrode. Pick filters or tap the map; tap a line to see its papers.</p>
+
+  <section class="filters" aria-label="Filters">
+    <label class="fld"><span>Power band</span><select id="fBand"></select></label>
+    <label class="fld"><span>Electrode</span><select id="fEl"></select></label>
+    <label class="fld"><span>Region</span><select id="fReg"></select></label>
+    <label class="fld"><span>Disorder</span><select id="fCond"></select></label>
+  </section>
+  <button class="reset" id="reset" type="button" hidden>Clear filters</button>
+
+  <section class="mapbox" aria-label="Electrode map">
+    <svg class="head" id="head" viewBox="0 0 400 410" role="group" aria-label="10-20 electrode map. Tap an electrode to filter by it."></svg>
+    <p class="maptip" id="tip" aria-live="polite"></p>
   </section>
 
-  <div class="wrap">
-    <nav class="steps" id="steps" aria-label="Steps">
-      <button type="button" class="step" data-step="assess"><b>1</b><span>Assess<small>What does the client's EEG show?</small></span></button>
-      <button type="button" class="step" data-step="treat"><b>2</b><span>Treatment evidence<small>Which neurofeedback has been studied?</small></span></button>
-    </nav>
+  <section aria-labelledby="eTitle">
+    <div class="ehead"><h2 id="eTitle">EEG and disorders</h2><span class="count" id="eCount"></span></div>
+    <p class="foot">▲ = studies that found the band higher in the disorder than in healthy controls, ▼ = lower, ⇆ = mixed or asymmetry.</p>
+    <div class="list" id="list"></div>
+  </section>
 
-    <section class="ask panel" id="ask" aria-label="Your question"></section>
-
-    <div class="grid">
-      <aside class="side" id="side">
-        <div class="panel mapbox" id="mapbox">
-          <div class="maphead"><b id="mapLbl">Scalp area</b><button class="clear" id="clearSite" type="button" hidden>Clear area</button></div>
-          <svg class="head" id="head" viewBox="0 0 400 410" role="group" aria-label="10-20 electrode map"></svg>
-          <p class="maptip" id="tip" aria-live="polite"></p>
-          <div class="regions" id="regions" role="group" aria-label="Areas"></div>
-          <label class="near" id="nearBox"><input type="checkbox" id="fNear"> Include neighbouring electrodes<small>Electrodes also pick up activity from nearby cortex. Shown dashed.</small></label>
-          <p class="note">T3/T4/T5/T6 are T7/T8/P7/P8 in newer naming.</p>
-        </div>
-      </aside>
-
-      <section class="results" id="results" aria-live="polite">
-        <div class="rhead"><h2 id="rTitle"></h2><span class="count" id="rCount"></span></div>
-        <div class="next" id="next"></div>
-        <div class="panel table" id="list"></div>
-        <div class="legend" id="legend"></div>
-        <p class="foot" id="foot"></p>
-      </section>
-    </div>
-  </div>
+  <section aria-labelledby="tTitle">
+    <div class="ehead"><h2 id="tTitle">Treatment evidence</h2><span class="count" id="tCount"></span></div>
+    <p class="foot">Neurofeedback protocols that have been studied: ▲ = band trained up, ▼ = trained down, ⇅ = regulated. Studied protocols, not treatment guidelines.</p>
+    <div class="list" id="tlist"></div>
+  </section>
+  <p class="foot">Group-level research findings, not a diagnostic test or treatment advice for one person. <a href="methods.html">Method</a></p>
 </main>
 
-<footer class="site">
-  <div class="wrap">
-    <span id="footStats"></span>
-    <nav aria-label="Footer"><a href="methods.html">Method</a><a href="https://github.com/farrokh143/eeg-disorder-atlas">Data on GitHub</a><a href="https://github.com/farrokh143/eeg-disorder-atlas/issues/new/choose">Feedback</a></nav>
-  </div>
+<footer>
+  <div class="wrap"><span id="stats"></span><a href="https://github.com/farrokh143/eeg-disorder-atlas">Data on GitHub</a></div>
 </footer>
 </div>
 
@@ -302,435 +236,221 @@ html.locked .app { display: none; }
 <script src="data/research.js"></script>
 <script src="data/synthesis.js"></script>
 <script>
-(function () {
+{
   const D = window.NF_DATA, S = window.NF_SYNTH || { patterns: [] };
   const $ = id => document.getElementById(id);
   const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
 
-  // ---------- reference tables ----------
   const ELECTRODES = {
     Fp1: [157, 72], Fp2: [243, 72], F7: [87, 123], F3: [142, 138], Fz: [200, 135], F4: [258, 138], F8: [313, 123],
     T3: [60, 205], C3: [130, 205], Cz: [200, 205], C4: [270, 205], T4: [340, 205],
     T5: [87, 287], P3: [142, 272], Pz: [200, 275], P4: [258, 272], T6: [313, 287], O1: [157, 338], O2: [243, 338]
   };
-  // Same region table as tools/synthesize.js, so the map and the pooled results agree.
-  const REGIONS = { frontal: ["Fp1", "Fp2", "F7", "F3", "Fz", "F4", "F8"], central: ["C3", "Cz", "C4"], temporal: ["T3", "T4", "T5", "T6"], parietal: ["P3", "Pz", "P4"], occipital: ["O1", "O2"] };
-  const RNAMES = Object.keys(REGIONS);
-  const regionOf = x => RNAMES.includes(x) ? x : RNAMES.find(r => REGIONS[r].includes(x));
-  const CENTRE = {}; RNAMES.forEach(r => { const pts = REGIONS[r].map(s => ELECTRODES[s]); CENTRE[r] = [pts.reduce((a, p) => a + p[0], 0) / pts.length, pts.reduce((a, p) => a + p[1], 0) / pts.length]; });
-  const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
-  const COND = Object.fromEntries(D.conditions.map(c => [c.id, c]));
-  const BAND = Object.fromEntries(D.bands.map(b => [b.id, b]));
-  const SYM = Object.fromEntries(D.symptoms.map(s => [s.id, s]));
-  const ALLF = D.findings.concat(D.connectivity || []);
-  const BYID = Object.fromEntries(ALLF.map(f => [f.id, f]));
-  const DESIGN = { 5: "Meta-analysis", 4: "Randomised trial", 3: "Controlled study", 2: "Case-control / review", 1: "Uncontrolled / pilot" };
-  const VERDICT_RANK = { "consistently higher": 0, "consistently lower": 0, "no consistent difference": 1, "descriptive": 3, "too few studies": 3 };
-  const CERT = ["Very low", "Low", "Moderate", "High"];
-  const certLevel = c => CERT.indexOf(c) + 1; // 0 when none
-  const ARROW = { up: "▲", down: "▼", mixed: "◆", asym: "⇆", regulate: "⇅", asymmetry: "⇆" };
-
-  // ---------- state (mirrored in the URL hash so a lookup can be shared) ----------
+  const ORDER = Object.keys(ELECTRODES);
   const REFS = { A1: [24, 205], A2: [376, 205] };
   const ALT = { T3: "T7", T4: "T8", T5: "P7", T6: "P8" };
-  const GROUPS = Object.assign({}, REGIONS, { midline: ["Fz", "Cz", "Pz"] });
-  // Adjacent electrodes on the 10-20 grid (volume conduction spreads activity to neighbours).
-  const NB = (() => {
-    const raw = { Fp1: ["Fp2", "F7", "F3", "Fz"], Fp2: ["F8", "F4", "Fz"], F7: ["F3", "T3"], F8: ["F4", "T4"],
-      F3: ["Fz", "C3"], F4: ["Fz", "C4"], Fz: ["Cz"], T3: ["C3", "T5"], T4: ["C4", "T6"], C3: ["Cz", "P3"], C4: ["Cz", "P4"],
-      Cz: ["Pz"], T5: ["P3", "O1"], T6: ["P4", "O2"], P3: ["Pz", "O1"], P4: ["Pz", "O2"], Pz: ["O1", "O2"], O1: ["O2"] };
-    const m = {}; Object.keys(ELECTRODES).forEach(k => m[k] = new Set());
-    Object.entries(raw).forEach(([x, ys]) => ys.forEach(y => { m[x].add(y); m[y].add(x); }));
-    return m;
-  })();
-  // step: assess | treat. from: eeg (start from what the EEG shows) | dx (start from the diagnosis).
-  const DEF = { step: "assess", from: "eeg", band: "theta", dir: "up", sites: REGIONS.frontal.join(","), near: "1", cond: "", conn: "0" };
-  const state = Object.assign({}, DEF);
-  try {
-    const h = new URLSearchParams(location.hash.slice(1));
-    Object.keys(DEF).forEach(k => { if (h.has(k)) state[k] = h.get(k); });
-    if (h.has("area")) state.sites = (REGIONS[h.get("area")] || []).join(",");   // links made before the map was restored
-    if (h.get("layer") === "nf") state.step = "treat";                            // links made before the two steps
-    if (h.get("layer") === "connectivity") state.conn = "1";
-  } catch (_) {}
-  state.sites = state.sites.split(",").filter(x => ELECTRODES[x]).join(",");
-  function saveHash() {
-    const h = new URLSearchParams(); Object.keys(DEF).forEach(k => { if (state[k] !== DEF[k]) h.set(k, state[k]); });
-    const s = h.toString(); try { history.replaceState(null, "", s ? "#" + s : location.pathname + location.search); } catch (_) {}
-  }
-  const selSites = () => new Set(state.sites ? state.sites.split(",") : []);
-  const setSites = set => { state.sites = Object.keys(ELECTRODES).filter(k => set.has(k)).join(","); };
-  const nbSites = () => { const sel = selSites(), n = new Set(); if (state.near === "1") sel.forEach(x => NB[x].forEach(y => !sel.has(y) && n.add(y))); return n; };
-  // Regions the lookup covers: "direct" from selected electrodes, "nb" only through neighbouring ones. null = whole head.
-  function areaRegions() {
-    const sel = selSites(); if (!F.useArea || !sel.size) return null;
-    const m = {}; nbSites().forEach(x => m[regionOf(x)] = "nb"); sel.forEach(x => m[regionOf(x)] = "direct");
-    return m;
-  }
-  const groupOf = () => { const sel = selSites(); return Object.keys(GROUPS).find(g => GROUPS[g].length === sel.size && GROUPS[g].every(x => sel.has(x))) || ""; };
-  function areaText() {
-    const sel = selSites(); if (!F.useArea || !sel.size) return "";
-    const g = groupOf(); if (g) return g;
-    return [...sel].join(", ");
+  // Same regions as tools/synthesize.js, plus midline.
+  const REGIONS = { frontal: ["Fp1", "Fp2", "F7", "F3", "Fz", "F4", "F8"], central: ["C3", "Cz", "C4"], temporal: ["T3", "T4", "T5", "T6"], parietal: ["P3", "Pz", "P4"], occipital: ["O1", "O2"], midline: ["Fz", "Cz", "Pz"] };
+  const LOBE = s => ["frontal", "central", "temporal", "parietal", "occipital"].find(r => REGIONS[r].includes(s));
+  const COND = Object.fromEntries(D.conditions.map(c => [c.id, c]));
+  const BAND = Object.fromEntries(D.bands.map(b => [b.id, b]));
+  const MARKERS = D.findings.filter(f => f.type === "biomarker");
+  const DESIGN = { 5: "Meta-analysis", 4: "Randomised trial", 3: "Controlled study", 2: "Case-control / review", 1: "Uncontrolled / pilot" };
+
+  // ---------- state, kept in the link so a view can be shared ----------
+  const DEF = { band: "", el: "", region: "", cond: "" };
+  const st = Object.assign({}, DEF);
+  try { const h = new URLSearchParams(location.hash.slice(1)); Object.keys(DEF).forEach(k => { if (h.has(k)) st[k] = h.get(k); }); } catch (_) {}
+  if (!ELECTRODES[st.el]) st.el = ""; if (!REGIONS[st.region]) st.region = ""; if (!BAND[st.band]) st.band = ""; if (!COND[st.cond]) st.cond = "";
+  function save() {
+    const h = new URLSearchParams(); Object.keys(DEF).forEach(k => { if (st[k]) h.set(k, st[k]); });
+    try { history.replaceState(null, "", h.toString() ? "#" + h : location.pathname + location.search); } catch (_) {}
   }
 
-  // ---------- the question panel (replaces the old filter bar) ----------
-  // F = what the lookup actually filters on, derived from the step and the question.
-  let F = {};
-  function derive() {
-    if (state.step === "treat") return F = { layer: "nf", band: "", dir: "any", cond: state.cond, useArea: false };
-    const conn = state.conn === "1" ? "connectivity" : "power";
-    if (state.from === "dx") return F = { layer: conn, band: "", dir: "any", cond: state.cond, useArea: false };
-    return F = { layer: conn, band: state.band, dir: state.dir, cond: "", useArea: true };
+  // ---------- filters ----------
+  const usedBands = D.bands.filter(b => MARKERS.some(f => f.changes[b.id]));
+  $("fBand").innerHTML = `<option value="">All bands</option>` + usedBands.map(b => `<option value="${b.id}">${esc(b.name)}${b.hz ? " · " + esc(b.hz) : ""}</option>`).join("");
+  $("fReg").innerHTML = `<option value="">All regions</option>` + Object.keys(REGIONS).map(r => `<option value="${r}">${cap(r)}</option>`).join("");
+  $("fCond").innerHTML = `<option value="">All disorders</option>` + D.conditions.slice().sort((a, b) => a.name.localeCompare(b.name)).map(c => `<option value="${c.id}">${esc(c.name)}</option>`).join("");
+  function fillElectrodes() {
+    const list = st.region ? REGIONS[st.region] : ORDER;
+    $("fEl").innerHTML = `<option value="">${st.region ? "All in " + st.region : "All electrodes"}</option>` + list.map(s => `<option value="${s}">${s}${ALT[s] ? " (" + ALT[s] + ")" : ""}</option>`).join("");
   }
-  const MAIN_BANDS = ["delta", "theta", "alpha", "beta", "gamma", "smr", "hibeta"].filter(b => BAND[b]);
-  const condOrder = D.conditions.slice().sort((a, b) => a.name.localeCompare(b.name));
-  const nfCount = id => D.findings.filter(f => f.type === "protocol" && f.condition === id).length;
-  const chip = (attr, v, label, on, extra) => `<button class="chip" type="button" ${attr}="${v}" aria-pressed="${on}">${label}${extra ? `<small>${extra}</small>` : ""}</button>`;
-  function renderAsk() {
-    let h = "";
-    if (state.step === "assess") {
-      h += `<div class="q"><span>Start from</span><div class="seg small" role="group" aria-label="Start from">
-        <button type="button" data-from="eeg" aria-pressed="${state.from === "eeg"}">What the EEG shows</button>
-        <button type="button" data-from="dx" aria-pressed="${state.from === "dx"}">The client's diagnosis</button></div></div>`;
-      if (state.from === "eeg") {
-        h += `<div class="q"><span>Which band is off? <b>Then tap the electrodes on the map.</b></span><div class="chips">${MAIN_BANDS.map(b => chip("data-band", b, esc(BAND[b].name), state.band === b, esc(BAND[b].hz || BAND[b].range || ""))).join("")}</div></div>
-          <div class="q"><span>Compared with typical</span><div class="seg small" role="group" aria-label="Direction">
-          <button type="button" data-dir="up" aria-pressed="${state.dir === "up"}">▲ ${state.conn === "1" ? "More connected" : "Higher"}</button>
-          <button type="button" data-dir="down" aria-pressed="${state.dir === "down"}">▼ ${state.conn === "1" ? "Less connected" : "Lower"}</button></div></div>`;
-      } else {
-        h += `<div class="q"><span>Diagnosis</span><div class="chips">${condOrder.map(c => chip("data-cond", c.id, esc(c.name), state.cond === c.id)).join("")}</div></div>`;
-      }
-      h += `<button class="textbtn" type="button" id="connBtn">${state.conn === "1" ? "← Back to band power" : "Looking at connectivity between areas instead? →"}</button>`;
-    } else {
-      h += `<div class="q"><span>Condition being treated</span><div class="chips">${condOrder.filter(c => nfCount(c.id)).map(c => chip("data-cond", c.id, esc(c.name), state.cond === c.id, nfCount(c.id))).join("")}</div></div>`;
-    }
-    $("ask").innerHTML = h;
-  }
-  $("ask").addEventListener("click", e => {
-    const b = e.target.closest("button"); if (!b) return;
-    if (b.dataset.from) state.from = b.dataset.from;
-    else if (b.dataset.band) state.band = b.dataset.band;
-    else if (b.dataset.dir) state.dir = b.dataset.dir;
-    else if (b.dataset.cond) state.cond = state.cond === b.dataset.cond && state.step === "treat" ? "" : b.dataset.cond;
-    else if (b.id === "connBtn") state.conn = state.conn === "1" ? "0" : "1";
-    else return;
-    update();
-  });
-  function goStep(step) { state.step = step; update(); const t = $("steps"); if (t.scrollIntoView) t.scrollIntoView({ behavior: "smooth", block: "start" }); }
-  $("steps").addEventListener("click", e => { const b = e.target.closest(".step"); if (b) goStep(b.dataset.step); });
-  $("regions").innerHTML = Object.keys(GROUPS).map(r => `<button class="chip" type="button" data-v="${r}">${cap(r)}</button>`).join("");
-  function syncControls() {
-    const sel = selSites();
-    document.querySelectorAll(".step").forEach(b => b.dataset.step === state.step ? b.setAttribute("aria-current", "step") : b.removeAttribute("aria-current"));
-    $("fNear").checked = state.near === "1";
-    $("clearSite").hidden = !F.useArea || !sel.size;
-    $("regions").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(GROUPS[b.dataset.v].every(x => sel.has(x)))));
-    $("mapbox").classList.toggle("passive", !F.useArea);
-    $("mapLbl").textContent = F.useArea ? "Where on the scalp?" : state.step === "treat" ? "Training sites studied" : "Where studies found differences";
-    renderAsk();
-  }
-  $("fNear").addEventListener("change", e => { state.near = e.target.checked ? "1" : "0"; update(); });
-  $("clearSite").addEventListener("click", () => { state.sites = ""; update(); });
-  $("regions").addEventListener("click", e => {
-    const b = e.target.closest("button"); if (!b) return;
-    const sel = selSites(), grp = GROUPS[b.dataset.v], all = grp.every(x => sel.has(x));
-    grp.forEach(x => all ? sel.delete(x) : sel.add(x)); setSites(sel); update();
-  });
+  $("fBand").addEventListener("change", e => { st.band = e.target.value; update(); });
+  $("fEl").addEventListener("change", e => { st.el = e.target.value; update(); });
+  $("fReg").addEventListener("change", e => { st.region = e.target.value; if (st.el && st.region && !REGIONS[st.region].includes(st.el)) st.el = ""; update(); });
+  $("fCond").addEventListener("change", e => { st.cond = e.target.value; update(); });
+  $("reset").addEventListener("click", () => { Object.assign(st, DEF); update(); });
 
-  // ---------- map (the original 10-20 head: nose, ears, A1/A2 references, single-electrode picking) ----------
+  // ---------- evidence: one line per electrode × band × disorder, counting studies higher vs lower ----------
+  function lines() {
+    const m = {};
+    MARKERS.forEach(f => {
+      if (st.cond && f.condition !== st.cond) return;
+      const sites = f.sites.length ? f.sites : ["all"];
+      Object.entries(f.changes).forEach(([b, v]) => {
+        if (st.band && b !== st.band) return;
+        sites.forEach(s => {
+          if (st.el && s !== st.el) return;
+          if (st.region && !(s === "all" ? false : REGIONS[st.region].includes(s))) return;
+          if (st.el && s === "all") return;
+          const k = s + "|" + b + "|" + f.condition;
+          const L = m[k] || (m[k] = { site: s, band: b, cond: f.condition, up: [], down: [], other: [] });
+          (v === "up" ? L.up : v === "down" ? L.down : L.other).push(f);
+        });
+      });
+    });
+    const n = L => L.up.length + L.down.length;
+    return Object.values(m).sort((a, b) => n(b) - n(a) || b.other.length - a.other.length || (a.site === "all") - (b.site === "all") || ORDER.indexOf(a.site) - ORDER.indexOf(b.site));
+  }
+  const siteName = s => s === "all" ? "All sites" : s;
+  function rowHtml(L, i) {
+    const o = L.other.length ? `<span class="z" title="mixed or asymmetry">⇆ ${L.other.length}</span>` : "";
+    return `<button class="row" type="button" data-i="${i}" aria-label="${siteName(L.site)}, ${esc(BAND[L.band].name)}, ${esc(COND[L.cond].name)}: ${L.up.length} higher, ${L.down.length} lower">
+      <span class="site${L.site === "all" ? " whole" : ""}">${siteName(L.site)}</span><span class="band">${esc(BAND[L.band].name)}</span><span class="dx">${esc(COND[L.cond].name)}</span>
+      <span class="ud"><span class="${L.up.length ? "u" : "z"}">▲ ${L.up.length}</span><span class="${L.down.length ? "d" : "z"}">▼ ${L.down.length}</span>${o}</span><span class="chev" aria-hidden="true">›</span></button>`;
+  }
+
+  // ---------- treatment evidence: one line per condition × protocol (bands trained and direction) ----------
+  const EV = { strong: 0, moderate: 1, preliminary: 2, contested: 3 };
+  const TRAIN = { up: "▲", down: "▼", regulate: "⇅", asymmetry: "⇆", mixed: "◆" };
+  const BORDER = Object.fromEntries(D.bands.map((b, i) => [b.id, i]));
+  const PROTOS = D.findings.filter(f => f.type === "protocol");
+  function tlines() {
+    const m = {};
+    PROTOS.forEach(f => {
+      if (st.cond && f.condition !== st.cond) return;
+      if (st.band && !f.changes[st.band]) return;
+      if (st.el && f.sites.length && !f.sites.includes(st.el)) return;
+      if (st.region && f.sites.length && !f.sites.some(s => REGIONS[st.region].includes(s))) return;
+      const sig = Object.entries(f.changes).sort((a, b) => BORDER[a[0]] - BORDER[b[0]]).map(([b, v]) => `${BAND[b] ? BAND[b].name : b} ${TRAIN[v] || v}`).join(" · ");
+      const k = f.condition + "|" + sig;
+      (m[k] = m[k] || { cond: f.condition, sig, list: [] }).list.push(f);
+    });
+    return Object.values(m).map(T => Object.assign(T, {
+      sites: [...new Set(T.list.flatMap(f => f.sites))].sort((a, b) => ORDER.indexOf(a) - ORDER.indexOf(b)),
+      best: T.list.map(f => f.evidence).sort((a, b) => EV[a] - EV[b])[0]
+    })).sort((a, b) => EV[a.best] - EV[b.best] || b.list.length - a.list.length);
+  }
+  function trowHtml(T, i) {
+    return `<button class="row trow" type="button" data-t="${i}"><span class="site">${T.sites.length ? esc(T.sites.join(" ")) : "Individual"}</span>
+      <span class="band">${esc(T.sig)}</span><span class="dx">${esc(COND[T.cond].name)}</span>
+      <span class="ev">${T.list.length} ${T.list.length === 1 ? "study" : "studies"} · ${esc(T.best)}</span><span class="chev" aria-hidden="true">›</span></button>`;
+  }
+
+  // ---------- map ----------
   const svgNS = "http://www.w3.org/2000/svg";
   function drawHead() {
     const svg = $("head");
-    svg.innerHTML = `<path class="scalp" d="M182 44 L200 14 L218 44"/>
-      <ellipse class="scalp" cx="28" cy="205" rx="12" ry="30"/><ellipse class="scalp" cx="372" cy="205" rx="12" ry="30"/>
-      <circle class="scalp" cx="200" cy="205" r="165"/><circle class="guide" cx="200" cy="205" r="140"/>
-      <line class="guide" x1="200" y1="40" x2="200" y2="370"/><line class="guide" x1="35" y1="205" x2="365" y2="205"/><g id="lines"></g>`;
+    svg.innerHTML = `<path class="scalp" d="M182 44 L200 14 L218 44"/><ellipse class="scalp" cx="28" cy="205" rx="12" ry="30"/><ellipse class="scalp" cx="372" cy="205" rx="12" ry="30"/>
+      <circle class="scalp" cx="200" cy="205" r="165"/><circle class="guide" cx="200" cy="205" r="140"/><line class="guide" x1="200" y1="40" x2="200" y2="370"/><line class="guide" x1="35" y1="205" x2="365" y2="205"/>`;
     const make = (name, [x, y], ref) => {
       const g = document.createElementNS(svgNS, "g");
-      g.setAttribute("class", "el" + (ref ? " ref" : ""));
-      g.dataset.s = name;
+      g.setAttribute("class", "el" + (ref ? " ref" : "")); g.dataset.s = name;
       g.innerHTML = `<circle class="hit" cx="${x}" cy="${y}" r="25"/><circle class="disc" cx="${x}" cy="${y}" r="16"/><text x="${x}" y="${y}">${name}</text>`;
-      if (!ref) { g.setAttribute("tabindex", "0"); g.setAttribute("role", "button"); }
-      else g.setAttribute("aria-hidden", "true");
+      if (ref) g.setAttribute("aria-hidden", "true"); else { g.setAttribute("tabindex", "0"); g.setAttribute("role", "button"); }
       svg.appendChild(g);
     };
-    Object.entries(ELECTRODES).forEach(([n, p]) => make(n, p, false));
+    ORDER.forEach(n => make(n, ELECTRODES[n], false));
     Object.entries(REFS).forEach(([n, p]) => make(n, p, true));
-    const toggle = name => { if (!F.useArea) return; const sel = selSites(); sel.has(name) ? sel.delete(name) : sel.add(name); setSites(sel); update(); };
-    svg.addEventListener("click", e => { const g = e.target.closest(".el:not(.ref)"); if (g) toggle(g.dataset.s); });
-    svg.addEventListener("keydown", e => { const g = e.target.closest(".el:not(.ref)"); if (g && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); toggle(g.dataset.s); } });
-    const tipOn = e => { const g = e.target.closest(".el:not(.ref)"); showTip(g ? g.dataset.s : null); };
-    svg.addEventListener("mouseover", tipOn); svg.addEventListener("focusin", tipOn);
+    const pick = s => { st.el = st.el === s ? "" : s; if (st.el && st.region && !REGIONS[st.region].includes(st.el)) st.region = ""; update(); };
+    svg.addEventListener("click", e => { const g = e.target.closest(".el:not(.ref)"); if (g) pick(g.dataset.s); });
+    svg.addEventListener("keydown", e => { const g = e.target.closest(".el:not(.ref)"); if (g && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); pick(g.dataset.s); } });
+    const tip = e => { const g = e.target.closest(".el:not(.ref)"); showTip(g ? g.dataset.s : null); };
+    svg.addEventListener("mouseover", tip); svg.addEventListener("focusin", tip);
     svg.addEventListener("mouseleave", () => showTip(null)); svg.addEventListener("focusout", () => showTip(null));
   }
-  // Studies per electrode for the current layer, band, direction and disorder (area ignored, so the map shows where to look).
   let siteN = {};
-  function countSites() {
+  function paintHead() {
+    // Studies per electrode for the band and disorder chosen (electrode and region filters ignored, so the map shows where to look).
     siteN = {};
-    const add = x => { (REGIONS[x] || [x]).forEach(e => { if (ELECTRODES[e]) siteN[e] = (siteN[e] || 0) + 1; }); };
-    const dirOk = v => F.dir === "any" || v === F.dir || (F.layer === "nf" && v === "regulate");
-    const pool = F.layer === "connectivity" ? (D.connectivity || []) : D.findings.filter(f => f.type === (F.layer === "nf" ? "protocol" : "biomarker"));
-    pool.filter(f => (!F.cond || f.condition === F.cond) && (F.band ? f.changes[F.band] && dirOk(f.changes[F.band]) : Object.values(f.changes).some(dirOk)))
-      .forEach(f => { const set = new Set(); (f.pairs ? f.pairs.flat() : f.sites).forEach(x => (REGIONS[x] || [x]).forEach(e => set.add(e))); set.forEach(add); });
-  }
-  function showTip(name) {
-    const t = $("tip");
-    if (!name) {
-      const sel = F.useArea ? selSites() : new Set(), nb = F.useArea ? nbSites() : new Set();
-      if (!F.useArea) { t.textContent = F.cond ? `Shading: number of ${F.layer === "nf" ? "neurofeedback studies training" : "studies reporting differences"} at each electrode.` : "Pick a condition to see its sites."; return; }
-      t.innerHTML = sel.size ? `Area: <strong>${esc(areaText())}</strong>${nb.size ? " + neighbouring electrodes (dashed)" : ""}` : "Shaded electrodes have studies. Tap to pick an area.";
-      return;
-    }
-    const n = siteN[name] || 0, alt = ALT[name] ? ` (10-10: ${ALT[name]})` : "";
-    t.innerHTML = `<strong>${name}</strong>${alt} · ${cap(regionOf(name))} · ${n ? n + (n === 1 ? " study" : " studies") : "no studies for these filters"}`;
-  }
-  function paintHead(rows) {
-    countSites();
-    const sel = F.useArea ? selSites() : new Set(), nb = F.useArea ? nbSites() : new Set();
+    MARKERS.forEach(f => { if (st.cond && f.condition !== st.cond) return; if (st.band && !f.changes[st.band]) return; f.sites.forEach(s => siteN[s] = (siteN[s] || 0) + 1); });
+    const reg = new Set(st.region ? REGIONS[st.region] : []);
     $("head").querySelectorAll(".el:not(.ref)").forEach(g => {
-      const k = g.dataset.s, n = siteN[k] || 0, on = sel.has(k);
-      g.classList.remove("lv1", "lv2", "lv3");
-      if (n) g.classList.add(n >= 8 ? "lv3" : n >= 3 ? "lv2" : "lv1");
-      g.classList.toggle("sel", on); g.classList.toggle("nb", !on && nb.has(k));
-      g.setAttribute("aria-pressed", String(on));
-      g.setAttribute("aria-label", `${k}${ALT[k] ? " (" + ALT[k] + ")" : ""}: ${n} ${n === 1 ? "study" : "studies"}${nb.has(k) ? ", neighbouring" : ""}`);
+      const k = g.dataset.s, n = siteN[k] || 0;
+      g.classList.remove("lv1", "lv2", "lv3"); if (n) g.classList.add(n >= 12 ? "lv3" : n >= 4 ? "lv2" : "lv1");
+      g.classList.toggle("sel", st.el === k); g.classList.toggle("inreg", st.el !== k && reg.has(k));
+      g.setAttribute("aria-pressed", String(st.el === k));
+      g.setAttribute("aria-label", `${k}${ALT[k] ? " (" + ALT[k] + ")" : ""}: ${n} ${n === 1 ? "study" : "studies"}`);
     });
-    let l = "";
-    if (F.layer === "connectivity") {
-      const seen = new Set();
-      rows.filter(r => r.p).forEach(r => {
-        const loc = r.p.location; if (seen.has(loc)) return; seen.add(loc);
-        const [a, b] = loc.split("–"); const A = CENTRE[a], B = CENTRE[b]; if (!A || !B) return;
-        if (a === b) l += `<ellipse class="link-line" cx="${A[0]}" cy="${A[1]}" rx="34" ry="22"/>`;
-        else { const mx = (A[0] + B[0]) / 2, my = (A[1] + B[1]) / 2 - 26; l += `<path class="link-line" d="M${A[0]} ${A[1]} Q${mx} ${my} ${B[0]} ${B[1]}"/>`; }
-      });
-    }
-    $("lines").innerHTML = l;
     showTip(null);
   }
-
-
-  // ---------- matching ----------
-  // Abstract-only studies that would fall under a pattern; shown greyed, never pooled.
-  function abstractFor(cond, band, loc, feature) {
-    return ALLF.filter(f => f.source === "abstract" && f.condition === cond && f.changes && f.changes[band] && (
-      feature === "connectivity" ? f.type === "connectivity" && (f.pairs || []).some(([a, b]) => [regionOf(a), regionOf(b)].sort().join("–") === loc.split("–").sort().join("–"))
-        : f.type === "biomarker" && (feature === "asymmetry" ? f.changes[band] === "asymmetry" : f.changes[band] !== "asymmetry") && (f.sites.length === 0 || f.sites.some(s => regionOf(s) === loc))));
+  function showTip(s) {
+    if (!s) { $("tip").textContent = st.el ? `${st.el} selected · tap it again to clear` : "Darker = more studies. Tap an electrode to filter."; return; }
+    const n = siteN[s] || 0;
+    $("tip").textContent = `${s}${ALT[s] ? " (" + ALT[s] + ")" : ""} · ${cap(LOBE(s))} · ${n} ${n === 1 ? "study" : "studies"}`;
   }
 
-  function rowsSynth() {
-    const feat = F.layer === "connectivity" ? ["connectivity"] : ["power", "asymmetry"];
-    const AR = areaRegions();
-    const how = p => !AR ? "direct" : p.feature === "connectivity"
-      ? (p.location.split("–").some(r => AR[r] === "direct") ? "direct" : p.location.split("–").some(r => AR[r]) ? "nb" : null)
-      : AR[p.location] || null;
-    const ps = S.patterns.filter(p => feat.includes(p.feature)
-      && (!F.band || p.band === F.band)
-      && (!F.cond || p.condition === F.cond)
-      && how(p)
-      && (p.feature === "asymmetry" ? F.dir === "any" : F.dir === "any" || p.direction === F.dir));
-    const rows = ps.map(p => ({ p, cond: p.condition, nb: how(p) === "nb", abs: abstractFor(p.condition, p.band, p.location, p.feature) }));
-    // Disorders with only abstract-only studies for this lookup: listed greyed so nothing is hidden.
-    if (F.layer === "power" && F.band) {
-      const have = new Set(rows.map(r => r.cond + "|" + r.p.band + "|" + r.p.location));
-      const extra = {};
-      ALLF.filter(f => f.source === "abstract" && f.type === "biomarker" && f.changes[F.band] && (F.dir === "any" || f.changes[F.band] === F.dir) && (!F.cond || f.condition === F.cond))
-        .forEach(f => { const regs = f.sites.length ? [...new Set(f.sites.map(regionOf))] : RNAMES; regs.filter(r => !AR || AR[r]).forEach(r => {
-          const k = f.condition + "|" + F.band + "|" + r; if (have.has(k)) return; (extra[k] = extra[k] || { cond: f.condition, band: F.band, loc: r, nb: !!AR && AR[r] === "nb", abs: [] }).abs.push(f); }); });
-      Object.values(extra).forEach(e => rows.push({ p: null, cond: e.cond, band: e.band, loc: e.loc, nb: e.nb, abs: [...new Set(e.abs)] }));
-    }
-    rows.sort((a, b) => {
-      if (a.nb !== b.nb) return a.nb ? 1 : -1;
-      if (!a.p !== !b.p) return a.p ? -1 : 1;
-      if (!a.p) return b.abs.length - a.abs.length;
-      return (VERDICT_RANK[a.p.verdict] ?? 9) - (VERDICT_RANK[b.p.verdict] ?? 9) || certLevel(b.p.certainty) - certLevel(a.p.certainty) || b.p.k - a.p.k;
-    });
-    return rows;
-  }
-
-  const EV_RANK = { strong: 0, moderate: 1, preliminary: 2, contested: 3 };
-  const BORDER = Object.fromEntries(D.bands.map((b, i) => [b.id, i]));
-  const TRAIN = { up: "▲", down: "▼", regulate: "⇅", asymmetry: "⇆", mixed: "◆" };
-  const sigLabel = sig => sig.split("|").map(x => { const [b, v] = x.split(":"); return `${BAND[b] ? BAND[b].name : b} ${TRAIN[v] || v}`; }).join(" · ");
-  const OPP = { up: "down", down: "up" };
-  function rowsNF() {
-    const fs = D.findings.filter(f => f.type === "protocol" && (!F.cond || f.condition === F.cond));
-    const sum = list => ({ best: list.map(f => f.evidence).sort((a, b) => EV_RANK[a] - EV_RANK[b])[0], sham: list.filter(f => f.metrics.control === "sham" || f.metrics.blinded).length });
-    if (!F.cond) {
-      const g = {}; fs.forEach(f => (g[f.condition] = g[f.condition] || []).push(f));
-      return Object.entries(g).map(([cond, list]) => Object.assign({ nf: list, cond, pick: true }, sum(list)))
-        .sort((a, b) => EV_RANK[a.best] - EV_RANK[b.best] || b.nf.length - a.nf.length);
-    }
-    // One row per protocol: the set of bands trained and the direction each is pushed.
-    const g = {};
-    fs.forEach(f => { const sig = Object.entries(f.changes).sort((x, y) => BORDER[x[0]] - BORDER[y[0]]).map(([b, v]) => b + ":" + v).join("|"); (g[sig] = g[sig] || []).push(f); });
-    const finding = state.from === "eeg" && state.conn !== "1" && state.band ? { band: state.band, dir: state.dir } : null;
-    return Object.entries(g).map(([sig, list]) => {
-      const sites = [...new Set(list.flatMap(f => f.sites))].sort((a, b) => Object.keys(ELECTRODES).indexOf(a) - Object.keys(ELECTRODES).indexOf(b));
-      const match = !!finding && list.some(f => [OPP[finding.dir], "regulate"].includes(f.changes[finding.band]));
-      return Object.assign({ nf: list, cond: F.cond, sig, sites, match }, sum(list));
-    }).sort((a, b) => (b.match - a.match) || EV_RANK[a.best] - EV_RANK[b.best] || b.nf.length - a.nf.length);
-  }
-
-  // ---------- rendering ----------
-  const meter = lvl => `<span class="meter" aria-hidden="true">${[1, 2, 3, 4].map(i => `<i class="${i <= lvl ? "f" : ""}"></i>`).join("")}</span>`;
-  function votes(p) {
-    if (p.feature === "asymmetry") return `<span class="votes"><span>${p.k} ${p.k === 1 ? "study" : "studies"} · asymmetry</span></span>`;
-    const t = p.higher + p.lower + p.unclear || 1;
-    return `<span class="votes"><span class="bar" aria-hidden="true"><i class="u" style="width:${p.higher / t * 100}%"></i><i class="dn" style="width:${p.lower / t * 100}%"></i><i class="q" style="width:${p.unclear / t * 100}%"></i></span>
-      <span>${p.higher} ▲ · ${p.lower} ▼ · ${p.unclear} ?</span></span>`;
-  }
-  function subLabel(band, loc, nb) {
-    const parts = [], AR = areaRegions();
-    if (!F.band) parts.push(BAND[band] ? BAND[band].name : band);
-    if (!AR || Object.keys(AR).length > 1 || F.layer === "connectivity") parts.push(cap(loc));
-    if (nb) parts.push("neighbouring");
-    return parts.length ? `<span class="sub">${esc(parts.join(" · "))}</span>` : "";
-  }
-  function rowHtml(r, i) {
-    const name = esc(COND[r.cond] ? COND[r.cond].name : r.cond);
-    if (r.nf) {
-      const label = r.sig ? esc(sigLabel(r.sig)) : name;
-      const sub = r.sig ? `<span class="sub">${r.sites.length ? esc(r.sites.join(" ")) : "Individualised sites"}</span>` : "";
-      return `<button class="row" type="button" data-i="${i}"><span class="d">${label}${r.match ? `<span class="match">fits your finding</span>` : ""}${sub}</span>
-        <span class="votes"><span>${r.nf.length} ${r.nf.length === 1 ? "study" : "studies"}</span></span>
-        <span class="cert">${esc(cap(r.best))}</span><span class="verdict">${r.sham ? r.sham + " sham / blinded" : "no sham control"}</span><span class="chev" aria-hidden="true">›</span></button>`;
-    }
-    if (!r.p) {
-      return `<button class="row ghost" type="button" data-i="${i}"><span class="d">${name}${subLabel(r.band, r.loc, r.nb)}</span>
-        <span class="votes"><span>${r.abs.length} abstract-only</span></span><span class="cert">Not pooled</span><span class="verdict">no full text yet</span><span class="chev" aria-hidden="true">›</span></button>`;
-    }
-    const p = r.p, lv = certLevel(p.certainty), consistent = /^consistently/.test(p.verdict);
-    const byDx = state.step === "assess" && state.from === "dx";
-    const lead = byDx ? `${esc(BAND[p.band] ? BAND[p.band].name : p.band)} ${p.feature === "asymmetry" ? "⇆ asymmetry" : p.direction === "up" ? "▲" : "▼"}<span class="sub">${esc(cap(p.location))}</span>` : name + subLabel(p.band, p.location, r.nb);
-    return `<button class="row" type="button" data-i="${i}"><span class="d">${lead}</span>
-      ${votes(p)}
-      <span class="cert">${lv ? meter(lv) + esc(p.certainty) : "<span class='verdict'>Not rated</span>"}<span class="sr"> certainty</span></span>
-      <span class="verdict${consistent ? " yes" : ""}">${esc(cap(p.verdict))}${r.abs.length ? ` <span class="mono" style="color:var(--faint)">+${r.abs.length} abstract</span>` : ""}</span>
-      <span class="chev" aria-hidden="true">›</span></button>`;
-  }
-  function title() {
-    const cn = F.cond && COND[F.cond] ? COND[F.cond].name : "";
-    if (state.step === "treat") return cn ? `Neurofeedback studied for ${cn}` : "Neurofeedback studies by condition";
-    if (state.from === "dx") return cn ? `${cn}: where the EEG ${F.layer === "connectivity" ? "connectivity " : ""}differs` : "Pick the client's diagnosis";
-    const at = areaText(), band = F.band ? BAND[F.band].name.toLowerCase() : "";
-    if (F.layer === "connectivity") return `${F.dir === "up" ? "More" : "Less"} ${band} connectivity${at ? " with " + at + (groupOf() ? " sites" : "") : ""}`;
-    const g = groupOf();
-    return `${F.dir === "up" ? "Higher" : "Lower"} ${g ? at + " " : ""}${band}${at && !g ? " at " + at : ""}`;
-  }
-
-  let ROWS = [], LIMIT = 12;
+  // ---------- render ----------
+  let LINES = [], LIMIT = 15, TLINES = [], TLIMIT = 8;
   function render() {
-    derive(); syncControls();
-    const needCond = state.step === "assess" && state.from === "dx" && !F.cond;
-    ROWS = needCond ? [] : F.layer === "nf" ? rowsNF() : rowsSynth();
-    $("rTitle").textContent = cap(title());
-    if (F.layer === "nf") {
-      const n = ROWS.reduce((a, r) => a + r.nf.length, 0);
-      $("rCount").textContent = F.cond ? `${ROWS.length} ${ROWS.length === 1 ? "protocol" : "protocols"} · ${n} studies` : `${n} studies`;
-    } else {
-      const conds = new Set(ROWS.map(r => r.cond)).size;
-      const nStudies = new Set(ROWS.flatMap(r => (r.p ? r.p.studies.flatMap(s => s.ids) : []).concat(r.abs.map(f => f.id)))).size;
-      $("rCount").textContent = needCond ? "" : state.from === "dx" ? `${ROWS.length} patterns · ${nStudies} studies` : `${conds} ${conds === 1 ? "disorder" : "disorders"} · ${nStudies} studies`;
-    }
-    const head = F.layer === "nf"
-      ? `<div class="thead"><span>${F.cond ? "Protocol (bands trained)" : "Condition"}</span><span>Studies</span><span>Best evidence</span><span>Controls</span><span></span></div>`
-      : `<div class="thead"><span>${state.from === "dx" ? "Pattern" : "Disorder"}</span><span>Studies (direction)</span><span>Certainty</span><span>Pooled result</span><span></span></div>`;
-    $("list").innerHTML = needCond ? `<div class="empty">Pick a diagnosis above to see where its resting EEG has been found to differ.</div>`
-      : ROWS.length ? head + ROWS.slice(0, LIMIT).map(rowHtml).join("") + (ROWS.length > LIMIT ? `<button class="more" type="button" id="moreBtn">Show ${ROWS.length - LIMIT} more</button>` : "")
-      : `<div class="empty">${state.step === "treat" ? "No neurofeedback studies recorded for this condition yet." : "Nothing recorded here. Try another band, or tap more electrodes."}</div>`;
-    $("legend").innerHTML = F.layer === "nf" ? `<span>▲ trained up · ▼ trained down · ⇅ regulated</span>` : `<span><i style="background:var(--up)"></i>▲ higher</span><span><i style="background:var(--down)"></i>▼ lower</span><span><i style="background:var(--unclear)"></i>? unclear</span><span>Pooled from full-text studies only</span>`;
-    // Hand-off between the two steps.
-    let nx = "";
-    if (state.step === "assess" && state.from === "dx" && F.cond && nfCount(F.cond)) nx = `<button class="cta" type="button" data-treat="${F.cond}">2 · Neurofeedback studied for ${esc(COND[F.cond].name)} →</button>`;
-    if (state.step === "assess" && state.from === "eeg" && ROWS.length) nx = `<span class="note">Tap a disorder for the studies, then go on to its treatment evidence.</span>`;
-    if (state.step === "treat" && F.cond && state.from === "eeg" && state.band && ROWS.some(r => r.match)) nx = `<span class="note">“Fits your finding” = trains ${esc(BAND[state.band].name.toLowerCase())} ${state.dir === "up" ? "down" : "up"}, against the ${state.dir === "up" ? "higher" : "lower"} ${esc(BAND[state.band].name.toLowerCase())} you assessed.</span>`;
-    $("next").innerHTML = nx;
-    $("foot").innerHTML = state.step === "treat"
-      ? `These are the protocols that have been studied and how strong that evidence is. They are not treatment guidelines: choose a protocol from the client's full assessment and clinical judgement. <a href="methods.html#grading">How evidence is graded</a>`
-      : `Group-level research findings, not a diagnostic test for one person. Abstract-only studies are shown but left out of the pooled result. <a href="methods.html#grading">How certainty is rated</a>`;
-    paintHead(ROWS);
+    fillElectrodes();
+    $("fBand").value = st.band; $("fEl").value = st.el; $("fReg").value = st.region; $("fCond").value = st.cond;
+    [["fBand", st.band], ["fEl", st.el], ["fReg", st.region], ["fCond", st.cond]].forEach(([id, v]) => $(id).classList.toggle("set", !!v));
+    $("reset").hidden = !(st.band || st.el || st.region || st.cond);
+    LINES = lines();
+    const papers = new Set(LINES.flatMap(L => L.up.concat(L.down, L.other).map(f => f.id))).size;
+    $("eCount").textContent = `${LINES.length} ${LINES.length === 1 ? "line" : "lines"} · ${papers} papers`;
+    $("list").innerHTML = LINES.length
+      ? LINES.slice(0, LIMIT).map(rowHtml).join("") + (LINES.length > LIMIT ? `<button class="more" type="button" id="more">Show ${Math.min(30, LINES.length - LIMIT)} more</button>` : "")
+      : `<div class="empty">No studies match these filters.</div>`;
+    TLINES = tlines();
+    $("tCount").textContent = `${TLINES.length} ${TLINES.length === 1 ? "protocol" : "protocols"} · ${TLINES.reduce((a, T) => a + T.list.length, 0)} studies`;
+    $("tlist").innerHTML = TLINES.length
+      ? TLINES.slice(0, TLIMIT).map(trowHtml).join("") + (TLINES.length > TLIMIT ? `<button class="more" type="button" id="tmore">Show ${TLINES.length - TLIMIT} more</button>` : "")
+      : `<div class="empty">No neurofeedback studies match these filters.</div>`;
+    paintHead();
   }
-  function toTreat(cond) { state.cond = cond; if ($("sheet").classList.contains("open")) closeSheet(); goStep("treat"); }
-  $("next").addEventListener("click", e => { const b = e.target.closest("[data-treat]"); if (b) toTreat(b.dataset.treat); });
-  $("sBody").addEventListener("click", e => { const b = e.target.closest("[data-treat]"); if (b) toTreat(b.dataset.treat); });
-  function update() { LIMIT = 12; saveHash(); render(); }
+  function update() { LIMIT = 15; TLIMIT = 8; save(); render(); }
+  $("tlist").addEventListener("click", e => {
+    if (e.target.id === "tmore") { TLIMIT = 999; render(); return; }
+    const b = e.target.closest(".row"); if (b && TLINES[+b.dataset.t]) openTreat(TLINES[+b.dataset.t]);
+  });
   $("list").addEventListener("click", e => {
-    if (e.target.id === "moreBtn") { LIMIT = 999; render(); return; }
-    const b = e.target.closest(".row"), r = b && ROWS[+b.dataset.i]; if (!r) return;
-    if (r.pick) { state.cond = r.cond; update(); return; }
-    openSheet(r);
+    if (e.target.id === "more") { LIMIT += 30; render(); return; }
+    const b = e.target.closest(".row"); if (b && LINES[+b.dataset.i]) openSheet(LINES[+b.dataset.i]);
   });
 
-  // ---------- studies ----------
-  function pubLink(f) {
-    const m = /^pm-(\d+)/.exec(f.id);
-    return m ? "https://pubmed.ncbi.nlm.nih.gov/" + m[1] + "/" : "https://pubmed.ncbi.nlm.nih.gov/?term=" + encodeURIComponent(f.cite.title);
-  }
-  function studyHtml(f, vote, ghost) {
+  // ---------- papers panel ----------
+  function pubLink(f) { const m = /^pm-(\d+)/.exec(f.id); return m ? "https://pubmed.ncbi.nlm.nih.gov/" + m[1] + "/" : "https://pubmed.ncbi.nlm.nih.gov/?term=" + encodeURIComponent(f.cite.title); }
+  function paper(f) {
     const c = f.cite || {}, first = (c.authors || "").split(",")[0];
-    const ch = Object.entries(f.changes || {}).map(([b, v]) => `${BAND[b] ? BAND[b].name : b} ${ARROW[v] || v}`).join("  ");
-    const tags = [`<span class="tag${vote ? " v" : ""}">${vote ? (ARROW[vote] || "") + " " + vote : esc(f.evidence)}</span>`,
-      `<span class="tag">${esc(f.design || DESIGN[f.metrics.design] || "")}</span>`];
-    if (f.metrics && f.metrics.n) tags.push(`<span class="tag">n ${f.metrics.n}</span>`);
-    if (f.source === "abstract") tags.push(`<span class="tag">abstract only</span>`);
-    if (f.type === "protocol" && f.metrics.control) tags.push(`<span class="tag">${esc(f.metrics.control)} control</span>`);
-    return `<div class="study${ghost ? " ghost" : ""}"><span class="c">${esc(f.claim)}</span>
-      <span class="m">${esc(first)} ${esc(c.year)} · ${esc(c.journal)}${ch ? " · " + esc(ch) : ""}${f.sites && f.sites.length ? " · " + esc(f.sites.join(" ")) : ""}${f.pairs ? " · " + esc(f.pairs.map(p => p.join("–")).join(", ")) : ""}</span>
-      <span class="tags">${tags.join("")}</span>
-      <details><summary>Details</summary><p style="margin:8px 0">${esc(f.detail)}</p><em>${esc(c.title)}</em> <a href="${pubLink(f)}" target="_blank" rel="noopener">PubMed ↗</a></details></div>`;
+    return `<div class="paper"><span class="c">${esc(f.claim)}</span>
+      <span class="m">${esc(first)} ${esc(c.year)} · ${esc(c.journal)} · ${esc(f.design || DESIGN[f.metrics.design] || "")}${f.metrics.n ? " · n " + f.metrics.n : ""}${f.source === "abstract" ? ' · <span class="ab">abstract only</span>' : ""}</span>
+      <a href="${pubLink(f)}" target="_blank" rel="noopener">PubMed ↗</a></div>`;
   }
-
-
-  // ---------- detail sheet ----------
   let lastFocus = null;
-  function openSheet(r) {
+  function openSheet(L) {
     lastFocus = document.activeElement;
-    const name = esc(COND[r.cond] ? COND[r.cond].name : r.cond);
-    let h = `<div class="bar-top"><span class="count">${state.step === "treat" ? "Treatment evidence" : "Assessment"}</span><button class="x" type="button" id="sClose" aria-label="Close">×</button></div><h2 id="sTitle">${name}</h2>`;
-    let studies = [];
-    if (r.nf) {
-      studies = r.nf;
-      if (r.sig) h = h.replace(`<h2 id="sTitle">${name}</h2>`, `<h2 id="sTitle">${esc(sigLabel(r.sig))}</h2><p class="count" style="margin:0">${name} · ${r.sites.length ? esc(r.sites.join(" ")) : "individualised sites"}</p>`);
-      h += `<div class="facts"><div class="fact"><span>Studies</span><b>${r.nf.length}</b></div><div class="fact"><span>Best evidence</span><b>${esc(cap(r.best))}</b></div><div class="fact"><span>Sham / blinded</span><b>${r.sham}</b></div></div>`;
-      if (r.match) h += `<p class="foot" style="color:var(--ink)">Trains against the pattern you assessed.</p>`;
-      h += `<div class="sec">Studies</div>` + r.nf.map(f => studyHtml(f, null, f.source === "abstract")).join("");
-    } else if (r.p) {
-      const p = r.p;
-      h += `<p class="count" style="margin:0">${esc(BAND[p.band] ? BAND[p.band].name : p.band)} · ${esc(cap(p.location))} · ${esc(p.feature === "connectivity" ? (p.measure || "") + " connectivity" : p.feature)}</p>`;
-      h += `<div class="facts">
-        <div class="fact"><span>Certainty</span><b class="cert">${certLevel(p.certainty) ? meter(certLevel(p.certainty)) + esc(p.certainty) : "Not rated"}</b></div>
-        <div class="fact"><span>Pooled result</span><b>${esc(cap(p.verdict))}</b></div>
-        <div class="fact"><span>Studies</span><b>${p.k}${p.n_total ? ` <span class="count">· n ${p.n_total}</span>` : ""}</b></div></div>`;
-      if (p.feature !== "asymmetry") h += votes(p);
-      const why = (p.downgrades || []).map(d => `<li>${esc(cap(d))}</li>`);
-      if (p.robust) why.push("<li>Holds in the sensitivity analyses</li>");
-      if (p.meta_analyses && p.meta_analyses.length) why.push(`<li>${p.meta_analyses.length} meta-analysis on this question</li>`);
-      if (why.length) h += `<ul class="why">${why.join("")}</ul>`;
-      studies = p.studies.map(s => BYID[s.ids[0]]).filter(Boolean);
-      h += `<div class="sec">Pooled studies</div>` + p.studies.map(s => BYID[s.ids[0]] ? studyHtml(BYID[s.ids[0]], s.vote) : `<div class="study"><span class="c">${esc(s.label)}</span></div>`).join("");
-    } else {
-      h += `<p class="foot">Only abstract-only studies so far. They are listed here but not pooled until the full text has been checked.</p>`;
-    }
-    if (r.abs && r.abs.length) h += `<div class="sec">Abstract only · not pooled</div>` + r.abs.map(f => studyHtml(f, null, true)).join("");
-    const syms = [...new Set(studies.concat(r.abs || []).flatMap(f => f.symptoms || []))].filter(s => SYM[s]);
-    if (syms.length) h += `<div class="sec">${r.nf ? "Outcomes measured" : "Symptoms in these groups"}</div><div class="syms">${syms.map(s => `<span class="tag">${esc(SYM[s].name)}</span>`).join("")}</div>`;
-    if (!r.nf && nfCount(r.cond)) h += `<div class="sec">Next</div><button class="cta" type="button" data-treat="${r.cond}">2 · Neurofeedback studied for ${name} →</button>`;
+    const band = BAND[L.band].name, cn = COND[L.cond].name;
+    let h = `<div class="bar-top"><button class="x" type="button" id="sClose" aria-label="Close">×</button></div>
+      <h2 id="sTitle">${siteName(L.site)} · ${esc(band)} · ${esc(cn)}</h2>
+      <div class="big"><span>▲ ${L.up.length}<small>higher</small></span><span>▼ ${L.down.length}<small>lower</small></span>${L.other.length ? `<span>${L.other.length}<small>mixed / asymmetry</small></span>` : ""}</div>`;
+    const lobe = L.site === "all" ? null : LOBE(L.site);
+    const p = lobe && S.patterns.find(x => x.feature === "power" && x.condition === L.cond && x.band === L.band && x.location === lobe);
+    if (p) h += `<p class="pooled">Pooled for the whole ${lobe} region (full-text studies only): <b>${p.higher} ▲ · ${p.lower} ▼ · ${p.unclear} unclear</b> · ${esc(p.certainty || "not rated")} certainty · ${esc(p.verdict)}.</p>`;
+    if (L.up.length) h += `<div class="sec">Found higher</div>` + L.up.map(paper).join("");
+    if (L.down.length) h += `<div class="sec">Found lower</div>` + L.down.map(paper).join("");
+    if (L.other.length) h += `<div class="sec">Mixed or asymmetry</div>` + L.other.map(paper).join("");
     $("sBody").innerHTML = h;
-    $("sheet").classList.add("open"); document.body.style.overflow = "hidden";
-    $("sClose").focus();
+    $("sheet").classList.add("open"); document.body.style.overflow = "hidden"; $("sClose").focus();
+  }
+  function openTreat(T) {
+    lastFocus = document.activeElement;
+    const sham = T.list.filter(f => f.metrics.control === "sham" || f.metrics.blinded).length;
+    $("sBody").innerHTML = `<div class="bar-top"><button class="x" type="button" id="sClose" aria-label="Close">×</button></div>
+      <h2 id="sTitle">${esc(T.sig)}</h2><p class="pooled">${esc(COND[T.cond].name)} · sites: <b>${T.sites.length ? esc(T.sites.join(" ")) : "individualised"}</b> · best evidence: <b>${esc(T.best)}</b> · ${sham} sham-controlled or blinded</p>
+      <div class="sec">Studies</div>` + T.list.map(paper).join("");
+    $("sheet").classList.add("open"); document.body.style.overflow = "hidden"; $("sClose").focus();
   }
   function closeSheet() { $("sheet").classList.remove("open"); document.body.style.overflow = ""; if (lastFocus) lastFocus.focus(); }
   $("sheet").addEventListener("click", e => { if (e.target.id === "scrim" || e.target.id === "sClose") closeSheet(); });
   document.addEventListener("keydown", e => { if (e.key === "Escape" && $("sheet").classList.contains("open")) closeSheet(); });
 
-  // ---------- go ----------
-  const nPapers = D.findings.length + (D.connectivity || []).length;
-  $("heroSub").textContent = `Assess a client's resting EEG against ${nPapers} studies, then see which neurofeedback protocols have been studied.`;
-  $("footStats").textContent = `${D.findings.filter(f => f.type === "biomarker").length} EEG markers · ${(D.connectivity || []).length} connectivity · ${D.findings.filter(f => f.type === "protocol").length} neurofeedback${S.generated ? " · synthesis " + S.generated : ""}`;
+  $("stats").textContent = `${MARKERS.length} resting EEG studies · ${D.findings.filter(f => f.type === "protocol").length} neurofeedback studies`;
   drawHead(); render();
-})();
+}
 </script>
 </body>
 </html>
