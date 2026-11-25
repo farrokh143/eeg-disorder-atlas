@@ -3552,7 +3552,7 @@ window.NF_DATA = {
       cite: { authors: "Chan MKL, Yeung WKY, Yu JKP, Ng SSW, Tong RKY", year: 2023, title: "Exploratory Study on the Clinical use of EEG for the People with Chronic Stroke and Their Correlation with the Neuropsychological Outcome", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-29532955", source: "abstract", condition: "stroke", type: "biomarker",
+      id: "pm-29532955", rec: { eyes: "unclear", power: "unclear", icd11: "8B1", dx: "unclear" }, source: "abstract", condition: "stroke", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 94, k: null },
       sites: ["T3","T4","T5","T6"], bands: ["delta","theta","hibeta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up", hibeta: "up" }, symptoms: ["lowmood"],
@@ -3562,7 +3562,7 @@ window.NF_DATA = {
       cite: { authors: "Wang C, Chen Y, Sun C, Zhang Y, Ming D, Du J", year: 2018, title: "Electrophysiological changes in poststroke subjects with depressed mood: A quantitative EEG study", journal: "Int J Geriatr Psychiatry" }
     },
     {
-      id: "pm-33248434", source: "abstract", condition: "stroke", type: "biomarker",
+      id: "pm-33248434", rec: { eyes: "unclear", power: "unclear", icd11: "8B1", dx: "unclear" }, source: "abstract", condition: "stroke", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 39, k: null },
       sites: [], bands: ["theta"], direction: "asymmetry", evidence: "preliminary",
       changes: { theta: "asymmetry" }, symptoms: ["motor"],
@@ -3572,7 +3572,7 @@ window.NF_DATA = {
       cite: { authors: "Saes M, Meskers CGM, Daffertshofer A, van Wegen EEH, Kwakkel G, 4D-EEG consortium", year: 2021, title: "Are early measured resting-state EEG parameters predictive for upper limb motor impairment six months poststroke?", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-31707947", source: "abstract", condition: "stroke", type: "biomarker",
+      id: "pm-31707947", rec: { eyes: "unclear", power: "unclear", icd11: "8B1", dx: "unclear" }, source: "abstract", condition: "stroke", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 16, k: null },
       sites: ["Fp1"], bands: ["theta"], direction: "down", evidence: "preliminary",
       changes: { theta: "down" }, symptoms: ["motor"],
@@ -3582,7 +3582,7 @@ window.NF_DATA = {
       cite: { authors: "Rogers J, Middleton S, Wilson PH, Johnstone SJ", year: 2020, title: "Predicting functional outcomes after stroke: an observational study of acute single-channel EEG", journal: "Top Stroke Rehabil" }
     },
     {
-      id: "pm-30902439", source: "abstract", condition: "stroke", type: "biomarker",
+      id: "pm-30902439", rec: { eyes: "unclear", power: "unclear", icd11: "8B1", dx: "unclear" }, source: "abstract", condition: "stroke", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 32, k: null },
       sites: [], bands: ["delta","theta"], direction: "asymmetry", evidence: "preliminary",
       changes: { delta: "asymmetry", theta: "asymmetry" }, symptoms: ["motor"],
@@ -3592,7 +3592,7 @@ window.NF_DATA = {
       cite: { authors: "Saes M, Meskers CGM, Daffertshofer A, de Munck JC, Kwakkel G, van Wegen EEH, 4D-EEG consortium", year: 2019, title: "How does upper extremity Fugl-Meyer motor score relate to resting-state EEG in chronic stroke? A power spectral density analysis", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-28968458", source: "full-text", condition: "stroke", type: "biomarker",
+      id: "pm-28968458", rec: { eyes: "closed", power: "relative", icd11: "8B1", dx: "clinical diagnosis" }, source: "full-text", condition: "stroke", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: 19, k: null },
       sites: ["Fp1"], bands: ["delta","theta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "down" }, symptoms: ["cogdecline"],
@@ -3602,7 +3602,7 @@ window.NF_DATA = {
       cite: { authors: "Aminov A, Rogers JM, Johnstone SJ, Middleton S, Wilson PH", year: 2017, title: "Acute single channel EEG predictors of cognitive function after stroke", journal: "PLoS One" }
     },
     {
-      id: "pm-33759382", source: "full-text", condition: "stroke", type: "biomarker",
+      id: "pm-33759382", rec: { eyes: "closed", power: "relative", icd11: "8B1", dx: "unclear" }, source: "full-text", condition: "stroke", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 25, k: null },
       sites: [], bands: ["alpha","beta"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down", beta: "down" }, symptoms: ["motor"],
@@ -3612,7 +3612,7 @@ window.NF_DATA = {
       cite: { authors: "Snyder DB, Schmit BD, Hyngstrom AS, Beardsley SA", year: 2021, title: "Electroencephalography resting-state networks in people with Stroke", journal: "Brain and behavior" }
     },
     {
-      id: "pm-31174955", source: "full-text", condition: "stroke", type: "biomarker",
+      id: "pm-31174955", rec: { eyes: "unclear", power: "unclear", icd11: "8B1", dx: "clinical diagnosis" }, source: "full-text", condition: "stroke", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 24, k: null },
       sites: [], bands: ["delta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", alpha: "down" }, symptoms: ["motor"],
@@ -3622,7 +3622,7 @@ window.NF_DATA = {
       cite: { authors: "Shreve L, Kaur A, Vo C, Wu J, Cassidy JM, Nguyen A, et al.", year: 2019, title: "Electroencephalography Measures are Useful for Identifying Large Acute Ischemic Stroke in the Emergency Department", journal: "Journal of stroke and cerebrovascular diseases" }
     },
     {
-      id: "pm-32249674", source: "abstract", condition: "stroke", type: "biomarker",
+      id: "pm-32249674", rec: { eyes: "unclear", power: "unclear", icd11: "8B1", dx: "unclear" }, source: "abstract", condition: "stroke", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: 41, k: null },
       sites: [], bands: ["delta"], direction: "asymmetry", evidence: "preliminary",
       changes: { delta: "asymmetry" }, symptoms: ["motor"],
@@ -3632,7 +3632,7 @@ window.NF_DATA = {
       cite: { authors: "Saes M, Zandvliet SB, Andringa AS, Daffertshofer A, Twisk JWR, Meskers CGM, van Wegen EEH, Kwakkel G", year: 2020, title: "Is Resting-State EEG Longitudinally Associated With Recovery of Clinical Neurological Impairments Early Poststroke? A Prospective Cohort Study", journal: "Neurorehabilitation and Neural Repair" }
     },
     {
-      id: "pm-26936984", source: "abstract", condition: "stroke", type: "biomarker",
+      id: "pm-26936984", rec: { eyes: "unclear", power: "unclear", icd11: "8B1", dx: "unclear" }, source: "abstract", condition: "stroke", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 24, k: null },
       sites: [], bands: ["delta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up" }, symptoms: ["motor"],
@@ -3642,7 +3642,7 @@ window.NF_DATA = {
       cite: { authors: "Wu J, Srinivasan R, Burke Quinlan E, Solodkin A, Small SL, Cramer SC", year: 2016, title: "Utility of EEG measures of brain function in patients with acute stroke", journal: "Journal of neurophysiology" }
     },
     {
-      id: "pm-16495149", source: "abstract", condition: "stroke", type: "biomarker",
+      id: "pm-16495149", rec: { eyes: "both", power: "both", icd11: "8B1", dx: "unclear" }, source: "abstract", condition: "stroke", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 1, k: null },
       sites: [], bands: ["delta","theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", beta: "down" }, symptoms: ["motor"],
