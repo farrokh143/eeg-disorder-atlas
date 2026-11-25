@@ -2922,7 +2922,7 @@ window.NF_DATA = {
       cite: { authors: "Affan RO, et al.", year: 2018, title: "High-intensity binge drinking is associated with alterations in spontaneous neural oscillations in young adults", journal: "Alcohol" }
     },
     {
-      id: "pm-35149322", source: "abstract", condition: "sud", type: "biomarker",
+      id: "pm-35149322", rec: { eyes: "unclear", power: "unclear", icd11: "6C4", dx: "unclear" }, source: "abstract", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 36, k: null },
       sites: [], bands: ["beta","delta"], direction: "up", evidence: "preliminary",
       changes: { beta: "up", delta: "up" }, symptoms: ["impulsivity"],
@@ -2932,7 +2932,7 @@ window.NF_DATA = {
       cite: { authors: "Corace K, et al.", year: 2022, title: "Resting State EEG Activity Related to Impulsivity in People with Prescription Opioid Use Disorder", journal: "Psychiatry Res Neuroimaging" }
     },
     {
-      id: "pm-35662565", source: "abstract", condition: "sud", type: "biomarker",
+      id: "pm-35662565", rec: { eyes: "closed", power: "unclear", icd11: "6C4", dx: "unclear" }, source: "abstract", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 71, k: null },
       sites: [], bands: ["theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", alpha: "down" }, symptoms: ["craving"],
@@ -2942,7 +2942,7 @@ window.NF_DATA = {
       cite: { authors: "Martínez-Maldonado A, et al.", year: 2022, title: "Brain oscillatory functioning after long-term alcohol abstinence", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-35698004", source: "full-text", condition: "sud", type: "biomarker",
+      id: "pm-35698004", rec: { eyes: "unclear", power: "relative", icd11: "6C4", dx: "unclear" }, source: "full-text", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 48, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["inattention"],
@@ -2952,7 +2952,7 @@ window.NF_DATA = {
       cite: { authors: "Andriot T, et al.", year: 2022, title: "Electrophysiological and behavioral correlates of cannabis use disorder", journal: "Cogn Affect Behav Neurosci" }
     },
     {
-      id: "pm-35699268", source: "full-text", condition: "sud", type: "biomarker",
+      id: "pm-35699268", rec: { eyes: "unclear", power: "unclear", icd11: "6C4", dx: "unclear" }, source: "full-text", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 85, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["beta","gamma"], direction: "up", evidence: "preliminary",
       changes: { beta: "up", gamma: "up" }, symptoms: ["craving"],
@@ -2962,7 +2962,7 @@ window.NF_DATA = {
       cite: { authors: "Ngoh G, et al.", year: 2022, title: "Exploring resting frontal EEG and reflective functioning in maternal substance use", journal: "Infant Ment Health J" }
     },
     {
-      id: "pm-36890138", source: "full-text", condition: "sud", type: "biomarker",
+      id: "pm-36890138", rec: { eyes: "both", power: "relative", icd11: "6C4", dx: "unclear" }, source: "full-text", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 81, k: null },
       sites: [], bands: ["theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "down", alpha: "up" }, symptoms: ["craving"],
@@ -2972,7 +2972,7 @@ window.NF_DATA = {
       cite: { authors: "Lee H, et al.", year: 2023, title: "Persistent impacts of smoking on resting-state EEG in male chronic smokers and past-smokers with 20 years of abstinence", journal: "Sci Rep" }
     },
     {
-      id: "pm-9146819", source: "abstract", condition: "sud", type: "biomarker",
+      id: "pm-9146819", rec: { eyes: "unclear", power: "relative", icd11: "6C4", dx: "DSM-III" }, source: "abstract", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 63, k: null },
       sites: [], bands: ["beta"], direction: "up", evidence: "preliminary",
       changes: { beta: "up" }, symptoms: ["craving"],
@@ -2992,7 +2992,7 @@ window.NF_DATA = {
       cite: { authors: "Günther W, et al.", year: 1997, title: "Functional EEG mapping and SPECT in detoxified male alcoholics", journal: "Eur Arch Psychiatry Clin Neurosci" }
     },
     {
-      id: "pm-9246556", source: "abstract", condition: "sud", type: "biomarker",
+      id: "pm-9246556", rec: { eyes: "unclear", power: "unclear", icd11: "6C4", dx: "DSM-III" }, source: "abstract", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 102, k: null },
       sites: [], bands: ["beta"], direction: "up", evidence: "preliminary",
       changes: { beta: "up" }, symptoms: ["craving"],
@@ -3002,7 +3002,7 @@ window.NF_DATA = {
       cite: { authors: "Costa L, et al.", year: 1997, title: "Quantitative electroencephalographic differences associated with alcohol, cocaine, heroin and dual-substance dependence", journal: "Drug Alcohol Depend" }
     },
     {
-      id: "pm-14522608", source: "abstract", condition: "ptsd", type: "biomarker",
+      id: "pm-14522608", rec: { eyes: "unclear", power: "unclear", icd11: "6B40", dx: "unclear" }, source: "abstract", condition: "ptsd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 116, k: null },
       sites: [], bands: ["alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "down", beta: "up" }, symptoms: ["intrusions","hyperarousal"],
@@ -3012,7 +3012,7 @@ window.NF_DATA = {
       cite: { authors: "Jokić-Begić N, et al.", year: 2003, title: "Quantitative electroencephalogram (qEEG) in combat veterans with post-traumatic stress disorder (PTSD)", journal: "Nord J Psychiatry" }
     },
     {
-      id: "pm-25046862", source: "abstract", condition: "ptsd", type: "biomarker",
+      id: "pm-25046862", rec: { eyes: "unclear", power: "unclear", icd11: "6B40", dx: "unclear" }, source: "abstract", condition: "ptsd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 34, k: null },
       sites: ["P3","Pz","P4","Fz"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["intrusions","hyperarousal"],
@@ -3022,7 +3022,7 @@ window.NF_DATA = {
       cite: { authors: "Imperatori C, et al.", year: 2014, title: "Aberrant EEG functional connectivity and EEG power spectra in resting state post-traumatic stress disorder: a sLORETA study", journal: "Biol Psychol" }
     },
     {
-      id: "pm-27238074", source: "abstract", condition: "ptsd", type: "biomarker",
+      id: "pm-27238074", rec: { eyes: "unclear", power: "unclear", icd11: "6B40", dx: "unclear" }, source: "abstract", condition: "ptsd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["T4","T6","P4"], bands: ["delta","theta"], direction: "down", evidence: "preliminary",
       changes: { delta: "down", theta: "down" }, symptoms: ["intrusions","hyperarousal"],
