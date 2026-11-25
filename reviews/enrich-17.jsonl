@@ -1,0 +1,10 @@
+{"id":"pm-29110563","eyes":"closed","power":"unclear","icd11":"6A05","dx":"unclear","quote":"eyes-closed Electroencephalograph (EEG) signals"}
+{"id":"pm-29457912","eyes":"open","power":"absolute","icd11":"6A05","dx":"unclear","quote":"with eyes open"}
+{"id":"pm-31163371","eyes":"closed","power":"relative","icd11":"6A05","dx":"unclear","quote":"eyes-closed resting period"}
+{"id":"pm-31233897","eyes":"both","power":"absolute","icd11":"6A05","dx":"research criteria","quote":"eyes closed (EC) and eyes open (EO) conditions"}
+{"id":"pm-31834950","eyes":"both","power":"both","icd11":"6A05","dx":"unclear","quote":"Resting-state eyes-open and eyes-closed EEG was measured"}
+{"id":"pm-31903823","eyes":"open","power":"unclear","icd11":"6A05","dx":"unclear","quote":"Resting-state EEG in eye-open (EO) condition was recorded"}
+{"id":"pm-31911342","eyes":"open","power":"relative","icd11":"6A05","dx":"clinical diagnosis","quote":"rest with eyes opened (EO)"}
+{"id":"pm-32682239","eyes":"unclear","power":"unclear","icd11":"6A05","dx":"unclear"}
+{"id":"pm-34529233","eyes":"closed","power":"both","icd11":"6A05","dx":"DSM-5","quote":"had an eyes-closed resting EEG recorded"}
+{"id":"pm-35151696","eyes":"open","power":"both","icd11":"6A05","dx":"unclear","quote":"using an eyes-open resting condition"}
