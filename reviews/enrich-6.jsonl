@@ -1,0 +1,10 @@
+{"id":"pm-33185607","eyes":"unclear","power":"unclear","icd11":"6D80+6D71","dx":"mixed"}
+{"id":"pm-35618112","eyes":"unclear","power":"unclear","icd11":"6D71","dx":"clinical diagnosis"}
+{"id":"pm-37248895","eyes":"unclear","power":"ratio-only","icd11":"6D71","dx":"clinical diagnosis"}
+{"id":"pm-37858173","eyes":"closed","power":"relative","icd11":"6D80+6D71","dx":"unclear","quote":"Twenty minutes eyes-closed resting-state EEG data"}
+{"id":"pm-39449097","eyes":"closed","power":"absolute","icd11":"6D80+6D71","dx":"unclear","quote":"One-minute resting-state eyes-closed EEG data"}
+{"id":"pm-36330876","eyes":"closed","power":"unclear","icd11":"6D80","dx":"unclear","quote":"resting-state eyes-closed electroencephalographic"}
+{"id":"pm-36413420","eyes":"closed","power":"unclear","icd11":"6D71","dx":"unclear","quote":"resting-state eyes closed electroencephalographic"}
+{"id":"pm-38217593","eyes":"unclear","power":"relative","icd11":"6D71","dx":"unclear"}
+{"id":"pm-38969018","eyes":"closed","power":"unclear","icd11":"subclinical","dx":"unclear","quote":"eyes-closed rsEEG"}
+{"id":"pm-40359673","eyes":"unclear","power":"relative","icd11":"6D80","dx":"unclear"}

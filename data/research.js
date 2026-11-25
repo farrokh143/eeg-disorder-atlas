@@ -639,7 +639,7 @@ window.NF_DATA = {
       cite: { authors: "Babiloni C, et al.", year: 2020, title: "Resting-state electroencephalographic delta rhythms may reflect global cortical arousal in healthy old seniors and patients with Alzheimer's disease dementia", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-33185607", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-33185607", rec: { eyes: "unclear", power: "unclear", icd11: "6D80+6D71", dx: "mixed" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 5, control: null, blinded: null, n: null, k: 6 },
       sites: [], bands: ["alpha"], direction: "down", evidence: "moderate",
       changes: { alpha: "down" }, symptoms: ["memory","cogdecline"],
@@ -659,7 +659,7 @@ window.NF_DATA = {
       cite: { authors: "Meghdadi AH, et al.", year: 2021, title: "Resting state EEG biomarkers of cognitive decline associated with Alzheimer's disease and mild cognitive impairment", journal: "PLoS One" }
     },
     {
-      id: "pm-35618112", source: "full-text", sample: "martin-ad-99", condition: "alzheimers", type: "biomarker",
+      id: "pm-35618112", rec: { eyes: "unclear", power: "unclear", icd11: "6D71", dx: "clinical diagnosis" }, source: "full-text", sample: "martin-ad-99", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 99, k: null },
       sites: ["F3","F4"], bands: ["alpha","beta"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "mixed", beta: "asymmetry" }, symptoms: ["memory","cogdecline"],
@@ -669,7 +669,7 @@ window.NF_DATA = {
       cite: { authors: "Martin T, et al.", year: 2022, title: "EEG asymmetry and cognitive testing in MCI identification", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-36330876", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-36330876", rec: { eyes: "closed", power: "unclear", icd11: "6D80", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 156, k: null },
       sites: ["C3","P3","C4","P4","O1","O2"], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "mixed" }, symptoms: ["memory","cogdecline"],
@@ -679,7 +679,7 @@ window.NF_DATA = {
       cite: { authors: "Del Percio C, et al.", year: 2022, title: "What a single electroencephalographic (EEG) channel can tell us about patients with dementia due to Alzheimer's disease", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-36413420", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-36413420", rec: { eyes: "closed", power: "unclear", icd11: "6D71", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 145, k: null },
       sites: ["C3","P3","C4","P4","O1","O2"], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["memory","cogdecline"],
@@ -689,7 +689,7 @@ window.NF_DATA = {
       cite: { authors: "Del Percio C, et al.", year: 2023, title: "What a Single Electroencephalographic (EEG) Channel Can Tell us About Alzheimer's Disease Patients With Mild Cognitive Impairment", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-37248895", source: "full-text", sample: "martin-ad-99", condition: "alzheimers", type: "biomarker",
+      id: "pm-37248895", rec: { eyes: "unclear", power: "ratio-only", icd11: "6D71", dx: "clinical diagnosis" }, source: "full-text", sample: "martin-ad-99", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 99, k: null },
       sites: ["Fz","Cz","Pz","O1","O2","F3","F4"], bands: ["theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", beta: "down" }, symptoms: ["memory","cogdecline"],
@@ -699,7 +699,7 @@ window.NF_DATA = {
       cite: { authors: "Martin T, et al.", year: 2023, title: "Mild Cognitive Impairment in African Americans Is Associated with Differences in EEG Theta/Beta Ratio", journal: "J Alzheimers Dis" }
     },
     {
-      id: "pm-37858173", source: "full-text", condition: "alzheimers", type: "biomarker",
+      id: "pm-37858173", rec: { eyes: "closed", power: "relative", icd11: "6D80+6D71", dx: "unclear" }, source: "full-text", condition: "alzheimers", type: "biomarker",
       metrics: { design: 1, control: null, blinded: null, n: 148, k: null },
       sites: ["T3","T4","T5","T6","P3","Pz","P4","O1","O2"], bands: ["theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", beta: "down" }, symptoms: ["memory","cogdecline"],
@@ -709,7 +709,7 @@ window.NF_DATA = {
       cite: { authors: "Scheijbeler EP, et al.", year: 2023, title: "Longitudinal resting-state EEG in amyloid-positive patients along the Alzheimer's disease continuum: considerations for clinical trials", journal: "Alzheimers Res Ther" }
     },
     {
-      id: "pm-38217593", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-38217593", rec: { eyes: "unclear", power: "relative", icd11: "6D71", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 53, k: null },
       sites: [], bands: ["beta","theta","delta"], direction: "ratio", evidence: "preliminary",
       changes: { beta: "down", theta: "up", delta: "up" }, symptoms: ["memory","cogdecline"],
@@ -719,7 +719,7 @@ window.NF_DATA = {
       cite: { authors: "Zawiślak-Fornagiel K, et al.", year: 2024, title: "Quantitative EEG Spectral and Connectivity Analysis for Cognitive Decline in Amnestic Mild Cognitive Impairment", journal: "J Alzheimers Dis" }
     },
     {
-      id: "pm-38969018", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-38969018", rec: { eyes: "closed", power: "unclear", icd11: "subclinical", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 68, k: null },
       sites: ["P3","Pz","P4","T5","T6","O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["memory"],
@@ -729,7 +729,7 @@ window.NF_DATA = {
       cite: { authors: "Perez V, et al.", year: 2024, title: "Individual posterior alpha rhythms and cognitive reserve as possible early prognostic markers in people with subjective memory complaints", journal: "Behav Brain Res" }
     },
     {
-      id: "pm-39449097", source: "full-text", condition: "alzheimers", type: "biomarker",
+      id: "pm-39449097", rec: { eyes: "closed", power: "absolute", icd11: "6D80+6D71", dx: "unclear" }, source: "full-text", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["theta","delta","gamma","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", delta: "up", gamma: "up", alpha: "mixed" }, symptoms: ["memory","cogdecline"],
@@ -739,7 +739,7 @@ window.NF_DATA = {
       cite: { authors: "Chetty CA, et al.", year: 2024, title: "EEG biomarkers in Alzheimer's and prodromal Alzheimer's: a comprehensive analysis of spectral and connectivity features", journal: "Alzheimers Res Ther" }
     },
     {
-      id: "pm-40359673", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-40359673", rec: { eyes: "unclear", power: "relative", icd11: "6D80", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 182, k: null },
       sites: [], bands: ["theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", alpha: "mixed" }, symptoms: ["memory","cogdecline"],
@@ -3518,7 +3518,7 @@ window.NF_DATA = {
       cite: { authors: "Hata M, et al.", year: 2016, title: "Functional connectivity assessed by resting state EEG correlates with cognitive decline of Alzheimer's disease - An eLORETA study", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-33185607-fc", source: "full-text", condition: "alzheimers", type: "connectivity",
+      id: "pm-33185607-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6D80+6D71", dx: "mixed" }, source: "full-text", condition: "alzheimers", type: "connectivity",
       measure: "other", pairs: [["frontal","parietal"],["temporal","temporal"],["parietal","parietal"]],
       metrics: { design: 5, control: null, blinded: null, n: null, k: null },
       bands: ["alpha"], direction: "ratio", evidence: "moderate",
@@ -3562,7 +3562,7 @@ window.NF_DATA = {
       cite: { authors: "Zeng Y, et al.", year: 2024, title: "Altered resting-state brain oscillation and the associated cognitive impairments in late-life depression with different depressive severity: An EEG power spectrum and functional connectivity study", journal: "J Affect Disord" }
     },
     {
-      id: "pm-39449097-fc", source: "full-text", condition: "alzheimers", type: "connectivity",
+      id: "pm-39449097-fc", rec: { eyes: "closed", power: "n/a", icd11: "6D80+6D71", dx: "unclear" }, source: "full-text", condition: "alzheimers", type: "connectivity",
       measure: "phase", pairs: [["frontal","temporal"],["frontal","parietal"],["frontal","occipital"]],
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       bands: ["gamma"], direction: "up", evidence: "preliminary",
