@@ -33,20 +33,20 @@ window.NF_DATA = {
   ],
 
   conditions: [
-    { id: "alzheimers", name: "Alzheimer's", summary: "One of the most consistent EEG pictures in medicine: slowing. Delta and theta rise, posterior alpha and beta fall, and the alpha peak frequency drops as the disease progresses." },
-    { id: "adhd", name: "ADHD", summary: "An elevated theta/beta ratio at the vertex was long proposed as a marker, but it holds only for a subgroup. Neurofeedback on the same bands helps on unblinded ratings; blinded trials are much less convincing." },
-    { id: "schizophrenia", name: "Schizophrenia", summary: "Resting EEG often shows excess slow activity (delta and theta) and reduced alpha, but these changes are not specific enough to diagnose schizophrenia. The best-known gamma findings come from evoked (task) recordings and are not included here." },
-    { id: "depression", name: "Depression", summary: "Frontal alpha asymmetry (F3/F4) is the classic proposed marker, but pooled data do not support it diagnostically. Frontal-midline theta may predict who responds to treatment." },
-    { id: "parkinsons", name: "Parkinson's", summary: "Resting EEG slows in Parkinson's disease, and a lower dominant posterior frequency predicts later dementia." },
-    { id: "tbi", name: "Brain injury (TBI)", summary: "Focal or diffuse slowing and reduced alpha after head injury. Group differences are real, but qEEG is not reliable for diagnosing mild TBI in an individual." },
-    { id: "insomnia", name: "Insomnia", summary: "The hyperarousal model: in resting wakefulness, people with insomnia show more beta, theta and gamma power. SMR neurofeedback was not better than sham in a blinded trial." },
-    { id: "autism", name: "Autism", summary: "Earlier reviews described a U-shaped profile (excess slow and fast power). A 2023 meta-analysis of 41 studies found something narrower: lower relative alpha and higher gamma at rest, with no overall change in delta, theta or beta." },
-    { id: "sud", name: "Alcohol & substance use", summary: "Resting beta is elevated in people with alcohol dependence and their relatives, suggesting a trait of cortical hyperexcitability. Alpha-theta neurofeedback has a long clinical history." },
-    { id: "epilepsy", name: "Epilepsy", summary: "Diagnosis rests on epileptiform discharges rather than band power. SMR and slow-cortical-potential training reduced seizures in drug-resistant patients." },
-    { id: "ptsd", name: "PTSD", summary: "Altered alpha has been reported but findings are inconsistent. Treatment studies centre on alpha and alpha-theta neurofeedback." },
-    { id: "anxiety", name: "Anxiety", summary: "Clinical reports favour posterior alpha and high-beta inhibit protocols; marker research is thin." },
-    { id: "migraine", name: "Migraine", summary: "Between attacks, resting theta power is higher in people with migraine (2024 meta-analysis), but EEG features did not track severity. Neurofeedback evidence comes from uncontrolled case series." },
-    { id: "cognition", name: "Healthy cognition", summary: "Upper-alpha and SMR activity relate to memory and mental rotation in healthy people, and training them can improve performance." }
+    { id: "alzheimers", name: "Alzheimer's", icd11: "6D80 / 6D71 (to be split)", summary: "One of the most consistent EEG pictures in medicine: slowing. Delta and theta rise, posterior alpha and beta fall, and the alpha peak frequency drops as the disease progresses." },
+    { id: "adhd", name: "ADHD", icd11: "6A05", summary: "An elevated theta/beta ratio at the vertex was long proposed as a marker, but it holds only for a subgroup. Neurofeedback on the same bands helps on unblinded ratings; blinded trials are much less convincing." },
+    { id: "schizophrenia", name: "Schizophrenia", icd11: "6A20", summary: "Resting EEG often shows excess slow activity (delta and theta) and reduced alpha, but these changes are not specific enough to diagnose schizophrenia. The best-known gamma findings come from evoked (task) recordings and are not included here." },
+    { id: "depression", name: "Depression", icd11: "6A70, 6A71", summary: "Frontal alpha asymmetry (F3/F4) is the classic proposed marker, but pooled data do not support it diagnostically. Frontal-midline theta may predict who responds to treatment." },
+    { id: "parkinsons", name: "Parkinson's", icd11: "8A00", summary: "Resting EEG slows in Parkinson's disease, and a lower dominant posterior frequency predicts later dementia." },
+    { id: "tbi", name: "Brain injury (TBI)", icd11: "NA07", summary: "Focal or diffuse slowing and reduced alpha after head injury. Group differences are real, but qEEG is not reliable for diagnosing mild TBI in an individual." },
+    { id: "insomnia", name: "Insomnia", icd11: "7A00, 7A01", summary: "The hyperarousal model: in resting wakefulness, people with insomnia show more beta, theta and gamma power. SMR neurofeedback was not better than sham in a blinded trial." },
+    { id: "autism", name: "Autism", icd11: "6A02", summary: "Earlier reviews described a U-shaped profile (excess slow and fast power). A 2023 meta-analysis of 41 studies found something narrower: lower relative alpha and higher gamma at rest, with no overall change in delta, theta or beta." },
+    { id: "sud", name: "Alcohol & substance use", icd11: "6C4 (to be split by substance)", summary: "Resting beta is elevated in people with alcohol dependence and their relatives, suggesting a trait of cortical hyperexcitability. Alpha-theta neurofeedback has a long clinical history." },
+    { id: "epilepsy", name: "Epilepsy", icd11: "8A6", summary: "Diagnosis rests on epileptiform discharges rather than band power. SMR and slow-cortical-potential training reduced seizures in drug-resistant patients." },
+    { id: "ptsd", name: "PTSD", icd11: "6B40", summary: "Altered alpha has been reported but findings are inconsistent. Treatment studies centre on alpha and alpha-theta neurofeedback." },
+    { id: "anxiety", name: "Anxiety", icd11: "6B0 (to be split)", summary: "Clinical reports favour posterior alpha and high-beta inhibit protocols; marker research is thin." },
+    { id: "migraine", name: "Migraine", icd11: "8A80", summary: "Between attacks, resting theta power is higher in people with migraine (2024 meta-analysis), but EEG features did not track severity. Neurofeedback evidence comes from uncontrolled case series." },
+    { id: "cognition", name: "Healthy cognition", icd11: "none (healthy participants)", summary: "Upper-alpha and SMR activity relate to memory and mental rotation in healthy people, and training them can improve performance." }
   ],
 
   symptoms: [

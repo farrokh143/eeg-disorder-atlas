@@ -15,7 +15,16 @@ const DISORDERS = {
   "Epilepsy": 'epilepsy[mh]',
   "PTSD": '"Stress Disorders, Post-Traumatic"[mh]',
   "Anxiety": '"Anxiety Disorders"[mh]',
-  "Migraine": '"Migraine Disorders"[mh]'
+  "Migraine": '"Migraine Disorders"[mh]',
+  // v3 (2026-11-25): candidates added by the ICD-11 scoping check (data/scoping-2026-11-25.tsv)
+  "Bipolar": '"Bipolar Disorder"[mh]',
+  "OCD": '"Obsessive-Compulsive Disorder"[mh]',
+  "Lewy body dementia": '"Lewy Body Disease"[mh]',
+  "Frontotemporal dementia": '"Frontotemporal Dementia"[mh]',
+  "Intellectual disability": '"Intellectual Disability"[mh]',
+  "Learning disorders": '"Learning Disabilities"[mh]',
+  "Multiple sclerosis": '"Multiple Sclerosis"[mh]',
+  "Stroke": 'Stroke[mh]'
 };
 const SYMPTOM_LINK = '(electroencephalography[mh] OR EEG[tiab]) AND resting[tiab] AND (power[tiab] OR spectral[tiab]) AND (correlat*[tiab] OR severity[tiab]) AND humans[mh]';
 const url = q => "https://pubmed.ncbi.nlm.nih.gov/?term=" + encodeURIComponent(q) + "&size=200";

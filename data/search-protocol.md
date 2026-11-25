@@ -36,6 +36,49 @@ Every change is a commit, so the history of each decision is kept.
 **Priority**: studies that relate resting EEG directly to symptom severity (correlations with rating scales).
 These give direct symptom links, which the atlas currently lacks.
 
+## Disorder scope and ICD-11 scoping check (amendment, 25 Nov 2026)
+
+**What happened before this amendment.** The first 13 conditions were chosen by the project owner before any
+search, based on where resting-EEG and neurofeedback research is known to be active. No formal scoping review
+came first. This amendment adds that check after the fact and reports it as an amendment, not as the original plan.
+
+**Taxonomy.** ICD-11 (WHO, in effect since 1 Jan 2022) is the primary taxonomy. Each study's own diagnostic system
+(DSM-IV, DSM-5, DSM-5-TR, ICD-10, research criteria) is recorded and mapped to ICD-11 using the WHO ICD-10→ICD-11
+mapping tables. Symptoms remain a secondary layer.
+
+**Scope rule.** In scope: ICD-11 chapter 6 (mental, behavioural or neurodevelopmental disorders), chapter 7
+(sleep–wake disorders), chapter 8 (diseases of the nervous system), and intracranial injury (NA07, chapter 22).
+Excluded: disorders of consciousness, coma and anaesthesia (not awake resting recordings). Epilepsy is kept but
+flagged, because EEG is part of how it is diagnosed. Delirium is an acute state and enters sensitivity analyses only.
+
+**Scoping check.** On 25 Nov 2026 the core EEG search (`tools/queries.js` CORE, which needs humans, resting/eyes
+open/eyes closed and a spectral term) was combined with the MeSH term of each ICD-11 group, and PubMed hits were
+counted through the PubMed connector. Results: `data/scoping-2026-11-25.tsv`. The core search alone returned 5,713
+records.
+
+**Inclusion threshold.** A disorder group becomes a candidate if it has 20 or more hits in the scoping check. All
+13 original conditions clear this threshold (lowest: migraine 29, insomnia 31). A candidate enters the atlas when
+screening finds at least 3 eligible studies. Patterns are tested only once they have at least 6 studies
+(synthesis protocol).
+
+**New candidates (in scope, 20 or more hits):** stroke (143), bipolar disorder (62), intellectual developmental
+disorder (53), dementia due to Lewy body disease (40), developmental learning disorder (37), OCD (33),
+multiple sclerosis (23), frontotemporal dementia (22). Their searches were added to `tools/queries.js` (v3).
+
+**Splits required by ICD-11.** "Alzheimer's" is split into mild neurocognitive disorder (6D71, MCI) and dementia
+due to Alzheimer disease (6D80). "Anxiety" is split into generalised anxiety (6B00), panic (6B01) and social
+anxiety (6B04). "Alcohol & substance use" is split by substance (6C40–6C4A). Synthesis runs at the ICD-11 category
+level; the original 13-condition grouping is kept as a sensitivity analysis.
+
+**Out of scope with notable literature** (listed so readers can see what was left out): disorders of
+consciousness (91 hits), tinnitus (68, chapter 9), chronic pain (48, chapter 21).
+
+**Codes.** The ICD-11 codes in the table and in `conditions[].icd11` are provisional. Checked against ICD-11 MMS
+listings: 6D71, 6D80, 6D82, 8B60.0, NA07. Verify the rest in the WHO ICD-11 browser before submission.
+
+**Limitations of the check.** Hit counts are records, not independent studies, and depend on MeSH indexing. The
+check used PubMed only.
+
 ## Searches (PubMed; repeat in Scopus or PsycINFO when available)
 
 Run for each disorder, replacing `[DISORDER]` with its MeSH term (e.g. `"Attention Deficit Disorder with Hyperactivity"[MeSH]`).
