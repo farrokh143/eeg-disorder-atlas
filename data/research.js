@@ -3667,6 +3667,16 @@ window.NF_DATA = {
       detail: "36 patients 4-10 days after a first ischaemic MCA stroke and 19 age-matched controls, 5-minute eyes-open resting EEG from 19 electrodes. Mean power across the scalp was higher in patients in the low bands (delta and theta; sub-delta also), and these increases correlated with worse NIHSS. Coded as whole-head (scalp mean). The main result, fractal dimension, is not band power and is not coded; alpha and beta changes are reported only as correlations with fractal dimension and are not coded as group differences. Small cross-sectional study with partly lesion-side-specific results.",
       design: "Case-control",
       cite: { authors: "Zappasodi F, Olejarczyk E, Marzetti L, Assenza G, Pizzella V, Tecchio F", year: 2014, title: "Fractal Dimension of EEG Activity Senses Neuronal Impairment in Acute Stroke", journal: "PLoS One" }
+    },
+    {
+      id: "pm-27509209", source: "full-text", condition: "stroke", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 38, k: null },
+      sites: [], bands: ["delta","theta","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", beta: "down" }, symptoms: ["motor"],
+      claim: "Acute ischaemic stroke: higher delta and theta, lower beta power than matched controls; alpha peak slowed",
+      detail: "21 acute MCA stroke patients (about 69 hours after onset) and 17 age-matched controls, 19-electrode resting EEG. Delta and theta power were higher in patients (strongest at lateral ipsilesional sites and occipital sites), beta power was lower across all scalp electrodes, and alpha power did not differ while the dominant alpha peak was slower; sites are coded as whole-head because beta was global. Controls were recorded on a different amplifier and cap. The paper also includes a computational thalamo-cortical model, which is not coded. Small case-control study; no blinding or healthy-control matching beyond age.",
+      design: "Case-control",
+      cite: { authors: "van Wijngaarden JBG, Zucca R, Finnigan S, Verschure PFMJ", year: 2016, title: "The Impact of Cortical Lesions on Thalamo-Cortical Network Dynamics after Acute Ischaemic Stroke: A Combined Experimental and Theoretical Study", journal: "PLoS computational biology" }
     }
   ],
 
