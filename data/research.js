@@ -1249,7 +1249,7 @@ window.NF_DATA = {
       cite: { authors: "Henriques JB, et al.", year: 1990, title: "Regional brain electrical asymmetries discriminate between previously depressed and healthy control subjects", journal: "J Abnorm Psychol" }
     },
     {
-      id: "pm-23733090", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-23733090", rec: { eyes: "both", power: "absolute", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 107, k: null },
       sites: ["P3","Pz","P4","O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["lowmood"],
@@ -1259,7 +1259,7 @@ window.NF_DATA = {
       cite: { authors: "Zoon HF, et al.", year: 2013, title: "EEG alpha power as an intermediate measure between brain-derived neurotrophic factor Val66Met and depression severity in patients with major depressive disorder", journal: "J Clin Neurophysiol" }
     },
     {
-      id: "pm-24467874", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-24467874", rec: { eyes: "closed", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 237, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1269,7 +1269,7 @@ window.NF_DATA = {
       cite: { authors: "Quinn CR, et al.", year: 2014, title: "The impact of melancholia versus non-melancholia on resting-state, EEG alpha asymmetry: electrophysiological evidence for depression heterogeneity", journal: "Psychiatry Res" }
     },
     {
-      id: "pm-24630467", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-24630467", rec: { eyes: "unclear", power: "both", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 168, k: null },
       sites: ["Fz"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["lowmood"],
@@ -1279,7 +1279,7 @@ window.NF_DATA = {
       cite: { authors: "Cook IA, et al.", year: 2014, title: "Do prefrontal midline electrodes provide unique neurophysiologic information in Major Depressive Disorder?", journal: "J Psychiatr Res" }
     },
     {
-      id: "pm-25568149", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-25568149", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 40, k: null },
       sites: ["C3","Cz","C4"], bands: ["theta","alpha","beta"], direction: "asymmetry", evidence: "preliminary",
       changes: { theta: "asymmetry", alpha: "asymmetry", beta: "asymmetry" }, symptoms: ["lowmood"],
@@ -1289,7 +1289,7 @@ window.NF_DATA = {
       cite: { authors: "Kremer H, et al.", year: 2016, title: "Interhemispheric Asymmetries and Theta Activity in the Rostral Anterior Cingulate Cortex as EEG Signature of HIV-Related Depression: Gender Matters", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-25600291", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-25600291", rec: { eyes: "closed", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 35, k: null },
       sites: ["F3","F4"], bands: ["delta"], direction: "down", evidence: "preliminary",
       changes: { delta: "down" }, symptoms: ["lowmood"],
@@ -1299,7 +1299,7 @@ window.NF_DATA = {
       cite: { authors: "Meerwijk EL, et al.", year: 2015, title: "Resting-state EEG delta power is associated with psychological pain in adults with a history of depression", journal: "Biol Psychol" }
     },
     {
-      id: "pm-26363266", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-26363266", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 39, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood","motor"],
@@ -1309,7 +1309,7 @@ window.NF_DATA = {
       cite: { authors: "Cantisani A, et al.", year: 2015, title: "Psychomotor retardation is linked to frontal alpha asymmetry in major depression", journal: "J Affect Disord" }
     },
     {
-      id: "pm-26392114", source: "abstract", condition: "depression", type: "protocol",
+      id: "pm-26392114", rec: { eyes: "unclear", power: "n/a", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "protocol",
       metrics: { design: 1, control: "none", blinded: null, n: 20, k: null },
       sites: ["F3","Pz"], bands: ["beta","alpha","theta"], direction: "ratio", evidence: "preliminary",
       changes: { beta: "up", alpha: "regulate", theta: "regulate" }, symptoms: ["lowmood","anxiety"],
@@ -1319,7 +1319,7 @@ window.NF_DATA = {
       cite: { authors: "Cheon EJ, et al.", year: 2016, title: "The Efficacy of Neurofeedback in Patients with Major Depressive Disorder: An Open Labeled Prospective Study", journal: "Appl Psychophysiol Biofeedback" }
     },
     {
-      id: "pm-27000108", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-27000108", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 64, k: null },
       sites: [], bands: ["alpha"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "mixed" }, symptoms: ["headache"],
@@ -1329,7 +1329,7 @@ window.NF_DATA = {
       cite: { authors: "Scanlon GC, et al.", year: 2017, title: "Neurophysiologic Correlates of Headache Pain in Subjects With Major Depressive Disorder", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-27344621", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-27344621", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 73, k: null },
       sites: ["F3","Fz","F4","C3","Cz","C4"], bands: ["beta","gamma"], direction: "down", evidence: "preliminary",
       changes: { beta: "down", gamma: "down" }, symptoms: ["inattention"],
@@ -1339,7 +1339,7 @@ window.NF_DATA = {
       cite: { authors: "Roh SC, et al.", year: 2016, title: "EEG beta and low gamma power correlates with inattention in patients with major depressive disorder", journal: "J Affect Disord" }
     },
     {
-      id: "pm-28755454", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-28755454", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 124, k: null },
       sites: ["F7","F3"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
