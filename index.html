@@ -55,18 +55,31 @@ h1, h2, h3 { margin: 0; font-weight: 500; letter-spacing: -0.02em; text-wrap: ba
 .pill.alt { background: #232328; color: var(--ink); }
 .dome { width: min(760px, 100%); height: auto; display: block; margin-top: 28px; }
 
-/* lookup bar */
-#lookup { scroll-margin-top: 84px; }
-.lookup { position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 18px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px 16px; align-items: end; }
-.lookup .wide { grid-column: span 2; }
-@media (max-width: 900px) { .lookup { grid-template-columns: repeat(2, minmax(0, 1fr)); } .lookup .wide { grid-column: 1 / -1; } }
-.fld { display: grid; gap: 6px; }
-.fld > span { font: 500 11px/1 var(--f-mono); letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
-.fld select { appearance: none; -webkit-appearance: none; width: 100%; min-height: 48px; padding: 0 40px 0 18px; border: 1px solid var(--line); border-radius: 999px; font-size: 16px; font-weight: 500;
-  background: var(--raise) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23a4a4ae' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 18px center; }
-.seg { display: flex; gap: 4px; padding: 4px; border: 1px solid var(--line); border-radius: 999px; background: var(--raise); min-height: 48px; }
-.seg button { flex: 1 1 0; border: 0; border-radius: 999px; background: none; color: var(--muted); font-weight: 500; font-size: 15px; white-space: nowrap; padding: 0 8px; min-height: 38px; }
-.seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+/* steps + question */
+#steps { scroll-margin-top: 80px; }
+.steps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 8px; }
+.step { display: flex; align-items: center; gap: 14px; text-align: left; padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); color: var(--muted); min-height: 72px; }
+.step b { flex: none; width: 34px; height: 34px; border-radius: 999px; display: grid; place-items: center; border: 1px solid var(--line); font: 600 15px/1 var(--f-mono); }
+.step span { display: grid; gap: 3px; font-weight: 600; font-size: 17px; }
+.step small { font-weight: 400; font-size: 13.5px; color: var(--muted); }
+.step[aria-current="step"] { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); }
+.step[aria-current="step"] b { background: var(--accent); border-color: var(--accent); color: #fff; }
+@media (max-width: 560px) { .step { padding: 12px; gap: 10px; } .step small { display: none; } }
+.ask { margin-top: 12px; padding: 18px; display: grid; gap: 14px; }
+.q { display: grid; gap: 8px; }
+.q > span { font-size: 14px; color: var(--muted); }
+.q > span b { color: var(--ink); font-weight: 600; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chips .chip { min-height: 40px; font-size: 15px; }
+.chip small { font: 500 11px var(--f-mono); color: var(--faint); margin-left: 6px; }
+.seg.small { min-height: 44px; max-width: 420px; }
+.textbtn { border: 0; background: none; color: var(--link); font-weight: 500; font-size: 14px; padding: 6px 0; justify-self: start; min-height: 36px; }
+.next { display: flex; flex-wrap: wrap; gap: 8px; }
+.next:empty { display: none; }
+.cta { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 20px; border-radius: 999px; border: 0; background: var(--accent); color: #fff; font-weight: 500; font-size: 15px; }
+.match { color: var(--link); font: 600 10.5px/1 var(--f-mono); letter-spacing: .05em; text-transform: uppercase; border: 1px solid var(--accent); border-radius: 999px; padding: 4px 8px; margin-left: 6px; white-space: nowrap; }
+.mapbox.passive .el { cursor: default; pointer-events: none; }
+.mapbox.passive .regions, .mapbox.passive #nearBox { display: none; }
 
 /* main grid */
 .grid { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; padding: 28px 0 40px; }
@@ -223,38 +236,37 @@ html.locked .app { display: none; }
 <main>
   <section class="wrap hero">
     <h1>Resting EEG patterns, mapped to disorders.</h1>
-    <p id="heroSub">Pick a band and a scalp area. See where it shows up, and how sure the research is.</p>
-    <div class="pills"><a class="pill go" href="#lookup">Open the atlas</a><a class="pill alt" href="methods.html">How it works</a></div>
+    <p id="heroSub">Assess a client's resting EEG against the research, then see which neurofeedback protocols have been studied.</p>
+    <div class="pills"><a class="pill go" href="#steps" data-go="assess">1 · Assess</a><a class="pill alt" href="#steps" data-go="treat">2 · Treatment evidence</a></div>
     <svg class="dome" id="dome" viewBox="0 0 760 230" aria-hidden="true"></svg>
   </section>
 
   <div class="wrap">
-    <section class="lookup" id="lookup" aria-label="Pattern lookup">
-      <label class="fld"><span>Show</span><select id="fLayer">
-        <option value="power">Band power</option><option value="connectivity">Connectivity</option><option value="nf">Neurofeedback</option></select></label>
-      <label class="fld"><span>Band</span><select id="fBand"></select></label>
-      <div class="fld wide"><span id="dirLbl">Direction</span><div class="seg" id="fDir" role="group" aria-labelledby="dirLbl"></div></div>
-      <label class="fld"><span>Area</span><select id="fArea"></select></label>
-      <label class="fld"><span>Disorder</span><select id="fCond"></select></label>
-    </section>
+    <nav class="steps" id="steps" aria-label="Steps">
+      <button type="button" class="step" data-step="assess"><b>1</b><span>Assess<small>What does the client's EEG show?</small></span></button>
+      <button type="button" class="step" data-step="treat"><b>2</b><span>Treatment evidence<small>Which neurofeedback has been studied?</small></span></button>
+    </nav>
+
+    <section class="ask panel" id="ask" aria-label="Your question"></section>
 
     <div class="grid">
       <aside class="side" id="side">
         <div class="panel mapbox" id="mapbox">
-          <div class="maphead"><b>Scalp area</b><button class="clear" id="clearSite" type="button" hidden>Clear area</button></div>
-          <svg class="head" id="head" viewBox="0 0 400 410" role="group" aria-label="10-20 electrode map. Tap electrodes to choose an area."></svg>
+          <div class="maphead"><b id="mapLbl">Scalp area</b><button class="clear" id="clearSite" type="button" hidden>Clear area</button></div>
+          <svg class="head" id="head" viewBox="0 0 400 410" role="group" aria-label="10-20 electrode map"></svg>
           <p class="maptip" id="tip" aria-live="polite"></p>
           <div class="regions" id="regions" role="group" aria-label="Areas"></div>
-          <label class="near"><input type="checkbox" id="fNear"> Include neighbouring electrodes<small>Electrodes also pick up activity from nearby cortex (volume conduction). Shown dashed.</small></label>
-          <p class="note">Old 10-20 names: T3/T4/T5/T6 are T7/T8/P7/P8. Shading = number of studies for the current band and direction.</p>
+          <label class="near" id="nearBox"><input type="checkbox" id="fNear"> Include neighbouring electrodes<small>Electrodes also pick up activity from nearby cortex. Shown dashed.</small></label>
+          <p class="note">T3/T4/T5/T6 are T7/T8/P7/P8 in newer naming.</p>
         </div>
       </aside>
 
       <section class="results" id="results" aria-live="polite">
         <div class="rhead"><h2 id="rTitle"></h2><span class="count" id="rCount"></span></div>
+        <div class="next" id="next"></div>
         <div class="panel table" id="list"></div>
         <div class="legend" id="legend"></div>
-        <p class="foot">Group-level research findings, not a diagnostic test. Abstract-only studies are shown but left out of the pooled result. <a href="methods.html#grading">How certainty is rated</a></p>
+        <p class="foot" id="foot"></p>
       </section>
     </div>
   </div>
@@ -338,12 +350,15 @@ html.locked .app { display: none; }
     Object.entries(raw).forEach(([x, ys]) => ys.forEach(y => { m[x].add(y); m[y].add(x); }));
     return m;
   })();
-  const DEF = { layer: "power", band: "theta", dir: "up", sites: REGIONS.frontal.join(","), near: "1", cond: "" };
+  // step: assess | treat. from: eeg (start from what the EEG shows) | dx (start from the diagnosis).
+  const DEF = { step: "assess", from: "eeg", band: "theta", dir: "up", sites: REGIONS.frontal.join(","), near: "1", cond: "", conn: "0" };
   const state = Object.assign({}, DEF, { q: "", open: null });
   try {
     const h = new URLSearchParams(location.hash.slice(1));
     Object.keys(DEF).forEach(k => { if (h.has(k)) state[k] = h.get(k); });
     if (h.has("area")) state.sites = (REGIONS[h.get("area")] || []).join(",");   // links made before the map was restored
+    if (h.get("layer") === "nf") state.step = "treat";                            // links made before the two steps
+    if (h.get("layer") === "connectivity") state.conn = "1";
   } catch (_) {}
   state.sites = state.sites.split(",").filter(x => ELECTRODES[x]).join(",");
   function saveHash() {
@@ -355,43 +370,76 @@ html.locked .app { display: none; }
   const nbSites = () => { const sel = selSites(), n = new Set(); if (state.near === "1") sel.forEach(x => NB[x].forEach(y => !sel.has(y) && n.add(y))); return n; };
   // Regions the lookup covers: "direct" from selected electrodes, "nb" only through neighbouring ones. null = whole head.
   function areaRegions() {
-    const sel = selSites(); if (!sel.size) return null;
+    const sel = selSites(); if (!F.useArea || !sel.size) return null;
     const m = {}; nbSites().forEach(x => m[regionOf(x)] = "nb"); sel.forEach(x => m[regionOf(x)] = "direct");
     return m;
   }
   const groupOf = () => { const sel = selSites(); return Object.keys(GROUPS).find(g => GROUPS[g].length === sel.size && GROUPS[g].every(x => sel.has(x))) || ""; };
   function areaText() {
-    const sel = selSites(); if (!sel.size) return "";
+    const sel = selSites(); if (!F.useArea || !sel.size) return "";
     const g = groupOf(); if (g) return g;
     return [...sel].join(", ");
   }
 
-  // ---------- controls ----------
-  $("fBand").innerHTML = `<option value="">Any band</option>` + D.bands.map(b => `<option value="${b.id}">${esc(b.name)} · ${esc(b.hz || b.range || "")}</option>`).join("");
-  $("fArea").innerHTML = `<option value="">Whole head</option>` + Object.keys(GROUPS).map(r => `<option value="${r}">${cap(r)}</option>`).join("") + `<option value="custom" disabled>Electrodes picked on the map</option>`;
-  const condOrder = D.conditions.slice().sort((a, b) => a.name.localeCompare(b.name));
-  $("fCond").innerHTML = `<option value="">Any disorder</option>` + condOrder.map(c => `<option value="${c.id}">${esc(c.name)}</option>`).join("");
-  const DIRS = [["up", "▲ Higher"], ["down", "▼ Lower"], ["any", "Either"]];
-  $("fDir").innerHTML = DIRS.map(([v, l]) => `<button type="button" data-v="${v}">${l}</button>`).join("");
-  $("regions").innerHTML = Object.keys(GROUPS).map(r => `<button class="chip" type="button" data-v="${r}">${cap(r)}</button>`).join("");
-
-  function syncControls() {
-    const sel = selSites(), g = groupOf();
-    $("fLayer").value = state.layer; $("fBand").value = state.band; $("fCond").value = state.cond;
-    $("fArea").value = !sel.size ? "" : g || "custom";
-    $("fNear").checked = state.near === "1";
-    $("clearSite").hidden = !sel.size;
-    $("fDir").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.v === state.dir)));
-    $("regions").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(GROUPS[b.dataset.v].every(x => sel.has(x)))));
-    $("dirLbl").textContent = state.layer === "connectivity" ? "Connectivity" : state.layer === "nf" ? "Training pushes the band" : "Direction";
+  // ---------- the question panel (replaces the old filter bar) ----------
+  // F = what the lookup actually filters on, derived from the step and the question.
+  let F = {};
+  function derive() {
+    if (state.step === "treat") return F = { layer: "nf", band: "", dir: "any", cond: state.cond, useArea: false };
+    const conn = state.conn === "1" ? "connectivity" : "power";
+    if (state.from === "dx") return F = { layer: conn, band: "", dir: "any", cond: state.cond, useArea: false };
+    return F = { layer: conn, band: state.band, dir: state.dir, cond: "", useArea: true };
   }
-  $("fLayer").addEventListener("change", e => { state.layer = e.target.value; update(); });
-  $("fBand").addEventListener("change", e => { state.band = e.target.value; update(); });
-  $("fArea").addEventListener("change", e => { setSites(new Set(GROUPS[e.target.value] || [])); update(); });
-  $("fCond").addEventListener("change", e => { state.cond = e.target.value; update(); });
+  const MAIN_BANDS = ["delta", "theta", "alpha", "beta", "gamma", "smr", "hibeta"].filter(b => BAND[b]);
+  const condOrder = D.conditions.slice().sort((a, b) => a.name.localeCompare(b.name));
+  const nfCount = id => D.findings.filter(f => f.type === "protocol" && f.condition === id).length;
+  const chip = (attr, v, label, on, extra) => `<button class="chip" type="button" ${attr}="${v}" aria-pressed="${on}">${label}${extra ? `<small>${extra}</small>` : ""}</button>`;
+  function renderAsk() {
+    let h = "";
+    if (state.step === "assess") {
+      h += `<div class="q"><span>Start from</span><div class="seg small" role="group" aria-label="Start from">
+        <button type="button" data-from="eeg" aria-pressed="${state.from === "eeg"}">What the EEG shows</button>
+        <button type="button" data-from="dx" aria-pressed="${state.from === "dx"}">The client's diagnosis</button></div></div>`;
+      if (state.from === "eeg") {
+        h += `<div class="q"><span>Which band is off? <b>Then tap the electrodes on the map.</b></span><div class="chips">${MAIN_BANDS.map(b => chip("data-band", b, esc(BAND[b].name), state.band === b, esc(BAND[b].hz || BAND[b].range || ""))).join("")}</div></div>
+          <div class="q"><span>Compared with typical</span><div class="seg small" role="group" aria-label="Direction">
+          <button type="button" data-dir="up" aria-pressed="${state.dir === "up"}">▲ ${state.conn === "1" ? "More connected" : "Higher"}</button>
+          <button type="button" data-dir="down" aria-pressed="${state.dir === "down"}">▼ ${state.conn === "1" ? "Less connected" : "Lower"}</button></div></div>`;
+      } else {
+        h += `<div class="q"><span>Diagnosis</span><div class="chips">${condOrder.map(c => chip("data-cond", c.id, esc(c.name), state.cond === c.id)).join("")}</div></div>`;
+      }
+      h += `<button class="textbtn" type="button" id="connBtn">${state.conn === "1" ? "← Back to band power" : "Looking at connectivity between areas instead? →"}</button>`;
+    } else {
+      h += `<div class="q"><span>Condition being treated</span><div class="chips">${condOrder.filter(c => nfCount(c.id)).map(c => chip("data-cond", c.id, esc(c.name), state.cond === c.id, nfCount(c.id))).join("")}</div></div>`;
+    }
+    $("ask").innerHTML = h;
+  }
+  $("ask").addEventListener("click", e => {
+    const b = e.target.closest("button"); if (!b) return;
+    if (b.dataset.from) state.from = b.dataset.from;
+    else if (b.dataset.band) state.band = b.dataset.band;
+    else if (b.dataset.dir) state.dir = b.dataset.dir;
+    else if (b.dataset.cond) state.cond = state.cond === b.dataset.cond && state.step === "treat" ? "" : b.dataset.cond;
+    else if (b.id === "connBtn") state.conn = state.conn === "1" ? "0" : "1";
+    else return;
+    update();
+  });
+  function goStep(step) { state.step = step; update(); const t = $("steps"); if (t.scrollIntoView) t.scrollIntoView({ behavior: "smooth", block: "start" }); }
+  $("steps").addEventListener("click", e => { const b = e.target.closest(".step"); if (b) goStep(b.dataset.step); });
+  document.querySelectorAll("[data-go]").forEach(a => a.addEventListener("click", e => { e.preventDefault(); goStep(a.dataset.go); }));
+  $("regions").innerHTML = Object.keys(GROUPS).map(r => `<button class="chip" type="button" data-v="${r}">${cap(r)}</button>`).join("");
+  function syncControls() {
+    const sel = selSites();
+    document.querySelectorAll(".step").forEach(b => b.dataset.step === state.step ? b.setAttribute("aria-current", "step") : b.removeAttribute("aria-current"));
+    $("fNear").checked = state.near === "1";
+    $("clearSite").hidden = !F.useArea || !sel.size;
+    $("regions").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(GROUPS[b.dataset.v].every(x => sel.has(x)))));
+    $("mapbox").classList.toggle("passive", !F.useArea);
+    $("mapLbl").textContent = F.useArea ? "Where on the scalp?" : state.step === "treat" ? "Training sites studied" : "Where studies found differences";
+    renderAsk();
+  }
   $("fNear").addEventListener("change", e => { state.near = e.target.checked ? "1" : "0"; update(); });
   $("clearSite").addEventListener("click", () => { state.sites = ""; update(); });
-  $("fDir").addEventListener("click", e => { const b = e.target.closest("button"); if (b) { state.dir = b.dataset.v; update(); } });
   $("regions").addEventListener("click", e => {
     const b = e.target.closest("button"); if (!b) return;
     const sel = selSites(), grp = GROUPS[b.dataset.v], all = grp.every(x => sel.has(x));
@@ -418,7 +466,7 @@ html.locked .app { display: none; }
     };
     Object.entries(ELECTRODES).forEach(([n, p]) => make(n, p, false));
     Object.entries(REFS).forEach(([n, p]) => make(n, p, true));
-    const toggle = name => { const sel = selSites(); sel.has(name) ? sel.delete(name) : sel.add(name); setSites(sel); update(); };
+    const toggle = name => { if (!F.useArea) return; const sel = selSites(); sel.has(name) ? sel.delete(name) : sel.add(name); setSites(sel); update(); };
     svg.addEventListener("click", e => { const g = e.target.closest(".el:not(.ref)"); if (g) toggle(g.dataset.s); });
     svg.addEventListener("keydown", e => { const g = e.target.closest(".el:not(.ref)"); if (g && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); toggle(g.dataset.s); } });
     const tipOn = e => { const g = e.target.closest(".el:not(.ref)"); showTip(g ? g.dataset.s : null); };
@@ -430,15 +478,16 @@ html.locked .app { display: none; }
   function countSites() {
     siteN = {};
     const add = x => { (REGIONS[x] || [x]).forEach(e => { if (ELECTRODES[e]) siteN[e] = (siteN[e] || 0) + 1; }); };
-    const dirOk = v => state.dir === "any" || v === state.dir || (state.layer === "nf" && v === "regulate");
-    const pool = state.layer === "connectivity" ? (D.connectivity || []) : D.findings.filter(f => f.type === (state.layer === "nf" ? "protocol" : "biomarker"));
-    pool.filter(f => (!state.cond || f.condition === state.cond) && (state.band ? f.changes[state.band] && dirOk(f.changes[state.band]) : Object.values(f.changes).some(dirOk)))
+    const dirOk = v => F.dir === "any" || v === F.dir || (F.layer === "nf" && v === "regulate");
+    const pool = F.layer === "connectivity" ? (D.connectivity || []) : D.findings.filter(f => f.type === (F.layer === "nf" ? "protocol" : "biomarker"));
+    pool.filter(f => (!F.cond || f.condition === F.cond) && (F.band ? f.changes[F.band] && dirOk(f.changes[F.band]) : Object.values(f.changes).some(dirOk)))
       .forEach(f => { const set = new Set(); (f.pairs ? f.pairs.flat() : f.sites).forEach(x => (REGIONS[x] || [x]).forEach(e => set.add(e))); set.forEach(add); });
   }
   function showTip(name) {
     const t = $("tip");
     if (!name) {
-      const sel = selSites(), nb = nbSites();
+      const sel = F.useArea ? selSites() : new Set(), nb = F.useArea ? nbSites() : new Set();
+      if (!F.useArea) { t.textContent = F.cond ? `Shading: number of ${F.layer === "nf" ? "neurofeedback studies training" : "studies reporting differences"} at each electrode.` : "Pick a condition to see its sites."; return; }
       t.innerHTML = sel.size ? `Area: <strong>${esc(areaText())}</strong>${nb.size ? " + neighbouring electrodes (dashed)" : ""}` : "Shaded electrodes have studies. Tap to pick an area.";
       return;
     }
@@ -447,7 +496,7 @@ html.locked .app { display: none; }
   }
   function paintHead(rows) {
     countSites();
-    const sel = selSites(), nb = nbSites();
+    const sel = F.useArea ? selSites() : new Set(), nb = F.useArea ? nbSites() : new Set();
     $("head").querySelectorAll(".el:not(.ref)").forEach(g => {
       const k = g.dataset.s, n = siteN[k] || 0, on = sel.has(k);
       g.classList.remove("lv1", "lv2", "lv3");
@@ -457,7 +506,7 @@ html.locked .app { display: none; }
       g.setAttribute("aria-label", `${k}${ALT[k] ? " (" + ALT[k] + ")" : ""}: ${n} ${n === 1 ? "study" : "studies"}${nb.has(k) ? ", neighbouring" : ""}`);
     });
     let l = "";
-    if (state.layer === "connectivity") {
+    if (F.layer === "connectivity") {
       const seen = new Set();
       rows.filter(r => r.p).forEach(r => {
         const loc = r.p.location; if (seen.has(loc)) return; seen.add(loc);
@@ -487,24 +536,24 @@ html.locked .app { display: none; }
   }
 
   function rowsSynth() {
-    const feat = state.layer === "connectivity" ? ["connectivity"] : ["power", "asymmetry"];
+    const feat = F.layer === "connectivity" ? ["connectivity"] : ["power", "asymmetry"];
     const AR = areaRegions();
     const how = p => !AR ? "direct" : p.feature === "connectivity"
       ? (p.location.split("–").some(r => AR[r] === "direct") ? "direct" : p.location.split("–").some(r => AR[r]) ? "nb" : null)
       : AR[p.location] || null;
     const ps = S.patterns.filter(p => feat.includes(p.feature)
-      && (!state.band || p.band === state.band)
-      && (!state.cond || p.condition === state.cond)
+      && (!F.band || p.band === F.band)
+      && (!F.cond || p.condition === F.cond)
       && how(p)
-      && (p.feature === "asymmetry" ? state.dir === "any" : state.dir === "any" || p.direction === state.dir));
+      && (p.feature === "asymmetry" ? F.dir === "any" : F.dir === "any" || p.direction === F.dir));
     const rows = ps.map(p => ({ p, cond: p.condition, nb: how(p) === "nb", abs: abstractFor(p.condition, p.band, p.location, p.feature) }));
     // Disorders with only abstract-only studies for this lookup: listed greyed so nothing is hidden.
-    if (state.layer === "power" && state.band) {
+    if (F.layer === "power" && F.band) {
       const have = new Set(rows.map(r => r.cond + "|" + r.p.band + "|" + r.p.location));
       const extra = {};
-      ALLF.filter(f => f.source === "abstract" && f.type === "biomarker" && f.changes[state.band] && (state.dir === "any" || f.changes[state.band] === state.dir) && (!state.cond || f.condition === state.cond))
+      ALLF.filter(f => f.source === "abstract" && f.type === "biomarker" && f.changes[F.band] && (F.dir === "any" || f.changes[F.band] === F.dir) && (!F.cond || f.condition === F.cond))
         .forEach(f => { const regs = f.sites.length ? [...new Set(f.sites.map(regionOf))] : RNAMES; regs.filter(r => !AR || AR[r]).forEach(r => {
-          const k = f.condition + "|" + state.band + "|" + r; if (have.has(k)) return; (extra[k] = extra[k] || { cond: f.condition, band: state.band, loc: r, nb: !!AR && AR[r] === "nb", abs: [] }).abs.push(f); }); });
+          const k = f.condition + "|" + F.band + "|" + r; if (have.has(k)) return; (extra[k] = extra[k] || { cond: f.condition, band: F.band, loc: r, nb: !!AR && AR[r] === "nb", abs: [] }).abs.push(f); }); });
       Object.values(extra).forEach(e => rows.push({ p: null, cond: e.cond, band: e.band, loc: e.loc, nb: e.nb, abs: [...new Set(e.abs)] }));
     }
     rows.sort((a, b) => {
@@ -517,14 +566,27 @@ html.locked .app { display: none; }
   }
 
   const EV_RANK = { strong: 0, moderate: 1, preliminary: 2, contested: 3 };
+  const BORDER = Object.fromEntries(D.bands.map((b, i) => [b.id, i]));
+  const TRAIN = { up: "▲", down: "▼", regulate: "⇅", asymmetry: "⇆", mixed: "◆" };
+  const sigLabel = sig => sig.split("|").map(x => { const [b, v] = x.split(":"); return `${BAND[b] ? BAND[b].name : b} ${TRAIN[v] || v}`; }).join(" · ");
+  const OPP = { up: "down", down: "up" };
   function rowsNF() {
-    const sel = selSites(), nb = nbSites();
-    const inArea = f => !sel.size || !f.sites || f.sites.length === 0 || f.sites.some(x => sel.has(x) || nb.has(x));
-    const fs = D.findings.filter(f => f.type === "protocol" && (!state.band || f.changes[state.band]) && (!state.cond || f.condition === state.cond)
-      && inArea(f) && (state.dir === "any" || !state.band || [state.dir, "regulate"].includes(f.changes[state.band])));
-    const g = {}; fs.forEach(f => (g[f.condition] = g[f.condition] || []).push(f));
-    return Object.entries(g).map(([cond, list]) => ({ nf: list, cond, best: list.map(f => f.evidence).sort((a, b) => EV_RANK[a] - EV_RANK[b])[0] }))
-      .sort((a, b) => EV_RANK[a.best] - EV_RANK[b.best] || b.nf.length - a.nf.length);
+    const fs = D.findings.filter(f => f.type === "protocol" && (!F.cond || f.condition === F.cond));
+    const sum = list => ({ best: list.map(f => f.evidence).sort((a, b) => EV_RANK[a] - EV_RANK[b])[0], sham: list.filter(f => f.metrics.control === "sham" || f.metrics.blinded).length });
+    if (!F.cond) {
+      const g = {}; fs.forEach(f => (g[f.condition] = g[f.condition] || []).push(f));
+      return Object.entries(g).map(([cond, list]) => Object.assign({ nf: list, cond, pick: true }, sum(list)))
+        .sort((a, b) => EV_RANK[a.best] - EV_RANK[b.best] || b.nf.length - a.nf.length);
+    }
+    // One row per protocol: the set of bands trained and the direction each is pushed.
+    const g = {};
+    fs.forEach(f => { const sig = Object.entries(f.changes).sort((x, y) => BORDER[x[0]] - BORDER[y[0]]).map(([b, v]) => b + ":" + v).join("|"); (g[sig] = g[sig] || []).push(f); });
+    const finding = state.from === "eeg" && state.conn !== "1" && state.band ? { band: state.band, dir: state.dir } : null;
+    return Object.entries(g).map(([sig, list]) => {
+      const sites = [...new Set(list.flatMap(f => f.sites))].sort((a, b) => Object.keys(ELECTRODES).indexOf(a) - Object.keys(ELECTRODES).indexOf(b));
+      const match = !!finding && list.some(f => [OPP[finding.dir], "regulate"].includes(f.changes[finding.band]));
+      return Object.assign({ nf: list, cond: F.cond, sig, sites, match }, sum(list));
+    }).sort((a, b) => (b.match - a.match) || EV_RANK[a.best] - EV_RANK[b.best] || b.nf.length - a.nf.length);
   }
 
   // ---------- rendering ----------
@@ -537,66 +599,85 @@ html.locked .app { display: none; }
   }
   function subLabel(band, loc, nb) {
     const parts = [], AR = areaRegions();
-    if (!state.band) parts.push(BAND[band] ? BAND[band].name : band);
-    if (!AR || Object.keys(AR).length > 1 || state.layer === "connectivity") parts.push(cap(loc));
+    if (!F.band) parts.push(BAND[band] ? BAND[band].name : band);
+    if (!AR || Object.keys(AR).length > 1 || F.layer === "connectivity") parts.push(cap(loc));
     if (nb) parts.push("neighbouring");
     return parts.length ? `<span class="sub">${esc(parts.join(" · "))}</span>` : "";
   }
   function rowHtml(r, i) {
     const name = esc(COND[r.cond] ? COND[r.cond].name : r.cond);
     if (r.nf) {
-      return `<button class="row" type="button" data-i="${i}"><span class="d">${name}</span>
+      const label = r.sig ? esc(sigLabel(r.sig)) : name;
+      const sub = r.sig ? `<span class="sub">${r.sites.length ? esc(r.sites.join(" ")) : "Individualised sites"}</span>` : "";
+      return `<button class="row" type="button" data-i="${i}"><span class="d">${label}${r.match ? `<span class="match">fits your finding</span>` : ""}${sub}</span>
         <span class="votes"><span>${r.nf.length} ${r.nf.length === 1 ? "study" : "studies"}</span></span>
-        <span class="cert">${esc(cap(r.best))}</span><span class="verdict">${r.nf.filter(f => f.metrics.control === "sham" || f.metrics.blinded).length} sham/blinded</span><span class="chev" aria-hidden="true">›</span></button>`;
+        <span class="cert">${esc(cap(r.best))}</span><span class="verdict">${r.sham ? r.sham + " sham / blinded" : "no sham control"}</span><span class="chev" aria-hidden="true">›</span></button>`;
     }
     if (!r.p) {
       return `<button class="row ghost" type="button" data-i="${i}"><span class="d">${name}${subLabel(r.band, r.loc, r.nb)}</span>
         <span class="votes"><span>${r.abs.length} abstract-only</span></span><span class="cert">Not pooled</span><span class="verdict">no full text yet</span><span class="chev" aria-hidden="true">›</span></button>`;
     }
     const p = r.p, lv = certLevel(p.certainty), consistent = /^consistently/.test(p.verdict);
-    return `<button class="row" type="button" data-i="${i}"><span class="d">${name}${subLabel(p.band, p.location, r.nb)}</span>
+    const byDx = state.step === "assess" && state.from === "dx";
+    const lead = byDx ? `${esc(BAND[p.band] ? BAND[p.band].name : p.band)} ${p.feature === "asymmetry" ? "⇆ asymmetry" : p.direction === "up" ? "▲" : "▼"}<span class="sub">${esc(cap(p.location))}</span>` : name + subLabel(p.band, p.location, r.nb);
+    return `<button class="row" type="button" data-i="${i}"><span class="d">${lead}</span>
       ${votes(p)}
       <span class="cert">${lv ? meter(lv) + esc(p.certainty) : "<span class='verdict'>Not rated</span>"}<span class="sr"> certainty</span></span>
       <span class="verdict${consistent ? " yes" : ""}">${esc(cap(p.verdict))}${r.abs.length ? ` <span class="mono" style="color:var(--faint)">+${r.abs.length} abstract</span>` : ""}</span>
       <span class="chev" aria-hidden="true">›</span></button>`;
   }
   function title() {
-    const at = areaText();
-    if (state.cond && !state.band && !at && state.layer !== "nf") return `${COND[state.cond].name}: ${state.layer === "connectivity" ? "connectivity" : "all band-power"} patterns`;
-    const band = state.band ? BAND[state.band].name.toLowerCase() : "any band";
-    const area = at ? (groupOf() ? at + " " : "") : "";
-    const cond = state.cond ? " · " + COND[state.cond].name : "";
-    if (state.layer === "nf") return `Neurofeedback training ${band}${at ? " at " + at + (groupOf() ? " sites" : "") : ""}${cond}`;
-    if (state.layer === "connectivity") {
-      const d = state.dir === "up" ? "More" : state.dir === "down" ? "Less" : "Changed";
-      return `${d} ${band} connectivity${at ? " with " + at + (groupOf() ? " sites" : "") : ""}${cond}`;
-    }
-    const d = state.dir === "up" ? "Higher" : state.dir === "down" ? "Lower" : "Changed";
-    return `${d} ${area}${band}${at && !groupOf() ? " at " + at : ""}${cond}`;
+    const cn = F.cond && COND[F.cond] ? COND[F.cond].name : "";
+    if (state.step === "treat") return cn ? `Neurofeedback studied for ${cn}` : "Neurofeedback studies by condition";
+    if (state.from === "dx") return cn ? `${cn}: where the EEG ${F.layer === "connectivity" ? "connectivity " : ""}differs` : "Pick the client's diagnosis";
+    const at = areaText(), band = F.band ? BAND[F.band].name.toLowerCase() : "";
+    if (F.layer === "connectivity") return `${F.dir === "up" ? "More" : "Less"} ${band} connectivity${at ? " with " + at + (groupOf() ? " sites" : "") : ""}`;
+    const g = groupOf();
+    return `${F.dir === "up" ? "Higher" : "Lower"} ${g ? at + " " : ""}${band}${at && !g ? " at " + at : ""}`;
   }
 
   let ROWS = [], LIMIT = 12;
   function render() {
-    syncControls();
+    derive(); syncControls();
     if (state.q) return renderSearch();
-    ROWS = state.layer === "nf" ? rowsNF() : rowsSynth();
+    const needCond = state.step === "assess" && state.from === "dx" && !F.cond;
+    ROWS = needCond ? [] : F.layer === "nf" ? rowsNF() : rowsSynth();
     $("rTitle").textContent = cap(title());
-    const conds = new Set(ROWS.map(r => r.cond)).size;
-    const nStudies = new Set(ROWS.flatMap(r => r.nf ? r.nf.map(f => f.id) : (r.p ? r.p.studies.flatMap(s => s.ids) : []).concat(r.abs.map(f => f.id)))).size;
-    $("rCount").textContent = `${conds} ${conds === 1 ? "disorder" : "disorders"} · ${nStudies} studies`;
-    const head = state.layer === "nf"
-      ? `<div class="thead"><span>Disorder</span><span>Studies</span><span>Best evidence</span><span>Controls</span><span></span></div>`
-      : `<div class="thead"><span>Disorder</span><span>Studies (direction)</span><span>Certainty</span><span>Pooled result</span><span></span></div>`;
-    $("list").innerHTML = ROWS.length
-      ? head + ROWS.slice(0, LIMIT).map(rowHtml).join("") + (ROWS.length > LIMIT ? `<button class="more" type="button" id="moreBtn">Show ${ROWS.length - LIMIT} more</button>` : "")
-      : `<div class="empty">Nothing recorded for this combination. Try <b>Either</b>, <b>Whole head</b> or <b>Any band</b>.</div>`;
-    $("legend").innerHTML = state.layer === "nf" ? "" : `<span><i style="background:var(--up)"></i>▲ higher</span><span><i style="background:var(--down)"></i>▼ lower</span><span><i style="background:var(--unclear)"></i>? unclear</span><span>Pooled from full-text studies only</span>`;
+    if (F.layer === "nf") {
+      const n = ROWS.reduce((a, r) => a + r.nf.length, 0);
+      $("rCount").textContent = F.cond ? `${ROWS.length} ${ROWS.length === 1 ? "protocol" : "protocols"} · ${n} studies` : `${n} studies`;
+    } else {
+      const conds = new Set(ROWS.map(r => r.cond)).size;
+      const nStudies = new Set(ROWS.flatMap(r => (r.p ? r.p.studies.flatMap(s => s.ids) : []).concat(r.abs.map(f => f.id)))).size;
+      $("rCount").textContent = needCond ? "" : state.from === "dx" ? `${ROWS.length} patterns · ${nStudies} studies` : `${conds} ${conds === 1 ? "disorder" : "disorders"} · ${nStudies} studies`;
+    }
+    const head = F.layer === "nf"
+      ? `<div class="thead"><span>${F.cond ? "Protocol (bands trained)" : "Condition"}</span><span>Studies</span><span>Best evidence</span><span>Controls</span><span></span></div>`
+      : `<div class="thead"><span>${state.from === "dx" ? "Pattern" : "Disorder"}</span><span>Studies (direction)</span><span>Certainty</span><span>Pooled result</span><span></span></div>`;
+    $("list").innerHTML = needCond ? `<div class="empty">Pick a diagnosis above to see where its resting EEG has been found to differ.</div>`
+      : ROWS.length ? head + ROWS.slice(0, LIMIT).map(rowHtml).join("") + (ROWS.length > LIMIT ? `<button class="more" type="button" id="moreBtn">Show ${ROWS.length - LIMIT} more</button>` : "")
+      : `<div class="empty">${state.step === "treat" ? "No neurofeedback studies recorded for this condition yet." : "Nothing recorded here. Try another band, or tap more electrodes."}</div>`;
+    $("legend").innerHTML = F.layer === "nf" ? `<span>▲ trained up · ▼ trained down · ⇅ regulated</span>` : `<span><i style="background:var(--up)"></i>▲ higher</span><span><i style="background:var(--down)"></i>▼ lower</span><span><i style="background:var(--unclear)"></i>? unclear</span><span>Pooled from full-text studies only</span>`;
+    // Hand-off between the two steps.
+    let nx = "";
+    if (state.step === "assess" && state.from === "dx" && F.cond && nfCount(F.cond)) nx = `<button class="cta" type="button" data-treat="${F.cond}">2 · Neurofeedback studied for ${esc(COND[F.cond].name)} →</button>`;
+    if (state.step === "assess" && state.from === "eeg" && ROWS.length) nx = `<span class="note">Tap a disorder for the studies, then go on to its treatment evidence.</span>`;
+    if (state.step === "treat" && F.cond && state.from === "eeg" && state.band && ROWS.some(r => r.match)) nx = `<span class="note">“Fits your finding” = trains ${esc(BAND[state.band].name.toLowerCase())} ${state.dir === "up" ? "down" : "up"}, against the ${state.dir === "up" ? "higher" : "lower"} ${esc(BAND[state.band].name.toLowerCase())} you assessed.</span>`;
+    $("next").innerHTML = nx;
+    $("foot").innerHTML = state.step === "treat"
+      ? `These are the protocols that have been studied and how strong that evidence is. They are not treatment guidelines: choose a protocol from the client's full assessment and clinical judgement. <a href="methods.html#grading">How evidence is graded</a>`
+      : `Group-level research findings, not a diagnostic test for one person. Abstract-only studies are shown but left out of the pooled result. <a href="methods.html#grading">How certainty is rated</a>`;
     paintHead(ROWS);
   }
+  function toTreat(cond) { state.cond = cond; if ($("sheet").classList.contains("open")) closeSheet(); goStep("treat"); }
+  $("next").addEventListener("click", e => { const b = e.target.closest("[data-treat]"); if (b) toTreat(b.dataset.treat); });
+  $("sBody").addEventListener("click", e => { const b = e.target.closest("[data-treat]"); if (b) toTreat(b.dataset.treat); });
   function update() { LIMIT = 12; saveHash(); render(); }
   $("list").addEventListener("click", e => {
     if (e.target.id === "moreBtn") { LIMIT = 999; render(); return; }
-    const b = e.target.closest(".row"); if (b && ROWS[+b.dataset.i]) openSheet(ROWS[+b.dataset.i]);
+    const b = e.target.closest(".row"), r = b && ROWS[+b.dataset.i]; if (!r) return;
+    if (r.pick) { state.cond = r.cond; update(); return; }
+    openSheet(r);
   });
 
   // ---------- studies ----------
@@ -632,11 +713,13 @@ html.locked .app { display: none; }
   function openSheet(r) {
     lastFocus = document.activeElement;
     const name = esc(COND[r.cond] ? COND[r.cond].name : r.cond);
-    let h = `<div class="bar-top"><span class="count">${esc(cap(title()))}</span><button class="x" type="button" id="sClose" aria-label="Close">×</button></div><h2 id="sTitle">${name}</h2>`;
+    let h = `<div class="bar-top"><span class="count">${state.step === "treat" ? "Treatment evidence" : "Assessment"}</span><button class="x" type="button" id="sClose" aria-label="Close">×</button></div><h2 id="sTitle">${name}</h2>`;
     let studies = [];
     if (r.nf) {
       studies = r.nf;
-      h += `<div class="facts"><div class="fact"><span>Studies</span><b>${r.nf.length}</b></div><div class="fact"><span>Best evidence</span><b>${esc(cap(r.best))}</b></div></div>`;
+      if (r.sig) h = h.replace(`<h2 id="sTitle">${name}</h2>`, `<h2 id="sTitle">${esc(sigLabel(r.sig))}</h2><p class="count" style="margin:0">${name} · ${r.sites.length ? esc(r.sites.join(" ")) : "individualised sites"}</p>`);
+      h += `<div class="facts"><div class="fact"><span>Studies</span><b>${r.nf.length}</b></div><div class="fact"><span>Best evidence</span><b>${esc(cap(r.best))}</b></div><div class="fact"><span>Sham / blinded</span><b>${r.sham}</b></div></div>`;
+      if (r.match) h += `<p class="foot" style="color:var(--ink)">Trains against the pattern you assessed.</p>`;
       h += `<div class="sec">Studies</div>` + r.nf.map(f => studyHtml(f, null, f.source === "abstract")).join("");
     } else if (r.p) {
       const p = r.p;
@@ -657,7 +740,8 @@ html.locked .app { display: none; }
     }
     if (r.abs && r.abs.length) h += `<div class="sec">Abstract only · not pooled</div>` + r.abs.map(f => studyHtml(f, null, true)).join("");
     const syms = [...new Set(studies.concat(r.abs || []).flatMap(f => f.symptoms || []))].filter(s => SYM[s]);
-    if (syms.length) h += `<div class="sec">Symptoms in these groups</div><div class="syms">${syms.map(s => `<span class="tag">${esc(SYM[s].name)}</span>`).join("")}</div>`;
+    if (syms.length) h += `<div class="sec">${r.nf ? "Outcomes measured" : "Symptoms in these groups"}</div><div class="syms">${syms.map(s => `<span class="tag">${esc(SYM[s].name)}</span>`).join("")}</div>`;
+    if (!r.nf && nfCount(r.cond)) h += `<div class="sec">Next</div><button class="cta" type="button" data-treat="${r.cond}">2 · Neurofeedback studied for ${name} →</button>`;
     $("sBody").innerHTML = h;
     $("sheet").classList.add("open"); document.body.style.overflow = "hidden";
     $("sClose").focus();
@@ -668,7 +752,7 @@ html.locked .app { display: none; }
 
   // ---------- go ----------
   const nPapers = D.findings.length + (D.connectivity || []).length;
-  $("heroSub").textContent = `${nPapers} studies. Pick a band and a scalp area. See where it shows up, and how sure the research is.`;
+  $("heroSub").textContent = `Assess a client's resting EEG against ${nPapers} studies, then see which neurofeedback protocols have been studied.`;
   $("footStats").textContent = `${D.findings.filter(f => f.type === "biomarker").length} EEG markers · ${(D.connectivity || []).length} connectivity · ${D.findings.filter(f => f.type === "protocol").length} neurofeedback${S.generated ? " · synthesis " + S.generated : ""}`;
   drawHead(); drawDome(); render();
 })();
