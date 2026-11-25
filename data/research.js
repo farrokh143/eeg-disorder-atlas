@@ -539,7 +539,7 @@ window.NF_DATA = {
       cite: { authors: "Zoefel B, Huster RJ, Herrmann CS", year: 2011, title: "Neurofeedback training of the upper alpha frequency band in EEG improves cognitive performance", journal: "NeuroImage" }
     },
     {
-      id: "cog-gruzelier-2014", source: "curated", condition: "cognition", type: "protocol",
+      id: "cog-gruzelier-2014", rec: { eyes: "unclear", power: "n/a", icd11: "subclinical", dx: "unclear" }, source: "curated", condition: "cognition", type: "protocol",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Cz","C4","Pz"], bands: ["smr","alpha","theta"], direction: "up", evidence: "moderate",
       changes: { smr: "up", alpha: "up", theta: "up" }, symptoms: ["inattention","memory"],
@@ -549,8 +549,8 @@ window.NF_DATA = {
       cite: { authors: "Gruzelier JH", year: 2014, title: "EEG-neurofeedback for optimising performance. I: A review of cognitive and affective outcome in healthy participants", journal: "Neuroscience & Biobehavioral Reviews" }
     },
     {
-      id: "cog-enriquez-2014", source: "curated", condition: "cognition", type: "protocol",
-      metrics: { design: 3, control: "active", blinded: null, n: null, k: null },
+      id: "cog-enriquez-2014", rec: { eyes: "unclear", power: "n/a", icd11: "subclinical", dx: "unclear" }, source: "curated", condition: "cognition", type: "protocol",
+      metrics: { design: 3, control: "active", blinded: null, n: 40, k: null },
       sites: ["Fz"], bands: ["theta"], direction: "up", evidence: "moderate",
       changes: { theta: "up" }, symptoms: ["executive","memory"],
       claim: "Frontal-midline theta UP-training improved working memory and task switching",
@@ -559,8 +559,8 @@ window.NF_DATA = {
       cite: { authors: "Enriquez-Geppert S, Huster RJ, Figge C, Herrmann CS", year: 2014, title: "Self-regulation of frontal-midline theta facilitates memory updating and mental set shifting", journal: "Frontiers in Behavioral Neuroscience" }
     },
     {
-      id: "pm-28577262", source: "full-text", condition: "adhd", type: "biomarker",
-      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      id: "pm-28577262", rec: { eyes: "open", power: "absolute", icd11: "6A05", dx: "DSM-IV" }, source: "full-text", condition: "adhd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 390, k: null },
       sites: ["F7","F3","Fz","F4","F8","C3","Cz","C4","P3","Pz","P4"], bands: ["delta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
       claim: "ADHD and preterm adolescents: higher resting delta power than controls",
@@ -569,8 +569,8 @@ window.NF_DATA = {
       cite: { authors: "Rommel AS, et al.", year: 2017, title: "Altered EEG spectral power during rest and cognitive performance: a comparison of preterm-born adolescents to adolescents with ADHD", journal: "Eur Child Adolesc Psychiatry" }
     },
     {
-      id: "pm-18607528", source: "full-text", condition: "alzheimers", type: "biomarker",
-      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      id: "pm-18607528", rec: { eyes: "open", power: "absolute", icd11: "6D80", dx: "research criteria" }, source: "full-text", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 55, k: null },
       sites: ["C3","P3","Pz","P4","T6","O1","O2"], bands: ["gamma"], direction: "up", evidence: "preliminary",
       changes: { gamma: "up" }, symptoms: ["memory","cogdecline"],
       claim: "Drug-naive AD: higher resting gamma power than controls over parieto-occipital sites",
@@ -579,7 +579,7 @@ window.NF_DATA = {
       cite: { authors: "van Deursen JA, et al.", year: 2008, title: "Increased EEG gamma band activity in Alzheimer's disease and mild cognitive impairment", journal: "J Neural Transm (Vienna)" }
     },
     {
-      id: "pm-23969043", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-23969043", rec: { eyes: "unclear", power: "ratio-only", icd11: "6D80", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 95, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down", beta: "down" }, symptoms: ["memory","cogdecline"],
@@ -589,7 +589,7 @@ window.NF_DATA = {
       cite: { authors: "Chen CC, et al.", year: 2015, title: "Frequency power and coherence of electroencephalography are correlated with the severity of Alzheimer's disease: A multicenter analysis in Taiwan", journal: "J Formos Med Assoc" }
     },
     {
-      id: "pm-24015222", source: "full-text", condition: "alzheimers", type: "biomarker",
+      id: "pm-24015222", rec: { eyes: "closed", power: "relative", icd11: "6D80", dx: "mixed" }, source: "full-text", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 76, k: null },
       sites: ["O1","O2","Pz","P4","T5","T6","F8"], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down", beta: "down" }, symptoms: ["memory","cogdecline"],
@@ -599,8 +599,8 @@ window.NF_DATA = {
       cite: { authors: "Fraga FJ, et al.", year: 2013, title: "Characterizing Alzheimer's disease severity via resting-awake EEG amplitude modulation analysis", journal: "PLoS One" }
     },
     {
-      id: "pm-29991135", source: "abstract", condition: "alzheimers", type: "biomarker",
-      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      id: "pm-29991135", rec: { eyes: "closed", power: "relative", icd11: "6D80", dx: "clinical diagnosis" }, source: "abstract", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 372, k: null },
       sites: [], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["memory","cogdecline"],
       claim: "Dementia due to AD: globally higher relative theta power than healthy controls, eyes closed",
@@ -609,7 +609,7 @@ window.NF_DATA = {
       cite: { authors: "Musaeus CS, et al.", year: 2018, title: "EEG Theta Power Is an Early Marker of Cognitive Decline in Dementia due to Alzheimer's Disease", journal: "J Alzheimers Dis" }
     },
     {
-      id: "pm-31211359", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-31211359", rec: { eyes: "closed", power: "unclear", icd11: "subclinical", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: 314, k: null },
       sites: ["F3","Fz","F4","C3","Cz","C4"], bands: ["delta","beta","gamma"], direction: "ratio", evidence: "moderate",
       changes: { delta: "down", beta: "up", gamma: "up" }, symptoms: ["memory","cogdecline"],
@@ -619,8 +619,8 @@ window.NF_DATA = {
       cite: { authors: "Gaubert S, et al.", year: 2019, title: "EEG evidence of compensatory mechanisms in preclinical Alzheimer's disease", journal: "Brain" }
     },
     {
-      id: "pm-32641111", source: "full-text", condition: "alzheimers", type: "biomarker",
-      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      id: "pm-32641111", rec: { eyes: "closed", power: "relative", icd11: "6D71", dx: "research criteria" }, source: "full-text", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 67, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "contested",
       changes: { delta: "mixed", theta: "mixed", alpha: "mixed", beta: "mixed" }, symptoms: ["memory","cogdecline"],
       claim: "MCI-AD: resting EEG band power and dominant frequency did not differ from controls",
@@ -629,8 +629,8 @@ window.NF_DATA = {
       cite: { authors: "Schumacher J, et al.", year: 2020, title: "Quantitative EEG as a biomarker in mild cognitive impairment with Lewy bodies", journal: "Alzheimers Res Ther" }
     },
     {
-      id: "pm-33080295", source: "abstract", condition: "alzheimers", type: "biomarker",
-      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      id: "pm-33080295", rec: { eyes: "unclear", power: "unclear", icd11: "6D80", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 200, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down", beta: "down" }, symptoms: ["memory","cogdecline"],
       claim: "Alzheimer's dementia: higher global delta and theta, lower alpha and beta than seniors",
@@ -3485,7 +3485,7 @@ window.NF_DATA = {
       cite: { authors: "Canuet L, et al.", year: 2012, title: "Resting-state network disruption and APOE genotype in Alzheimer's disease: a lagged functional connectivity study", journal: "PLoS One" }
     },
     {
-      id: "pm-23969043-fc", source: "abstract", condition: "alzheimers", type: "connectivity",
+      id: "pm-23969043-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6D80", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "connectivity",
       measure: "coherence", pairs: [["central","central"],["parietal","parietal"]],
       metrics: { design: 2, control: null, blinded: null, n: 95, k: null },
       bands: ["alpha"], direction: "down", evidence: "preliminary",
