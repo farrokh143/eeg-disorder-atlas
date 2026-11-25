@@ -220,8 +220,8 @@ window.NF_DATA = {
       cite: { authors: "Neurofeedback Collaborative Group", year: 2021, title: "Double-blind placebo-controlled randomized clinical trial of neurofeedback for attention-deficit/hyperactivity disorder with 13-month follow-up", journal: "Journal of the American Academy of Child & Adolescent Psychiatry" }
     },
     {
-      id: "adhd-scp-2006", source: "curated", condition: "adhd", type: "protocol",
-      metrics: { design: 3, control: null, blinded: null, n: null, k: null },
+      id: "adhd-scp-2006", rec: { eyes: "unclear", power: "n/a", icd11: "6A05", dx: "unclear" }, source: "curated", condition: "adhd", type: "protocol",
+      metrics: { design: 3, control: null, blinded: null, n: 23, k: null },
       sites: ["Cz"], bands: ["scp"], direction: "up", evidence: "moderate",
       changes: { scp: "regulate" }, symptoms: ["inattention","impulsivity","hyperactivity"],
       claim: "Slow cortical potential self-regulation",
@@ -230,7 +230,7 @@ window.NF_DATA = {
       cite: { authors: "Strehl U, Leins U, Goth G, Klinger C, Hinterberger T, Birbaumer N", year: 2006, title: "Self-regulation of slow cortical potentials: a new treatment for children with attention-deficit/hyperactivity disorder", journal: "Pediatrics" }
     },
     {
-      id: "adhd-vandoren-2019", source: "curated", condition: "adhd", type: "protocol",
+      id: "adhd-vandoren-2019", rec: { eyes: "unclear", power: "n/a", icd11: "6A05", dx: "unclear" }, source: "curated", condition: "adhd", type: "protocol",
       metrics: { design: 5, control: null, blinded: null, n: null, k: null },
       sites: ["Cz","C3","C4"], bands: ["theta","smr","scp"], direction: "ratio", evidence: "moderate",
       changes: { theta: "down", smr: "up", scp: "regulate" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -240,7 +240,7 @@ window.NF_DATA = {
       cite: { authors: "Van Doren J, Arns M, Heinrich H, Vollebregt MA, Strehl U, Loo SK", year: 2019, title: "Sustained effects of neurofeedback in ADHD: a systematic review and meta-analysis", journal: "European Child & Adolescent Psychiatry" }
     },
     {
-      id: "adhd-barry-2003", source: "curated", condition: "adhd", type: "biomarker",
+      id: "adhd-barry-2003", rec: { eyes: "unclear", power: "unclear", icd11: "6A05", dx: "unclear" }, source: "curated", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["F3","Fz","F4","C3","Cz","C4"], bands: ["theta","alpha","beta"], direction: "up", evidence: "moderate",
       changes: { theta: "up", alpha: "down", beta: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -250,7 +250,7 @@ window.NF_DATA = {
       cite: { authors: "Barry RJ, Clarke AR, Johnstone SJ", year: 2003, title: "A review of electrophysiology in attention-deficit/hyperactivity disorder: I. Qualitative and quantitative electroencephalography", journal: "Clinical Neurophysiology" }
     },
     {
-      id: "adhd-snyder-2006", source: "curated", condition: "adhd", type: "biomarker",
+      id: "adhd-snyder-2006", rec: { eyes: "unclear", power: "unclear", icd11: "6A05", dx: "DSM-IV" }, source: "curated", condition: "adhd", type: "biomarker",
       metrics: { design: 5, control: null, blinded: null, n: null, k: null },
       sites: ["Cz"], bands: ["theta","beta"], direction: "ratio", evidence: "moderate",
       changes: { theta: "up", beta: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -260,7 +260,7 @@ window.NF_DATA = {
       cite: { authors: "Snyder SM, Hall JR", year: 2006, title: "A meta-analysis of quantitative EEG power associated with attention-deficit hyperactivity disorder", journal: "Journal of Clinical Neurophysiology" }
     },
     {
-      id: "adhd-arns-2012", source: "curated", condition: "adhd", type: "protocol",
+      id: "adhd-arns-2012", rec: { eyes: "unclear", power: "n/a", icd11: "6A05", dx: "DSM-IV" }, source: "curated", condition: "adhd", type: "protocol",
       metrics: { design: 1, control: "none", blinded: false, n: 21, k: null },
       sites: ["Fz","Cz"], bands: ["theta","beta","smr"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "down", beta: "up", smr: "up" }, symptoms: ["inattention","impulsivity","hyperactivity","lowmood"],
@@ -270,8 +270,8 @@ window.NF_DATA = {
       cite: { authors: "Arns M, Drinkenburg W, Kenemans JL", year: 2012, title: "The effects of QEEG-informed neurofeedback in ADHD: an open-label pilot study", journal: "Applied Psychophysiology and Biofeedback" }
     },
     {
-      id: "adhd-krepel-2020", source: "curated", condition: "adhd", type: "protocol",
-      metrics: { design: 2, control: "none", blinded: false, n: null, k: null },
+      id: "adhd-krepel-2020", rec: { eyes: "unclear", power: "n/a", icd11: "6A05", dx: "unclear" }, source: "curated", condition: "adhd", type: "protocol",
+      metrics: { design: 2, control: "none", blinded: false, n: 114, k: null },
       sites: ["Fz","Cz"], bands: ["theta","beta","smr"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "down", beta: "up", smr: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
       claim: "Multicentre replication of QEEG-informed neurofeedback",
@@ -281,8 +281,8 @@ window.NF_DATA = {
     },
     /* ---------------- Depression ---------------- */
     {
-      id: "dep-henriques-1991", source: "curated", condition: "depression", type: "biomarker",
-      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      id: "dep-henriques-1991", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "clinical diagnosis" }, source: "curated", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 28, k: null },
       sites: ["F3","F4"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
       claim: "Relatively more left-frontal alpha (left hypoactivation)",
@@ -291,7 +291,7 @@ window.NF_DATA = {
       cite: { authors: "Henriques JB, Davidson RJ", year: 1991, title: "Left frontal hypoactivation in depression", journal: "Journal of Abnormal Psychology" }
     },
     {
-      id: "dep-vandervinne-2017", source: "curated", condition: "depression", type: "biomarker",
+      id: "dep-vandervinne-2017", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "curated", condition: "depression", type: "biomarker",
       metrics: { design: 5, control: null, blinded: null, n: null, k: null },
       sites: ["F3","F4"], bands: ["alpha"], direction: "asymmetry", evidence: "contested",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -301,7 +301,7 @@ window.NF_DATA = {
       cite: { authors: "van der Vinne N, Vollebregt MA, van Putten MJAM, Arns M", year: 2017, title: "Frontal alpha asymmetry as a diagnostic marker in depression: fact or fiction? A meta-analysis", journal: "NeuroImage: Clinical" }
     },
     {
-      id: "dep-baehr-2001", source: "curated", condition: "depression", type: "protocol",
+      id: "dep-baehr-2001", rec: { eyes: "unclear", power: "n/a", icd11: "6A7", dx: "unclear" }, source: "curated", condition: "depression", type: "protocol",
       metrics: { design: 1, control: "none", blinded: false, n: null, k: null },
       sites: ["F3","F4"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -311,7 +311,7 @@ window.NF_DATA = {
       cite: { authors: "Baehr E, Rosenfeld JP, Baehr R", year: 2001, title: "Clinical use of an alpha asymmetry neurofeedback protocol in the treatment of mood disorders: follow-up study one to five years post therapy", journal: "Journal of Neurotherapy" }
     },
     {
-      id: "dep-choi-2011", source: "curated", condition: "depression", type: "protocol",
+      id: "dep-choi-2011", rec: { eyes: "unclear", power: "n/a", icd11: "6A7", dx: "unclear" }, source: "curated", condition: "depression", type: "protocol",
       metrics: { design: 4, control: "sham", blinded: null, n: null, k: null },
       sites: ["F3","F4"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
