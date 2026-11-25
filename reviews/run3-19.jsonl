@@ -1,0 +1,8 @@
+{"id":"pm-38157354","decision":"defer","note":"[retry] full text read: null RD vs control temporal low-gamma; left-dominance only in RD without ADHD. Included data would need a learning symptom id (none in the atlas list); owner to decide"}
+{"id":"pm-37747311","decision":"defer","note":"[parked: non-atlas condition specific language impairment] resting alpha power in SLI children"}
+{"id":"pm-31952981","decision":"exclude","code":"CN","note":"minimum spanning tree network metrics in dyslexia; graph and connectivity only"}
+{"id":"pm-30422939","decision":"defer","note":"[retry] resting theta up across the scalp and frontal beta up in learning-disabled children vs controls, abstract only. Included data would need a learning symptom id (none in the atlas list); owner to decide"}
+{"id":"pm-38723615","decision":"exclude","code":"T","note":"beta power during passive auditory listening in SLI; task-based"}
+{"id":"pm-26294269","decision":"defer","note":"[parked: no full text] NFB theta/alpha ratio training in learning-disabled children; abstract does not name sites or the outcome measures"}
+{"id":"pm-40161337","decision":"exclude","code":"X","reason":"Within-group comparison on IQ, a symptom the atlas does not track; no learning-disorder vs control band-power result with direction"}
+{"id":"pm-40493313","decision":"defer","note":"[retry] eyes-closed resting alpha lower over all scalp areas in dyslexia vs controls (full text read). Included data would need a learning symptom id (none in the atlas list); owner to decide"}
