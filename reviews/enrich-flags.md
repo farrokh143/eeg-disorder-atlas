@@ -32,3 +32,5 @@ with `tools/revert-finding.js` plus a corrected `include` through `tools/apply-r
 - pm-39251926: participants watched a movie with eyes on the screen during the resting recording; eyes state is not stated as eyes-open or eyes-closed, so coded unclear. Check the detail wording.
 - pm-39555754: the paper also has stimulus-driven alpha (task) data and an eyes-closed 20 s block; only the eyes-open baseline rest is used here. The power measure is Hilbert alpha amplitude, coded unclear.
 - pm-37172019: the eyes-open state is shown by the keyword "eyes open" only; no eye statement appears in the abstract. Check the full text.
+- pm-42185252: the paradigm had children watch a cartoon with sound (not an eyes-open/closed rest), so the eye state is coded unclear. The protocol departs from standard resting-state recordings; the power measure is mean log10 whole-brain power, coded absolute.
+- pm-12712882: the abstract is in English but the article is Hungarian; quote taken from the English abstract. Check the citation title wording.

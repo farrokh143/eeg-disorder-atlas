@@ -1,0 +1,10 @@
+{"id":"pm-41520112","eyes":"open","power":"absolute","icd11":"6A02","dx":"clinical diagnosis","quote":"Resting-state EEG was recorded in the eyes-open condition"}
+{"id":"pm-42185252","eyes":"unclear","power":"absolute","icd11":"6A02","dx":"DSM-5"}
+{"id":"pm-12712882","eyes":"closed","power":"both","icd11":"8A6","dx":"unclear","quote":"EEG was recorded with closed eyes"}
+{"id":"pm-15134712","eyes":"closed","power":"both","icd11":"8A6","dx":"unclear","quote":"eyes-closed waking interictal EEG activity"}
+{"id":"pm-20820898","eyes":"unclear","power":"unclear","icd11":"8A6","dx":"unclear"}
+{"id":"pm-23922658","eyes":"both","power":"unclear","icd11":"8A6","dx":"unclear","quote":"recorded with eyes closed (EC) and another three minutes with eyes open"}
+{"id":"pm-26509114","eyes":"closed","power":"relative","icd11":"8A6","dx":"unclear","quote":"under the eyes-closed resting state condition"}
+{"id":"pm-30847365","eyes":"closed","power":"unclear","icd11":"8A6","dx":"unclear","quote":"during eyes-closed wakefulness"}
+{"id":"pm-31129368","eyes":"unclear","power":"absolute","icd11":"8A6","dx":"unclear"}
+{"id":"pm-34687043","eyes":"unclear","power":"ratio-only","icd11":"8A6","dx":"unclear"}
