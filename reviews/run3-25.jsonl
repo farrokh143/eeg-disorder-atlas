@@ -1,0 +1,8 @@
+{"id":"pm-41336539","decision":"exclude","code":"NR","note":"taVNS and TMS stimulation effect on resting small-world metrics and MEPs"}
+{"id":"pm-36086133","decision":"exclude","code":"CN","note":"resting-state beta connectivity between motor cortices; connectivity only"}
+{"id":"pm-40652354","decision":"exclude","code":"CN","note":"phase synchrony index between language networks; connectivity only"}
+{"id":"pm-38112223","decision":"exclude","code":"CN","note":"EEG microstate analysis after cerebellar iTBS"}
+{"id":"pm-37542545","decision":"exclude","code":"REVIEW","note":"systematic and scoping review of resting qEEG in stroke; no pooled analysis"}
+{"id":"pm-37141068","decision":"exclude","code":"NR","note":"contralateral functional electrical stimulation effect on ERD and synchrony"}
+{"id":"pm-35788519","decision":"exclude","code":"NR","note":"real vs sham tDCS effect on resting power in stroke; stimulation effect"}
+{"id":"pm-38261754","decision":"exclude","code":"NR","note":"repetitive finger electrical stimulation effect on quantitative EEG ratios; stimulation effect"}
