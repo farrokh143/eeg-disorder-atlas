@@ -1,0 +1,10 @@
+{"id":"cog-gruzelier-2014","eyes":"unclear","power":"n/a","icd11":"subclinical","dx":"unclear","pmid":"24125857"}
+{"id":"cog-enriquez-2014","eyes":"unclear","power":"n/a","icd11":"subclinical","dx":"unclear","n":40,"pmid":"25538585"}
+{"id":"pm-28577262","eyes":"open","power":"absolute","icd11":"6A05","dx":"DSM-IV","n":390,"quote":"3-min eyes-open resting-state condition"}
+{"id":"pm-18607528","eyes":"open","power":"absolute","icd11":"6D80","dx":"research criteria","n":55,"quote":"keep their eyes open and fixate"}
+{"id":"pm-23969043","eyes":"unclear","power":"ratio-only","icd11":"6D80","dx":"unclear"}
+{"id":"pm-24015222","eyes":"closed","power":"relative","icd11":"6D80","dx":"mixed","quote":"resting with their eyes closed"}
+{"id":"pm-29991135","eyes":"closed","power":"relative","icd11":"6D80","dx":"clinical diagnosis","n":372,"quote":"for eyes closed for AD"}
+{"id":"pm-31211359","eyes":"closed","power":"unclear","icd11":"subclinical","dx":"unclear","quote":"high-density eyes closed 1-min resting state EEG"}
+{"id":"pm-32641111","eyes":"closed","power":"relative","icd11":"6D71","dx":"research criteria","n":67,"quote":"Three hundred seconds of eyes-closed data"}
+{"id":"pm-33080295","eyes":"unclear","power":"unclear","icd11":"6D80","dx":"unclear","n":200}
