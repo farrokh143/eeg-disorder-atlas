@@ -1,0 +1,8 @@
+{"id":"pm-39721149","decision":"exclude","code":"X","reason":"EEG brain-age model in typically developing infants; the Down syndrome and autism result is an age estimate, not a band-power result"}
+{"id":"pm-36167501","decision":"defer","note":"[parked: non-atlas condition fragile X] Fmr1 mouse and FXS baclofen trial; gamma and low-frequency power"}
+{"id":"pm-37558701","decision":"defer","note":"[parked: non-atlas condition Rett syndrome] girls with Rett syndrome vs typically developing peers; band power with direction"}
+{"id":"pm-35075104","decision":"exclude","code":"REVIEW","note":"narrative review of EEG biomarkers in fragile X syndrome"}
+{"id":"pm-40877251","decision":"exclude","code":"NONBAND","note":"main measure is peak alpha frequency from a fragile X trial secondary analysis, not band power"}
+{"id":"pm-25633341","decision":"defer","note":"[parked: non-atlas condition Williams syndrome] resting relative alpha asymmetry in adults with Williams syndrome vs controls"}
+{"id":"pm-41029474","decision":"defer","note":"[parked: non-atlas condition fragile X] aperiodic slope and alpha peak frequency in FXS"}
+{"id":"pm-41657078","decision":"defer","note":"[parked: non-atlas condition fragile X] resting EEG complexity and PSD correlated with behaviour in FXS"}
