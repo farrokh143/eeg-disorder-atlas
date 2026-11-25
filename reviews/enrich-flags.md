@@ -47,3 +47,4 @@ with `tools/revert-finding.js` plus a corrected `include` through `tools/apply-r
 - pm-41776190 and pm-41917996: full-text entries coded from abstracts; the entry covers several diagnoses (schizophrenia, bipolar, depression) in pm-41776190, so only the 6A20 code fits the entry condition. Check.
 - pm-28454845: sample also includes 42 ADD patients; icd11 coded 6D82+8A00 for the Lewy groups the entry is about, ADD not coded
 - pm-22775582: sample is cyclothymia (n=16) plus bipolar II (n=42); cyclothymia has no code in the allowed list, so icd11 is 6A6
+- pm-42876599: task-based stance EEG (baseline-corrected to resting); the resting-state group difference is uncorrected and isolated. Entry appears to conflict with the resting-state-only rule; suggest review or removal (fields coded from the eyes-closed stance result, not changed).

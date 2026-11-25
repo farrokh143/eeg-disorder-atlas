@@ -3452,7 +3452,7 @@ window.NF_DATA = {
       cite: { authors: "Chang J, et al.", year: 2023, title: "Quantitative Electroencephalography Markers for an Accurate Diagnosis of Frontotemporal Dementia: A Spectral Power Ratio Approach", journal: "Medicina (Kaunas)" }
     },
     {
-      id: "pm-28772244", source: "abstract", condition: "ms", type: "biomarker",
+      id: "pm-28772244", rec: { eyes: "unclear", power: "unclear", icd11: "8A40", dx: "unclear" }, source: "abstract", condition: "ms", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 25, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", beta: "down" }, symptoms: ["inattention"],
@@ -3462,7 +3462,7 @@ window.NF_DATA = {
       cite: { authors: "Keune PM, Hansen S, Weber E, Zapf F, Habich J, Muenssinger J, et al.", year: 2017, title: "Exploring resting-state EEG brain oscillatory activity in relation to cognitive functioning in multiple sclerosis", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-10896692", source: "abstract", condition: "ms", type: "biomarker",
+      id: "pm-10896692", rec: { eyes: "unclear", power: "unclear", icd11: "8A40", dx: "clinical diagnosis" }, source: "abstract", condition: "ms", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 50, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","C3","Cz","C4","T3","T4","T5","T6"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["cogdecline"],
@@ -3472,7 +3472,7 @@ window.NF_DATA = {
       cite: { authors: "Leocani L, Locatelli T, Martinelli V, Rovaris M, Falautano M, Filippi M, et al.", year: 2000, title: "Electroencephalographic coherence analysis in multiple sclerosis: correlation with clinical, neuropsychological, and MRI findings", journal: "J Neurol Neurosurg Psychiatry" }
     },
     {
-      id: "pm-42876599", source: "full-text", condition: "ms", type: "biomarker",
+      id: "pm-42876599", rec: { eyes: "closed", power: "absolute", icd11: "8A40", dx: "clinical diagnosis" }, source: "full-text", condition: "ms", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 14, k: null },
       sites: ["O1","O2"], bands: ["theta"], direction: "up", evidence: "contested",
       changes: { theta: "up" }, symptoms: ["motor"],
@@ -3482,7 +3482,7 @@ window.NF_DATA = {
       cite: { authors: "Braunsmann L, Stolz I, Rosiny F, Pöhlau D, Abeln V, Schneider S, et al.", year: 2026, title: "Increased visual reliance for postural control in multiple sclerosis: preliminary evidence from task-related cortical desynchronization", journal: "Front Neurol" }
     },
     {
-      id: "pm-38424592", source: "full-text", condition: "stroke", type: "biomarker",
+      id: "pm-38424592", rec: { eyes: "closed", power: "relative", icd11: "8B1", dx: "clinical diagnosis" }, source: "full-text", condition: "stroke", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 57, k: null },
       sites: ["C3","Cz","C4","P3","Pz","P4","T5","T6","O1","O2"], bands: ["theta","beta","hibeta"], direction: "asymmetry", evidence: "preliminary",
       changes: { theta: "asymmetry", beta: "asymmetry", hibeta: "asymmetry" }, symptoms: ["motor"],
@@ -3492,7 +3492,7 @@ window.NF_DATA = {
       cite: { authors: "Zhang JJ, Bai Z, Fong KNK", year: 2024, title: "Resting-state cortical electroencephalogram rhythms and network in patients after chronic stroke", journal: "J Neuroeng Rehabil" }
     },
     {
-      id: "pm-38460956", source: "abstract", condition: "stroke", type: "biomarker",
+      id: "pm-38460956", rec: { eyes: "unclear", power: "relative", icd11: "8B1", dx: "unclear" }, source: "abstract", condition: "stroke", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 85, k: null },
       sites: ["C3","Cz","C4"], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["motor"],
@@ -3502,8 +3502,8 @@ window.NF_DATA = {
       cite: { authors: "Marques LM, Barbosa SP, Gianlorenço AC, Pacheco-Barrios K, Souza DR, Matheus D, et al.", year: 2024, title: "Resting-state EEG as Biomarker of Maladaptive Motor Function and Depressive Profile in Stroke Patients", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-42304473", source: "full-text", condition: "stroke", type: "biomarker",
-      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      id: "pm-42304473", rec: { eyes: "open", power: "relative", icd11: "8B1", dx: "unclear" }, source: "full-text", condition: "stroke", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 56, k: null },
       sites: [], bands: ["delta","theta","beta","hibeta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", beta: "down", hibeta: "down" }, symptoms: ["motor"],
       claim: "Subacute stroke: higher whole-brain delta and theta, lower beta power than healthy controls at baseline",
@@ -3512,7 +3512,7 @@ window.NF_DATA = {
       cite: { authors: "Liao XY, Zhang Y, Gong Y, Guo A, Li S, Yasen A, et al.", year: 2026, title: "Dissociable effects of β-tACS on spectral power and network organization for proximal versus distal upper-limb recovery in subacute stroke: double-blind, randomized, sham-controlled trial with high-density EEG", journal: "J Neuroeng Rehabil" }
     },
     {
-      id: "pm-32472782", source: "abstract", condition: "stroke", type: "biomarker",
+      id: "pm-32472782", rec: { eyes: "unclear", power: "absolute", icd11: "8B1", dx: "unclear" }, source: "abstract", condition: "stroke", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 34, k: null },
       sites: ["Fp1","C3","Cz","C4","T3","T4","T5","T6","O1","O2"], bands: ["alpha","theta"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up", theta: "up" }, symptoms: ["lowmood"],
@@ -3522,7 +3522,7 @@ window.NF_DATA = {
       cite: { authors: "Li X, Yue L, Liu J, Lv X, Lv Y", year: 2021, title: "Relationship Between Abnormalities in Resting-State Quantitative Electroencephalogram Patterns and Poststroke Depression", journal: "J Clin Neurophysiol" }
     },
     {
-      id: "pm-41937362", source: "full-text", condition: "stroke", type: "biomarker",
+      id: "pm-41937362", rec: { eyes: "unclear", power: "relative", icd11: "8B1", dx: "clinical diagnosis" }, source: "full-text", condition: "stroke", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: 145, k: null },
       sites: [], bands: ["beta","gamma"], direction: "down", evidence: "moderate",
       changes: { beta: "down", gamma: "down" }, symptoms: ["motor"],
@@ -3532,7 +3532,7 @@ window.NF_DATA = {
       cite: { authors: "Delcamp C, Zhou Z, Srinivasan R, Cramer SC", year: 2026, title: "Mapping Brain Function After Stroke: From Early Disorganization to Late Compensation", journal: "Neurorehabil Neural Repair" }
     },
     {
-      id: "pm-24971913", source: "abstract", condition: "stroke", type: "biomarker",
+      id: "pm-24971913", rec: { eyes: "unclear", power: "relative", icd11: "8B1", dx: "unclear" }, source: "abstract", condition: "stroke", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 20, k: null },
       sites: [], bands: ["delta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", alpha: "down" }, symptoms: ["cogdecline"],
@@ -3542,7 +3542,7 @@ window.NF_DATA = {
       cite: { authors: "Schleiger E, Sheikh N, Rowland T, Wong A, Read S, Finnigan S", year: 2014, title: "Frontal EEG delta/alpha ratio and screening for post-stroke cognitive deficits: the power of four electrodes", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-35068216", source: "abstract", condition: "stroke", type: "biomarker",
+      id: "pm-35068216", rec: { eyes: "open", power: "unclear", icd11: "8B1", dx: "unclear" }, source: "abstract", condition: "stroke", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 32, k: null },
       sites: [], bands: ["delta"], direction: "asymmetry", evidence: "preliminary",
       changes: { delta: "asymmetry" }, symptoms: ["executive","memory","lowmood"],
