@@ -1,0 +1,10 @@
+{"id":"pm-7893770","eyes":"unclear","power":"unclear","icd11":"6A20","dx":"unclear"}
+{"id":"pm-7972603","eyes":"unclear","power":"unclear","icd11":"6A20","dx":"unclear"}
+{"id":"pm-8146253","eyes":"unclear","power":"unclear","icd11":"6A20","dx":"unclear"}
+{"id":"pm-8471683","eyes":"closed","power":"relative","icd11":"6A20","dx":"unclear","quote":"recorded awake, with eyes closed"}
+{"id":"pm-25587799","eyes":"unclear","power":"unclear","icd11":"6A20","dx":"unclear"}
+{"id":"pm-26101851","eyes":"open","power":"unclear","icd11":"6A20","dx":"unclear","quote":"eyes-open resting state EEG frequency activity"}
+{"id":"cand-gad-wang-2025","eyes":"closed","power":"absolute","icd11":"6B00","dx":"DSM-5","quote":"required to close their eyes, be awake, and relax","pmid":"39966577"}
+{"id":"pm-38280864","eyes":"closed","power":"relative","icd11":"6B0","dx":"scale cut-off","quote":"relax, close their eyes and stay awake"}
+{"id":"pm-28582479","eyes":"open","power":"unclear","icd11":"6B40","dx":"unclear","quote":"resting state (eyes open)"}
+{"id":"cand-anx-yuan-2024","eyes":"closed","power":"unclear","icd11":"6B0","dx":"unclear","quote":"obtained for 5 minutes in an eyes-closed condition","pmid":"39588546"}
