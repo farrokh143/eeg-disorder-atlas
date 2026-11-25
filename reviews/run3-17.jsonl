@@ -1,0 +1,8 @@
+{"id":"pm-17991005","decision":"exclude","code":"MEG","note":"resting MEG spectral power in three adults with Down syndrome; not EEG"}
+{"id":"pm-41922399","decision":"exclude","code":"NR","note":"BAER-101 drug trial in FXS; EEG change is a treatment effect"}
+{"id":"pm-26737808","decision":"exclude","code":"X","reason":"Case report: single child with intellectual disability followed over four years"}
+{"id":"pm-38795554","decision":"exclude","code":"NR","note":"learning and gaming cognitive stimulation in Rett syndrome; connectivity change is a stimulation effect"}
+{"id":"pm-31025465","decision":"defer","note":"[parked: non-atlas condition Down syndrome] EEG power in Down syndrome with and without Alzheimer disease"}
+{"id":"pm-34649497","decision":"defer","note":"[parked: non-atlas condition Down syndrome] resting EEG power and alpha peak in adults with Down syndrome vs controls"}
+{"id":"pm-8866678","decision":"defer","note":"[parked: non-atlas condition Down syndrome] resting EEG power and cognition in nondemented adults with Down syndrome"}
+{"id":"pm-36494861","decision":"exclude","code":"CN","note":"phase-lag-index frontal connectivity in FXS; connectivity only"}
