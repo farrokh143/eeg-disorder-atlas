@@ -1,0 +1,8 @@
+{"id":"pm-34298220","decision":"exclude","code":"NR","note":"resting gamma compared between aripiprazole responders and non-responders: treatment-response prediction"}
+{"id":"pm-34677105","decision":"exclude","code":"MEG","note":"resting eyes-open MEG source-space PSD, not EEG"}
+{"id":"pm-35849784","decision":"exclude","code":"REVIEW","note":"narrative review of oscillations in bipolar disorder; no pooled analysis"}
+{"id":"pm-3575558","decision":"exclude","code":"HI","note":"lithium effect on EEG in healthy volunteers; no patient group"}
+{"id":"pm-31282204","decision":"defer","note":"[parked: no full text] abstract gives absolute power for 229 variables but not bands, directions or sites for bipolar vs healthy"}
+{"id":"pm-41478240","decision":"exclude","code":"NR","note":"deep learning prediction of tDCS treatment remission from resting PSD"}
+{"id":"pm-25233240","decision":"exclude","code":"T","note":"event-related and evoked auditory beta responses only"}
+{"id":"pm-28357775","decision":"exclude","code":"NR","note":"resting alpha wavelet power as predictor of antidepressant response in bipolar depression"}
