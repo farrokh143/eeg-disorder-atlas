@@ -3477,6 +3477,16 @@ window.NF_DATA = {
       detail: "7 people with MS and 7 matched controls; resting EEG eyes open (2 minutes) and eyes closed. Only the resting eyes-open occipital (Oz coded as O1 O2) theta power was higher in MS (uncorrected p = 0.017; FDR q = 0.524); the paper calls this isolated and speculative, and all other resting bands showed no difference. Only the resting result is coded; the standing-balance task results are excluded. Pilot study with a very small sample.",
       design: "Case-control (pilot)",
       cite: { authors: "Braunsmann L, Stolz I, Rosiny F, Pöhlau D, Abeln V, Schneider S, et al.", year: 2026, title: "Increased visual reliance for postural control in multiple sclerosis: preliminary evidence from task-related cortical desynchronization", journal: "Front Neurol" }
+    },
+    {
+      id: "pm-38424592", source: "full-text", condition: "stroke", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 57, k: null },
+      sites: ["C3","Cz","C4","P3","Pz","P4","T5","T6","O1","O2"], bands: ["theta","beta","hibeta"], direction: "asymmetry", evidence: "preliminary",
+      changes: { theta: "asymmetry", beta: "asymmetry", hibeta: "asymmetry" }, symptoms: ["motor"],
+      claim: "Chronic stroke: theta and beta hemispheric asymmetry differs from controls (central and posterior sites)",
+      detail: "22 people with chronic stroke vs 19 age-matched and 16 younger healthy adults; 3-minute eyes-closed resting EEG, 64 channels. Hemispheric asymmetry (ipsilesional minus contralesional index) differed from both control groups in theta and beta bands, significant over central and posterior regions; frontal regions showed no group effect. Beta-1 (12-16 Hz) is coded as beta and beta-2 (16-30 Hz) as beta and hibeta. Network (graph) metrics are not coded here. Secondary analysis of a trial's baseline data.",
+      design: "Case-control",
+      cite: { authors: "Zhang JJ, Bai Z, Fong KNK", year: 2024, title: "Resting-state cortical electroencephalogram rhythms and network in patients after chronic stroke", journal: "J Neuroeng Rehabil" }
     }
   ],
 
