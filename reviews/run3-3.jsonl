@@ -1,0 +1,6 @@
+{"id":"pm-35786557","decision":"exclude","code":"CN","note":"PLV whole-brain connectivity and graph theory only"}
+{"id":"pm-38499363","decision":"exclude","code":"NONBAND","note":"OCD EEG results are Hjorth mobility and an amplitude ratio, not band power; task (antisaccade) pre/post design"}
+{"id":"pm-41242682","decision":"exclude","code":"CN","note":"source-space wPLI connectivity and graph efficiency only"}
+{"id":"pm-41257660","decision":"exclude","code":"CN","note":"PLV connectivity features only (full text read); PSD used only as ML input"}
+{"id":"pm-41483883","decision":"exclude","code":"CN","note":"eyes-closed wPLI functional connectivity and node strength only"}
+{"id":"pm-42019363","decision":"exclude","code":"NONBAND","note":"burst rate, power and duration only; analogue non-clinical sample"}
