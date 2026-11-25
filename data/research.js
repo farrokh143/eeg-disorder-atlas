@@ -2822,7 +2822,7 @@ window.NF_DATA = {
       cite: { authors: "Rangaswamy M, et al.", year: 2003, title: "Theta power in the EEG of alcoholics", journal: "Alcohol Clin Exp Res" }
     },
     {
-      id: "pm-16179502", source: "abstract", condition: "sud", type: "biomarker",
+      id: "pm-16179502", rec: { eyes: "closed", power: "absolute", icd11: "6C4", dx: "unclear" }, source: "abstract", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 48, k: null },
       sites: ["C3","Cz","C4"], bands: ["delta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up" }, symptoms: ["craving"],
@@ -2832,7 +2832,7 @@ window.NF_DATA = {
       cite: { authors: "Herning RI, et al.", year: 2005, title: "Neuropsychiatric alterations in MDMA users: preliminary findings", journal: "Ann N Y Acad Sci" }
     },
     {
-      id: "pm-18974851", source: "full-text", condition: "sud", type: "biomarker",
+      id: "pm-18974851", rec: { eyes: "unclear", power: "unclear", icd11: "6C4", dx: "unclear" }, source: "full-text", condition: "sud", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: 364, k: null },
       sites: ["Fz"], bands: ["theta","alpha","beta"], direction: "ratio", evidence: "contested",
       changes: { theta: "down", alpha: "mixed", beta: "mixed" }, symptoms: ["craving"],
@@ -2842,7 +2842,7 @@ window.NF_DATA = {
       cite: { authors: "Enoch MA, et al.", year: 2008, title: "Common genetic origins for EEG, alcoholism and anxiety: the role of CRH-BP", journal: "PLoS One" }
     },
     {
-      id: "pm-19278131", source: "full-text", condition: "sud", type: "biomarker",
+      id: "pm-19278131", rec: { eyes: "closed", power: "absolute", icd11: "6C4", dx: "unclear" }, source: "full-text", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 141, k: null },
       sites: ["P3","P4","O1","O2","T5","T6"], bands: ["theta","beta"], direction: "down", evidence: "preliminary",
       changes: { theta: "down", beta: "down" }, symptoms: ["craving"],
@@ -2852,7 +2852,7 @@ window.NF_DATA = {
       cite: { authors: "Copersino ML, et al.", year: 2009, title: "EEG and cerebral blood flow velocity abnormalities in chronic cocaine users", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-26002855", source: "abstract", condition: "sud", type: "biomarker",
+      id: "pm-26002855", rec: { eyes: "unclear", power: "unclear", icd11: "6C4", dx: "unclear" }, source: "abstract", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["gamma"], direction: "up", evidence: "preliminary",
       changes: { gamma: "up" }, symptoms: ["craving"],
@@ -2862,7 +2862,7 @@ window.NF_DATA = {
       cite: { authors: "Wang GY, et al.", year: 2016, title: "Quantitative EEG and Low-Resolution Electromagnetic Tomography (LORETA) Imaging of Patients Undergoing Methadone Treatment for Opiate Addiction", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-26035281", source: "abstract", condition: "sud", type: "biomarker",
+      id: "pm-26035281", rec: { eyes: "both", power: "both", icd11: "6C4", dx: "unclear" }, source: "abstract", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["C3","Cz","C4","P3","Pz","P4"], bands: ["beta"], direction: "up", evidence: "preliminary",
       changes: { beta: "up" }, symptoms: ["impulsivity"],
@@ -2872,7 +2872,7 @@ window.NF_DATA = {
       cite: { authors: "Núñez-Jaramillo L, et al.", year: 2015, title: "Quantitative electroencephalography analysis in university students with hazardous alcohol consumption, but not alcohol dependence", journal: "Neuroreport" }
     },
     {
-      id: "pm-26051750", source: "full-text", condition: "sud", type: "biomarker",
+      id: "pm-26051750", rec: { eyes: "unclear", power: "unclear", icd11: "6C4", dx: "unclear" }, source: "full-text", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 83, k: null },
       sites: [], bands: ["delta","alpha"], direction: "down", evidence: "preliminary",
       changes: { delta: "down", alpha: "down" }, symptoms: ["craving"],
@@ -2882,7 +2882,7 @@ window.NF_DATA = {
       cite: { authors: "Rass O, et al.", year: 2016, title: "Resting-state EEG, impulsiveness, and personality in daily and nondaily smokers", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-26327686", source: "full-text", condition: "sud", type: "biomarker",
+      id: "pm-26327686", rec: { eyes: "closed", power: "both", icd11: "6C4", dx: "unclear" }, source: "full-text", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 42, k: null },
       sites: [], bands: ["delta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up" }, symptoms: ["craving"],
@@ -2892,7 +2892,7 @@ window.NF_DATA = {
       cite: { authors: "Son KL, et al.", year: 2015, title: "Neurophysiological features of Internet gaming disorder and alcohol use disorder: a resting-state EEG study", journal: "Transl Psychiatry" }
     },
     {
-      id: "pm-26660886", source: "abstract", condition: "sud", type: "biomarker",
+      id: "pm-26660886", rec: { eyes: "unclear", power: "both", icd11: "6C4", dx: "unclear" }, source: "abstract", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 30, k: null },
       sites: [], bands: ["beta"], direction: "up", evidence: "preliminary",
       changes: { beta: "up" }, symptoms: ["impulsivity"],
@@ -2902,7 +2902,7 @@ window.NF_DATA = {
       cite: { authors: "Herrera-Díaz A, et al.", year: 2016, title: "Functional Connectivity and Quantitative EEG in Women with Alcohol Use Disorders: A Resting-State Study", journal: "Brain Topogr" }
     },
     {
-      id: "pm-27354838", source: "full-text", condition: "sud", type: "biomarker",
+      id: "pm-27354838", rec: { eyes: "unclear", power: "unclear", icd11: "6C4", dx: "unclear" }, source: "full-text", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 70, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["delta","theta","alpha"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "up" }, symptoms: ["craving"],
@@ -2912,7 +2912,7 @@ window.NF_DATA = {
       cite: { authors: "Wilbanks HE, et al.", year: 2016, title: "Tobacco Smoking and the Resting Maternal Brain: A Preliminary Study of Frontal EEG", journal: "Yale J Biol Med" }
     },
     {
-      id: "pm-29778070", source: "full-text", condition: "sud", type: "biomarker",
+      id: "pm-29778070", rec: { eyes: "both", power: "absolute", icd11: "6C4", dx: "unclear" }, source: "full-text", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 61, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta","beta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", beta: "up" }, symptoms: ["impulsivity"],
@@ -4436,7 +4436,7 @@ window.NF_DATA = {
       cite: { authors: "Zhang H, et al.", year: 2026, title: "Cortical Network Alterations and Treatment-Induced Reorganization in Panic Disorder: A Longitudinal High-Density EEG Study", journal: "CNS Neurosci Ther" }
     },
     {
-      id: "pm-26660886-fc", source: "abstract", condition: "sud", type: "connectivity",
+      id: "pm-26660886-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6C4", dx: "unclear" }, source: "abstract", condition: "sud", type: "connectivity",
       measure: "other", pairs: [["frontal","central"],["occipital","parietal"]],
       metrics: { design: 2, control: null, blinded: null, n: 30, k: null },
       bands: ["alpha","beta"], direction: "down", evidence: "preliminary",
