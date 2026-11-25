@@ -8,3 +8,5 @@ with `tools/revert-finding.js` plus a corrected `include` through `tools/apply-r
 - pm-36057818: n = 318 is the baseline cohort; analyses used 272 matched participants.
 - dep-vandervinne-2017: k is null but the paper states 16 studies (1883 MDD, 2161 controls); eyes-closed data only.
 - pm-35182242: protocol entry sites O1/O2 are where the outcome EEG was measured, not the training sites.
+- ins-hoedlmoser-2008: condition is insomnia, but the paper (Sleep 2008, PMID 18853937) studied 27 healthy subjects, not patients; coded icd11 "subclinical". Check the condition and whether the entry should stay.
+- ins-zhao-2021: the meta-analysis pools wakefulness and sleep-stage EEG (REM, NREM); CLAUDE.md excludes sleep EEG biomarkers, so the sleep-stage results may need removing (resting wake data only).

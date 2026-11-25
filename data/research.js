@@ -321,7 +321,7 @@ window.NF_DATA = {
       cite: { authors: "Choi SW, Chi SE, Chung SY, Kim JW, Ahn CY, Kim HT", year: 2011, title: "Is alpha wave neurofeedback effective with randomized clinical trials in depression? A pilot study", journal: "Neuropsychobiology" }
     },
     {
-      id: "dep-pizzagalli-2011", source: "curated", condition: "depression", type: "biomarker",
+      id: "dep-pizzagalli-2011", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "curated", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Fz"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["lowmood"],
@@ -331,7 +331,7 @@ window.NF_DATA = {
       cite: { authors: "Pizzagalli DA", year: 2011, title: "Frontocingulate dysfunction in depression: toward biomarkers of treatment response", journal: "Neuropsychopharmacology" }
     },
     {
-      id: "dep-arns-2015", source: "curated", condition: "depression", type: "biomarker",
+      id: "dep-arns-2015", rec: { eyes: "closed", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "curated", condition: "depression", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: 1344, k: null },
       sites: ["F3","Fz","F4"], bands: ["theta"], direction: "up", evidence: "contested",
       changes: { theta: "up" }, symptoms: ["lowmood"],
@@ -342,7 +342,7 @@ window.NF_DATA = {
     },
     /* ---------------- Anxiety ---------------- */
     {
-      id: "anx-hammond-2005", source: "curated", condition: "anxiety", type: "protocol",
+      id: "anx-hammond-2005", rec: { eyes: "unclear", power: "n/a", icd11: "6B0", dx: "unclear" }, source: "curated", condition: "anxiety", type: "protocol",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Pz","O1","O2"], bands: ["alpha","theta","hibeta"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up", theta: "up", hibeta: "down" }, symptoms: ["anxiety","hyperarousal"],
@@ -353,7 +353,7 @@ window.NF_DATA = {
     },
     /* ---------------- PTSD ---------------- */
     {
-      id: "ptsd-peniston-1991", source: "curated", condition: "ptsd", type: "protocol",
+      id: "ptsd-peniston-1991", rec: { eyes: "unclear", power: "n/a", icd11: "6B40", dx: "unclear" }, source: "curated", condition: "ptsd", type: "protocol",
       metrics: { design: 3, control: "usual", blinded: null, n: null, k: null },
       sites: ["O1"], bands: ["alpha","theta"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up", theta: "up" }, symptoms: ["intrusions","anxiety","hyperarousal"],
@@ -363,8 +363,8 @@ window.NF_DATA = {
       cite: { authors: "Peniston EG, Kulkosky PJ", year: 1991, title: "Alpha-theta brainwave neurofeedback for Vietnam veterans with combat-related post-traumatic stress disorder", journal: "Medical Psychotherapy" }
     },
     {
-      id: "ptsd-vanderkolk-2016", source: "curated", condition: "ptsd", type: "protocol",
-      metrics: { design: 4, control: "usual", blinded: null, n: null, k: null },
+      id: "ptsd-vanderkolk-2016", rec: { eyes: "unclear", power: "n/a", icd11: "6B40", dx: "DSM-IV" }, source: "curated", condition: "ptsd", type: "protocol",
+      metrics: { design: 4, control: "usual", blinded: null, n: 52, k: null },
       sites: ["T4"], bands: ["alpha"], direction: "down", evidence: "moderate",
       changes: { alpha: "down" }, symptoms: ["intrusions","hyperarousal"],
       claim: "Right temporal alpha down-training reduced chronic PTSD symptoms",
@@ -373,8 +373,8 @@ window.NF_DATA = {
       cite: { authors: "van der Kolk BA, Hodgdon H, Gapen M, et al.", year: 2016, title: "A randomized controlled study of neurofeedback for chronic PTSD", journal: "PLoS ONE" }
     },
     {
-      id: "ptsd-kluetsch-2014", source: "curated", condition: "ptsd", type: "protocol",
-      metrics: { design: 1, control: null, blinded: null, n: null, k: null },
+      id: "ptsd-kluetsch-2014", rec: { eyes: "open", power: "n/a", icd11: "6B40", dx: "DSM-IV" }, source: "curated", condition: "ptsd", type: "protocol",
+      metrics: { design: 1, control: null, blinded: null, n: 21, k: null },
       sites: ["Pz"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["hyperarousal"],
       claim: "A single alpha-desynchronising session shifts resting networks",
@@ -384,8 +384,8 @@ window.NF_DATA = {
     },
     /* ---------------- Insomnia ---------------- */
     {
-      id: "ins-hoedlmoser-2008", source: "curated", condition: "insomnia", type: "protocol",
-      metrics: { design: 3, control: "active", blinded: null, n: null, k: null },
+      id: "ins-hoedlmoser-2008", rec: { eyes: "unclear", power: "n/a", icd11: "subclinical", dx: "unclear" }, source: "curated", condition: "insomnia", type: "protocol",
+      metrics: { design: 3, control: "active", blinded: null, n: 27, k: null },
       sites: ["C3","Cz","C4"], bands: ["smr"], direction: "up", evidence: "preliminary",
       changes: { smr: "up" }, symptoms: ["sleep","memory"],
       claim: "SMR uptraining increases sleep spindles and shortens sleep onset",
@@ -394,8 +394,8 @@ window.NF_DATA = {
       cite: { authors: "Hoedlmoser K, Pecherstorfer T, Gruber G, et al.", year: 2008, title: "Instrumental conditioning of human sensorimotor rhythm (12–15 Hz) and its impact on sleep as well as declarative learning", journal: "Sleep" }
     },
     {
-      id: "ins-schabus-2017", source: "curated", condition: "insomnia", type: "protocol",
-      metrics: { design: 4, control: "sham", blinded: true, n: null, k: null },
+      id: "ins-schabus-2017", rec: { eyes: "unclear", power: "n/a", icd11: "7A00", dx: "research criteria" }, source: "curated", condition: "insomnia", type: "protocol",
+      metrics: { design: 4, control: "sham", blinded: true, n: 25, k: null },
       sites: ["C3","Cz","C4"], bands: ["smr"], direction: "up", evidence: "contested",
       changes: { smr: "up" }, symptoms: ["sleep"],
       claim: "SMR training was no better than sham for primary insomnia",
@@ -404,7 +404,7 @@ window.NF_DATA = {
       cite: { authors: "Schabus M, Griessenberger H, Gnjezda MT, Heib DPJ, Wislowska M, Hoedlmoser K", year: 2017, title: "Better than sham? A double-blind placebo-controlled neurofeedback study in primary insomnia", journal: "Brain" }
     },
     {
-      id: "ins-zhao-2021", source: "curated", condition: "insomnia", type: "biomarker",
+      id: "ins-zhao-2021", rec: { eyes: "unclear", power: "both", icd11: "7A00", dx: "unclear" }, source: "curated", condition: "insomnia", type: "biomarker",
       metrics: { design: 5, control: null, blinded: null, n: 977, k: 24 },
       sites: [], bands: ["beta", "theta", "gamma"], direction: "up", evidence: "strong",
       changes: { beta: "up", theta: "up", gamma: "up" }, symptoms: ["sleep","hyperarousal"],
@@ -415,7 +415,7 @@ window.NF_DATA = {
     },
     /* ---------------- Epilepsy ---------------- */
     {
-      id: "epi-sterman-2000", source: "curated", condition: "epilepsy", type: "protocol",
+      id: "epi-sterman-2000", rec: { eyes: "unclear", power: "n/a", icd11: "8A6", dx: "unclear" }, source: "curated", condition: "epilepsy", type: "protocol",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["C3","Cz","C4"], bands: ["smr","theta"], direction: "up", evidence: "moderate",
       changes: { smr: "up", theta: "down" }, symptoms: ["seizures"],
