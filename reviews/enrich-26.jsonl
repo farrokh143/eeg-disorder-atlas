@@ -1,0 +1,10 @@
+{"id":"pm-40040314","eyes":"closed","power":"both","icd11":"8A6","dx":"clinical diagnosis","quote":"were instructed to close their eyes but not to sleep"}
+{"id":"pm-18457962","eyes":"unclear","power":"unclear","icd11":"8A00","dx":"unclear"}
+{"id":"pm-32116262","eyes":"closed","power":"both","icd11":"8A00","dx":"clinical diagnosis","quote":"5 minutes eyes closed"}
+{"id":"pm-35042630","eyes":"unclear","power":"relative","icd11":"8A00","dx":"scale cut-off"}
+{"id":"pm-37146531","eyes":"unclear","power":"relative","icd11":"8A00","dx":"unclear"}
+{"id":"pm-37787445","eyes":"unclear","power":"unclear","icd11":"8A00","dx":"unclear"}
+{"id":"pm-37937898","eyes":"both","power":"absolute","icd11":"8A00","dx":"unclear","quote":"the eyes-open (EO) and eyes-closed (EC) resting EEG"}
+{"id":"pm-40552872","eyes":"both","power":"relative","icd11":"8A00","dx":"unclear","quote":"Eyes-closed and eyes-open resting-state EEG data were recorded"}
+{"id":"pm-12705421","eyes":"closed","power":"absolute","icd11":"6C4","dx":"unclear","quote":"in the eyes-closed resting state"}
+{"id":"pm-12711923","eyes":"closed","power":"absolute","icd11":"6C4","dx":"unclear","quote":"eyes-closed EEGs"}
