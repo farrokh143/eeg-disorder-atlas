@@ -3587,6 +3587,36 @@ window.NF_DATA = {
       detail: "21 chronic stroke survivors with upper-limb paresis and 11 matched controls; high-density resting EEG. Brain symmetry index was higher in patients, most in delta and theta, and was negatively associated with Fugl-Meyer upper-extremity scores in those bands. Electrodes are not named in the abstract, so sites are whole-head. Taken from the abstract; not checked in the full text. Small case-control study.",
       design: "Case-control",
       cite: { authors: "Saes M, Meskers CGM, Daffertshofer A, de Munck JC, Kwakkel G, van Wegen EEH, 4D-EEG consortium", year: 2019, title: "How does upper extremity Fugl-Meyer motor score relate to resting-state EEG in chronic stroke? A power spectral density analysis", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-28968458", source: "full-text", condition: "stroke", type: "biomarker",
+      metrics: { design: 3, control: null, blinded: null, n: 19, k: null },
+      sites: ["Fp1"], bands: ["delta","theta"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "down" }, symptoms: ["cogdecline"],
+      claim: "Stroke: acute single-channel FP1 delta and theta relative power track 90-day cognitive scores (MoCA)",
+      detail: "19 people with first-ever stroke (24 recruited; 19 with complete data), 3-minute eyes-closed resting EEG from one FP1 electrode within 72 hours of onset. Higher acute delta relative power and a higher delta/theta ratio went with lower MoCA at 90 days; higher theta went with better MoCA. Coded as the direction linked to greater impairment. Correlational cohort with no healthy control group in the analysis; the ischaemic-only subgroup (n=15) gave similar results.",
+      design: "Prospective cohort",
+      cite: { authors: "Aminov A, Rogers JM, Johnstone SJ, Middleton S, Wilson PH", year: 2017, title: "Acute single channel EEG predictors of cognitive function after stroke", journal: "PLoS One" }
+    },
+    {
+      id: "pm-33759382", source: "full-text", condition: "stroke", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 25, k: null },
+      sites: [], bands: ["alpha","beta"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down", beta: "down" }, symptoms: ["motor"],
+      claim: "Chronic stroke: lower resting alpha and beta power than controls, with lesioned-side power asymmetry",
+      detail: "14 chronic stroke and 11 neurologically intact participants, 64-channel resting EEG, whole-head electrode analysis. Alpha and beta power were reduced after stroke, and normalised directional power asymmetry was driven by less power in the lesioned hemisphere in the upper bands. Gamma connectivity increased; connectivity results are not coded. Small case-control study with no blinding or treatment.",
+      design: "Case-control",
+      cite: { authors: "Snyder DB, Schmit BD, Hyngstrom AS, Beardsley SA", year: 2021, title: "Electroencephalography resting-state networks in people with Stroke", journal: "Brain and behavior" }
+    },
+    {
+      id: "pm-31174955", source: "full-text", condition: "stroke", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 24, k: null },
+      sites: [], bands: ["delta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", alpha: "down" }, symptoms: ["motor"],
+      claim: "Acute ischaemic stroke (ED): higher delta and lower alpha power; alpha/delta ratio tracks infarct volume",
+      detail: "24 people with suspected acute stroke, 3-minute 256-lead resting EEG in the emergency department; 11 had acute ischaemic stroke (5 with infarcts over 20 cc). Delta power (1-3 Hz) and the alpha/delta ratio separated the 5 large infarcts from the other 19 patients, and the ratio correlated with infarct volume. Contralesional signals gave the best separation; the authors describe the ratio as reflecting higher delta and lower alpha power. Pilot diagnostic study with a small group; the 10-20 montage analysis was robust but not all electrodes were named, so sites are whole-head.",
+      design: "Case-control (diagnostic pilot)",
+      cite: { authors: "Shreve L, Kaur A, Vo C, Wu J, Cassidy JM, Nguyen A, et al.", year: 2019, title: "Electroencephalography Measures are Useful for Identifying Large Acute Ischemic Stroke in the Emergency Department", journal: "Journal of stroke and cerebrovascular diseases" }
     }
   ],
 
