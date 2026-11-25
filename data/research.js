@@ -435,7 +435,7 @@ window.NF_DATA = {
       cite: { authors: "Kotchoubey B, Strehl U, Uhlmann C, et al.", year: 2001, title: "Modification of slow cortical potentials in patients with refractory epilepsy: a controlled outcome study", journal: "Epilepsia" }
     },
     {
-      id: "epi-tan-2009", source: "curated", condition: "epilepsy", type: "protocol",
+      id: "epi-tan-2009", rec: { eyes: "unclear", power: "n/a", icd11: "8A6", dx: "unclear" }, source: "curated", condition: "epilepsy", type: "protocol",
       metrics: { design: 5, control: null, blinded: null, n: null, k: null },
       sites: ["C3","Cz","C4"], bands: ["smr","scp"], direction: "up", evidence: "moderate",
       changes: { smr: "up", scp: "regulate" }, symptoms: ["seizures"],
@@ -446,7 +446,7 @@ window.NF_DATA = {
     },
     /* ---------------- Autism ---------------- */
     {
-      id: "asd-pineda-2008", source: "curated", condition: "autism", type: "protocol",
+      id: "asd-pineda-2008", rec: { eyes: "unclear", power: "n/a", icd11: "6A02", dx: "unclear" }, source: "curated", condition: "autism", type: "protocol",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["C3","C4"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["social"],
@@ -456,7 +456,7 @@ window.NF_DATA = {
       cite: { authors: "Pineda JA, Brang D, Hecht E, et al.", year: 2008, title: "Positive behavioral outcomes after mu rhythm neurofeedback training in children with autism spectrum disorder", journal: "Research in Autism Spectrum Disorders" }
     },
     {
-      id: "asd-coben-2007", source: "curated", condition: "autism", type: "protocol",
+      id: "asd-coben-2007", rec: { eyes: "unclear", power: "n/a", icd11: "6A02", dx: "unclear" }, source: "curated", condition: "autism", type: "protocol",
       metrics: { design: 3, control: "usual", blinded: null, n: null, k: null },
       sites: [], bands: ["theta","hibeta"], direction: "down", evidence: "preliminary",
       changes: { theta: "down", hibeta: "down" }, symptoms: ["social"],
@@ -466,7 +466,7 @@ window.NF_DATA = {
       cite: { authors: "Coben R, Padolsky I", year: 2007, title: "Assessment-guided neurofeedback for autistic spectrum disorder", journal: "Journal of Neurotherapy" }
     },
     {
-      id: "asd-neo-2023", source: "curated", condition: "autism", type: "biomarker",
+      id: "asd-neo-2023", rec: { eyes: "unclear", power: "unclear", icd11: "6A02", dx: "unclear" }, source: "curated", condition: "autism", type: "biomarker",
       sites: [], bands: ["alpha", "gamma"], direction: "down", evidence: "strong",
       metrics: { design: 5, control: null, blinded: null, n: 2701, k: 41 },
       changes: { alpha: "down", gamma: "up" }, symptoms: ["social"],
@@ -477,7 +477,7 @@ window.NF_DATA = {
     },
     /* ---------------- Alcohol & substance use ---------------- */
     {
-      id: "sud-peniston-1989", source: "curated", condition: "sud", type: "protocol",
+      id: "sud-peniston-1989", rec: { eyes: "unclear", power: "n/a", icd11: "6C40", dx: "unclear" }, source: "curated", condition: "sud", type: "protocol",
       metrics: { design: 3, control: "usual", blinded: null, n: null, k: null },
       sites: ["O1"], bands: ["alpha","theta"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up", theta: "up" }, symptoms: ["craving","lowmood"],
@@ -487,8 +487,8 @@ window.NF_DATA = {
       cite: { authors: "Peniston EG, Kulkosky PJ", year: 1989, title: "Alpha-theta brainwave training and beta-endorphin levels in alcoholics", journal: "Alcoholism: Clinical and Experimental Research" }
     },
     {
-      id: "sud-scott-2005", source: "curated", condition: "sud", type: "protocol",
-      metrics: { design: 4, control: "usual", blinded: null, n: null, k: null },
+      id: "sud-scott-2005", rec: { eyes: "unclear", power: "n/a", icd11: "6C4", dx: "unclear" }, source: "curated", condition: "sud", type: "protocol",
+      metrics: { design: 4, control: "usual", blinded: null, n: 121, k: null },
       sites: ["Cz","Pz"], bands: ["smr","beta","alpha","theta"], direction: "up", evidence: "moderate",
       changes: { smr: "up", beta: "up", alpha: "up", theta: "up" }, symptoms: ["craving","inattention"],
       claim: "Beta/SMR then alpha-theta (Scott-Peniston) improves retention",
@@ -498,8 +498,8 @@ window.NF_DATA = {
     },
     /* ---------------- Migraine ---------------- */
     {
-      id: "mig-walker-2011", source: "curated", condition: "migraine", type: "protocol",
-      metrics: { design: 2, control: "usual", blinded: null, n: null, k: null },
+      id: "mig-walker-2011", rec: { eyes: "unclear", power: "n/a", icd11: "8A80", dx: "unclear" }, source: "curated", condition: "migraine", type: "protocol",
+      metrics: { design: 2, control: "usual", blinded: null, n: 71, k: null },
       sites: [], bands: ["hibeta"], direction: "down", evidence: "preliminary",
       changes: { hibeta: "down" }, symptoms: ["headache"],
       claim: "QEEG-guided down-training of excess fast activity",
@@ -508,7 +508,7 @@ window.NF_DATA = {
       cite: { authors: "Walker JE", year: 2011, title: "QEEG-guided neurofeedback for recurrent migraine headaches", journal: "Clinical EEG and Neuroscience" }
     },
     {
-      id: "mig-zebhauser-2024", source: "curated", condition: "migraine", type: "biomarker",
+      id: "mig-zebhauser-2024", rec: { eyes: "unclear", power: "unclear", icd11: "8A80", dx: "unclear" }, source: "curated", condition: "migraine", type: "biomarker",
       sites: [], bands: ["theta"], direction: "up", evidence: "moderate",
       metrics: { design: 5, control: null, blinded: null, n: null, k: 27 },
       changes: { theta: "up" }, symptoms: ["headache"],
@@ -519,7 +519,7 @@ window.NF_DATA = {
     },
     /* ---------------- Healthy cognition ---------------- */
     {
-      id: "cog-hanslmayr-2005", source: "curated", condition: "cognition", type: "protocol",
+      id: "cog-hanslmayr-2005", rec: { eyes: "unclear", power: "n/a", icd11: "subclinical", dx: "unclear" }, source: "curated", condition: "cognition", type: "protocol",
       metrics: { design: 3, control: null, blinded: null, n: null, k: null },
       sites: ["Pz"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["executive"],
@@ -529,7 +529,7 @@ window.NF_DATA = {
       cite: { authors: "Hanslmayr S, Sauseng P, Doppelmayr M, Schabus M, Klimesch W", year: 2005, title: "Increasing individual upper alpha power by neurofeedback improves cognitive performance in human subjects", journal: "Applied Psychophysiology and Biofeedback" }
     },
     {
-      id: "cog-zoefel-2011", source: "curated", condition: "cognition", type: "protocol",
+      id: "cog-zoefel-2011", rec: { eyes: "unclear", power: "n/a", icd11: "subclinical", dx: "unclear" }, source: "curated", condition: "cognition", type: "protocol",
       metrics: { design: 3, control: "usual", blinded: null, n: null, k: null },
       sites: ["P3","Pz","P4","O1","O2"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["executive"],
