@@ -3387,6 +3387,26 @@ window.NF_DATA = {
       detail: "50 OCD patients and 50 matched controls, resting EEG analysed with sLORETA. The 2-6 Hz power excess spans delta and theta, so it is coded for both bands; the result is in medial frontal cortex. Source-localised (sLORETA); mapped to the overlying scalp region. Taken from the abstract; not checked in the full text. Single case-control study.",
       design: "Case-control",
       cite: { authors: "Kopřivová J, et al.", year: 2011, title: "EEG source analysis in obsessive-compulsive disorder", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-22375965", source: "full-text", condition: "bipolar", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 21, k: null },
+      sites: ["F3","F4","C3","C4"], bands: ["theta","beta","hibeta"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "down", beta: "up", hibeta: "up" }, symptoms: ["inattention"],
+      claim: "Euthymic bipolar: less eyes-closed theta and more beta at frontal and central sites than controls",
+      detail: "12 euthymic people with bipolar disorder (all medicated) and 9 controls (abstract; the paper's table lists 10 controls), eyes-closed resting EEG. Theta was lower and beta higher over F3/F4 and C3/C4 (the paper labels C3/C4 as cingulate); the beta band was 15-30 Hz, coded as beta and hibeta. The MBCT pre-post change is a treatment result and is not coded. Small pilot study.",
+      design: "Case-control (pilot)",
+      cite: { authors: "Howells FM, Ives-Deliperi VL, Horn NR, Stein DJ", year: 2012, title: "Mindfulness based cognitive therapy improves frontal control in bipolar disorder: a pilot EEG study", journal: "BMC Psychiatry" }
+    },
+    {
+      id: "pm-22775582", source: "full-text", condition: "bipolar", type: "biomarker",
+      metrics: { design: 3, control: null, blinded: null, n: 117, k: null },
+      sites: ["F3","F4","F7","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "moderate",
+      changes: { alpha: "asymmetry" }, symptoms: ["mania"],
+      claim: "Bipolar spectrum: higher left-frontal alpha asymmetry in hypomania; predicts later bipolar I onset",
+      detail: "58 people with cyclothymia or bipolar II and 59 healthy controls, eight eyes-open and eyes-closed resting trials. Alpha asymmetry (right minus left, ln power) over mid-frontal F3/F4 and lateral F7/F8 was elevated in those in a hypomanic episode and predicted conversion to bipolar I over 4.7 years. Controlled prospective cohort; small sample followed over one period.",
+      design: "Controlled prospective cohort",
+      cite: { authors: "Nusslock R, Harmon-Jones E, Alloy LB, Urosevic S, Goldstein K, Abramson LY", year: 2012, title: "Elevated left mid-frontal cortical activity prospectively predicts conversion to bipolar I disorder", journal: "J Abnorm Psychol" }
     }
   ],
 
