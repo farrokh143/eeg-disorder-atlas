@@ -44,14 +44,12 @@ h1, h2, h3 { margin: 0; font-weight: 500; letter-spacing: -0.02em; text-wrap: ba
 @media (max-width: 760px) { .nav { display: none; } }
 
 /* hero */
-.hero { text-align: center; padding: 72px 0 0; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.hero { text-align: center; padding: 56px 0 28px; display: flex; flex-direction: column; align-items: center; gap: 20px; }
 .hero h1 { font-size: clamp(2.3rem, 6.2vw, 4.6rem); line-height: 1.02; letter-spacing: -0.045em; max-width: 16ch; }
 .hero p { margin: 0; font-weight: 300; font-size: clamp(1.05rem, 2vw, 1.3rem); color: var(--muted); max-width: 38ch; }
-.pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; padding-top: 6px; }
 .pill { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 30px; border-radius: 999px; border: 0; font-weight: 500; font-size: 17px; text-decoration: none; }
 .pill.go { background: var(--accent); color: var(--accent-ink); }
 .pill.alt { background: #232328; color: var(--ink); }
-.dome { width: min(760px, 100%); height: auto; display: block; margin-top: 28px; }
 
 /* steps + question */
 #steps { scroll-margin-top: 80px; }
@@ -234,8 +232,6 @@ html.locked .app { display: none; }
   <section class="wrap hero">
     <h1>Resting EEG patterns, mapped to disorders.</h1>
     <p id="heroSub">Assess a client's resting EEG against the research, then see which neurofeedback protocols have been studied.</p>
-    <div class="pills"><a class="pill go" href="#steps" data-go="assess">1 · Assess</a><a class="pill alt" href="#steps" data-go="treat">2 · Treatment evidence</a></div>
-    <svg class="dome" id="dome" viewBox="0 0 760 230" aria-hidden="true"></svg>
   </section>
 
   <div class="wrap">
@@ -423,7 +419,6 @@ html.locked .app { display: none; }
   });
   function goStep(step) { state.step = step; update(); const t = $("steps"); if (t.scrollIntoView) t.scrollIntoView({ behavior: "smooth", block: "start" }); }
   $("steps").addEventListener("click", e => { const b = e.target.closest(".step"); if (b) goStep(b.dataset.step); });
-  document.querySelectorAll("[data-go]").forEach(a => a.addEventListener("click", e => { e.preventDefault(); goStep(a.dataset.go); }));
   $("regions").innerHTML = Object.keys(GROUPS).map(r => `<button class="chip" type="button" data-v="${r}">${cap(r)}</button>`).join("");
   function syncControls() {
     const sel = selSites();
@@ -514,14 +509,7 @@ html.locked .app { display: none; }
     $("lines").innerHTML = l;
     showTip(null);
   }
-  function drawDome() {
-    const w = 760, h = 230, cx = w / 2, cy = h, R = h - 6; let d = "";
-    for (let r = 10; r <= R; r += 9) { const n = Math.round(Math.PI * r / 8);
-      for (let i = 0; i <= n; i++) { const a = Math.PI * i / n; d += `<circle cx="${(cx + r * Math.cos(a)).toFixed(1)}" cy="${(cy - r * Math.sin(a)).toFixed(1)}" r="1.4" fill="#fff" fill-opacity="${(0.16 + 0.5 * (1 - r / R)).toFixed(2)}"/>`; } }
-    [[0.28, 0.62], [0.5, 0.72], [0.72, 0.62], [0.16, 0.3], [0.38, 0.36], [0.62, 0.36], [0.84, 0.3], [0.5, 0.42]].forEach(([fx, fy], i) =>
-      d += `<circle cx="${(cx + (fx - 0.5) * 1.8 * R).toFixed(1)}" cy="${(cy - fy * R).toFixed(1)}" r="${i === 1 ? 8 : 4.5}" fill="${i === 1 ? "#6a5bff" : "#fff"}"/>`);
-    $("dome").innerHTML = d;
-  }
+
 
   // ---------- matching ----------
   // Abstract-only studies that would fall under a pattern; shown greyed, never pooled.
@@ -741,7 +729,7 @@ html.locked .app { display: none; }
   const nPapers = D.findings.length + (D.connectivity || []).length;
   $("heroSub").textContent = `Assess a client's resting EEG against ${nPapers} studies, then see which neurofeedback protocols have been studied.`;
   $("footStats").textContent = `${D.findings.filter(f => f.type === "biomarker").length} EEG markers · ${(D.connectivity || []).length} connectivity · ${D.findings.filter(f => f.type === "protocol").length} neurofeedback${S.generated ? " · synthesis " + S.generated : ""}`;
-  drawHead(); drawDome(); render();
+  drawHead(); render();
 })();
 </script>
 </body>
