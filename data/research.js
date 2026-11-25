@@ -3042,7 +3042,7 @@ window.NF_DATA = {
       cite: { authors: "Clancy KJ, et al.", year: 2020, title: "Posttraumatic Stress Disorder Is Associated with α Dysrhythmia across the Visual Cortex and the Default Mode Network", journal: "eNeuro" }
     },
     {
-      id: "pm-41066303", source: "abstract", condition: "ptsd", type: "protocol",
+      id: "pm-41066303", rec: { eyes: "both", power: "n/a", icd11: "6B40", dx: "research criteria" }, source: "abstract", condition: "ptsd", type: "protocol",
       metrics: { design: 1, control: "none", blinded: null, n: 21, k: null },
       sites: ["T3"], bands: ["beta"], direction: "down", evidence: "preliminary",
       changes: { beta: "down" }, symptoms: ["intrusions","hyperarousal","sleep","executive"],
@@ -3052,7 +3052,7 @@ window.NF_DATA = {
       cite: { authors: "Im S", year: 2026, title: "Exploring the Effects of Z-Score Neurofeedback Training in PTSD: A Preliminary Investigation", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-34706446", source: "abstract", condition: "ptsd", type: "protocol",
+      id: "pm-34706446", rec: { eyes: "unclear", power: "n/a", icd11: "6B40", dx: "unclear" }, source: "abstract", condition: "ptsd", type: "protocol",
       metrics: { design: 3, control: null, blinded: null, n: 29, k: null },
       sites: ["Pz"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["intrusions","hyperarousal"],
@@ -3062,7 +3062,7 @@ window.NF_DATA = {
       cite: { authors: "du Bois N, et al.", year: 2021, title: "Neurofeedback with low-cost, wearable electroencephalography (EEG) reduces symptoms in chronic Post-Traumatic Stress Disorder", journal: "J Affect Disord" }
     },
     {
-      id: "pm-26542620", source: "abstract", condition: "tbi", type: "biomarker",
+      id: "pm-26542620", rec: { eyes: "unclear", power: "unclear", icd11: "NA07.0", dx: "unclear" }, source: "abstract", condition: "tbi", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 81, k: null },
       sites: ["F3","F4"], bands: ["alpha","beta"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry", beta: "asymmetry" }, symptoms: ["lowmood","anxiety"],
@@ -3072,7 +3072,7 @@ window.NF_DATA = {
       cite: { authors: "Moore RD, et al.", year: 2016, title: "Neurophysiological correlates of persistent psycho-affective alterations in athletes with a history of concussion", journal: "Brain Imaging Behav" }
     },
     {
-      id: "pm-26737184", source: "full-text", condition: "tbi", type: "biomarker",
+      id: "pm-26737184", rec: { eyes: "unclear", power: "unclear", icd11: "NA07.0", dx: "unclear" }, source: "full-text", condition: "tbi", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 54, k: null },
       sites: ["Fz","F3","F4"], bands: ["delta","theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "down", theta: "down", beta: "up" }, symptoms: ["postconcussion"],
@@ -3082,7 +3082,7 @@ window.NF_DATA = {
       cite: { authors: "Balkan O, et al.", year: 2015, title: "Source-domain spectral EEG analysis of sports-related concussion via Measure Projection Analysis", journal: "Annu Int Conf IEEE Eng Med Biol Soc" }
     },
     {
-      id: "pm-31094883", source: "abstract", condition: "tbi", type: "biomarker",
+      id: "pm-31094883", rec: { eyes: "closed", power: "both", icd11: "NA07.0", dx: "unclear" }, source: "abstract", condition: "tbi", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 153, k: null },
       sites: [], bands: ["theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", alpha: "down" }, symptoms: ["postconcussion"],
@@ -3092,7 +3092,7 @@ window.NF_DATA = {
       cite: { authors: "Lewine JD, et al.", year: 2019, title: "Quantitative EEG Biomarkers for Mild Traumatic Brain Injury", journal: "J Clin Neurophysiol" }
     },
     {
-      id: "pm-39420809", source: "abstract", condition: "tbi", type: "biomarker",
+      id: "pm-39420809", rec: { eyes: "unclear", power: "unclear", icd11: "NA07.0", dx: "unclear" }, source: "abstract", condition: "tbi", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 47, k: null },
       sites: ["Fz"], bands: ["theta"], direction: "ratio", evidence: "contested",
       changes: { theta: "mixed" }, symptoms: ["memory"],
@@ -3102,7 +3102,7 @@ window.NF_DATA = {
       cite: { authors: "Ueda M, et al.", year: 2025, title: "EEG Oscillatory Activity and Resting-State Networks Associated with Neurocognitive Function in Mild Traumatic Brain Injury", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-42642967", source: "abstract", condition: "tbi", type: "biomarker",
+      id: "pm-42642967", rec: { eyes: "unclear", power: "unclear", icd11: "NA07.0", dx: "unclear" }, source: "abstract", condition: "tbi", type: "biomarker",
       metrics: { design: 5, control: null, blinded: null, n: 1236, k: 14 },
       sites: [], bands: ["theta"], direction: "up", evidence: "moderate",
       changes: { theta: "up" }, symptoms: ["postconcussion"],
@@ -3112,7 +3112,7 @@ window.NF_DATA = {
       cite: { authors: "Nwakamma MC, et al.", year: 2026, title: "Resting-state EEG spectral power alterations following traumatic brain injury: a comprehensive systematic review and meta-analysis of clinical and injury-related moderators", journal: "Brain Inj" }
     },
     {
-      id: "pm-1733616", source: "abstract", condition: "migraine", type: "biomarker",
+      id: "pm-1733616", rec: { eyes: "closed", power: "unclear", icd11: "8A80", dx: "unclear" }, source: "abstract", condition: "migraine", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 70, k: null },
       sites: ["O1","O2","P3","Pz","P4"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["headache"],
@@ -3132,7 +3132,7 @@ window.NF_DATA = {
       cite: { authors: "Clemens B, et al.", year: 2008, title: "Three-dimensional localization of abnormal EEG activity in migraine: a low resolution electromagnetic tomography (LORETA) study of migraine patients in the pain-free interval", journal: "Brain Topogr" }
     },
     {
-      id: "pm-2050517", source: "abstract", condition: "migraine", type: "biomarker",
+      id: "pm-2050517", rec: { eyes: "closed", power: "unclear", icd11: "8A80", dx: "unclear" }, source: "abstract", condition: "migraine", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 34, k: null },
       sites: ["O1"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["headache"],
@@ -3142,7 +3142,7 @@ window.NF_DATA = {
       cite: { authors: "Neufeld MY, et al.", year: 1991, title: "EEG and topographic frequency analysis in common and classic migraine", journal: "Headache" }
     },
     {
-      id: "pm-27807767", source: "full-text", condition: "migraine", type: "biomarker",
+      id: "pm-27807767", rec: { eyes: "unclear", power: "unclear", icd11: "8A80", dx: "unclear" }, source: "full-text", condition: "migraine", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 70, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "down", evidence: "preliminary",
       changes: { delta: "down", theta: "down", alpha: "down", beta: "down" }, symptoms: ["headache"],
