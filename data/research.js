@@ -1349,7 +1349,7 @@ window.NF_DATA = {
       cite: { authors: "Nusslock R, et al.", year: 2018, title: "Comorbid anxiety moderates the relationship between depression history and prefrontal EEG asymmetry", journal: "Psychophysiology" }
     },
     {
-      id: "pm-29023805", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-29023805", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1359,7 +1359,7 @@ window.NF_DATA = {
       cite: { authors: "Smith EE, et al.", year: 2018, title: "Intracranial source activity (eLORETA) related to scalp-level asymmetry scores and depression status", journal: "Psychophysiology" }
     },
     {
-      id: "pm-29305876", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-29305876", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 51, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1369,7 +1369,7 @@ window.NF_DATA = {
       cite: { authors: "Grünewald BD, et al.", year: 2018, title: "Resting frontal EEG asymmetry patterns in adolescents with and without major depression", journal: "Biol Psychol" }
     },
     {
-      id: "pm-30182751", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-30182751", rec: { eyes: "closed", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 123, k: null },
       sites: [], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["lowmood"],
@@ -1379,7 +1379,7 @@ window.NF_DATA = {
       cite: { authors: "Ulke C, et al.", year: 2019, title: "Resting EEG Measures of Brain Arousal in a Multisite Study of Major Depression", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-30415151", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-30415151", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 95, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood","anxiety"],
@@ -1389,7 +1389,7 @@ window.NF_DATA = {
       cite: { authors: "Feldmann L, et al.", year: 2018, title: "Resting frontal EEG asymmetry in adolescents with major depression: Impact of disease state and comorbid anxiety disorder", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-31302517", source: "abstract", condition: "depression", type: "protocol",
+      id: "pm-31302517", rec: { eyes: "unclear", power: "n/a", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "protocol",
       metrics: { design: 3, control: "none", blinded: null, n: 87, k: null },
       sites: ["F3","F4","P3","P4"], bands: ["alpha","hibeta"], direction: "asymmetry", evidence: "contested",
       changes: { alpha: "asymmetry", hibeta: "down" }, symptoms: ["lowmood","anxiety"],
@@ -1399,7 +1399,7 @@ window.NF_DATA = {
       cite: { authors: "Wang SY, et al.", year: 2019, title: "The effects of alpha asymmetry and high-beta down-training neurofeedback for patients with the major depressive disorder and anxiety symptoms", journal: "J Affect Disord" }
     },
     {
-      id: "pm-32424130", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-32424130", rec: { eyes: "unclear", power: "relative", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 62, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha","beta"], direction: "ratio", evidence: "contested",
       changes: { alpha: "mixed", beta: "mixed" }, symptoms: ["lowmood"],
@@ -1409,7 +1409,7 @@ window.NF_DATA = {
       cite: { authors: "Spironelli C, et al.", year: 2020, title: "Evidence of language-related left hypofrontality in Major Depression: An EEG Beta band study", journal: "Sci Rep" }
     },
     {
-      id: "pm-33601739", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-33601739", rec: { eyes: "unclear", power: "absolute", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 270, k: null },
       sites: [], bands: ["delta","theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "down", theta: "down", beta: "up" }, symptoms: ["lowmood","anxiety"],
@@ -1419,7 +1419,7 @@ window.NF_DATA = {
       cite: { authors: "Lin IM, et al.", year: 2021, title: "Electroencephalogram patterns in patients comorbid with major depressive disorder and anxiety symptoms: Proposing a hypothesis based on hypercortical arousal and not frontal or parietal alpha asymmetry", journal: "J Affect Disord" }
     },
     {
-      id: "pm-34256274", source: "full-text", condition: "depression", type: "biomarker",
+      id: "pm-34256274", rec: { eyes: "closed", power: "absolute", icd11: "6A7", dx: "DSM-IV" }, source: "full-text", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 66, k: null },
       sites: ["P3","P4","T5","T6","O1","O2"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1429,7 +1429,7 @@ window.NF_DATA = {
       cite: { authors: "Umemoto A, et al.", year: 2021, title: "Resting posterior alpha power and adolescent major depressive disorder", journal: "J Psychiatr Res" }
     },
     {
-      id: "pm-35412986", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-35412986", rec: { eyes: "both", power: "unclear", icd11: "6A70", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 56, k: null },
       sites: [], bands: ["beta","gamma"], direction: "up", evidence: "preliminary",
       changes: { beta: "up", gamma: "up" }, symptoms: ["lowmood"],
@@ -1439,7 +1439,7 @@ window.NF_DATA = {
       cite: { authors: "Liu S, et al.", year: 2022, title: "Alterations in Patients With First-Episode Depression in the Eyes-Open and Eyes-Closed Conditions: A Resting-State EEG Study", journal: "IEEE Trans Neural Syst Rehabil Eng" }
     },
     {
-      id: "pm-35931231", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-35931231", rec: { eyes: "closed", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 85, k: null },
       sites: ["P3","Pz","P4","C3","Cz","C4","O1","O2"], bands: ["alpha","beta"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up", beta: "up" }, symptoms: ["lowmood"],
