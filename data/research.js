@@ -749,7 +749,7 @@ window.NF_DATA = {
       cite: { authors: "Lee AL, et al.", year: 2025, title: "Exploring the diagnostic potential of EEG theta power and interhemispheric correlation of temporal lobe activities in Alzheimer's Disease through random forest analysis", journal: "Comput Biol Med" }
     },
     {
-      id: "pm-40413989", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-40413989", rec: { eyes: "unclear", power: "unclear", icd11: "subclinical", dx: "scale cut-off" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 28, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["beta","delta","alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { beta: "up", delta: "down", alpha: "asymmetry" }, symptoms: ["memory","cogdecline"],
@@ -759,7 +759,7 @@ window.NF_DATA = {
       cite: { authors: "Nikaido Y, et al.", year: 2025, title: "Short-term resting-state electroencephalography fast activity is associated with cognitive decline in older adults: A population-based cross-sectional pilot study", journal: "Psychiatry Res Neuroimaging" }
     },
     {
-      id: "pm-40755242", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-40755242", rec: { eyes: "unclear", power: "unclear", icd11: "6D80", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 65, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["gamma"], direction: "ratio", evidence: "contested",
       changes: { gamma: "mixed" }, symptoms: ["memory","cogdecline"],
@@ -769,7 +769,7 @@ window.NF_DATA = {
       cite: { authors: "S V, et al.", year: 2026, title: "Assessment of Gamma Band Power of Electroencephalogram in Alzheimer's disease", journal: "Appl Neuropsychol Adult" }
     },
     {
-      id: "pm-41246936", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-41246936", rec: { eyes: "both", power: "unclear", icd11: "6D80", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 65, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4","T5","T6","O1","O2"], bands: ["alpha","theta"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "down", theta: "up" }, symptoms: ["memory","cogdecline"],
@@ -779,7 +779,7 @@ window.NF_DATA = {
       cite: { authors: "Pan Y, et al.", year: 2026, title: "EEG spectral power differences in Alzheimer's disease and frontotemporal dementia", journal: "Int J Neurosci" }
     },
     {
-      id: "pm-41407022", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-41407022", rec: { eyes: "closed", power: "unclear", icd11: "6D71", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 87, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["memory","cogdecline"],
@@ -789,7 +789,7 @@ window.NF_DATA = {
       cite: { authors: "Noh ES, et al.", year: 2026, title: "Distinct patterns of cortical activity associated with cognitive and motor decline in community-dwelling older adults", journal: "Exp Gerontol" }
     },
     {
-      id: "pm-41786925", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-41786925", rec: { eyes: "closed", power: "absolute", icd11: "6D80", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 65, k: null },
       sites: ["T3","T4","T5","T6","P3","Pz","P4","O1","O2"], bands: ["alpha","beta"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down", beta: "down" }, symptoms: ["memory","cogdecline"],
@@ -799,7 +799,7 @@ window.NF_DATA = {
       cite: { authors: "Iqbal S, et al.", year: 2026, title: "Quantitative EEG signatures of power and functional connectivity alterations in Alzheimer's disease and frontotemporal dementia", journal: "Sci Rep" }
     },
     {
-      id: "pm-42115191", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-42115191", rec: { eyes: "unclear", power: "relative", icd11: "6D71", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 48, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down", beta: "down" }, symptoms: ["memory","cogdecline"],
@@ -809,7 +809,7 @@ window.NF_DATA = {
       cite: { authors: "Liang Y, et al.", year: 2026, title: "Application of resting-state EEG theta /alpha power ratio analysis for diagnosing amnestic mild cognitive impairment", journal: "Sci Rep" }
     },
     {
-      id: "pm-42740150", source: "full-text", condition: "alzheimers", type: "biomarker",
+      id: "pm-42740150", rec: { eyes: "closed", power: "both", icd11: "6D80", dx: "unclear" }, source: "full-text", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 88, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", alpha: "down" }, symptoms: ["memory","cogdecline"],
@@ -819,7 +819,7 @@ window.NF_DATA = {
       cite: { authors: "Šverko Z, et al.", year: 2026, title: "Spectral and Directed Connectivity EEG Markers for Classifying Alzheimer's Disease, Frontotemporal Dementia, and Healthy Controls with Exploratory Photobiomodulation Case-Study Projection", journal: "Sensors (Basel)" }
     },
     {
-      id: "pm-42769165", source: "full-text", condition: "alzheimers", type: "biomarker",
+      id: "pm-42769165", rec: { eyes: "closed", power: "both", icd11: "6D80", dx: "research criteria" }, source: "full-text", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 360, k: null },
       sites: [], bands: ["theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", alpha: "down", beta: "down" }, symptoms: ["memory","cogdecline"],
@@ -829,7 +829,7 @@ window.NF_DATA = {
       cite: { authors: "Yang L, et al.", year: 2026, title: "Resting-state EEG biomarkers of general and domain-specific cognitive impairment and plasma P-tau217 in patients with Alzheimer's disease and mild cognitive impairment", journal: "Front Neurol" }
     },
     {
-      id: "pm-42803709", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-42803709", rec: { eyes: "unclear", power: "unclear", icd11: "6D71", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 90, k: null },
       sites: ["T3","T4","T5","T6"], bands: ["gamma","delta","theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { gamma: "up", delta: "up", theta: "up", beta: "down" }, symptoms: ["memory","cogdecline"],
@@ -839,7 +839,7 @@ window.NF_DATA = {
       cite: { authors: "Wen S, et al.", year: 2026, title: "Subregion-specific temporal lobe EEG signatures in amnestic mild cognitive impairment: Evidence from high-density EEG", journal: "J Alzheimers Dis" }
     },
     {
-      id: "pm-6187529", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-6187529", rec: { eyes: "unclear", power: "unclear", icd11: "6D80", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 80, k: null },
       sites: ["O1","O2"], bands: ["theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", beta: "down" }, symptoms: ["memory","cogdecline"],

@@ -1,0 +1,10 @@
+{"id":"pm-40413989","eyes":"unclear","power":"unclear","icd11":"subclinical","dx":"scale cut-off"}
+{"id":"pm-40755242","eyes":"unclear","power":"unclear","icd11":"6D80","dx":"unclear"}
+{"id":"pm-41246936","eyes":"both","power":"unclear","icd11":"6D80","dx":"unclear","quote":"robust across both eyes-closed and eyes-open states"}
+{"id":"pm-41407022","eyes":"closed","power":"unclear","icd11":"6D71","dx":"unclear","quote":"recorded for five minutes with eyes closed"}
+{"id":"pm-41786925","eyes":"closed","power":"absolute","icd11":"6D80","dx":"unclear","quote":"publicly available eyes-closed (EC), resting-state (RS) EEG dataset"}
+{"id":"pm-42115191","eyes":"unclear","power":"relative","icd11":"6D71","dx":"unclear"}
+{"id":"pm-42803709","eyes":"unclear","power":"unclear","icd11":"6D71","dx":"unclear"}
+{"id":"pm-6187529","eyes":"unclear","power":"unclear","icd11":"6D80","dx":"unclear"}
+{"id":"pm-42740150","eyes":"closed","power":"both","icd11":"6D80","dx":"unclear","quote":"seated in a resting state with their eyes closed"}
+{"id":"pm-42769165","eyes":"closed","power":"both","icd11":"6D80","dx":"research criteria","quote":"Participants were instructed to relax with eyes closed"}
