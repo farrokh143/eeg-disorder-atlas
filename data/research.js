@@ -3367,6 +3367,26 @@ window.NF_DATA = {
       detail: "41 Lewy body dementia (24 DLB, 17 PDD), 21 Alzheimer's and 40 controls, eyes-closed and eyes-open resting EEG at O1, Oz, O2. In LBD, eyes-open alpha power was higher than in controls and AD while eyes-closed alpha did not differ, so alpha reactivity was reduced. Most patients took cholinesterase inhibitors and many dopaminergic drugs.",
       design: "Case-control",
       cite: { authors: "Schumacher J, et al.", year: 2020, title: "EEG alpha reactivity and cholinergic system integrity in Lewy body dementia and Alzheimer's disease", journal: "Alzheimers Res Ther" }
+    },
+    {
+      id: "pm-19683062", source: "abstract", condition: "ocd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 74, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4"], bands: ["beta"], direction: "up", evidence: "preliminary",
+      changes: { beta: "up" }, symptoms: ["compulsions"],
+      claim: "OCD: higher LORETA beta source power in frontal and parietal regions than matched controls",
+      detail: "37 drug-naive OCD patients and 37 age- and sex-matched controls, resting EEG (29 scalp channels). LORETA beta current density was higher in frontal and parietal lobes; the insular delta result is deep-structure only and was not mapped. Source-localised (LORETA); mapped to the overlying scalp region. Taken from the abstract; not checked in the full text. Single case-control study.",
+      design: "Case-control",
+      cite: { authors: "Velikova S, et al.", year: 2010, title: "Dysfunctional brain circuitry in obsessive-compulsive disorder: source and coherence analysis of EEG rhythms", journal: "Neuroimage" }
+    },
+    {
+      id: "pm-21354363", source: "abstract", condition: "ocd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 100, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["delta","theta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up", theta: "up" }, symptoms: ["compulsions"],
+      claim: "OCD: higher medial frontal low-frequency (2-6 Hz) source power than matched controls",
+      detail: "50 OCD patients and 50 matched controls, resting EEG analysed with sLORETA. The 2-6 Hz power excess spans delta and theta, so it is coded for both bands; the result is in medial frontal cortex. Source-localised (sLORETA); mapped to the overlying scalp region. Taken from the abstract; not checked in the full text. Single case-control study.",
+      design: "Case-control",
+      cite: { authors: "Kopřivová J, et al.", year: 2011, title: "EEG source analysis in obsessive-compulsive disorder", journal: "Clin Neurophysiol" }
     }
   ],
 
