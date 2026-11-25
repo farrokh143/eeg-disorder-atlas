@@ -4040,7 +4040,7 @@ window.NF_DATA = {
       cite: { authors: "Saunders A, et al.", year: 2016, title: "Hemispheric Coherence in ASD with and without Comorbid ADHD and Anxiety", journal: "Biomed Res Int" }
     },
     {
-      id: "pm-30864354-fc", source: "abstract", condition: "autism", type: "connectivity",
+      id: "pm-30864354-fc", rec: { eyes: "both", power: "n/a", icd11: "6A02", dx: "unclear" }, source: "abstract", condition: "autism", type: "connectivity",
       measure: "coherence", pairs: [["frontal","frontal"],["central","central"],["parietal","parietal"],["temporal","temporal"],["occipital","occipital"]],
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       bands: ["delta","theta"], direction: "down", evidence: "preliminary",
@@ -4062,7 +4062,7 @@ window.NF_DATA = {
       cite: { authors: "Coben R, et al.", year: 2008, title: "EEG power and coherence in autistic spectrum disorder", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-29526598-fc", source: "abstract", condition: "schizophrenia", type: "connectivity",
+      id: "pm-29526598-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "connectivity",
       measure: "phase", pairs: [["frontal","frontal"],["parietal","parietal"],["occipital","occipital"]],
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       bands: ["theta","alpha","gamma"], direction: "ratio", evidence: "preliminary",
@@ -4084,7 +4084,7 @@ window.NF_DATA = {
       cite: { authors: "Canuet L, et al.", year: 2011, title: "Resting-state EEG source localization and functional connectivity in schizophrenia-like psychosis of epilepsy", journal: "PLoS One" }
     },
     {
-      id: "pm-11343872-fc", source: "abstract", condition: "schizophrenia", type: "connectivity",
+      id: "pm-11343872-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "connectivity",
       measure: "coherence", pairs: [["temporal","temporal"]],
       metrics: { design: 2, control: null, blinded: null, n: 342, k: null },
       bands: ["delta"], direction: "down", evidence: "preliminary",
@@ -4095,7 +4095,7 @@ window.NF_DATA = {
       cite: { authors: "Winterer G, et al.", year: 2001, title: "An association between reduced interhemispheric EEG coherence in the temporal lobe and genetic risk for schizophrenia", journal: "Schizophr Res" }
     },
     {
-      id: "pm-16475479-fc", source: "abstract", condition: "schizophrenia", type: "connectivity",
+      id: "pm-16475479-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "connectivity",
       measure: "coherence", pairs: [["frontal","frontal"]],
       metrics: { design: 3, control: null, blinded: null, n: 15, k: null },
       bands: ["beta"], direction: "down", evidence: "preliminary",
@@ -4106,7 +4106,7 @@ window.NF_DATA = {
       cite: { authors: "Higashima M, et al.", year: 2006, title: "Functional connectivity between hemispheres and schizophrenic symptoms: a longitudinal study of interhemispheric EEG coherence in patients with acute exacerbations of schizophrenia", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-17140670-fc", source: "abstract", condition: "schizophrenia", type: "connectivity",
+      id: "pm-17140670-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "connectivity",
       measure: "coherence", pairs: [["F7","T5"]],
       metrics: { design: 3, control: null, blinded: null, n: 14, k: null },
       bands: ["beta"], direction: "down", evidence: "preliminary",
@@ -4128,7 +4128,7 @@ window.NF_DATA = {
       cite: { authors: "Kam JW, et al.", year: 2013, title: "Resting state EEG power and coherence abnormalities in bipolar disorder and schizophrenia", journal: "J Psychiatr Res" }
     },
     {
-      id: "pm-25170031-fc", source: "abstract", condition: "schizophrenia", type: "connectivity",
+      id: "pm-25170031-fc", rec: { eyes: "closed", power: "n/a", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "connectivity",
       measure: "aec", pairs: [["frontal","temporal"],["temporal","temporal"],["temporal","parietal"],["frontal","parietal"]],
       metrics: { design: 2, control: null, blinded: null, n: 44, k: null },
       bands: ["gamma"], direction: "up", evidence: "preliminary",
@@ -4172,7 +4172,7 @@ window.NF_DATA = {
       cite: { authors: "Domingos C, et al.", year: 2025, title: "Functional Connectivity in Chronic Schizophrenia: An EEG Resting-State Study with Corrected Imaginary Phase-Locking", journal: "Brain Behav" }
     },
     {
-      id: "pm-40445258-fc", source: "abstract", condition: "schizophrenia", type: "connectivity",
+      id: "pm-40445258-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "connectivity",
       measure: "coherence", pairs: [["frontal","frontal"]],
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       bands: ["gamma"], direction: "up", evidence: "preliminary",
@@ -4183,7 +4183,7 @@ window.NF_DATA = {
       cite: { authors: "Shu IW, et al.", year: 2025, title: "A Canonical Correlation Approach Towards Identifying Latent Neurofeedback Responses in Patients with Schizophrenia", journal: "Appl Psychophysiol Biofeedback" }
     },
     {
-      id: "pm-28540866-fc", source: "full-text", condition: "autism", type: "connectivity",
+      id: "pm-28540866-fc", rec: { eyes: "closed", power: "n/a", icd11: "6A02", dx: "DSM-5" }, source: "full-text", condition: "autism", type: "connectivity",
       measure: "coherence", pairs: [["frontal","frontal"]],
       metrics: { design: 2, control: "none", blinded: null, n: 40, k: null },
       bands: ["delta","theta","beta"], direction: "down", evidence: "preliminary",
@@ -4194,7 +4194,7 @@ window.NF_DATA = {
       cite: { authors: "Shou G, et al.", year: 2017, title: "Electrophysiological signatures of atypical intrinsic brain connectivity networks in autism", journal: "J Neural Eng" }
     },
     {
-      id: "pm-30440772-fc", source: "abstract", condition: "autism", type: "connectivity",
+      id: "pm-30440772-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6A02", dx: "unclear" }, source: "abstract", condition: "autism", type: "connectivity",
       measure: "coherence", pairs: [["central","central"]],
       metrics: { design: 2, control: "none", blinded: null, n: null, k: null },
       bands: ["gamma"], direction: "ratio", evidence: "preliminary",
@@ -4216,7 +4216,7 @@ window.NF_DATA = {
       cite: { authors: "Wang J, et al.", year: 2020, title: "Increased EEG coherence in long-distance and short-distance connectivity in children with autism spectrum disorders", journal: "Brain Behav" }
     },
     {
-      id: "pm-11956003-fc", source: "abstract", condition: "adhd", type: "connectivity",
+      id: "pm-11956003-fc", rec: { eyes: "closed", power: "n/a", icd11: "6A05", dx: "DSM-IV" }, source: "abstract", condition: "adhd", type: "connectivity",
       measure: "coherence", pairs: [["frontal","frontal"],["temporal","temporal"],["parietal","parietal"],["occipital","occipital"]],
       metrics: { design: 2, control: null, blinded: null, n: 120, k: null },
       bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
