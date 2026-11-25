@@ -1,0 +1,10 @@
+{"id":"pm-23053601","eyes":"unclear","power":"unclear","icd11":"6A05","dx":"unclear"}
+{"id":"pm-23249444","eyes":"both","power":"both","icd11":"6A05","dx":"clinical diagnosis","pmid":"23249444","quote":"eyes-open and eyes-closed conditions"}
+{"id":"pm-23355416","eyes":"unclear","power":"both","icd11":"6A05","dx":"unclear"}
+{"id":"pm-23467799","eyes":"both","power":"absolute","icd11":"6A05","dx":"unclear","quote":"eyes-closed and eyes-open resting conditions"}
+{"id":"pm-23619205","eyes":"closed","power":"relative","icd11":"6A05","dx":"unclear","quote":"eyes-closed resting condition"}
+{"id":"pm-24125854","eyes":"closed","power":"both","icd11":"6A05","dx":"unclear","quote":"eyes-closed resting EEG"}
+{"id":"pm-25097090","eyes":"unclear","power":"relative","icd11":"6A05","dx":"unclear","quote":"stronger relative right-frontal alpha power"}
+{"id":"pm-25200165","eyes":"open","power":"absolute","icd11":"6A05","dx":"DSM-IV","quote":"Two 3-minute eyes-open resting conditions"}
+{"id":"pm-28257875","eyes":"unclear","power":"n/a","icd11":"6A05","dx":"unclear"}
+{"id":"pm-28900800","eyes":"open","power":"absolute","icd11":"6A05","dx":"mixed","quote":"6 min of eyes-open (EO) resting-state EEG"}
