@@ -18,3 +18,6 @@ with `tools/revert-finding.js` plus a corrected `include` through `tools/apply-r
 - pm-32682239: the abstract does not state the eye condition, and no full text was checked; eyes coded unclear. Check the full text.
 - pm-38858839: the abstract reports FFT power but does not say absolute or relative, and does not state the eye condition; both coded unclear. Check the full text.
 - pm-36681294: the paper also analysed task EEG (Oddball/focus tasks); only the eyes-open and eyes-closed resting results are used here.
+- pm-24090715: the paper reports 76 bipolar, 132 schizophrenia and 136 control participants (344 in total), but the entry n is 268 (not changed). Check the entry n.
+- pm-24439302: the paper reports 1091 participants (225 SZ, 234 PBP, 201 SZR, 231 PBPR, 200 HC), but the entry n is 425 (not changed). The 425 may be the probands plus controls subset; check the entry n.
+- pm-24439302: the power measure is ICA spatial weights (dimensionless), so power is coded unclear. Check the power field.
