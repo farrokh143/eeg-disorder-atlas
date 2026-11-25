@@ -21,3 +21,4 @@ with `tools/revert-finding.js` plus a corrected `include` through `tools/apply-r
 - pm-24090715: the paper reports 76 bipolar, 132 schizophrenia and 136 control participants (344 in total), but the entry n is 268 (not changed). Check the entry n.
 - pm-24439302: the paper reports 1091 participants (225 SZ, 234 PBP, 201 SZR, 231 PBPR, 200 HC), but the entry n is 425 (not changed). The 425 may be the probands plus controls subset; check the entry n.
 - pm-24439302: the power measure is ICA spatial weights (dimensionless), so power is coded unclear. Check the power field.
+- pm-29643331: the study also has a task condition (visual continuous performance task); only the resting eyes-open and eyes-closed results are used here.
