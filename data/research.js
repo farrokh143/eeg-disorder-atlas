@@ -3517,6 +3517,26 @@ window.NF_DATA = {
       detail: "34 people with stroke: 11 with post-stroke depression and 23 without, resting EEG at 16 electrodes. Within stroke, alpha1 was higher over left temporal sites and alpha2 at the left frontal pole; theta was higher over central, temporal and occipital regions in the depressed group. Sites are pooled across these regions. Taken from the abstract; not checked in the full text. Small single case-control comparison within stroke.",
       design: "Case-control (within stroke)",
       cite: { authors: "Li X, Yue L, Liu J, Lv X, Lv Y", year: 2021, title: "Relationship Between Abnormalities in Resting-State Quantitative Electroencephalogram Patterns and Poststroke Depression", journal: "J Clin Neurophysiol" }
+    },
+    {
+      id: "pm-41937362", source: "full-text", condition: "stroke", type: "biomarker",
+      metrics: { design: 3, control: null, blinded: null, n: 145, k: null },
+      sites: [], bands: ["beta","gamma"], direction: "down", evidence: "moderate",
+      changes: { beta: "down", gamma: "down" }, symptoms: ["motor"],
+      claim: "Stroke: beta and gamma power lower than controls across all patients (electrode-level, bilateral)",
+      detail: "100 stroke patients (mixed time since stroke) and 45 age-matched controls, 3-minute eyes-open resting dense-array EEG (256 channels), relative power in five bands. Across all patients, beta power was lower bilaterally and gamma lower mainly on the contralesional side; the figures are electrode-level but no electrodes are named in the text, so sites are coded whole-head. Early (<90 days) patients also showed higher theta and lower beta and gamma (subgroup, not coded separately). Coherence results are connectivity and are not coded. Cross-sectional controlled study.",
+      design: "Cross-sectional controlled study",
+      cite: { authors: "Delcamp C, Zhou Z, Srinivasan R, Cramer SC", year: 2026, title: "Mapping Brain Function After Stroke: From Early Disorganization to Late Compensation", journal: "Neurorehabil Neural Repair" }
+    },
+    {
+      id: "pm-24971913", source: "abstract", condition: "stroke", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 20, k: null },
+      sites: [], bands: ["delta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", alpha: "down" }, symptoms: ["cogdecline"],
+      claim: "Stroke (within stroke): higher delta/alpha ratio and lower alpha with worse post-stroke cognition",
+      detail: "20 people with first ischaemic middle cerebral artery stroke, resting EEG 62-101 hours after onset, cognition measured by the FIM-FAM about 105 days later. Frontal delta/alpha ratio correlated negatively with cognition (rho -0.66), and global relative alpha positively (rho 0.67). Coded as the direction linked to worse cognition; the frontal and global sites are pooled as whole-head. Taken from the abstract; not checked in the full text. Small cross-sectional correlation study.",
+      design: "Cross-sectional correlation (within stroke)",
+      cite: { authors: "Schleiger E, Sheikh N, Rowland T, Wong A, Read S, Finnigan S", year: 2014, title: "Frontal EEG delta/alpha ratio and screening for post-stroke cognitive deficits: the power of four electrodes", journal: "Int J Psychophysiol" }
     }
   ],
 
