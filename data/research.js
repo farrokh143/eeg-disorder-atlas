@@ -3407,6 +3407,16 @@ window.NF_DATA = {
       detail: "58 people with cyclothymia or bipolar II and 59 healthy controls, eight eyes-open and eyes-closed resting trials. Alpha asymmetry (right minus left, ln power) over mid-frontal F3/F4 and lateral F7/F8 was elevated in those in a hypomanic episode and predicted conversion to bipolar I over 4.7 years. Controlled prospective cohort; small sample followed over one period.",
       design: "Controlled prospective cohort",
       cite: { authors: "Nusslock R, Harmon-Jones E, Alloy LB, Urosevic S, Goldstein K, Abramson LY", year: 2012, title: "Elevated left mid-frontal cortical activity prospectively predicts conversion to bipolar I disorder", journal: "J Abnorm Psychol" }
+    },
+    {
+      id: "pm-11333067", source: "abstract", condition: "bipolar", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 55, k: null },
+      sites: [], bands: ["delta","theta","alpha","beta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "up", beta: "up" }, symptoms: ["mania","lowmood"],
+      claim: "Euthymic bipolar: higher resting EEG power in delta, theta, alpha and beta than healthy controls",
+      detail: "29 euthymic bipolar patients aged 18-40 and 26 healthy volunteers, quantitative resting EEG spectral mapping (beta most marked with eyes open). Grand-mean power was higher in every band; the largest increases were right temporal theta and left occipital beta. Coded whole-head because the result is reported as grand means. Taken from the abstract; not checked in the full text. Single case-control study.",
+      design: "Case-control",
+      cite: { authors: "El-Badri SM, et al.", year: 2001, title: "Electrophysiological and cognitive function in young euthymic patients with bipolar affective disorder", journal: "Bipolar Disord" }
     }
   ],
 
