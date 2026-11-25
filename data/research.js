@@ -3457,6 +3457,16 @@ window.NF_DATA = {
       detail: "25 people with MS, no healthy control group, resting EEG; attention measured with the Test of Attention Performance. In an exploratory within-patient analysis, impaired attention was linked to a higher frontal theta/beta ratio, coded as theta up and beta down over frontal sites. Global alpha was linked to processing speed (SDMT), which has no symptom id, so it is not coded. Taken from the abstract; not checked in the full text. Cross-sectional correlation.",
       design: "Cross-sectional correlation (within MS)",
       cite: { authors: "Keune PM, Hansen S, Weber E, Zapf F, Habich J, Muenssinger J, et al.", year: 2017, title: "Exploring resting-state EEG brain oscillatory activity in relation to cognitive functioning in multiple sclerosis", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-10896692", source: "abstract", condition: "ms", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 50, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","C3","Cz","C4","T3","T4","T5","T6"], bands: ["theta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up" }, symptoms: ["cogdecline"],
+      claim: "MS: more resting theta power over frontotemporal and central sites than controls",
+      detail: "28 people with MS and 22 age- and sex-matched controls, 10 minutes of resting EEG with 20 scalp electrodes, FFT power. Theta power was higher in frontotemporal-central regions; the paper's theta and alpha coherence results are connectivity and are not coded here. Differences were most marked with cognitive involvement. Taken from the abstract; not checked in the full text. Case-control study.",
+      design: "Case-control",
+      cite: { authors: "Leocani L, Locatelli T, Martinelli V, Rovaris M, Falautano M, Filippi M, et al.", year: 2000, title: "Electroencephalographic coherence analysis in multiple sclerosis: correlation with clinical, neuropsychological, and MRI findings", journal: "J Neurol Neurosurg Psychiatry" }
     }
   ],
 
