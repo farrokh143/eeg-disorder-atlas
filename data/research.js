@@ -83,7 +83,7 @@ window.NF_DATA = {
   findings: [
     /* ---------------- Alzheimer's ---------------- */
     {
-      id: "ad-jeong-2004", source: "curated", condition: "alzheimers", type: "biomarker",
+      id: "ad-jeong-2004", rec: { eyes: "unclear", power: "unclear", icd11: "6D80", dx: "unclear" }, source: "curated", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["P3","Pz","P4","O1","O2","T5","T6"], bands: ["delta","theta","alpha","beta"], direction: "up", evidence: "strong",
       changes: { delta: "up", theta: "up", alpha: "down", beta: "down" }, symptoms: ["memory","cogdecline"],
@@ -93,7 +93,7 @@ window.NF_DATA = {
       cite: { authors: "Jeong J", year: 2004, title: "EEG dynamics in patients with Alzheimer's disease", journal: "Clinical Neurophysiology" }
     },
     {
-      id: "ad-babiloni-2020", source: "curated", condition: "alzheimers", type: "biomarker",
+      id: "ad-babiloni-2020", rec: { eyes: "unclear", power: "unclear", icd11: "6D80+6D71", dx: "unclear" }, source: "curated", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["P3","Pz","P4","O1","O2"], bands: ["alpha","delta"], direction: "down", evidence: "strong",
       changes: { alpha: "down", delta: "up" }, symptoms: ["memory","cogdecline"],
@@ -114,7 +114,7 @@ window.NF_DATA = {
     },
     /* ---------------- Schizophrenia ---------------- */
     {
-      id: "scz-boutros-2008", source: "curated", condition: "schizophrenia", type: "biomarker",
+      id: "scz-boutros-2008", rec: { eyes: "unclear", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "curated", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Fz","F3","F4","Cz"], bands: ["delta","theta","alpha"], direction: "up", evidence: "moderate",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["psychosis"],
@@ -136,8 +136,8 @@ window.NF_DATA = {
     },
     /* ---------------- Brain injury (TBI) ---------------- */
     {
-      id: "tbi-thatcher-1989", source: "curated", condition: "tbi", type: "biomarker",
-      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      id: "tbi-thatcher-1989", rec: { eyes: "unclear", power: "unclear", icd11: "NA07.0", dx: "unclear" }, source: "curated", condition: "tbi", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 716, k: null },
       sites: ["F3","F4","Fz","T3","T4"], bands: ["theta","alpha","beta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", alpha: "down", beta: "mixed" }, symptoms: ["postconcussion"],
       claim: "Discriminant qEEG features separate mild TBI from controls",
@@ -146,7 +146,7 @@ window.NF_DATA = {
       cite: { authors: "Thatcher RW, Walker RA, Gerson I, Geisler FH", year: 1989, title: "EEG discriminant analyses of mild head trauma", journal: "Electroencephalography and Clinical Neurophysiology" }
     },
     {
-      id: "tbi-nuwer-2005", source: "curated", condition: "tbi", type: "biomarker",
+      id: "tbi-nuwer-2005", rec: { eyes: "unclear", power: "unclear", icd11: "NA07.0", dx: "unclear" }, source: "curated", condition: "tbi", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["delta","theta","alpha"], direction: "up", evidence: "contested",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["postconcussion","inattention","memory"],
@@ -158,7 +158,7 @@ window.NF_DATA = {
     /* ---------------- Insomnia ---------------- */
     /* ---------------- Autism ---------------- */
     {
-      id: "asd-wang-2013", source: "curated", condition: "autism", type: "biomarker",
+      id: "asd-wang-2013", rec: { eyes: "unclear", power: "unclear", icd11: "6A02", dx: "unclear" }, source: "curated", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["F3","F4","C3","C4","P3","P4","O1","O2"], bands: ["delta","theta","alpha","beta","gamma"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down", beta: "up", gamma: "up" }, symptoms: ["social"],
@@ -180,7 +180,7 @@ window.NF_DATA = {
     },
     /* ---------------- ADHD ---------------- */
     {
-      id: "adhd-tbr-biomarker", source: "curated", condition: "adhd", type: "biomarker",
+      id: "adhd-tbr-biomarker", rec: { eyes: "open", power: "ratio-only", icd11: "6A05", dx: "unclear" }, source: "curated", condition: "adhd", type: "biomarker",
       metrics: { design: 5, control: null, blinded: null, n: null, k: null },
       sites: ["Cz"], bands: ["theta","beta"], direction: "ratio", evidence: "contested",
       changes: { theta: "up", beta: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -190,7 +190,7 @@ window.NF_DATA = {
       cite: { authors: "Arns M, Conners CK, Kraemer HC", year: 2013, title: "A decade of EEG theta/beta ratio research in ADHD: a meta-analysis", journal: "Journal of Attention Disorders" }
     },
     {
-      id: "adhd-arns-2009", source: "curated", condition: "adhd", type: "protocol",
+      id: "adhd-arns-2009", rec: { eyes: "unclear", power: "n/a", icd11: "6A05", dx: "unclear" }, source: "curated", condition: "adhd", type: "protocol",
       metrics: { design: 5, control: null, blinded: null, n: null, k: null },
       sites: ["Cz","C3","C4"], bands: ["theta","smr","beta"], direction: "ratio", evidence: "strong",
       changes: { theta: "down", smr: "up", beta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -200,7 +200,7 @@ window.NF_DATA = {
       cite: { authors: "Arns M, de Ridder S, Strehl U, Breteler M, Coenen A", year: 2009, title: "Efficacy of neurofeedback treatment in ADHD: the effects on inattention, impulsivity and hyperactivity: a meta-analysis", journal: "Clinical EEG and Neuroscience" }
     },
     {
-      id: "adhd-cortese-2016", source: "curated", condition: "adhd", type: "protocol",
+      id: "adhd-cortese-2016", rec: { eyes: "unclear", power: "n/a", icd11: "6A05", dx: "unclear" }, source: "curated", condition: "adhd", type: "protocol",
       metrics: { design: 5, control: null, blinded: true, n: null, k: null },
       sites: ["Cz","C3","C4"], bands: ["theta","smr","beta"], direction: "ratio", evidence: "contested",
       changes: { theta: "down", smr: "up", beta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -210,8 +210,8 @@ window.NF_DATA = {
       cite: { authors: "Cortese S, Ferrin M, Brandeis D, et al.", year: 2016, title: "Neurofeedback for attention-deficit/hyperactivity disorder: meta-analysis of clinical and neuropsychological outcomes from randomized controlled trials", journal: "Journal of the American Academy of Child & Adolescent Psychiatry" }
     },
     {
-      id: "adhd-ncg-2021", source: "curated", condition: "adhd", type: "protocol",
-      metrics: { design: 4, control: "sham", blinded: true, n: null, k: null },
+      id: "adhd-ncg-2021", rec: { eyes: "unclear", power: "n/a", icd11: "6A05", dx: "DSM-5" }, source: "curated", condition: "adhd", type: "protocol",
+      metrics: { design: 4, control: "sham", blinded: true, n: 142, k: null },
       sites: ["Cz"], bands: ["theta","beta"], direction: "ratio", evidence: "contested",
       changes: { theta: "down", beta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
       claim: "Double-blind TBR training matched sham",
