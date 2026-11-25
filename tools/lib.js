@@ -28,5 +28,7 @@ function loadData() {
 const ELECTRODES = ["Fp1","Fp2","F7","F3","Fz","F4","F8","T3","C3","Cz","C4","T4","T5","P3","Pz","P4","T6","O1","O2"];
 const DISORDER_TO_CONDITION = { "Alzheimer's": "alzheimers", "ADHD": "adhd", "Schizophrenia": "schizophrenia", "Depression": "depression",
   "Parkinson's": "parkinsons", "Brain injury (TBI)": "tbi", "Insomnia": "insomnia", "Autism": "autism", "Alcohol & substance use": "sud",
-  "Epilepsy": "epilepsy", "PTSD": "ptsd", "Anxiety": "anxiety", "Migraine": "migraine", "Healthy cognition": "cognition" };
+  "Epilepsy": "epilepsy", "PTSD": "ptsd", "Anxiety": "anxiety", "Migraine": "migraine", "Healthy cognition": "cognition",
+  "Bipolar": "bipolar", "OCD": "ocd", "Lewy body dementia": "lewy", "Frontotemporal dementia": "ftd", "Intellectual disability": "intellectual",
+  "Learning disorders": "learning", "Multiple sclerosis": "ms", "Stroke": "stroke" };
 module.exports = { ROOT, LOG, DATA, readLog, writeLog, loadData, ELECTRODES, DISORDER_TO_CONDITION };

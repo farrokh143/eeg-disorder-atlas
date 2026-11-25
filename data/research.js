@@ -46,7 +46,15 @@ window.NF_DATA = {
     { id: "ptsd", name: "PTSD", icd11: "6B40", summary: "Altered alpha has been reported but findings are inconsistent. Treatment studies centre on alpha and alpha-theta neurofeedback." },
     { id: "anxiety", name: "Anxiety", icd11: "6B0 (to be split)", summary: "Clinical reports favour posterior alpha and high-beta inhibit protocols; marker research is thin." },
     { id: "migraine", name: "Migraine", icd11: "8A80", summary: "Between attacks, resting theta power is higher in people with migraine (2024 meta-analysis), but EEG features did not track severity. Neurofeedback evidence comes from uncontrolled case series." },
-    { id: "cognition", name: "Healthy cognition", icd11: "none (healthy participants)", summary: "Upper-alpha and SMR activity relate to memory and mental rotation in healthy people, and training them can improve performance." }
+    { id: "cognition", name: "Healthy cognition", icd11: "none (healthy participants)", summary: "Upper-alpha and SMR activity relate to memory and mental rotation in healthy people, and training them can improve performance." },
+    { id: "bipolar", name: "Bipolar disorder", icd11: "6A60, 6A61", summary: "Added on 25 Nov 2026 by the ICD-11 scoping check. Studies are being screened; no findings yet." },
+    { id: "ocd", name: "OCD", icd11: "6B20", summary: "Added on 25 Nov 2026 by the ICD-11 scoping check. Studies are being screened; no findings yet." },
+    { id: "lewy", name: "Dementia with Lewy bodies", icd11: "6D82", summary: "Added on 25 Nov 2026 by the ICD-11 scoping check. Studies are being screened; no findings yet." },
+    { id: "ftd", name: "Frontotemporal dementia", icd11: "6D83", summary: "Added on 25 Nov 2026 by the ICD-11 scoping check. Studies are being screened; no findings yet." },
+    { id: "intellectual", name: "Intellectual developmental disorder", icd11: "6A00", summary: "Added on 25 Nov 2026 by the ICD-11 scoping check. Studies are being screened; no findings yet." },
+    { id: "learning", name: "Developmental learning disorder", icd11: "6A03", summary: "Added on 25 Nov 2026 by the ICD-11 scoping check. Studies are being screened; no findings yet." },
+    { id: "ms", name: "Multiple sclerosis", icd11: "8A40", summary: "Added on 25 Nov 2026 by the ICD-11 scoping check. Studies are being screened; no findings yet." },
+    { id: "stroke", name: "Stroke", icd11: "8B1, 8B2", summary: "Added on 25 Nov 2026 by the ICD-11 scoping check. Studies are being screened; no findings yet." }
   ],
 
   symptoms: [
@@ -67,7 +75,9 @@ window.NF_DATA = {
     { id: "seizures", name: "Seizures" },
     { id: "headache", name: "Headache / migraine" },
     { id: "postconcussion", name: "Post-concussion symptoms" },
-    { id: "motor", name: "Motor symptoms (tremor, stiffness)" }
+    { id: "motor", name: "Motor symptoms (tremor, stiffness)" },
+    { id: "mania", name: "Mania / hypomania" },
+    { id: "compulsions", name: "Obsessions and compulsions" }
   ],
 
   findings: [
