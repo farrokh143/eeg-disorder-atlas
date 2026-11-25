@@ -3637,6 +3637,26 @@ window.NF_DATA = {
       detail: "24 patients with acute ischaemic stroke, 3-minute resting dense-array (256-electrode) EEG at bedside. Whole-brain partial least squares models of delta or beta power tracked NIHSS scores, and larger infarct volume was linked to higher delta power bilaterally. Beta direction is not stated in the abstract, so only delta is coded. Sites are whole-head. Taken from the abstract; not checked in the full text. Cross-sectional evaluation with no healthy control group.",
       design: "Evaluation study",
       cite: { authors: "Wu J, Srinivasan R, Burke Quinlan E, Solodkin A, Small SL, Cramer SC", year: 2016, title: "Utility of EEG measures of brain function in patients with acute stroke", journal: "Journal of neurophysiology" }
+    },
+    {
+      id: "pm-16495149", source: "abstract", condition: "stroke", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 1, k: null },
+      sites: [], bands: ["delta","theta","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", beta: "down" }, symptoms: ["motor"],
+      claim: "Single subcortical infarct: more delta and theta, less beta power on the infarct side than healthy controls",
+      detail: "One man with a subcortical infarct compared with healthy controls. The abstract reports the eyes-closed and eyes-open recordings together; the coded values are the resting recording results, and the visual-input (photic) comparison is not coded. Absolute delta and theta were higher and relative beta lower on the infarct side, and the infarct-side changes were the ones that were reduced after eyes opening. Electrodes are not named, so sites are whole-head. Taken from the abstract; not checked in the full text. Single case report; n=1 means no group-level inference.",
+      design: "Case report with healthy-control comparison",
+      cite: { authors: "Molnár M, Csuhaj R, Horváth S, Vastagh I, Gaál ZA, Czigler B, Bálint A, Csikós D, Nagy Z", year: 2006, title: "Spectral and complexity features of the EEG changed by visual input in a case of subcortical stroke compared to healthy controls", journal: "Clinical neurophysiology" }
+    },
+    {
+      id: "pm-17889600", source: "abstract", condition: "stroke", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 13, k: null },
+      sites: [], bands: ["delta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", alpha: "down" }, symptoms: ["motor"],
+      claim: "Sub-acute ischaemic stroke: higher delta:alpha ratio and lower relative alpha track worse 30-day NIHSS",
+      detail: "13 patients with ischaemic cortical stroke, resting 62-channel EEG at about 49 hours after onset, with NIHSS at 30 days. The delta:alpha power ratio and relative alpha power correlated with the 30-day NIHSS score, and the 19-channel subset gave the same two results; theta and beta measures were not correlated. Coded as the direction linked to greater impairment (higher delta, lower alpha). Electrodes are not named, so sites are whole-head. Taken from the abstract; not checked in the full text. Very small correlational study with no healthy control group.",
+      design: "Prospective cohort",
+      cite: { authors: "Finnigan SP, Walsh M, Rose SE, Chalk JB", year: 2007, title: "Quantitative EEG indices of sub-acute ischaemic stroke correlate with clinical outcomes", journal: "Clinical neurophysiology" }
     }
   ],
 
