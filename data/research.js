@@ -1659,7 +1659,7 @@ window.NF_DATA = {
       cite: { authors: "Dupuy FE, et al.", year: 2011, title: "Girls with attention-deficit/hyperactivity disorder: EEG differences between DSM-IV types", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-23053601", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "pm-23053601", rec: { eyes: "unclear", power: "unclear", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 105, k: null },
       sites: [], bands: ["theta","beta"], direction: "ratio", evidence: "contested",
       changes: { theta: "mixed", beta: "mixed" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1669,7 +1669,7 @@ window.NF_DATA = {
       cite: { authors: "Liechti MD, et al.", year: 2013, title: "Diagnostic value of resting electroencephalogram in attention-deficit/hyperactivity disorder across the lifespan", journal: "Brain Topogr" }
     },
     {
-      id: "pm-23249444", source: "full-text", condition: "adhd", type: "biomarker",
+      id: "pm-23249444", rec: { eyes: "both", power: "both", icd11: "6A05", dx: "clinical diagnosis" }, source: "full-text", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 35, k: null },
       sites: [], bands: ["theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", alpha: "down", beta: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1679,7 +1679,7 @@ window.NF_DATA = {
       cite: { authors: "Woltering S, et al.", year: 2012, title: "Resting state EEG oscillatory power differences in ADHD college students and their peers", journal: "Behav Brain Funct" }
     },
     {
-      id: "pm-23355416", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "pm-23355416", rec: { eyes: "unclear", power: "both", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 28, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1689,7 +1689,7 @@ window.NF_DATA = {
       cite: { authors: "Jaworska N, et al.", year: 2013, title: "The resting electrophysiological profile in adults with ADHD and comorbid dysfunctional anger: a pilot study", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-23467799", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "pm-23467799", rec: { eyes: "both", power: "absolute", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 76, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1699,7 +1699,7 @@ window.NF_DATA = {
       cite: { authors: "Fonseca LC, et al.", year: 2013, title: "Electroencephalographic alpha reactivity on opening the eyes in children with attention-deficit hyperactivity disorder", journal: "Clin EEG Neurosci" }
     },
     {
-      id: "pm-23619205", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "pm-23619205", rec: { eyes: "closed", power: "relative", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 171, k: null },
       sites: [], bands: ["theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", alpha: "down", beta: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1709,7 +1709,7 @@ window.NF_DATA = {
       cite: { authors: "Clarke AR, et al.", year: 2013, title: "Excess beta activity in the EEG of children with attention-deficit/hyperactivity disorder: a disorder of arousal?", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-24125854", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "pm-24125854", rec: { eyes: "closed", power: "both", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 80, k: null },
       sites: [], bands: ["delta","beta","gamma"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", beta: "down", gamma: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1719,7 +1719,7 @@ window.NF_DATA = {
       cite: { authors: "Dupuy FE, et al.", year: 2014, title: "EEG and electrodermal activity in girls with Attention-Deficit/Hyperactivity Disorder", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-25097090", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "pm-25097090", rec: { eyes: "unclear", power: "relative", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 52, k: null },
       sites: ["Fp2","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1729,7 +1729,7 @@ window.NF_DATA = {
       cite: { authors: "Keune PM, et al.", year: 2015, title: "Frontal brain asymmetry in adult attention-deficit/hyperactivity disorder (ADHD): extending the motivational dysfunction hypothesis", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-25200165", source: "full-text", condition: "adhd", type: "biomarker",
+      id: "pm-25200165", rec: { eyes: "open", power: "absolute", icd11: "6A05", dx: "DSM-IV" }, source: "full-text", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 161, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "mixed", beta: "mixed" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1749,7 +1749,7 @@ window.NF_DATA = {
       cite: { authors: "Rommel AS, et al.", year: 2016, title: "Commonalities in EEG Spectral Power Abnormalities Between Women With ADHD and Women With Bipolar Disorder During Rest and Cognitive Performance", journal: "Brain Topogr" }
     },
     {
-      id: "pm-28257875", source: "abstract", condition: "adhd", type: "protocol",
+      id: "pm-28257875", rec: { eyes: "unclear", power: "n/a", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "protocol",
       metrics: { design: 4, control: "usual", blinded: null, n: 85, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["delta","alpha"], direction: "ratio", evidence: "moderate",
       changes: { delta: "down", alpha: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1759,7 +1759,7 @@ window.NF_DATA = {
       cite: { authors: "Johnstone SJ, et al.", year: 2017, title: "Game-based combined cognitive and neurofeedback training using Focus Pocus reduces symptom severity in children with diagnosed AD/HD and subclinical AD/HD", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-28900800", source: "full-text", condition: "adhd", type: "biomarker",
+      id: "pm-28900800", rec: { eyes: "open", power: "absolute", icd11: "6A05", dx: "mixed" }, source: "full-text", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 92, k: null },
       sites: ["F7","F3","Fz","F4","F8","C3","Cz","C4","T5","P3","Pz","P4","T6"], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "down", theta: "mixed", alpha: "mixed", beta: "mixed" }, symptoms: ["inattention","impulsivity","hyperactivity"],
