@@ -2,8 +2,8 @@
 
 Generated 2026-11-25 by `tools/synthesize.js` following `methods/synthesis-protocol.md` (v1.0).
 
-- Patterns with any eligible study: 463
-- Testable (≥ 6 studies with a clear direction): 11
+- Patterns with any eligible study: 512
+- Testable (≥ 6 studies with a clear direction): 13
 - Consistent difference (q_BY < 0.05): 0
 - Robust in sensitivity analyses S2, S3, S4 and S7: 0
 
@@ -13,19 +13,21 @@ Eligible evidence: primary studies checked in full text (or hand-curated). Abstr
 
 | Condition | Feature | Band | Location | k | ↑ / ↓ / unclear | Share (95% CI) | Weighted share | p (sign) | p (weighted) | q (BY) | Verdict | Certainty | Robust | S1 (with abstracts) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Alzheimer's | power | theta | occipital | 10 | 9 / 0 / 1 | 100% (70–100) | 100% | 0.004 | 0.004 | 0.065 | no consistent difference | Moderate | no | consistently higher |
-| Alzheimer's | power | theta | frontal | 10 | 9 / 0 / 1 | 100% (70–100) | 100% | 0.004 | 0.004 | 0.065 | no consistent difference | Moderate | no | consistently higher |
-| Alzheimer's | power | theta | parietal | 9 | 8 / 0 / 1 | 100% (68–100) | 100% | 0.008 | 0.008 | 0.065 | no consistent difference | Low | no | consistently higher |
-| Alzheimer's | power | theta | temporal | 9 | 8 / 0 / 1 | 100% (68–100) | 100% | 0.008 | 0.008 | 0.065 | no consistent difference | Low | no | consistently higher |
-| Alzheimer's | power | alpha | occipital | 9 | 0 / 7 / 2 | 100% (65–100) | 100% | 0.016 | 0.016 | 0.104 | no consistent difference | Low | no | consistently lower |
-| Alzheimer's | power | alpha | frontal | 9 | 0 / 6 / 3 | 100% (61–100) | 100% | 0.031 | 0.031 | 0.115 | no consistent difference | Very low | no | no consistent difference |
-| Alzheimer's | power | alpha | parietal | 8 | 0 / 6 / 2 | 100% (61–100) | 100% | 0.031 | 0.031 | 0.115 | no consistent difference | Low | no | consistently lower |
-| Alzheimer's | power | alpha | temporal | 8 | 0 / 6 / 2 | 100% (61–100) | 100% | 0.031 | 0.031 | 0.115 | no consistent difference | Low | no | consistently lower |
-| Alzheimer's | power | beta | occipital | 7 | 0 / 6 / 1 | 100% (61–100) | 100% | 0.031 | 0.031 | 0.115 | no consistent difference | Moderate | no | consistently lower |
-| ADHD | power | theta | frontal | 7 | 5 / 1 / 1 | 83% (44–97) | 89% | 0.219 | 0.063 | 0.661 | no consistent difference | Moderate | no | consistently higher |
-| ADHD | power | theta | central | 7 | 5 / 1 / 1 | 83% (44–97) | 89% | 0.219 | 0.063 | 0.661 | no consistent difference | Moderate | no | consistently higher |
+| Alzheimer's | power | theta | occipital | 10 | 9 / 0 / 1 | 100% (70–100) | 100% | 0.004 | 0.004 | 0.081 | no consistent difference | Moderate | no | consistently higher |
+| Alzheimer's | power | theta | frontal | 10 | 9 / 0 / 1 | 100% (70–100) | 100% | 0.004 | 0.004 | 0.081 | no consistent difference | Moderate | no | consistently higher |
+| Alzheimer's | power | theta | parietal | 9 | 8 / 0 / 1 | 100% (68–100) | 100% | 0.008 | 0.008 | 0.081 | no consistent difference | Low | no | consistently higher |
+| Alzheimer's | power | theta | temporal | 9 | 8 / 0 / 1 | 100% (68–100) | 100% | 0.008 | 0.008 | 0.081 | no consistent difference | Low | no | consistently higher |
+| Alzheimer's | power | alpha | occipital | 9 | 0 / 7 / 2 | 100% (65–100) | 100% | 0.016 | 0.016 | 0.117 | no consistent difference | Low | no | consistently lower |
+| Alzheimer's | power | alpha | frontal | 9 | 0 / 6 / 3 | 100% (61–100) | 100% | 0.031 | 0.031 | 0.117 | no consistent difference | Very low | no | no consistent difference |
+| Alzheimer's | power | alpha | parietal | 8 | 0 / 6 / 2 | 100% (61–100) | 100% | 0.031 | 0.031 | 0.117 | no consistent difference | Low | no | consistently lower |
+| Alzheimer's | power | alpha | temporal | 8 | 0 / 6 / 2 | 100% (61–100) | 100% | 0.031 | 0.031 | 0.117 | no consistent difference | Low | no | consistently lower |
+| Alzheimer's | power | beta | occipital | 7 | 0 / 6 / 1 | 100% (61–100) | 100% | 0.031 | 0.031 | 0.117 | no consistent difference | Moderate | no | consistently lower |
+| Schizophrenia | power | theta | frontal | 7 | 6 / 0 / 1 | 100% (61–100) | 100% | 0.031 | 0.031 | 0.117 | no consistent difference | Low | no | consistently higher |
+| Stroke | power | delta | frontal | 6 | 6 / 0 / 0 | 100% (61–100) | 100% | 0.031 | 0.031 | 0.117 | no consistent difference | Very low | no | no consistent difference |
+| ADHD | power | theta | frontal | 7 | 5 / 1 / 1 | 83% (44–97) | 89% | 0.219 | 0.063 | 0.696 | no consistent difference | Moderate | no | consistently higher |
+| ADHD | power | theta | central | 7 | 5 / 1 / 1 | 83% (44–97) | 89% | 0.219 | 0.063 | 0.696 | no consistent difference | Moderate | no | consistently higher |
 
-## Too few studies to test (445 patterns)
+## Too few studies to test (489 patterns)
 
 Shown on the atlas with their study list and certainty, without a test. Largest:
 
@@ -35,12 +37,13 @@ Shown on the atlas with their study list and certainty, without a test. Largest:
 | Alzheimer's | power | delta | occipital | 6 | 5 / 0 / 1 | Very low |
 | Alzheimer's | power | beta | parietal | 6 | 0 / 5 / 1 | Low |
 | Alzheimer's | power | beta | temporal | 6 | 0 / 5 / 1 | Low |
-| Schizophrenia | power | theta | frontal | 6 | 5 / 0 / 1 | Low |
+| Schizophrenia | power | theta | central | 6 | 5 / 0 / 1 | Very low |
 | Autism | power | alpha | occipital | 6 | 1 / 4 / 1 | Low |
 | Alzheimer's | power | theta | central | 6 | 5 / 0 / 1 | Very low |
+| Schizophrenia | power | theta | temporal | 6 | 5 / 0 / 1 | Very low |
+| Schizophrenia | power | theta | parietal | 6 | 5 / 0 / 1 | Very low |
 | Alzheimer's | power | delta | temporal | 5 | 4 / 0 / 1 | Very low |
 | Schizophrenia | power | delta | frontal | 5 | 4 / 0 / 1 | Very low |
-| Schizophrenia | power | theta | central | 5 | 4 / 0 / 1 | Very low |
 | Autism | power | alpha | frontal | 5 | 0 / 4 / 1 | Very low |
 | Autism | power | alpha | parietal | 5 | 0 / 4 / 1 | Very low |
 | ADHD | power | alpha | frontal | 5 | 0 / 3 / 2 | Very low |
@@ -48,16 +51,15 @@ Shown on the atlas with their study list and certainty, without a test. Largest:
 | ADHD | power | beta | central | 5 | 0 / 3 / 2 | Very low |
 | Alzheimer's | power | alpha | central | 5 | 0 / 3 / 2 | Very low |
 | ADHD | power | theta | parietal | 5 | 3 / 1 / 1 | Very low |
-| Schizophrenia | power | theta | temporal | 5 | 4 / 0 / 1 | Very low |
-| Schizophrenia | power | theta | parietal | 5 | 4 / 0 / 1 | Very low |
+| Schizophrenia | power | theta | occipital | 5 | 4 / 0 / 1 | Very low |
 | Alcohol & substance use | power | alpha | frontal | 5 | 3 / 1 / 1 | Low |
+| Stroke | power | delta | central | 5 | 5 / 0 / 0 | Very low |
+| Stroke | power | delta | temporal | 5 | 5 / 0 / 0 | Very low |
+| Stroke | power | delta | parietal | 5 | 5 / 0 / 0 | Very low |
+| Stroke | power | delta | occipital | 5 | 5 / 0 / 0 | Very low |
+| Stroke | power | theta | frontal | 5 | 4 / 1 / 0 | Very low |
 | Schizophrenia | power | delta | central | 4 | 3 / 0 / 1 | Very low |
 | Schizophrenia | power | alpha | frontal | 4 | 2 / 1 / 1 | Very low |
 | Schizophrenia | power | alpha | central | 4 | 2 / 1 / 1 | Very low |
 | Autism | power | alpha | central | 4 | 0 / 3 / 1 | Very low |
 | Autism | power | gamma | frontal | 4 | 4 / 0 / 0 | Very low |
-| Autism | power | gamma | central | 4 | 4 / 0 / 0 | Very low |
-| Autism | power | gamma | parietal | 4 | 4 / 0 / 0 | Very low |
-| Autism | power | gamma | occipital | 4 | 4 / 0 / 0 | Very low |
-| Alcohol & substance use | power | beta | frontal | 4 | 3 / 0 / 1 | Low |
-| ADHD | power | alpha | central | 4 | 0 / 2 / 2 | Very low |
