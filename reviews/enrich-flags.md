@@ -12,3 +12,4 @@ with `tools/revert-finding.js` plus a corrected `include` through `tools/apply-r
 - ins-zhao-2021: the meta-analysis pools wakefulness and sleep-stage EEG (REM, NREM); CLAUDE.md excludes sleep EEG biomarkers, so the sleep-stage results may need removing (resting wake data only).
 - pm-38969018: sample is older people with subjective memory complaints, not diagnosed AD or MCI; coded icd11 subclinical. Check whether the alzheimers condition fits.
 - pm-39248267: Methods say the resting EEG was eyes-closed, but the limitations say only the eyes-open condition was analysed; check the eyes-state wording in the entry detail (coded open here).
+- pm-22939462 and cand-mdd-alpha-sex-2012 are the same paper (Jaworska 2012). Batch 11 coded pm-22939462 from the abstract (eyes/power/dx unclear); the full text used for cand-mdd-alpha-sex-2012 gives both eyes, absolute power and DSM-IV. Re-check pm-22939462 and consider removing the duplicate.

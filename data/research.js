@@ -1449,7 +1449,7 @@ window.NF_DATA = {
       cite: { authors: "Wu Z, et al.", year: 2022, title: "Resting-state electroencephalography of neural oscillation and functional connectivity patterns in late-life depression", journal: "J Affect Disord" }
     },
     {
-      id: "cand-mdd-ozcoban-2025", source: "full-text", condition: "depression", type: "biomarker",
+      id: "cand-mdd-ozcoban-2025", rec: { eyes: "closed", power: "both", icd11: "6A7", dx: "DSM-5" }, source: "full-text", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 126, k: null },
       sites: [], bands: ["theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", alpha: "mixed", beta: "up" }, symptoms: ["lowmood"],
@@ -1459,7 +1459,7 @@ window.NF_DATA = {
       cite: { authors: "Özçoban MA, Tan O", year: 2025, title: "Electroencephalographic markers in Major Depressive Disorder: insights from absolute, relative power, and asymmetry analyses", journal: "Frontiers in Psychiatry" }
     },
     {
-      id: "cand-mdd-alpha-sex-2012", source: "full-text", condition: "depression", type: "biomarker",
+      id: "cand-mdd-alpha-sex-2012", rec: { eyes: "both", power: "absolute", icd11: "6A7", dx: "DSM-IV" }, source: "full-text", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 96, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["lowmood"],
@@ -1469,7 +1469,7 @@ window.NF_DATA = {
       cite: { authors: "(verify authors)", year: 2012, title: "Alpha Power, Alpha Asymmetry and Anterior Cingulate Cortex Activity in Depressed Males and Females", journal: "Journal of Psychiatric Research" }
     },
     {
-      id: "pm-37480706", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-37480706", rec: { eyes: "closed", power: "unclear", icd11: "subclinical", dx: "scale cut-off" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 100, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4","O1","O2"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1479,7 +1479,7 @@ window.NF_DATA = {
       cite: { authors: "Sharpley CF, et al.", year: 2023, title: "Alpha wave asymmetry is associated with only one component of melancholia, and in different directions across brain regions", journal: "Psychiatry Res Neuroimaging" }
     },
     {
-      id: "pm-37957613", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-37957613", rec: { eyes: "closed", power: "relative", icd11: "6A70", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 80, k: null },
       sites: ["O1","O2"], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["lowmood"],
@@ -1489,7 +1489,7 @@ window.NF_DATA = {
       cite: { authors: "Huang Y, et al.", year: 2023, title: "Analysis of EEG features and study of automatic classification in first-episode and drug-naïve patients with major depressive disorder", journal: "BMC Psychiatry" }
     },
     {
-      id: "pm-40153921", source: "full-text", condition: "depression", type: "biomarker",
+      id: "pm-40153921", rec: { eyes: "open", power: "relative", icd11: "6A7", dx: "mixed" }, source: "full-text", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 140, k: null },
       sites: [], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["lowmood","anxiety"],
@@ -1499,7 +1499,7 @@ window.NF_DATA = {
       cite: { authors: "Kovacevic N, et al.", year: 2025, title: "Differences in resting state and task-based EEG measures between patients with major depressive disorder and healthy controls", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-40561721", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-40561721", rec: { eyes: "unclear", power: "relative", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 51, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood","anxiety"],
@@ -1509,7 +1509,7 @@ window.NF_DATA = {
       cite: { authors: "Zsigo C, et al.", year: 2025, title: "Frontal alpha asymmetry in major depression and comorbid anxiety disorder: a five-year follow-up study", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-40945766", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-40945766", rec: { eyes: "unclear", power: "absolute", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 152, k: null },
       sites: [], bands: ["gamma"], direction: "down", evidence: "preliminary",
       changes: { gamma: "down" }, symptoms: ["lowmood"],
@@ -1519,7 +1519,7 @@ window.NF_DATA = {
       cite: { authors: "Arıkan MK, et al.", year: 2026, title: "Gamma-band qEEG biomarkers as trait indicators in depression", journal: "J Affect Disord" }
     },
     {
-      id: "pm-41214062", source: "full-text", condition: "depression", type: "biomarker",
+      id: "pm-41214062", rec: { eyes: "closed", power: "relative", icd11: "6A7", dx: "DSM-IV" }, source: "full-text", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 40, k: null },
       sites: ["Fp1","Fp2"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["lowmood","anxiety"],
@@ -1529,7 +1529,7 @@ window.NF_DATA = {
       cite: { authors: "Tang S, et al.", year: 2025, title: "High alpha oscillations in portable prefrontal EEG indicate gender-sensitive biomarkers for emotional disorders", journal: "Sci Rep" }
     },
     {
-      id: "pm-41308891", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-41308891", rec: { eyes: "both", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 98, k: null },
       sites: ["F3","F4"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1539,7 +1539,7 @@ window.NF_DATA = {
       cite: { authors: "Sun G, et al.", year: 2026, title: "Frontal alpha asymmetry across genders as a distinction between major depressive disorder and bipolar disorder", journal: "J Affect Disord" }
     },
     {
-      id: "pm-41422967", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-41422967", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 227, k: null },
       sites: ["T5","T6"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
