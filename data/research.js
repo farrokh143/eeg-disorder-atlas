@@ -3750,6 +3750,26 @@ window.NF_DATA = {
       detail: "26 dyslexic and 11 control children, eyes-closed resting EEG with LORETA source estimates. Parietal, occipital and temporal alpha-2 and alpha-3 sources had lower amplitude in dyslexics; the sites are mapped from the region names to P3, Pz, P4, O1, O2, T5 and T6. Lower alpha was linked to faster pseudo-word reading in some regions. Taken from the abstract; not checked in the full text. Small case-control study.",
       design: "Case-control",
       cite: { authors: "Babiloni C, Stella G, Buffo P, Vecchio F, Onorati P, Muratori C, Miano S, Gheller F, Antonaci L, Albertini G, Rossini PM", year: 2012, title: "Cortical sources of resting state EEG rhythms are abnormal in dyslexic children", journal: "Clinical neurophysiology" }
+    },
+    {
+      id: "pm-42586149", source: "abstract", condition: "stroke", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 81, k: null },
+      sites: [], bands: ["delta"], direction: "down", evidence: "preliminary",
+      changes: { delta: "down" }, symptoms: ["vertigo"],
+      claim: "Stroke-related central vertigo: lower relative delta power in severe cases than controls (candidate feature)",
+      detail: "50 patients with stroke-related central vertigo (31 moderate, 19 severe) and 31 age-matched controls, resting EEG. In severe cases, relative delta power was widely reduced versus controls, and absolute global delta was lower; the moderate group is not reported as a band difference. Delta-theta and delta-beta coupling, phase-synchrony and graph measures are not coded. Sites are whole-head. Taken from the abstract; not checked in the full text. Candidate-feature study that the authors say needs external and longitudinal validation.",
+      design: "Case-control",
+      cite: { authors: "Nan J, Yang X, Jiang H, Hong C, Yang J, Bai Y, Wu J, Ni G", year: 2026, title: "A multi-feature resting-state EEG framework for candidate EEG feature discovery in central vertigo", journal: "Journal of neural engineering" }
+    },
+    {
+      id: "pm-39538198", source: "full-text", condition: "stroke", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 58, k: null },
+      sites: [], bands: ["delta","theta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up", theta: "up" }, symptoms: ["delirium"],
+      claim: "Acute stroke with delirium: higher frontal, central and occipital delta and theta power (21-channel)",
+      detail: "58 patients with acute supratentorial ischaemic stroke, 9 with delirium (DSM-5) and 49 without, 2-minute eyes-closed resting 21-channel EEG (10-20 layout). Delta and theta power were higher in the delirium group in all predefined regions (frontal, central, occipital), with significance in each hemisphere and across both. Alpha and beta were not significantly different. Sites are coded as whole-head because the effect was in all regions. The single-channel DeltaScan result (diagnostic accuracy) is not coded. Diagnostic accuracy study with 9 delirium cases, so the estimates are imprecise.",
+      design: "Diagnostic accuracy study (case-control)",
+      cite: { authors: "Hermann G, Baumgarte F, Welzel J, Nydahl P, Kuhlenbäumer G, Margraf NG", year: 2024, title: "Electroencephalography based delirium screening in acute supratentorial stroke", journal: "BMC neurology" }
     }
   ],
 
