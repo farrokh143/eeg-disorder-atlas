@@ -15,6 +15,10 @@ function validate() {
     if (!C.has(f.condition)) e(`unknown condition "${f.condition}"`);
     if (!["full-text", "abstract", "curated"].includes(f.source)) e(`source must be full-text, abstract or curated (got "${f.source}")`);
     if (f.sample != null && !/^[a-z0-9-]+$/.test(f.sample)) e("sample must be a lowercase key like ds-tdbrain");
+    if (f.rec) { const R = f.rec;
+      if (!["closed", "open", "both", "unclear"].includes(R.eyes)) e(`rec.eyes "${R.eyes}" not allowed`);
+      if (!["absolute", "relative", "both", "ratio-only", "unclear", "n/a"].includes(R.power)) e(`rec.power "${R.power}" not allowed`);
+      if (!R.icd11 || !R.dx) e("rec needs icd11 and dx"); }
     if (kind === "power") {
       if (!["biomarker", "protocol"].includes(f.type)) e(`bad type "${f.type}"`);
       if (!Array.isArray(f.sites) || f.sites.some(s => !ELECTRODES.includes(s))) e(`bad sites ${JSON.stringify(f.sites)}`);

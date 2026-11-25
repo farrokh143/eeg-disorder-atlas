@@ -274,3 +274,53 @@ structures, and whole-brain "global connectivity" with no sites or regions.
 
 After each batch also run `node tools/synthesize.js` and commit `data/synthesis.js` and `methods/synthesis-results.md`
 with the batch.
+
+---
+
+# Part 3: Recording details (enrichment pass)
+
+Goal: add, for every entry already in the atlas, the details reviewers need for sensitivity analyses: eye state,
+absolute or relative power, the ICD-11 group of the patient sample and the diagnostic system used. Also fill a missing
+sample size or PMID **only when the paper states it**. Do not change bands, directions, sites, pairs or evidence; if you
+think one of those is wrong, add it to `reviews/enrich-flags.md` (id + one line) and carry on.
+
+Same stopping rule, branches, merging and sync as Part 1. Batches of 10. Decision files: `reviews/enrich-<n>.jsonl`.
+
+## One batch
+
+1. **Queue:** `node tools/apply-enrich.js --queue 10`. It prints id, condition, source, current n, PMID, title and the
+   allowed ICD-11 codes for that condition.
+2. **Find the paper.** If `pmid` is null (hand-picked `curated` rows), call `lookup_article_by_citation` (or
+   `search_articles` with the exact title in `[Title]`) and use the PMID only if the title matches exactly.
+3. **Read it.** `get_article_metadata` for the abstract and PMC id. If there is a PMC id, `get_full_text_article`
+   (2 at a time) and run `node tools/fulltext-snippets.js <file>`; look in Methods for "eyes closed/open",
+   "absolute/relative power", "diagnosed according to", and the participant numbers.
+4. **Write one line per entry** (a `-fc` entry is filled automatically from its paper's line):
+   `{"id":"pm-123","eyes":"closed","power":"relative","icd11":"6D71","dx":"research criteria","n":42,"pmid":"123","quote":"5 min eyes-closed resting"}`
+5. `node tools/apply-enrich.js reviews/enrich-<n>.jsonl --check`, fix, then apply without `--check`. It must end with
+   "Validation OK". Commit, PR and merge as in Part 1 (title: "Enrichment batch <n>").
+
+## Field rules
+
+- **eyes**: `closed`, `open`, `both` (results reported for both, or pooled across studies in a review), or `unclear`
+  (not stated in what you can read). `quote` = a few words from the paper showing it (required unless `unclear`).
+- **power**: `absolute`, `relative`, `both`, `ratio-only` (only a band ratio such as theta/beta is reported), `unclear`.
+  Use `n/a` for protocol (neurofeedback) entries. Connectivity entries get `n/a` automatically.
+- **icd11**: the group the patients actually belong to, from the allowed list. Alzheimer's: `6D80` dementia due to
+  Alzheimer disease, `6D71` MCI / mild neurocognitive disorder, `6D80+6D71` when the finding pools both. Anxiety:
+  `6B00` GAD, `6B01` panic, `6B04` social anxiety, `6B02`/`6B03` phobias, `6B0` mixed or unspecified. Substance use:
+  `6C40` alcohol, `6C41` cannabis, `6C43` opioids, `6C45` cocaine, `6C46` other stimulants, `6C4A` nicotine, `6C4`
+  mixed. Depression in bipolar disorder: `6A60-6A61`. Use `subclinical` when participants were not diagnosed (high
+  scorers on a scale, students, community volunteers).
+- **dx**: `DSM-III`, `DSM-IV` (incl. IV-TR), `DSM-5` (incl. 5-TR), `ICD-10`, `ICD-11`, `research criteria` (e.g.
+  NIA-AA, Petersen MCI, UK Brain Bank, ILAE, ICHD), `clinical diagnosis` (diagnosed by a clinician, criteria not
+  named), `scale cut-off`, `mixed` (reviews pooling studies), `unclear`.
+- **n**: total participants in the comparison (patients + controls), only if the entry's n is null and the paper
+  states it. Otherwise `null`. For reviews and meta-analyses, leave `null`.
+- **Abstract-only papers** will often be `unclear` for eyes and power. That is the right answer; do not guess.
+
+## Never
+
+- Never guess a value to avoid `unclear`.
+- If a permission check or the system refuses a command, stop that step, do not look for another way to run it,
+  and report it in your reply.
