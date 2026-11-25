@@ -3497,6 +3497,26 @@ window.NF_DATA = {
       detail: "85 people with stroke in a cross-sectional cohort; resting-state relative power from the central region, both hemispheres. Motor function was negatively associated with delta and theta and positively with alpha. Coded as the direction linked to greater impairment. Depression associations are not coded here. Taken from the abstract; not checked in the full text. Cross-sectional correlation study without a healthy control group.",
       design: "Cross-sectional correlation (within stroke)",
       cite: { authors: "Marques LM, Barbosa SP, Gianlorenço AC, Pacheco-Barrios K, Souza DR, Matheus D, et al.", year: 2024, title: "Resting-state EEG as Biomarker of Maladaptive Motor Function and Depressive Profile in Stroke Patients", journal: "Clin EEG Neurosci" }
+    },
+    {
+      id: "pm-42304473", source: "full-text", condition: "stroke", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      sites: [], bands: ["delta","theta","beta","hibeta"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", beta: "down", hibeta: "down" }, symptoms: ["motor"],
+      claim: "Subacute stroke: higher whole-brain delta and theta, lower beta power than healthy controls at baseline",
+      detail: "Baseline resting EEG (eyes open, 5 min, 128 channels) of subacute first-ever stroke patients in a sham-controlled trial, compared with 21 age-matched healthy controls recruited for the study. Relative whole-brain delta and a smaller theta increase were higher, and relative beta (13-30 Hz, coded as beta and hibeta) lower, in patients. Only the baseline comparison is coded; the treatment (beta-tACS) effects are not. Sample size for the baseline comparison is not stated separately, so n is left null.",
+      design: "Case-control (baseline comparison within an RCT)",
+      cite: { authors: "Liao XY, Zhang Y, Gong Y, Guo A, Li S, Yasen A, et al.", year: 2026, title: "Dissociable effects of β-tACS on spectral power and network organization for proximal versus distal upper-limb recovery in subacute stroke: double-blind, randomized, sham-controlled trial with high-density EEG", journal: "J Neuroeng Rehabil" }
+    },
+    {
+      id: "pm-32472782", source: "abstract", condition: "stroke", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 34, k: null },
+      sites: ["Fp1","C3","Cz","C4","T3","T4","T5","T6","O1","O2"], bands: ["alpha","theta"], direction: "up", evidence: "preliminary",
+      changes: { alpha: "up", theta: "up" }, symptoms: ["lowmood"],
+      claim: "Stroke (within stroke): higher alpha and theta power in those with post-stroke depression than without",
+      detail: "34 people with stroke: 11 with post-stroke depression and 23 without, resting EEG at 16 electrodes. Within stroke, alpha1 was higher over left temporal sites and alpha2 at the left frontal pole; theta was higher over central, temporal and occipital regions in the depressed group. Sites are pooled across these regions. Taken from the abstract; not checked in the full text. Small single case-control comparison within stroke.",
+      design: "Case-control (within stroke)",
+      cite: { authors: "Li X, Yue L, Liu J, Lv X, Lv Y", year: 2021, title: "Relationship Between Abnormalities in Resting-State Quantitative Electroencephalogram Patterns and Poststroke Depression", journal: "J Clin Neurophysiol" }
     }
   ],
 
