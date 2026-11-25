@@ -43,3 +43,5 @@ with `tools/revert-finding.js` plus a corrected `include` through `tools/apply-r
 - pm-41066303 and pm-34706446: neurofeedback (protocol) entries, power set to n/a; the eye state for pm-34706446 is not stated in the abstract.
 - pm-27807767, pm-26737184, pm-42642967: eye state and power measure not stated in the abstracts; coded unclear from abstracts only. Check the full texts (pm-27807767, pm-26737184) and the meta-analysis moderators (pm-42642967).
 - Batch 30: pm-41534360, pm-40101271, pm-33780847 and pm-40079512 are full-text entries coded from the abstracts only; eye state and power measure are unclear in the abstracts and may be stated in the full texts. Check these four.
+- pm-32815287: the measure is EEG coherence (connectivity), not spectral power; power coded unclear. Check the power field for connectivity entries.
+- pm-41776190 and pm-41917996: full-text entries coded from abstracts; the entry covers several diagnoses (schizophrenia, bipolar, depression) in pm-41776190, so only the 6A20 code fits the entry condition. Check.

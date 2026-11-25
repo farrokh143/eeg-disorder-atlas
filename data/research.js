@@ -3252,7 +3252,7 @@ window.NF_DATA = {
       cite: { authors: "Domingos C, et al.", year: 2025, title: "Functional Connectivity in Chronic Schizophrenia: An EEG Resting-State Study with Corrected Imaginary Phase-Locking", journal: "Brain Behav" }
     },
     {
-      id: "pm-32815287", source: "full-text", condition: "autism", type: "biomarker",
+      id: "pm-32815287", rec: { eyes: "unclear", power: "unclear", icd11: "6A02", dx: "unclear" }, source: "full-text", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 28, k: null },
       sites: ["Fz"], bands: ["delta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up" }, symptoms: ["social"],
@@ -3262,7 +3262,7 @@ window.NF_DATA = {
       cite: { authors: "Wang J, et al.", year: 2020, title: "Increased EEG coherence in long-distance and short-distance connectivity in children with autism spectrum disorders", journal: "Brain Behav" }
     },
     {
-      id: "pm-33125837", source: "full-text", condition: "autism", type: "biomarker",
+      id: "pm-33125837", rec: { eyes: "unclear", power: "absolute", icd11: "6A02", dx: "unclear" }, source: "full-text", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 109, k: null },
       sites: ["O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["social"],
@@ -3272,7 +3272,7 @@ window.NF_DATA = {
       cite: { authors: "Zhao J, et al.", year: 2020, title: "A study on EEG feature extraction and classification in autistic children based on singular spectrum analysis method", journal: "Brain Behav" }
     },
     {
-      id: "pm-35351387", source: "abstract", condition: "parkinsons", type: "biomarker",
+      id: "pm-35351387", rec: { eyes: "open", power: "relative", icd11: "8A00", dx: "unclear" }, source: "abstract", condition: "parkinsons", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 54, k: null },
       sites: [], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["motor","executive"],
@@ -3282,7 +3282,7 @@ window.NF_DATA = {
       cite: { authors: "Bayot M, et al.", year: 2022, title: "Functional networks underlying freezing of gait: a resting-state electroencephalographic study", journal: "Neurophysiol Clin" }
     },
     {
-      id: "pm-39956357", source: "abstract", condition: "parkinsons", type: "biomarker",
+      id: "pm-39956357", rec: { eyes: "unclear", power: "absolute", icd11: "8A00", dx: "unclear" }, source: "abstract", condition: "parkinsons", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 65, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","C3","Cz","C4","P3","Pz","P4"], bands: ["beta","delta"], direction: "up", evidence: "preliminary",
       changes: { beta: "up", delta: "up" }, symptoms: ["motor"],
@@ -3292,7 +3292,7 @@ window.NF_DATA = {
       cite: { authors: "Zhang T, et al.", year: 2025, title: "Characteristics of multimodal physiological signal differences in symptom fluctuations in Parkinson's disease", journal: "Neuroscience" }
     },
     {
-      id: "pm-31015102", source: "abstract", condition: "epilepsy", type: "biomarker",
+      id: "pm-31015102", rec: { eyes: "both", power: "unclear", icd11: "8A6", dx: "clinical diagnosis" }, source: "abstract", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 20, k: null },
       sites: ["O1","O2","Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha","beta"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down", beta: "down" }, symptoms: ["seizures"],
@@ -3302,7 +3302,7 @@ window.NF_DATA = {
       cite: { authors: "Giuliano L, et al.", year: 2019, title: "Abnormal visual sensitivity in eyelid myoclonia with absences: Evidence from electrocortical connectivity and non-linear quantitative analysis of EEG signal", journal: "Seizure" }
     },
     {
-      id: "pm-37955596", source: "abstract", condition: "epilepsy", type: "biomarker",
+      id: "pm-37955596", rec: { eyes: "unclear", power: "unclear", icd11: "8A6", dx: "unclear" }, source: "abstract", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 34, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["delta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up" }, symptoms: ["seizures"],
@@ -3312,7 +3312,7 @@ window.NF_DATA = {
       cite: { authors: "Bistriceanu CE, et al.", year: 2023, title: "Default mode function in patients with generalised epilepsy syndromes: from generalised to focal findings", journal: "Neurol Neurochir Pol" }
     },
     {
-      id: "pm-28809667", source: "abstract", condition: "sud", type: "biomarker",
+      id: "pm-28809667", rec: { eyes: "unclear", power: "unclear", icd11: "6C4", dx: "unclear" }, source: "abstract", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 40, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["craving"],
@@ -3322,7 +3322,7 @@ window.NF_DATA = {
       cite: { authors: "Zhao Q, et al.", year: 2017, title: "Nonlinear Dynamic Complexity and Sources of Resting-state EEG in Abstinent Heroin Addicts", journal: "IEEE Trans Nanobioscience" }
     },
     {
-      id: "pm-30654367", source: "abstract", condition: "lewy", type: "biomarker",
+      id: "pm-30654367", rec: { eyes: "unclear", power: "unclear", icd11: "6D82", dx: "unclear" }, source: "abstract", condition: "lewy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 121, k: null },
       sites: ["O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["inattention","cogdecline"],
@@ -3332,7 +3332,7 @@ window.NF_DATA = {
       cite: { authors: "Aoki Y, Kazui H, Pascual-Marqui RD, et al.", year: 2019, title: "EEG Resting-State Networks in Dementia with Lewy Bodies Associated with Clinical Symptoms", journal: "Neuropsychobiology" }
     },
     {
-      id: "pm-41776190", source: "full-text", condition: "schizophrenia", type: "biomarker",
+      id: "pm-41776190", rec: { eyes: "unclear", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "full-text", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 159, k: null },
       sites: ["Fp1","Fp2"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["psychosis"],
@@ -3342,7 +3342,7 @@ window.NF_DATA = {
       cite: { authors: "Yanagi M, et al.", year: 2026, title: "Excessive gamma and beta oscillations in manic states across mood and psychotic disorders", journal: "Sci Rep" }
     },
     {
-      id: "pm-41917996", source: "full-text", condition: "stroke", type: "biomarker",
+      id: "pm-41917996", rec: { eyes: "open", power: "unclear", icd11: "8B1", dx: "unclear" }, source: "full-text", condition: "stroke", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 79, k: null },
       sites: ["C3","Cz","C4","P3","Pz","P4","O1","O2"], bands: ["alpha","theta"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "up", theta: "asymmetry" }, symptoms: ["motor"],
@@ -4205,7 +4205,7 @@ window.NF_DATA = {
       cite: { authors: "Shou G, et al.", year: 2018, title: "Resting-state Gamma-band EEG Abnormalities in Autism", journal: "Annu Int Conf IEEE Eng Med Biol Soc" }
     },
     {
-      id: "pm-32815287-fc", source: "full-text", condition: "autism", type: "connectivity",
+      id: "pm-32815287-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6A02", dx: "unclear" }, source: "full-text", condition: "autism", type: "connectivity",
       measure: "coherence", pairs: [["T3","T5"],["T4","T6"],["O1","O2"],["C4","P4"],["frontal","frontal"],["frontal","occipital"]],
       metrics: { design: 2, control: null, blinded: null, n: 28, k: null },
       bands: ["delta","theta","alpha","beta"], direction: "up", evidence: "preliminary",
