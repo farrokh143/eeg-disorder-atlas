@@ -3752,7 +3752,7 @@ window.NF_DATA = {
       cite: { authors: "Babiloni C, Stella G, Buffo P, Vecchio F, Onorati P, Muratori C, Miano S, Gheller F, Antonaci L, Albertini G, Rossini PM", year: 2012, title: "Cortical sources of resting state EEG rhythms are abnormal in dyslexic children", journal: "Clinical neurophysiology" }
     },
     {
-      id: "pm-42586149", source: "abstract", condition: "stroke", type: "biomarker",
+      id: "pm-42586149", rec: { eyes: "unclear", power: "both", icd11: "8B1", dx: "unclear" }, source: "abstract", condition: "stroke", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 81, k: null },
       sites: [], bands: ["delta"], direction: "down", evidence: "preliminary",
       changes: { delta: "down" }, symptoms: ["vertigo"],
@@ -3762,7 +3762,7 @@ window.NF_DATA = {
       cite: { authors: "Nan J, Yang X, Jiang H, Hong C, Yang J, Bai Y, Wu J, Ni G", year: 2026, title: "A multi-feature resting-state EEG framework for candidate EEG feature discovery in central vertigo", journal: "Journal of neural engineering" }
     },
     {
-      id: "pm-39538198", source: "full-text", condition: "stroke", type: "biomarker",
+      id: "pm-39538198", rec: { eyes: "closed", power: "absolute", icd11: "8B1", dx: "DSM-5" }, source: "full-text", condition: "stroke", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 58, k: null },
       sites: [], bands: ["delta","theta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up" }, symptoms: ["delirium"],
@@ -3776,7 +3776,7 @@ window.NF_DATA = {
   // Functional connectivity between sites or regions (resting state). Schema: README.md.
   connectivity: [
     {
-      id: "pm-15128412-fc", source: "abstract", condition: "alzheimers", type: "connectivity",
+      id: "pm-15128412-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6D80", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "connectivity",
       measure: "other", pairs: [["frontal","parietal"]],
       metrics: { design: 2, control: null, blinded: null, n: 148, k: null },
       bands: ["alpha"], direction: "down", evidence: "preliminary",
@@ -3787,7 +3787,7 @@ window.NF_DATA = {
       cite: { authors: "Babiloni C, et al.", year: 2004, title: "Abnormal fronto-parietal coupling of brain rhythms in mild Alzheimer's disease: a multicentric EEG study", journal: "Eur J Neurosci" }
     },
     {
-      id: "pm-23050006-fc", source: "full-text", condition: "alzheimers", type: "connectivity",
+      id: "pm-23050006-fc", rec: { eyes: "closed", power: "n/a", icd11: "6D80", dx: "research criteria" }, source: "full-text", condition: "alzheimers", type: "connectivity",
       measure: "phase", pairs: [["temporal","parietal"],["temporal","central"],["parietal","central"],["parietal","parietal"],["temporal","frontal"],["frontal","central"],["frontal","occipital"]],
       metrics: { design: 2, control: null, blinded: null, n: 185, k: null },
       bands: ["alpha","theta"], direction: "ratio", evidence: "preliminary",
@@ -3809,7 +3809,7 @@ window.NF_DATA = {
       cite: { authors: "Chen CC, et al.", year: 2015, title: "Frequency power and coherence of electroencephalography are correlated with the severity of Alzheimer's disease: A multicenter analysis in Taiwan", journal: "J Formos Med Assoc" }
     },
     {
-      id: "pm-24211686-fc", source: "abstract", condition: "alzheimers", type: "connectivity",
+      id: "pm-24211686-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6D80", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "connectivity",
       measure: "coherence", pairs: [["central","central"],["frontal","central"]],
       metrics: { design: 2, control: null, blinded: null, n: 42, k: null },
       bands: ["delta"], direction: "up", evidence: "preliminary",
@@ -3820,7 +3820,7 @@ window.NF_DATA = {
       cite: { authors: "Hsiao FJ, et al.", year: 2014, title: "Altered source-based EEG coherence of resting-state sensorimotor network in early-stage Alzheimer's disease compared to mild cognitive impairment", journal: "Neurosci Lett" }
     },
     {
-      id: "pm-26541308-fc", source: "abstract", condition: "alzheimers", type: "connectivity",
+      id: "pm-26541308-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6D80", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "connectivity",
       measure: "phase", pairs: [["frontal","parietal"]],
       metrics: { design: 2, control: null, blinded: null, n: 58, k: null },
       bands: ["delta","theta"], direction: "down", evidence: "preliminary",
@@ -3842,7 +3842,7 @@ window.NF_DATA = {
       cite: { authors: "Lejko N, et al.", year: 2020, title: "Alpha Power and Functional Connectivity in Cognitive Decline: A Systematic Review and Meta-Analysis", journal: "J Alzheimers Dis" }
     },
     {
-      id: "pm-33450572-fc", source: "abstract", condition: "parkinsons", type: "connectivity",
+      id: "pm-33450572-fc", rec: { eyes: "unclear", power: "n/a", icd11: "8A00", dx: "unclear" }, source: "abstract", condition: "parkinsons", type: "connectivity",
       measure: "phase", pairs: [["frontal","frontal"]],
       metrics: { design: 2, control: null, blinded: null, n: 45, k: null },
       bands: ["delta","theta"], direction: "up", evidence: "preliminary",
@@ -3853,7 +3853,7 @@ window.NF_DATA = {
       cite: { authors: "Sánchez-Dinorín G, et al.", year: 2021, title: "Frontal functional connectivity and disease duration interactively predict cognitive decline in Parkinson's disease", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-37167834-fc", source: "abstract", condition: "parkinsons", type: "connectivity",
+      id: "pm-37167834-fc", rec: { eyes: "unclear", power: "n/a", icd11: "8A00", dx: "unclear" }, source: "abstract", condition: "parkinsons", type: "connectivity",
       measure: "coherence", pairs: [["temporal","frontal"],["occipital","frontal"]],
       metrics: { design: 2, control: null, blinded: null, n: 108, k: null },
       bands: ["theta","alpha"], direction: "down", evidence: "preliminary",
@@ -3886,7 +3886,7 @@ window.NF_DATA = {
       cite: { authors: "Chetty CA, et al.", year: 2024, title: "EEG biomarkers in Alzheimer's and prodromal Alzheimer's: a comprehensive analysis of spectral and connectivity features", journal: "Alzheimers Res Ther" }
     },
     {
-      id: "pm-39708531-fc", source: "abstract", condition: "alzheimers", type: "connectivity",
+      id: "pm-39708531-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6D80", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "connectivity",
       measure: "other", pairs: [["frontal","frontal"],["central","central"],["parietal","occipital"]],
       metrics: { design: 2, control: null, blinded: null, n: 88, k: null },
       bands: ["theta","beta"], direction: "ratio", evidence: "preliminary",
@@ -3897,7 +3897,7 @@ window.NF_DATA = {
       cite: { authors: "Zheng H, et al.", year: 2025, title: "Time-Frequency functional connectivity alterations in Alzheimer's disease and frontotemporal dementia: An EEG analysis using machine learning", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-40059173-fc", source: "abstract", condition: "alzheimers", type: "connectivity",
+      id: "pm-40059173-fc", rec: { eyes: "closed", power: "n/a", icd11: "6D80", dx: "ICD-10" }, source: "abstract", condition: "alzheimers", type: "connectivity",
       measure: "phase", pairs: [["parietal","occipital"]],
       metrics: { design: 2, control: null, blinded: null, n: 57, k: null },
       bands: ["alpha"], direction: "down", evidence: "preliminary",
