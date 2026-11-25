@@ -40,3 +40,5 @@ with `tools/revert-finding.js` plus a corrected `include` through `tools/apply-r
 - pm-26051750: resting EEG power is reported without absolute or relative wording in the abstract; power coded unclear.
 - Batch 28: pm-35698004, pm-35699268 and pm-36890138 are full-text entries, but were coded from the abstracts only; eye state and power wording may be clearer in the full text. Check these three.
 - pm-9146819 and pm-9246556: DSM-III-R is coded as DSM-III, the closest option in the schema.
+- pm-41066303 and pm-34706446: neurofeedback (protocol) entries, power set to n/a; the eye state for pm-34706446 is not stated in the abstract.
+- pm-27807767, pm-26737184, pm-42642967: eye state and power measure not stated in the abstracts; coded unclear from abstracts only. Check the full texts (pm-27807767, pm-26737184) and the meta-analysis moderators (pm-42642967).
