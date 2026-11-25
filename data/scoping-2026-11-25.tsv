@@ -1,0 +1,53 @@
+label	icd11	chapter	pubmed_hits	decision
+ADHD	6A05	6	237	in atlas (adhd)
+Autism	6A02	6	170	in atlas (autism)
+Intellectual disability	6A00	6	53	NEW candidate (>= 20 hits)
+Learning disorders	6A03	6	37	NEW candidate (>= 20 hits)
+Tic disorders	8A05.0	8	11	below threshold
+Schizophrenia	6A20	6	270	in atlas (schizophrenia)
+Psychotic disorders	6A2	6	55	merge:schizophrenia (block 6A2)
+Bipolar	6A60, 6A61	6	62	NEW candidate (>= 20 hits)
+Depressive disorders	6A70, 6A71	6	352	in atlas (depression)
+Anxiety disorders	6B0	6	120	in atlas (anxiety (split by disorder))
+Panic disorder	6B01	6	22	split of anxiety
+Social anxiety	6B04	6	7	split of anxiety
+OCD	6B20	6	33	NEW candidate (>= 20 hits)
+PTSD	6B40	6	48	in atlas (ptsd)
+Eating disorders	6B8	6	17	below threshold
+Alcohol	6C40	6	69	in atlas (sud (split by substance))
+Cannabis	6C41	6	4	split of sud
+Opioid	6C43	6	15	split of sud
+Stimulants	6C45, 6C46	6	14	split of sud
+Tobacco	6C4A	6	9	split of sud
+Internet/gaming	6C51	6	17	below threshold
+All substance	6C4	6	130	in atlas (sud)
+Borderline PD	6D11.5	6	4	below threshold
+Conduct disorder	6C91	6	4	below threshold
+Dissociative	6B6	6	6	below threshold
+Somatoform	6C20	6	10	below threshold
+Delirium	6D70	6	19	below threshold, acute state: sensitivity only
+Dementia (all)	6D8	6	384	in atlas (alzheimers (split))
+Alzheimer disease	6D80 / 8A20	6/8	319	in atlas (alzheimers)
+MCI	6D71	6	252	split of alzheimers
+Lewy body dementia	6D82	6	40	NEW candidate (>= 20 hits)
+Frontotemporal dementia	6D83	6	22	NEW candidate (>= 20 hits)
+Vascular dementia	6D81	6	14	below threshold
+Insomnia	7A00, 7A01	7	31	in atlas (insomnia)
+Narcolepsy	7A20	7	3	below threshold
+Sleep apnoea	7A4	7	11	below threshold
+Restless legs	7A80	7	3	below threshold
+Parkinson	8A00	8	161	in atlas (parkinsons)
+Huntington	8A01.10	8	6	below threshold
+Multiple sclerosis	8A40	8	23	NEW candidate (>= 20 hits)
+ALS	8B60.0	8	19	below threshold
+Epilepsy	8A6	8	224	in atlas (epilepsy (EEG is part of diagnosis: flag))
+Migraine	8A80	8	29	in atlas (migraine)
+Essential tremor	8A04.1	8	4	below threshold
+Stroke	8B1, 8B2	8	143	NEW candidate (>= 20 hits)
+TBI	NA07	22	36	in atlas (tbi (named in scope))
+Chronic pain	MG30	21	48	out of scope (chapter 21)
+Fibromyalgia	MG30.01	21	14	out of scope (chapter 21)
+Chronic fatigue	8E49	8	7	below threshold
+Tinnitus	AB33	9	68	out of scope (chapter 9)
+Disorders of consciousness	MB20	21	91	excluded: not awake resting
+Hepatic encephalopathy	DB99.5	13	8	out of scope (chapter 13)
