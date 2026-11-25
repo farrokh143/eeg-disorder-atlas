@@ -3417,6 +3417,26 @@ window.NF_DATA = {
       detail: "29 euthymic bipolar patients aged 18-40 and 26 healthy volunteers, quantitative resting EEG spectral mapping (beta most marked with eyes open). Grand-mean power was higher in every band; the largest increases were right temporal theta and left occipital beta. Coded whole-head because the result is reported as grand means. Taken from the abstract; not checked in the full text. Single case-control study.",
       design: "Case-control",
       cite: { authors: "El-Badri SM, et al.", year: 2001, title: "Electrophysiological and cognitive function in young euthymic patients with bipolar affective disorder", journal: "Bipolar Disord" }
+    },
+    {
+      id: "pm-28454845", source: "abstract", condition: "lewy", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 158, k: null },
+      sites: ["P3","Pz","P4","T5","T6","O1","O2"], bands: ["alpha","delta"], direction: "ratio", evidence: "preliminary",
+      changes: { alpha: "down", delta: "up" }, symptoms: ["cogdecline"],
+      claim: "DLB: less posterior alpha-2 and more occipital delta source activity than healthy elderly",
+      detail: "42 Alzheimer's, 42 Parkinson's dementia, 34 DLB and 40 healthy elderly; retrospective archive, eyes-closed resting EEG. In DLB, posterior alpha-2 source activity was lower (marked) and occipital delta source activity higher (marked), versus healthy elderly. Source-localised (eLORETA); mapped to the overlying scalp region. Taken from the abstract; not checked in the full text. Mixed dementia sample; DLB result reported separately.",
+      design: "Case-control (retrospective archive)",
+      cite: { authors: "Babiloni C, et al.", year: 2017, title: "Abnormalities of cortical neural synchronization mechanisms in patients with dementia due to Alzheimer's and Lewy body diseases: an EEG study", journal: "Neurobiol Aging" }
+    },
+    {
+      id: "pm-33039748", source: "abstract", condition: "lewy", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 180, k: null },
+      sites: [], bands: ["delta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", alpha: "down" }, symptoms: ["cogdecline"],
+      claim: "DLB: more widespread delta and less posterior alpha source activity than healthy elderly",
+      detail: "60 prodromal or overt DLB patients, 60 Alzheimer's patients and 60 healthy elderly, eyes-closed resting EEG from an international database. DLB showed greater spatially distributed delta source activity and lower posterior alpha source activity than healthy elderly. Source-localised (eLORETA); the delta result spans all regions and the alpha result is posterior, so sites are coded whole-head. Taken from the abstract; not checked in the full text. Single case-control comparison.",
+      design: "Case-control",
+      cite: { authors: "Pascarelli MT, et al.", year: 2020, title: "Abnormalities of resting-state EEG in patients with prodromal and overt dementia with Lewy bodies: Relation to clinical symptoms", journal: "Clin Neurophysiol" }
     }
   ],
 
