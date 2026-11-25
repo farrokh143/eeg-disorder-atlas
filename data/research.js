@@ -4359,7 +4359,7 @@ window.NF_DATA = {
       cite: { authors: "Conti M, et al.", year: 2025, title: "Sex hormones shape EEG-based functional connectivity in early-stage Parkinson's disease patients", journal: "Neuroimage Clin" }
     },
     {
-      id: "pm-42604986-fc", source: "full-text", condition: "parkinsons", type: "connectivity",
+      id: "pm-42604986-fc", rec: { eyes: "closed", power: "n/a", icd11: "8A00", dx: "unclear" }, source: "full-text", condition: "parkinsons", type: "connectivity",
       measure: "phase", pairs: [["occipital","occipital"]],
       metrics: { design: 2, control: null, blinded: null, n: 62, k: null },
       bands: ["alpha"], direction: "down", evidence: "preliminary",
@@ -4370,7 +4370,7 @@ window.NF_DATA = {
       cite: { authors: "Rosinvil T, et al.", year: 2026, title: "The Relationship Between Resting State Quantitative EEG and Daytime Sleepiness Complaints in Parkinson's Disease", journal: "J Sleep Res" }
     },
     {
-      id: "pm-26794010-fc", source: "abstract", condition: "epilepsy", type: "connectivity",
+      id: "pm-26794010-fc", rec: { eyes: "unclear", power: "n/a", icd11: "8A6", dx: "unclear" }, source: "abstract", condition: "epilepsy", type: "connectivity",
       measure: "other", pairs: [["frontal","frontal"],["frontal","temporal"]],
       metrics: { design: 2, control: null, blinded: null, n: 36, k: null },
       bands: ["beta"], direction: "up", evidence: "preliminary",
@@ -4381,7 +4381,7 @@ window.NF_DATA = {
       cite: { authors: "Clemens B, et al.", year: 2016, title: "Increased resting-state EEG functional connectivity in benign childhood epilepsy with centro-temporal spikes", journal: "Seizure" }
     },
     {
-      id: "pm-27920976-fc", source: "full-text", condition: "anxiety", type: "connectivity",
+      id: "pm-27920976-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6B04", dx: "DSM-IV" }, source: "full-text", condition: "anxiety", type: "connectivity",
       measure: "phase", pairs: [["frontal","frontal"],["frontal","central"],["frontal","parietal"],["frontal","temporal"],["frontal","occipital"]],
       metrics: { design: 2, control: null, blinded: null, n: 64, k: null },
       bands: ["theta"], direction: "up", evidence: "preliminary",
@@ -4414,7 +4414,7 @@ window.NF_DATA = {
       cite: { authors: "Wang H, Mou S, Pei X, Zhang X, Shen S, Zhang J, Shen X, Shen Z", year: 2025, title: "The power spectrum and functional connectivity characteristics of resting-state EEG in patients with generalized anxiety disorder", journal: "Scientific Reports" }
     },
     {
-      id: "pm-42638376-fc", source: "full-text", condition: "anxiety", type: "connectivity",
+      id: "pm-42638376-fc", rec: { eyes: "open", power: "n/a", icd11: "6B00", dx: "clinical diagnosis" }, source: "full-text", condition: "anxiety", type: "connectivity",
       measure: "phase", pairs: [["frontal","frontal"],["frontal","central"],["central","temporal"],["central","parietal"],["frontal","occipital"]],
       metrics: { design: 2, control: null, blinded: null, n: 74, k: null },
       bands: ["alpha","delta","theta","beta"], direction: "ratio", evidence: "preliminary",
@@ -4425,7 +4425,7 @@ window.NF_DATA = {
       cite: { authors: "Shi C, et al.", year: 2026, title: "Resting-State EEG Functional Connectivity in Young Adults With Clinically Diagnosed Generalized Anxiety Disorder and Self-Reported Habitual Short Sleep: An Alpha-Band Network Analysis", journal: "Brain Behav" }
     },
     {
-      id: "pm-43023642-fc", source: "full-text", condition: "anxiety", type: "connectivity",
+      id: "pm-43023642-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6B01", dx: "DSM-5" }, source: "full-text", condition: "anxiety", type: "connectivity",
       measure: "phase", pairs: [["frontal","parietal"],["frontal","temporal"],["frontal","frontal"]],
       metrics: { design: 2, control: null, blinded: null, n: 95, k: null },
       bands: ["alpha","theta","delta","beta"], direction: "ratio", evidence: "preliminary",
@@ -4447,7 +4447,7 @@ window.NF_DATA = {
       cite: { authors: "Herrera-Díaz A, et al.", year: 2016, title: "Functional Connectivity and Quantitative EEG in Women with Alcohol Use Disorders: A Resting-State Study", journal: "Brain Topogr" }
     },
     {
-      id: "pm-29159061-fc", source: "full-text", condition: "sud", type: "connectivity",
+      id: "pm-29159061-fc", rec: { eyes: "open", power: "n/a", icd11: "6C40", dx: "DSM-IV" }, source: "full-text", condition: "sud", type: "connectivity",
       measure: "coherence", pairs: [["frontal","central"],["frontal","parietal"],["central","parietal"],["parietal","occipital"]],
       metrics: { design: 2, control: null, blinded: null, n: 41, k: null },
       bands: ["theta","alpha","gamma","beta"], direction: "ratio", evidence: "preliminary",
@@ -4458,7 +4458,7 @@ window.NF_DATA = {
       cite: { authors: "Cardenas VA, et al.", year: 2018, title: "EEG coherence related to fMRI resting state synchrony in long-term abstinent alcoholics", journal: "Neuroimage Clin" }
     },
     {
-      id: "pm-31825996-fc", source: "full-text", condition: "sud", type: "connectivity",
+      id: "pm-31825996-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6C46", dx: "unclear" }, source: "full-text", condition: "sud", type: "connectivity",
       measure: "phase", pairs: [["frontal","frontal"],["frontal","temporal"],["frontal","occipital"]],
       metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
       bands: ["delta","theta","alpha","beta","gamma"], direction: "ratio", evidence: "preliminary",
@@ -4469,7 +4469,7 @@ window.NF_DATA = {
       cite: { authors: "Khajehpour H, et al.", year: 2019, title: "Disrupted resting-state brain functional network in methamphetamine abusers: A brain source space study by EEG", journal: "PLoS One" }
     },
     {
-      id: "pm-42872911-fc", source: "full-text", condition: "sud", type: "connectivity",
+      id: "pm-42872911-fc", rec: { eyes: "closed", power: "n/a", icd11: "6C44", dx: "DSM-5" }, source: "full-text", condition: "sud", type: "connectivity",
       measure: "phase", pairs: [["parietal","parietal"],["parietal","occipital"],["parietal","temporal"]],
       metrics: { design: 2, control: null, blinded: null, n: 100, k: null },
       bands: ["delta","theta","alpha","beta","gamma"], direction: "ratio", evidence: "preliminary",
@@ -4480,7 +4480,7 @@ window.NF_DATA = {
       cite: { authors: "Le J, et al.", year: 2026, title: "Multimodal evidence for large-scale network imbalance in etomidate use disorder", journal: "Int J Neuropsychopharmacol" }
     },
     {
-      id: "pm-31964161-fc", source: "abstract", condition: "ptsd", type: "connectivity",
+      id: "pm-31964161-fc", rec: { eyes: "open", power: "n/a", icd11: "6B40", dx: "unclear" }, source: "abstract", condition: "ptsd", type: "connectivity",
       measure: "aec", pairs: [["frontal","frontal"],["frontal","parietal"]],
       metrics: { design: 2, control: null, blinded: null, n: 237, k: null },
       bands: ["theta"], direction: "down", evidence: "preliminary",
