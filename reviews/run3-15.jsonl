@@ -1,0 +1,8 @@
+{"id":"pm-8937534","decision":"defer","note":"[parked: non-atlas condition Down syndrome] eyes-closed/eyes-open EEG reactivity and resting alpha in Down syndrome"}
+{"id":"pm-31362710","decision":"defer","note":"[parked: non-atlas condition Rett syndrome] resting spectral power in girls with Rett syndrome"}
+{"id":"pm-19643663","decision":"exclude","code":"CN","note":"directed transfer function (DTF) coupling only; directed measures are not eligible"}
+{"id":"pm-39014240","decision":"exclude","code":"NR","note":"game-based cognitive stimulation in Rett syndrome; EEG change is a stimulation effect"}
+{"id":"pm-39362936","decision":"defer","note":"[parked: non-atlas condition fragile X] machine-learning classification using resting power in FXS"}
+{"id":"pm-42104256","decision":"exclude","code":"NR","note":"single-dose gaboxadol trial in FXS; EEG change is a drug effect"}
+{"id":"pm-33632320","decision":"defer","note":"[parked: non-atlas condition fragile X] resting aperiodic and periodic gamma power in young boys with FXS"}
+{"id":"pm-38082932","decision":"exclude","code":"NR","note":"augmentative-communication cognitive stimulation in Rett syndrome; pilot stimulation effect on EEG"}
