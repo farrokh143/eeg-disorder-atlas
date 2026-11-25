@@ -15,7 +15,7 @@ const DX = ["DSM-III", "DSM-IV", "DSM-5", "ICD-10", "ICD-11", "research criteria
 const ICD = {
   alzheimers: ["6D80", "6D71", "6D80+6D71", "6D8"], adhd: ["6A05"], schizophrenia: ["6A20", "6A2"], depression: ["6A70", "6A71", "6A7", "6A60-6A61"],
   parkinsons: ["8A00"], tbi: ["NA07", "NA07.0"], insomnia: ["7A00", "7A01", "7A0"], autism: ["6A02"],
-  sud: ["6C40", "6C41", "6C43", "6C45", "6C46", "6C4A", "6C4"], epilepsy: ["8A6"], ptsd: ["6B40", "6B41"],
+  sud: ["6C40", "6C41", "6C43", "6C44", "6C45", "6C46", "6C4A", "6C4"], epilepsy: ["8A6"], ptsd: ["6B40", "6B41"],
   anxiety: ["6B00", "6B01", "6B02", "6B03", "6B04", "6B0"], migraine: ["8A80"], cognition: ["none"]
 };
 const today = new Date().toISOString().slice(0, 10);
@@ -44,7 +44,7 @@ for (const r of recs) {
   if (f.type !== "biomarker" && r.power !== "n/a") e('power must be "n/a" for protocol and connectivity entries');
   if (f.type === "biomarker" && r.power === "n/a") e('power cannot be "n/a" for a biomarker entry');
   if (!DX.includes(r.dx)) e(`dx must be one of ${DX.join(", ")}`);
-  const ok = (ICD[f.condition] || []).concat(["subclinical"]);
+  const ok = (ICD[f.condition] || []).concat(["subclinical", "unclear"]);
   if (!ok.includes(r.icd11)) e(`icd11 for ${f.condition} must be one of ${ok.join(", ")}`);
   if (r.n != null && !(Number.isInteger(r.n) && r.n > 0)) e("n must be a positive whole number or null");
   if (r.pmid != null && !/^\d{5,9}$/.test(String(r.pmid))) e("pmid must be digits");
