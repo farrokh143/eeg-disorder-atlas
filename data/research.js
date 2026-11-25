@@ -3437,6 +3437,16 @@ window.NF_DATA = {
       detail: "60 prodromal or overt DLB patients, 60 Alzheimer's patients and 60 healthy elderly, eyes-closed resting EEG from an international database. DLB showed greater spatially distributed delta source activity and lower posterior alpha source activity than healthy elderly. Source-localised (eLORETA); the delta result spans all regions and the alpha result is posterior, so sites are coded whole-head. Taken from the abstract; not checked in the full text. Single case-control comparison.",
       design: "Case-control",
       cite: { authors: "Pascarelli MT, et al.", year: 2020, title: "Abnormalities of resting-state EEG in patients with prodromal and overt dementia with Lewy bodies: Relation to clinical symptoms", journal: "Clin Neurophysiol" }
+    },
+    {
+      id: "pm-38138258", source: "full-text", condition: "ftd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 52, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","T3","T4","T5","T6"], bands: ["theta","alpha","beta","gamma"], direction: "ratio", evidence: "preliminary",
+      changes: { theta: "up", alpha: "down", beta: "down", gamma: "up" }, symptoms: ["cogdecline"],
+      claim: "FTD: frontal/temporal power ratios shift toward more theta and less alpha than controls",
+      detail: "23 patients with FTD and 29 healthy controls (open OpenNeuro dataset), eyes-closed resting EEG, FFT band power. Frontal alpha and temporal alpha were lower in FTD. Ratios were higher for frontal theta/temporal alpha and frontal theta/frontal alpha, and lower for frontal alpha/temporal theta and temporal beta/temporal gamma; by the ratio rule, theta is coded up, alpha down, beta down and gamma up, with sites pooled across frontal and temporal regions. Single case-control study with a diagnostic focus; the paper's band edges (gamma 30-45 Hz) differ from the atlas bands.",
+      design: "Case-control",
+      cite: { authors: "Chang J, et al.", year: 2023, title: "Quantitative Electroencephalography Markers for an Accurate Diagnosis of Frontotemporal Dementia: A Spectral Power Ratio Approach", journal: "Medicina (Kaunas)" }
     }
   ],
 
