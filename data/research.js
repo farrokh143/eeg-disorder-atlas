@@ -4227,7 +4227,7 @@ window.NF_DATA = {
       cite: { authors: "Barry RJ, et al.", year: 2002, title: "EEG coherence in attention-deficit/hyperactivity disorder: a comparative study of two DSM-IV types", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-15921774-fc", source: "abstract", condition: "adhd", type: "connectivity",
+      id: "pm-15921774-fc", rec: { eyes: "closed", power: "n/a", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "connectivity",
       measure: "coherence", pairs: [["frontal","frontal"],["temporal","temporal"],["parietal","parietal"]],
       metrics: { design: 2, control: null, blinded: null, n: 40, k: null },
       bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
@@ -4238,7 +4238,7 @@ window.NF_DATA = {
       cite: { authors: "Clarke AR, et al.", year: 2005, title: "Effects of methylphenidate on EEG coherence in attention-deficit/hyperactivity disorder", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-17502165-fc", source: "abstract", condition: "adhd", type: "connectivity",
+      id: "pm-17502165-fc", rec: { eyes: "closed", power: "n/a", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "connectivity",
       measure: "coherence", pairs: [["frontal","frontal"],["parietal","parietal"],["occipital","occipital"]],
       metrics: { design: 2, control: null, blinded: null, n: 102, k: null },
       bands: ["theta","beta"], direction: "up", evidence: "preliminary",
@@ -4249,7 +4249,7 @@ window.NF_DATA = {
       cite: { authors: "Clarke AR, et al.", year: 2007, title: "Coherence in children with Attention-Deficit/Hyperactivity Disorder and excess beta activity in their EEG", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-18848848-fc", source: "abstract", condition: "adhd", type: "connectivity",
+      id: "pm-18848848-fc", rec: { eyes: "closed", power: "n/a", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "connectivity",
       measure: "coherence", pairs: [["frontal","frontal"],["temporal","temporal"]],
       metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
       bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
@@ -4260,7 +4260,7 @@ window.NF_DATA = {
       cite: { authors: "Barry RJ, et al.", year: 2009, title: "EEG coherence in children with attention-deficit/hyperactivity disorder and comorbid reading disabilities", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-21310652-fc", source: "abstract", condition: "adhd", type: "connectivity",
+      id: "pm-21310652-fc", rec: { eyes: "closed", power: "n/a", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "connectivity",
       measure: "coherence", pairs: [["frontal","frontal"],["temporal","temporal"],["parietal","occipital"]],
       metrics: { design: 2, control: null, blinded: null, n: 80, k: null },
       bands: ["delta","theta","alpha","beta","gamma"], direction: "ratio", evidence: "preliminary",
@@ -4271,7 +4271,7 @@ window.NF_DATA = {
       cite: { authors: "Barry RJ, et al.", year: 2011, title: "EEG coherence and symptom profiles of children with Attention-Deficit/Hyperactivity Disorder", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-27072085-fc", source: "abstract", condition: "adhd", type: "connectivity",
+      id: "pm-27072085-fc", rec: { eyes: "closed", power: "n/a", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "connectivity",
       measure: "coherence", pairs: [["frontal","frontal"]],
       metrics: { design: 2, control: null, blinded: null, n: 78, k: null },
       bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
@@ -4304,7 +4304,7 @@ window.NF_DATA = {
       cite: { authors: "Moazami-Goudarzi M, et al.", year: 2008, title: "Enhanced frontal low and high frequency power and synchronization in the resting EEG of parkinsonian patients", journal: "Neuroimage" }
     },
     {
-      id: "pm-27433473-fc", source: "full-text", condition: "parkinsons", type: "connectivity",
+      id: "pm-27433473-fc", rec: { eyes: "closed", power: "n/a", icd11: "8A00", dx: "research criteria" }, source: "full-text", condition: "parkinsons", type: "connectivity",
       measure: "coherence", pairs: [["F3","P3"],["F4","P4"]],
       metrics: { design: 2, control: null, blinded: null, n: 68, k: null },
       bands: ["alpha"], direction: "down", evidence: "preliminary",
@@ -4315,7 +4315,7 @@ window.NF_DATA = {
       cite: { authors: "Teramoto H, et al.", year: 2016, title: "Relation between Resting State Front-Parietal EEG Coherence and Executive Function in Parkinson's Disease", journal: "Biomed Res Int" }
     },
     {
-      id: "pm-28367403-fc", source: "full-text", condition: "parkinsons", type: "connectivity",
+      id: "pm-28367403-fc", rec: { eyes: "closed", power: "n/a", icd11: "8A00", dx: "research criteria" }, source: "full-text", condition: "parkinsons", type: "connectivity",
       measure: "phase", pairs: [["frontal","temporal"],["frontal","central"],["frontal","parietal"]],
       metrics: { design: 2, control: null, blinded: null, n: 124, k: null },
       bands: ["alpha"], direction: "down", evidence: "preliminary",
@@ -4326,7 +4326,7 @@ window.NF_DATA = {
       cite: { authors: "Hassan M, et al.", year: 2017, title: "Functional connectivity disruptions correlate with cognitive phenotypes in Parkinson's disease", journal: "Neuroimage Clin" }
     },
     {
-      id: "pm-35420713-fc", source: "full-text", condition: "parkinsons", type: "connectivity",
+      id: "pm-35420713-fc", rec: { eyes: "unclear", power: "n/a", icd11: "8A00", dx: "research criteria" }, source: "full-text", condition: "parkinsons", type: "connectivity",
       measure: "phase", pairs: [["frontal","frontal"],["frontal","temporal"],["frontal","central"],["frontal","occipital"]],
       metrics: { design: 3, control: null, blinded: null, n: 109, k: null },
       bands: ["alpha","beta"], direction: "down", evidence: "moderate",
@@ -4337,7 +4337,7 @@ window.NF_DATA = {
       cite: { authors: "Yassine S, et al.", year: 2022, title: "Functional Brain Dysconnectivity in Parkinson's Disease: A 5-Year Longitudinal Study", journal: "Mov Disord" }
     },
     {
-      id: "pm-37860930-fc", source: "abstract", condition: "parkinsons", type: "connectivity",
+      id: "pm-37860930-fc", rec: { eyes: "unclear", power: "n/a", icd11: "8A00", dx: "unclear" }, source: "abstract", condition: "parkinsons", type: "connectivity",
       measure: "phase", pairs: [["frontal","temporal"],["frontal","parietal"],["frontal","central"]],
       metrics: { design: 2, control: null, blinded: null, n: 46, k: null },
       bands: ["theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
@@ -4348,7 +4348,7 @@ window.NF_DATA = {
       cite: { authors: "Conti M, et al.", year: 2023, title: "Band-Specific Altered Cortical Connectivity in Early Parkinson's Disease and its Clinical Correlates", journal: "Mov Disord" }
     },
     {
-      id: "pm-39657395-fc", source: "full-text", condition: "parkinsons", type: "connectivity",
+      id: "pm-39657395-fc", rec: { eyes: "closed", power: "n/a", icd11: "8A00", dx: "research criteria" }, source: "full-text", condition: "parkinsons", type: "connectivity",
       measure: "phase", pairs: [["frontal","frontal"],["frontal","central"],["central","parietal"]],
       metrics: { design: 2, control: null, blinded: null, n: 138, k: null },
       bands: ["theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
