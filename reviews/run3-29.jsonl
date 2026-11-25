@@ -1,0 +1,8 @@
+{"id":"pm-38579054","decision":"exclude","code":"NR","note":"electroacupuncture crossover trial; connectivity change is a treatment effect"}
+{"id":"pm-35941932","decision":"exclude","code":"NR","note":"tDCS protocol comparison; EEG power change is a stimulation effect"}
+{"id":"pm-30946671","decision":"exclude","code":"MEG","note":"MEG beta-band functional connectivity during BMI rehabilitation; connectivity and not EEG"}
+{"id":"pm-36085760","decision":"exclude","code":"CN","note":"directed causal connectivity (iCoh, gPDC) comparison; connectivity only"}
+{"id":"pm-39344234","decision":"exclude","code":"CN","note":"EEG microstate temporal characteristics in stroke"}
+{"id":"pm-22440653","decision":"exclude","code":"CN","note":"alpha-band functional connectivity maps and behaviour after stroke; connectivity only"}
+{"id":"pm-42270831","decision":"exclude","code":"NR","note":"iTBS and swallowing training trial; fNIRS activation and connectivity are treatment effects"}
+{"id":"pm-40472336","decision":"exclude","code":"MOD","note":"toolbox tutorial for graph measures with an illustrative EEG case"}
