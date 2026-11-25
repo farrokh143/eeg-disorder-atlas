@@ -849,7 +849,7 @@ window.NF_DATA = {
       cite: { authors: "Coben LA, et al.", year: 1983, title: "Frequency analysis of the resting awake EEG in mild senile dementia of Alzheimer type", journal: "Electroencephalogr Clin Neurophysiol" }
     },
     {
-      id: "pm-7613077", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-7613077", rec: { eyes: "unclear", power: "unclear", icd11: "6D80", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 189, k: null },
       sites: ["T5","T6","P3","Pz","P4"], bands: ["theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", beta: "down" }, symptoms: ["memory","cogdecline"],
@@ -859,7 +859,7 @@ window.NF_DATA = {
       cite: { authors: "Duffy FH, et al.", year: 1995, title: "Temporoparietal electrophysiological differences characterize patients with Alzheimer's disease: a split-half replication study", journal: "Cereb Cortex" }
     },
     {
-      id: "pm-8676989", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-8676989", rec: { eyes: "closed", power: "absolute", icd11: "6D80", dx: "clinical diagnosis" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 129, k: null },
       sites: [], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["memory","cogdecline"],
@@ -869,7 +869,7 @@ window.NF_DATA = {
       cite: { authors: "Förstl H, et al.", year: 1996, title: "[Volumetric brain changes and quantitative EEG in normal aging and Alzheimer's dementia]", journal: "Nervenarzt" }
     },
     {
-      id: "pm-8681465", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-8681465", rec: { eyes: "unclear", power: "relative", icd11: "6D80", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 30, k: null },
       sites: ["O1","O2"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["memory","cogdecline"],
@@ -879,7 +879,7 @@ window.NF_DATA = {
       cite: { authors: "Stam CJ, et al.", year: 1996, title: "Diagnostic usefulness of linear and nonlinear quantitative EEG analysis in Alzheimer's disease", journal: "Clin Electroencephalogr" }
     },
     {
-      id: "pm-9086836", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-9086836", rec: { eyes: "unclear", power: "absolute", icd11: "6D80", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 18, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["delta","theta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up" }, symptoms: ["memory","cogdecline"],
@@ -889,7 +889,7 @@ window.NF_DATA = {
       cite: { authors: "Nanbu Y, et al.", year: 1997, title: "[Topographic analysis of resting EEG and photic driving responses in patients with presenile Alzheimer's disease]", journal: "Rinsho Byori" }
     },
     {
-      id: "pm-30392042", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-30392042", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 40, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood","executive"],
@@ -899,7 +899,7 @@ window.NF_DATA = {
       cite: { authors: "Koo PC, et al.", year: 2019, title: "Combined cognitive, psychomotor and electrophysiological biomarkers in major depressive disorder", journal: "Eur Arch Psychiatry Clin Neurosci" }
     },
     {
-      id: "pm-30404079", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-30404079", rec: { eyes: "both", power: "unclear", icd11: "6D71", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 122, k: null },
       sites: ["Fp1","F7","F3","O1","Fp2","F4","F8"], bands: ["theta","alpha"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", alpha: "up" }, symptoms: ["memory","cogdecline"],
@@ -909,7 +909,7 @@ window.NF_DATA = {
       cite: { authors: "Tarasova IV, et al.", year: 2018, title: "EEG and Clinical Factors Associated with Mild Cognitive Impairment in Coronary Artery Disease Patients", journal: "Dement Geriatr Cogn Disord" }
     },
     {
-      id: "pm-32234263", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-32234263", rec: { eyes: "unclear", power: "unclear", icd11: "6D80", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 286, k: null },
       sites: ["P3","Pz","P4","T5","T6","O1","O2"], bands: ["delta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", alpha: "down" }, symptoms: ["memory","cogdecline"],
@@ -919,7 +919,7 @@ window.NF_DATA = {
       cite: { authors: "Babiloni C, et al.", year: 2020, title: "Abnormal cortical neural synchronization mechanisms in quiet wakefulness are related to motor deficits, cognitive symptoms, and visual hallucinations in Parkinson's disease patients: an electroencephalographic study", journal: "Neurobiol Aging" }
     },
     {
-      id: "pm-33571883", source: "abstract", condition: "parkinsons", type: "biomarker",
+      id: "pm-33571883", rec: { eyes: "unclear", power: "relative", icd11: "8A00", dx: "unclear" }, source: "abstract", condition: "parkinsons", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 72, k: null },
       sites: ["P3","Pz","P4","T5","T6","O1","O2"], bands: ["alpha","theta"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "down", theta: "up" }, symptoms: ["cogdecline"],
@@ -929,7 +929,7 @@ window.NF_DATA = {
       cite: { authors: "Jaramillo-Jimenez A, et al.", year: 2021, title: "Resting-state EEG alpha/theta ratio related to neuropsychological test performance in Parkinson's Disease", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-35694930", source: "abstract", condition: "alzheimers", type: "biomarker",
+      id: "pm-35694930", rec: { eyes: "closed", power: "unclear", icd11: "6D71", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 100, k: null },
       sites: ["T3","T4","T5","T6","O1","O2"], bands: ["delta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up" }, symptoms: ["memory","cogdecline"],
@@ -939,7 +939,7 @@ window.NF_DATA = {
       cite: { authors: "Babiloni C, et al.", year: 2022, title: "Alzheimer's Disease with Epileptiform EEG Activity: Abnormal Cortical Sources of Resting State Delta Rhythms in Patients with Amnesic Mild Cognitive Impairment", journal: "J Alzheimers Dis" }
     },
     {
-      id: "pm-35973509", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-35973509", rec: { eyes: "unclear", power: "relative", icd11: "6A70", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 100, k: null },
       sites: ["T3","T5","O1","O2"], bands: ["gamma"], direction: "down", evidence: "preliminary",
       changes: { gamma: "down" }, symptoms: ["lowmood","sleep"],
