@@ -129,4 +129,8 @@ It also states that humans remain responsible for the final decisions.
 
 ## Amendments
 
-None yet.
+- 25 Nov 2026: the pipeline's answers for the sampled items were frozen in `validation/key-screening.csv` and
+  `validation/key-extraction.csv`, built from the data at the sampling commit (`bd13034`) by `tools/validation-key.js`.
+  The statistics use these frozen answers, so data corrections made after sampling (including ones prompted by
+  the Opus review) cannot improve the measured accuracy. Eye state, power type and ICD-11 group come from the
+  enrichment pass and are compared as they stand. Reviewers must not open the key files.

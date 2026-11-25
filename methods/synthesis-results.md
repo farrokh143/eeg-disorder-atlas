@@ -1,8 +1,8 @@
 # Synthesis results
 
-Generated 2026-11-22 by `tools/synthesize.js` following `methods/synthesis-protocol.md` (v1.0).
+Generated 2026-11-25 by `tools/synthesize.js` following `methods/synthesis-protocol.md` (v1.0).
 
-- Patterns with any eligible study: 458
+- Patterns with any eligible study: 463
 - Testable (≥ 6 studies with a clear direction): 11
 - Consistent difference (q_BY < 0.05): 0
 - Robust in sensitivity analyses S2, S3, S4 and S7: 0
@@ -25,7 +25,7 @@ Eligible evidence: primary studies checked in full text (or hand-curated). Abstr
 | ADHD | power | theta | frontal | 7 | 5 / 1 / 1 | 83% (44–97) | 89% | 0.219 | 0.063 | 0.661 | no consistent difference | Moderate | no | consistently higher |
 | ADHD | power | theta | central | 7 | 5 / 1 / 1 | 83% (44–97) | 89% | 0.219 | 0.063 | 0.661 | no consistent difference | Moderate | no | consistently higher |
 
-## Too few studies to test (441 patterns)
+## Too few studies to test (445 patterns)
 
 Shown on the atlas with their study list and certainty, without a test. Largest:
 
@@ -35,11 +35,11 @@ Shown on the atlas with their study list and certainty, without a test. Largest:
 | Alzheimer's | power | delta | occipital | 6 | 5 / 0 / 1 | Very low |
 | Alzheimer's | power | beta | parietal | 6 | 0 / 5 / 1 | Low |
 | Alzheimer's | power | beta | temporal | 6 | 0 / 5 / 1 | Low |
+| Schizophrenia | power | theta | frontal | 6 | 5 / 0 / 1 | Low |
 | Autism | power | alpha | occipital | 6 | 1 / 4 / 1 | Low |
 | Alzheimer's | power | theta | central | 6 | 5 / 0 / 1 | Very low |
 | Alzheimer's | power | delta | temporal | 5 | 4 / 0 / 1 | Very low |
 | Schizophrenia | power | delta | frontal | 5 | 4 / 0 / 1 | Very low |
-| Schizophrenia | power | theta | frontal | 5 | 4 / 0 / 1 | Very low |
 | Schizophrenia | power | theta | central | 5 | 4 / 0 / 1 | Very low |
 | Autism | power | alpha | frontal | 5 | 0 / 4 / 1 | Very low |
 | Autism | power | alpha | parietal | 5 | 0 / 4 / 1 | Very low |

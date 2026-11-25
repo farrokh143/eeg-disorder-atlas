@@ -1,0 +1,151 @@
+item,log_id,ai_decision,stratum,ai_reason
+S001,pm-31394989,exclude,exTA,"Intracranial or invasive recording, not scalp resting EEG"
+S002,pm-29991135,include,included,
+S003,pm-27453081,exclude,exTA,"Not a disorder EEG marker or neurofeedback study (drug, stimulation, surgery, psychotherapy, training intervention or treatment-response prediction)"
+S004,pm-20844443,exclude,exFT,"Outside atlas schema: connectivity, network, microstate or ML-classifier analysis only, no band-power direction or site"
+S005,pm-37365198,exclude,exFT,"Outside atlas schema: connectivity, network, microstate or ML-classifier analysis only, no band-power direction or site"
+S006,pm-40102367,include,included,
+S007,pm-15705347,include,included,
+S008,pm-3986259,exclude,exTA,"Not resting-state: task, provocation, photic or stimulus-evoked EEG"
+S009,pm-41029228,exclude,exFT,"Outside atlas schema: connectivity, network, microstate or ML-classifier analysis only, no band-power direction or site"
+S010,pm-41501731,exclude,exTA,"Not a disorder EEG marker or neurofeedback study (drug, stimulation, surgery, psychotherapy, training intervention or treatment-response prediction)"
+S011,pm-10838108,exclude,exFT,Off topic: not a scalp resting-EEG study of a disorder or symptom group
+S012,pm-29656189,exclude,exFT,Full text checked: no resting band-power result with a direction that can be placed on the scalp
+S013,pm-33434730,include,included,
+S014,pm-42034291,exclude,exFT,"Outside atlas schema: connectivity, network, microstate or ML-classifier analysis only, no band-power direction or site"
+S015,pm-23619205,include,included,
+S016,pm-25568149,include,included,
+S017,pm-37957613,include,included,
+S018,pm-30239213,exclude,exTA,"Not a disorder EEG marker or neurofeedback study (drug, stimulation, surgery, psychotherapy, training intervention or treatment-response prediction)"
+S019,pm-28613237,exclude,exFT,"Outside atlas schema: connectivity, network, microstate or ML-classifier analysis only, no band-power direction or site"
+S020,pm-30847365,include,included,
+S021,pm-25079806,exclude,exTA,"MEG, not EEG"
+S022,pm-38901364,include,included,
+S023,pm-29421325,exclude,exTA,"Animal, computational model or methods paper, not a human group study"
+S024,pm-36257103,exclude,exFT,"Outside atlas schema: connectivity, network, microstate or ML-classifier analysis only, no band-power direction or site"
+S025,pm-39085280,exclude,exTA,"Intracranial or invasive recording, not scalp resting EEG"
+S026,pm-42590803,exclude,exTA,"Not a disorder EEG marker or neurofeedback study (drug, stimulation, surgery, psychotherapy, training intervention or treatment-response prediction)"
+S027,pm-2050517,include,included,
+S028,pm-26187351,include,included,
+S029,ptsd-peniston-1991,include,included,
+S030,pm-39028590,exclude,exFT,"Outside atlas schema: connectivity, network, microstate or ML-classifier analysis only, no band-power direction or site"
+S031,pm-17760978,exclude,exFT,"MEG, not EEG"
+S032,pm-38217348,include,included,
+S033,pm-24379166,exclude,exTA,"Healthy personality, trait or development only, no disorder or symptom measure"
+S034,pm-35182242,include,included,
+S035,pm-9513754,exclude,exFT,No separate result for depression against controls; depressives are compared only with women with chemical intolerance
+S036,pm-34044189,exclude,exFT,"Outside atlas schema: connectivity, network, microstate or ML-classifier analysis only, no band-power direction or site"
+S037,pm-11686052,exclude,exTA,Off topic: not a scalp resting-EEG study of a disorder or symptom group
+S038,pm-42379239,exclude,exTA,"Not a disorder EEG marker or neurofeedback study (drug, stimulation, surgery, psychotherapy, training intervention or treatment-response prediction)"
+S039,pm-31163371,include,included,
+S040,pm-41941809,exclude,exFT,"Outside atlas schema: connectivity, network, microstate or ML-classifier analysis only, no band-power direction or site"
+S041,pm-38289841,exclude,exTA,"Not resting-state: task, provocation, photic or stimulus-evoked EEG"
+S042,pm-42992989,exclude,exFT,No separate result for anxiety: the GAD group was analysed together with habitual short sleep
+S043,pm-28898569,exclude,exTA,"Not resting-state: task, provocation, photic or stimulus-evoked EEG"
+S044,pm-39067554,exclude,exFT,"Outside atlas schema: connectivity, network, microstate or ML-classifier analysis only, no band-power direction or site"
+S045,pm-11371716,exclude,exFT,"Healthy personality, trait or development only, no disorder or symptom measure"
+S046,pm-40884873,exclude,exFT,"Outside atlas schema: connectivity, network, microstate or ML-classifier analysis only, no band-power direction or site"
+S047,pm-33370162,exclude,exTA,"Animal, computational model or methods paper, not a human group study"
+S048,pm-35149322,include,included,
+S049,pm-41173906,exclude,exTA,"Not a disorder EEG marker or neurofeedback study (drug, stimulation, surgery, psychotherapy, training intervention or treatment-response prediction)"
+S050,pm-37173584,exclude,exTA,"MEG, not EEG"
+S051,pm-18848848,include,included,
+S052,pm-42054803,exclude,exTA,"Not a disorder EEG marker or neurofeedback study (drug, stimulation, surgery, psychotherapy, training intervention or treatment-response prediction)"
+S053,pm-25570841,exclude,exFT,"Outside atlas schema: connectivity, network, microstate or ML-classifier analysis only, no band-power direction or site"
+S054,ad-babiloni-2020,include,included,
+S055,pm-36818579,exclude,exFT,"Outside atlas schema: connectivity, network, microstate or ML-classifier analysis only, no band-power direction or site"
+S056,pm-10672630,exclude,exTA,"Not a disorder EEG marker or neurofeedback study (drug, stimulation, surgery, psychotherapy, training intervention or treatment-response prediction)"
+S057,pm-22326594,exclude,exTA,"Not a disorder EEG marker or neurofeedback study (drug, stimulation, surgery, psychotherapy or training intervention)"
+S058,pm-14636348,exclude,exTA,"Not resting-state: task, provocation, photic or stimulus-evoked EEG"
+S059,ad-jeong-2004,include,included,
+S060,pm-42642967,include,included,
+S061,pm-24598317,exclude,exFT,Spectral and complexity features for classification; no connectivity result
+S062,pm-34823049,exclude,exFT,"Outside atlas schema: connectivity, network, microstate or ML-classifier analysis only, no band-power direction or site"
+S063,asd-neo-2023,include,included,
+S064,pm-29661966,exclude,exTA,"Intracranial or invasive recording, not scalp resting EEG"
+S065,pm-15982767,exclude,exTA,"Intracranial or invasive recording, not scalp resting EEG"
+S066,pm-35976834,exclude,exTA,"Not a disorder EEG marker or neurofeedback study (drug, stimulation, surgery, psychotherapy, training intervention or treatment-response prediction)"
+S067,pm-38422800,exclude,exFT,"Outside atlas schema: connectivity, network, microstate or ML-classifier analysis only, no band-power direction or site"
+S068,adhd-barry-2003,include,included,
+S069,pm-9122563,exclude,exTA,Case report involving sleep EEG
+S070,pm-31089094,exclude,exTA,"Not resting-state: task, provocation, photic or stimulus-evoked EEG"
+S071,pm-30015056,exclude,exTA,"Not resting-state: task, provocation, photic or stimulus-evoked EEG"
+S072,cand-adhd-wang-2024,include,included,
+S073,pm-38815895,exclude,exFT,Review used for citation chasing only; not added as a finding
+S074,pm-33395981,exclude,exFT,Full text checked: no resting band-power result with a direction that can be placed on the scalp
+S075,pm-2276941,exclude,exFT,"Outside atlas schema: connectivity, network, microstate or ML-classifier analysis only, no band-power direction or site"
+S076,pm-40876639,exclude,exTA,"Not a disorder EEG marker or neurofeedback study (drug, stimulation, surgery, psychotherapy, training intervention or treatment-response prediction)"
+S077,pm-21856123,exclude,exTA,Off topic: not a scalp resting-EEG study of a disorder or symptom group
+S078,pm-11882748,exclude,exFT,"Not resting-state: task, provocation, photic or stimulus-evoked EEG"
+S079,pm-33544703,include,included,
+S080,pm-37480706,include,included,
+S081,pm-38084398,exclude,exTA,"Not a disorder EEG marker or neurofeedback study (drug, stimulation, surgery, psychotherapy, training intervention or treatment-response prediction)"
+S082,pm-20820898,include,included,
+S083,pm-37399916,exclude,exTA,"Not resting-state: task, provocation, photic or stimulus-evoked EEG"
+S084,pm-7388249,include,included,
+S085,pm-29397081,exclude,exTA,"Measure is not band power (aperiodic exponent, burst or event statistics, synchronisation index, entropy); not placed in the atlas"
+S086,pm-39509953,exclude,exFT,No separate Parkinson's-vs-control band result; the comparison is drug-induced parkinsonism vs Parkinson's
+S087,epi-kotchoubey-2001,include,included,
+S088,pm-10487172,exclude,exTA,"Not resting-state: task, provocation, photic or stimulus-evoked EEG"
+S089,pm-39820097,exclude,exFT,"Outside atlas schema: connectivity, network, microstate or ML-classifier analysis only, no band-power direction or site"
+S090,pm-9146819,include,included,
+S091,pm-23969043,include,included,
+S092,pm-24211686,include,included,
+S093,pm-10572351,exclude,exFT,EEG dynamics index of alpha-power topography; not connectivity or band-power direction
+S094,pm-38532269,exclude,exTA,"Not resting-state: task, provocation, photic or stimulus-evoked EEG"
+S095,pm-34334283,exclude,exTA,Off topic: not a scalp resting-EEG study of a disorder or symptom group
+S096,pm-34454266,exclude,exTA,"Intracranial or invasive recording, not scalp resting EEG"
+S097,pm-42769165,include,included,
+S098,pd-klassen-2011,include,included,
+S099,pm-39956357,include,included,
+S100,pm-37979654,exclude,exTA,Off topic: not a scalp resting-EEG study of a disorder or symptom group
+S101,pm-26964294,exclude,exFT,"Outside atlas schema: connectivity, network, microstate or ML-classifier analysis only, no band-power direction or site"
+S102,pm-29778070,include,included,
+S103,pm-29569047,include,included,
+S104,pm-41162505,exclude,exFT,"Outside atlas schema: connectivity, network, microstate or ML-classifier analysis only, no band-power direction or site"
+S105,pm-37373304,exclude,exFT,Review used for citation chasing only; not added as a finding
+S106,pm-35931231,include,included,
+S107,pm-16213753,exclude,exFT,Genotype (CST3 B) comparison within AD/MCI patients; no patients-vs-controls or symptom result; LORETA sources
+S108,pm-10466736,include,included,
+S109,pm-29023805,include,included,
+S110,pm-36057818,include,included,
+S111,pm-21309442,include,included,
+S112,pm-21256600,exclude,exFT,Full text checked: no resting band-power result with a direction that can be placed on the scalp
+S113,pm-28030933,exclude,exTA,"Not resting-state: task, provocation, photic or stimulus-evoked EEG"
+S114,pm-38844199,exclude,exFT,"Measure is not band power (aperiodic exponent, burst or event statistics, synchronisation index, entropy); not placed in the atlas"
+S115,pm-31843628,exclude,exTA,"Not a disorder EEG marker or neurofeedback study (drug, stimulation, surgery, psychotherapy, training intervention or treatment-response prediction)"
+S116,pm-39303390,exclude,exTA,"Measure is not band power (aperiodic exponent, burst or event statistics, synchronisation index, entropy); not placed in the atlas"
+S117,pm-29624694,exclude,exTA,"Not a disorder EEG marker or neurofeedback study (drug, stimulation, surgery, psychotherapy, training intervention or treatment-response prediction)"
+S118,pm-38043370,exclude,exTA,"Not a disorder EEG marker or neurofeedback study (drug, stimulation, surgery, psychotherapy, training intervention or treatment-response prediction)"
+S119,pm-26541308,include,included,
+S120,pm-33326893,include,included,
+S121,cand-adhd-takacs-2023,include,included,
+S122,pm-39466867,exclude,exTA,"Not a disorder EEG marker or neurofeedback study (drug, stimulation, surgery, psychotherapy, training intervention or treatment-response prediction)"
+S123,pm-33385828,exclude,exFT,"Outside atlas schema: connectivity, network, microstate or ML-classifier analysis only, no band-power direction or site"
+S124,pm-19853791,exclude,exFT,Review used for citation chasing only; not added as a finding
+S125,pm-28268682,exclude,exTA,"Measure is not band power (aperiodic exponent, burst or event statistics, synchronisation index, entropy); not placed in the atlas"
+S126,pm-38552332,exclude,exFT,"Measure is not band power (aperiodic exponent, burst or event statistics, synchronisation index, entropy); not placed in the atlas"
+S127,pm-21696922,exclude,exFT,"Outside atlas schema: connectivity, network, microstate or ML-classifier analysis only, no band-power direction or site"
+S128,pm-21971460,exclude,exFT,Review used for citation chasing only; not added as a finding
+S129,pm-27433473,include,included,
+S130,pm-35257602,exclude,exFT,"Outside atlas schema: connectivity, network, microstate or ML-classifier analysis only, no band-power direction or site"
+S131,pm-23051885,include,included,
+S132,pm-40040314,include,included,
+S133,pm-31255738,exclude,exFT,Full text checked: no resting band-power result with a direction that can be placed on the scalp
+S134,pm-36932271,exclude,exFT,"MEG, not EEG"
+S135,pm-25451416,exclude,exFT,"Unipolar vs bipolar depression comparison; no healthy-control result for depression, and bipolar is not an atlas condition."
+S136,pm-2077640,exclude,exTA,"Not resting-state: task, provocation, photic or stimulus-evoked EEG"
+S137,pm-16854528,exclude,exTA,"MEG, not EEG"
+S138,pm-39855475,exclude,exFT,Within-group comparison on a symptom the atlas does not track (sex); no Parkinson's-vs-control result in the abstract
+S139,pm-26002855,include,included,
+S140,pm-40445258,include,included,
+S141,pm-37615301,exclude,exTA,DMN grey-matter volume and eLORETA alpha source power; not connectivity
+S142,pm-41055949,exclude,exFT,"Not a disorder EEG marker or neurofeedback study (drug, stimulation, surgery, psychotherapy, training intervention or treatment-response prediction)"
+S143,dep-choi-2011,include,included,
+S144,pm-42849193,exclude,exFT,"Retry final: white matter lesions and rsEEG alpha in MCI-AD; the main result is a null association, not a band difference vs controls; no PMC full text."
+S145,pm-40338763,exclude,exTA,"Not a disorder EEG marker or neurofeedback study (drug, stimulation, surgery, psychotherapy or training intervention)"
+S146,pm-30541142,exclude,exTA,"Animal, computational model or methods paper, not a human group study"
+S147,pm-28958179,exclude,exTA,"MEG, not EEG"
+S148,pm-17321055,exclude,exFT,Comparison of patients split by homocysteine level (LORETA sources); no patients-vs-controls or symptom band result
+S149,pm-14706488,exclude,exFT,Theta-reaction time correlation found only within the methamphetamine group; no group difference reported
+S150,pm-36030210,exclude,exFT,"Outside atlas schema: connectivity, network, microstate or ML-classifier analysis only, no band-power direction or site"

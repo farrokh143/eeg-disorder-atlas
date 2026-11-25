@@ -38,9 +38,10 @@ const H1 = byItem(load("screening-human1.csv")), H2 = byItem(load("screening-hum
 const isFT = r => /Outside atlas schema/.test(r.reason) || /full[- ]text/i.test(r.notes);
 const stratum = r => r.status === "included" ? "included" : isFT(r) ? "exFT" : "exTA";
 const pool = { included: 0, exTA: 0, exFT: 0 }; for (const r of rows) if (r.status !== "full-text" && !/^Duplicate of/.test(r.reason)) pool[stratum(r)]++;
-const items = sheet.map(s => { const r = logBy[s.log_id] || {}; const h1 = norm((H1[s.item] || {}).decision), h2 = norm((H2[s.item] || {}).decision);
+const KEY = byItem(load("key-screening.csv")); // frozen pipeline answers (tools/validation-key.js); falls back to the live log
+const items = sheet.map(s => { const r = logBy[s.log_id] || {}, key = KEY[s.item]; const h1 = norm((H1[s.item] || {}).decision), h2 = norm((H2[s.item] || {}).decision);
   const adj = norm((ADJ[s.item] || {}).decision); const ref = adj || (h1 && h2 && h1 === h2 ? h1 : (h1 && !h2 ? null : null));
-  return { item: s.item, ai: r.status === "included" ? "include" : "exclude", stratum: stratum(r), h1, h2, ref, opus: norm((OP[s.item] || {}).decision) }; });
+  return { item: s.item, ai: key ? key.ai_decision : r.status === "included" ? "include" : "exclude", stratum: key ? key.stratum : stratum(r), h1, h2, ref, opus: norm((OP[s.item] || {}).decision) }; });
 const nSt = { included: 0, exTA: 0, exFT: 0 }; items.forEach(i => nSt[i.stratum]++);
 const w = Object.fromEntries(Object.keys(nSt).map(k => [k, nSt[k] ? pool[k] / nSt[k] : 0]));
 const disputed = items.filter(i => i.h1 && i.h2 && i.h1 !== i.h2 && !i.ref).map(i => i.item);
@@ -78,7 +79,9 @@ if (esheet) {
   const F = ["condition", "bands_and_directions", "sites_or_pairs", "n", "design", "eyes", "power", "icd11"];
   out.push("## Extraction (" + esheet.length + " entries)", "", "| Field | Human 1 vs 2 | Pipeline vs human reference | Opus vs human reference | Pipeline vs Opus |", "|---|---|---|---|---|");
   for (const k of F) {
-    const rowsK = esheet.map(s => { const f = ent[s.entry_id]; const p = f ? field(pipe(f), k) || "" : "";
+    const EK = byItem(load("key-extraction.csv"));
+    const rowsK = esheet.map(s => { const f = ent[s.entry_id], kk = EK[s.item];
+      const p = kk && k in kk ? field(kk, k) : f ? field(pipe(f), k) || "" : "";
       const a = field(E.human1[s.item], k), b = field(E.human2[s.item], k), adj = field(E.adj[s.item], k);
       return { p, a, b, ref: adj || (a && a === b ? a : ""), o: field(E.opus[s.item], k) }; });
     const ag = pairs => { pairs = pairs.filter(([x, y]) => x && y); return pairs.length ? `${pct(pairs.filter(([x, y]) => x === y).length / pairs.length)} (${pairs.length})` : "–"; };
