@@ -1,0 +1,9 @@
+{"id":"pm-22939462","eyes":"both","power":"absolute","icd11":"6A7","dx":"DSM-IV","quote":"3 min vigilance-controlled eyes-closed (EC) and 3 min eyes-open (EO) conditions"}
+{"id":"ins-hoedlmoser-2008","eyes":"unclear","power":"n/a","icd11":"none","dx":"unclear"}
+{"id":"pm-38280864","eyes":"closed","power":"relative","icd11":"8A00","dx":"research criteria","quote":"close their eyes, relax and stay awake ... for 12 minutes"}
+{"id":"pm-40792462","eyes":"closed","power":"absolute","icd11":"6A20","dx":"DSM-5","quote":"rest in a supine position with their eyes closed"}
+{"id":"pm-35699268","eyes":"both","power":"absolute","icd11":"6C4","dx":"mixed","quote":"alternating 1-minute segments of eyes open (EO) and eyes closed (EC)"}
+{"id":"pm-36057818","eyes":"both","power":"relative","icd11":"subclinical","dx":"unclear","quote":"keep their eyes closed (EC; 30 s) and opened (EO; 30 s)"}
+{"id":"pm-35192865","eyes":"both","power":"ratio-only","icd11":"subclinical","dx":"scale cut-off","quote":"2 min eyes-open, 2 min eyes-closed"}
+{"id":"pm-42876599","eyes":"open","power":"absolute","icd11":"8A40","dx":"clinical diagnosis","quote":"seated resting-state EEG with eyes open (resting-EO)"}
+{"id":"pm-41776190","eyes":"closed","power":"absolute","icd11":"6A2","dx":"DSM-5","quote":"sit and relax on the chair provided, with their eyes closed"}
