@@ -1769,7 +1769,7 @@ window.NF_DATA = {
       cite: { authors: "Shephard E, et al.", year: 2018, title: "Resting-State Neurophysiological Activity Patterns in Young People with ASD, ADHD, and ASD + ADHD", journal: "J Autism Dev Disord" }
     },
     {
-      id: "pm-29110563", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "pm-29110563", rec: { eyes: "closed", power: "unclear", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 80, k: null },
       sites: [], bands: ["theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", alpha: "down", beta: "up" }, symptoms: ["executive"],
@@ -1779,7 +1779,7 @@ window.NF_DATA = {
       cite: { authors: "Li H, et al.", year: 2019, title: "Increased Beta Activity Links to Impaired Emotional Control in ADHD Adults With High IQ", journal: "J Atten Disord" }
     },
     {
-      id: "pm-29457912", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "pm-29457912", rec: { eyes: "open", power: "absolute", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 101, k: null },
       sites: ["C4","P4"], bands: ["gamma"], direction: "down", evidence: "preliminary",
       changes: { gamma: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1789,7 +1789,7 @@ window.NF_DATA = {
       cite: { authors: "Tombor L, et al.", year: 2019, title: "Decreased resting gamma activity in adult attention deficit/hyperactivity disorder", journal: "World J Biol Psychiatry" }
     },
     {
-      id: "pm-31163371", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "pm-31163371", rec: { eyes: "closed", power: "relative", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["delta","theta"], direction: "ratio", evidence: "moderate",
       changes: { delta: "down", theta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1799,7 +1799,7 @@ window.NF_DATA = {
       cite: { authors: "Clarke AR, et al.", year: 2019, title: "EEG development in Attention Deficit Hyperactivity Disorder: From child to adult", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-31233897", source: "full-text", condition: "adhd", type: "biomarker",
+      id: "pm-31233897", rec: { eyes: "both", power: "absolute", icd11: "6A05", dx: "research criteria" }, source: "full-text", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 169, k: null },
       sites: ["F7","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "contested",
       changes: { alpha: "asymmetry" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1809,7 +1809,7 @@ window.NF_DATA = {
       cite: { authors: "Alperin BR, et al.", year: 2019, title: "The relationship between alpha asymmetry and ADHD depends on negative affect level and parenting practices", journal: "J Psychiatr Res" }
     },
     {
-      id: "pm-31834950", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "pm-31834950", rec: { eyes: "both", power: "both", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 134, k: null },
       sites: ["F3","Fz","F4","C3","Cz","C4","P3","Pz","P4"], bands: ["delta","theta","alpha","beta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "up", beta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1819,7 +1819,7 @@ window.NF_DATA = {
       cite: { authors: "Kiiski H, et al.", year: 2020, title: "EEG spectral power, but not theta/beta ratio, is a neuromarker for adult ADHD", journal: "Eur J Neurosci" }
     },
     {
-      id: "pm-31903823", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "pm-31903823", rec: { eyes: "open", power: "unclear", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 28, k: null },
       sites: ["P3","Pz","P4"], bands: ["delta","theta","alpha"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1829,7 +1829,7 @@ window.NF_DATA = {
       cite: { authors: "Jouzizadeh M, et al.", year: 2020, title: "A spatial profile difference in electrical distribution of resting-state EEG in ADHD children using sLORETA", journal: "Int J Neurosci" }
     },
     {
-      id: "pm-31911342", source: "full-text", condition: "adhd", type: "biomarker",
+      id: "pm-31911342", rec: { eyes: "open", power: "relative", icd11: "6A05", dx: "clinical diagnosis" }, source: "full-text", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 47, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1839,7 +1839,7 @@ window.NF_DATA = {
       cite: { authors: "Deiber MP, et al.", year: 2020, title: "Linking alpha oscillations, attention and inhibitory control in adult ADHD with EEG neurofeedback", journal: "Neuroimage Clin" }
     },
     {
-      id: "pm-32682239", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "pm-32682239", rec: { eyes: "unclear", power: "unclear", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 81, k: null },
       sites: ["F3","Fz","F4","Cz","T3","T4"], bands: ["theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", beta: "down" }, symptoms: ["inattention","hyperactivity"],
@@ -1849,7 +1849,7 @@ window.NF_DATA = {
       cite: { authors: "Ahmadi M, et al.", year: 2020, title: "Cortical source analysis of resting state EEG data in children with attention deficit hyperactivity disorder", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-34529233", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "pm-34529233", rec: { eyes: "closed", power: "both", icd11: "6A05", dx: "DSM-5" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", beta: "down" }, symptoms: ["inattention","hyperactivity"],
@@ -1859,7 +1859,7 @@ window.NF_DATA = {
       cite: { authors: "Dupuy FE, et al.", year: 2021, title: "DSM-5 Adult Attention-Deficit/Hyperactivity Disorder: Sex Differences in EEG Activity", journal: "Appl Psychophysiol Biofeedback" }
     },
     {
-      id: "pm-35151696", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "pm-35151696", rec: { eyes: "open", power: "both", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 225, k: null },
       sites: [], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
