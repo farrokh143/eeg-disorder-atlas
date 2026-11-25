@@ -3617,6 +3617,16 @@ window.NF_DATA = {
       detail: "24 people with suspected acute stroke, 3-minute 256-lead resting EEG in the emergency department; 11 had acute ischaemic stroke (5 with infarcts over 20 cc). Delta power (1-3 Hz) and the alpha/delta ratio separated the 5 large infarcts from the other 19 patients, and the ratio correlated with infarct volume. Contralesional signals gave the best separation; the authors describe the ratio as reflecting higher delta and lower alpha power. Pilot diagnostic study with a small group; the 10-20 montage analysis was robust but not all electrodes were named, so sites are whole-head.",
       design: "Case-control (diagnostic pilot)",
       cite: { authors: "Shreve L, Kaur A, Vo C, Wu J, Cassidy JM, Nguyen A, et al.", year: 2019, title: "Electroencephalography Measures are Useful for Identifying Large Acute Ischemic Stroke in the Emergency Department", journal: "Journal of stroke and cerebrovascular diseases" }
+    },
+    {
+      id: "pm-32249674", source: "abstract", condition: "stroke", type: "biomarker",
+      metrics: { design: 3, control: null, blinded: null, n: 41, k: null },
+      sites: [], bands: ["delta"], direction: "asymmetry", evidence: "preliminary",
+      changes: { delta: "asymmetry" }, symptoms: ["motor"],
+      claim: "Early stroke: delta directional asymmetry tracks upper-limb recovery; affected-side DAR tracks neurological recovery",
+      detail: "41 first-ever ischaemic stroke patients, resting EEG at 3, 5, 12 and 26 weeks. Delta directional brain symmetry index was linked within and between patients to Fugl-Meyer upper-limb scores, and the affected-hemisphere delta/alpha ratio to NIHSS; both measures normalised over time. Electrodes are not named in the abstract, so sites are whole-head. Taken from the abstract; not checked in the full text. Prospective longitudinal cohort with no healthy control group.",
+      design: "Prospective cohort",
+      cite: { authors: "Saes M, Zandvliet SB, Andringa AS, Daffertshofer A, Twisk JWR, Meskers CGM, van Wegen EEH, Kwakkel G", year: 2020, title: "Is Resting-State EEG Longitudinally Associated With Recovery of Clinical Neurological Impairments Early Poststroke? A Prospective Cohort Study", journal: "Neurorehabilitation and Neural Repair" }
     }
   ],
 
