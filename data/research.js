@@ -3657,6 +3657,16 @@ window.NF_DATA = {
       detail: "13 patients with ischaemic cortical stroke, resting 62-channel EEG at about 49 hours after onset, with NIHSS at 30 days. The delta:alpha power ratio and relative alpha power correlated with the 30-day NIHSS score, and the 19-channel subset gave the same two results; theta and beta measures were not correlated. Coded as the direction linked to greater impairment (higher delta, lower alpha). Electrodes are not named, so sites are whole-head. Taken from the abstract; not checked in the full text. Very small correlational study with no healthy control group.",
       design: "Prospective cohort",
       cite: { authors: "Finnigan SP, Walsh M, Rose SE, Chalk JB", year: 2007, title: "Quantitative EEG indices of sub-acute ischaemic stroke correlate with clinical outcomes", journal: "Clinical neurophysiology" }
+    },
+    {
+      id: "pm-24967904", source: "full-text", condition: "stroke", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 55, k: null },
+      sites: [], bands: ["delta","theta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up", theta: "up" }, symptoms: ["motor"],
+      claim: "Acute MCA stroke: higher delta and theta power than healthy controls, rising with NIHSS severity",
+      detail: "36 patients 4-10 days after a first ischaemic MCA stroke and 19 age-matched controls, 5-minute eyes-open resting EEG from 19 electrodes. Mean power across the scalp was higher in patients in the low bands (delta and theta; sub-delta also), and these increases correlated with worse NIHSS. Coded as whole-head (scalp mean). The main result, fractal dimension, is not band power and is not coded; alpha and beta changes are reported only as correlations with fractal dimension and are not coded as group differences. Small cross-sectional study with partly lesion-side-specific results.",
+      design: "Case-control",
+      cite: { authors: "Zappasodi F, Olejarczyk E, Marzetti L, Assenza G, Pizzella V, Tecchio F", year: 2014, title: "Fractal Dimension of EEG Activity Senses Neuronal Impairment in Acute Stroke", journal: "PLoS One" }
     }
   ],
 
