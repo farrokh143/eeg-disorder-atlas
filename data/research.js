@@ -3537,6 +3537,16 @@ window.NF_DATA = {
       detail: "20 people with first ischaemic middle cerebral artery stroke, resting EEG 62-101 hours after onset, cognition measured by the FIM-FAM about 105 days later. Frontal delta/alpha ratio correlated negatively with cognition (rho -0.66), and global relative alpha positively (rho 0.67). Coded as the direction linked to worse cognition; the frontal and global sites are pooled as whole-head. Taken from the abstract; not checked in the full text. Small cross-sectional correlation study.",
       design: "Cross-sectional correlation (within stroke)",
       cite: { authors: "Schleiger E, Sheikh N, Rowland T, Wong A, Read S, Finnigan S", year: 2014, title: "Frontal EEG delta/alpha ratio and screening for post-stroke cognitive deficits: the power of four electrodes", journal: "Int J Psychophysiol" }
+    },
+    {
+      id: "pm-35068216", source: "abstract", condition: "stroke", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 32, k: null },
+      sites: [], bands: ["delta"], direction: "asymmetry", evidence: "preliminary",
+      changes: { delta: "asymmetry" }, symptoms: ["executive","memory","lowmood"],
+      claim: "Chronic stroke (within stroke): delta brain-symmetry index tracks Stroop, PASAT and well-being scores",
+      detail: "32 people with chronic stroke, eyes-open resting EEG (16 channels). The pairwise delta brain symmetry index (asymmetry) correlated with the Stroop test, the PASAT (3 s and 2 s) and the WHO-5 well-being scale; the sign of each correlation is not given in the abstract, so the direction is not coded. Pairwise channels are not named, so sites are whole-head. Taken from the abstract; not checked in the full text. Small cross-sectional correlation study without a healthy control group.",
+      design: "Cross-sectional correlation (within stroke)",
+      cite: { authors: "Chan MKL, Yeung WKY, Yu JKP, Ng SSW, Tong RKY", year: 2023, title: "Exploratory Study on the Clinical use of EEG for the People with Chronic Stroke and Their Correlation with the Neuropsychological Outcome", journal: "Clin EEG Neurosci" }
     }
   ],
 
