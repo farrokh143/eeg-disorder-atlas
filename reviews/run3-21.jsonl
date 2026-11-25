@@ -1,0 +1,8 @@
+{"id":"pm-41016426","decision":"defer","note":"[retry] abstract: lower delta and theta source power over left parieto-occipital regions in dyslexia vs controls (source-reconstructed routine EEG). Included data would need a learning symptom id (none in the atlas list); owner to decide"}
+{"id":"pm-3568701","decision":"exclude","code":"OT","note":"acquired aphasia groups; alpha asymmetry mainly during auditory language tasks"}
+{"id":"pm-7099883","decision":"exclude","code":"X","reason":"EEG correlates of intellectual ability within talented and handicapped adolescents; ability is not a symptom the atlas tracks and no band-power group difference with direction"}
+{"id":"pm-11680298","decision":"exclude","code":"CN","note":"intrahemispheric and interhemispheric coherence in non-verbal vs verbal learning disorder; coherence only"}
+{"id":"pm-21822191","decision":"exclude","code":"X","reason":"Alpha asymmetry in children with generalised anxiety disorder; no healthy control group"}
+{"id":"pm-6209101","decision":"exclude","code":"X","reason":"Test-retest stability of EEG spectra over time; no disorder-versus-control result"}
+{"id":"pm-2417821","decision":"defer","note":"[retry] abstract: beta (19-24 Hz) power lower at bilateral central, parietal and mid-temporal leads in dyslexic vs control boys; delta, theta and alpha null or inconsistent. Included data would need a learning symptom id (none in the atlas list); owner to decide"}
+{"id":"pm-23668074","decision":"exclude","code":"CN","note":"resting coherence between frontal and other cortical areas in children with learning difficulties; coherence only"}
