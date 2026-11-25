@@ -3487,6 +3487,16 @@ window.NF_DATA = {
       detail: "22 people with chronic stroke vs 19 age-matched and 16 younger healthy adults; 3-minute eyes-closed resting EEG, 64 channels. Hemispheric asymmetry (ipsilesional minus contralesional index) differed from both control groups in theta and beta bands, significant over central and posterior regions; frontal regions showed no group effect. Beta-1 (12-16 Hz) is coded as beta and beta-2 (16-30 Hz) as beta and hibeta. Network (graph) metrics are not coded here. Secondary analysis of a trial's baseline data.",
       design: "Case-control",
       cite: { authors: "Zhang JJ, Bai Z, Fong KNK", year: 2024, title: "Resting-state cortical electroencephalogram rhythms and network in patients after chronic stroke", journal: "J Neuroeng Rehabil" }
+    },
+    {
+      id: "pm-38460956", source: "abstract", condition: "stroke", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 85, k: null },
+      sites: ["C3","Cz","C4"], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["motor"],
+      claim: "Stroke: more central delta and theta, less alpha, with worse upper-limb motor function (within stroke)",
+      detail: "85 people with stroke in a cross-sectional cohort; resting-state relative power from the central region, both hemispheres. Motor function was negatively associated with delta and theta and positively with alpha. Coded as the direction linked to greater impairment. Depression associations are not coded here. Taken from the abstract; not checked in the full text. Cross-sectional correlation study without a healthy control group.",
+      design: "Cross-sectional correlation (within stroke)",
+      cite: { authors: "Marques LM, Barbosa SP, Gianlorenço AC, Pacheco-Barrios K, Souza DR, Matheus D, et al.", year: 2024, title: "Resting-state EEG as Biomarker of Maladaptive Motor Function and Depressive Profile in Stroke Patients", journal: "Clin EEG Neurosci" }
     }
   ],
 
