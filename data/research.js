@@ -2602,7 +2602,7 @@ window.NF_DATA = {
       cite: { authors: "Arutiunian V, et al.", year: 2026, title: "Number of Alpha Peaks in the Electroencephalogram Is Associated With Clinical Phenotype and Copy Number Variants in Youths With Autism", journal: "Biol Psychiatry Cogn Neurosci Neuroimaging" }
     },
     {
-      id: "pm-41520112", source: "full-text", condition: "autism", type: "biomarker",
+      id: "pm-41520112", rec: { eyes: "open", power: "absolute", icd11: "6A02", dx: "clinical diagnosis" }, source: "full-text", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 128, k: null },
       sites: [], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["social"],
@@ -2612,7 +2612,7 @@ window.NF_DATA = {
       cite: { authors: "Chen Y, et al.", year: 2026, title: "Resting state aperiodic and periodic EEG activity in preschool-aged autistic children: differences from neurotypical peers and links to language skills", journal: "Mol Autism" }
     },
     {
-      id: "pm-42185252", source: "full-text", condition: "autism", type: "biomarker",
+      id: "pm-42185252", rec: { eyes: "unclear", power: "absolute", icd11: "6A02", dx: "DSM-5" }, source: "full-text", condition: "autism", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: 188, k: null },
       sites: [], bands: ["delta","theta","beta","gamma"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up", beta: "up", gamma: "up" }, symptoms: ["social"],
@@ -2622,7 +2622,7 @@ window.NF_DATA = {
       cite: { authors: "Latrèche K, et al.", year: 2026, title: "Early Trajectories of Resting-State EEG power in autistic children: a longitudinal study across language profiles", journal: "Transl Psychiatry" }
     },
     {
-      id: "pm-12712882", source: "abstract", condition: "epilepsy", type: "biomarker",
+      id: "pm-12712882", rec: { eyes: "closed", power: "both", icd11: "8A6", dx: "unclear" }, source: "abstract", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 208, k: null },
       sites: ["O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["seizures"],
@@ -2632,7 +2632,7 @@ window.NF_DATA = {
       cite: { authors: "Clemens B, et al.", year: 2003, title: "[Occipital spectral EEG parameters in newly diagnosed, untreated patients with epilepsy]", journal: "Ideggyogy Sz" }
     },
     {
-      id: "pm-15134712", source: "abstract", condition: "epilepsy", type: "biomarker",
+      id: "pm-15134712", rec: { eyes: "closed", power: "both", icd11: "8A6", dx: "unclear" }, source: "abstract", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["seizures"],
@@ -2642,7 +2642,7 @@ window.NF_DATA = {
       cite: { authors: "Clemens B", year: 2004, title: "Pathological theta oscillations in idiopathic generalised epilepsy", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-20820898", source: "abstract", condition: "epilepsy", type: "biomarker",
+      id: "pm-20820898", rec: { eyes: "unclear", power: "unclear", icd11: "8A6", dx: "unclear" }, source: "abstract", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 34, k: null },
       sites: ["Pz","O1","O2"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["seizures"],
@@ -2652,7 +2652,7 @@ window.NF_DATA = {
       cite: { authors: "Michels L, et al.", year: 2011, title: "Does greater low frequency EEG activity in normal immaturity and in children with epilepsy arise in the same neuronal network?", journal: "Brain Topogr" }
     },
     {
-      id: "pm-23922658", source: "full-text", condition: "epilepsy", type: "biomarker",
+      id: "pm-23922658", rec: { eyes: "both", power: "unclear", icd11: "8A6", dx: "unclear" }, source: "full-text", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 24, k: null },
       sites: ["T3","T4","P3","P4"], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["seizures"],
@@ -2662,7 +2662,7 @@ window.NF_DATA = {
       cite: { authors: "Quraan MA, et al.", year: 2013, title: "Altered resting state brain dynamics in temporal lobe epilepsy can be observed in spectral power, functional connectivity and graph theory metrics", journal: "PLoS One" }
     },
     {
-      id: "pm-26509114", source: "abstract", condition: "epilepsy", type: "biomarker",
+      id: "pm-26509114", rec: { eyes: "closed", power: "relative", icd11: "8A6", dx: "unclear" }, source: "abstract", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 17, k: null },
       sites: ["C4","T4"], bands: ["theta","alpha","beta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", alpha: "up", beta: "up" }, symptoms: ["seizures"],
@@ -2672,7 +2672,7 @@ window.NF_DATA = {
       cite: { authors: "Adebimpe A, et al.", year: 2015, title: "EEG resting state analysis of cortical sources in patients with benign epilepsy with centrotemporal spikes", journal: "Neuroimage Clin" }
     },
     {
-      id: "pm-30847365", source: "abstract", condition: "epilepsy", type: "biomarker",
+      id: "pm-30847365", rec: { eyes: "closed", power: "unclear", icd11: "8A6", dx: "unclear" }, source: "abstract", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 102, k: null },
       sites: ["Fz","O1","O2"], bands: ["alpha"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "mixed" }, symptoms: ["seizures"],
@@ -2682,7 +2682,7 @@ window.NF_DATA = {
       cite: { authors: "Abela E, et al.", year: 2019, title: "Slower alpha rhythm associates with poorer seizure control in epilepsy", journal: "Ann Clin Transl Neurol" }
     },
     {
-      id: "pm-31129368", source: "abstract", condition: "epilepsy", type: "biomarker",
+      id: "pm-31129368", rec: { eyes: "unclear", power: "absolute", icd11: "8A6", dx: "unclear" }, source: "abstract", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 16, k: null },
       sites: ["C3","C4","T3","T4"], bands: ["theta","alpha"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", alpha: "up" }, symptoms: ["seizures"],
@@ -2692,7 +2692,7 @@ window.NF_DATA = {
       cite: { authors: "Siripornpanich V, et al.", year: 2019, title: "Delayed cortical maturation at the centrotemporal brain regions in patients with benign childhood epilepsy with centrotemporal spikes (BCECTS)", journal: "Epilepsy Res" }
     },
     {
-      id: "pm-34687043", source: "abstract", condition: "epilepsy", type: "biomarker",
+      id: "pm-34687043", rec: { eyes: "unclear", power: "ratio-only", icd11: "8A6", dx: "unclear" }, source: "abstract", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 62, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","T3","T4","T5","T6","P3","Pz","P4","O1","O2"], bands: ["alpha","delta","theta"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "down", delta: "up", theta: "up" }, symptoms: ["seizures"],
