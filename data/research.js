@@ -295,11 +295,11 @@ window.NF_DATA = {
     },
     {
       id: "dep-vandervinne-2017", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "curated", condition: "depression", type: "biomarker",
-      metrics: { design: 5, control: null, blinded: null, n: null, k: null },
+      metrics: { design: 5, control: null, blinded: null, n: 4044, k: 16 },
       sites: ["F3","F4"], bands: ["alpha"], direction: "asymmetry", evidence: "contested",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
       claim: "Frontal alpha asymmetry is not a reliable diagnostic marker",
-      detail: "Pooling large datasets, frontal alpha asymmetry did not distinguish people with depression from controls. Some sex- and age-specific effects remained.",
+      detail: "Pooling large datasets, frontal alpha asymmetry did not distinguish people with depression from controls. Some sex- and age-specific effects remained. The meta-analysis pooled 16 studies (1883 people with MDD, 2161 controls).",
       design: "Meta-analysis",
       cite: { authors: "van der Vinne N, Vollebregt MA, van Putten MJAM, Arns M", year: 2017, title: "Frontal alpha asymmetry as a diagnostic marker in depression: fact or fiction? A meta-analysis", journal: "NeuroImage: Clinical" }
     },
@@ -387,16 +387,6 @@ window.NF_DATA = {
     },
     /* ---------------- Insomnia ---------------- */
     {
-      id: "ins-hoedlmoser-2008", rec: { eyes: "unclear", power: "n/a", icd11: "subclinical", dx: "unclear" }, source: "curated", condition: "insomnia", type: "protocol",
-      metrics: { design: 3, control: "active", blinded: null, n: 27, k: null },
-      sites: ["C3","Cz","C4"], bands: ["smr"], direction: "up", evidence: "preliminary",
-      changes: { smr: "up" }, symptoms: ["sleep","memory"],
-      claim: "SMR uptraining increases sleep spindles and shortens sleep onset",
-      detail: "In healthy adults, SMR conditioning increased sleep spindle activity, shortened sleep latency and improved declarative learning compared with random-frequency training.",
-      design: "Controlled study (healthy adults)",
-      cite: { authors: "Hoedlmoser K, Pecherstorfer T, Gruber G, et al.", year: 2008, title: "Instrumental conditioning of human sensorimotor rhythm (12–15 Hz) and its impact on sleep as well as declarative learning", journal: "Sleep" }
-    },
-    {
       id: "ins-schabus-2017", rec: { eyes: "unclear", power: "n/a", icd11: "7A00", dx: "research criteria" }, source: "curated", condition: "insomnia", type: "protocol",
       metrics: { design: 4, control: "sham", blinded: true, n: 25, k: null },
       sites: ["C3","Cz","C4"], bands: ["smr"], direction: "up", evidence: "contested",
@@ -412,7 +402,7 @@ window.NF_DATA = {
       sites: [], bands: ["beta", "theta", "gamma"], direction: "up", evidence: "strong",
       changes: { beta: "up", theta: "up", gamma: "up" }, symptoms: ["sleep","hyperarousal"],
       claim: "More beta, theta and gamma in resting wakefulness",
-      detail: "Meta-analysis of 24 studies (977 participants): during wakefulness, people with insomnia disorder showed increased beta, theta and gamma power, in line with cortical hyperarousal. The paper also pooled sleep-stage EEG; those results are not included here. Pooled across recording sites.",
+      detail: "Meta-analysis of 24 studies (977 participants): during wakefulness, people with insomnia disorder showed increased beta, theta and gamma power, in line with cortical hyperarousal. The paper also pooled sleep-stage EEG; those results are not included here. Pooled across recording sites. The 24 studies and 977 participants are the totals for the whole meta-analysis (wake and sleep stages); the abstract does not say how many contributed wake data.",
       design: "Meta-analysis",
       cite: { authors: "Zhao W, Van Someren EJW, Li C, et al.", year: 2021, title: "EEG spectral analysis in insomnia disorder: A systematic review and meta-analysis", journal: "Sleep Medicine Reviews" }
     },
@@ -727,7 +717,7 @@ window.NF_DATA = {
       sites: ["P3","Pz","P4","T5","T6","O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["memory"],
       claim: "Subjective memory complaints: alpha3 power lower than controls over posterior sites, mainly in women",
-      detail: "68 older people with and without subjective memory complaints, eyes-closed resting EEG. Alpha3 power was lower in the complaint group, and the reduction was significant in women only. Individual alpha peak and transition frequency did not differ. Taken from the abstract; not checked in the full text. Sites are the posterior electrodes the abstract describes, not individually named there.",
+      detail: "68 older people with and without subjective memory complaints, eyes-closed resting EEG. Alpha3 power was lower in the complaint group, and the reduction was significant in women only. Individual alpha peak and transition frequency did not differ. Taken from the abstract; not checked in the full text. Sites are the posterior electrodes the abstract describes, not individually named there. The sample is older people with subjective memory complaints, an at-risk state that often precedes MCI or Alzheimer's; nobody had a diagnosis of MCI or Alzheimer's disease.",
       design: "Case-control (cross-sectional)",
       cite: { authors: "Perez V, et al.", year: 2024, title: "Individual posterior alpha rhythms and cognitive reserve as possible early prognostic markers in people with subjective memory complaints", journal: "Behav Brain Res" }
     },
@@ -952,12 +942,12 @@ window.NF_DATA = {
       cite: { authors: "Liu X, et al.", year: 2022, title: "Altered gamma oscillations and beta-gamma coupling in drug-naive first-episode major depressive disorder: Association with sleep and cognitive disturbance", journal: "J Affect Disord" }
     },
     {
-      id: "pm-36057818", rec: { eyes: "both", power: "absolute", icd11: "subclinical", dx: "unclear" }, source: "full-text", condition: "alzheimers", type: "biomarker",
-      metrics: { design: 3, control: null, blinded: null, n: 318, k: null },
+      id: "pm-36057818", rec: { eyes: "both", power: "relative", icd11: "subclinical", dx: "unclear" }, source: "full-text", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 3, control: null, blinded: null, n: 272, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta"], direction: "up", evidence: "moderate",
       changes: { theta: "up" }, symptoms: ["memory","cogdecline"],
       claim: "Amyloid-positive memory complainers: more bilateral frontal theta at baseline, not at 2 years",
-      detail: "Source-localised (beamformer); mapped to the overlying scalp region. Resting EEG in 318 cognitively healthy memory complainers from the INSIGHT-preAD cohort, 88 amyloid-positive and 230 amyloid-negative, at baseline. Mid-frontal theta was higher in amyloid-positive people at baseline, but this did not replicate at 2 years; the 2-year posterior cingulate and precuneus theta differences are deep structures and are not used. Cognition was not linked to theta.",
+      detail: "Source-localised (beamformer); mapped to the overlying scalp region. Resting EEG in 318 cognitively healthy memory complainers from the INSIGHT-preAD cohort, 88 amyloid-positive and 230 amyloid-negative, at baseline. Mid-frontal theta was higher in amyloid-positive people at baseline, but this did not replicate at 2 years; the 2-year posterior cingulate and precuneus theta differences are deep structures and are not used. Cognition was not linked to theta. Analyses used the 272 participants with usable EEG at both visits (318 at baseline, 279 at 2 years).",
       design: "Cohort (amyloid-positive vs negative, source-level)",
       cite: { authors: "Spinelli G, et al.", year: 2022, title: "Theta Band-Power Shapes Amyloid-Driven Longitudinal EEG Changes in Elderly Subjective Memory Complainers At-Risk for Alzheimer's Disease", journal: "J Alzheimers Dis" }
     },
@@ -1232,16 +1222,6 @@ window.NF_DATA = {
       cite: { authors: "Chang JS, et al.", year: 2012, title: "An integrative assessment of the psychophysiologic alterations in young women with recurrent major depressive disorder", journal: "Psychosom Med" }
     },
     {
-      id: "pm-22939462", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
-      metrics: { design: 2, control: null, blinded: null, n: 96, k: null },
-      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4"], bands: ["alpha"], direction: "up", evidence: "preliminary",
-      changes: { alpha: "up" }, symptoms: ["lowmood"],
-      claim: "Unmedicated MDD vs controls: higher frontal and parietal alpha power, most in males",
-      detail: "Resting EEG in 53 unmedicated MDD patients (29 women) and 43 controls (23 women). Frontal and parietal alpha power was higher in MDD, with left midfrontal hypoactivity, and the effect was strongest in depressed men; women had higher right parietal activity. The subgenual cingulate theta result is deep and is not used. Taken from the abstract; not checked in the full text.",
-      design: "Case-control",
-      cite: { authors: "Jaworska N, et al.", year: 2012, title: "α Power, α asymmetry and anterior cingulate cortex activity in depressed males and females", journal: "J Psychiatr Res" }
-    },
-    {
       id: "pm-2307762", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 14, k: null },
       sites: ["Fp1","F7","F3","P4","T6","O2"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
@@ -1460,16 +1440,6 @@ window.NF_DATA = {
       detail: "Eyes-closed resting EEG on 19 channels in 48 medication-free MDD patients vs 78 controls. Theta and beta power were higher in most channels. The abstract says alpha was lower, but the results section reports higher relative alpha, so alpha is marked mixed. Single case-control study.",
       design: "Case-control",
       cite: { authors: "Özçoban MA, Tan O", year: 2025, title: "Electroencephalographic markers in Major Depressive Disorder: insights from absolute, relative power, and asymmetry analyses", journal: "Frontiers in Psychiatry" }
-    },
-    {
-      id: "cand-mdd-alpha-sex-2012", rec: { eyes: "both", power: "absolute", icd11: "6A7", dx: "DSM-IV" }, source: "full-text", condition: "depression", type: "biomarker",
-      metrics: { design: 2, control: null, blinded: null, n: 96, k: null },
-      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4"], bands: ["alpha"], direction: "up", evidence: "preliminary",
-      changes: { alpha: "up" }, symptoms: ["lowmood"],
-      claim: "Unmedicated MDD: more frontal and parietal alpha-2 power than controls at rest, mainly in males",
-      detail: "Resting EEG in 53 unmedicated MDD patients and 43 controls, referenced to Cz and mastoids. Alpha-2 power was higher over frontal and parietal sites, with the clearest effect in males. Source-localised theta in the subgenual cingulate was left out because it is a deep structure. Single case-control study.",
-      design: "Case-control",
-      cite: { authors: "(verify authors)", year: 2012, title: "Alpha Power, Alpha Asymmetry and Anterior Cingulate Cortex Activity in Depressed Males and Females", journal: "Journal of Psychiatric Research" }
     },
     {
       id: "pm-37480706", rec: { eyes: "closed", power: "unclear", icd11: "subclinical", dx: "scale cut-off" }, source: "abstract", condition: "depression", type: "biomarker",
@@ -1874,10 +1844,10 @@ window.NF_DATA = {
     {
       id: "pm-35182242", rec: { eyes: "both", power: "n/a", icd11: "6A05", dx: "unclear" }, source: "full-text", condition: "adhd", type: "protocol",
       metrics: { design: 4, control: "active", blinded: null, n: 121, k: null },
-      sites: ["O1","O2"], bands: ["alpha"], direction: "up", evidence: "moderate",
+      sites: [], bands: ["alpha"], direction: "up", evidence: "moderate",
       changes: { alpha: "up" }, symptoms: ["inattention","hyperactivity","impulsivity","executive","memory"],
       claim: "Remote neurofeedback, computerized cognitive or combined training in children with ADHD: eyes-open alpha rose",
-      detail: "121 children with ADHD randomised to remote neurofeedback, computerized cognitive training (active comparator) or both; 80 completed 3 months of training. Eyes-open relative alpha increased after training in all three groups, with a significant overall effect; no differences between groups. The EEG outcome is at O1 and O2 and the training sites are not described in the passages read. Eyes-closed alpha change was not significant.",
+      detail: "121 children with ADHD randomised to remote neurofeedback, computerized cognitive training (active comparator) or both; 80 completed 3 months of training. Eyes-open relative alpha increased after training in all three groups, with a significant overall effect; no differences between groups. The EEG outcome is at O1 and O2 and the training sites are not described in the passages read. Eyes-closed alpha change was not significant. The paper does not describe the neurofeedback training sites or target band (portable Bluetooth headset), so sites are left empty; the alpha increase is an outcome measured at O1 and O2 after training, not the trained band.",
       design: "RCT (active comparator)",
       cite: { authors: "Luo X, et al.", year: 2023, title: "A randomized controlled study of remote computerized cognitive, neurofeedback, and combined training in the treatment of children with attention-deficit/hyperactivity disorder", journal: "Eur Child Adolesc Psychiatry" }
     },
@@ -2043,7 +2013,7 @@ window.NF_DATA = {
     },
     {
       id: "pm-24090715", rec: { eyes: "closed", power: "absolute", icd11: "6A20", dx: "research criteria" }, source: "full-text", condition: "schizophrenia", type: "biomarker",
-      metrics: { design: 2, control: null, blinded: null, n: 268, k: null },
+      metrics: { design: 2, control: null, blinded: null, n: 344, k: null },
       sites: [], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "contested",
       changes: { delta: "mixed", theta: "mixed", alpha: "mixed" }, symptoms: ["psychosis"],
       claim: "Schizophrenia vs controls: no difference in resting delta, theta or alpha power (coherence excluded)",
@@ -2053,7 +2023,7 @@ window.NF_DATA = {
     },
     {
       id: "pm-24439302", rec: { eyes: "open", power: "unclear", icd11: "6A20", dx: "DSM-IV" }, source: "full-text", condition: "schizophrenia", type: "biomarker",
-      metrics: { design: 2, control: null, blinded: null, n: 425, k: null },
+      metrics: { design: 2, control: null, blinded: null, n: 1091, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "up", beta: "up" }, symptoms: ["psychosis"],
       claim: "Schizophrenia probands: higher resting delta, theta, alpha and slow beta than healthy controls",
@@ -2242,16 +2212,6 @@ window.NF_DATA = {
       cite: { authors: "Han C, et al.", year: 2025, title: "Distinct oscillatory mechanisms in low and high alpha-band activities for screening and potential treatment of Schizophrenia", journal: "Transl Psychiatry" }
     },
     {
-      id: "pm-40792462", rec: { eyes: "unclear", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "biomarker",
-      metrics: { design: 2, control: null, blinded: null, n: 134, k: null },
-      sites: [], bands: ["theta","alpha"], direction: "up", evidence: "preliminary",
-      changes: { theta: "up", alpha: "up" }, symptoms: ["psychosis"],
-      claim: "Schizophrenia: more resting 4-10 Hz power over widespread regions than controls",
-      detail: "66 neurotypical controls and 68 patients with schizophrenia, resting EEG. Resting power in the 4-10 Hz range was higher over widespread regions in patients. The auditory steady-state and rest-task shift results are not used here. Taken from the abstract; not checked in the full text.",
-      design: "Case-control",
-      cite: { authors: "Mitoma R, et al.", year: 2025, title: "Abnormal spontaneous activity and rest-task shift in schizophrenia", journal: "Psychiatry Clin Neurosci" }
-    },
-    {
       id: "pm-41045101", rec: { eyes: "unclear", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 249, k: null },
       sites: [], bands: ["theta"], direction: "up", evidence: "preliminary",
@@ -2337,7 +2297,7 @@ window.NF_DATA = {
       sites: ["T3","T4","T5","T6"], bands: ["gamma"], direction: "ratio", evidence: "contested",
       changes: { gamma: "mixed" }, symptoms: ["psychosis"],
       claim: "Schizophrenia: resting gamma (30-100 Hz) in auditory cortex does not differ from controls",
-      detail: "24 patients with chronic schizophrenia and 24 matched controls; resting-state recording in 18 per group. Source-localised (dipole source localisation); mapped to the overlying scalp region (auditory cortex, temporal). No difference in resting gamma power; the positive gamma increase was during auditory steady-state stimulation and is excluded as task EEG. Null resting result.",
+      detail: "24 patients with chronic schizophrenia and 24 matched controls; resting-state recording in 18 per group. Source-localised (dipole source localisation); mapped to the overlying scalp region (auditory cortex, temporal). No difference in resting gamma power; the positive gamma increase was during auditory steady-state stimulation and is excluded as task EEG. Null resting result. The auditory-cortex dipoles were fitted on the ASSR data and then applied to the resting recording (eye state not given in the main text); resting gamma was 0.006 vs 0.005 (p = 0.309).",
       design: "Case-control",
       cite: { authors: "Hirano Y, et al.", year: 2015, title: "Spontaneous Gamma Activity in Schizophrenia", journal: "JAMA Psychiatry" }
     },
@@ -2360,16 +2320,6 @@ window.NF_DATA = {
       detail: "98 people with GAD vs 92 healthy controls, 10 min eyes-closed resting EEG on 16 channels. Beta power (13-27 Hz) was higher across the central axis and shifted posteriorly at higher frequencies; alpha asymmetry was more rightward in temporal sites. Connectivity results were not included (CN). Single case-control study with a small montage.",
       design: "Case-control",
       cite: { authors: "Wang H, Mou S, Pei X, Zhang X, Shen S, Zhang J, Shen X, Shen Z", year: 2025, title: "The power spectrum and functional connectivity characteristics of resting-state EEG in patients with generalized anxiety disorder", journal: "Scientific Reports" }
-    },
-    {
-      id: "pm-38280864", rec: { eyes: "closed", power: "relative", icd11: "6B0", dx: "scale cut-off" }, source: "full-text", condition: "anxiety", type: "biomarker",
-      metrics: { design: 2, control: null, blinded: null, n: 93, k: null },
-      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4"], bands: ["delta","beta"], direction: "ratio", evidence: "preliminary",
-      changes: { delta: "up", beta: "down" }, symptoms: ["anxiety"],
-      claim: "PD with anxiety: more fronto-parietal delta and less frontal beta than controls",
-      detail: "68 people with Parkinson's (18 with clinically relevant anxiety) and 25 healthy controls, 12 min eyes-closed resting high-density EEG at baseline. Relative delta power was higher over frontal and parietal sites; relative beta was lower over frontal sites. Connectivity results and the 3- and 5-year follow-up were not used for this entry (CN and longitudinal). Case-control design, small anxious subgroup.",
-      design: "Case-control",
-      cite: { authors: "Yassine S, et al.", year: 2024, title: "Electrophysiological signatures of anxiety in Parkinson's disease", journal: "Transl Psychiatry" }
     },
     {
       id: "pm-28582479", rec: { eyes: "open", power: "unclear", icd11: "6B40", dx: "unclear" }, source: "abstract", sample: "clancy-ptsd-69", condition: "ptsd", type: "biomarker",
@@ -2422,7 +2372,7 @@ window.NF_DATA = {
       cite: { authors: "Thoma L, et al.", year: 2021, title: "Fronto-lateral alpha power asymmetry in panic disorder", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-35192865", rec: { eyes: "both", power: "ratio-only", icd11: "6B04", dx: "scale cut-off" }, source: "abstract", condition: "anxiety", type: "biomarker",
+      id: "pm-35192865", rec: { eyes: "both", power: "ratio-only", icd11: "subclinical", dx: "scale cut-off" }, source: "abstract", condition: "anxiety", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 103, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha","delta"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "down", delta: "up" }, symptoms: ["anxiety"],
@@ -2952,12 +2902,12 @@ window.NF_DATA = {
       cite: { authors: "Andriot T, et al.", year: 2022, title: "Electrophysiological and behavioral correlates of cannabis use disorder", journal: "Cogn Affect Behav Neurosci" }
     },
     {
-      id: "pm-35699268", rec: { eyes: "unclear", power: "unclear", icd11: "6C4", dx: "unclear" }, source: "full-text", condition: "sud", type: "biomarker",
+      id: "pm-35699268", rec: { eyes: "both", power: "absolute", icd11: "6C4", dx: "mixed" }, source: "full-text", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 85, k: null },
-      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["beta","gamma"], direction: "up", evidence: "preliminary",
+      sites: ["F3","F4"], bands: ["beta","gamma"], direction: "up", evidence: "preliminary",
       changes: { beta: "up", gamma: "up" }, symptoms: ["craving"],
       claim: "Mothers with substance use: higher frontal beta and gamma power than non-substance-using mothers",
-      detail: "48 substance-using mothers and 37 non-substance-using mothers, resting frontal EEG across seven bands. Beta and gamma power were higher in the substance-using mothers; no between-group difference was found in parental reflective functioning. The frontal set above is the frontal region of the montage; exact electrode labels were not checked. Cross-sectional study with no blinding or sham control; the substance-use type is mixed.",
+      detail: "48 substance-using mothers and 37 non-substance-using mothers, resting frontal EEG across seven bands. Beta and gamma power were higher in the substance-using mothers; no between-group difference was found in parental reflective functioning. The frontal set above is the frontal region of the montage; exact electrode labels were not checked. Cross-sectional study with no blinding or sham control; the substance-use type is mixed. Corrected after full-text check: power was measured only at GSN electrodes 25 and 124, which the paper equates to F3 and F4, and the group effect was averaged over eyes-open and eyes-closed rest (no condition interaction).",
       design: "Case-control",
       cite: { authors: "Ngoh G, et al.", year: 2022, title: "Exploring resting frontal EEG and reflective functioning in maternal substance use", journal: "Infant Ment Health J" }
     },
@@ -3332,12 +3282,12 @@ window.NF_DATA = {
       cite: { authors: "Aoki Y, Kazui H, Pascual-Marqui RD, et al.", year: 2019, title: "EEG Resting-State Networks in Dementia with Lewy Bodies Associated with Clinical Symptoms", journal: "Neuropsychobiology" }
     },
     {
-      id: "pm-41776190", rec: { eyes: "unclear", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "full-text", condition: "schizophrenia", type: "biomarker",
+      id: "pm-41776190", rec: { eyes: "closed", power: "absolute", icd11: "6A2", dx: "DSM-5" }, source: "full-text", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 159, k: null },
       sites: ["Fp1","Fp2"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["psychosis"],
       claim: "Schizophrenia spectrum: more prefrontal resting theta than controls",
-      detail: "41 schizophrenia-spectrum, 49 bipolar and 38 depressed patients plus 31 controls, resting EEG from Fp1 and Fp2 only. Schizophrenia-spectrum patients had higher theta than controls at both sites; the headline manic-state gamma/beta increase was pooled across diagnoses and is not recorded here, and bipolar alone did not differ from controls. Auditory steady-state results are task-based and not used; only two frontal electrodes.",
+      detail: "41 schizophrenia-spectrum, 49 bipolar and 38 depressed patients plus 31 controls, resting EEG from Fp1 and Fp2 only. Schizophrenia-spectrum patients had higher theta than controls at both sites; the headline manic-state gamma/beta increase was pooled across diagnoses and is not recorded here, and bipolar alone did not differ from controls. Auditory steady-state results are task-based and not used; only two frontal electrodes. The schizophrenia-spectrum group was 28 schizophrenia, 10 schizoaffective and 3 delusional disorder (DSM-5); 150 s seated eyes-closed recording.",
       design: "Case-control",
       cite: { authors: "Yanagi M, et al.", year: 2026, title: "Excessive gamma and beta oscillations in manic states across mood and psychotic disorders", journal: "Sci Rep" }
     },
@@ -3472,12 +3422,12 @@ window.NF_DATA = {
       cite: { authors: "Leocani L, Locatelli T, Martinelli V, Rovaris M, Falautano M, Filippi M, et al.", year: 2000, title: "Electroencephalographic coherence analysis in multiple sclerosis: correlation with clinical, neuropsychological, and MRI findings", journal: "J Neurol Neurosurg Psychiatry" }
     },
     {
-      id: "pm-42876599", rec: { eyes: "closed", power: "absolute", icd11: "8A40", dx: "clinical diagnosis" }, source: "full-text", condition: "ms", type: "biomarker",
+      id: "pm-42876599", rec: { eyes: "open", power: "absolute", icd11: "8A40", dx: "clinical diagnosis" }, source: "full-text", condition: "ms", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 14, k: null },
       sites: ["O1","O2"], bands: ["theta"], direction: "up", evidence: "contested",
       changes: { theta: "up" }, symptoms: ["motor"],
       claim: "MS: higher resting eyes-open occipital theta than controls, not significant after FDR correction",
-      detail: "7 people with MS and 7 matched controls; resting EEG eyes open (2 minutes) and eyes closed. Only the resting eyes-open occipital (Oz coded as O1 O2) theta power was higher in MS (uncorrected p = 0.017; FDR q = 0.524); the paper calls this isolated and speculative, and all other resting bands showed no difference. Only the resting result is coded; the standing-balance task results are excluded. Pilot study with a very small sample.",
+      detail: "7 people with MS and 7 matched controls; resting EEG eyes open (2 minutes) and eyes closed. Only the resting eyes-open occipital (Oz coded as O1 O2) theta power was higher in MS (uncorrected p = 0.017; FDR q = 0.524); the paper calls this isolated and speculative, and all other resting bands showed no difference. Only the resting result is coded; the standing-balance task results are excluded. Pilot study with a very small sample. The resting result comes from a separate 2-minute seated eyes-open recording made before the balance tasks (occipital ROI O1, Oz, O2), not from the stance data.",
       design: "Case-control (pilot)",
       cite: { authors: "Braunsmann L, Stolz I, Rosiny F, Pöhlau D, Abeln V, Schneider S, et al.", year: 2026, title: "Increased visual reliance for postural control in multiple sclerosis: preliminary evidence from task-related cortical desynchronization", journal: "Front Neurol" }
     },
@@ -3770,6 +3720,46 @@ window.NF_DATA = {
       detail: "58 patients with acute supratentorial ischaemic stroke, 9 with delirium (DSM-5) and 49 without, 2-minute eyes-closed resting 21-channel EEG (10-20 layout). Delta and theta power were higher in the delirium group in all predefined regions (frontal, central, occipital), with significance in each hemisphere and across both. Alpha and beta were not significantly different. Sites are coded as whole-head because the effect was in all regions. The single-channel DeltaScan result (diagnostic accuracy) is not coded. Diagnostic accuracy study with 9 delirium cases, so the estimates are imprecise.",
       design: "Diagnostic accuracy study (case-control)",
       cite: { authors: "Hermann G, Baumgarte F, Welzel J, Nydahl P, Kuhlenbäumer G, Margraf NG", year: 2024, title: "Electroencephalography based delirium screening in acute supratentorial stroke", journal: "BMC neurology" }
+    },
+    {
+      id: "pm-22939462", rec: { eyes: "both", power: "absolute", icd11: "6A7", dx: "DSM-IV" }, source: "full-text", condition: "depression", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 96, k: null },
+      sites: ["F7","F3","F4","F8","P3","P4","T5","T6"], bands: ["alpha"], direction: "up", evidence: "preliminary",
+      changes: { alpha: "up" }, symptoms: ["lowmood"],
+      claim: "Unmedicated MDD: more frontal and parietal alpha power than controls at rest, mainly in males",
+      detail: "53 unmedicated adults with MDD (SCID, DSM-IV-TR) and 43 controls, 3 min eyes-closed and 3 min eyes-open resting EEG, absolute ln-transformed power at F3/F4, F7/F8, P3/P4 and P7/P8 (T5/T6). Frontal alpha and parietal alpha2 and total alpha power were higher in MDD, most clearly in depressed men, and midfrontal alpha2 asymmetry showed relative left frontal hypoactivity. Effects depended on the reference montage; the sLORETA subgenual cingulate theta result is a deep source and is not used.",
+      design: "Case-control",
+      cite: { authors: "Jaworska N, et al.", year: 2012, title: "α Power, α asymmetry and anterior cingulate cortex activity in depressed males and females", journal: "J Psychiatr Res" }
+    },
+    {
+      id: "ins-hoedlmoser-2008", rec: { eyes: "unclear", power: "n/a", icd11: "none", dx: "unclear" }, source: "abstract", condition: "cognition", type: "protocol",
+      metrics: { design: 4, control: "active", blinded: null, n: 27, k: null },
+      sites: ["C3","Cz","C4"], bands: ["smr"], direction: "up", evidence: "preliminary",
+      changes: { smr: "up" }, symptoms: ["sleep","memory"],
+      claim: "Healthy adults: SMR uptraining increased sleep spindles, shortened sleep onset and improved declarative recall",
+      detail: "27 healthy adults randomised to 10 sessions of SMR (12-15 Hz) uptraining or random-frequency training (active control). SMR training raised relative 12-15 Hz amplitude and, in a later nap, increased sleep spindles and shortened sleep onset latency, and improved immediate cued recall. Taken from the abstract; the training electrode sites were not checked against the full text, and the participants did not have insomnia.",
+      design: "Randomised controlled study (healthy adults)",
+      cite: { authors: "Hoedlmoser K, Pecherstorfer T, Gruber G, et al.", year: 2008, title: "Instrumental conditioning of human sensorimotor rhythm (12–15 Hz) and its impact on sleep as well as declarative learning", journal: "Sleep" }
+    },
+    {
+      id: "pm-38280864", rec: { eyes: "closed", power: "relative", icd11: "8A00", dx: "research criteria" }, source: "full-text", condition: "parkinsons", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 93, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4"], bands: ["delta","beta"], direction: "ratio", evidence: "preliminary",
+      changes: { delta: "up", beta: "down" }, symptoms: ["anxiety"],
+      claim: "Within Parkinson's: anxious patients had more fronto-parietal delta, less frontal beta than non-anxious patients",
+      detail: "68 people with Parkinson's (UK Brain Bank criteria; 18 with clinically relevant anxiety, BAI above 13) and 25 healthy controls, 12 min eyes-closed resting high-density EEG at baseline. Relative delta power was higher over frontal and parietal sites and relative beta lower over frontal sites in anxious patients than in both non-anxious patients and controls. Connectivity results and the 3- and 5-year follow-up are not used; the anxious subgroup is small.",
+      design: "Case-control (within Parkinson's)",
+      cite: { authors: "Yassine S, et al.", year: 2024, title: "Electrophysiological signatures of anxiety in Parkinson's disease", journal: "Transl Psychiatry" }
+    },
+    {
+      id: "pm-40792462", rec: { eyes: "closed", power: "absolute", icd11: "6A20", dx: "DSM-5" }, source: "full-text", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 134, k: null },
+      sites: [], bands: ["theta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia: more resting theta (4-8 Hz) over widespread scalp regions than controls",
+      detail: "66 neurotypical controls and 68 medicated patients with schizophrenia (DSM-5), supine eyes-closed resting EEG from 19 electrodes. Resting power at 4-8 Hz was higher in patients in one cluster spanning frontal, central, temporal, parietal and occipital sites, so the result is recorded as whole-head. The 4-10 Hz, beta and gamma increases were in induced power during the auditory steady-state task and are not used.",
+      design: "Case-control",
+      cite: { authors: "Mitoma R, et al.", year: 2025, title: "Abnormal spontaneous activity and rest-task shift in schizophrenia", journal: "Psychiatry Clin Neurosci" }
     }
   ],
 
@@ -4475,7 +4465,7 @@ window.NF_DATA = {
       bands: ["delta","theta","alpha","beta","gamma"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "down", theta: "mixed", alpha: "mixed", beta: "mixed", gamma: "mixed" }, symptoms: ["craving","impulsivity"],
       claim: "Etomidate use disorder: less delta phase-locking between parietal and occipital/temporal sites than controls",
-      detail: "54 men with etomidate use disorder vs 46 controls, eyes-closed resting EEG (PLV between ROI time series). Source-localised (ROI time series; method not named in the passages read); mapped to overlying scalp region. Delta-band network decoupling was significant; other bands showed no group difference. The simultaneous fNIRS results are not recorded here.",
+      detail: "54 men with etomidate use disorder vs 46 controls, eyes-closed resting EEG (PLV between ROI time series). Source-localised (ROI time series; method not named in the passages read); mapped to overlying scalp region. Delta-band network decoupling was significant; other bands showed no group difference. The simultaneous fNIRS results are not recorded here. Correction: the full text names the source method as sLORETA in Brainstorm (OpenMEEG head model), with ROI time series from the 68 Desikan-Killiany cortical regions.",
       design: "Case-control",
       cite: { authors: "Le J, et al.", year: 2026, title: "Multimodal evidence for large-scale network imbalance in etomidate use disorder", journal: "Int J Neuropsychopharmacol" }
     },
