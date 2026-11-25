@@ -285,7 +285,8 @@ with the batch.
 
 # Part 3: Recording details (enrichment pass)
 
-Field rules v2 (25 Nov 2026), revised after calibration 1 failed (eyes, icd11 and dx agreement 80%).
+Field rules v2 (25 Nov 2026), revised after calibration 1 failed (eyes, icd11 and dx agreement 80%). Calibration 2 passed
+(eyes 100%, power 90%, icd11 85%, dx 95%; `validation/calibration/`). v2.1 clarifications from calibration 2, below, are marked (v2.1).
 
 Goal: add, for every entry already in the atlas, the details reviewers need for sensitivity analyses: eye state,
 absolute or relative power, the ICD-11 group of the patient sample and the diagnostic system used. Also fill a missing
@@ -317,7 +318,8 @@ Same stopping rule, branches, merging and sync as Part 1. Batches of 10. Decisio
   `quote` = a few words from the paper showing it (required unless `unclear`).
 - **power**: `absolute`, `relative`, `both`, `ratio-only` (only a band ratio such as theta/beta is reported), `unclear`.
   `absolute` also when power is in µV²/Hz, dB or log units and never divided by total power; `relative` when it is
-  expressed as a share (%) of total power. If the paper does not make this clear, `unclear`.
+  expressed as a share (%) of total power. If the paper does not make this clear, `unclear`. (v2.1) Code the measure
+  the statistics were run on: if figures show both but the tests use one, use that one; `both` only when both were tested.
   Use `n/a` for protocol (neurofeedback) entries. Connectivity entries get `n/a` automatically.
 - **icd11**: the group the patients actually belong to, from the allowed list. Alzheimer's: `6D80` dementia due to
   Alzheimer disease, `6D71` MCI / mild neurocognitive disorder, `6D80+6D71` when the finding pools both. Schizophrenia:
@@ -328,13 +330,16 @@ Same stopping rule, branches, merging and sync as Part 1. Batches of 10. Decisio
   disorder: `6A60-6A61`. TBI: `NA07.0` when the sample is concussion / mild TBI only, otherwise `NA07`.
   `subclinical` when nobody was diagnosed: groups defined by a scale score, by habit or exposure (e.g. smokers chosen by
   smoking history, heavy drinkers by intake), students or volunteers. `unclear` when the group cannot be told.
+  (v2.1) When the sample has several patient groups, code the group the entry's claim is about (e.g. AD in an AD + FTD
+  dataset is `6D80`). Transdiagnostic cohorts analysed on continuous symptom scores: `unclear`.
 - **dx**: how the patients were diagnosed. `DSM-III`, `DSM-IV` (incl. IV-TR, and SCID/MINI interviews based on it),
   `DSM-5` (incl. 5-TR), `ICD-10`, `ICD-11`, `research criteria` (named research criteria such as NIA-AA, NINCDS-ADRDA,
   Petersen MCI, UK Brain Bank, MDS, ILAE, ICHD, ACRM, or a research cohort that applies them, e.g. ADNI),
   `clinical diagnosis` (by a clinician, criteria not named), `scale cut-off` (group defined by a score threshold),
   `mixed` (several different routes in one sample, or a review pooling studies that used different systems; a review
   that admitted only one system gets that system), `unclear`. Use `unclear` only when none of these can be read from
-  the paper.
+  the paper. (v2.1) DSM-III-R counts as `DSM-III`; DSM criteria confirmed with research instruments (ADOS, ADI-R,
+  SCID, MINI, DIVA) get the DSM edition; two routes that share one named research criterion get `research criteria`.
 - **n**: total participants in the comparison (patients + controls), only if the entry's n is null and the paper
   states it. Otherwise `null`. For reviews and meta-analyses, leave `null`.
 - **Abstract-only papers** will often be `unclear` for eyes and power. That is the right answer; do not guess.

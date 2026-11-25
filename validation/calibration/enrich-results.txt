@@ -1,0 +1,21 @@
+Entries in both files: 20 (only in first: 0, only in second: 0)
+
+eyes    80% agree  differ: pm-35182242 [both vs open]; pm-36057818 [both vs unclear]; pm-36890138 [both vs closed]; dep-vandervinne-2017 [unclear vs closed]
+power   95% agree  differ: pm-39799666 [unclear vs absolute]
+icd11   80% agree  differ: pm-39799666 [6a20 vs 6a2]; pm-36890138 [subclinical vs 6c4a]; pm-15705347 [subclinical vs 6a7]; tbi-nuwer-2005 [na07 vs na07.0]
+dx      80% agree  differ: pm-35699268 [unclear vs mixed]; pm-36057818 [unclear vs research criteria]; pm-40413989 [unclear vs scale cut-off]; dep-vandervinne-2017 [mixed vs dsm-iv]
+n       95% agree (reported, not gated)  differ: pm-39449097 [null vs 217]
+pmid   100% agree (reported, not gated)
+
+FAIL: threshold 85% on eyes, power, icd11 and dx.
+
+Entries in both files: 20 (only in first: 0, only in second: 0)
+
+eyes   100% agree
+power   90% agree  differ: pm-42217475 [both vs relative]; pm-33544703 [absolute vs relative]
+icd11   85% agree  differ: pm-40389648-fc [6d8 vs 6d80]; pm-33544703 [6d80+6d71 vs 6d80]; pm-42347931 [unclear vs subclinical]
+dx      95% agree  differ: pm-33544703 [mixed vs research criteria]
+n       95% agree (reported, not gated)  differ: pm-33544703 [null vs 81]
+pmid    95% agree (reported, not gated)  differ: pd-klassen-2011 [null vs 21633128]
+
+PASS: threshold 85% on eyes, power, icd11 and dx.

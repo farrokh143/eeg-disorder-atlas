@@ -1,0 +1,20 @@
+{"id":"pm-35182242","eyes":"both","power":"n/a","icd11":"6A05","dx":"DSM-IV","n":null,"pmid":"35182242","quote":"resting EEG during eyes-closed (EC) and eyes-open (EO)"}
+{"id":"pm-35699268","eyes":"both","power":"unclear","icd11":"6C4","dx":"unclear","n":null,"pmid":"35699268","quote":"alternating 1-minute segments of eyes open (EO) and eyes closed (EC)"}
+{"id":"pm-39449097","eyes":"closed","power":"absolute","icd11":"6D80+6D71","dx":"unclear","n":null,"pmid":"39449097","quote":"One-minute resting-state eyes-closed EEG data"}
+{"id":"pm-23249444","eyes":"both","power":"both","icd11":"6A05","dx":"clinical diagnosis","n":null,"pmid":"23249444","quote":"resting-state with eyes-open and eyes-closed conditions"}
+{"id":"pm-39799666","eyes":"open","power":"unclear","icd11":"6A20","dx":"DSM-IV","n":null,"pmid":"39799666","quote":"instructed to keep their eyes open"}
+{"id":"pm-36057818","eyes":"both","power":"relative","icd11":"subclinical","dx":"unclear","n":null,"pmid":"36057818","quote":"eyes closed (EC; 30 s) and opened (EO; 30 s)"}
+{"id":"pm-42872911-fc","eyes":"closed","power":"n/a","icd11":"6C4","dx":"DSM-5","n":null,"pmid":"42872911","quote":"instructions to close their eyes"}
+{"id":"pm-36890138","eyes":"both","power":"relative","icd11":"subclinical","dx":"unclear","n":null,"pmid":"36890138","quote":"three minutes during eyes-open and three minutes during eyes-closed"}
+{"id":"pm-37955596","eyes":"unclear","power":"unclear","icd11":"8A6","dx":"unclear","n":null,"pmid":"37955596"}
+{"id":"pm-27001559","eyes":"unclear","power":"unclear","icd11":"6A20","dx":"unclear","n":null,"pmid":"27001559"}
+{"id":"pm-40413989","eyes":"unclear","power":"unclear","icd11":"subclinical","dx":"unclear","n":null,"pmid":"40413989"}
+{"id":"pm-26392114","eyes":"unclear","power":"n/a","icd11":"6A7","dx":"unclear","n":null,"pmid":"26392114"}
+{"id":"pm-12705421","eyes":"closed","power":"absolute","icd11":"6C46","dx":"unclear","n":null,"pmid":"12705421","quote":"EEGs were recorded in the eyes-closed resting state"}
+{"id":"pm-38969018","eyes":"closed","power":"unclear","icd11":"subclinical","dx":"unclear","n":null,"pmid":"38969018","quote":"eyes-closed rsEEG were recorded"}
+{"id":"pm-40059173-fc","eyes":"closed","power":"n/a","icd11":"6D80+6D71","dx":"ICD-10","n":null,"pmid":"40059173","quote":"seated with eyes closed for 5 min"}
+{"id":"pm-15705347","eyes":"unclear","power":"unclear","icd11":"subclinical","dx":"unclear","n":null,"pmid":"15705347"}
+{"id":"dep-baehr-2001","eyes":"unclear","power":"n/a","icd11":"6A7","dx":"unclear","n":null,"pmid":null}
+{"id":"tbi-nuwer-2005","eyes":"unclear","power":"unclear","icd11":"NA07","dx":"mixed","n":null,"pmid":"16029958"}
+{"id":"asd-pineda-2008","eyes":"unclear","power":"n/a","icd11":"6A02","dx":"unclear","n":null,"pmid":null}
+{"id":"dep-vandervinne-2017","eyes":"unclear","power":"unclear","icd11":"6A7","dx":"mixed","n":null,"pmid":"28761811"}

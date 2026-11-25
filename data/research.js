@@ -103,7 +103,7 @@ window.NF_DATA = {
       cite: { authors: "Babiloni C, Blinowska K, Bonanni L, et al.", year: 2020, title: "What electrophysiology tells us about Alzheimer's disease: a window into the synchronization and connectivity of brain neurons", journal: "Neurobiology of Aging" }
     },
     {
-      id: "ad-jelic-2000", source: "curated", condition: "alzheimers", type: "biomarker",
+      id: "ad-jelic-2000", rec: { eyes: "unclear", power: "relative", icd11: "6D71", dx: "unclear" }, source: "curated", condition: "alzheimers", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: 27, k: null },
       sites: ["T3","T5","O1","T4","T6","O2"], bands: ["theta","alpha","beta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", beta: "down", alpha: "down" }, symptoms: ["memory","cogdecline"],
@@ -125,7 +125,7 @@ window.NF_DATA = {
     },
     /* ---------------- Parkinson's ---------------- */
     {
-      id: "pd-klassen-2011", source: "curated", condition: "parkinsons", type: "biomarker",
+      id: "pd-klassen-2011", rec: { eyes: "unclear", power: "relative", icd11: "8A00", dx: "unclear" }, source: "curated", condition: "parkinsons", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: null, k: null },
       sites: ["O1","O2","P3","P4"], bands: ["alpha","theta"], direction: "down", evidence: "moderate",
       changes: { alpha: "down", theta: "up" }, symptoms: ["cogdecline","motor"],
@@ -169,8 +169,8 @@ window.NF_DATA = {
     },
     /* ---------------- Alcohol & substance use ---------------- */
     {
-      id: "sud-rangaswamy-2002", source: "curated", condition: "sud", type: "biomarker",
-      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      id: "sud-rangaswamy-2002", rec: { eyes: "closed", power: "absolute", icd11: "6C40", dx: "unclear" }, source: "curated", condition: "sud", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 614, k: null },
       sites: ["Cz","C3","C4","Fz"], bands: ["beta","hibeta"], direction: "up", evidence: "moderate",
       changes: { beta: "up", hibeta: "up" }, symptoms: ["craving"],
       claim: "Elevated resting beta in alcohol dependence",
@@ -425,7 +425,7 @@ window.NF_DATA = {
       cite: { authors: "Sterman MB", year: 2000, title: "Basic concepts and clinical findings in the treatment of seizure disorders with EEG operant conditioning", journal: "Clinical Electroencephalography" }
     },
     {
-      id: "epi-kotchoubey-2001", source: "curated", condition: "epilepsy", type: "protocol",
+      id: "epi-kotchoubey-2001", rec: { eyes: "unclear", power: "n/a", icd11: "8A6", dx: "unclear" }, source: "curated", condition: "epilepsy", type: "protocol",
       metrics: { design: 3, control: "active", blinded: null, n: null, k: null },
       sites: ["Cz"], bands: ["scp"], direction: "up", evidence: "moderate",
       changes: { scp: "regulate" }, symptoms: ["seizures"],
@@ -649,8 +649,8 @@ window.NF_DATA = {
       cite: { authors: "Lejko N, et al.", year: 2020, title: "Alpha Power and Functional Connectivity in Cognitive Decline: A Systematic Review and Meta-Analysis", journal: "J Alzheimers Dis" }
     },
     {
-      id: "pm-33544703", source: "full-text", condition: "alzheimers", type: "biomarker",
-      metrics: { design: 2, control: null, blinded: null, n: null, k: null },
+      id: "pm-33544703", rec: { eyes: "closed", power: "relative", icd11: "6D80", dx: "research criteria" }, source: "full-text", condition: "alzheimers", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 81, k: null },
       sites: [], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["memory","cogdecline"],
       claim: "AD (vs age-matched 60-90 controls): widespread more delta and theta, less alpha power",
@@ -1619,7 +1619,7 @@ window.NF_DATA = {
       cite: { authors: "Hobbs MJ, et al.", year: 2007, title: "EEG abnormalities in adolescent males with AD/HD", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-18662727", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "pm-18662727", rec: { eyes: "closed", power: "both", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["delta","theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "down", theta: "up", beta: "mixed" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1739,7 +1739,7 @@ window.NF_DATA = {
       cite: { authors: "Kitsune GL, et al.", year: 2015, title: "A Matter of Time: The Influence of Recording Context on EEG Spectral Power in Adolescents and Young Adults with ADHD", journal: "Brain Topogr" }
     },
     {
-      id: "pm-27464584", source: "full-text", condition: "adhd", type: "biomarker",
+      id: "pm-27464584", rec: { eyes: "open", power: "absolute", icd11: "6A05", dx: "DSM-IV" }, source: "full-text", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
       sites: ["F7","F3","Fz","F4","F8","C3","Cz","C4","P3","Pz","P4"], bands: ["theta"], direction: "up", evidence: "contested",
       changes: { theta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1909,7 +1909,7 @@ window.NF_DATA = {
       cite: { authors: "Enriquez-Geppert S, et al.", year: 2025, title: "Theta/Beta Ratio Neurofeedback Effects on Resting and Task-Related Theta Activity in Children with ADHD", journal: "Appl Psychophysiol Biofeedback" }
     },
     {
-      id: "pm-42347931", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "pm-42347931", rec: { eyes: "unclear", power: "unclear", icd11: "subclinical", dx: "unclear" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 2284, k: null },
       sites: [], bands: ["delta","theta","beta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up", beta: "up" }, symptoms: ["inattention","hyperactivity","impulsivity"],
@@ -2089,7 +2089,7 @@ window.NF_DATA = {
       cite: { authors: "Goldstein MR, et al.", year: 2015, title: "Topographic deficits in alpha-range resting EEG activity and steady state visual evoked responses in schizophrenia", journal: "Schizophr Res" }
     },
     {
-      id: "pm-26952695", source: "abstract", sample: "tikka-scz-60", condition: "schizophrenia", type: "biomarker",
+      id: "pm-26952695", rec: { eyes: "unclear", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "abstract", sample: "tikka-scz-60", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
       sites: ["Fp2","F4","F8","C4","T4","P4","T6","O2"], bands: ["gamma"], direction: "up", evidence: "preliminary",
       changes: { gamma: "up" }, symptoms: ["psychosis"],
@@ -2509,7 +2509,7 @@ window.NF_DATA = {
       cite: { authors: "Pierce S, et al.", year: 2021, title: "Associations between sensory processing and electrophysiological and neurochemical measures in children with ASD: an EEG-MRS study", journal: "J Neurodev Disord" }
     },
     {
-      id: "pm-34517813", source: "full-text", condition: "autism", type: "biomarker",
+      id: "pm-34517813", rec: { eyes: "open", power: "absolute", icd11: "6A02", dx: "DSM-IV" }, source: "full-text", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 280, k: null },
       sites: [], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["social"],
@@ -2699,7 +2699,7 @@ window.NF_DATA = {
       cite: { authors: "Fonseca E, et al.", year: 2022, title: "Interictal brain activity changes in temporal lobe epilepsy: A quantitative electroencephalogram analysis", journal: "Acta Neurol Scand" }
     },
     {
-      id: "pm-36442376", source: "abstract", condition: "epilepsy", type: "biomarker",
+      id: "pm-36442376", rec: { eyes: "unclear", power: "unclear", icd11: "8A6", dx: "unclear" }, source: "abstract", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 454, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","T3","T4"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["seizures"],
@@ -2719,7 +2719,7 @@ window.NF_DATA = {
       cite: { authors: "Segovia-Oropeza M, et al.", year: 2025, title: "Quantitative EEG signatures in patients with and without epilepsy development after a first seizure", journal: "Epilepsia Open" }
     },
     {
-      id: "pm-42217475", source: "full-text", condition: "epilepsy", type: "biomarker",
+      id: "pm-42217475", rec: { eyes: "closed", power: "relative", icd11: "8A6", dx: "research criteria" }, source: "full-text", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 180, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down", beta: "down" }, symptoms: ["seizures"],
@@ -2979,7 +2979,7 @@ window.NF_DATA = {
       cite: { authors: "Herning RI, et al.", year: 1997, title: "Neurophysiological signs of cocaine dependence: increased electroencephalogram beta during withdrawal", journal: "Biol Psychiatry" }
     },
     {
-      id: "pm-9224905", source: "abstract", condition: "sud", type: "biomarker",
+      id: "pm-9224905", rec: { eyes: "unclear", power: "unclear", icd11: "6C40", dx: "DSM-III" }, source: "abstract", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 28, k: null },
       sites: [], bands: ["hibeta"], direction: "up", evidence: "preliminary",
       changes: { hibeta: "up" }, symptoms: ["craving"],
@@ -3029,7 +3029,7 @@ window.NF_DATA = {
       cite: { authors: "Franke LM, et al.", year: 2016, title: "Distinction in EEG slow oscillations between chronic mild traumatic brain injury and PTSD", journal: "Int J Psychophysiol" }
     },
     {
-      id: "cand-ptsd-eneuro-2020", source: "full-text", sample: "clancy-ptsd-69", condition: "ptsd", type: "biomarker",
+      id: "cand-ptsd-eneuro-2020", rec: { eyes: "open", power: "unclear", icd11: "6B40", dx: "DSM-5" }, source: "full-text", sample: "clancy-ptsd-69", condition: "ptsd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 69, k: null },
       sites: ["O1","O2","Pz","Fz"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["hyperarousal"],
@@ -3119,7 +3119,7 @@ window.NF_DATA = {
       cite: { authors: "Tsounis S, et al.", year: 1992, title: "Alpha rhythm power and the effect of photic stimulation in migraine with brain mapping", journal: "Clin Electroencephalogr" }
     },
     {
-      id: "pm-18679787", source: "abstract", condition: "migraine", type: "biomarker",
+      id: "pm-18679787", rec: { eyes: "closed", power: "absolute", icd11: "8A80", dx: "unclear" }, source: "abstract", condition: "migraine", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 40, k: null },
       sites: ["O2","Fz"], bands: ["alpha"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "mixed" }, symptoms: ["headache"],
@@ -3455,7 +3455,7 @@ window.NF_DATA = {
       cite: { authors: "Cao J, et al.", year: 2025, title: "Identification of Alzheimer's disease brain networks based on EEG phase synchronization", journal: "Biomed Eng Online" }
     },
     {
-      id: "pm-40389648-fc", source: "full-text", sample: "ds-miltiadous", condition: "alzheimers", type: "connectivity",
+      id: "pm-40389648-fc", rec: { eyes: "closed", power: "n/a", icd11: "6D80", dx: "unclear" }, source: "full-text", sample: "ds-miltiadous", condition: "alzheimers", type: "connectivity",
       measure: "phase", pairs: [["frontal","frontal"],["frontal","occipital"]],
       metrics: { design: 2, control: null, blinded: null, n: 88, k: null },
       bands: ["alpha","beta"], direction: "down", evidence: "preliminary",
@@ -3488,7 +3488,7 @@ window.NF_DATA = {
       cite: { authors: "Azami H, et al.", year: 2026, title: "Three-order interactions in the alpha band of default mode network EEGs based on O-information rate: insights from aging and Alzheimer's disease", journal: "Alzheimers Res Ther" }
     },
     {
-      id: "pm-22384265-fc", source: "full-text", condition: "depression", type: "connectivity",
+      id: "pm-22384265-fc", rec: { eyes: "closed", power: "n/a", icd11: "6A7", dx: "DSM-IV" }, source: "full-text", condition: "depression", type: "connectivity",
       measure: "coherence", pairs: [["frontal","temporal"],["frontal","parietal"],["frontal","occipital"],["frontal","frontal"],["temporal","temporal"]],
       metrics: { design: 2, control: null, blinded: null, n: 158, k: null },
       bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
@@ -3686,7 +3686,7 @@ window.NF_DATA = {
       cite: { authors: "Andreou C, et al.", year: 2015, title: "Increased Resting-State Gamma-Band Connectivity in First-Episode Schizophrenia", journal: "Schizophr Bull" }
     },
     {
-      id: "pm-29202390-fc", source: "abstract", condition: "schizophrenia", type: "connectivity",
+      id: "pm-29202390-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "connectivity",
       measure: "phase", pairs: [["frontal","frontal"]],
       metrics: { design: 2, control: null, blinded: null, n: 52, k: null },
       bands: ["beta"], direction: "down", evidence: "preliminary",
@@ -3697,7 +3697,7 @@ window.NF_DATA = {
       cite: { authors: "Takahashi T, et al.", year: 2018, title: "Abnormal functional connectivity of high-frequency rhythms in drug-naïve schizophrenia", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-37109695-fc", source: "full-text", condition: "schizophrenia", type: "connectivity",
+      id: "pm-37109695-fc", rec: { eyes: "closed", power: "n/a", icd11: "6A2", dx: "DSM-5" }, source: "full-text", condition: "schizophrenia", type: "connectivity",
       measure: "phase", pairs: [["temporal","occipital"]],
       metrics: { design: 2, control: null, blinded: null, n: 72, k: null },
       bands: ["beta","gamma"], direction: "up", evidence: "preliminary",
@@ -3829,7 +3829,7 @@ window.NF_DATA = {
       cite: { authors: "Robbie JC, et al.", year: 2016, title: "Coherence in children with AD/HD and excess alpha power in their EEG", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-35235255-fc", source: "abstract", condition: "adhd", type: "connectivity",
+      id: "pm-35235255-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "connectivity",
       measure: "phase", pairs: [["frontal","frontal"],["central","central"]],
       metrics: { design: 2, control: null, blinded: null, n: 78, k: null },
       bands: ["theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
