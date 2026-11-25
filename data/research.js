@@ -3467,6 +3467,16 @@ window.NF_DATA = {
       detail: "28 people with MS and 22 age- and sex-matched controls, 10 minutes of resting EEG with 20 scalp electrodes, FFT power. Theta power was higher in frontotemporal-central regions; the paper's theta and alpha coherence results are connectivity and are not coded here. Differences were most marked with cognitive involvement. Taken from the abstract; not checked in the full text. Case-control study.",
       design: "Case-control",
       cite: { authors: "Leocani L, Locatelli T, Martinelli V, Rovaris M, Falautano M, Filippi M, et al.", year: 2000, title: "Electroencephalographic coherence analysis in multiple sclerosis: correlation with clinical, neuropsychological, and MRI findings", journal: "J Neurol Neurosurg Psychiatry" }
+    },
+    {
+      id: "pm-42876599", source: "full-text", condition: "ms", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 14, k: null },
+      sites: ["O1","O2"], bands: ["theta"], direction: "up", evidence: "contested",
+      changes: { theta: "up" }, symptoms: ["motor"],
+      claim: "MS: higher resting eyes-open occipital theta than controls, not significant after FDR correction",
+      detail: "7 people with MS and 7 matched controls; resting EEG eyes open (2 minutes) and eyes closed. Only the resting eyes-open occipital (Oz coded as O1 O2) theta power was higher in MS (uncorrected p = 0.017; FDR q = 0.524); the paper calls this isolated and speculative, and all other resting bands showed no difference. Only the resting result is coded; the standing-balance task results are excluded. Pilot study with a very small sample.",
+      design: "Case-control (pilot)",
+      cite: { authors: "Braunsmann L, Stolz I, Rosiny F, Pöhlau D, Abeln V, Schneider S, et al.", year: 2026, title: "Increased visual reliance for postural control in multiple sclerosis: preliminary evidence from task-related cortical desynchronization", journal: "Front Neurol" }
     }
   ],
 
