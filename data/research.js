@@ -2492,7 +2492,7 @@ window.NF_DATA = {
       cite: { authors: "Clarke AR, et al.", year: 2016, title: "EEG activity in children with Asperger's Syndrome", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-31669326", source: "abstract", condition: "autism", type: "biomarker",
+      id: "pm-31669326", rec: { eyes: "open", power: "unclear", icd11: "6A02", dx: "unclear" }, source: "abstract", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 64, k: null },
       sites: ["Fz","Cz","Pz"], bands: ["theta"], direction: "down", evidence: "preliminary",
       changes: { theta: "down" }, symptoms: ["social"],
@@ -2502,7 +2502,7 @@ window.NF_DATA = {
       cite: { authors: "Hornung T, et al.", year: 2019, title: "Dopaminergic hypo-activity and reduced theta-band power in autism spectrum disorder: A resting-state EEG study", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-33407072", source: "full-text", condition: "autism", type: "biomarker",
+      id: "pm-33407072", rec: { eyes: "open", power: "absolute", icd11: "6A02", dx: "DSM-5" }, source: "full-text", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 62, k: null },
       sites: ["Pz"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["social"],
@@ -2522,7 +2522,7 @@ window.NF_DATA = {
       cite: { authors: "Neuhaus E, et al.", year: 2021, title: "Resting state EEG in youth with ASD: age, sex, and relation to phenotype", journal: "J Neurodev Disord" }
     },
     {
-      id: "pm-35585637", source: "full-text", condition: "autism", type: "biomarker",
+      id: "pm-35585637", rec: { eyes: "both", power: "unclear", icd11: "6A02", dx: "clinical diagnosis" }, source: "full-text", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 411, k: null },
       sites: [], bands: ["alpha"], direction: "ratio", evidence: "contested",
       changes: { alpha: "mixed" }, symptoms: ["social"],
@@ -2532,7 +2532,7 @@ window.NF_DATA = {
       cite: { authors: "Garcés P, et al.", year: 2022, title: "Resting state EEG power spectrum and functional connectivity in autism: a cross-sectional analysis", journal: "Mol Autism" }
     },
     {
-      id: "pm-37172019", source: "abstract", condition: "autism", type: "biomarker",
+      id: "pm-37172019", rec: { eyes: "open", power: "both", icd11: "6A02", dx: "unclear" }, source: "abstract", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["delta","theta","alpha","beta","gamma"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "mixed", theta: "up", alpha: "up", beta: "up", gamma: "up" }, symptoms: ["social"],
@@ -2542,7 +2542,7 @@ window.NF_DATA = {
       cite: { authors: "Zhao Q, et al.", year: 2024, title: "Resting-state EEG patterns of preschool-aged boys with autism spectrum disorder: A pilot study", journal: "Appl Neuropsychol Child" }
     },
     {
-      id: "pm-37330940", source: "full-text", condition: "autism", type: "biomarker",
+      id: "pm-37330940", rec: { eyes: "open", power: "both", icd11: "6A02", dx: "clinical diagnosis" }, source: "full-text", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 32, k: null },
       sites: [], bands: ["hibeta","gamma","theta"], direction: "ratio", evidence: "preliminary",
       changes: { hibeta: "up", gamma: "up", theta: "down" }, symptoms: ["social"],
@@ -2552,7 +2552,7 @@ window.NF_DATA = {
       cite: { authors: "Angulo-Ruiz BY, et al.", year: 2023, title: "Linear and Non-linear Analyses of EEG in a Group of ASD Children During Resting State Condition", journal: "Brain Topogr" }
     },
     {
-      id: "pm-38607475", source: "abstract", condition: "autism", type: "biomarker",
+      id: "pm-38607475", rec: { eyes: "unclear", power: "unclear", icd11: "6A02", dx: "unclear" }, source: "abstract", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 106, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["gamma"], direction: "ratio", evidence: "contested",
       changes: { gamma: "mixed" }, symptoms: ["social"],
@@ -2562,7 +2562,7 @@ window.NF_DATA = {
       cite: { authors: "Mukerji CE, et al.", year: 2025, title: "Resting Frontal Gamma Power is Associated with Both Expressive Language and Non-verbal Cognitive Abilities in Young Autistic Children", journal: "J Autism Dev Disord" }
     },
     {
-      id: "pm-38901364", source: "abstract", condition: "autism", type: "biomarker",
+      id: "pm-38901364", rec: { eyes: "unclear", power: "absolute", icd11: "6A02", dx: "unclear" }, source: "abstract", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 47, k: null },
       sites: ["F7","F8","F3","F4","T5","T6","P3","P4"], bands: ["gamma"], direction: "down", evidence: "preliminary",
       changes: { gamma: "down" }, symptoms: ["social"],
@@ -2572,7 +2572,7 @@ window.NF_DATA = {
       cite: { authors: "Kakuszi B, et al.", year: 2024, title: "Alterations in resting-state gamma-activity is adults with autism spectrum disorder: A High-Density EEG study", journal: "Psychiatry Res" }
     },
     {
-      id: "pm-39251926", source: "full-text", condition: "autism", type: "biomarker",
+      id: "pm-39251926", rec: { eyes: "unclear", power: "unclear", icd11: "6A02", dx: "DSM-5" }, source: "full-text", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 101, k: null },
       sites: [], bands: ["beta","gamma"], direction: "up", evidence: "preliminary",
       changes: { beta: "up", gamma: "up" }, symptoms: ["social"],
@@ -2582,7 +2582,7 @@ window.NF_DATA = {
       cite: { authors: "Proteau-Lemieux M, et al.", year: 2024, title: "Specific EEG resting state biomarkers in FXS and ASD", journal: "J Neurodev Disord" }
     },
     {
-      id: "pm-39555754", source: "full-text", condition: "autism", type: "biomarker",
+      id: "pm-39555754", rec: { eyes: "open", power: "unclear", icd11: "6A02", dx: "DSM-5" }, source: "full-text", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 52, k: null },
       sites: ["O1","O2"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["social"],
@@ -2592,7 +2592,7 @@ window.NF_DATA = {
       cite: { authors: "Murray SO, et al.", year: 2025, title: "Increased alpha power in autistic adults: Relation to sensory behaviors and cortical volume", journal: "Autism Res" }
     },
     {
-      id: "pm-41101705", source: "full-text", condition: "autism", type: "biomarker",
+      id: "pm-41101705", rec: { eyes: "open", power: "unclear", icd11: "6A02", dx: "mixed" }, source: "full-text", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 310, k: null },
       sites: ["F3","F4"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["social"],
