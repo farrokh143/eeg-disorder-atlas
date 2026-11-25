@@ -30,7 +30,7 @@ or to offer options. After each batch, start the next one straight away.
    Multiple sclerosis, Intellectual disability, Learning disorders, Stroke. Their rows are mostly `to-review`
    (not yet screened): decide them in the same batch. `exclude` from the abstract when it clearly fails the
    criteria; otherwise read the full text and `include` or `exclude`. Condition ids: `ocd`, `bipolar`, `lewy`, `ftd`,
-   `ms`, `intellectual`, `learning`, `stroke`. Extra symptom ids: `mania`, `compulsions`. A sample of patients with the
+   `ms`, `intellectual`, `learning`, `stroke`. Extra symptom ids: `mania`, `compulsions`, `reading` (dyslexia, reading and learning difficulty), `vertigo` (dizziness), `delirium`. A sample of patients with the
    new disorder against healthy controls is required, as for every condition.
    Run 3 screening calibration (Haiku vs Opus, 20 papers) passed on the include decision (90%), but band directions
    matched for only 1 of 3 papers both included. Rule added: **alpha reactivity** (the eyes-closed to eyes-open
