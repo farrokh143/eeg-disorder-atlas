@@ -3919,7 +3919,7 @@ window.NF_DATA = {
       cite: { authors: "Jungrungrueang T, et al.", year: 2025, title: "Translational approach for dementia subtype classification using convolutional neural network based on EEG connectome dynamics", journal: "Sci Rep" }
     },
     {
-      id: "pm-41027526-fc", source: "abstract", condition: "alzheimers", type: "connectivity",
+      id: "pm-41027526-fc", rec: { eyes: "both", power: "n/a", icd11: "6D71", dx: "unclear" }, source: "abstract", condition: "alzheimers", type: "connectivity",
       measure: "coherence", pairs: [["central","central"]],
       metrics: { design: 2, control: null, blinded: null, n: 83, k: null },
       bands: ["gamma"], direction: "up", evidence: "preliminary",
@@ -3930,7 +3930,7 @@ window.NF_DATA = {
       cite: { authors: "Vlachos I, et al.", year: 2025, title: "Resting EEG partial coherence demonstrates increased γ range central functional connectivity in amnestic mild cognitive impairment", journal: "Brain Res" }
     },
     {
-      id: "pm-42449404-fc", source: "full-text", condition: "alzheimers", type: "connectivity",
+      id: "pm-42449404-fc", rec: { eyes: "closed", power: "n/a", icd11: "6D80", dx: "clinical diagnosis" }, source: "full-text", condition: "alzheimers", type: "connectivity",
       measure: "other", pairs: [["frontal","parietal"]],
       metrics: { design: 2, control: null, blinded: null, n: 169, k: null },
       bands: ["alpha"], direction: "down", evidence: "preliminary",
@@ -3952,7 +3952,7 @@ window.NF_DATA = {
       cite: { authors: "Leuchter AF, et al.", year: 2012, title: "Resting-state quantitative electroencephalography reveals increased neurophysiologic connectivity in depression", journal: "PLoS One" }
     },
     {
-      id: "pm-24674895-fc", source: "abstract", condition: "depression", type: "connectivity",
+      id: "pm-24674895-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "connectivity",
       measure: "phase", pairs: [["frontal","frontal"]],
       metrics: { design: 2, control: null, blinded: null, n: 120, k: null },
       bands: ["alpha"], direction: "up", evidence: "preliminary",
@@ -3963,7 +3963,7 @@ window.NF_DATA = {
       cite: { authors: "Olbrich S, et al.", year: 2014, title: "Functional connectivity in major depression: increased phase synchronization between frontal cortical EEG-source estimates", journal: "Psychiatry Res" }
     },
     {
-      id: "pm-28557820-fc", source: "abstract", condition: "depression", type: "connectivity",
+      id: "pm-28557820-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "connectivity",
       measure: "coherence", pairs: [["T5","P3"]],
       metrics: { design: 2, control: null, blinded: null, n: 45, k: null },
       bands: ["theta"], direction: "down", evidence: "preliminary",
@@ -3974,7 +3974,7 @@ window.NF_DATA = {
       cite: { authors: "Ahn J, et al.", year: 2017, title: "Features of Resting-State Electroencephalogram Theta Coherence in Somatic Symptom Disorder Compared With Major Depressive Disorder: A Pilot Study", journal: "Psychosom Med" }
     },
     {
-      id: "pm-29397079-fc", source: "full-text", condition: "depression", type: "connectivity",
+      id: "pm-29397079-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6A7", dx: "unclear" }, source: "full-text", condition: "depression", type: "connectivity",
       measure: "phase", pairs: [["frontal","temporal"]],
       metrics: { design: 2, control: null, blinded: null, n: 174, k: null },
       bands: ["beta","hibeta"], direction: "up", evidence: "preliminary",
@@ -3985,7 +3985,7 @@ window.NF_DATA = {
       cite: { authors: "Whitton AE, et al.", year: 2018, title: "Electroencephalography Source Functional Connectivity Reveals Abnormal High-Frequency Communication Among Large-Scale Functional Networks in Depression", journal: "Biol Psychiatry Cogn Neurosci Neuroimaging" }
     },
     {
-      id: "pm-31038351-fc", source: "abstract", condition: "depression", type: "connectivity",
+      id: "pm-31038351-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "connectivity",
       measure: "coherence", pairs: [["frontal","frontal"]],
       metrics: { design: 2, control: null, blinded: null, n: 39, k: null },
       bands: ["theta","alpha"], direction: "down", evidence: "preliminary",
@@ -3996,7 +3996,7 @@ window.NF_DATA = {
       cite: { authors: "McVoy M, et al.", year: 2019, title: "Resting-State Quantitative Electroencephalography Demonstrates Differential Connectivity in Adolescents with Major Depressive Disorder", journal: "J Child Adolesc Psychopharmacol" }
     },
     {
-      id: "pm-33326893-fc", source: "abstract", condition: "depression", type: "connectivity",
+      id: "pm-33326893-fc", rec: { eyes: "unclear", power: "n/a", icd11: "subclinical", dx: "unclear" }, source: "abstract", condition: "depression", type: "connectivity",
       measure: "phase", pairs: [["F4","C4"],["T4","O1"],["Fp1","Fp2"],["frontal","occipital"],["central","occipital"],["frontal","central"]],
       metrics: { design: 2, control: null, blinded: null, n: 64, k: null },
       bands: ["theta","alpha"], direction: "up", evidence: "preliminary",
@@ -4007,7 +4007,7 @@ window.NF_DATA = {
       cite: { authors: "Dell'Acqua C, et al.", year: 2021, title: "Increased functional connectivity within alpha and theta frequency bands in dysphoria: A resting-state EEG study", journal: "J Affect Disord" }
     },
     {
-      id: "pm-38889861-fc", source: "abstract", condition: "depression", type: "connectivity",
+      id: "pm-38889861-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "connectivity",
       measure: "coherence", pairs: [["frontal","frontal"],["parietal","parietal"],["frontal","parietal"],["temporal","parietal"]],
       metrics: { design: 2, control: null, blinded: null, n: 319, k: null },
       bands: ["hibeta","delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
@@ -4018,7 +4018,7 @@ window.NF_DATA = {
       cite: { authors: "Ho SI, et al.", year: 2024, title: "EEG coherences of the default mode network among patients comorbid with major depressive disorder and anxiety symptoms", journal: "J Affect Disord" }
     },
     {
-      id: "pm-42902871-fc", source: "full-text", condition: "depression", type: "connectivity",
+      id: "pm-42902871-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6A7", dx: "DSM-IV" }, source: "full-text", condition: "depression", type: "connectivity",
       measure: "phase", pairs: [["frontal","parietal"],["frontal","occipital"],["frontal","central"],["temporal","parietal"],["central","occipital"],["frontal","frontal"]],
       metrics: { design: 2, control: null, blinded: null, n: 58, k: null },
       bands: ["theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
@@ -4029,7 +4029,7 @@ window.NF_DATA = {
       cite: { authors: "Rose SJ, et al.", year: 2026, title: "Multi-Metric EEG Connectivity and Graph Analysis Reveal Altered Resting-State Networks in Major Depressive Disorder", journal: "Brain Behav" }
     },
     {
-      id: "pm-27127785-fc", source: "full-text", condition: "autism", type: "connectivity",
+      id: "pm-27127785-fc", rec: { eyes: "unclear", power: "n/a", icd11: "6A02", dx: "unclear" }, source: "full-text", condition: "autism", type: "connectivity",
       measure: "coherence", pairs: [["central","central"],["frontal","frontal"]],
       metrics: { design: 2, control: null, blinded: null, n: 46, k: null },
       bands: ["alpha","theta"], direction: "ratio", evidence: "preliminary",
