@@ -2289,7 +2289,7 @@ window.NF_DATA = {
       cite: { authors: "Fenton GW, et al.", year: 1980, title: "EEG spectral analysis in schizophrenia", journal: "Br J Psychiatry" }
     },
     {
-      id: "pm-7893770", source: "abstract", condition: "schizophrenia", type: "biomarker",
+      id: "pm-7893770", rec: { eyes: "unclear", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 34, k: null },
       sites: [], bands: ["alpha","delta","theta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "down", delta: "mixed", theta: "mixed", beta: "mixed" }, symptoms: ["psychosis"],
@@ -2299,7 +2299,7 @@ window.NF_DATA = {
       cite: { authors: "Wada Y, et al.", year: 1994, title: "Quantitative EEG analysis at rest and during photic stimulation in drug-naive patients with first-episode paranoid schizophrenia", journal: "Eur Arch Psychiatry Clin Neurosci" }
     },
     {
-      id: "pm-7972603", source: "abstract", condition: "schizophrenia", type: "biomarker",
+      id: "pm-7972603", rec: { eyes: "unclear", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 326, k: null },
       sites: [], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["psychosis"],
@@ -2309,7 +2309,7 @@ window.NF_DATA = {
       cite: { authors: "Clementz BA, et al.", year: 1994, title: "Resting EEG in first-episode schizophrenia patients, bipolar psychosis patients, and their first-degree relatives", journal: "Psychophysiology" }
     },
     {
-      id: "pm-8146253", source: "abstract", condition: "schizophrenia", type: "biomarker",
+      id: "pm-8146253", rec: { eyes: "unclear", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 204, k: null },
       sites: [], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["psychosis"],
@@ -2319,7 +2319,7 @@ window.NF_DATA = {
       cite: { authors: "Sponheim SR, et al.", year: 1994, title: "Resting EEG in first-episode and chronic schizophrenia", journal: "Psychophysiology" }
     },
     {
-      id: "pm-8471683", source: "abstract", condition: "schizophrenia", type: "biomarker",
+      id: "pm-8471683", rec: { eyes: "closed", power: "relative", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 22, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["psychosis"],
@@ -2329,7 +2329,7 @@ window.NF_DATA = {
       cite: { authors: "Kahn EM, Weiner RD, et al.", year: 1993, title: "Spectral and topographic analysis of EEG in schizophrenic patients", journal: "Biol Psychiatry" }
     },
     {
-      id: "pm-25587799", source: "full-text", condition: "schizophrenia", type: "biomarker",
+      id: "pm-25587799", rec: { eyes: "unclear", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "full-text", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 48, k: null },
       sites: ["T3","T4","T5","T6"], bands: ["gamma"], direction: "ratio", evidence: "contested",
       changes: { gamma: "mixed" }, symptoms: ["psychosis"],
@@ -2339,7 +2339,7 @@ window.NF_DATA = {
       cite: { authors: "Hirano Y, et al.", year: 2015, title: "Spontaneous Gamma Activity in Schizophrenia", journal: "JAMA Psychiatry" }
     },
     {
-      id: "pm-26101851", source: "full-text", condition: "schizophrenia", type: "biomarker",
+      id: "pm-26101851", rec: { eyes: "open", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "full-text", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 306, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4","T5","T6","O1","O2"], bands: ["delta","theta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up" }, symptoms: ["psychosis"],
@@ -2349,7 +2349,7 @@ window.NF_DATA = {
       cite: { authors: "Narayanan B, et al.", year: 2015, title: "Multivariate genetic determinants of EEG oscillations in schizophrenia and psychotic bipolar disorder from the BSNIP study", journal: "Transl Psychiatry" }
     },
     {
-      id: "cand-gad-wang-2025", source: "full-text", condition: "anxiety", type: "biomarker",
+      id: "cand-gad-wang-2025", rec: { eyes: "closed", power: "absolute", icd11: "6B00", dx: "DSM-5" }, source: "full-text", condition: "anxiety", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 190, k: null },
       sites: ["C3","Cz","C4","T3","T4","T5","T6"], bands: ["beta","alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { beta: "up", alpha: "asymmetry" }, symptoms: ["anxiety"],
@@ -2359,7 +2359,7 @@ window.NF_DATA = {
       cite: { authors: "Wang H, Mou S, Pei X, Zhang X, Shen S, Zhang J, Shen X, Shen Z", year: 2025, title: "The power spectrum and functional connectivity characteristics of resting-state EEG in patients with generalized anxiety disorder", journal: "Scientific Reports" }
     },
     {
-      id: "pm-38280864", source: "full-text", condition: "anxiety", type: "biomarker",
+      id: "pm-38280864", rec: { eyes: "closed", power: "relative", icd11: "6B0", dx: "scale cut-off" }, source: "full-text", condition: "anxiety", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 93, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4"], bands: ["delta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", beta: "down" }, symptoms: ["anxiety"],
@@ -2369,7 +2369,7 @@ window.NF_DATA = {
       cite: { authors: "Yassine S, et al.", year: 2024, title: "Electrophysiological signatures of anxiety in Parkinson's disease", journal: "Transl Psychiatry" }
     },
     {
-      id: "pm-28582479", source: "abstract", sample: "clancy-ptsd-69", condition: "ptsd", type: "biomarker",
+      id: "pm-28582479", rec: { eyes: "open", power: "unclear", icd11: "6B40", dx: "unclear" }, source: "abstract", sample: "clancy-ptsd-69", condition: "ptsd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 69, k: null },
       sites: ["O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["hyperarousal","intrusions"],
@@ -2379,7 +2379,7 @@ window.NF_DATA = {
       cite: { authors: "Clancy K, et al.", year: 2017, title: "Restless 'rest': intrinsic sensory hyperactivity and disinhibition in post-traumatic stress disorder", journal: "Brain" }
     },
     {
-      id: "cand-anx-yuan-2024", source: "full-text", condition: "anxiety", type: "biomarker",
+      id: "cand-anx-yuan-2024", rec: { eyes: "closed", power: "unclear", icd11: "6B0", dx: "unclear" }, source: "full-text", condition: "anxiety", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 112, k: null },
       sites: ["T3","T4","T5","T6","Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["beta","theta"], direction: "ratio", evidence: "preliminary",
       changes: { beta: "down", theta: "up" }, symptoms: ["anxiety","inattention"],
@@ -4290,7 +4290,7 @@ window.NF_DATA = {
       cite: { authors: "Shen Z, et al.", year: 2022, title: "Aberrated Multidimensional EEG Characteristics in Patients with Generalized Anxiety Disorder: A Machine-Learning Based Analysis Framework", journal: "Sensors (Basel)" }
     },
     {
-      id: "cand-gad-wang-2025-fc", source: "full-text", condition: "anxiety", type: "connectivity",
+      id: "cand-gad-wang-2025-fc", rec: { eyes: "closed", power: "n/a", icd11: "6B00", dx: "DSM-5" }, source: "full-text", condition: "anxiety", type: "connectivity",
       measure: "other", pairs: [["frontal","temporal"],["parietal","temporal"],["frontal","parietal"],["frontal","occipital"]],
       metrics: { design: 2, control: null, blinded: null, n: 190, k: null },
       bands: ["theta","alpha","beta","gamma"], direction: "down", evidence: "preliminary",

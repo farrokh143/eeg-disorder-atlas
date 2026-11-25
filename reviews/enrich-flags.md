@@ -24,3 +24,6 @@ with `tools/revert-finding.js` plus a corrected `include` through `tools/apply-r
 - pm-29643331: the study also has a task condition (visual continuous performance task); only the resting eyes-open and eyes-closed results are used here.
 - pm-40792462: the paper is built on an ASSR (task) paradigm and resting power; only the resting results are relevant. Eyes and power are coded unclear from the abstract, and no full text was checked.
 - pm-39799666: the sample includes an ASD group as well as schizophrenia and controls; the power measure is log alpha power with a log difference score (asymmetry), coded absolute. Check the power field.
+- pm-25587799: the paper's main gamma finding comes from the ASSR (task) data; the resting-state gamma comparison is null (0.006 vs 0.005, p = 0.309). The resting eye condition is not in the abstract and was coded unclear without a full-text check. Check the detail wording and the full text.
+- pm-38280864: the sample is Parkinson's disease patients split by a BAI cut-off (>13), not a diagnosed anxiety disorder sample; the icd11 code is the general anxiety block 6B0. Check whether the anxiety condition fits.
+- cand-gad-wang-2025 and cand-anx-yuan-2024 had no PMID in the entry; PMIDs 39966577 and 39588546 were matched by title and authors and filled in this batch. Check the log.
