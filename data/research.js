@@ -1049,7 +1049,7 @@ window.NF_DATA = {
       cite: { authors: "Sarisik E, et al.", year: 2025, title: "EEG-based Signatures of Schizophrenia, Depression, and Aberrant Aging: A Supervised Machine Learning Investigation", journal: "Schizophr Bull" }
     },
     {
-      id: "pm-11196007", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-11196007", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 35, k: null },
       sites: ["P3","Pz","P4","T5","T6","O1","O2"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1059,7 +1059,7 @@ window.NF_DATA = {
       cite: { authors: "Kentgen LM, et al.", year: 2000, title: "Electroencephalographic asymmetries in adolescents with major depression: influence of comorbidity with anxiety disorders", journal: "J Abnorm Psychol" }
     },
     {
-      id: "pm-11306251", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-11306251", rec: { eyes: "closed", power: "both", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 93, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["beta","alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { beta: "up", alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1069,7 +1069,7 @@ window.NF_DATA = {
       cite: { authors: "Knott V, et al.", year: 2001, title: "EEG power, frequency, asymmetry and coherence in male depression", journal: "Psychiatry Res" }
     },
     {
-      id: "pm-12204318", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-12204318", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 61, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "asymmetry", evidence: "preliminary",
       changes: { delta: "down", theta: "down", alpha: "down", beta: "asymmetry" }, symptoms: ["lowmood"],
@@ -1079,7 +1079,7 @@ window.NF_DATA = {
       cite: { authors: "Volf NV, et al.", year: 2002, title: "EEG mapping in seasonal affective disorder", journal: "J Affect Disord" }
     },
     {
-      id: "pm-12436054", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-12436054", rec: { eyes: "open", power: "unclear", icd11: "6A7", dx: "DSM-III" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 151, k: null },
       sites: ["Fp2","F4","F8"], bands: ["alpha"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up" }, symptoms: ["lowmood"],
@@ -1089,7 +1089,7 @@ window.NF_DATA = {
       cite: { authors: "Bauer LO, et al.", year: 2002, title: "Lateral asymmetries in the frontal brain: effects of depression and a family history of alcoholism in female adolescents", journal: "Alcohol Clin Exp Res" }
     },
     {
-      id: "pm-15705347", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-15705347", rec: { eyes: "unclear", power: "unclear", icd11: "subclinical", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: 87, k: null },
       sites: ["F7","F3"], bands: ["alpha"], direction: "asymmetry", evidence: "moderate",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1099,7 +1099,7 @@ window.NF_DATA = {
       cite: { authors: "Bruder GE, et al.", year: 2005, title: "Electroencephalographic measures of regional hemispheric activity in offspring at risk for depressive disorders", journal: "Biol Psychiatry" }
     },
     {
-      id: "pm-17117963", source: "abstract", condition: "sud", type: "biomarker",
+      id: "pm-17117963", rec: { eyes: "unclear", power: "unclear", icd11: "6C40", dx: "unclear" }, source: "abstract", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 301, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["craving"],
@@ -1109,7 +1109,7 @@ window.NF_DATA = {
       cite: { authors: "Hayden EP, et al.", year: 2006, title: "Patterns of regional brain activity in alcohol-dependent subjects", journal: "Alcohol Clin Exp Res" }
     },
     {
-      id: "pm-17481594", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-17481594", rec: { eyes: "closed", power: "unclear", icd11: "subclinical", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 3, control: null, blinded: null, n: 49, k: null },
       sites: ["P3","Pz","P4"], bands: ["alpha"], direction: "asymmetry", evidence: "moderate",
       changes: { alpha: "asymmetry" }, symptoms: ["lowmood"],
@@ -1119,7 +1119,7 @@ window.NF_DATA = {
       cite: { authors: "Bruder GE, et al.", year: 2007, title: "Grandchildren at high and low risk for depression differ in EEG measures of regional brain asymmetry", journal: "Biol Psychiatry" }
     },
     {
-      id: "pm-18079035", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-18079035", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 13, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["lowmood"],
@@ -1129,7 +1129,7 @@ window.NF_DATA = {
       cite: { authors: "Putnam KM, et al.", year: 2008, title: "Depressive symptoms and baseline prefrontal EEG alpha activity: a study utilizing Ecological Momentary Assessment", journal: "Biol Psychol" }
     },
     {
-      id: "pm-18958615", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-18958615", rec: { eyes: "unclear", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["delta","theta","alpha","beta","hibeta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "up", beta: "up", hibeta: "up" }, symptoms: ["lowmood"],
@@ -1139,7 +1139,7 @@ window.NF_DATA = {
       cite: { authors: "Korb AS, et al.", year: 2008, title: "Brain electrical source differences between depressed subjects and healthy controls", journal: "Brain Topogr" }
     },
     {
-      id: "pm-19952564", source: "abstract", condition: "depression", type: "biomarker",
+      id: "pm-19952564", rec: { eyes: "both", power: "unclear", icd11: "6A7", dx: "unclear" }, source: "abstract", condition: "depression", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["P3","Pz","P4","O1","O2"], bands: ["theta","alpha","beta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", alpha: "up", beta: "up" }, symptoms: ["lowmood"],
