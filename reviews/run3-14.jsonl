@@ -1,0 +1,8 @@
+{"id":"pm-33836434","decision":"defer","note":"[parked: non-atlas condition fragile X] resting relative EEG power by sex in FXS"}
+{"id":"pm-20362500","decision":"defer","note":"[parked: non-atlas condition Down syndrome] LORETA resting sources in Down syndrome vs controls"}
+{"id":"pm-38721759","decision":"defer","note":"[parked: non-atlas condition Rett syndrome] resting EEG power and ratios in Rett syndrome"}
+{"id":"pm-23182872","decision":"defer","note":"[parked: non-atlas condition fragile X] resting relative theta and alpha power in FXS"}
+{"id":"pm-24523898","decision":"exclude","code":"CN","note":"phase-lag-index connectivity and graph measures in FXS; no band-power result"}
+{"id":"pm-41946887","decision":"exclude","code":"NR","note":"SPG601 drug trial in FXS; EEG change is a treatment effect"}
+{"id":"pm-35182604","decision":"exclude","code":"MOD","note":"methods evaluation of an EEG processing pipeline"}
+{"id":"pm-39173846","decision":"defer","note":"[parked: non-atlas condition Down syndrome] aperiodic and periodic EEG in toddlers with Down syndrome"}
