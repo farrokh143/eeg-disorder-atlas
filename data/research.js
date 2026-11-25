@@ -3547,6 +3547,16 @@ window.NF_DATA = {
       detail: "32 people with chronic stroke, eyes-open resting EEG (16 channels). The pairwise delta brain symmetry index (asymmetry) correlated with the Stroop test, the PASAT (3 s and 2 s) and the WHO-5 well-being scale; the sign of each correlation is not given in the abstract, so the direction is not coded. Pairwise channels are not named, so sites are whole-head. Taken from the abstract; not checked in the full text. Small cross-sectional correlation study without a healthy control group.",
       design: "Cross-sectional correlation (within stroke)",
       cite: { authors: "Chan MKL, Yeung WKY, Yu JKP, Ng SSW, Tong RKY", year: 2023, title: "Exploratory Study on the Clinical use of EEG for the People with Chronic Stroke and Their Correlation with the Neuropsychological Outcome", journal: "Clin EEG Neurosci" }
+    },
+    {
+      id: "pm-29532955", source: "abstract", condition: "stroke", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 94, k: null },
+      sites: ["T3","T4","T5","T6"], bands: ["delta","theta","hibeta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up", theta: "up", hibeta: "up" }, symptoms: ["lowmood"],
+      claim: "Post-stroke depressed mood: higher delta, theta and beta2 power, mainly over temporal sites",
+      detail: "35 stroke patients with depressed mood, 24 without, and 35 age-matched healthy controls; 16-electrode resting EEG, spectral power. Delta, theta and beta2 (coded as hibeta, 20-30 Hz) were higher in the depressed group, particularly in temporal regions. The abstract does not spell out each comparison, so the comparator for the increases is stated only as the three-group design. Taken from the abstract; not checked in the full text. Case-control design with small groups.",
+      design: "Case-control",
+      cite: { authors: "Wang C, Chen Y, Sun C, Zhang Y, Ming D, Du J", year: 2018, title: "Electrophysiological changes in poststroke subjects with depressed mood: A quantitative EEG study", journal: "Int J Geriatr Psychiatry" }
     }
   ],
 
