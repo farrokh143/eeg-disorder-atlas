@@ -130,3 +130,9 @@ instructions, and add this repository (or upload `index.html`,
 The seed dataset was compiled from the published literature with AI assistance.
 Verify every citation and summary against the original paper before relying on it.
 This is a research reference, not medical advice.
+
+
+## Recording details (`rec`)
+
+Added by the enrichment pass (`tools/apply-enrich.js`, RUNBOOK Part 3): `rec: { eyes, power, icd11, dx }` on each entry.
+Conditions carry an `icd11` field (see the ICD-11 amendment in `data/search-protocol.md`).
