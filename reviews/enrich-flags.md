@@ -27,3 +27,5 @@ with `tools/revert-finding.js` plus a corrected `include` through `tools/apply-r
 - pm-25587799: the paper's main gamma finding comes from the ASSR (task) data; the resting-state gamma comparison is null (0.006 vs 0.005, p = 0.309). The resting eye condition is not in the abstract and was coded unclear without a full-text check. Check the detail wording and the full text.
 - pm-38280864: the sample is Parkinson's disease patients split by a BAI cut-off (>13), not a diagnosed anxiety disorder sample; the icd11 code is the general anxiety block 6B0. Check whether the anxiety condition fits.
 - cand-gad-wang-2025 and cand-anx-yuan-2024 had no PMID in the entry; PMIDs 39966577 and 39588546 were matched by title and authors and filled in this batch. Check the log.
+- pm-35192865: the study is in typically developing adolescents selected by social-anxiety scores (not a diagnosed sample); coded scale cut-off, icd 6B04. Check the condition.
+- pm-21107671: the sample is children with autism classed by parent-report cut-offs (SCQ/ASSQ), so the dx field is scale cut-off. Check the diagnostic system wording.
