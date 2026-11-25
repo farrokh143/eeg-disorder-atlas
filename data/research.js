@@ -3317,6 +3317,56 @@ window.NF_DATA = {
       detail: "20 abstinent heroin users vs 20 matched controls, 5-minute resting EEG. Alpha activity was weaker in frontal (BA4, BA6) and parietal (BA3, BA7) regions. Taken from the abstract; not checked in the full text. Source-localised (method not named in the abstract); mapped to overlying scalp region.",
       design: "Case-control",
       cite: { authors: "Zhao Q, et al.", year: 2017, title: "Nonlinear Dynamic Complexity and Sources of Resting-state EEG in Abstinent Heroin Addicts", journal: "IEEE Trans Nanobioscience" }
+    },
+    {
+      id: "pm-30654367", source: "abstract", condition: "lewy", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 121, k: null },
+      sites: ["O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
+      changes: { alpha: "down" }, symptoms: ["inattention","cogdecline"],
+      claim: "Dementia with Lewy bodies: less occipital alpha activity than controls",
+      detail: "41 drug-free people with dementia with Lewy bodies vs 80 controls, resting EEG analysed with eLORETA-ICA resting-state networks. Occipital alpha (visual network) activity was lower in DLB and tracked worse attention, visuospatial function and global cognition. Source-localised (eLORETA); mapped to the overlying scalp region. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Aoki Y, Kazui H, Pascual-Marqui RD, et al.", year: 2019, title: "EEG Resting-State Networks in Dementia with Lewy Bodies Associated with Clinical Symptoms", journal: "Neuropsychobiology" }
+    },
+    {
+      id: "pm-41776190", source: "full-text", condition: "schizophrenia", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 159, k: null },
+      sites: ["Fp1","Fp2"], bands: ["theta"], direction: "up", evidence: "preliminary",
+      changes: { theta: "up" }, symptoms: ["psychosis"],
+      claim: "Schizophrenia spectrum: more prefrontal resting theta than controls",
+      detail: "41 schizophrenia-spectrum, 49 bipolar and 38 depressed patients plus 31 controls, resting EEG from Fp1 and Fp2 only. Schizophrenia-spectrum patients had higher theta than controls at both sites; the headline manic-state gamma/beta increase was pooled across diagnoses and is not recorded here, and bipolar alone did not differ from controls. Auditory steady-state results are task-based and not used; only two frontal electrodes.",
+      design: "Case-control",
+      cite: { authors: "Yanagi M, et al.", year: 2026, title: "Excessive gamma and beta oscillations in manic states across mood and psychotic disorders", journal: "Sci Rep" }
+    },
+    {
+      id: "pm-41917996", source: "full-text", condition: "stroke", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 79, k: null },
+      sites: ["C3","Cz","C4","P3","Pz","P4","O1","O2"], bands: ["alpha","theta"], direction: "asymmetry", evidence: "preliminary",
+      changes: { alpha: "up", theta: "asymmetry" }, symptoms: ["motor"],
+      claim: "Subacute stroke: more central-posterior alpha and ipsilesional theta asymmetry than controls",
+      detail: "57 subacute stroke patients with hemiparesis vs 22 controls, eyes-open resting 128-channel EEG. Alpha power was higher in patients in motor, central, parietal and occipital regions (not frontal), peak alpha frequency was slower, and theta was lateralised to the lesioned hemisphere. Theta and beta1 power directions are shown only in figures and are not recorded; EEG-behaviour correlations did not survive correction.",
+      design: "Case-control",
+      cite: { authors: "Liu W, Wei C, Lan Y, et al.", year: 2026, title: "Lesion-specific EEG signatures in stroke: a multi-scale framework integrating oscillations, connectivity, and asymmetry for machine learning decoding", journal: "J Neuroeng Rehabil" }
+    },
+    {
+      id: "pm-37245318", source: "abstract", condition: "ocd", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 52, k: null },
+      sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","T3","T4","T5","T6","P3","Pz","P4"], bands: ["delta","theta"], direction: "up", evidence: "preliminary",
+      changes: { delta: "up", theta: "up" }, symptoms: ["compulsions"],
+      claim: "OCD: more fronto-temporal and parietal delta and theta than controls",
+      detail: "25 people with OCD vs 27 controls, eyes-closed resting EEG with the 1/f component removed before computing band power. Delta and theta oscillatory power were higher in fronto-temporal and parietal regions; other bands and 1/f parameters did not differ. Taken from the abstract; not checked in the full text.",
+      design: "Case-control",
+      cite: { authors: "Perera MPN, et al.", year: 2023, title: "Obsessive-compulsive disorder (OCD) is associated with increased electroencephalographic (EEG) delta and theta oscillatory power but reduced delta connectivity", journal: "J Psychiatr Res" }
+    },
+    {
+      id: "pm-32321573", source: "full-text", condition: "lewy", type: "biomarker",
+      metrics: { design: 2, control: null, blinded: null, n: 102, k: null },
+      sites: ["O1","O2"], bands: ["alpha"], direction: "up", evidence: "preliminary",
+      changes: { alpha: "up" }, symptoms: ["cogdecline"],
+      claim: "Lewy body dementia: more occipital eyes-open alpha (weaker alpha reactivity) than controls",
+      detail: "41 Lewy body dementia (24 DLB, 17 PDD), 21 Alzheimer's and 40 controls, eyes-closed and eyes-open resting EEG at O1, Oz, O2. In LBD, eyes-open alpha power was higher than in controls and AD while eyes-closed alpha did not differ, so alpha reactivity was reduced. Most patients took cholinesterase inhibitors and many dopaminergic drugs.",
+      design: "Case-control",
+      cite: { authors: "Schumacher J, et al.", year: 2020, title: "EEG alpha reactivity and cholinergic system integrity in Lewy body dementia and Alzheimer's disease", journal: "Alzheimers Res Ther" }
     }
   ],
 

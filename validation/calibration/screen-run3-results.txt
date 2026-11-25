@@ -1,0 +1,23 @@
+pm-41917996: include vs include  bands [alpha:up] vs [alpha:up theta:asymmetry]
+pm-37245318: include vs include  bands [delta:up theta:up] vs [delta:up theta:up]
+pm-32321573: include vs include  bands [alpha:down] vs [alpha:up]
+pm-18786606: exclude vs exclude
+pm-34173086: exclude vs exclude
+pm-40039414: exclude vs exclude
+pm-36136166: exclude vs exclude
+pm-38329642: exclude vs exclude
+pm-41776190: exclude vs include
+pm-39446966: exclude vs exclude
+pm-25182143: exclude vs exclude
+pm-40518976: exclude vs exclude
+pm-22713421: exclude vs exclude
+pm-39251633: exclude vs exclude
+pm-41773346: exclude vs exclude
+pm-30654367: defer vs include
+pm-24669580: defer vs defer
+pm-28118690: defer vs defer
+pm-27965067: defer vs exclude
+pm-42692293: defer vs defer
+
+Papers in both: 20. Include-vs-not agreement: 90%. Both included: 3, identical band directions: 1.
+PASS: threshold 85% on the include decision.

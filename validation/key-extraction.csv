@@ -1,0 +1,61 @@
+item,entry_id,condition,bands_and_directions,sites_or_pairs,n,design
+E001,pm-31429702,adhd,delta:down theta:down,F3 Fz F4 C3 Cz C4 P3 Pz P4 O1 O2,31,2
+E002,pm-37937898,parkinsons,alpha:up beta:up,,52,2
+E003,pm-42185252,autism,beta:up delta:up gamma:up theta:up,,188,3
+E004,pm-23922658,epilepsy,alpha:down delta:up theta:up,T3 T4 P3 P4,24,2
+E005,cand-adhd-wang-2024,adhd,beta:down theta:up,F7 F3 Fz F4 F8 Cz,100,2
+E006,pm-23467799,adhd,alpha:up,Fp1 Fp2 F7 F3 Fz F4 F8,76,2
+E007,pm-39449097-fc,alzheimers,gamma:up,frontal-temporal frontal-parietal frontal-occipital,,2
+E008,pm-42217475,epilepsy,alpha:down beta:down delta:up theta:up,,180,2
+E009,pm-26101851,schizophrenia,delta:up theta:up,Fp1 Fp2 F7 F3 Fz F4 F8 P3 Pz P4 T5 T6 O1 O2,306,2
+E010,pm-24090715-fc,schizophrenia,alpha:up beta:down delta:mixed theta:down,central-parietal central-temporal parietal-temporal central-frontal frontal-parietal frontal-temporal temporal-temporal frontal-frontal central-central,344,2
+E011,pm-31233897,adhd,alpha:asymmetry,F7 F8,169,2
+E012,pm-18381357,schizophrenia,beta:up,Fp1 Fp2 F7 F3 Fz F4 F8,,2
+E013,pm-33544703,alzheimers,alpha:down delta:up theta:up,,,2
+E014,pm-37957613,depression,alpha:down delta:up theta:up,O1 O2,80,2
+E015,pm-28900800,adhd,alpha:mixed beta:mixed delta:down theta:mixed,F7 F3 Fz F4 F8 C3 Cz C4 T5 P3 Pz P4 T6,92,2
+E016,pm-26327686,sud,delta:up,,42,2
+E017,pm-37109695-fc,schizophrenia,beta:up gamma:up,occipital-temporal,72,2
+E018,pm-36057818,alzheimers,theta:up,Fp1 Fp2 F7 F3 Fz F4 F8,318,3
+E019,pm-40550812,schizophrenia,alpha:up,T3 T4 T5 T6 O1 O2,116,2
+E020,pm-39251926,autism,beta:up gamma:up,,101,2
+E021,pm-41407022,alzheimers,theta:up,Fp1 Fp2 F7 F3 Fz F4 F8,87,2
+E022,pm-14595470,schizophrenia,delta:up theta:up,Fp2 F4 F8,65,2
+E023,pm-35585637,autism,alpha:mixed,,411,2
+E024,pm-19278131,sud,beta:down theta:down,P3 P4 O1 O2 T5 T6,141,2
+E025,pm-37248895,alzheimers,beta:down theta:up,Fz Cz Pz O1 O2 F3 F4,99,2
+E026,pm-41214062,depression,alpha:up,Fp1 Fp2,40,2
+E027,cand-mdd-alpha-sex-2012,depression,alpha:up,Fp1 Fp2 F7 F3 Fz F4 F8 P3 Pz P4,96,2
+E028,pm-18974851,sud,alpha:mixed beta:mixed theta:down,Fz,364,3
+E029,pm-40153921,depression,alpha:down,,140,2
+E030,pm-32815287-fc,autism,alpha:up beta:up delta:up theta:up,T3-T5 T4-T6 O1-O2 C4-P4 frontal-frontal frontal-occipital,28,2
+E031,cand-anx-yuan-2024,anxiety,beta:down theta:up,T3 T4 T5 T6 Fp1 Fp2 F7 F3 Fz F4 F8,112,2
+E032,pm-26051750,sud,alpha:down delta:down,,83,2
+E033,pm-35351387,parkinsons,theta:up,,54,2
+E034,pm-25200165,adhd,alpha:mixed beta:mixed delta:up theta:up,,161,2
+E035,pm-35891100-fc,anxiety,alpha:down beta:down theta:down,central-frontal frontal-temporal frontal-parietal frontal-occipital,81,2
+E036,pm-42604986-fc,parkinsons,alpha:down,occipital-occipital,62,2
+E037,pm-40040314,epilepsy,delta:up theta:up,,87,2
+E038,pm-32815287,autism,delta:up,Fz,28,2
+E039,pm-39449097,alzheimers,alpha:mixed delta:up gamma:up theta:up,,,2
+E040,pm-41534360,alzheimers,alpha:down theta:up,,128,2
+E041,pm-28367403-fc,parkinsons,alpha:down,frontal-temporal central-frontal frontal-parietal,124,2
+E042,pm-33407072,autism,alpha:down,Pz,62,2
+E043,pm-37858173,alzheimers,beta:down theta:up,T3 T4 T5 T6 P3 Pz P4 O1 O2,148,1
+E044,pm-42872911-fc,sud,alpha:mixed beta:mixed delta:down gamma:mixed theta:mixed,parietal-parietal occipital-parietal parietal-temporal,100,2
+E045,pm-33125837,autism,alpha:down,O1 O2,109,2
+E046,pm-24439302,schizophrenia,alpha:up beta:up delta:up theta:up,,425,2
+E047,pm-29397079-fc,depression,beta:up hibeta:up,frontal-temporal,174,2
+E048,pm-29778070,sud,beta:up theta:up,Fp1 Fp2 F7 F3 Fz F4 F8,61,2
+E049,pm-42769165,alzheimers,alpha:down beta:down theta:up,,360,2
+E050,pm-33780847,schizophrenia,beta:up gamma:up theta:up,T3 T4 T5 T6,291,2
+E051,pm-28755454,depression,alpha:asymmetry,F7 F3,124,2
+E052,pm-24467874,depression,alpha:asymmetry,Fp1 Fp2 F7 F3 Fz F4 F8,237,2
+E053,pm-39799666,schizophrenia,alpha:asymmetry,F3 F4,101,2
+E054,pm-31825996-fc,sud,alpha:down beta:mixed delta:up gamma:up theta:mixed,frontal-frontal frontal-temporal frontal-occipital,60,2
+E055,pm-27344621,depression,beta:down gamma:down,F3 Fz F4 C3 Cz C4,73,2
+E056,pm-25587799,schizophrenia,gamma:mixed,T3 T4 T5 T6,48,2
+E057,pm-27464584,adhd,theta:up,F7 F3 Fz F4 F8 C3 Cz C4 P3 Pz P4,60,2
+E058,pm-35891100,anxiety,alpha:down beta:up,Fp1 Fp2 F7 F3 F4 F8 T3 T4 T5 T6 C3 C4,81,2
+E059,pm-40101271,alzheimers,alpha:down theta:up,Fp1 Fp2 F7 F3 Fz F4 F8,65,2
+E060,pm-40755242,alzheimers,gamma:mixed,Fp1 Fp2 F7 F3 Fz F4 F8,65,2

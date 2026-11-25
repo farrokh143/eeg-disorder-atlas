@@ -32,6 +32,11 @@ or to offer options. After each batch, start the next one straight away.
    criteria; otherwise read the full text and `include` or `exclude`. Condition ids: `ocd`, `bipolar`, `lewy`, `ftd`,
    `ms`, `intellectual`, `learning`, `stroke`. Extra symptom ids: `mania`, `compulsions`. A sample of patients with the
    new disorder against healthy controls is required, as for every condition.
+   Run 3 screening calibration (Haiku vs Opus, 20 papers) passed on the include decision (90%), but band directions
+   matched for only 1 of 3 papers both included. Rule added: **alpha reactivity** (the eyes-closed to eyes-open
+   change) is not a band-power difference. Code the eyes-closed or eyes-open power result if the paper gives it, with
+   the direction of that power (e.g. less blocking on opening the eyes = eyes-open alpha `up`). If only a reactivity
+   index is given, exclude as `NONBAND`. Record every band the paper reports with a direction (asymmetry included).
 
 ## One batch (10 papers): repeat until the queue is empty
 
