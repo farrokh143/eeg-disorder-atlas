@@ -345,8 +345,8 @@ Same stopping rule, branches, merging and sync as Part 1. Batches of 10. Decisio
   that admitted only one system gets that system), `unclear`. Use `unclear` only when none of these can be read from
   the paper. (v2.1) DSM-III-R counts as `DSM-III`; DSM criteria confirmed with research instruments (ADOS, ADI-R,
   SCID, MINI, DIVA) get the DSM edition; two routes that share one named research criterion get `research criteria`.
-- **n**: total participants in the comparison (patients + controls), only if the entry's n is null and the paper
-  states it. Otherwise `null`. For reviews and meta-analyses, leave `null`.
+- **n**: the whole study sample analysed (all groups, patients + controls; same rule as Part 1), only if the entry's n is
+  null and the paper states it. Otherwise `null`. For reviews and meta-analyses, leave `null`.
 - **Abstract-only papers** will often be `unclear` for eyes and power. That is the right answer; do not guess.
 
 ## Never
