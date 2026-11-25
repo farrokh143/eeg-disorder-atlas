@@ -1869,7 +1869,7 @@ window.NF_DATA = {
       cite: { authors: "Mason LM, et al.", year: 2022, title: "Age-related changes in the EEG in an eyes-open condition: II. Subtypes of AD/HD", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-35182242", source: "full-text", condition: "adhd", type: "protocol",
+      id: "pm-35182242", rec: { eyes: "both", power: "n/a", icd11: "6A05", dx: "unclear" }, source: "full-text", condition: "adhd", type: "protocol",
       metrics: { design: 4, control: "active", blinded: null, n: 121, k: null },
       sites: ["O1","O2"], bands: ["alpha"], direction: "up", evidence: "moderate",
       changes: { alpha: "up" }, symptoms: ["inattention","hyperactivity","impulsivity","executive","memory"],
@@ -1879,7 +1879,7 @@ window.NF_DATA = {
       cite: { authors: "Luo X, et al.", year: 2023, title: "A randomized controlled study of remote computerized cognitive, neurofeedback, and combined training in the treatment of children with attention-deficit/hyperactivity disorder", journal: "Eur Child Adolesc Psychiatry" }
     },
     {
-      id: "pm-36681294", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "pm-36681294", rec: { eyes: "both", power: "unclear", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 102, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["delta","theta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up" }, symptoms: ["inattention","impulsivity","hyperactivity"],
@@ -1889,7 +1889,7 @@ window.NF_DATA = {
       cite: { authors: "McCabe LE, et al.", year: 2023, title: "Links between excessive daytime sleepiness and EEG power and activation in two subtypes of ADHD", journal: "Biol Psychol" }
     },
     {
-      id: "pm-38858839", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "pm-38858839", rec: { eyes: "unclear", power: "unclear", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 66, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","C3","Cz","C4"], bands: ["theta","beta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", beta: "up" }, symptoms: ["inattention","hyperactivity","impulsivity"],
@@ -1899,7 +1899,7 @@ window.NF_DATA = {
       cite: { authors: "Dakwar-Kawar O, et al.", year: 2024, title: "Aperiodic and periodic components of oscillatory brain activity in relation to cognition and symptoms in pediatric ADHD", journal: "Cereb Cortex" }
     },
     {
-      id: "pm-39674997", source: "full-text", condition: "adhd", type: "protocol",
+      id: "pm-39674997", rec: { eyes: "unclear", power: "n/a", icd11: "6A05", dx: "unclear" }, source: "full-text", condition: "adhd", type: "protocol",
       metrics: { design: 4, control: "sham", blinded: true, n: 142, k: null },
       sites: ["Fz","Cz"], bands: ["theta"], direction: "ratio", evidence: "contested",
       changes: { theta: "mixed" }, symptoms: ["inattention","hyperactivity","impulsivity"],
@@ -1919,7 +1919,7 @@ window.NF_DATA = {
       cite: { authors: "Wang Z, et al.", year: 2026, title: "Dissociable EEG connectivity patterns reflect the latent general and specific dimensions of ADHD in children and adolescents", journal: "Eur Child Adolesc Psychiatry" }
     },
     {
-      id: "pm-42350829", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "pm-42350829", rec: { eyes: "both", power: "unclear", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 70, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "down", evidence: "preliminary",
       changes: { delta: "down", theta: "down", alpha: "down", beta: "down" }, symptoms: ["inattention","hyperactivity","impulsivity"],
@@ -1929,7 +1929,7 @@ window.NF_DATA = {
       cite: { authors: "Schoenberg PLA, et al.", year: 2026, title: "Electrocortical Indices of Default Mode Network-Related Activity in ADHD and Modulation Through Mindfulness-Based Cognitive Therapy", journal: "Brain Topogr" }
     },
     {
-      id: "pm-9472424", source: "abstract", condition: "adhd", type: "biomarker",
+      id: "pm-9472424", rec: { eyes: "open", power: "both", icd11: "6A05", dx: "unclear" }, source: "abstract", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 52, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["inattention","hyperactivity","impulsivity"],
@@ -1939,7 +1939,7 @@ window.NF_DATA = {
       cite: { authors: "Lazzaro I, et al.", year: 1998, title: "Quantified EEG activity in adolescent attention deficit hyperactivity disorder", journal: "Clin Electroencephalogr" }
     },
     {
-      id: "pm-31429702", source: "full-text", condition: "adhd", type: "biomarker",
+      id: "pm-31429702", rec: { eyes: "closed", power: "absolute", icd11: "6A05", dx: "DSM-IV" }, source: "full-text", condition: "adhd", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 31, k: null },
       sites: ["F3","Fz","F4","C3","Cz","C4","P3","Pz","P4","O1","O2"], bands: ["delta","theta"], direction: "down", evidence: "preliminary",
       changes: { delta: "down", theta: "down" }, symptoms: ["lowmood"],
@@ -1949,7 +1949,7 @@ window.NF_DATA = {
       cite: { authors: "Huang J, et al.", year: 2019, title: "Brain arousal regulation and depressive symptomatology in adults with attention-deficit/hyperactivity disorder (ADHD)", journal: "BMC Neurosci" }
     },
     {
-      id: "pm-10466736", source: "abstract", condition: "schizophrenia", type: "biomarker",
+      id: "pm-10466736", rec: { eyes: "unclear", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 45, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P4","T6","O2"], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "down", alpha: "down", beta: "up" }, symptoms: ["psychosis"],
@@ -1959,7 +1959,7 @@ window.NF_DATA = {
       cite: { authors: "Pascual-Marqui RD, et al.", year: 1999, title: "Low resolution brain electromagnetic tomography (LORETA) functional imaging in acute, neuroleptic-naive, first-episode, productive schizophrenia", journal: "Psychiatry Res" }
     },
     {
-      id: "pm-11295374", source: "abstract", condition: "schizophrenia", type: "biomarker",
+      id: "pm-11295374", rec: { eyes: "unclear", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["delta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up" }, symptoms: ["psychosis"],
@@ -1969,7 +1969,7 @@ window.NF_DATA = {
       cite: { authors: "Wuebben Y, et al.", year: 2001, title: "Hypofrontality -- a risk-marker related to schizophrenia?", journal: "Schizophr Res" }
     },
     {
-      id: "pm-14595470", source: "abstract", condition: "schizophrenia", type: "biomarker",
+      id: "pm-14595470", rec: { eyes: "unclear", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 65, k: null },
       sites: ["Fp2","F4","F8"], bands: ["delta","theta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up" }, symptoms: ["psychosis"],
