@@ -1979,7 +1979,7 @@ window.NF_DATA = {
       cite: { authors: "Veiga H, et al.", year: 2003, title: "Neurocortical electrical activity tomography in chronic schizophrenics", journal: "Arq Neuropsiquiatr" }
     },
     {
-      id: "pm-18381357", source: "abstract", condition: "schizophrenia", type: "biomarker",
+      id: "pm-18381357", rec: { eyes: "unclear", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["beta"], direction: "up", evidence: "preliminary",
       changes: { beta: "up" }, symptoms: ["psychosis"],
@@ -1989,7 +1989,7 @@ window.NF_DATA = {
       cite: { authors: "Venables NC, et al.", year: 2009, title: "Genetic and disorder-specific aspects of resting state EEG abnormalities in schizophrenia", journal: "Schizophr Bull" }
     },
     {
-      id: "pm-18636993", source: "abstract", condition: "schizophrenia", type: "biomarker",
+      id: "pm-18636993", rec: { eyes: "unclear", power: "both", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 28, k: null },
       sites: [], bands: ["alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "mixed", beta: "down" }, symptoms: ["psychosis"],
@@ -1999,7 +1999,7 @@ window.NF_DATA = {
       cite: { authors: "Knyazeva MG, et al.", year: 2008, title: "Alpha rhythm and hypofrontality in schizophrenia", journal: "Acta Psychiatr Scand" }
     },
     {
-      id: "pm-19199131", source: "abstract", condition: "schizophrenia", type: "biomarker",
+      id: "pm-19199131", rec: { eyes: "unclear", power: "relative", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 20, k: null },
       sites: ["Fp1","F7","F3"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["psychosis"],
@@ -2009,7 +2009,7 @@ window.NF_DATA = {
       cite: { authors: "Jetha MK, et al.", year: 2009, title: "Resting frontal EEG asymmetry and shyness and sociability in schizophrenia: a pilot study of community-based outpatients", journal: "Int J Neurosci" }
     },
     {
-      id: "pm-21862398", source: "full-text", condition: "schizophrenia", type: "biomarker",
+      id: "pm-21862398", rec: { eyes: "closed", power: "absolute", icd11: "6A20", dx: "DSM-IV" }, source: "full-text", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 318, k: null },
       sites: [], bands: ["delta","theta","alpha","gamma"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "up", gamma: "up" }, symptoms: ["psychosis"],
@@ -2019,7 +2019,7 @@ window.NF_DATA = {
       cite: { authors: "Hong LE, et al.", year: 2012, title: "A shared low-frequency oscillatory rhythm abnormality in resting and sensory gating in schizophrenia", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-22125634", source: "full-text", condition: "epilepsy", type: "biomarker",
+      id: "pm-22125634", rec: { eyes: "closed", power: "absolute", icd11: "8A6", dx: "DSM-IV" }, source: "full-text", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 42, k: null },
       sites: ["P3","Pz","P4"], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["psychosis"],
@@ -2029,7 +2029,7 @@ window.NF_DATA = {
       cite: { authors: "Canuet L, et al.", year: 2011, title: "Resting-state EEG source localization and functional connectivity in schizophrenia-like psychosis of epilepsy", journal: "PLoS One" }
     },
     {
-      id: "pm-23051885", source: "abstract", sample: "tikka-scz-60", condition: "schizophrenia", type: "biomarker",
+      id: "pm-23051885", rec: { eyes: "unclear", power: "unclear", icd11: "6A20", dx: "unclear" }, source: "abstract", sample: "tikka-scz-60", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 60, k: null },
       sites: ["Fp1","Fp2","F7","F3","F4","F8","T3","T4","T5","T6","P3","P4"], bands: ["gamma"], direction: "up", evidence: "preliminary",
       changes: { gamma: "up" }, symptoms: ["psychosis"],
@@ -2039,7 +2039,7 @@ window.NF_DATA = {
       cite: { authors: "Tikka SK, et al.", year: 2013, title: "Increased spontaneous gamma power and synchrony in schizophrenia patients having higher minor physical anomalies", journal: "Psychiatry Res" }
     },
     {
-      id: "pm-24090715", source: "full-text", condition: "schizophrenia", type: "biomarker",
+      id: "pm-24090715", rec: { eyes: "closed", power: "absolute", icd11: "6A20", dx: "research criteria" }, source: "full-text", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 268, k: null },
       sites: [], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "contested",
       changes: { delta: "mixed", theta: "mixed", alpha: "mixed" }, symptoms: ["psychosis"],
@@ -2049,7 +2049,7 @@ window.NF_DATA = {
       cite: { authors: "Kam JW, et al.", year: 2013, title: "Resting state EEG power and coherence abnormalities in bipolar disorder and schizophrenia", journal: "J Psychiatr Res" }
     },
     {
-      id: "pm-24439302", source: "full-text", condition: "schizophrenia", type: "biomarker",
+      id: "pm-24439302", rec: { eyes: "open", power: "unclear", icd11: "6A20", dx: "DSM-IV" }, source: "full-text", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 425, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "up", beta: "up" }, symptoms: ["psychosis"],
@@ -2059,7 +2059,7 @@ window.NF_DATA = {
       cite: { authors: "Narayanan B, et al.", year: 2014, title: "Resting state electroencephalogram oscillatory abnormalities in schizophrenia and psychotic bipolar patients and their relatives from the bipolar and schizophrenia network on intermediate phenotypes study", journal: "Biol Psychiatry" }
     },
     {
-      id: "pm-25310340", source: "abstract", condition: "schizophrenia", type: "biomarker",
+      id: "pm-25310340", rec: { eyes: "unclear", power: "relative", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 50, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["psychosis"],
@@ -2069,7 +2069,7 @@ window.NF_DATA = {
       cite: { authors: "Horan WP, et al.", year: 2014, title: "Approach and withdrawal motivation in schizophrenia: an examination of frontal brain asymmetric activity", journal: "PLoS One" }
     },
     {
-      id: "pm-25595562", source: "abstract", condition: "schizophrenia", type: "biomarker",
+      id: "pm-25595562", rec: { eyes: "unclear", power: "absolute", icd11: "6A20", dx: "unclear" }, source: "abstract", condition: "schizophrenia", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 180, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","C3","Cz","C4"], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["psychosis"],
@@ -3890,7 +3890,7 @@ window.NF_DATA = {
       cite: { authors: "Krukow P, et al.", year: 2018, title: "Disturbed functional connectivity within the left prefrontal cortex and sensorimotor areas predicts impaired cognitive speed in patients with first-episode schizophrenia", journal: "Psychiatry Res Neuroimaging" }
     },
     {
-      id: "pm-22125634-fc", source: "full-text", condition: "schizophrenia", type: "connectivity",
+      id: "pm-22125634-fc", rec: { eyes: "closed", power: "n/a", icd11: "8A6", dx: "DSM-IV" }, source: "full-text", condition: "schizophrenia", type: "connectivity",
       measure: "phase", pairs: [["temporal","frontal"]],
       metrics: { design: 2, control: null, blinded: null, n: 42, k: null },
       bands: ["hibeta"], direction: "up", evidence: "preliminary",
@@ -3934,7 +3934,7 @@ window.NF_DATA = {
       cite: { authors: "Higashima M, et al.", year: 2007, title: "State-dependent changes in intrahemispheric EEG coherence for patients with acute exacerbation of schizophrenia", journal: "Psychiatry Res" }
     },
     {
-      id: "pm-24090715-fc", source: "full-text", condition: "schizophrenia", type: "connectivity",
+      id: "pm-24090715-fc", rec: { eyes: "closed", power: "n/a", icd11: "6A20", dx: "research criteria" }, source: "full-text", condition: "schizophrenia", type: "connectivity",
       measure: "coherence", pairs: [["central","parietal"],["central","temporal"],["parietal","temporal"],["frontal","central"],["frontal","parietal"],["frontal","temporal"],["temporal","temporal"],["frontal","frontal"],["central","central"]],
       metrics: { design: 2, control: null, blinded: null, n: 344, k: null },
       bands: ["delta","alpha","beta","theta"], direction: "ratio", evidence: "preliminary",
