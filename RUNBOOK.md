@@ -279,6 +279,8 @@ with the batch.
 
 # Part 3: Recording details (enrichment pass)
 
+Field rules v2 (25 Nov 2026), revised after calibration 1 failed (eyes, icd11 and dx agreement 80%).
+
 Goal: add, for every entry already in the atlas, the details reviewers need for sensitivity analyses: eye state,
 absolute or relative power, the ICD-11 group of the patient sample and the diagnostic system used. Also fill a missing
 sample size or PMID **only when the paper states it**. Do not change bands, directions, sites, pairs or evidence; if you
@@ -302,19 +304,31 @@ Same stopping rule, branches, merging and sync as Part 1. Batches of 10. Decisio
 
 ## Field rules
 
-- **eyes**: `closed`, `open`, `both` (results reported for both, or pooled across studies in a review), or `unclear`
-  (not stated in what you can read). `quote` = a few words from the paper showing it (required unless `unclear`).
+- **eyes**: the eye state of the data **this entry's result comes from** (not every condition recorded).
+  `closed` or `open` when the result comes from one condition, including when both were recorded but the
+  difference was found (or analysed) in only one. `both` only when the result is reported in both conditions, or
+  the conditions were averaged/pooled (also reviews pooling both). `unclear` when what you can read does not say.
+  `quote` = a few words from the paper showing it (required unless `unclear`).
 - **power**: `absolute`, `relative`, `both`, `ratio-only` (only a band ratio such as theta/beta is reported), `unclear`.
+  `absolute` also when power is in µV²/Hz, dB or log units and never divided by total power; `relative` when it is
+  expressed as a share (%) of total power. If the paper does not make this clear, `unclear`.
   Use `n/a` for protocol (neurofeedback) entries. Connectivity entries get `n/a` automatically.
 - **icd11**: the group the patients actually belong to, from the allowed list. Alzheimer's: `6D80` dementia due to
-  Alzheimer disease, `6D71` MCI / mild neurocognitive disorder, `6D80+6D71` when the finding pools both. Anxiety:
-  `6B00` GAD, `6B01` panic, `6B04` social anxiety, `6B02`/`6B03` phobias, `6B0` mixed or unspecified. Substance use:
-  `6C40` alcohol, `6C41` cannabis, `6C43` opioids, `6C44` sedatives/hypnotics, `6C45` cocaine, `6C46` other stimulants, `6C4A` nicotine, `6C4`
-  mixed. Depression in bipolar disorder: `6A60-6A61`. Use `subclinical` when participants were not diagnosed (high
-  scorers on a scale, students, community volunteers), and `unclear` when the group cannot be told from what you can read.
-- **dx**: `DSM-III`, `DSM-IV` (incl. IV-TR), `DSM-5` (incl. 5-TR), `ICD-10`, `ICD-11`, `research criteria` (e.g.
-  NIA-AA, Petersen MCI, UK Brain Bank, ILAE, ICHD), `clinical diagnosis` (diagnosed by a clinician, criteria not
-  named), `scale cut-off`, `mixed` (reviews pooling studies), `unclear`.
+  Alzheimer disease, `6D71` MCI / mild neurocognitive disorder, `6D80+6D71` when the finding pools both. Schizophrenia:
+  `6A20` when every patient has schizophrenia, `6A2` when the sample mixes schizophrenia with other psychotic disorders
+  (schizoaffective, first-episode psychosis). Anxiety: `6B00` GAD, `6B01` panic, `6B04` social anxiety, `6B02`/`6B03`
+  phobias, `6B0` mixed or unspecified. Substance use: `6C40` alcohol, `6C41` cannabis, `6C43` opioids, `6C44`
+  sedatives/hypnotics, `6C45` cocaine, `6C46` other stimulants, `6C4A` nicotine, `6C4` mixed. Depression in bipolar
+  disorder: `6A60-6A61`. TBI: `NA07.0` when the sample is concussion / mild TBI only, otherwise `NA07`.
+  `subclinical` when nobody was diagnosed: groups defined by a scale score, by habit or exposure (e.g. smokers chosen by
+  smoking history, heavy drinkers by intake), students or volunteers. `unclear` when the group cannot be told.
+- **dx**: how the patients were diagnosed. `DSM-III`, `DSM-IV` (incl. IV-TR, and SCID/MINI interviews based on it),
+  `DSM-5` (incl. 5-TR), `ICD-10`, `ICD-11`, `research criteria` (named research criteria such as NIA-AA, NINCDS-ADRDA,
+  Petersen MCI, UK Brain Bank, MDS, ILAE, ICHD, ACRM, or a research cohort that applies them, e.g. ADNI),
+  `clinical diagnosis` (by a clinician, criteria not named), `scale cut-off` (group defined by a score threshold),
+  `mixed` (several different routes in one sample, or a review pooling studies that used different systems; a review
+  that admitted only one system gets that system), `unclear`. Use `unclear` only when none of these can be read from
+  the paper.
 - **n**: total participants in the comparison (patients + controls), only if the entry's n is null and the paper
   states it. Otherwise `null`. For reviews and meta-analyses, leave `null`.
 - **Abstract-only papers** will often be `unclear` for eyes and power. That is the right answer; do not guess.
