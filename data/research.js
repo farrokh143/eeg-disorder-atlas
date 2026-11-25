@@ -2389,7 +2389,7 @@ window.NF_DATA = {
       cite: { authors: "Yuan D, Yang X, Wang P, Yang L, Yang T, He F, Xu Y, Li Z", year: 2024, title: "Quantitative EEG and its relationship with attentional control in patients with anxiety disorders", journal: "Frontiers in Psychiatry" }
     },
     {
-      id: "pm-20950657", source: "abstract", condition: "anxiety", type: "biomarker",
+      id: "pm-20950657", rec: { eyes: "both", power: "unclear", icd11: "6B01", dx: "DSM-IV" }, source: "abstract", condition: "anxiety", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 156, k: null },
       sites: [], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["anxiety"],
@@ -2399,7 +2399,7 @@ window.NF_DATA = {
       cite: { authors: "Wise V, et al.", year: 2011, title: "An integrative assessment of brain and body function 'at rest' in panic disorder: a combined quantitative EEG/autonomic function study", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-26970143", source: "abstract", condition: "anxiety", type: "biomarker",
+      id: "pm-26970143", rec: { eyes: "unclear", power: "relative", icd11: "6B0", dx: "mixed" }, source: "abstract", condition: "anxiety", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","P3","Pz","P4"], bands: ["alpha"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "mixed" }, symptoms: ["anxiety"],
@@ -2409,7 +2409,7 @@ window.NF_DATA = {
       cite: { authors: "Smith EE, et al.", year: 2016, title: "Patterns of alpha asymmetry in those with elevated worry, trait anxiety, and obsessive-compulsive symptoms: A test of the worry and avoidance models of alpha asymmetry", journal: "Neuropsychologia" }
     },
     {
-      id: "pm-34224782", source: "abstract", condition: "anxiety", type: "biomarker",
+      id: "pm-34224782", rec: { eyes: "unclear", power: "unclear", icd11: "6B01", dx: "unclear" }, source: "abstract", condition: "anxiety", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 97, k: null },
       sites: ["F7","F3","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["anxiety"],
@@ -2419,7 +2419,7 @@ window.NF_DATA = {
       cite: { authors: "Thoma L, et al.", year: 2021, title: "Fronto-lateral alpha power asymmetry in panic disorder", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-35192865", source: "abstract", condition: "anxiety", type: "biomarker",
+      id: "pm-35192865", rec: { eyes: "both", power: "ratio-only", icd11: "6B04", dx: "scale cut-off" }, source: "abstract", condition: "anxiety", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 103, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha","delta"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "down", delta: "up" }, symptoms: ["anxiety"],
@@ -2429,7 +2429,7 @@ window.NF_DATA = {
       cite: { authors: "Schmidt LA, et al.", year: 2022, title: "Frontal EEG alpha-delta ratio and social anxiety across early adolescence", journal: "Int J Psychophysiol" }
     },
     {
-      id: "pm-35891100", source: "full-text", condition: "anxiety", type: "biomarker",
+      id: "pm-35891100", rec: { eyes: "closed", power: "relative", icd11: "6B00", dx: "DSM-IV" }, source: "full-text", condition: "anxiety", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 81, k: null },
       sites: ["Fp1","Fp2","F7","F3","F4","F8","T3","T4","T5","T6","C3","C4"], bands: ["alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { alpha: "down", beta: "up" }, symptoms: ["anxiety"],
@@ -2439,7 +2439,7 @@ window.NF_DATA = {
       cite: { authors: "Shen Z, et al.", year: 2022, title: "Aberrated Multidimensional EEG Characteristics in Patients with Generalized Anxiety Disorder: A Machine-Learning Based Analysis Framework", journal: "Sensors (Basel)" }
     },
     {
-      id: "pm-40102367", source: "full-text", condition: "anxiety", type: "protocol",
+      id: "pm-40102367", rec: { eyes: "closed", power: "n/a", icd11: "6B0", dx: "DSM-5" }, source: "full-text", condition: "anxiety", type: "protocol",
       metrics: { design: 4, control: "sham", blinded: true, n: 60, k: null },
       sites: [], bands: ["delta"], direction: "down", evidence: "contested",
       changes: { delta: "down" }, symptoms: ["anxiety","lowmood"],
@@ -2449,7 +2449,7 @@ window.NF_DATA = {
       cite: { authors: "Perez TM, et al.", year: 2025, title: "Infraslow Closed-Loop Brain Training for Anxiety and Depression (ISAD): A pilot randomised, sham-controlled trial in adult females with internalizing disorders", journal: "Cogn Affect Behav Neurosci" }
     },
     {
-      id: "pm-9892259", source: "abstract", condition: "anxiety", type: "biomarker",
+      id: "pm-9892259", rec: { eyes: "unclear", power: "unclear", icd11: "6B01", dx: "unclear" }, source: "abstract", condition: "anxiety", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 48, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["anxiety"],
@@ -2459,7 +2459,7 @@ window.NF_DATA = {
       cite: { authors: "Wiedemann G, et al.", year: 1999, title: "Frontal brain asymmetry as a biological substrate of emotions in patients with panic disorders", journal: "Arch Gen Psychiatry" }
     },
     {
-      id: "pm-18331812", source: "abstract", condition: "autism", type: "biomarker",
+      id: "pm-18331812", rec: { eyes: "closed", power: "both", icd11: "6A02", dx: "unclear" }, source: "abstract", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 40, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8","Cz","Pz","P4","T6","O2"], bands: ["theta","delta","beta"], direction: "ratio", evidence: "preliminary",
       changes: { theta: "up", delta: "down", beta: "up" }, symptoms: ["social"],
@@ -2469,7 +2469,7 @@ window.NF_DATA = {
       cite: { authors: "Coben R, et al.", year: 2008, title: "EEG power and coherence in autistic spectrum disorder", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-21107671", source: "full-text", condition: "autism", type: "biomarker",
+      id: "pm-21107671", rec: { eyes: "both", power: "absolute", icd11: "6A02", dx: "scale cut-off" }, source: "full-text", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["F7","F3","Fz","F4","F8"], bands: ["alpha"], direction: "asymmetry", evidence: "preliminary",
       changes: { alpha: "asymmetry" }, symptoms: ["social"],
@@ -2479,7 +2479,7 @@ window.NF_DATA = {
       cite: { authors: "Burnette CP, et al.", year: 2011, title: "Anterior EEG asymmetry and the Modifier Model of Autism", journal: "J Autism Dev Disord" }
     },
     {
-      id: "pm-26187351", source: "abstract", condition: "autism", type: "biomarker",
+      id: "pm-26187351", rec: { eyes: "closed", power: "both", icd11: "6A02", dx: "unclear" }, source: "abstract", condition: "autism", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: [], bands: ["delta","theta","alpha"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "down" }, symptoms: ["social"],
@@ -3958,7 +3958,7 @@ window.NF_DATA = {
       cite: { authors: "Markovska-Simoska S, et al.", year: 2018, title: "Inter- and Intra-Hemispheric EEG Coherence Study in Adults with Neuropsychiatric Disorders", journal: "Pril (Makedon Akad Nauk Umet Odd Med Nauki)" }
     },
     {
-      id: "pm-18331812-fc", source: "abstract", condition: "autism", type: "connectivity",
+      id: "pm-18331812-fc", rec: { eyes: "closed", power: "n/a", icd11: "6A02", dx: "unclear" }, source: "abstract", condition: "autism", type: "connectivity",
       measure: "coherence", pairs: [["frontal","frontal"],["temporal","temporal"],["parietal","parietal"],["occipital","occipital"]],
       metrics: { design: 2, control: null, blinded: null, n: 40, k: null },
       bands: ["delta","theta","alpha","beta"], direction: "down", evidence: "preliminary",
@@ -4299,7 +4299,7 @@ window.NF_DATA = {
       cite: { authors: "Xing M, et al.", year: 2017, title: "Resting-state theta band connectivity and graph analysis in generalized social anxiety disorder", journal: "Neuroimage Clin" }
     },
     {
-      id: "pm-35891100-fc", source: "full-text", condition: "anxiety", type: "connectivity",
+      id: "pm-35891100-fc", rec: { eyes: "closed", power: "n/a", icd11: "6B00", dx: "DSM-IV" }, source: "full-text", condition: "anxiety", type: "connectivity",
       measure: "phase", pairs: [["frontal","central"],["frontal","temporal"],["frontal","parietal"],["frontal","occipital"]],
       metrics: { design: 2, control: null, blinded: null, n: 81, k: null },
       bands: ["theta","alpha","beta"], direction: "down", evidence: "preliminary",
