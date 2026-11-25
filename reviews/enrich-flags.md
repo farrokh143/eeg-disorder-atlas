@@ -34,3 +34,5 @@ with `tools/revert-finding.js` plus a corrected `include` through `tools/apply-r
 - pm-37172019: the eyes-open state is shown by the keyword "eyes open" only; no eye statement appears in the abstract. Check the full text.
 - pm-42185252: the paradigm had children watch a cartoon with sound (not an eyes-open/closed rest), so the eye state is coded unclear. The protocol departs from standard resting-state recordings; the power measure is mean log10 whole-brain power, coded absolute.
 - pm-12712882: the abstract is in English but the article is Hungarian; quote taken from the English abstract. Check the citation title wording.
+- pm-37937898: the abstract does not state whether total power is absolute; "total power" was analysed in linear space (absolute), so coded absolute. Check the power field.
+- pm-12705421 and pm-12711923: substance-use entries coded to the parent block 6C4 because the exact ICD-11 stimulant or alcohol code was not checked against the classification; check the icd11 field.

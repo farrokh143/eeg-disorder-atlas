@@ -2712,7 +2712,7 @@ window.NF_DATA = {
       cite: { authors: "Clemens B, et al.", year: 2023, title: "Epileptic diathesis: An EEG-LORETA study", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-40040314", source: "full-text", condition: "epilepsy", type: "biomarker",
+      id: "pm-40040314", rec: { eyes: "closed", power: "both", icd11: "8A6", dx: "clinical diagnosis" }, source: "full-text", condition: "epilepsy", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 87, k: null },
       sites: [], bands: ["delta","theta"], direction: "up", evidence: "preliminary",
       changes: { delta: "up", theta: "up" }, symptoms: ["seizures"],
@@ -2732,7 +2732,7 @@ window.NF_DATA = {
       cite: { authors: "Sancetta BM, et al.", year: 2026, title: "A spectral- topological network signature of drug-resistant epilepsy: a phase 1-2 study on resting-state EEG-based diagnostic biomarkers of drug resistance", journal: "Neuroimage Clin" }
     },
     {
-      id: "pm-18457962", source: "abstract", condition: "parkinsons", type: "biomarker",
+      id: "pm-18457962", rec: { eyes: "unclear", power: "unclear", icd11: "8A00", dx: "unclear" }, source: "abstract", condition: "parkinsons", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 58, k: null },
       sites: [], bands: ["theta","beta","gamma"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", beta: "up", gamma: "up" }, symptoms: ["motor"],
@@ -2742,7 +2742,7 @@ window.NF_DATA = {
       cite: { authors: "Moazami-Goudarzi M, et al.", year: 2008, title: "Enhanced frontal low and high frequency power and synchronization in the resting EEG of parkinsonian patients", journal: "Neuroimage" }
     },
     {
-      id: "pm-32116262", source: "full-text", condition: "parkinsons", type: "biomarker",
+      id: "pm-32116262", rec: { eyes: "closed", power: "both", icd11: "8A00", dx: "clinical diagnosis" }, source: "full-text", condition: "parkinsons", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 42, k: null },
       sites: ["T3","T4","T5","T6"], bands: ["theta","alpha"], direction: "down", evidence: "preliminary",
       changes: { theta: "down", alpha: "down" }, symptoms: ["motor"],
@@ -2752,7 +2752,7 @@ window.NF_DATA = {
       cite: { authors: "Waninger S, et al.", year: 2020, title: "Neurophysiological Biomarkers of Parkinson's Disease", journal: "J Parkinsons Dis" }
     },
     {
-      id: "pm-35042630", source: "abstract", condition: "parkinsons", type: "biomarker",
+      id: "pm-35042630", rec: { eyes: "unclear", power: "relative", icd11: "8A00", dx: "scale cut-off" }, source: "abstract", condition: "parkinsons", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 108, k: null },
       sites: ["Fp2","F4","F8"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["anxiety"],
@@ -2762,7 +2762,7 @@ window.NF_DATA = {
       cite: { authors: "Betrouni N, et al.", year: 2022, title: "Anxiety in Parkinson's disease: A resting-state high density EEG study", journal: "Neurophysiol Clin" }
     },
     {
-      id: "pm-37146531", source: "abstract", condition: "parkinsons", type: "biomarker",
+      id: "pm-37146531", rec: { eyes: "unclear", power: "relative", icd11: "8A00", dx: "unclear" }, source: "abstract", condition: "parkinsons", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 169, k: null },
       sites: [], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["motor"],
@@ -2772,7 +2772,7 @@ window.NF_DATA = {
       cite: { authors: "Jaramillo-Jimenez A, et al.", year: 2023, title: "Spectral features of resting-state EEG in Parkinson's Disease: A multicenter study using functional data analysis", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-37787445", source: "abstract", condition: "parkinsons", type: "biomarker",
+      id: "pm-37787445", rec: { eyes: "unclear", power: "unclear", icd11: "8A00", dx: "unclear" }, source: "abstract", condition: "parkinsons", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: null, k: null },
       sites: ["Fp1","Fp2","F7","F3","Fz","F4","F8"], bands: ["theta","alpha"], direction: "up", evidence: "preliminary",
       changes: { theta: "up", alpha: "up" }, symptoms: ["executive"],
@@ -2782,7 +2782,7 @@ window.NF_DATA = {
       cite: { authors: "Lorek K, et al.", year: 2023, title: "Slowing of EEG waves correlates with striatal [^18^ F]fluorodopa PET/CT uptake and executive dysfunction in Parkinson's disease", journal: "Eur J Neurosci" }
     },
     {
-      id: "pm-37937898", source: "full-text", condition: "parkinsons", type: "biomarker",
+      id: "pm-37937898", rec: { eyes: "both", power: "absolute", icd11: "8A00", dx: "unclear" }, source: "full-text", condition: "parkinsons", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 52, k: null },
       sites: [], bands: ["alpha","beta"], direction: "up", evidence: "preliminary",
       changes: { alpha: "up", beta: "up" }, symptoms: ["motor"],
@@ -2792,7 +2792,7 @@ window.NF_DATA = {
       cite: { authors: "McKeown DJ, et al.", year: 2024, title: "Medication-invariant resting aperiodic and periodic neural activity in Parkinson's disease", journal: "Psychophysiology" }
     },
     {
-      id: "pm-40552872", source: "full-text", condition: "parkinsons", type: "biomarker",
+      id: "pm-40552872", rec: { eyes: "both", power: "relative", icd11: "8A00", dx: "unclear" }, source: "full-text", condition: "parkinsons", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 39, k: null },
       sites: ["O1","O2"], bands: ["alpha"], direction: "down", evidence: "preliminary",
       changes: { alpha: "down" }, symptoms: ["motor"],
@@ -2802,7 +2802,7 @@ window.NF_DATA = {
       cite: { authors: "Lirani-Silva E, et al.", year: 2025, title: "Resting-state Alpha Reactivity Is Reduced in Parkinson's Disease and Associated With Gait Variability", journal: "Neurorehabil Neural Repair" }
     },
     {
-      id: "pm-12705421", source: "abstract", condition: "sud", type: "biomarker",
+      id: "pm-12705421", rec: { eyes: "closed", power: "absolute", icd11: "6C4", dx: "unclear" }, source: "abstract", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 22, k: null },
       sites: [], bands: ["delta","theta","alpha","beta"], direction: "ratio", evidence: "preliminary",
       changes: { delta: "up", theta: "up", alpha: "mixed", beta: "mixed" }, symptoms: ["craving"],
@@ -2812,7 +2812,7 @@ window.NF_DATA = {
       cite: { authors: "Newton TF, et al.", year: 2003, title: "Quantitative EEG abnormalities in recently abstinent methamphetamine dependent individuals", journal: "Clin Neurophysiol" }
     },
     {
-      id: "pm-12711923", source: "abstract", condition: "sud", type: "biomarker",
+      id: "pm-12711923", rec: { eyes: "closed", power: "absolute", icd11: "6C4", dx: "unclear" }, source: "abstract", condition: "sud", type: "biomarker",
       metrics: { design: 2, control: null, blinded: null, n: 614, k: null },
       sites: [], bands: ["theta"], direction: "up", evidence: "preliminary",
       changes: { theta: "up" }, symptoms: ["craving"],
@@ -4293,7 +4293,7 @@ window.NF_DATA = {
       cite: { authors: "Chen IC, et al.", year: 2022, title: "Atypical functional connectivity during rest and task-related dynamic alteration in young children with attention deficit hyperactivity disorder: An analysis using the phase-locking value", journal: "Psychiatry Clin Neurosci" }
     },
     {
-      id: "pm-18457962-fc", source: "abstract", condition: "parkinsons", type: "connectivity",
+      id: "pm-18457962-fc", rec: { eyes: "unclear", power: "n/a", icd11: "8A00", dx: "unclear" }, source: "abstract", condition: "parkinsons", type: "connectivity",
       measure: "coherence", pairs: [["frontal","frontal"],["parietal","parietal"]],
       metrics: { design: 2, control: null, blinded: null, n: 58, k: null },
       bands: ["theta","alpha","hibeta","gamma"], direction: "ratio", evidence: "preliminary",
