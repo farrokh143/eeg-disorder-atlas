@@ -29,3 +29,6 @@ with `tools/revert-finding.js` plus a corrected `include` through `tools/apply-r
 - cand-gad-wang-2025 and cand-anx-yuan-2024 had no PMID in the entry; PMIDs 39966577 and 39588546 were matched by title and authors and filled in this batch. Check the log.
 - pm-35192865: the study is in typically developing adolescents selected by social-anxiety scores (not a diagnosed sample); coded scale cut-off, icd 6B04. Check the condition.
 - pm-21107671: the sample is children with autism classed by parent-report cut-offs (SCQ/ASSQ), so the dx field is scale cut-off. Check the diagnostic system wording.
+- pm-39251926: participants watched a movie with eyes on the screen during the resting recording; eyes state is not stated as eyes-open or eyes-closed, so coded unclear. Check the detail wording.
+- pm-39555754: the paper also has stimulus-driven alpha (task) data and an eyes-closed 20 s block; only the eyes-open baseline rest is used here. The power measure is Hilbert alpha amplitude, coded unclear.
+- pm-37172019: the eyes-open state is shown by the keyword "eyes open" only; no eye statement appears in the abstract. Check the full text.
