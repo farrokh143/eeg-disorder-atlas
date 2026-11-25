@@ -16,3 +16,5 @@ with `tools/revert-finding.js` plus a corrected `include` through `tools/apply-r
 - pm-28900800: ASD+ADHD comorbidity study; coded to ADHD (6A05) with dx mixed, the ASD group is not separately coded.
 - pm-31903823: the measure is current source density (sLORETA), not spectral power, so power is coded unclear. Check whether the biomarker fits the power field.
 - pm-32682239: the abstract does not state the eye condition, and no full text was checked; eyes coded unclear. Check the full text.
+- pm-38858839: the abstract reports FFT power but does not say absolute or relative, and does not state the eye condition; both coded unclear. Check the full text.
+- pm-36681294: the paper also analysed task EEG (Oddball/focus tasks); only the eyes-open and eyes-closed resting results are used here.
