@@ -36,3 +36,5 @@ with `tools/revert-finding.js` plus a corrected `include` through `tools/apply-r
 - pm-12712882: the abstract is in English but the article is Hungarian; quote taken from the English abstract. Check the citation title wording.
 - pm-37937898: the abstract does not state whether total power is absolute; "total power" was analysed in linear space (absolute), so coded absolute. Check the power field.
 - pm-12705421 and pm-12711923: substance-use entries coded to the parent block 6C4 because the exact ICD-11 stimulant or alcohol code was not checked against the classification; check the icd11 field.
+- Batch 27 (substance use): coded from abstracts only; the full-text sources were not re-checked, so several fields are unclear that the full text may settle (pm-18974851, pm-26002855, pm-26051750, pm-27354838, pm-26660886). Check the full texts.
+- pm-26051750: resting EEG power is reported without absolute or relative wording in the abstract; power coded unclear.
