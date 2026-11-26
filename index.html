@@ -69,6 +69,7 @@ svg.head { width: 100%; max-width: 440px; height: auto; display: block; }
 .el:hover .disc { stroke: var(--link); }
 .el:focus { outline: none; } .el:focus-visible .disc { stroke: var(--link); stroke-width: 3; }
 .maptip { margin: 0; font-size: 13px; color: var(--muted); text-align: center; min-height: 1.5em; }
+.maptip:empty { min-height: 0; }
 @media (max-width: 560px) { .el text { font-size: 12px; } }
 
 /* 3. evidence */
@@ -79,6 +80,10 @@ svg.head { width: 100%; max-width: 440px; height: auto; display: block; }
 .row { width: 100%; display: grid; grid-template-columns: 64px minmax(0, 1fr) minmax(0, 1.4fr) auto 16px; gap: 12px; align-items: center; text-align: left;
   background: none; border: 0; border-bottom: 1px solid var(--line); padding: 14px 2px; color: var(--ink); min-height: 52px; }
 .row:last-of-type { border-bottom: 0; }
+.thead { display: grid; grid-template-columns: 64px minmax(0, 1fr) minmax(0, 1.4fr) auto 16px; gap: 12px; padding: 12px 2px 10px; border-bottom: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+.thead.t { grid-template-columns: 96px minmax(0, 1.5fr) minmax(0, 1fr) auto 16px; }
+.thead .r { text-align: right; }
+@media (max-width: 560px) { .thead { display: none; } }
 .row:hover .dx { color: var(--link); }
 .row .site { font: 600 15px/1 var(--f-mono); }
 .row .band { color: var(--muted); }
@@ -155,7 +160,6 @@ html.locked .app { display: none; }
 <div class="gate" role="dialog" aria-labelledby="gateTitle">
   <form id="gateForm" autocomplete="off">
     <span class="brand" id="gateTitle"><svg width="32" height="32" aria-hidden="true"><use href="#mark"/></svg>Neurofeedback Atlas</span>
-    <p>Preview for invited testers. Enter the password you were given.</p>
     <label class="sr" for="gatePw">Password</label>
     <input id="gatePw" type="password" placeholder="Password" autocomplete="current-password" required>
     <button type="submit">Enter</button>
@@ -167,14 +171,11 @@ html.locked .app { display: none; }
 <header class="top">
   <div class="wrap">
     <a class="brand" href="./"><svg width="28" height="28" aria-hidden="true"><use href="#mark"/></svg>Neurofeedback Atlas</a>
-    <span class="pv">PREVIEW</span>
     <nav aria-label="Site"><a href="methods.html">Method</a><a href="https://github.com/farrokh143/eeg-disorder-atlas/issues/new/choose">Feedback</a></nav>
   </div>
 </header>
 
 <main class="wrap">
-  <p class="intro">Resting EEG findings from published studies, by electrode. Pick filters or tap the map; tap a line to see its papers.</p>
-
   <section class="filters" aria-label="Filters">
     <label class="fld"><span>Power band</span><select id="fBand"></select></label>
     <label class="fld"><span>Electrode</span><select id="fEl"></select></label>
@@ -184,26 +185,23 @@ html.locked .app { display: none; }
   <button class="reset" id="reset" type="button" hidden>Clear filters</button>
 
   <section class="mapbox" aria-label="Electrode map">
-    <svg class="head" id="head" viewBox="0 0 400 410" role="group" aria-label="10-20 electrode map. Tap an electrode to filter by it."></svg>
+    <svg class="head" id="head" viewBox="0 0 400 410" role="group" aria-label="10-20 electrode map"></svg>
     <p class="maptip" id="tip" aria-live="polite"></p>
   </section>
 
   <section aria-labelledby="eTitle">
-    <div class="ehead"><h2 id="eTitle">EEG and disorders</h2><span class="count" id="eCount"></span></div>
-    <p class="foot">▲ = studies that found the band higher in the disorder than in healthy controls, ▼ = lower, ⇆ = mixed or asymmetry.</p>
+    <div class="ehead"><h2 id="eTitle">Resting EEG findings</h2><span class="count" id="eCount"></span></div>
     <div class="list" id="list"></div>
   </section>
 
   <section aria-labelledby="tTitle">
-    <div class="ehead"><h2 id="tTitle">Treatment evidence</h2><span class="count" id="tCount"></span></div>
-    <p class="foot">Neurofeedback protocols that have been studied: ▲ = band trained up, ▼ = trained down, ⇅ = regulated. Studied protocols, not treatment guidelines.</p>
+    <div class="ehead"><h2 id="tTitle">Neurofeedback studies</h2><span class="count" id="tCount"></span></div>
     <div class="list" id="tlist"></div>
   </section>
-  <p class="foot">Group-level research findings, not a diagnostic test or treatment advice for one person. <a href="methods.html">Method</a></p>
 </main>
 
 <footer>
-  <div class="wrap"><span id="stats"></span><a href="https://github.com/farrokh143/eeg-disorder-atlas">Data on GitHub</a></div>
+  <div class="wrap"><span>Group-level research findings. Not a diagnostic test or treatment advice.</span><span id="stats"></span></div>
 </footer>
 </div>
 
@@ -302,14 +300,13 @@ html.locked .app { display: none; }
       });
     });
     const n = L => L.up.length + L.down.length;
-    return Object.values(m).sort((a, b) => n(b) - n(a) || b.other.length - a.other.length || (a.site === "all") - (b.site === "all") || ORDER.indexOf(a.site) - ORDER.indexOf(b.site));
+    return Object.values(m).filter(L => L.up.length + L.down.length).sort((a, b) => n(b) - n(a) || b.other.length - a.other.length || (a.site === "all") - (b.site === "all") || ORDER.indexOf(a.site) - ORDER.indexOf(b.site));
   }
-  const siteName = s => s === "all" ? "All sites" : s;
+  const siteName = s => s === "all" ? "Whole head" : s;
   function rowHtml(L, i) {
-    const o = L.other.length ? `<span class="z" title="mixed or asymmetry">⇆ ${L.other.length}</span>` : "";
     return `<button class="row" type="button" data-i="${i}" aria-label="${siteName(L.site)}, ${esc(BAND[L.band].name)}, ${esc(COND[L.cond].name)}: ${L.up.length} higher, ${L.down.length} lower">
       <span class="site${L.site === "all" ? " whole" : ""}">${siteName(L.site)}</span><span class="band">${esc(BAND[L.band].name)}</span><span class="dx">${esc(COND[L.cond].name)}</span>
-      <span class="ud"><span class="${L.up.length ? "u" : "z"}">▲ ${L.up.length}</span><span class="${L.down.length ? "d" : "z"}">▼ ${L.down.length}</span>${o}</span><span class="chev" aria-hidden="true">›</span></button>`;
+      <span class="ud"><span class="${L.up.length ? "u" : "z"}">▲ ${L.up.length}</span><span class="${L.down.length ? "d" : "z"}">▼ ${L.down.length}</span></span><span class="chev" aria-hidden="true">›</span></button>`;
   }
 
   // ---------- treatment evidence: one line per condition × protocol (bands trained and direction) ----------
@@ -334,9 +331,9 @@ html.locked .app { display: none; }
     })).sort((a, b) => EV[a.best] - EV[b.best] || b.list.length - a.list.length);
   }
   function trowHtml(T, i) {
-    return `<button class="row trow" type="button" data-t="${i}"><span class="site">${T.sites.length ? esc(T.sites.join(" ")) : "Individual"}</span>
+    return `<button class="row trow" type="button" data-t="${i}"><span class="site">${T.sites.length ? esc(T.sites.join(" ")) : "Individualised"}</span>
       <span class="band">${esc(T.sig)}</span><span class="dx">${esc(COND[T.cond].name)}</span>
-      <span class="ev">${T.list.length} ${T.list.length === 1 ? "study" : "studies"} · ${esc(T.best)}</span><span class="chev" aria-hidden="true">›</span></button>`;
+      <span class="ev">${esc(cap(T.best))} · ${T.list.length} ${T.list.length === 1 ? "study" : "studies"}</span><span class="chev" aria-hidden="true">›</span></button>`;
   }
 
   // ---------- map ----------
@@ -377,7 +374,7 @@ html.locked .app { display: none; }
     showTip(null);
   }
   function showTip(s) {
-    if (!s) { $("tip").textContent = st.el ? `${st.el} selected · tap it again to clear` : "Darker = more studies. Tap an electrode to filter."; return; }
+    if (!s) { $("tip").textContent = ""; return; }
     const n = siteN[s] || 0;
     $("tip").textContent = `${s}${ALT[s] ? " (" + ALT[s] + ")" : ""} · ${cap(LOBE(s))} · ${n} ${n === 1 ? "study" : "studies"}`;
   }
@@ -391,15 +388,16 @@ html.locked .app { display: none; }
     $("reset").hidden = !(st.band || st.el || st.region || st.cond);
     LINES = lines();
     const papers = new Set(LINES.flatMap(L => L.up.concat(L.down, L.other).map(f => f.id))).size;
-    $("eCount").textContent = `${LINES.length} ${LINES.length === 1 ? "line" : "lines"} · ${papers} papers`;
+    $("eCount").textContent = `${papers} ${papers === 1 ? "study" : "studies"}`;
     $("list").innerHTML = LINES.length
-      ? LINES.slice(0, LIMIT).map(rowHtml).join("") + (LINES.length > LIMIT ? `<button class="more" type="button" id="more">Show ${Math.min(30, LINES.length - LIMIT)} more</button>` : "")
-      : `<div class="empty">No studies match these filters.</div>`;
+      ? `<div class="thead" aria-hidden="true"><span>Electrode</span><span>Band</span><span>Disorder</span><span class="r">▲ Higher · ▼ Lower</span><span></span></div>` + LINES.slice(0, LIMIT).map(rowHtml).join("") + (LINES.length > LIMIT ? `<button class="more" type="button" id="more">Show ${Math.min(30, LINES.length - LIMIT)} more</button>` : "")
+      : `<div class="empty">No studies</div>`;
     TLINES = tlines();
-    $("tCount").textContent = `${TLINES.length} ${TLINES.length === 1 ? "protocol" : "protocols"} · ${TLINES.reduce((a, T) => a + T.list.length, 0)} studies`;
+    const tn = TLINES.reduce((a, T) => a + T.list.length, 0);
+    $("tCount").textContent = `${tn} ${tn === 1 ? "study" : "studies"}`;
     $("tlist").innerHTML = TLINES.length
-      ? TLINES.slice(0, TLIMIT).map(trowHtml).join("") + (TLINES.length > TLIMIT ? `<button class="more" type="button" id="tmore">Show ${TLINES.length - TLIMIT} more</button>` : "")
-      : `<div class="empty">No neurofeedback studies match these filters.</div>`;
+      ? `<div class="thead t" aria-hidden="true"><span>Sites</span><span>Bands trained</span><span>Disorder</span><span class="r">Evidence</span><span></span></div>` + TLINES.slice(0, TLIMIT).map(trowHtml).join("") + (TLINES.length > TLIMIT ? `<button class="more" type="button" id="tmore">Show ${TLINES.length - TLIMIT} more</button>` : "")
+      : `<div class="empty">No studies</div>`;
     paintHead();
   }
   function update() { LIMIT = 15; TLIMIT = 8; save(); render(); }
@@ -426,12 +424,12 @@ html.locked .app { display: none; }
     const band = BAND[L.band].name, cn = COND[L.cond].name;
     let h = `<div class="bar-top"><button class="x" type="button" id="sClose" aria-label="Close">×</button></div>
       <h2 id="sTitle">${siteName(L.site)} · ${esc(band)} · ${esc(cn)}</h2>
-      <div class="big"><span>▲ ${L.up.length}<small>higher</small></span><span>▼ ${L.down.length}<small>lower</small></span>${L.other.length ? `<span>${L.other.length}<small>mixed / asymmetry</small></span>` : ""}</div>`;
+      <div class="big"><span>▲ ${L.up.length}<small>Higher</small></span><span>▼ ${L.down.length}<small>Lower</small></span>${L.other.length ? `<span>${L.other.length}<small>Mixed or asymmetry</small></span>` : ""}</div>`;
     const lobe = L.site === "all" ? null : LOBE(L.site);
     const p = lobe && S.patterns.find(x => x.feature === "power" && x.condition === L.cond && x.band === L.band && x.location === lobe);
-    if (p) h += `<p class="pooled">Pooled for the whole ${lobe} region (full-text studies only): <b>${p.higher} ▲ · ${p.lower} ▼ · ${p.unclear} unclear</b> · ${esc(p.certainty || "not rated")} certainty · ${esc(p.verdict)}.</p>`;
-    if (L.up.length) h += `<div class="sec">Found higher</div>` + L.up.map(paper).join("");
-    if (L.down.length) h += `<div class="sec">Found lower</div>` + L.down.map(paper).join("");
+    if (p) h += `<p class="pooled">${cap(lobe)} region, full-text studies: <b>${p.higher} higher · ${p.lower} lower${p.unclear ? " · " + p.unclear + " unclear" : ""}</b>${p.certainty ? " · " + esc(p.certainty) + " certainty" : ""}</p>`;
+    if (L.up.length) h += `<div class="sec">Higher</div>` + L.up.map(paper).join("");
+    if (L.down.length) h += `<div class="sec">Lower</div>` + L.down.map(paper).join("");
     if (L.other.length) h += `<div class="sec">Mixed or asymmetry</div>` + L.other.map(paper).join("");
     $("sBody").innerHTML = h;
     $("sheet").classList.add("open"); document.body.style.overflow = "hidden"; $("sClose").focus();
@@ -440,7 +438,7 @@ html.locked .app { display: none; }
     lastFocus = document.activeElement;
     const sham = T.list.filter(f => f.metrics.control === "sham" || f.metrics.blinded).length;
     $("sBody").innerHTML = `<div class="bar-top"><button class="x" type="button" id="sClose" aria-label="Close">×</button></div>
-      <h2 id="sTitle">${esc(T.sig)}</h2><p class="pooled">${esc(COND[T.cond].name)} · sites: <b>${T.sites.length ? esc(T.sites.join(" ")) : "individualised"}</b> · best evidence: <b>${esc(T.best)}</b> · ${sham} sham-controlled or blinded</p>
+      <h2 id="sTitle">${esc(T.sig)}</h2><p class="pooled">${esc(COND[T.cond].name)} · ${T.sites.length ? esc(T.sites.join(" ")) : "Individualised sites"} · <b>${esc(cap(T.best))}</b> evidence${sham ? ` · ${sham} sham-controlled` : ""}</p>
       <div class="sec">Studies</div>` + T.list.map(paper).join("");
     $("sheet").classList.add("open"); document.body.style.overflow = "hidden"; $("sClose").focus();
   }
@@ -448,7 +446,7 @@ html.locked .app { display: none; }
   $("sheet").addEventListener("click", e => { if (e.target.id === "scrim" || e.target.id === "sClose") closeSheet(); });
   document.addEventListener("keydown", e => { if (e.key === "Escape" && $("sheet").classList.contains("open")) closeSheet(); });
 
-  $("stats").textContent = `${MARKERS.length} resting EEG studies · ${D.findings.filter(f => f.type === "protocol").length} neurofeedback studies`;
+  $("stats").innerHTML = `${MARKERS.length} EEG studies · ${D.findings.filter(f => f.type === "protocol").length} neurofeedback studies · <a href="methods.html">Method</a>`;
   drawHead(); render();
 }
 </script>
